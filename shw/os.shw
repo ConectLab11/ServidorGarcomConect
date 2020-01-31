@@ -1,0 +1,175 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# ConectLab Informatica Ltda
+# Data: 23/03/2018
+#
+#
+# a todos
+
+[arquivo]
+modulo=OS
+nivelprincipal=0
+nivelauxiliar=0
+pdx=
+
+[Opcoes]
+o0=OS, 0123456789, 1, 0, a
+
+[OS]
+o0=nil, Técnicos, tecnicos, 0123789, 1, 18,a
+o1=nil, Montadoras, montadora, 0123456789, 1, 18,a
+o2=nil, Marca/Modelo, modelo, 0123456789, 4, 13,a,7
+o3=nil, Cores, lstcores, 0123456789, 4, 13,a,7
+
+[tecnicos]
+tab=Técnico
+comentario=Cadastro de técnicos
+db=tecnicos
+ordem=
+rcl=tecnicos.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Nome,nome,c,50,300,,
+c2=Ativo,ativo,sn,3,30,,
+Rlt=servicos.tecnico
+msg=ORDEM DE SERVIÇO
+altura=270
+largura=470
+foco=nome
+t0=Código:,id,+,4,30,!999;1; ,
+t1=Nome:,nome,c,50,300,,
+t2=Cadastro:,cadastro,i,6,60,,cadastrx.rcl,
+t3=Comissão:,comissao,p,11,84,,
+t4=#Preço Hora:,precohora,f,11,84,,
+t5=Ativo:,ativo=Sim,sn,3,30,,
+
+[listserv]
+tab=Serviços
+comentario=Tabela de Serviços
+db=listserv
+ordem=marca
+rcl=listserv.rcl
+chave=id
+chaveprincipal=id
+c0=Codigo,id,c,5,60,,
+c1=Marca,marca,c,20,80,,
+c2=Descrição,descricao,c,50,200,,
+c3=Preço 1,valor1,f,11,84,,
+c4=Preço 2,valor2,f,11,84,,
+altura=300
+largura=570
+foco=descricao
+t0=Código:,id,+,4,50,,
+t1=Descrição:,descricao,c,50,400,,
+t2=Marca:,marca,c,30,400,,veicmar2.rcl,
+t3=Seção:,secao,i,3,40,,secao.rcl,
+t4=Grupo:,grupo,i,3,40,,grupos.rcl,
+t5=Preço 1:,valor1,f,11,84,,
+t6=#Preço 2:,valor2,f,11,84,,
+
+
+[despesa2]
+tab=Despesas
+comentario=Cadastro de Despesas
+db=despesa2
+ordem=
+rcl=despesa2.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,c,5,60,,
+c1=Descrição,descricao,c,50,200,,
+c2=KM,km,sn,3,50,,
+c3=Ativo,ativo,sn,3,50,,
+Rlt=despesos.iddespesa
+msg=DESPESA(s)
+altura=220
+largura=470
+foco=descricao
+t0=Código:,id,+,4,30,!999;1; ,
+t1=Descrição:,descricao,c,50,300,,
+t2=KM:,km,sn,3,30,,
+t3=Ativo:,ativo,sn,3,30,,
+
+[precohor]
+tab=Hora Técnica
+comentario=Tabela de Preço por Hora
+db=precohor
+ordem=
+rcl=precohor.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,c,5,60,,
+c1=Descrição,descricao,c,100,350,,
+c2=Preço Hora,preco,f,11,84,,
+altura=200
+largura=470
+foco=descricao
+t0=Código:,id,+,4,30,!999;1; ,
+t1=Descrição:,descricao,c,100,300,,
+t2=Preço Hora:,preco,f,11,84,,
+
+[modelo]
+tab=MARCA/MODELO
+comentario=
+db=modelo
+ordem=descricao
+rcl=
+modcampoorigem=Montadora:/120/40/!9999.99.99;1; /NE/162/10/<#15>geral3.rcl/
+campoorigem=Marca\Montadora:/120/60//NE/182/230/<#15>geral3.rcl/
+chave=id
+chaveprincipal=id
+where=marca="$IDORIGEM"
+relacaokey=marca,"$IDORIGEM"
+//ENUMERAR=filho/where pai="$IDORIGEM"
+//c0=Código,id,c,6,60,,
+c0=Descrição,descricao,c,50,300,,
+altura=200
+largura=450
+foco=descricao
+forcarleftmask=100
+CampoForcado=descricao
+Rlt=
+msg=MARCA/MODELO
+t0=Descrição:,descricao,c,50,280,@U,
+h0=Descrição completa do Modelo
+validacao=campoPreenchido(descricao)
+
+[lstcores]
+tab=CORES
+comentario=
+db=cores
+ordem=descricao
+rcl=
+chave=id
+chaveprincipal=id
+c0=Descrição,descricao,c,50,300,,
+c1=HEX,hex,c,15,60,,
+altura=200
+largura=420
+foco=descricao
+t0=linha+15
+t1=Descrição:,descricao,c,50,250,@U,
+t2=Cor:,hex=@clnavy,color,3,40,,
+
+
+[montadora]
+tab=MONTADORAS
+db=set_mult
+ordem=txt_1
+chave=id
+chaveprincipal=id
+c0=Código,id_1,+,6,60,,
+c1=Nome,txt_1,c,255,300,,
+nobrowse=0
+SET_MULT=LISTA_MONTADORA_VEICULOS
+relacaokey=nome,"LISTA_MONTADORA_VEICULOS"
+autoIncluir=0
+where=nome='LISTA_MONTADORA_VEICULOS'
+altura=180
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Código:,id_1,+,6,50,,
+t1=Nome:,txt_1,c,50,300,,

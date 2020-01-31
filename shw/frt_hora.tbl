@@ -1,0 +1,74 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 28/01/2010
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=0
+nivelauxiliar=0
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=nil, Frete por Hora, tabelahora, 0123456789, 9, 22,a
+
+#
+# Parametros de tela
+#
+
+[tabelahora]
+tab=Frete por Hora
+db=tabefret
+ordem=id
+forcarcoluna=150
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,50,,
+c1=Cliente,cliente,c,6,60,,
+altura=510
+largura=460
+foco=descr
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=120
+forcarleftmask=130
+nobrowse=1
+t0=coluna=20
+t1=label|Descrição|Tahoma,9,
+t2=<,descr,c,50,370,,
+t3=label|ADValorem
+t4=<,advalorem,p,11,84,,
+t5=label|Preço por Hora
+t6=<,diaria,f,11,84,,
+t7=label|Preço por Hora Motorista
+t8=<,frt_val1,f,11,84,,
+t9=label|Taxa por Ajudante
+t10=<,ajudante,f,11,84,,
+t11=label|Compartilhada
+t12=<,compartilhada,sn,3,30,,
+
+[s]
+t1=Hora do veiculo:,diaria,f,11,84,,
+t2=Acresc. Veiculo:,morveicu,p,11,84,,
+t3=Hora do Ajudante:,diaajuda,f,11,84,,
+t4=Acresc. Ajudante:,morajuda,p,11,84,,
+t5=Taxa por entrega:,entrega,f,11,84,,
+t6=Taxa de coleta:,coleta,f,11,84,,
+t7=Frete Minimo:,minimo,f,11,84,,
+t8=Fora do perimetro:,perimetro,f,11,84,,
+t9=Pernoite:,pernoite,f,11,84,,
+t10=Seguro:,seguro,p,11,84,,
+t11=Despacho:,despacho,f,11,84,,
+t12=Pedagio:,pedagio,f,11,84,,
+t13=SEC/CAT:,seccat,f,11,84,,
+t14=Preço M3 p/ 100kg:,precom3,e,11,84,,
+t15=Iniciar neste calculo:,padrao,sn,3,30,,
+t16=Usar em todos clientes:,allcli,sn,3,30,,
+t17=Verificar Frete Mínimo do Total:,frt_minitotal,sn,3,30,,
+

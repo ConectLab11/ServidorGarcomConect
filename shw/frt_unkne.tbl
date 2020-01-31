@@ -1,0 +1,188 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 01/08/2011
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=tabvalor.pdx
+disableMenu=0
+telalargura=830
+telaaltura=0
+Posicionar=1
+whereexterno=mygroup='tabelaunkne'
+solicitante=unika
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,+Rodoviaria NE, tabelaunkne, 0123456789, 9, 25,a
+o2=nil,+Tarifas, tarifas , 0123456789, 9, 23,a
+
+#
+# Parametros de tela
+#
+ 
+[tabelaunkne]
+tab=Rodoviario NE
+comentario=Tabela para calculo de fretes
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=90
+forcarleftmask=90
+nobrowse=1
+altura=200
+largura=400
+foco=descr
+t0=Descrição:,descr,c,50,410,,
+h0=Descrição completa
+t1=Validade:,validade,d,10,80,,
+h1=Prazo de validade
+t2=linha-25
+t3=coluna+320
+t4=forcarleftmask=150
+t5=linha+25
+#Transporte Rodoviário:,tipotab,sn,3,30,,
+t6=forcarleftmask=150
+t7=coluna-320
+t8=Taxas#007E7E7E\text_align_justify.png,,,,550, ,
+t9=Coleta Capital:,coleta,f,11,84,,
+t10=linha-25
+t11=coluna+160
+t12=até (kg):,actn20,e,6,60,,
+t13=linha-25
+t14=coluna+160
+t15=Excedente:,actn40,f,11,84,,
+t16=coluna-320
+
+t17=Coleta Interior:,faixa_1,f,11,84,,
+t18=linha-25
+t19=coluna+160
+t20=até (kg):,bctn20,e,6,60,,
+t21=linha-25
+t22=coluna+160
+t23=Excedente:,bctn40,f,11,84,,
+t24=coluna-320
+
+t25=Entrega Capital:,entrega,f,11,84,,
+t26=linha-25
+t27=coluna+160
+t28=até (kg):,cctn20,e,6,60,,
+t29=linha-25
+t30=coluna+160
+t31=Excedente:,cctn40,f,11,84,,
+t32=coluna-320
+
+t33=Entrega Interior:,faixa_2,f,11,84,,
+t34=linha-25
+t35=coluna+160
+t36=até (kg):,dctn20,e,6,60,,
+t37=linha-25
+t38=coluna+160
+t39=Excedente:,dctn40,f,11,84,,
+t40=coluna-320
+
+t41=Redespacho:,redespacho,f,11,84,,
+t42=linha-25
+t43=coluna+160
+t44=até (kg):,bate_50,e,6,60,,
+t45=linha-25
+t46=coluna+160
+t47=Excedente:,bate_100,f,11,84,,
+t48=coluna-320
+
+t49=Geral#007E7E7E\text_align_justify.png,,,,550, ,
+t50=ADValorem:,advalorem,p,11,84,,
+t51=GRIS:,gris,p,11,84,,
+t52=TDE:,tde,f,11,84,,
+
+t53=Outros#007E7E7E\tag.png,,,,530, ,
+t54=forcarleftmask=100
+t55=Devolução:,devolucao,p,11,60,,
+h55=Porcentagem do frete quando for devolução
+t56=linha-25
+t57=coluna+160
+t58=Reentrega:,reentrega,p,11,60,,
+h58=Porcentagem do frete quando for reentrega
+t59=coluna+160
+t60=linha-25
+t61=Compartilhada:,compartilhada,sn,3,30,,
+h61=Compartilhar esta tabela com os clientes sem tabela.
+
+[tarifas]
+tab=TARIFAS PARA CALCULO
+comentario=
+db=tabaereo
+ordem=siglas,uf,cidade
+rcl=tabaereo.rcl
+chave=tabela
+chavePrincipal=id
+relacaokey=tabela,$IDORIGEM
+tituloWidth=35
+where=tabela="$IDORIGEM"
+c0=UF,uf,c,2,30,,
+c1=Cidade,cidade,c,50,150,,
+c2=até 10kg,faixa_1,f,11,70,,
+c3=20kg,faixa_2,f,11,70,,
+c4=30kg,faixa_3,f,11,80,,
+c5=50kg,faixa_4,f,11,80,,
+c6=70kg,faixa_5,f,11,80,,
+c7=100kg,faixa_6,f,11,80,,
+c8=Acima,acima,f,11,80,,
+Rlt=
+msg=
+altura=430
+largura=600
+forcarleftmask=80
+foco=uf
+t0=UF:,uf,c,2,30,@BU,estado2.rcl,
+t1=coluna+110
+t2=linha-25
+t3=Cidade:,cidade,c,50,250,@B,<#17>geral.rcl{ufsigla=uf/"Interior"},
+t4=coluna-110
+t5=Pesos#007E7E7E\color_swatch_2.png,,,,550, ,
+t6=até 10:,faixa_1,f,11,84,,
+t7=até 20:,faixa_2,f,11,84,,
+t8=até 30:,faixa_3,f,11,84,,
+t9=até 50:,faixa_4,f,11,84,,
+t10=até 70:,faixa_5,f,11,84,,
+t11=até 100:,faixa_6,f,11,84,,
+t12=Acima:,acima,f,11,84,,
+#t22=Frete Mínimo:,minima,f,11,84,,
+#h22=Frete Mínimo
+validacao=campoPreenchido(uf),campoPreenchido(cidade)
+
+[calculo]
+versao=3
+x0=precalc:coleta{Tem Coleta:,ck,0,,0}
+x1=precalc:redespacho{Tem Redespacho:,ck,0,,0}
+x2=precalc:entrega{Tem Entrega:,ck,0,,0}
+x3=precalc:qTDE{Qtde de TDE:,l,60,[0|1|2|3|4|5|6|7|8|9|10|11|12],0}
+x4=fretepeso:pesoCidade[EXCEDENTE_MAIOR,faixa_1{0:10},faixa_2{10.01:20},faixa_3{20.01:30},faixa_4{30.01:50},faixa_5{50.01:70},faixa_6{70.01:100},acima{100.01}]
+x5=itr:0
+x6=itr:seleciona[qTDE,*tde]
+x7=outros:0
+x8=outros:taxaComPesoExcedente[coleta,coleta,actn20,actn40]
+x9=outros:taxaComPesoExcedente[redespacho,redespacho,bctn20,bctn40]
+x10=outros:taxaComPesoExcedente[entrega,entrega,cctn20,cctn40]
+x11=despacho:tabelaValor[despacho]
+x12=gris:porcentNfeValor[gris]
+x13=seguro:porcentNfeValor[advalorem]

@@ -1,0 +1,22 @@
+pedidos :id|data,d|hora,h,5|totalped,pic,16
+auxiliar:original,,6,1|nome,,14,1|qtde:unidade;;2,e,9,1|preco,pic,9,1|total,pic,9,
+cadastro:codigo|nome|endereco|bairro|cep|cidade|uf|telefone
+
+CONTA CADASTRADA: $cadastro.codigo;
+-----------IDENTIFICACAO DO CLIENTE-------------
+Codigo  : $cadastro.codigo;
+Nome    : $cadastro.nome;
+Endereco: $cadastro.endereco;
+Bairro  : $cadastro.bairro;
+Cidade  : $cadastro.cidade; / $cadastro.uf;
+Fone    : $cadastro.telefone;
+-----------IDENTIFICACAO DO COMPRA--------------
+$listarAuxiliar;
+------------------------------------------------
+TOTAL                           $pedidos.totalped;
+
+     RECONHECO E PAGAREI A DIVIDA ACIMA.
+
+
+      --------------------------------
+                ASSINATURA

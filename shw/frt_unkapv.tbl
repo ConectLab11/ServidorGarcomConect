@@ -1,0 +1,303 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 01/08/2011
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=tabvalor.pdx
+disableMenu=0
+telalargura=880
+telaaltura=570
+Posicionar=1
+whereexterno=mygroup='tabelaunkapv'
+solicitante=cf log
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,+Aereo Proximo Voo, geral, 0123456789, 9, 25,a
+o2=nil,+Tarifas, tarifas , 0123456789, 9, 23,a
+
+#
+# Parametros de tela
+#
+ 
+[geral]
+tab=Aereo Proximo Voo
+comentario=Tabela para calculo de fretes
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=90
+forcarleftmask=90
+nobrowse=1
+altura=200
+largura=400
+foco=descr
+t0=Descrição:,descr,c,50,410,,
+h0=Descrição completa
+t1=Validade:,validade,d,10,80,,
+h1=Prazo de validade
+t2=linha-25
+t3=coluna+320
+t4=forcarleftmask=150
+t5=linha+25
+#Transporte Rodoviário:,tipotab,sn,3,30,,
+t6=forcarleftmask=150
+t7=coluna-320
+t8=Taxas#007E7E7E\text_align_justify.png,,,,550, ,
+t9=Coleta Capital:,coleta,f,11,84,,
+t10=linha-25
+t11=coluna+160
+t12=até (kg):,actn20,e,6,60,,
+t13=linha-25
+t14=coluna+160
+t15=Excedente:,actn40,f,11,84,,
+t16=coluna-320
+
+t17=Coleta Interior:,faixa_1,f,11,84,,
+t18=linha-25
+t19=coluna+160
+t20=até (kg):,bctn20,e,6,60,,
+t21=linha-25
+t22=coluna+160
+t23=Excedente:,bctn40,f,11,84,,
+t24=coluna-320
+
+t25=Entrega Capital:,entrega,f,11,84,,
+t26=linha-25
+t27=coluna+160
+t28=até (kg):,cctn20,e,6,60,,
+t29=linha-25
+t30=coluna+160
+t31=Excedente:,cctn40,f,11,84,,
+t32=coluna-320
+
+t33=Entrega Interior:,faixa_2,f,11,84,,
+t34=linha-25
+t35=coluna+160
+t36=até (kg):,dctn20,e,6,60,,
+t37=linha-25
+t38=coluna+160
+t39=Excedente:,dctn40,f,11,84,,
+t40=coluna-320
+
+t41=Entrega Emergencial:,redespacho,f,11,84,,
+t42=linha-25
+t43=coluna+160
+t44=até (kg):,bate_50,e,6,60,,
+t45=linha-25
+t46=coluna+160
+t47=Excedente:,bate_100,f,11,84,,
+t48=coluna-320
+
+t49=Geral#007E7E7E\text_align_justify.png,,,,550, ,
+t50=ADValorem:,advalorem,p,11,84,,
+t51=GRIS:,gris,p,11,84,,
+t52=TDE:,tde,p,11,84,,
+t53=Taxas:,despacho,f,11,84,,
+
+t54=Outros#007E7E7E\tag.png,,,,530, ,
+t55=forcarleftmask=100
+t56=Devolução:,devolucao,p,11,60,,
+h56=Porcentagem do frete quando for devolução
+t57=linha-25
+t58=coluna+160
+t59=Reentrega:,reentrega,p,11,60,,
+h59=Porcentagem do frete quando for reentrega
+t60=coluna+160
+t61=linha-25
+t62=Compartilhada:,compartilhada,sn,3,30,,
+h62=Compartilhar esta tabela com os clientes sem tabela.
+
+[tarifas]
+tab=TARIFAS PARA CALCULO
+db=tabaereo
+ordem=id
+chave=tabela
+chavePrincipal=id
+relacaokey=tabela,$IDORIGEM
+tituloWidth=35
+nobrowse=0
+where=tabela="$IDORIGEM"
+c0=UF,uf,c,2,50,,
+c1=Cidade,cidade,c,50,250,,
+altura=570
+largura=650
+forcarleftmask=80
+foco=uf
+t0=UF:,uf,c,2,30,@BU,estado2.rcl,
+t1=coluna+110
+t2=linha-25
+t3=Cidade:,cidade,c,50,250,@B,<#17>geral.rcl{ufsigla=uf},
+t4=coluna-110
+
+t5=Pesos#007E7E7E\color_swatch_2.png,,,,600, ,
+t6=0.5Kg:,faixa_1,f,11,84,,
+t7=1.0Kg:,faixa_2,f,11,84,,
+t8=1.5Kg:,faixa_3,f,11,84,,
+t9=2.0Kg:,faixa_4,f,11,84,,
+t10=2.5Kg:,faixa_5,f,11,84,,
+t11=3.0Kg:,faixa_6,f,11,84,,
+t12=3.5Kg:,faixa_7,f,11,84,,
+t13=4.0Kg:,faixa_8,f,11,84,,
+t14=4.5Kg:,faixa_9,f,11,84,,
+t15=5.0Kg:,faixa_10,f,11,84,,
+t16=5.5Kg:,faixa_11,f,11,84,,
+t17=6.0Kg:,faixa_12,f,11,84,,
+t18=6.5Kg:,faixa_13,f,11,84,,
+t19=7.0Kg:,faixa_14,f,11,84,,
+t20=7.5Kg:,faixa_15,f,11,84,,
+t21=linha-375
+t22=coluna+140
+
+t23=8.0Kg:,faixa_16,f,11,84,,
+t24=8.5Kg:,faixa_17,f,11,84,,
+t25=9.0Kg:,faixa_18,f,11,84,,
+t26=9.5Kg:,faixa_19,f,11,84,,
+t27=10.0Kg:,faixa_20,f,11,84,,
+t28=10.5Kg:,faixa_21,f,11,84,,
+t29=11.0Kg:,faixa_22,f,11,84,,
+t30=11.5Kg:,faixa_23,f,11,84,,
+t31=12.0Kg:,faixa_24,f,11,84,,
+t32=12.5Kg:,faixa_25,f,11,84,,
+t33=13.0Kg:,faixa_26,f,11,84,,
+t34=13.5Kg:,faixa_27,f,11,84,,
+t35=14.0Kg:,faixa_28,f,11,84,,
+t36=14.5Kg:,faixa_29,f,11,84,,
+t37=15.0Kg:,faixa_30,f,11,84,,
+t38=linha-375
+t39=coluna+140
+
+t40=15.5Kg:,faixa_31,f,11,84,,
+t41=16.0Kg:,faixa_32,f,11,84,,
+t42=16.5Kg:,faixa_33,f,11,84,,
+t43=17.0Kg:,faixa_34,f,11,84,,
+t44=17.5Kg:,faixa_35,f,11,84,,
+t45=18.0Kg:,faixa_36,f,11,84,,
+t46=18.5Kg:,faixa_37,f,11,84,,
+t47=19.0Kg:,faixa_38,f,11,84,,
+t48=19.5Kg:,faixa_39,f,11,84,,
+t49=20.0Kg:,faixa_40,f,11,84,,
+t50=20.5Kg:,faixa_41,f,11,84,,
+t51=21.0Kg:,faixa_42,f,11,84,,
+t52=21.5Kg:,faixa_43,f,11,84,,
+t53=22.0Kg:,faixa_44,f,11,84,,
+t54=22.5Kg:,faixa_45,f,11,84,,
+t55=linha-375
+t56=coluna+140
+
+t57=23.0Kg:,faixa_46,f,11,84,,
+t58=23.5Kg:,faixa_47,f,11,84,,
+t59=24.0Kg:,faixa_48,f,11,84,,
+t60=24.5Kg:,faixa_49,f,11,84,,
+t61=25.0Kg:,faixa_50,f,11,84,,
+t62=25.5Kg:,faixa_51,f,11,84,,
+t63=26.0Kg:,faixa_52,f,11,84,,
+t64=26.5Kg:,faixa_53,f,11,84,,
+t65=27.0Kg:,faixa_54,f,11,84,,
+t66=27.5Kg:,faixa_55,f,11,84,,
+t67=28.0Kg:,faixa_56,f,11,84,,
+t68=28.5Kg:,faixa_57,f,11,84,,
+t69=29.0Kg:,faixa_58,f,11,84,,
+t70=29.5Kg:,faixa_59,f,11,84,,
+t71=30.0Kg:,faixa_60,f,11,84,,
+
+[calculo]
+versao=8
+x0=precalc:coleta{Tem Coleta:,ck,0,,0}
+x1=precalc:redespacho{Tem Redespacho:,ck,0,,0}
+x2=precalc:entrega{Tem Entrega:,ck,0,,0}
+x3=fretepeso:pesoCidade[TAXAS,$faixas:frt_unkapv.tbl]
+x4=itr:porcentNfeValor[tde]
+x5=itr:valorMinimoMaximo[tdeminimo,frt_val1]
+x6=outros:0
+x7=outros:taxaComPesoExcedente[coleta,coleta,actn20,actn40]
+x8=outros:taxaComPesoExcedente[redespacho,redespacho,bctn20,bctn40]
+x9=outros:taxaComPesoExcedente[entrega,entrega,cctn20,cctn40]
+x10=despacho:tabelaValor[despacho]
+x11=gris:porcentNfeValor[gris]
+x12=pedagio:tabelaValor[pedagio]
+x13=seguro:porcentNfeValor[advalorem]
+
+[faixas]
+f0=faixa_1{0:0.5}
+f1=faixa_2{0.501:1}
+f2=faixa_3{1.001:1.5}
+f3=faixa_4{1.501:2}
+f4=faixa_5{2.001:2.5}
+f5=faixa_6{2.501:3}
+f6=faixa_7{3.001:3.5}
+f7=faixa_8{3.501:4}
+f8=faixa_9{4.001:4.5}
+f9=faixa_10{4.501:5}
+f10=faixa_11{5.001:5.5}
+f11=faixa_12{5.501:6}
+f12=faixa_13{6.001:6.5}
+f13=faixa_14{6.501:7}
+f14=faixa_15{7.001:7.5}
+f15=faixa_16{7.501:8}
+f16=faixa_17{8.001:8.5}
+f17=faixa_18{8.501:9},
+f18=faixa_19{9.001:9.5}
+f19=faixa_20{9.501:10}
+f20=faixa_21{10.001:10.5}
+f21=faixa_22{10.501:11}
+f22=faixa_23{11.001:11.5}
+f23=faixa_24{11.501:12}
+f24=faixa_25{12.001:12.5}
+f25=faixa_26{12.501:13}
+f26=faixa_27{13.001:13.5}
+f27=faixa_28{13.501:14}
+f28=faixa_29{14.001:14.5}
+f29=faixa_30{14.501:15}
+f30=faixa_31{15.001:15.5}
+f31=faixa_32{15.501:16}
+f32=faixa_33{16.001:16.5}
+f33=faixa_34{16.501:17}
+f34=faixa_35{17.001:17.5}
+f35=faixa_36{17.501:18}
+f36=faixa_37{18.001:18.5}
+f37=faixa_38{18.501:19}
+f38=faixa_39{19.001:19.5}
+f39=faixa_40{19.501:20}
+f40=faixa_41{20.001:20.5}
+f41=faixa_42{20.501:21}
+f42=faixa_43{21.001:21.5}
+f43=faixa_44{21.501:22}
+f44=faixa_45{22.001:22.5}
+f45=faixa_46{22.501:23}
+f46=faixa_47{23.001:23.5}
+f47=faixa_48{23.501:24}
+f48=faixa_49{24.001:24.5}
+f49=faixa_50{24.501:25}
+f50=faixa_51{25.001:25.5}
+f51=faixa_52{25.501:26}
+f52=faixa_53{26.001:26.5}
+f53=faixa_54{26.501:27}
+f54=faixa_55{27.001:27.5}
+f55=faixa_56{27.501:28}
+f56=faixa_57{28.001:28.5}
+f57=faixa_58{28.501:29}
+f58=faixa_59{29.001:29.5}
+f59=faixa_60{29.501:30}
+f60=faixa_60{30}]
+

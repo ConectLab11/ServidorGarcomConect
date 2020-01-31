@@ -1,0 +1,570 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# ConectLab Informatica Ltda
+# Data: 06/04/2011
+#       21/01/2017
+#
+# a todos
+# d nota de despesas
+# g agenda
+# m movimento de caixa
+# n cadastro de bancos
+# o plano de contas
+# p pagar
+# q gerenciador de ocorrencias
+# r receber
+# s script inicial
+# t conta caixa
+
+[arquivo]
+modulo=TABELAS DE TRIBUTAÇÃO
+nivelprincipal=1
+nivelauxiliar=1
+
+[Opcoes]
+o0=Tabelas de Tributação, 0123456789, 9, 0,as
+
+[Tabelas de Tributação]
+o0=nil, CFOP, cfopnota, 0123456789, 1, 20:24,a
+o1=#nil, CFOP, cfopnota2, 0789, 1, 20:24,a
+o2=nil, NCM, ncm, 0123456789, 1, 20:24,a
+o3=nil, +Capitulos, ncmCapitulos, 0123456789, 1, 20:24,a
+o4=nil, CEST, cest, 0123456789, 1, 20:24,a
+o5=nil, MVA, tabmvaprod, 0123456789, 1, 20:24,a
+o6=nil, Tabela de ICMS, tabicms, 0123456789, 1, 20:22,a
+o7=nil, Artigos do ICMS, articms, 0123456789, 1, 20:24,a
+o8=nil, Artigos dinâmico, artauto, 0123456789, 1, 20:24,a
+o9=nil, Simples Nacional, simples, 0123456789, 1, 20:22,a
+o10=nil, ISS, iss, 0123456789, 1, 20:22,a
+o11=#nil, NFS-e Tributação, nfsetrib, 0123456789, 1, 20:22,a
+o12=Fisco, Inf. Complementar, fiscocpl, 0123789, 1, 20:22,a
+o13=nil, PIS/ COFINS, pisCofins,0123456789, 1, 20:22,a
+o14=nil, ECF Alíquotas, ecfAliq,0123456789, 1, 20:22,a
+o15=nil, CST para CFOP, padraoCstCfop, 0123456789, 1, 20:22,a
+o16=nil, Tabela DIFAL, tabelaDIFAL, 0123456789, 1, 20:22,a
+o17=nil, +Alq Part, aliqPart, 0123456789, 1, 20:22,a
+o18=nil, Tabela CFOP, tabelaCFOP, 0123456789, 1, 20:22,a
+
+[cfopnota]
+tab=CFOP
+comentario=
+db=cfopnota
+ordem=codigo
+rcl=cfopnota.rcl
+chave=codigo
+chaveprincipal=id
+c0=Código,codigo,c,8,60,,
+c1=Descrição,ncfop,c,250,320,,
+c2=Ativo,ativo,sn,3,30,,
+CampoForcado=codigo
+Rlt=notafisc.cfop,conhecim.operacao
+msg=
+altura=350
+largura=450
+foco=codigo
+forcarleftmask=
+t0=Código:,codigo,c,5,60,!9.999;1; ,
+h0=Código do CFOP.
+t1=Descrição:,ncfop,c,250,300,,
+h1=Descrição do CFOP.
+t2=#Não Faturar:,nocobranca,sn,3,30,,
+h2=Não faturar NF-e ou CT-e
+t3=#Tipo:,tipo=@Saida;Entrada;Ambos,l,@B,80,,
+h3=Tipo de CFOP
+t4=Tributação#007E7E7E\attach_2.png,,,,385, ,
+t5=CST/CSO:,cst,ci,3,40,,classtri.rcl,
+h5=Código da Situação Tributária/ Código de Situação da Operação - Simples Nacional
+t6=#Sem ICMS:,noicms,sn,3,30,,
+h6=Sem tributação - não destacar ICMS na NF-e ou CT-e
+t7=Ativo:,ativo,sn,3,30,,
+validacao=duplicidades(codigo;[codigo-cfopnota])
+
+[cfopnota2]
+tab=CFOP
+comentario=
+db=cfopnota
+ordem=codigo
+rcl=cfopnota.rcl
+chave=codigo
+chaveprincipal=id
+c0=Código,codigo,c,8,60,,
+c1=Descrição,ncfop,c,50,300,,
+CampoForcado=codigo
+Rlt=notafisc.cfop,conhecim.operacao
+msg=
+altura=300
+largura=450
+foco=codigo
+forcarleftmask=
+t0=Código:,codigo,c,5,60,!9.999;1; ,
+h0=Código do CFOP.
+t1=Descrição:,ncfop,c,50,300,,
+h1=Descrição do CFOP.
+t2=Tipo:,tipo=@Saida;Entrada;Ambos,l,@B,80,,
+h2=Tipo de CFOP
+t3=Tributação#007E7E7E\attach_2.png,,,,385, ,
+t4=CST:,cst,ci,3,40,,<#3>classtri.rcl,
+h4=Classificação Tributária
+t5=Ativo:,ativo,sn,3,30,,
+validacao=duplicidades(codigo;[codigo-cfopnota])
+
+[ncm]
+tab=TABELA DE CLASSIFICAÇÃO FISCAL - NCM (IPI/PIS/COFINS)
+comentario=
+db=classfis
+ordem=codigo,ex,tipo
+rcl=classfis.rcl
+chave=id
+chavePrincipal=id
+c0=Código NCM,codigo,c,9,80,,
+c1=Ex,ex,c,2,30,,
+c2=Tipo,tipo,c,2,30,,
+c3=Descrição,descricao,c,45,300,,
+#c2=IA,impostos,p,9,70,,
+Rlt=estoque.cf
+msg=
+altura=460
+largura=450
+foco=codigo
+t0=Código NCM:,codigo,c,10,100,@U!9999.99.99;1; !,
+h0=Código NCM.
+t1=linha-25
+t2=coluna+170
+t3=Ex:,ex,c,5,30,,
+t4=linha-25
+t5=coluna+90
+t6=Tipo:,tipo,c,5,40,,
+t7=coluna-260
+t8=Descrição:,descricao,c,0,300,,
+h8=Descrição do código NCM.
+t9=Tabela MVA:,ncmpai,c,10,100,@BU!9999.99.99;1; !,classfis.rcl,
+h9=Código da tabela MVA principal (Pai) - O Sistema copia os dados desta tabela.
+t10=Ativo:,ativo=@Sim,sn,3,30,,
+h10=Ativar esta tabela ? Sim ou não
+t11=#linha-25
+t12=#coluna+135
+t13=#forcarleftmask=180
+t14=#Total Impostos (Aproximado):,impostos,p,11,84,,
+t15=#coluna-135
+t16=#forcarleftmask=100
+t17=IPI (Alíquotas)#007E7E7E\attach_2.png,,,,385, ,
+t18=Na entrada:,ipientrada,p,11,84,,
+h18=Porcentagem do IPI quando Nota Fiscal de entrada.
+t19=linha-25
+t20=coluna+190
+t21=Na saída:,ipisaida,p,11,84,,
+h21=Porcentagem do IPI quando Nota Fiscal de saida.
+t22=coluna=20
+t23=PIS (Alíquotas)#007E7E7E\attach_2.png,,,,385, ,
+t24=Na entrada:,pisentrada,p,11,84,,
+h24=Porcentagem de PIS quando Nota Fiscal de entrada.
+t25=linha-25
+t26=coluna+190
+t27=Na saída:,pissaida,p,11,84,,
+h27=Porcentagem de PIS quando Nota Fiscal de saida.
+t28=coluna=20
+t29=COFINS (Alíquotas)#007E7E7E\attach_2.png,,,,385, ,
+t30=Na entrada:,cofinsentrada,p,11,84,,
+h30=Porcentagem de COFINS quando Nota Fiscal de entrada.
+t31=linha-25
+t32=coluna+190
+t33=Na saída:,cofinssaida,p,11,84,,
+h33=Porcentagem de COFINS quando Nota Fiscal de saida.
+t34=coluna=20
+t35=II - Imposto de importação#007E7E7E\attach_2.png,,,,385, ,
+t36=Alíquota:,ii,p,11,84,,
+h36=Porcentagem para imposto de importação.
+t37=Impostos Aproximados#007E7E7E\attach_2.png,,,,385, ,
+t38=forcarleftmask=130
+t39=Nacional Federal:,impNacFed,p,11,84,,
+h39=Porcentagem de Imposto Nacional Federal
+t40=Internacional Federal:,impIntFed,p,11,84,,
+h40=Porcentagem de Imposto Internacional Federal
+t41=Estadual:,impEstadual,p,11,84,,
+h41=Porcentagem de Imposto Estadual
+t42=Municipal:,impMunicipal,p,11,84,,
+h42=Porcentagem de Imposto Municipal
+#t36=Total:,impostos,p,11,84,@R&cor(clblue|clwhite),
+#t37=linha+30
+#calc0=impostos=+impNacFed,+impIntFed,+impEstadual,+impMunicipal
+#validacao=validarNCM(codigo)
+
+[cest]
+tab=TABELA CEST
+comentario=
+db=tab_cest
+ordem=cest,ncm
+rcl=
+chave=id
+chavePrincipal=id
+c0=Código,cest,c,7,60,,
+c1=NCM,ncm,c,2,70,,
+c2=Descrição,descricao,c,45,300,,
+Rlt=estoque.cest
+msg=
+altura=460
+largura=450
+foco=cest
+t0=Código:,cest,c,7,100,,
+t1=NCM:,ncm,c,8,100,,
+t2=Descrição:,descricao,c,0,300,,
+
+
+[tabmvaprod]
+tab=TABELA SUBST. TRIBUTÁRIA POR PRODUTO
+comentario=
+db=mvaprod
+ordem=uf
+rcl=mva.rcl
+modcampoorigem=Código NCM:/100/70/!9999.99.99;1; /NE/160/10/classfis.rcl/
+campoorigem=Código NCM:/100/70//NE/171/200/classfis.rcl/
+chave=id
+chaveprincipal=id
+where=referencia="$IDORIGEM"
+relacaokey=referencia,"$IDORIGEM"
+c0=Destino,uf,c,9,80,,estados.rcl,
+c1=Interna,aliq_interna,p,11,84,,
+c2=MVA,aliq_mva,p,11,84,,
+Rlt=
+msg=
+altura=200
+largura=370
+foco=uf
+forcarleftmask=220
+t0=UF Destino:,uf,c,2,40,@BU,estados.rcl,
+h0=UF de destino da mercadoria.<F2>
+t1=Porcentagem Adicional Base Cálculo:,aliq_mva,p,11,84,,
+h1=Porcentagem adicional a Base de Cálculo do ICMS de Substituição Tributária definida pelo estado destino.
+t2=Alíquota:,aliq_interna,p,11,84,,
+h2=Alíquota do ICMS de Substituição Tributária definida pelo estado destino.
+validacao=campoPreenchido(uf)
+
+[articms]
+tab=ARTIGOS DO ICMS
+comentario=ARTIGOS DO ICMS
+db=articms
+ordem=artigo
+rcl=articms.rcl
+chave=artigo
+chaveprincipal=id
+c0=Artigos,artigo,c,10,90,,
+c1=Descrição,descricao,c,65,300,,
+campoforcado=artigo
+Rlt=conhecim.articms
+msg=CTRC(s)
+altura=400
+largura=600
+foco=artigo
+t0=Artigo:,artigo,c,15,80,,
+h0=Código do artigo do ICMS.
+t1=Descrição:,descricao,t,0,450x90,,
+h1=Descrição do artigo do ICMS.
+t2=Observação:,obs,sn,3,30,,
+h2=Incluir no campo observação do documento fiscal
+t3=Tributação#007E7E7E\attach_2.png,,,,385, ,
+t4=CST/CSO:,cst,ci,3,40,,<#3>classtri.rcl,
+h4=Código da Situação Tributária/ Código de Situação da Operação - Simples Nacional
+t5=CFOP:,cfop,ci,5,40,,cfopnota.rcl,
+h5=Código CFOP
+t6=Aliq ST:,aliqST,p,11,84,,
+h6=Aliquota ICMS Substituição Tributária
+
+[artauto]
+tab=ARTIGOS DO ICMS DINÂMICO
+comentario=
+db=artauto
+ordem=artigo
+rcl=
+modcampoorigem=Art. do ICMS:/100/70/!9999.99.99;1; /NE/160/10/articms.rcl/
+campoorigem=Art. do ICMS:/100/70//NE/171/200/articms.rcl/
+chave=id
+chaveprincipal=id
+where=artigo="$IDORIGEM"
+relacaokey=artigo,"$IDORIGEM"
+c0=Transporte,tipo,c,20,100,,
+c1=Origem,origem,c,9,80,,<#2>estados.rcl,
+c2=Destino,destino,c,9,80,,<#2>estados.rcl,
+Rlt=
+msg=
+altura=200
+largura=250
+foco=origem
+forcarleftmask=90
+t0=Transporte:,tipo=@;;00-Nenhum;01-Rodoviario;02-Aereo;03-Aquaviario;04-Ferroviario;05-Dutoviario,l,50,130,,
+h0=Tipo de Transporte
+t1=Origem:,origem,c,2,40,@BU,<#2>estados.rcl,
+h1=UF de origem.<F2>
+t2=Destino:,destino,c,2,40,@BU,<#2>estados.rcl,
+h2=UF de destino.<F2>
+validacao=campoPreenchido(origem),campoPreenchido(destino)
+
+[tabicms]
+tab=TABELA DE ICMS
+comentario=
+db=tabicms
+ordem=uforigem,ufdestino
+rcl=icms.rcl
+chave=id
+chaveprincipal=id
+c0=Origem,uforigem,c,8,80,,
+c1=Destino,ufdestino,c,8,80,,
+c2=Alíq. 1,valor,p,11,60,,
+c3=Alíq. 2,valor2,p,11,60,,
+altura=230
+largura=300
+foco=uforigem
+t0=Origem:,uforigem,c,2,30,@BU,estado2.rcl,
+h0=Estado de Origem <F2>
+t1=Destino:,ufdestino,c,2,30,@BU,estado2.rcl,
+h1=Estado de Destino <F2>
+t2=Alíq. PJ:,valor,p,10,60,,
+h2=Alíquota para Pessoa Juridica
+t3=Alíq. PF:,valor2,p,10,60,,
+h3=Alíquota para Pessoa Física
+validacao=campoPreenchido(uforigem),campoPreenchido(ufdestino),validarIcms(uforigem;ufdestino)
+
+[simples]
+tab=TABELA DE CRÉDITO DO SIMPLES NACIONAL
+comentario=
+db=simples
+ordem=ano+mes desc
+rcl=simples.rcl
+chave=id
+chaveprincipal=id
+c0=Mês,mes,i,2,45,,
+c1=Ano,ano,i,4,45,,
+c2=Alíquota,aliquota,p,11,84,,
+altura=150
+largura=450
+foco=mes
+t0=Mês:,mes,c,2,40,@BU,<#8>geral.rcl,
+h0=Mês<F2>
+t1=linha-25
+t2=coluna+100
+t3=Ano:,ano,c,4,40,@BU,<#9>geral.rcl,
+h3=Ano <F2>
+t4=linha-25
+t5=coluna+120
+t6=Alíquota:,aliquota,p,11,84,,
+h6=Alíquota
+validacao=limiteInt(mes;[1-12]),limiteInt(ano;[2011-2020])
+
+[iss]
+tab=TABELA DE ISS POR MUNICIPIOS
+comentario=
+db=iss
+ordem=
+rcl=iss.rcl
+chave=id
+chaveprincipal=id
+c0=Estado,estado,c,2,60,,
+c1=Municipio,municipio,c,50,280,,
+c2=Alìquota,iss,p,11,60,,
+altura=210
+largura=400
+foco=estado
+t0=Estado:,estado,c,2,35,@BU,estado2.rcl,
+h0=UF - Sigla do estado.<F2>
+t1=Municipio:,municipio,c,50,250,,
+h1=Nome do Municipio.
+t2=Alíquota:,iss,p,11,40,,
+h2=Porcentagem para calculo do ISS.
+
+[fiscocpl]
+tab=INFORMAÇÕES COMPLEMENTARES DE INTERESSE DO FISCO
+comentario=
+db=fiscocpl
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,c,6,60,,
+c1=Descrição,descricao,c,255,300,,
+altura=260
+largura=500
+foco=descricao
+t0=Descrição:,descricao,t,0,350x90,,
+h0=Descrição completa
+t1=Ativo:,ativo=Sim,sn,3,30,,
+h1=Ativo (Sim/Não)
+t2=Automático:,auto,sn,3,30,,
+h2=Incluir texto automaticamente no documento fiscal
+
+[nfsetrib]
+tab=NFS-e Tributação
+db=set_mult
+ordem=codigo
+chave=id
+chaveprincipal=id
+c0=Preferencial,ativo,sn,3,80,,
+c1=Código,codigo,c,8,60,,
+c2=Descrição,txt_2,c,255,240,,
+c3=Aliq,aliquota,p,6,60,,
+nobrowse=0
+relacaokey=nome,"nfse_trib"
+autoIncluir=0
+where=nome='nfse_trib'
+altura=440
+largura=600
+foco=codigo
+forcarleftmask=90
+t0=Código:,codigo,c,10,80,,
+t1=CNAE:,txt_1,c,10,80,,
+t2=Descrição:,txt_2,c,255,450,,
+t3=Aliquota:,aliquota,p,11,84,,
+t4=Preferencial:,ativo,sn,3,30,,
+t5=coluna=10
+t6=forcarleftmask=0
+t7=Descrição dos Serviços (Padrão)#007E7E7E\page_code.png,,,,530, ,
+t8=forcarleftmask=10
+t9=coluna=0
+t10=,txt_3,t,0,530x150,,
+
+[ncmCapitulos]
+tab=CAPITULOS NCM
+db=set_mult
+ordem=codigo
+chave=id
+chaveprincipal=id
+c0=Código,codigo,c,8,60,,
+c1=Descrição,descricao,c,255,330,,
+c2=Ativo,ativo,sn,3,60,,
+nobrowse=0
+relacaokey=nome,"CAPITULOS_NCM"
+autoIncluir=0
+where=nome='CAPITULOS_NCM'
+altura=200
+largura=600
+foco=codigo
+forcarleftmask=90
+t0=Código:,codigo,c,2,80,,
+t1=Descrição:,descricao,c,100,450,,
+t2=Ativo:,ativo,sn,3,30,,
+
+[pisCofins]
+tab=PIS/ COFINS
+db=set_mult
+ordem=codigo
+chave=id
+chaveprincipal=id
+c0=id,txt_1,c,255,240,,
+c1=Aliq,aliquota,p,6,60,,
+nobrowse=1
+relacaokey=nome,"PIS_COFINS_ALIQUOTAS_PADRAO"
+autoIncluir=1
+where=nome='PIS_COFINS_ALIQUOTAS_PADRAO'
+altura=440
+largura=500
+foco=txt_1
+forcarleftmask=90
+t0=PIS#007E7E7E\page_code.png,,,,430, ,
+t1=CST:,txt_1,ci,2,30,,cstpis.rcl,
+t2=Aliquota:,aliquota,p,11,84,,
+t3=COFINS#007E7E7E\page_code.png,,,,430, ,
+t4=CST:,txt_2,ci,2,30,,cstcofin.rcl,
+t5=Aliquota:,valor,p,11,84,,
+
+[ecfAliq]
+tab=PIS/ COFINS
+db=set_mult
+ordem=txt_1
+chave=id
+chaveprincipal=id
+c0=CST,txt_1,c,3,60,,
+c1=Código,txt_2,c,3,60,,
+nobrowse=0
+relacaokey=nome,"ECF_ALIQUOTAS_CST_ICMS"
+autoIncluir=0
+where=nome='ECF_ALIQUOTAS_CST_ICMS'
+altura=200
+largura=500
+foco=txt_1
+forcarleftmask=90
+t0=CST:,txt_1,ci,3,40,,classtri.rcl,
+t1=Código:,txt_2,ci,3,30,,<#4>classtri.rcl,
+
+[padraoCstCfop]
+tab=PADRAO CST PARA CFOP
+db=set_mult
+ordem=txt_1
+chave=id
+chaveprincipal=id
+c0=CFOP,txt_1,c,3,60,,
+c1=CST,txt_2,c,3,60,,
+nobrowse=0
+relacaokey=nome,"PADRAO_CST_PARA_CFOP"
+autoIncluir=0
+where=nome='PADRAO_CST_PARA_CFOP'
+altura=200
+largura=500
+foco=txt_1
+forcarleftmask=90
+t0=CFOP:,txt_1,ci,5,40,,cfopnota.rcl,
+t1=CST:,txt_2,ci,3,40,,classtri.rcl,
+
+[tabelaDIFAL]
+tab=TABELA DIFAL
+db=set_mult
+ordem=txt_a,txt_b
+chave=id
+chaveprincipal=id
+c0=Origem,txt_a,c,2,60,,
+c1=Destino,txt_b,c,2,60,,
+c2=Operação,valor_2,p,11,84,,
+c3=Interna,valor_3,p,11,84,,
+c4=FCP,valor_1,p,11,84,,
+*c5=Partilha,aliquota,p,11,84,,
+nobrowse=0
+relacaokey=nome,"TABELA_DIFAL_ALIQUOTAS"
+autoIncluir=0
+where=nome='TABELA_DIFAL_ALIQUOTAS'
+altura=300
+largura=500
+foco=txt_1
+forcarleftmask=220
+t0=Origem:,txt_a,c,2,30,@BU,estado2.rcl,
+t1=Destino:,txt_b,c,2,30,@BU,estado2.rcl,
+t2=Alíquota ICMS da operação:,valor_3,p,11,84,,
+t3=Alíquota ICMS Interna na UF destino:,valor_2,p,11,84,,
+t4=Alíquota Fundo de Pobreza:,valor_1,p,11,84,,
+*t5=Alíquota de Partilha:,aliquota,p,11,84,,
+t5=linha+10
+t6=label|Alíquota de Partilha 2018 = 80%|,9,clred,,170,150
+
+
+[tabelaCFOP]
+tab=TABELA CFOP
+db=cfop
+ordem=codigo
+chave=id
+chaveprincipal=id
+c0=Código,codigo,c,4,60,,
+c1=Descrição,descricao,c,255,300,,
+nobrowse=0
+altura=400
+largura=600
+foco=descricao
+forcarleftmask=100
+t0=Código:,codigo,c,4,40,,
+t1=Descrição:,descricao,t,0,450x90,,
+t2=Detalhes:,info,t,0,450x90,,
+t3=Relação:,relacao,c,50,300,,
+
+[aliqPart]
+tab=ALIQUOTA DIFAL
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=id,txt_1,c,255,240,,
+c1=Aliq,aliquota,p,6,60,,
+nobrowse=1
+relacaokey=nome,"DIFAL_ALIQ_ANUAL_PART"
+autoIncluir=1
+where=nome='DIFAL_ALIQ_ANUAL_PART'
+altura=440
+largura=500
+foco=txt_1
+forcarleftmask=90
+t0=Aliquota:,aliquota,p,11,84,,

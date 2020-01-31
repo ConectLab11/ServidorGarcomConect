@@ -1,0 +1,164 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 01/08/2011
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=tabvalor.pdx
+disableMenu=0
+telalargura=830
+telaaltura=600
+Posicionar=1
+whereexterno=mygroup='tabelachegoufarma'
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,+ChegouFarma, generalidades, 0123456789, 9, 25,a
+o2=nil,+Tarifas, tarifas , 0123456789, 9, 23,a
+
+#
+# Parametros de tela
+#
+ 
+[generalidades]
+tab=Tabela especial ChegouFarma
+comentario=
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=90
+forcarleftmask=90
+nobrowse=1
+altura=200
+largura=400
+foco=descr
+t0=Descrição:,descr,c,50,310,,
+h0=Descrição completa
+t1=linha-25
+t2=coluna+380
+t3=Validade:,validade,d,10,80,,
+h3=Prazo de validade
+t4=coluna-380
+
+t5=Origem#007E7E7E\map.png,,,,545, ,	
+t6=UF:,uf,c,2,30,@BU,estado2.rcl,
+h6=Sigla da UF (Estado) <F2>
+t7=linha-25
+t8=coluna+110
+t9=Cidade:,cidade,c,30,185,@B,<#17>geral.rcl{ufsigla=uf/""},
+h9=Nome da Cidade
+t10=coluna-110
+t11=forcarleftmask=240
+t12=Generalidades#007E7E7E\text_align_justify.png,,,,500, ,
+t13=Taxa de Coleta (Capital):,faixa_1,f,11,84,,
+t14=linha-25
+t15=coluna+200
+t16=Excedente 10kg:,frt_val1,e,6,60,,
+t17=coluna-200
+
+t18=Taxa de Entrega (Capitais - Exceto RJ/AM):,faixa_2,f,11,84,,
+t19=linha-25
+t20=coluna+200
+t21=Excedente 10kg:,frt_val2,e,6,60,,
+t22=coluna-200
+
+t23=Taxa de Entrega (Rio de Janeiro/Manaus):,faixa_3,f,11,84,,
+t24=linha-25
+t25=coluna+200
+t26=Excedente 10kg:,frt_val3,e,6,60,,
+t27=coluna-200
+
+t28=Taxa de Coleta/Entrega EMERGENCIAL:,faixa_4,f,11,84,,
+t29=linha-25
+t30=coluna+200
+t31=Excedente 10kg:,frt_val4,e,6,60,,
+t32=coluna-200
+
+t33=Taxa de Entrega Interior (Redespacho):,faixa_5,f,11,84,,
+t34=linha-25
+t35=coluna+200
+t36=Excedente 10kg:,frt_val5,e,6,60,,
+t37=coluna-200
+
+t38=Taxa de Entrega Interior (Carro dedicado):,percurso,f,11,84,,
+
+t39=Seguro:,seguro,p,11,84,,
+t40=GRIS:,gris,p,11,84,,
+t41=Taxa CTe,outros,f,11,84,,
+
+t42=Devolução:,devolucao,p,11,60,,
+t43=linha-25
+t44=coluna+160
+t45=Mínimo:,faixa_9,f,11,84,,
+t46=coluna-160
+
+t47=Reentrega:,reentrega,p,11,60,,
+t48=linha-25
+t49=coluna+160
+t50=Mínimo:,faixa_10,f,11,84,,
+t51=coluna-160
+t52=Compartilhada:,compartilhada,sn,3,30,,
+
+[tarifas]
+tab=TARIFAS PARA CALCULO
+comentario=
+db=tabaereo
+ordem=unidade,uf,cidade
+rcl=
+chave=tabela
+chavePrincipal=id
+relacaokey=tabela,$IDORIGEM
+tituloWidth=35
+where=tabela="$IDORIGEM"
+c0=Região,unidade,c,15,80,,
+c1=UF,uf,c,2,30,,
+c2=Cidade,cidade,c,50,170,,
+c3=Sigla,siglas,c,3,60,,
+c4=Minima,minima,f,11,80,,
+c5=Tarifa,valorpeso,f,11,80,,
+c6=Prazo,prazo,i,3,30,,
+Rlt=
+msg=
+altura=350
+largura=500
+forcarleftmask=120
+foco=unidade
+t0=Região,unidade=@;Sul;Sudeste e CO;Nordeste;Norte,l,15,100,,
+t1=UF:,uf,c,2,30,@BU,estado2.rcl,
+t2=Cidade:,cidade,c,50,200,@B,<#17>geral.rcl{ufsigla=uf/"Interior"},
+t3=Sigla:,siglas,c,3,50,@U,
+t4=Tarifa Mínima:,minima,f,11,84,,
+t5=Frete Peso#007E7E7E\color_swatch_2.png,,,,550, ,
+t6=Tarifa:,valorpeso,f,11,84,,
+t7=Prazo:,prazo,i,3,30,,
+
+[calculo]
+versao=22
+x0=precalc:taxas_coleta{Taxas:,l,350,[|1. Coleta (Capital)|2. Entrega (Capital Exceto RJ/AM)|3. Entrega (Rio de Janeiro/Manaus)|4. Coleta/Entrega EMERGENCIAL|5. Entrega Interiro (Redespacho)],0}
+x1=precalc:taxas_km{Km carro dedicado:,v,100,[0],0}
+x2=fretepeso:pesoCidade[TAXA_UNICA,*valorpeso{0:10000000}]
+x3=fretepeso:devolucaoReentregaMinimo[faixa_9,faixa_10]
+x4=seguro:porcentNfeValor[seguro]
+x5=gris:porcentNfeValor[gris]
+x6=outros:0
+x7=outros:tabelaValor[outros]
+x8=outros:taxasColetaEntrega[10kg,taxas_coleta,taxas_km]

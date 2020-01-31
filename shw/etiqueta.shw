@@ -1,0 +1,1202 @@
+[EtiquetasTPL]
+i0=Zebra
+
+[Zebra]
+i0=estoque, TLP 2844 - 10,6 x 2,0 cm (Referência 128B)
+i1=estoque, EPL 39x16mm x 2 | Referência+EAN
+i2=estoque, LP 2844-Z 40x30mm x 1 | Código + Descrição
+i3=estoque, LP 2844-Z 40x30mm x 1 | Código + Descrição + Preço
+i4=estoque, LP 2844-Z 40x30mm x 1 | Código + Descrição + Preço + Referência
+i5=estoque, LP 2844-Z 40x30mm x 1 | EAN13 + Descrição
+i6=estoque, LP 2844-Z 40x30mm x 1 | EAN13 + Descrição + Preço
+i7=estoque, LP 2844-Z 40x30mm x 1 | EAN13 + Descrição + Preço + Referência
+i8=estoque, TLP 2844 40x38mm x 1 | Referência
+i9=estoque, TLP 2844 40x38mm x 1 | EAN13 + Referência
+i10=cadastro, LP 2844-Z 36mm x 89mm x 1 | Endereço
+i11=cadastro, LP 2844-Z 36mm x 89mm x 1 | Contato + Endereço
+i12=CT-e, GC420t 100mm x 70mm x 1
+
+[EtiquetaMatricial]
+i0=90mm x 230mm 1 Coluna
+i1=105mm x 250mm 1 Coluna
+
+[90mm x 230mm 1 Coluna]
+Descricao=90mm x 230mm 1 Coluna
+Fonte=#15
+Altura=23
+Largura=90
+Espacos=0
+Linhas=1
+Celulas=1
+colunas=1
+MargemH=0
+MargemV=0
+Campos=6
+MaximoLinha=6
+MaximoWidth=60
+Arquivo=
+view=
+
+[105mm x 250mm 1 Coluna]
+Descricao=105mm x 250mm 1 Coluna
+Fonte=#15
+Altura=25
+Largura=105
+Espacos=0
+Linhas=1
+Celulas=1
+colunas=1
+MargemH=0
+MargemV=0
+Campos=6
+MaximoLinha=6
+MaximoWidth=60
+Arquivo=
+view=
+
+[Etiqueta]
+i0=Outros
+i1=Pimaco
+i2=Envelope
+.i3=JAC Express
+.i4=JAC Express 2 Colunas
+
+[Pimaco]
+i0=A4251-A4
+i1=A4356-A4
+i2=6081-CARTA
+i3=6280-CARTA
+
+.i3=6081Contato
+.i4=6081B
+.i5=6184
+i4=351
+
+[Envelope]
+i0=Padrão
+
+[JAC Express]
+i0=6625
+
+[JAC Express 2 Colunas]
+i0=6625
+
+# OCEtiqueta
+[PimacoA4251-A4]
+Descricao=Pimaco A4251 | A4
+Altura=21,2
+Largura=38,2
+AlturaReal=520
+LarguraReal=990
+Espacos=5
+Linhas=13
+Colunas=5
+Celulas=65
+MargemH=100
+MargemV=210
+Campos=5
+MaximoWidth=780
+Arquivo=
+pageSize=A4
+
+# OCEtiqueta
+[PimacoA4356-A4]
+Descricao=A4356 | A4
+Altura=25,4
+Largura=63,5
+AlturaReal=600
+LarguraReal=1570
+Espacos=5
+Linhas=11
+Celulas=33
+colunas=3
+MargemH=190
+MargemV=150
+Campos=5
+MaximoWidth=900
+Arquivo=
+pageSize=A4
+
+# OCEtiqueta
+[Pimaco6081-CARTA]
+Descricao=6081 | CARTA
+Altura=25,4
+Largura=101,6
+AlturaReal=600
+LarguraReal=2500
+Espacos=5
+Linhas=10
+Celulas=20
+colunas=2
+MargemH=200
+MargemV=250
+Campos=6
+MaximoWidth=1500
+Arquivo=
+
+# OCEtiqueta
+[Pimaco6280-CARTA]
+Descricao=6280 | CARTA
+Altura=25,4
+Largura=66,7
+AlturaReal=600
+LarguraReal=1570
+Espacos=5
+Linhas=10
+Colunas=3
+Celulas=30
+MargemH=190
+MargemV=150
+Campos=5
+MaximoWidth=200
+Arquivo=
+
+[JAC Express6625]
+Descricao=6625
+Altura=25,4
+Largura=66,7
+Espacos=5
+Linhas=10
+Colunas=3
+Celulas=30
+MargemH=15
+MargemV=15
+Campos=5
+MaximoWidth=200
+Arquivo=6625.rvf
+pageSize=A4
+
+[JAC Express 2 Colunas6625]
+Descricao=6625
+Altura=25,4
+Largura=66,7
+Espacos=5
+Linhas=10
+Colunas=2
+Celulas=20
+MargemH=15
+MargemV=15
+Campos=5
+MaximoWidth=200
+Arquivo=6625b.rvf
+pageSize=A4
+
+[ZebraTLP-2844]
+Descricao=Zebra TLP-2844
+pdf=Sim
+Altura=84,7
+Largura=101,6
+Espacos=5
+Linhas=5
+Colunas=2
+Celulas=6
+MargemH=5
+MargemV=5
+MaximoWidth=0
+Arquivo=doczebra.etq
+
+[ScriptCadastro]
+i0=Padrão
+i1=Padrão+Código
+i2=Padrão+Contato
+i3=Padrão+Contato2
+
+i4=Envelope
+
+[ScriptEstoque]
+i0=Padrão
+i1=Referência
+i2=CódigoDeBarras
+i3=CódigoDeBarras-Referência
+i4=CódigoDeBarras-Código
+i5=CódigoDeBarras-Código-Preço
+
+[ScriptEstoqueZebra2]
+campos=7
+codigodebarras=Não
+l0=$30|30|90|380|codigo|nada|c|
+l1=$30|400|0|0|referencia|nada|c|
+l2=$90|30|0|0|descricao|nada|c|
+l3=$150|30|0|0|barras|nada|c|
+l4=$150|520|0|0|preco|nada|f|
+l5=$150|620|0|0|@descricao1|copy(%descricao,1,21)|c
+l6=$150|620|0|0|@descricao2|copy(%descricao,22,21)|c
+
+
+[ScriptCTRC]
+i0=Padrão
+
+[ScriptCTRCPadrão]
+posicoes=Sim
+campos=21
+codigodebarras=Sim
+l0=$ 40| 40| 90| 90|@|OBJ.LOGO|x|0|0|
+l1=$ 40|160|  0|  0|@nome.transportadora|nada|c|16|Impact,B,12|
+l2=$130| 40|130|500|@|OBJ.LINHA|x|0|0|
+l3=$152| 40|  0|  0|@Remetente:|nada|c|0|Courier New,N,8|
+l4=$148|220|  0|  0|@nome.remetente|nada|c|14|Courier New,B,10|
+l5=$187| 40|  0|  0|@Destino:|nada|c|0|Courier New,N,8|
+l6=$183|220|  0|  0|@nome.destinatario|nada|c|14|Courier New,B,10|
+l7=$230| 40|230|500|@|OBJ.LINHA|x|0|0|
+l8=$260| 40| 90|380|documento|OBJ.BARRAS|c|0|0|
+l9=$260|300|  0|  0|documento|nada      |c|0|Impact,B,22|
+l10=$380| 40|380|500|@|OBJ.LINHA|x|0|0|
+l11=$412| 40|  0|  0|@Nota Fiscal:|nada|c|0|Courier New,N,8|
+l12=$408|250|  0|  0|nota|nada|c|15|Courier New,BI,10|
+l13=$452| 40|  0|  0|@Valor      :|nada|c|0|Courier New,N,8|
+l14=$458|250|  0|  0|valor|nada|f|0|Courier New,B,8|
+l15=$492| 40|  0|  0|@Volumes    :|nada|c|0|Courier New,N,8|
+l16=$498|250|  0|  0|volumes|nada|e|0|Courier New,B,8|
+l17=$532| 40|  0|  0|@Cubagem    :|nada|c|0|Courier New,N,8|
+l18=$538|250|  0|  0|cubagem|nada|e|0|Courier New,B,8|
+l19=$572| 40|  0|  0|@Peso       :|nada|c|0|Courier New,N,8|
+l20=$578|250| 0|  0|peso|nada|e|0|Courier New,B,8|
+
+[ScriptCadastroPadrão]
+l0=<nome,50>
+l1=<endereco,50>
+l2=CEP: <cep,9>  - <bairro,20>
+l3=<cidade,20>  - <uf,2>
+EnderecoDeCobranca=Não
+
+[ScriptCadastroPadrão+Contato]
+l0=A/C <contato,30>
+l1=<nome,50>
+l2=<endereco,50>
+l3=CEP: <cep,9>  - <bairro,20>
+l4=<cidade,20>  - <uf,2>
+EnderecoDeCobranca=Sim
+
+[ScriptCadastroPadrão+Contato2]
+l0=<nome,50>
+l1=<endereco,50>
+l2=CEP: <cep,9>  - <bairro,20>
+l3=<cidade,20>  - <uf,2>
+l4=A/C <contato,30>
+EnderecoDeCobranca=Sim
+
+[ScriptEstoquePadrão]
+campos=3
+codigodebarras=Não
+l0=<codigo,20>
+l1=<descricao,50>
+l2=R$ <preco,15,pict>
+l3=<>
+
+[ScriptEstoqueReferência]
+posicoes=Sim
+campos=5
+codigodebarras=Não
+l0=$30|30|90|380|codigo|nada|c|
+l1=$30|400|0|0|referencia|nada|c|
+l2=$90|30|0|0|descricao|nada|c|
+l3=$150|30|0|0|@PREÇO:|nada|c|
+l4=$150|520|0|0|preco|nada|pict|
+
+[ScriptEstoqueZebra]
+campos=5
+codigodebarras=Não
+l0=$30|30|90|380|codigo|nada|c|
+l1=$30|400|0|0|referencia|nada|c|
+l2=$90|30|0|0|descricao|nada|c|
+l3=$150|30|0|0|barras|nada|c|
+l4=$150|520|0|0|preco|nada|f|
+
+[ScriptCadastroZebra]
+campos=8
+codigodebarras=Não
+l0=$30|30|90|380|codigo|nada|c|
+l1=$30|400|0|0|nome|nada|c|
+l2=$90|30|0|0|endereco|nada|c|
+l3=$150|30|0|0|cep|nada|c|
+l4=$150|30|0|0|bairro|nada|c|
+l5=$150|30|0|0|cidade|nada|c|
+l6=$150|30|0|0|uf|nada|c|
+l7=$150|30|0|0|contato|nada|c|
+
+[ScriptCadastroPadrão+Código]
+l0=<nome,50> (<codigo,8>)<> 
+l1=<endereco,50>
+l2=CEP: <cep,9> - <bairro,20>
+l3=<cidade,20> - <uf,2>
+
+[EtiquetaPallet]
+Largura=1040
+Altura=1550
+Tipo=6
+
+[ScriptEstoqueCódigoDeBarras]
+posicoes=Sim
+campos=3
+codigodebarras=Sim
+tipo=
+l0=$40 |1|41|115|barras|OBJ.BARRAS,EAN13,5|c|
+l1=$135|1|0 |0  |barras{,7}|nada|c|20|
+l2=$190|1|0 |0  |descricao{,7}|nada|c|20|
+
+[ScriptEstoqueCódigoDeBarras-Referência]
+posicoes=Sim
+campos=3
+codigodebarras=Sim
+tipo=
+l0=$40 |1|41|115|referencia|OBJ.BARRAS,128C,5|c|
+l1=$135|1|0 |0  |referencia{,7}|nada|c|20|
+l2=$190|1|0 |0  |descricao {,7}|nada|c|20|
+
+[ScriptEstoqueCódigoDeBarras-Código]
+posicoes=Sim
+campos=3
+codigodebarras=Sim
+tipo=
+l0=$40 |10|41|115|codigo|OBJ.BARRAS,128C,5|c|
+l1=$135|10|0 |0  |codigo{,7}|nada|c|20|
+l2=$190|10|0 |0  |descricao{,7}|nada|c|20|
+
+[ScriptEstoqueCódigoDeBarras-Código-Preço]
+posicoes=Sim
+campos=4
+codigodebarras=Sim
+tipo=
+l0=$40 |10|41|115|codigo|OBJ.BARRAS,128C,5|c|
+l1=$135|10|0 |0  |codigo{,7}|nada|c|20|
+l2=$190|10|0 |0  |descricao{,7}|nada|c|18|
+l3=$245|10|0 |0  |preco{,7}|nada|pictr|18|
+
+
+[Pimaco351]
+Descricao=Pimaco 351
+altura=21
+largura=38
+alturareal=500
+largurareal=960
+eantipo=14
+espacos=5
+espacov=0
+espacoh=0
+linhas=13
+campos=5
+colunas=5
+celulas=65
+margemH=100
+margemV=210
+margemHetiqueta=5
+margemVetiqueta=5
+maximowidth=780
+Arquivo=
+pdf=
+Pagina=
+pageSize=A4
+
+[ZebraTLP2844_2Colunas]
+Descricao=TLP2844_2Colunas
+altura=18
+largura=50
+alturareal=220
+largurareal=420
+eantipo=14
+espacos=0
+espacov=0
+espacoh=0
+linhas=1
+colunas=2
+celulas=2
+margemH=0
+margemV=0
+margemHetiqueta=5
+margemVetiqueta=5
+maximowidth=0
+Arquivo=pdf
+pdf=Sim
+Pagina=Não
+alturaPagina=250
+larguraPagina=800
+
+[ScriptCadastroEnvelope]
+posicoes=Sim
+campos=18
+codigodebarras=Não
+dadosDoRemetente=Sim
+l0=$30|130|0|0|@remetente.nome|nada|c|0|tahoma,N,9|
+l1=$70|130|0|0|@remetente.endereco|nada|c|0|tahoma,N,9|
+l2=$110|130|0|0|@CEP:|nada|c|0|tahoma,N,9|
+l3=$110|220|0|0|@remetente.cep|nada|c|0|tahoma,N,9|
+l4=$110|380|0|0|@-|nada|c|0|tahoma,N,9|
+l5=$110|400|0|0|@remetente.bairro|nada|c|0|tahoma,N,9|
+l6=$150|130|0|0|@remetente.cidade|nada|c|0|tahoma,N,9|
+l7=$150|600|0|0|@-|nada|c|0|tahoma,N,9|
+l8=$150|620|0|0|@remetente.uf|nada|c|0|tahoma,N,9|
+->
+l9 =$430|830|0|0|nome|nada|c|0|tahoma,N,11|
+l10=$470|830|0|0|endereco|nada|c|0|tahoma,N,11|
+l11=$510|830|0|0|@CEP:|nada|c|0|tahoma,N,11|
+l12=$510|930|0|0|cep|nada|c|0|tahoma,N,11|
+l13=$510|1130|0|0|@-|nada|c|0|tahoma,N,11|
+l14=$510|1170|0|0|bairro|nada|c|0|tahoma,N,11|
+l15=$560|830|0|0|cidade|nada|c|18|tahoma,N,11|
+l16=$560|1250|0|0|@-|nada|c|0|tahoma,N,11|
+l17=$560|1290|0|0|uf|nada|c|0|tahoma,N,11|
+
+[EnvelopePadrão]
+Descricao=Envelope Padrão
+altura=150
+largura=300
+alturareal=220
+largurareal=420
+eantipo=14
+espacos=0
+espacov=0
+espacoh=0
+linhas=1
+colunas=2
+celulas=1
+margemH=10
+margemV=10
+margemHetiqueta=0
+margemVetiqueta=0
+maximowidth=0
+Arquivo=pdf
+pdf=Sim
+Pagina=Não
+alturaPagina=600
+larguraPagina=2000
+viraPagina=Sim
+TipodePapel=Envelope #10
+
+[fmtEAN]
+f0=2_5_interleaved
+f1=2_5_industrial
+f2=2_5_matrix
+f3=39
+f4=39Extended
+f5=128A
+f6=128B
+f7=128C
+f8=93
+f9=93Extended
+f10=MSI
+f11=PostNet
+f12=Codabar
+f13=EAN8
+f14=EAN13
+f15=UPC_A
+f16=UPC_E0
+f17=UPC_E1
+f18=UPC_Supp2
+f19=UPC_Supp5
+f20=EAN128A
+f21=EAN128B
+f22=E2AN128C
+
+[ZebraTLP 2844 - 10,6 x 2,0 cm (Referência 128B)]
+Descricao=TLP 2844 - 10,6 x 2,0 cm (Referência 128B)
+altura=18
+largura=50
+alturareal=220
+largurareal=420
+thisscript=scriptestoquezebra
+eantipo=14
+espacos=0
+espacov=0
+espacoh=0
+linhas=1
+colunas=2
+celulas=2
+margemH=0
+margemV=0
+margemHetiqueta=5
+margemVetiqueta=5
+maximowidth=0
+Arquivo=
+pdf=CMD
+Pagina=Não
+alturaPagina=250
+larguraPagina=800
+codigodebarras=Nao
+fonte0=Q144,019
+fonte1=q831
+fonte2=rN
+fonte3=S1
+fonte4=D7
+fonte5=ZT
+fonte6=JB
+fonte7=OD
+fonte8=R72,0
+fonte9=N
+fonte10=B1,16,0,1,2,6,80,B,"<referencia[0]>" 
+fonte11=B417,16,0,1,2,6,80,B,"<referencia[1]>" 
+fonte12=P1
+resetarRegistros=2
+
+[ZebraEPL 39x16mm x 2 | Referência+EAN]
+Descricao=EPL 39x16mm x 2 | Referência+EAN
+Impressoras=Sim
+altura=18
+largura=50
+alturareal=220
+largurareal=420
+ThisScript=scriptestoquezebra
+eantipo=14
+espacos=0
+espacov=0
+espacoh=0
+linhas=1
+colunas=2
+celulas=2
+margemH=0
+margemV=0
+margemHetiqueta=5
+margemVetiqueta=5
+maximowidth=0
+Arquivo=
+pdf=CMD
+Pagina=Não
+alturaPagina=250
+larguraPagina=800
+codigodebarras=Nao
+macroStr0=referencia[0],Ref. <referencia[0]>
+macroStr1=referencia[1],Ref. <referencia[1]>
+fonte0=OD
+fonte1=N
+fonte2=D10
+fonte3=S2
+fonte4=ZT
+fonte5=Q106,040
+fonte6=q832
+fonte7=JF
+fonte8=R100,0
+fonte9=f100
+fonte10=A41,5,0,4,1,1,N,"<referencia[0]>"
+fonte11=A380,5,0,4,1,1,N,"<referencia[1]>"
+fonte12=B41,26,0,E30,2,4,57,B,"<barras[0]>"
+fonte13=B380,26,0,E30,2,4,57,B,"<barras[1]>"
+fonte14=P1
+resetarRegistros=2
+filejpg=etq002.jpg
+
+[ZebraLP 2844-Z 40x30mm x 1 | Código + Descrição]
+Descricao=LP 2844-Z 40x30mm x 1 | Código + Descrição
+Impressoras=Sim
+altura=18
+largura=50
+alturareal=220
+largurareal=420
+ThisScript=scriptestoquezebra
+eantipo=14
+espacos=0
+espacov=0
+espacoh=0
+linhas=1
+colunas=1
+celulas=1
+margemH=0
+margemV=0
+margemHetiqueta=0
+margemVetiqueta=0
+maximowidth=0
+Arquivo=
+pdf=CMD
+Pagina=Não
+alturaPagina=250
+larguraPagina=800
+codigodebarras=Nao
+macroStr0=referencia[0],Ref. <referencia[0]>
+fonte0=CT~~CD,~CC^~CT~
+fonte1=^XA~TA000~JSN^LT0^MNW^MTD^PON^PMN^LH0,0^JMA^PR2,2~SD15^JUS^LRN^CI0^XZ
+fonte2=^XA
+fonte3=^MMT
+fonte4=^PW320
+fonte5=^LL0240
+fonte6=^LS0
+fonte7=^BY2,3,98^FT30,126^BCN,,Y,N
+fonte8=^FD<codigo[0]>^FS
+fonte9=^FT30,180^A0N,20,19^FH\^FD<descricao[0]>^FS
+fonte10=^PQ1,0,1,Y^XZ
+resetarRegistros=0
+sleep=0
+filejpg=etq003.jpg
+validEAN13=Nao
+estGrade=Sim
+
+[ZebraLP 2844-Z 40x30mm x 1 | Código + Descrição + Preço]
+Descricao=LP 2844-Z 40x30mm x 1 | Código + Descrição + Preço
+Impressoras=Sim
+altura=18
+largura=50
+alturareal=220
+largurareal=420
+ThisScript=scriptestoquezebra
+eantipo=14
+espacos=0
+espacov=0
+espacoh=0
+linhas=1
+colunas=1
+celulas=1
+margemH=0
+margemV=0
+margemHetiqueta=0
+margemVetiqueta=0
+maximowidth=0
+Arquivo=
+pdf=CMD
+Pagina=Não
+alturaPagina=250
+larguraPagina=800
+codigodebarras=Nao
+macroStr0=preco[0],R$ <preco[0]>
+macroStr1=descricao[0],<descricao[0]>
+fonte0=CT~~CD,~CC^~CT~
+fonte1=^XA~TA000~JSN^LT0^MNW^MTD^PON^PMN^LH0,0^JMA^PR2,2~SD15^JUS^LRN^CI0^XZ
+fonte2=^XA
+fonte3=^MMT
+fonte4=^PW320
+fonte5=^LL0240
+fonte6=^LS0
+fonte7=^BY2,3,98^FT30,126^BCN,,Y,N
+fonte8=^FD<codigo[0]>^FS
+fonte9=^FT30,209^A0N,20,19^FH\^FD<preco[0]>^FS
+fonte10=^FT30,180^A0N,20,19^FH\^FD<descricao[0]>^FS
+fonte11=^PQ1,0,1,Y^XZ
+resetarRegistros=0
+sleep=0
+filejpg=etq003.jpg
+validEAN13=Nao
+estGrade=Sim
+
+[ZebraLP 2844-Z 40x30mm x 1 | Código + Descrição + Preço + Referência]
+Descricao=LP 2844-Z 40x30mm x 1 | Código + Descrição + Preço + Referência
+Impressoras=Sim
+altura=18
+largura=50
+alturareal=220
+largurareal=420
+ThisScript=scriptestoquezebra
+eantipo=14
+espacos=0
+espacov=0
+espacoh=0
+linhas=1
+colunas=1
+celulas=1
+margemH=0
+margemV=0
+margemHetiqueta=0
+margemVetiqueta=0
+maximowidth=0
+Arquivo=
+pdf=CMD
+Pagina=Não
+alturaPagina=250
+larguraPagina=800
+codigodebarras=Nao
+macroStr0=referencia[0],Ref. <referencia[0]>
+macroStr1=preco[0],R$ <preco[0]>
+fonte0=CT~~CD,~CC^~CT~
+fonte1=^XA~TA000~JSN^LT0^MNW^MTD^PON^PMN^LH0,0^JMA^PR2,2~SD15^JUS^LRN^CI0^XZ
+fonte2=^XA
+fonte3=^MMT
+fonte4=^PW320
+fonte5=^LL0240
+fonte6=^LS0
+fonte7=^BY2,3,82^FT30,127^BCN,,Y,N
+fonte8=^FD<codigo[0]>^FS
+fonte9=^FT29,34^A0N,20,19^FH\^FD<referencia[0]>^FS
+fonte10=^FT30,209^A0N,20,19^FH\^FD<preco[0]>^FS
+fonte11=^FT30,180^A0N,20,19^FH\^FD<descricao[0]>^FS
+fonte12=^PQ1,0,1,Y^XZ
+resetarRegistros=0
+sleep=0
+filejpg=etq003.jpg
+validEAN13=Nao
+estGrade=Sim
+
+[ZebraLP 2844-Z 40x30mm x 1 | EAN13 + Descrição]
+Descricao=LP 2844-Z 40x30mm x 1 | EAN13 + Descrição
+Impressoras=Sim
+altura=18
+largura=50
+alturareal=220
+largurareal=420
+ThisScript=scriptestoquezebra
+eantipo=14
+espacos=0
+espacov=0
+espacoh=0
+linhas=1
+colunas=1
+celulas=1
+margemH=0
+margemV=0
+margemHetiqueta=0
+margemVetiqueta=0
+maximowidth=0
+Arquivo=
+pdf=CMD
+Pagina=Não
+alturaPagina=250
+larguraPagina=800
+codigodebarras=Nao
+macroStr0=referencia[0],Ref. <referencia[0]>
+fonte0=CT~~CD,~CC^~CT~
+fonte1=^XA~TA000~JSN^LT0^MNW^MTD^PON^PMN^LH0,0^JMA^PR2,2~SD15^JUS^LRN^CI0^XZ
+fonte2=^XA
+fonte3=^MMT
+fonte4=^PW320
+fonte5=^LL0240
+fonte6=^LS0
+fonte7=^BY2,2,102^FT52,133^BEN,,Y,N
+fonte8=^FD<barras[0]>^FS
+fonte9=^FT38,197^A0N,20,19^FH\^FD<descricao[0]>^FS
+fonte10=^PQ1,0,1,Y^XZ
+resetarRegistros=0
+sleep=0
+validEAN13=Sim
+filejpg=etq003.jpg
+estGrade=Nao
+
+[ZebraLP 2844-Z 40x30mm x 1 | EAN13 + Descrição + Preço]
+Descricao=LP 2844-Z 40x30mm x 1 | EAN13 + Descrição + Preço
+Impressoras=Sim
+altura=18
+largura=50
+alturareal=220
+largurareal=420
+ThisScript=scriptestoquezebra
+eantipo=14
+espacos=0
+espacov=0
+espacoh=0
+linhas=1
+colunas=1
+celulas=1
+margemH=0
+margemV=0
+margemHetiqueta=0
+margemVetiqueta=0
+maximowidth=0
+Arquivo=
+pdf=CMD
+Pagina=Não
+alturaPagina=250
+larguraPagina=800
+codigodebarras=Nao
+macroStr0=preco[0],R$ <preco[0]>
+fonte0=CT~~CD,~CC^~CT~
+fonte1=^XA~TA000~JSN^LT0^MNW^MTD^PON^PMN^LH0,0^JMA^PR2,2~SD15^JUS^LRN^CI0^XZ
+fonte2=^XA
+fonte3=^MMT
+fonte4=^PW320
+fonte5=^LL0240
+fonte6=^LS0
+fonte7=^BY2,2,102^FT44,124^BEN,,Y,N
+fonte8=^FD<barras[0]>^FS
+fonte9=^FT30,209^A0N,20,19^FH\^FD<preco[0]>^FS
+fonte10=^FT30,180^A0N,20,19^FH\^FD<descricao[0]>^FS
+fonte11=^PQ1,0,1,Y^XZ
+resetarRegistros=0
+sleep=0
+validEAN13=Sim
+filejpg=etq003.jpg
+estGrade=Nao
+
+[ZebraLP 2844-Z 40x30mm x 1 | EAN13 + Descrição + Preço + Referência]
+Descricao=LP 2844-Z 40x30mm x 1 | EAN13 + Descrição + Preço + Referência
+Impressoras=Sim
+altura=18
+largura=50
+alturareal=220
+largurareal=420
+ThisScript=scriptestoquezebra
+eantipo=14
+espacos=0
+espacov=0
+espacoh=0
+linhas=1
+colunas=1
+celulas=1
+margemH=0
+margemV=0
+margemHetiqueta=0
+margemVetiqueta=0
+maximowidth=0
+Arquivo=
+pdf=CMD
+Pagina=Não
+alturaPagina=250
+larguraPagina=800
+codigodebarras=Nao
+macroStr0=referencia[0],Ref. <referencia[0]>
+macroStr1=preco[0],R$ <preco[0]>
+fonte0=CT~~CD,~CC^~CT~
+fonte1=^XA~TA000~JSN^LT0^MNW^MTD^PON^PMN^LH0,0^JMA^PR2,2~SD15^JUS^LRN^CI0^XZ
+fonte2=^XA
+fonte3=^MMT
+fonte4=^PW320
+fonte5=^LL0240
+fonte6=^LS0
+fonte7=^BY2,2,90^FT46,135^BEN,,Y,N
+fonte8=^FD<barras[0]>^FS
+fonte9=^FT29,34^A0N,20,19^FH\^FD<referencia[0]>^FS
+fonte10=^FT30,209^A0N,20,19^FH\^FD<preco[0]>^FS
+fonte11=^FT30,180^A0N,20,19^FH\^FD<descricao[0]>^FS
+fonte12=^PQ1,0,1,Y^XZ
+resetarRegistros=0
+sleep=0
+validEAN13=Sim
+filejpg=etq002.jpg
+estGrade=Nao
+
+[ZebraLP 2844-Z 36mm x 89mm x 1 | Endereço]
+Descricao=LP 2844-Z 36mm x 89mm x 1 | Endereço
+Impressoras=Sim
+altura=18
+largura=50
+alturareal=220
+largurareal=420
+ThisScript=scriptcadastrozebra
+eantipo=14
+espacos=0
+espacov=0
+espacoh=0
+linhas=1
+colunas=1
+celulas=1
+margemH=0
+margemV=0
+margemHetiqueta=0
+margemVetiqueta=0
+maximowidth=0
+Arquivo=
+pdf=CMD
+Pagina=Não
+alturaPagina=250
+larguraPagina=800
+codigodebarras=Nao
+macroStr0=contato[0],A/C <contato[0]>
+fonte0=CT~~CD,~CC^~CT~
+fonte1=^XA~TA000~JSN^LT0^MNW^MTD^PON^PMN^LH0,0^JMA^PR2,2~SD15^JUS^LRN^CI0^XZ
+fonte2=^XA
+fonte3=^MMT
+fonte4=^PW288
+fonte5=^LL0711
+fonte6=^LS0
+fonte7=^BY2,3,34^FT262,193^BCB,,Y,N
+fonte8=^FD<codigo[0]>^FS
+fonte9=^FT167,127^A0B,23,24^FH\^FDSP^FS
+fonte10=^FT167,500^A0B,23,24^FH\^FD<cidade[0]>^FS
+fonte11=^FT167,677^A0B,23,24^FH\^FD<cep[0]>^FS
+fonte12=^FT132,679^A0B,23,24^FH\^FD<bairro[0]>^FS
+fonte13=^FT97,680^A0B,23,24^FH\^FD<endereco[0]>^FS
+fonte14=^FT62,680^A0B,28,28^FH\^FD<nome[0]>^FS
+fonte15=^PQ1,0,1,Y^XZ
+resetarRegistros=0
+sleep=0
+validEAN13=Nao
+filejpg=etq004.jpg
+estGrade=Nao
+
+[ZebraLP 2844-Z 36mm x 89mm x 1 | Contato + Endereço]
+Descricao=LP 2844-Z 36mm x 89mm x 1 | Contato + Endereço
+Impressoras=Sim
+altura=18
+largura=50
+alturareal=220
+largurareal=420
+ThisScript=scriptcadastrozebra
+eantipo=14
+espacos=0
+espacov=0
+espacoh=0
+linhas=1
+colunas=1
+celulas=1
+margemH=0
+margemV=0
+margemHetiqueta=0
+margemVetiqueta=0
+maximowidth=0
+Arquivo=
+pdf=CMD
+Pagina=Não
+alturaPagina=250
+larguraPagina=800
+codigodebarras=Nao
+macroStr0=contato[0],A/C <contato[0]>
+fonte0=CT~~CD,~CC^~CT~
+fonte1=^XA~TA000~JSN^LT0^MNW^MTD^PON^PMN^LH0,0^JMA^PR2,2~SD15^JUS^LRN^CI0^XZ
+fonte2=^XA
+fonte3=^MMT
+fonte4=^PW288
+fonte5=^LL0711
+fonte6=^LS0
+fonte7=^BY2,3,34^FT61,192^BCB,,Y,N
+fonte8=^FD<codigo[0]>^FS
+fonte9=^FT248,126^A0B,23,24^FH\^FDSP^FS
+fonte10=^FT248,499^A0B,23,24^FH\^FD<cidade[0]>^FS
+fonte11=^FT248,676^A0B,23,24^FH\^FD<cep[0]>^FS
+fonte12=^FT213,677^A0B,23,24^FH\^FD<bairro[0]>^FS
+fonte13=^FT89,680^A0B,23,24^FH\^FD<contato[0]>^FS
+fonte14=^FT178,679^A0B,23,24^FH\^FD<endereco[0]>^FS
+fonte15=^FT142,679^A0B,28,28^FH\^FD<nome[0]>^FS
+fonte16=^FT58,680^A0B,23,24^FH\^FDA/C^FS
+fonte17=^PQ1,0,1,Y^XZ
+resetarRegistros=0
+sleep=0
+validEAN13=Nao
+filejpg=etq004.jpg
+estGrade=Nao
+
+[ZebraLP 2844-Z 36mm x 89mm x 1 | Contato + Endereço]
+Descricao=LP 2844-Z 36mm x 89mm x 1 | Contato + Endereço
+Impressoras=Sim
+altura=18
+largura=50
+alturareal=220
+largurareal=420
+ThisScript=scriptcadastrozebra
+eantipo=14
+espacos=0
+espacov=0
+espacoh=0
+linhas=1
+colunas=1
+celulas=1
+margemH=0
+margemV=0
+margemHetiqueta=0
+margemVetiqueta=0
+maximowidth=0
+Arquivo=
+pdf=CMD
+Pagina=Não
+alturaPagina=250
+larguraPagina=800
+codigodebarras=Nao
+macroStr0=contato[0],A/C <contato[0]>
+fonte0=CT~~CD,~CC^~CT~
+fonte1=^XA~TA000~JSN^LT0^MNW^MTD^PON^PMN^LH0,0^JMA^PR2,2~SD15^JUS^LRN^CI0^XZ
+fonte2=^XA
+fonte3=^MMT
+fonte4=^PW288
+fonte5=^LL0711
+fonte6=^LS0
+fonte7=^BY2,3,34^FT61,192^BCB,,Y,N
+fonte8=^FD<codigo[0]>^FS
+fonte9=^FT248,126^A0B,23,24^FH\^FDSP^FS
+fonte10=^FT248,499^A0B,23,24^FH\^FD<cidade[0]>^FS
+fonte11=^FT248,676^A0B,23,24^FH\^FD<cep[0]>^FS
+fonte12=^FT213,677^A0B,23,24^FH\^FD<bairro[0]>^FS
+fonte13=^FT89,680^A0B,23,24^FH\^FD<contato[0]>^FS
+fonte14=^FT178,679^A0B,23,24^FH\^FD<endereco[0]>^FS
+fonte15=^FT142,679^A0B,28,28^FH\^FD<nome[0]>^FS
+fonte16=^FT58,680^A0B,23,24^FH\^FDA/C^FS
+fonte17=^PQ1,0,1,Y^XZ
+resetarRegistros=0
+sleep=0
+validEAN13=Nao
+filejpg=etq004.jpg
+estGrade=Nao
+
+[ScriptCTeZebra]
+campos=18
+codigodebarras=Sim
+l0=$30|30|90|380|id|nada|c|
+l1=$30|400|0|0|cliente|nada|c|
+l2=$90|30|0|0|destinatario|nada|c|
+l3=$150|30|0|0|emissao|nada|d|
+l4=$150|30|0|0|hora|nada|c|
+l5=$150|30|0|0|uf2|nada|c|
+l6=$150|30|0|0|notas.nota|nada|c|
+l7=$150|30|0|0|notas.peso|nada|e|
+l8=$150|30|0|0|notas.volumes|nada|e|
+l9=$100|0|0|0|@transp.fantasia|nada|c
+l10=$100|0|0|0|@transp.endereco|nada|c
+l11=$100|0|0|0|@reme.nome|nada|c
+l12=$100|0|0|0|@dest.nome|nada|c
+l13=$100|0|0|0|@reme.nome1|copy(reme.nome,1,28)|c
+l14=$100|0|0|0|@reme.nome2|copy(reme.nome,29,28)|c
+l15=$100|0|0|0|@dest.nome1|copy(dest.nome,1,28)|c
+l16=$100|0|0|0|@dest.nome2|copy(dest.nome,29,28)|c
+l17=$100|0|0|0|@nfe.volumes|nada|c
+
+[ZebraGC420t 100mm x 70mm x 1]
+Descricao=GC420t 100mm x 70mm x 1
+Impressoras=Sim
+altura=18
+largura=50
+alturareal=220
+largurareal=420
+ThisScript=scriptctezebra
+eantipo=14
+espacos=0
+espacov=0
+espacoh=0
+linhas=1
+colunas=1
+celulas=1
+margemH=0
+margemV=0
+margemHetiqueta=0
+margemVetiqueta=0
+maximowidth=0
+Arquivo=
+pdf=CMD
+Pagina=Não
+alturaPagina=250
+larguraPagina=800
+codigodebarras=Nao
+macroStr0=peso,<peso> Kg
+
+fonte0=I8,A,001
+fonte1=Q559,024
+fonte2=q831
+fonte3=rN
+fonte4=S3
+fonte5=D7
+fonte6=ZT
+fonte7=JF
+fonte8=O
+fonte9=R16,0
+fonte10=f100
+fonte11=N
+fonte12=GW385,72,10,20,ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿü=ÿp¿ÝÀ?ûžþï9ã»Žÿ¿÷îþßÛ÷½üÿßïîüÏ‹û»¬ÿ¿÷÷ßùÿ¿}ÿ¿ïç9ãü»>ÿ¿ï÷yø½tàïç»ÿ?çºüÿ¿÷÷÷ÿß÷¿ýÿ¿óï“ï¹óºúÿ¿óß×ï½÷½üÿŸø?ïð~¸øÀ?ÿÿÿÿÿÿÿÿÿÿÿÿ›ÿÿÿÿÿÿÿÿÿwÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+fonte13=GW391,140,9,21,ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿð÷|áÿÿîã»ÏûŽþ?ÿç3ÿ÷¿¿ÿîë3ïó?>¿ÿïßw÷÷}ßÿîÏ»ïû¹Ïø]7÷÷?ßÿî¿3çó?;ïÿïÿw÷÷ïÿî¾»ïû¾sçÿ÷7÷÷Þw÷ð>3ïóáïóÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+fonte14=GW716,141,6,20,ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿüÀïç¾ûÿ?ïïÝýÿ÷Ïéùÿ?ïßÝÿÿïÏî?ÿ8ßÿ‡ÀsçÏïóÿ3ïßßýÿwïïÎûÿ7ï÷¾sÿsçø?€8ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+fonte15=GW654,225,14,20,ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿð;ýáü?ßßÿ¿Ãïïÿ“ùœqÏßÏçŸ÷ßÿ»û¾wçïïï¿~ëïÿÙów÷ßçÏ>~eßÿ¼ÿ»ÿßð¾þíïÿ÷ÿ8ÿß÷ßžÿußÿ¾ïÿ¾xû¿¾þnïÿœGÿ?Çßó?>~gOÿ¾ïÿ¿ïßû¿¾þïïÿŸ_?s÷ßýŸ|÷Ÿÿ¿¾ûïÏü¿¼ïÿŸÁüpüpÃçßÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+fonte16=GW639,306,16,20,ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÃ÷_÷½ÿ_Ýûø|ð?ÿ¸ó>ïï¾þï¹ûãŸûï¿ÿ~÷¿oï¾þ×ÝûïÏùßßþþçžïÏ¾üË¸ûïïûŸ¿ÿwßp¿ÛÝû÷ÿû¿¿þþc€óŸ¿9ë¹ûñÿû¿¿þÿw¿wŸ¿yÝÝûü>ŸŸþþg>û¿¿»Î˜ûÿû¿¿ÿw¿÷ßÝûÿßûß¿ÿ>ó>ù?¿“ï9ûçïûŸ¿ÿ=÷¿}¿×ßû÷ßùÏŸÿƒç€üøïÏ¸€8<à?ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿþÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿüÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+fonte17=GW661,387,13,20,ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿü÷ßÜïÀw½Àw÷ÿûçÏ¿óïÿ;¹ÿ3ïÿû÷×ß÷ïÿw]ÿ{÷ÿûãË¿óïÿ;ÿ9ïÿý÷ßß÷ïÿwÝÿ}÷ÿûçË¿óïÿ:éÿ8þ÷ÝÜïÀwýÀ{÷ÿûãÎ¿óïÿ2éÿ3çÿý÷ßß÷ïÿuýÿw÷ÿûçÎ?óïÿ9ñÿ;ïÿû÷ß÷ïÿsñÿ{÷ü ¸ €;ù€8ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+fonte18=X365,188,2,776,253
+fonte19=X364,251,2,776,333
+fonte20=X364,333,2,776,415
+fonte21=X27,414,2,776,519
+fonte22=A763,504,2,4,2,2,N,"<@transp.fantasia>"
+fonte23=A461,66,2,4,1,1,N,"<emissao>"
+fonte24=A63,93,1,4,2,2,N,"<id>"
+fonte25=A461,135,2,4,1,1,N,"<@nfe.volumes>"
+fonte26=A765,134,2,4,1,1,N,"<peso>"
+fonte27=A763,216,2,4,1,1,N,"<nota>"
+fonte28=A763,276,2,3,1,1,N,"<@dest.nome2>"
+fonte29=A763,297,2,3,1,1,N,"<@dest.nome1>"
+fonte30=A763,453,2,4,1,1,N,"<@transp.endereco>"
+fonte31=A763,356,2,3,1,1,N,"<@reme.nome2>"
+fonte32=A763,378,2,3,1,1,N,"<@reme.nome1>"
+fonte33=B188,24,1,1C,4,12,111,N,"<id>"
+fonte34=LO209,22,2,389
+fonte35=A330,183,1,5,2,2,N,"<uf2>"
+fonte36=P1
+ignorarIndexVar=Sim
+ctrlNotasLimite=100
+ctrlNotasCte=1
+resetarRegistros=0
+sleep=0
+validEAN13=Nao
+filejpg=etq005.jpg
+estGrade=Nao
+
+[ZebraTLP 2844 40x38mm x 1 | Referência]
+Descricao=TLP 2844 40x38mm x 1 | Referência
+Impressoras=Sim
+altura=18
+largura=50
+alturareal=220
+largurareal=420
+ThisScript=scriptestoquezebra2
+eantipo=14
+espacos=0
+espacov=0
+espacoh=0
+linhas=1
+colunas=1
+celulas=1
+margemH=0
+margemV=0
+margemHetiqueta=0
+margemVetiqueta=0
+maximowidth=0
+Arquivo=
+pdf=CMD
+Pagina=Não
+alturaPagina=250
+larguraPagina=800
+codigodebarras=Nao
+macroStr0=referencia[0],<referencia[0]>
+
+
+fonte0=I8,A,001
+fonte1=Q304,024
+fonte2=q831
+fonte3=rN
+fonte4=S4
+fonte5=D15
+fonte6=ZT
+fonte7=JF
+fonte8=OD
+fonte9=R255,0
+fonte10=f100
+fonte11=N
+fonte12=$img=etq1.img
+fonte13=A194,260,3,2,1,1,N,"<referencia[0]>"
+fonte14=B228,231,3,1,2,6,49,B,"<barras[0]>"
+fonte15=A140,260,3,2,1,1,N,"<@descricao2[0]>"
+fonte16=A117,260,3,2,1,1,N,"<@descricao1[0]>"
+fonte17=P1
+
+resetarRegistros=0
+sleep=0
+filejpg=etq003.jpg
+validEAN13=Nao
+estGrade=Sim
+
+[ZebraTLP 2844 40x38mm x 1 | EAN13 + Referência]
+Descricao=TLP 2844 40x38mm x 1 | EAN13 + Referência
+Impressoras=Sim
+altura=18
+largura=50
+alturareal=220
+largurareal=420
+ThisScript=scriptestoquezebra2
+eantipo=14
+espacos=0
+espacov=0
+espacoh=0
+linhas=1
+colunas=1
+celulas=1
+margemH=0
+margemV=0
+margemHetiqueta=0
+margemVetiqueta=0
+maximowidth=0
+Arquivo=
+pdf=CMD
+Pagina=Não
+alturaPagina=250
+larguraPagina=800
+codigodebarras=Nao
+macroStr0=referencia[0],<referencia[0]>
+
+
+fonte0=I8,A,001
+fonte1=Q304,024
+fonte2=q831
+fonte3=rN
+fonte4=S4
+fonte5=D15
+fonte6=ZT
+fonte7=JF
+fonte8=OD
+fonte9=R255,0
+fonte10=f100
+fonte11=N
+fonte12=$img=etq1.img
+fonte13=A194,180,3,3,1,1,N,"<referencia[0]>"
+fonte14=B228,255,3,E30,2,4,64,B,"<barras[0]>"
+fonte15=A140,260,3,2,1,1,N,"<@descricao2[0]>"
+fonte16=A117,260,3,2,1,1,N,"<@descricao1[0]>"
+fonte17=P1
+
+resetarRegistros=0
+sleep=0
+filejpg=etq003.jpg
+validEAN13=Sim
+estGrade=Sim

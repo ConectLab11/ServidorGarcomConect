@@ -1,0 +1,183 @@
+#
+#    Modelagem para Camada de Usuarios
+#
+#	Atualizado: 04/06/2013
+#
+
+[arquivo]
+modulo=UI - Manutenção de Usuários
+nivelprincipal=0
+telalargura=0
+//telaaltura=370
+
+[Opcoes]
+o0=UI_user, 0123456789, 9, 0,aec
+
+[UI_user]
+o0=nil,Usuários, usuarios, 0123456789, 0, 11,ae
+o1=nil, Logs, logs, 0123456789, 0, 47,ae
+o2=nil, Atividades, atividades, 0123456789, 0, 47,ae
+o3=nil, Lixeira, lixeira, 0123456789, 0, 29,ae
+
+#
+# Parametros de tela
+#
+
+[usuarios]
+tab=Manutenção de Usuários
+db=usuarios
+chave=id
+chavePrincipal=id
+campos=*
+c0=Código,codigo,i,6,60,,
+c1=Nome,nome,c,50,270,,
+c2=Acesso,&user_nivel,c,10,80,,
+reservado=1
+btfst=+|v|a|=
+#btfst=+|-|a|=|8|2|o
+Rlt=unico=0
+colorir=1,2|2|Bloqueado=,clgray|2|2|Administrador=,clgreen|1|2|[Master]=,clred,B|2|2|[Master]=clred,clgreen|2|2|master(adm)=clred,clblue,B|2|2|(Modelo)=,clred,B|2|2|Suporte=,clblue,B|2|2|Desenvolvedor=,clblue,B
+ordem=nome
+botaoExcluir=Nao
+botaoVer=sim
+botaoExtra=ui_perfil_user
+buscarColuna=1
+altura=520
+largura=400
+forcarleftmask=90
+foco=codigo|nome
+t0=linha+10
+t1=label|Cadastro|Tahoma,9
+t2=<,*codigo,i,6,60,,?cadastro.rcl,
+t3=coluna=20
+t4=linha+5
+t5=frame|380|2
+t6=linha+10
+t7=savelinha
+t8=label|Foto|Tahoma,9,,
+t9=frame|82|82
+t10=linha+1
+t11=coluna+1
+t12=jpeg|80|80|codigo|jpg\silueta.png|>FOTO|openfile
+t13=coluna=120
+t14=linha=savelinha
+t15=label|Grupo|Tahoma,9,clgreen
+t16=<,grupo=@Administradores;Operacional;Vendas;Compras;Financeiro;Cobrança;RH;Marketing;Clientes;Outros,l,50,227,,
+t17=linha+20
+t18=linha+20
+t19=coluna=20
+t20=linha+30
+t21=label|Dados do Login|Tahoma,clblue
+t22=linha+2
+t23=frame|320|200
+t24=linha+15
+t25=coluna=40
+t26=label|Nome de Login
+t27=<,nome,c,50,280,,
+t28=label|EMAIL
+t29=<,email,c,100,280,,
+t30=linha+5
+t31=frame|280|2
+t32=linha+8
+t33=label|Senha
+t34=<,senha,c,50,280,@U#M,
+t35=label|Confirmação
+t36=<,@passuser2,c,15,280,@U#*,
+validacao=validarSenha(senha),campoPreenchido(nome),nozero(codigo),salvar_jpeg(codigo)
+
+[logs]
+tab=Registro de Logs dos Usuários
+comentario=
+db=rexlog
+ordem=id desc limit 0,500
+rcl=
+chave=id
+chaveprincipal=id
+c0=Data,&datahora(data|hora|) as data,d,10,100,,
+c1=Usuário,nomeuser,c,50,100,,
+c2=Descrição,descricao,c,255,100,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=0
+Rlt=*
+altura=400
+largura=460
+foco=data
+forcarleftmask=100
+t0=Data:,data,d,10,80,,
+t1=Hora:,hora,h,10,80,,
+t2=Usuário:,nomeuser,c,50,300,,
+t3=Descrição:,descricao,c,255,300,,
+t4=Terminal:,idterm,c,10,60,,
+t5=IP 1:,ip1,c,20,300,,
+t6=IP 2:,ip2,c,20,300,,
+t7=IP 3:,ip3,c,20,300,,
+t8=IP 4:,ips,c,20,300,,
+
+[lixeira]
+tab=Registros Excluidos por Usuários
+db=lixeira
+db2=usuarios
+ordem=lixeira.id desc limit 0,500
+rcl=
+chave=id
+chaveprincipal=id
+campos=lixeira.data,lixeira.hora,usuarios.nome,lixeira.regdados,lixeira.motivo
+where=(lixeira.usuario=usuarios.codigo)
+c0=Data,&datahora(data|hora|) as data,d,10,100,,
+c1=Usuário,nome,c,20,70,,
+c2=Arquivo,regdados,c,20,80,,
+c3=Motivo,motivo,c,255,80,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Não
+nobrowse=0
+Rlt=*
+altura=400
+largura=460
+foco=data
+forcarleftmask=100
+t0=Data:,data,d,10,80,,
+t1=Hora:,hora,h,10,80,,
+t2=Arquivo:,regdados,c,50,300,,
+t3=Registro:,idfile,c,10,80,,
+t4=Usuário:,usuario,c,50,300,,
+t5=Terminal:,terminal,i,6,80,,
+t6=Motivo:,motivo,c,255,300,,
+t7=Dados:,dados,t,0,300x90,,
+
+[atividades]
+tab=Atividades dos Usuários
+db=regocorr
+db2=regdados,ocorrenc,usuarios
+ordem=oco_id desc limit 0,500
+chave=oco_id
+chaveprincipal=oco_id
+campos=regocorr.oco_data,regocorr.oco_hora,lower(regdados.narquivo) as narquivo,regocorr.oco_idreg,concat(ocorrenc.nocorrenci,'(',ocorrenc.id,')') as nocorrenci,usuarios.nome
+where=(regocorr.oco_iddb=regdados.id) and (regocorr.oco_idocorr=ocorrenc.id) and (regocorr.oco_usuario=usuarios.codigo)
+c0=Data,&datahora(oco_data|oco_hora|) as data,d,10,100,,
+c1=Usuário,nome,c,20,70,,
+c2=Arquivo,narquivo,c,20,70,,
+c3=Registro,oco_idreg,c,8,60,,
+c4=Ocorrência,nocorrenci,c,50,50,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Não
+nobrowse=0
+Rlt=*
+altura=400
+largura=460
+foco=data
+forcarleftmask=100
+t0=Data:,data,d,10,80,,
+t1=Hora:,hora,h,10,80,,
+t2=Arquivo:,regdados,c,50,300,,
+t3=Registro:,idfile,c,10,80,,
+t4=Usuário:,usuario,c,50,300,,
+t5=Terminal:,terminal,i,6,80,,
+t6=Motivo:,motivo,c,255,300,,
+t7=Dados:,dados,t,0,300x90,,
+
+[codigo_cont_processo]
+c0101=Se você continuar<br>, o banco de dados atual será perdido,<br>e substituido com os dados do arquivo de backup selecionado.<br>Para continuar este processo digite a senha 0101.

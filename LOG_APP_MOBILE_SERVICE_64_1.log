@@ -1,0 +1,257 @@
+16/06 20:00:21 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9333"}
+16/06 20:00:21 - Lista das impressoras
+16/06 20:00:21 - Id da impressora 7 => TCP:192.168.88.200
+16/06 20:00:21 - CIS Status: Create
+16/06 20:00:23 - CIS Status: Exception = > Falha da impressora => 192.168.88.200
+16/06 20:00:23 - CIS Status: Create
+16/06 20:00:25 - CIS Status: Exception = > Falha da impressora => 192.168.88.200
+16/06 20:00:25 - CIS Status: Create
+16/06 20:00:27 - CIS Status: Exception = > Falha da impressora => 192.168.88.200
+16/06 20:00:27 - ABRIR BANCO DE DADOS
+16/06 20:00:27 - OK BANCO DE DADOS
+16/06 20:00:27 - SET IMPRESSORA 7
+16/06 20:00:27 - ERRO 51
+16/06 20:00:27 - FALHA DA IMPRESSORA t:6,047
+16/06 20:00:27 - GRAVANDO REGISTRO PRE
+16/06 20:00:27 - CONCLUIDO
+16/06 20:00:27 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9333"}
+
+ t:6,125 => FALHA DA IMPRESSORA t:6,047 -> 51
+16/06 20:00:34 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9333"}
+16/06 20:00:34 - Lista das impressoras
+16/06 20:00:34 - Id da impressora 7 => TCP:192.168.88.200
+16/06 20:00:34 - CIS Status: Create
+16/06 20:00:35 - CIS Status: Exception = > Falha da impressora => 192.168.88.200
+16/06 20:00:36 - CIS Status: Create
+16/06 20:00:37 - CIS Status: Exception = > Falha da impressora => 192.168.88.200
+16/06 20:00:38 - CIS Status: Create
+16/06 20:00:39 - CIS Status: Exception = > Falha da impressora => 192.168.88.200
+16/06 20:00:40 - ABRIR BANCO DE DADOS
+16/06 20:00:40 - OK BANCO DE DADOS
+16/06 20:00:40 - SET IMPRESSORA 7
+16/06 20:00:40 - ERRO 51
+16/06 20:00:40 - FALHA DA IMPRESSORA t:6,031
+16/06 20:00:40 - GRAVANDO REGISTRO PRE
+16/06 20:00:40 - CONCLUIDO
+16/06 20:00:40 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9333"}
+
+ t:6,094 => FALHA DA IMPRESSORA t:6,031 -> 51
+16/06 20:02:10 - MANUTENCAO DE IMPRESSORA
+16/06 20:02:10 - FILA DE ESPERA ::::::::::
+16/06 20:02:10 - Status: Config => 192.168.88.200:9100
+16/06 20:02:10 - Status: Config => 192.168.88.200:9100
+16/06 20:02:10 - Status: Config => c:9100
+16/06 20:02:10 - Status: Config => 192.168.88.200:9100
+16/06 20:02:10 - LISTA DE IMPRESSORAS CARREGADA 4
+16/06 20:02:10 0 - IMP:RELOAD t:0,046 => OK
+16/06 20:02:14 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9333"}
+16/06 20:02:14 - Lista das impressoras
+16/06 20:02:14 - Id da impressora 7 => TCP:192.168.88.200
+16/06 20:02:14 - CIS Status: Create
+16/06 20:02:15 - CIS Status: Exception = > Falha da impressora => 192.168.88.200
+16/06 20:02:16 - CIS Status: Create
+16/06 20:02:17 - CIS Status: Exception = > Falha da impressora => 192.168.88.200
+16/06 20:02:18 - CIS Status: Create
+16/06 20:02:19 - CIS Status: Exception = > Falha da impressora => 192.168.88.200
+16/06 20:02:20 - ABRIR BANCO DE DADOS
+16/06 20:02:20 - OK BANCO DE DADOS
+16/06 20:02:20 - SET IMPRESSORA 7
+16/06 20:02:20 - ERRO 51
+16/06 20:02:20 - FALHA DA IMPRESSORA t:6,031
+16/06 20:02:20 - GRAVANDO REGISTRO PRE
+16/06 20:02:20 - CONCLUIDO
+16/06 20:02:20 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9333"}
+
+ t:6,094 => FALHA DA IMPRESSORA t:6,031 -> 51
+16/06 20:02:26 - ***  SERVIÇO PARADO
+16/06 20:02:29 - Iniciando Suporte Mobile 64bit Versao: 1.13
+16/06 20:02:29 - Variaveis
+16/06 20:02:29 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+16/06 20:02:29 - TCP Servidor
+16/06 20:02:29 - TCP Cliente
+16/06 20:02:29 - Iniciado na porta => 4406
+16/06 20:02:29 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+16/06 20:02:29 - Formato Data   : 16/06/2019 20:02:29
+16/06 20:02:29 - Flags debug 1 sem log 0
+16/06 20:02:29 - BANCO DE DADOS ONLINE > 192.168.88.28:comodoro
+16/06 20:02:29 - PRECO => 30 /            30,00/30/30
+16/06 20:02:29 - iniciar_identificacao_computador
+16/06 20:02:29 - sistema_pegar_perfil
+16/06 20:02:29 - empresa_carregar_segmentos
+16/06 20:02:29 - rcs_iniciar_variaveis_globais
+16/06 20:02:29 - terminal_id
+16/06 20:02:29 - mesas_comandas
+16/06 20:02:29 - LPRINT
+16/06 20:02:29 - Status: Config => 192.168.88.200:9100
+16/06 20:02:29 - Status: Config => 192.168.88.200:9100
+16/06 20:02:29 - Status: Config => c:9100
+16/06 20:02:29 - Status: Config => 192.168.88.200:9100
+16/06 20:02:29 - LISTA DE IMPRESSORAS CARREGADA 4
+16/06 20:02:29 - carregarImp
+16/06 20:02:29 - objetos
+16/06 20:02:29 - produtos_gerenciamento_de_estoque
+16/06 20:02:29 - # status 100%
+16/06 20:02:38 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9333"}
+16/06 20:02:38 - Lista das impressoras
+16/06 20:02:38 - Id da impressora 7 => TCP:192.168.88.200
+16/06 20:02:38 - CIS Status: Create
+16/06 20:02:38 - CIS Status: Connect
+16/06 20:02:38 - Status: Write cmd #16#4 (1..4)
+16/06 20:02:39 - Status: ok
+16/06 20:02:39 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 20:02:39 - CIS Status: Close
+16/06 20:02:39 - ABRIR BANCO DE DADOS
+16/06 20:02:39 - OK BANCO DE DADOS
+16/06 20:02:39 - SET IMPRESSORA 7
+16/06 20:02:39 - ENVIANDO IMPRESSAO
+16/06 20:02:39 - Processado com Sucesso
+16/06 20:02:39 - GRAVANDO REGISTRO PRE
+16/06 20:02:39 - CONCLUIDO
+16/06 20:02:39 0 - POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9333"}
+
+ t:0,453 => OK
+16/06 20:02:47 - MANUTENCAO DE IMPRESSORA
+16/06 20:02:47 - FILA DE ESPERA ::::::::::
+16/06 20:02:47 - Status: Config => 192.168.88.200:9100
+16/06 20:02:47 - Status: Config => 192.168.88.200:9100
+16/06 20:02:47 - Status: Config => c:9100
+16/06 20:02:47 - Status: Config => 192.168.88.200:9100
+16/06 20:02:47 - LISTA DE IMPRESSORAS CARREGADA 4
+16/06 20:02:47 0 - IMP:RELOAD t:0,047 => OK
+16/06 20:02:49 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9333"}
+16/06 20:02:49 - Lista das impressoras
+16/06 20:02:49 - Id da impressora 7 => TCP:192.168.88.200
+16/06 20:02:49 - CIS Status: Create
+16/06 20:02:49 - CIS Status: Connect
+16/06 20:02:49 - Status: Write cmd #16#4 (1..4)
+16/06 20:02:50 - Status: ok
+16/06 20:02:50 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 20:02:50 - CIS Status: Close
+16/06 20:02:50 - ABRIR BANCO DE DADOS
+16/06 20:02:50 - OK BANCO DE DADOS
+16/06 20:02:50 - SET IMPRESSORA 7
+16/06 20:02:50 - ENVIANDO IMPRESSAO
+16/06 20:02:50 - Processado com Sucesso
+16/06 20:02:50 - GRAVANDO REGISTRO PRE
+16/06 20:02:50 - CONCLUIDO
+16/06 20:02:50 0 - POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9333"}
+
+ t:0,438 => OK
+16/06 20:02:53 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9333"}
+16/06 20:02:53 - Lista das impressoras
+16/06 20:02:53 - Id da impressora 7 => TCP:192.168.88.200
+16/06 20:02:53 - CIS Status: Create
+16/06 20:02:53 - CIS Status: Connect
+16/06 20:02:53 - Status: Write cmd #16#4 (1..4)
+16/06 20:02:53 - Status: ok
+16/06 20:02:53 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 20:02:53 - CIS Status: Close
+16/06 20:02:53 - ABRIR BANCO DE DADOS
+16/06 20:02:53 - OK BANCO DE DADOS
+16/06 20:02:53 - SET IMPRESSORA 7
+16/06 20:02:53 - ENVIANDO IMPRESSAO
+16/06 20:02:54 - Processado com Sucesso
+16/06 20:02:54 - GRAVANDO REGISTRO PRE
+16/06 20:02:54 - CONCLUIDO
+16/06 20:02:54 0 - POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9333"}
+
+ t:0,484 => OK
+16/06 20:06:41 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9333"}
+16/06 20:06:41 - Lista das impressoras
+16/06 20:06:41 - Id da impressora 7 => TCP:192.168.88.200
+16/06 20:06:41 - CIS Status: Create
+16/06 20:06:41 - CIS Status: Connect
+16/06 20:06:41 - Status: Write cmd #16#4 (1..4)
+16/06 20:06:41 - Status: ok
+16/06 20:06:41 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 20:06:41 - CIS Status: Close
+16/06 20:06:41 - ABRIR BANCO DE DADOS
+16/06 20:06:41 - OK BANCO DE DADOS
+16/06 20:06:41 - SET IMPRESSORA 7
+16/06 20:06:41 - ENVIANDO IMPRESSAO
+16/06 20:06:41 - Processado com Sucesso
+16/06 20:06:41 - GRAVANDO REGISTRO PRE
+16/06 20:06:41 - CONCLUIDO
+16/06 20:06:41 0 - POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9333"}
+
+ t:0,453 => OK
+16/06 20:06:51 - ***  SERVIÇO PARADO
+16/06 20:06:54 - Iniciando Suporte Mobile 64bit Versao: 1.13
+16/06 20:06:54 - Variaveis
+16/06 20:06:54 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+16/06 20:06:54 - TCP Servidor
+16/06 20:06:54 - TCP Cliente
+16/06 20:06:54 - Iniciado na porta => 4406
+16/06 20:06:54 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+16/06 20:06:54 - Formato Data   : 16/06/2019 20:06:54
+16/06 20:06:54 - Flags debug 1 sem log 0
+16/06 20:06:54 - BANCO DE DADOS ONLINE > 192.168.88.28:comodoro
+16/06 20:06:54 - PRECO => 30 /            30,00/30/30
+16/06 20:06:54 - iniciar_identificacao_computador
+16/06 20:06:54 - sistema_pegar_perfil
+16/06 20:06:54 - empresa_carregar_segmentos
+16/06 20:06:54 - rcs_iniciar_variaveis_globais
+16/06 20:06:54 - terminal_id
+16/06 20:06:54 - mesas_comandas
+16/06 20:06:54 - LPRINT
+16/06 20:06:54 - Status: Config => 192.168.88.200:9100
+16/06 20:06:54 - Status: Config => 192.168.88.200:9100
+16/06 20:06:54 - Status: Config => c:9100
+16/06 20:06:54 - Status: Config => 192.168.88.200:9100
+16/06 20:06:54 - LISTA DE IMPRESSORAS CARREGADA 4
+16/06 20:06:54 - carregarImp
+16/06 20:06:54 - objetos
+16/06 20:06:54 - produtos_gerenciamento_de_estoque
+16/06 20:06:54 - # status 100%
+16/06 20:07:02 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9332"}
+16/06 20:07:02 - Lista das impressoras
+16/06 20:07:02 - Id da impressora 7 => TCP:192.168.88.200
+16/06 20:07:02 - CIS Status: Create
+16/06 20:07:03 - CIS Status: Connect
+16/06 20:07:03 - Status: Write cmd #16#4 (1..4)
+16/06 20:07:03 - Status: ok
+16/06 20:07:03 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 20:07:03 - CIS Status: Close
+16/06 20:07:03 - ABRIR BANCO DE DADOS
+16/06 20:07:03 - OK BANCO DE DADOS
+16/06 20:07:03 - SET IMPRESSORA 7
+16/06 20:07:03 - ENVIANDO IMPRESSAO
+16/06 20:07:03 - Processado com Sucesso
+16/06 20:07:03 - GRAVANDO REGISTRO PRE
+16/06 20:07:03 - CONCLUIDO
+16/06 20:07:03 0 - POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9332"}
+
+ t:0,438 => OK
+16/06 20:07:16 - MANUTENCAO DE IMPRESSORA
+16/06 20:07:16 - FILA DE ESPERA ::::::::::
+16/06 20:07:16 - Status: Config => 192.168.88.200:9100
+16/06 20:07:16 - Status: Config => 192.168.88.200:9100
+16/06 20:07:16 - Status: Config => c:9100
+16/06 20:07:16 - Status: Config => 192.168.88.200:9100
+16/06 20:07:16 - LISTA DE IMPRESSORAS CARREGADA 4
+16/06 20:07:16 0 - IMP:RELOAD t:0,047 => OK
+16/06 20:07:20 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9332"}

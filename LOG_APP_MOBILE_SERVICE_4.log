@@ -1,0 +1,257 @@
+15/06 01:50:14 - impressora test 9100
+15/06 01:50:14 - salvando log -> C:\rcsv\App\mobile64\LOG_APP_MOBILE_SERVICE_3.log
+15/06 01:50:16 - impressora test 2 => st 0
+15/06 01:50:16 - impressora test 3 => Impressora Cozinha|TCP:192.168.88.200|FALHA DA IMPRESSORA t:6,063
+15/06 01:50:16 - ABRIR BANCO DE DADOS
+15/06 01:50:16 - OK BANCO DE DADOS
+15/06 01:50:16 - SET IMPRESSORA 7
+15/06 01:50:16 - ERRO 51
+15/06 01:50:16 - FALHA DA IMPRESSORA t:6,063
+15/06 01:50:16 - ERRO NO PROCESSAMENTO DO PEDIDO 9333
+15/06 01:50:16 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9333"}
+
+ t:6,109 => ERRO NO PROCESSAMENTO DO PEDIDO 9333 -> 3
+15/06 01:51:23 - ***  SERVIÇO PARADO
+15/06 01:51:37 - Iniciando Suporte Mobile 64bit Versao: 1.13
+15/06 01:51:37 - Variaveis
+15/06 01:51:37 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+15/06 01:51:37 - TCP Servidor
+15/06 01:51:37 - TCP Cliente
+15/06 01:51:37 - Iniciado na porta => 4406
+15/06 01:51:37 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+15/06 01:51:37 - Formato Data   : 15/06/2019 01:51:37
+15/06 01:51:37 - Flags debug 1 sem log 0
+15/06 01:51:37 - BANCO DE DADOS ONLINE > 192.168.88.28:comodoro
+15/06 01:51:37 - PRECO => 30 /            30,00/30/30
+15/06 01:51:37 - iniciar_identificacao_computador
+15/06 01:51:37 - sistema_pegar_perfil
+15/06 01:51:37 - empresa_carregar_segmentos
+15/06 01:51:37 - rcs_iniciar_variaveis_globais
+15/06 01:51:37 - terminal_id
+15/06 01:51:37 - mesas_comandas
+15/06 01:51:37 - LPRINT
+15/06 01:51:37 - LISTA DE IMPRESSORAS CARREGADA 4
+15/06 01:51:37 - carregarImp
+15/06 01:51:37 - objetos
+15/06 01:51:37 - produtos_gerenciamento_de_estoque
+15/06 01:51:37 - # status 100%
+15/06 01:51:41 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9333"}
+15/06 01:51:41 - LISTA DE IMPRESSORAS
+15/06 01:51:41 - IMPRESSORA CAIXA 7 => TCP:192.168.88.200
+15/06 01:51:41 - impressora test 192.168.88.200
+15/06 01:51:41 - impressora test 9100
+15/06 01:51:41 - impressora test 2 => st 1
+15/06 01:51:41 - impressora test 4 ck
+15/06 01:51:41 - impressora test 5 ck  ok
+15/06 01:51:41 - impressora test 6 final
+15/06 01:51:41 - ABRIR BANCO DE DADOS
+15/06 01:51:41 - OK BANCO DE DADOS
+15/06 01:51:41 - SET IMPRESSORA 7
+15/06 01:51:41 - ENVIANDO IMPRESSAO
+15/06 01:51:41 - Processado com Sucesso
+15/06 01:51:41 - ERRO NO PROCESSAMENTO DO PEDIDO 9333
+15/06 01:51:41 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9333"}
+
+ t:0,532 => ERRO NO PROCESSAMENTO DO PEDIDO 9333 -> 3
+15/06 01:52:07 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9333"}
+15/06 01:52:07 - LISTA DE IMPRESSORAS
+15/06 01:52:07 - IMPRESSORA CAIXA 7 => TCP:192.168.88.200
+15/06 01:52:07 - impressora test 192.168.88.200
+15/06 01:52:07 - impressora test 9100
+15/06 01:52:07 - impressora test 2 => st 1
+15/06 01:52:07 - impressora test 4 ck
+15/06 01:52:07 - impressora test 5 ck  ok
+15/06 01:52:07 - impressora test 6 final
+15/06 01:52:07 - ABRIR BANCO DE DADOS
+15/06 01:52:07 - OK BANCO DE DADOS
+15/06 01:52:07 - SET IMPRESSORA 7
+15/06 01:52:07 - ENVIANDO IMPRESSAO
+15/06 01:52:07 - Processado com Sucesso
+15/06 01:52:07 - ERRO NO PROCESSAMENTO DO PEDIDO 9333
+15/06 01:52:07 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9333"}
+
+ t:0,563 => ERRO NO PROCESSAMENTO DO PEDIDO 9333 -> 3
+15/06 01:52:19 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9333"}
+15/06 01:52:19 - LISTA DE IMPRESSORAS
+15/06 01:52:19 - IMPRESSORA CAIXA 7 => TCP:192.168.88.200
+15/06 01:52:19 - impressora test 192.168.88.200
+15/06 01:52:19 - impressora test 9100
+15/06 01:52:19 - impressora test 2 => st 1
+15/06 01:52:19 - impressora test 4 ck
+15/06 01:52:19 - impressora test 5 ck  ok
+15/06 01:52:19 - impressora test 6 final
+15/06 01:52:19 - ABRIR BANCO DE DADOS
+15/06 01:52:19 - OK BANCO DE DADOS
+15/06 01:52:19 - SET IMPRESSORA 7
+15/06 01:52:19 - ENVIANDO IMPRESSAO
+15/06 01:52:19 - Processado com Sucesso
+15/06 01:52:19 - ERRO NO PROCESSAMENTO DO PEDIDO 9333
+15/06 01:52:19 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9333"}
+
+ t:0,516 => ERRO NO PROCESSAMENTO DO PEDIDO 9333 -> 3
+15/06 01:52:29 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9333"}
+15/06 01:52:29 - LISTA DE IMPRESSORAS
+15/06 01:52:29 - IMPRESSORA CAIXA 7 => TCP:192.168.88.200
+15/06 01:52:29 - impressora test 192.168.88.200
+15/06 01:52:29 - impressora test 9100
+15/06 01:52:29 - impressora test 2 => st 1
+15/06 01:52:29 - impressora test 4 ck
+15/06 01:52:29 - impressora test 5 ck  ok
+15/06 01:52:29 - impressora test 6 final
+15/06 01:52:29 - ABRIR BANCO DE DADOS
+15/06 01:52:29 - OK BANCO DE DADOS
+15/06 01:52:29 - SET IMPRESSORA 7
+15/06 01:52:29 - ENVIANDO IMPRESSAO
+15/06 01:52:30 - Processado com Sucesso
+15/06 01:52:30 - ERRO NO PROCESSAMENTO DO PEDIDO 9333
+15/06 01:52:30 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9333"}
+
+ t:0,531 => ERRO NO PROCESSAMENTO DO PEDIDO 9333 -> 3
+15/06 01:52:43 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9333"}
+15/06 01:52:43 - LISTA DE IMPRESSORAS
+15/06 01:52:43 - IMPRESSORA CAIXA 7 => TCP:192.168.88.200
+15/06 01:52:43 - impressora test 192.168.88.200
+15/06 01:52:43 - impressora test 9100
+15/06 01:52:43 - impressora test 2 => st 1
+15/06 01:52:43 - impressora test 4 ck
+15/06 01:52:43 - impressora test 5 ck  ok
+15/06 01:52:43 - impressora test 6 final
+15/06 01:52:43 - ABRIR BANCO DE DADOS
+15/06 01:52:43 - OK BANCO DE DADOS
+15/06 01:52:43 - SET IMPRESSORA 7
+15/06 01:52:43 - ENVIANDO IMPRESSAO
+15/06 01:52:43 - Processado com Sucesso
+15/06 01:52:43 - ERRO NO PROCESSAMENTO DO PEDIDO 9333
+15/06 01:52:43 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9333"}
+
+ t:0,532 => ERRO NO PROCESSAMENTO DO PEDIDO 9333 -> 3
+15/06 08:37:46 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9333"}
+15/06 08:37:46 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9333"}
+
+ => ERRO DE CONEXAO O BANCO DE DADOS -> 5
+15/06 08:37:51 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9333"}
+15/06 08:37:51 - LISTA DE IMPRESSORAS
+15/06 08:37:51 - IMPRESSORA CAIXA 7 => TCP:192.168.88.200
+15/06 08:37:51 - impressora test 192.168.88.200
+15/06 08:37:51 - impressora test 9100
+15/06 08:37:51 - impressora test 2 => st 1
+15/06 08:37:51 - impressora test 4 ck
+15/06 08:37:51 - impressora test 5 ck  ok
+15/06 08:37:51 - impressora test 6 final
+15/06 08:37:51 - ABRIR BANCO DE DADOS
+15/06 08:37:51 - FALHA NA ABERTURA DO BANCO DE DADOS
+15/06 08:37:51 - OK BANCO DE DADOS
+15/06 08:37:51 - ERRO NO PROCESSAMENTO DO PEDIDO 9333
+15/06 08:37:51 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9333"}
+
+ t:0,25 => PRE - ERRO NO PROCESSAMENTO DO PEDIDO - Access violation at address 0000000000F8BE2C in module 'clbmobile64.exe'. Read of address 0000000000000000 -> 50
+15/06 08:37:55 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9333"}
+15/06 08:37:55 - LISTA DE IMPRESSORAS
+15/06 08:37:55 - IMPRESSORA CAIXA 7 => TCP:192.168.88.200
+15/06 08:37:55 - impressora test 192.168.88.200
+15/06 08:37:55 - impressora test 9100
+15/06 08:37:55 - impressora test 2 => st 1
+15/06 08:37:55 - impressora test 4 ck
+15/06 08:37:55 - impressora test 5 ck  ok
+15/06 08:37:55 - impressora test 6 final
+15/06 08:37:55 - ABRIR BANCO DE DADOS
+15/06 08:37:55 - FALHA NA ABERTURA DO BANCO DE DADOS
+15/06 08:37:55 - OK BANCO DE DADOS
+15/06 08:37:55 - ERRO NO PROCESSAMENTO DO PEDIDO 9333
+15/06 08:37:55 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9333"}
+
+ t:0,25 => PRE - ERRO NO PROCESSAMENTO DO PEDIDO - Access violation at address 0000000000F8BE2C in module 'clbmobile64.exe'. Read of address 0000000000000000 -> 50
+15/06 08:37:58 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9333"}
+15/06 08:37:58 - LISTA DE IMPRESSORAS
+15/06 08:37:58 - IMPRESSORA CAIXA 7 => TCP:192.168.88.200
+15/06 08:37:58 - impressora test 192.168.88.200
+15/06 08:37:58 - impressora test 9100
+15/06 08:37:58 - impressora test 2 => st 1
+15/06 08:37:58 - impressora test 4 ck
+15/06 08:37:58 - impressora test 5 ck  ok
+15/06 08:37:58 - impressora test 6 final
+15/06 08:37:58 - ABRIR BANCO DE DADOS
+15/06 08:37:58 - FALHA NA ABERTURA DO BANCO DE DADOS
+15/06 08:37:58 - OK BANCO DE DADOS
+15/06 08:37:58 - ERRO NO PROCESSAMENTO DO PEDIDO 9333
+15/06 08:37:58 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9333"}
+
+ t:0,234 => PRE - ERRO NO PROCESSAMENTO DO PEDIDO - Access violation at address 0000000000F8BE2C in module 'clbmobile64.exe'. Read of address 0000000000000000 -> 50
+15/06 08:38:01 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9333"}
+15/06 08:38:01 - LISTA DE IMPRESSORAS
+15/06 08:38:01 - IMPRESSORA CAIXA 7 => TCP:192.168.88.200
+15/06 08:38:01 - impressora test 192.168.88.200
+15/06 08:38:01 - impressora test 9100
+15/06 08:38:01 - impressora test 2 => st 1
+15/06 08:38:01 - impressora test 4 ck
+15/06 08:38:01 - impressora test 5 ck  ok
+15/06 08:38:01 - impressora test 6 final
+15/06 08:38:01 - ABRIR BANCO DE DADOS
+15/06 08:38:01 - FALHA NA ABERTURA DO BANCO DE DADOS
+15/06 08:38:01 - OK BANCO DE DADOS
+15/06 08:38:01 - ERRO NO PROCESSAMENTO DO PEDIDO 9333
+15/06 08:38:01 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9333"}
+
+ t:0,234 => PRE - ERRO NO PROCESSAMENTO DO PEDIDO - Access violation at address 0000000000F8BE2C in module 'clbmobile64.exe'. Read of address 0000000000000000 -> 50
+15/06 08:38:03 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9333"}
+15/06 08:38:03 - LISTA DE IMPRESSORAS
+15/06 08:38:03 - IMPRESSORA CAIXA 7 => TCP:192.168.88.200
+15/06 08:38:03 - impressora test 192.168.88.200
+15/06 08:38:03 - impressora test 9100
+15/06 08:38:03 - impressora test 2 => st 1
+15/06 08:38:03 - impressora test 4 ck
+15/06 08:38:03 - impressora test 5 ck  ok
+15/06 08:38:03 - impressora test 6 final
+15/06 08:38:03 - ABRIR BANCO DE DADOS
+15/06 08:38:03 - FALHA NA ABERTURA DO BANCO DE DADOS
+15/06 08:38:03 - OK BANCO DE DADOS
+15/06 08:38:03 - ERRO NO PROCESSAMENTO DO PEDIDO 9333
+15/06 08:38:03 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9333"}
+
+ t:0,235 => PRE - ERRO NO PROCESSAMENTO DO PEDIDO - Access violation at address 0000000000F8BE2C in module 'clbmobile64.exe'. Read of address 0000000000000000 -> 50
+15/06 08:38:05 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9333"}
+15/06 08:38:05 - LISTA DE IMPRESSORAS
+15/06 08:38:05 - IMPRESSORA CAIXA 7 => TCP:192.168.88.200
+15/06 08:38:05 - impressora test 192.168.88.200
+15/06 08:38:05 - impressora test 9100
+15/06 08:38:05 - impressora test 2 => st 1
+15/06 08:38:05 - impressora test 4 ck
+15/06 08:38:06 - impressora test 5 ck  ok
+15/06 08:38:06 - impressora test 6 final
+15/06 08:38:06 - ABRIR BANCO DE DADOS

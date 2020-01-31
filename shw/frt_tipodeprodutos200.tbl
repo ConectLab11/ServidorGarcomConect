@@ -1,0 +1,240 @@
+#
+#  Parametros do menu de manutenção do Sistema
+#  Desenvolvido por Ronaldo C Silva
+#  RCLSoft Comércio e Serviços LTDA. ME.
+#
+#  Criação    : 16/06/2011
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=tabvalor.pdx
+disableMenu=0
+telalargura=830
+telaaltura=0
+Posicionar=1
+whereexterno=mygroup='tabelatipodeprodutos200'
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,+Tabela, tabelatipodeprodutos200, 0123456789, 9, 25,a
+o2=nil,+Produtos, tabelatipodeprodutos200produtos, 0123456789, 9, 36,a
+o3=nil,Observação, tabelatipodeprodutos200observacao, 0123456789, 9, 25,a
+o4=nil,Customizar, tabelatipodeprodutos200customizar, 0123456789, 9, 35,a
+
+
+#
+# Parametros de tela
+#
+ 
+[tabelatipodeprodutos200]
+tab=CALCULO DO FRETE POR TIPO DE PRODUTOS 200kg
+comentario=
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Cliente,clientefinal,f,16,100,,
+c4=Redespacho,redespacho,f,16,100,,
+botaoExtra=imprimir
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=100
+forcarleftmask=110
+nobrowse=1
+altura=532
+largura=400
+foco=descr
+t0=#coluna-30
+t1=Descrição:,descr,c,50,280,,
+h1=Nome completo
+t2=linha-25
+t3=coluna+355
+t4=Validade:,validade,d,10,70,,
+h4=Prazo de validade
+t5=coluna-355
+t6=Frete Mínimo#007E7E7E\peso.png,,,,545, ,	
+t7=1 à 30kg,ate_50,f,11,84,,
+h7=Peso até 30 Kilos
+t8=31 à 60kg,ate_100,f,11,84,,
+h8=Peso de 31 à 60 Kilos
+t9=linha-50
+t10=coluna+340
+t11=61 à 120kg,ate_150,f,11,84,,
+t12=121 à 200kg,ate_200,f,11,84,,
+t13=coluna-340
+t14=#linha-25
+t15=#coluna+340
+t16=#coluna-340
+t17=Regras para ADValorem#007E7E7E\porc2.png,,,,545, ,	
+t18=ADValorem:,advalorem,p,11,84,,
+h18=Porcentagem de ADValorem sobre o valor da Nota Fiscal.
+t19=forcarleftmask=230
+t20=linha-25
+t21=coluna+220
+t22=Cobrar ADValorem para NF acima de:,advminimo,f,11,84,,
+h22=Cobrar ADValorem para Nota Fiscal com valor acima de ?
+t23=forcarleftmask=110
+t24=coluna-220
+t25=Acima de 200kg#007E7E7E\peso.png,,,,545, ,
+t26=Frete (por kg):,tonelada,e,11,84,,
+h26=Taxa por kilo
+t27=linha-25
+t28=coluna+170
+t29=Taxas:,outros,f,11,84,,
+h29=Taxa por CTRC
+t30=linha-25
+t31=coluna+170
+t32=Coleta:,adicional,f,11,84,,
+h32=Taxa de coleta.
+t33=coluna-340
+t34=Diversos#007E7E7E\peso.png,,,,545, ,
+t35=Fator peso(kg):,{lb}tablepeso=100,e,11,50,,
+h35=Peso para cálculo de cubagem
+t36=linha-6
+t37=M3 por{lb|tablepeso|100} kg:,precom3,e,11,84,,
+h37=Taxa de cubagem por kilos.
+t38=linha-44
+t39=coluna+340
+t40=Fator peso(kg):,{lb}kgpedagio=100,e,11,50,,
+h40=Peso para cálculo do pedágio@Exemplo: a cada 100kg cobrar a taxa de pedágio.
+t41=linha-6
+t42=forcarleftmask=230
+t43=coluna-120
+t44=Pedágio à cada{lb|kgpedagio|100} kg:,pedagio,f,11,84,,
+h44=Taxa de pedágio a cobrar para cada fator peso.
+t45=coluna-220
+t46=forcarleftmask=110
+t47=Generalidades#007E7E7E\tag.png,,,,530, ,
+t48=Devolução:,devolucao,p,11,60,,
+h48=Porcentagem do frete quando for devolução
+t49=linha-25
+t50=coluna+150
+t51=Reentrega:,reentrega,p,11,60,,
+h51=Porcentagem do frete quando for reentrega
+
+[tabelatipodeprodutos200observacao]
+tab=CALCULO DO FRETE POR TIPO DE PRODUTOS 200kg
+comentario=
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Cliente,clientefinal,f,16,100,,
+c4=Redespacho,redespacho,f,16,100,,
+botaoExtra=imprimir
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=100
+forcarleftmask=110
+nobrowse=1
+altura=532
+largura=400
+foco=observacao
+t0=Observação#007E7E7E\text_align_justify.png,,,,530, ,
+t1=linha+5
+t2=coluna=0
+t3=forcarleftmask=15
+t4= ,observacao,tw,0,480x330,B|10|fretes|Copiar observações da tabela original,	
+
+[tabelatipodeprodutos200customizar]
+tab=CALCULO DO FRETE POR TIPO DE PRODUTOS 200kg
+comentario=
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Cliente,clientefinal,f,16,100,,
+c4=Redespacho,redespacho,f,16,100,,
+botaoExtra=imprimir
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=100
+forcarleftmask=150
+nobrowse=1
+altura=532
+largura=400
+foco=adv_outros
+t0=Calculo do Frete#007E7E7E\tag.png,,,,530, ,
+t1=ADValorem:,adv_outros,sn,3,30,,
+h1=ADValorem no campo Outros@Sim - A taxa de ADValorem sera somado no campo Outros@Não - A taxa de ADValorem será somado no campo Frete Valor.
+t2=Frete Peso:,frt_valorpeso,sn,3,30,,
+h2=Colocar todos os valores no campo Frete Peso
+t3=Frete mínimo:,frt_minitotal,sn,3,30,,
+h3=Verificar o frete mínimo pelo campo Total do Frete.
+t4=#ICMS embutido:,icmsx,sn,3,30,,
+h4=ICMS faz parte do frete
+t5=Diversos#007E7E7E\tag.png,,,,530, ,
+t6=Compartilhada:,compartilhada,sn,3,30,,
+h6=Permitir compartilhar esta tabela com os cliente sem tabela
+t7=linha-25
+t8=coluna+250
+t9=forcarleftmask=250
+t10=Ignorar dados do cliente na impressão:,semcliente,sn,3,30,,
+h10=Ignorar dados do cliente na impressão da tabela
+
+[tabelatipodeprodutos200produtos]
+tab=CADASTRO DE PRODUTOS
+comentario=
+db=tabaereo
+ordem=produto
+rcl=
+chave=tabela
+chavePrincipal=id
+relacaokey=tabela,$IDORIGEM
+tituloWidth=
+where=tabela="$IDORIGEM"
+c0=Descrição,produto,c,100,200,,
+c1=A Cada,qtde,i,11,55,,
+c2=Tipo,unidade,c,15,70,,
+c3=Taxa,valor,f,11,60,,
+c4=Observação,observacao,c,255,100,,
+Rlt=
+msg=
+altura=300
+largura=500
+forcarleftmask=90
+foco=descricao
+t0=Descrição:,produto,c,100,355,,
+h0=Descrição completa do produto
+t1=Parametros para o cálculo do frete#007E7E7E\calculator.png,,,,450, ,
+t2=A cada:,qtde=@1,e,11,60,,
+h2=A cada unidade cobrar taxa@Exemplo: a cada 1 Caixa cobrar 5,00.
+t3=linha-25
+t4=coluna+100
+t5=Tipo:,unidade=Unidade,c,10,84,@B,<#16>geral.rcl,
+h5=Tipo de cálculo@Kilo = por total do peso@VALORNF% = porcentagem do total da nota fiscal@Outros = por unidade.
+t6=linha-25
+t7=coluna+170
+t8=Cobrar:,valor,f,11,84,,
+h8=Valor para o cálculo do frete.
+t9=coluna-270
+t10=Volume com:,caixa=@1,e,11,60,,
+t11=Informativo#007E7E7E\comment.png,,,,450, ,
+t12=Observação:,observacao,c,255,355,,
+h12=Observações do produto
+validacao=campoPreenchido(produto),nozero(qtde),campoPreenchido(unidade)

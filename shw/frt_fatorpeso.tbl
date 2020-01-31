@@ -1,0 +1,64 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 28/01/2010
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=0
+nivelauxiliar=0
+disableMenu=1
+telalargura=480
+telaaltura=350
+pdx=
+individual=1
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=nil, Fator Peso, tabelafatorpeso, 0123456789, 9, 7,a
+
+#
+# Parametros de tela
+#
+
+[tabelafatorpeso]
+tab=TABELA FATOR PESO
+comentario=
+db=tabefret
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+forcarcoluna=130
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Por tonelada,tonelada,f,16,100,,
+altura=200
+
+largura=300
+foco=descr
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=0
+forcarleftmask=110
+nobrowse=1
+t0=coluna=0
+t1=Descrição:,descr,c,50,300,,
+h1=Descrição completa da Tabela.
+t2=Fator:,tonelada,e,11,84,,
+t3=ADvalorem:,advalorem,p,11,84,,
+h3=Porcentagem de ADvalorem @(Calculado pelo valor da mercadoria)
+t4=Devolução:,devolucao,p,11,84,,
+h4=Porcentagem a cobrar do frete quando devolução
+t5=Reentrega:,reentrega,p,11,84,,
+h5=Porcentagem a cobrar do frete quando reentrega
+t6=Compartilhada:,compartilhada,sn,3,30,,
+h6=Esta tabela pode ser compartilhada entre os clientes sem tabela ?

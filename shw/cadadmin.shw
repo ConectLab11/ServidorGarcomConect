@@ -1,0 +1,287 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 12/12/2003
+#
+#
+# a todos
+# d nota de despesas
+# g agenda
+# m movimento de caixa
+# n cadastro de bancos
+# o plano de contas
+# p pagar
+# q gerenciador de ocorrencias
+# r receber
+# s script inicial
+# t conta caixa
+
+[arquivo]
+modulo=Suporte de implantação:   $IDTITULO
+nivelprincipal=1
+
+[Opcoes]
+o0=Cadastro, 0123456789, 9, 0,a
+
+[Cadastro]
+o0=Contratante, Negociação, negociacao, 0123456789, $rcl, 0,a
+o1=Contratante, Licença, acesso, 0123456789, $rcl, 0,a
+o2=Contratante, Login, login, 0123456789, $rcl, 0,a
+o3=Contratante, Servidor, servidor, 0123456789, $rcl, 0,a
+o4=Contratante, OC XMLs,  ocxml,0123456789, $rcl, 0,a
+o5=Contratante, Bloqueios, Fbloqueios, 0123456789, $rcl, 0,a
+o6=Contratante, Scripts, scripts, 0123456789, $rcl, 0,a
+o7=Contratante, Backup, backup, 0123456789, $rcl, 0,a
+
+#
+# Parametros de tela
+#
+
+[acesso]
+tab=Configuração do Registro de software
+db=cadastro
+chave=codigo
+chavePrincipal=codigo
+c0=Código,codigo,i,30,60,,
+c1=Nome,nome,c,50,200,,
+nobrowse=1
+where=(codigo=$IDORIGEM)
+altura=320
+largura=430
+foco=serial
+forcarleftmask=120
+forcarrightlabel=1
+t0=Registro do Sistema REx#007E7E7E\lock_unlock.png,,,,385, ,
+t1=Ativo:,serial,sn,3,30,{rcl^}$geraSerial(),
+h1=@Sim = Gera um número de licença para uso do sistema REx.@Não = Cancela o número de registro.@
+t2=Licença:,nserial,c,20,270,{rcl^}$geraSerial(),
+t3=Contrato:,dserial,d,10,84,,
+t4=#Login#007E7E7E\user_business.png,,,,385, ,
+t5=#Usuário:,nomeuser,c,15,160,@U,
+t6=#Senha:,passuser,c,15,160,@U{},
+t7=#Confirmação:,@passuser2,c,15,160,@U{*},
+validacao=noZero(ddvencto)
+//validacao=validarsenha(passuser),campoPreenchido(nomeuser),noZero(ddvencto)
+
+[servidor]
+tab=Configuração de Servidores
+comentario=
+db=equipame
+db2=
+rcl=
+chave=id
+chavePrincipal=id
+c0=id,id,i,30,50,,
+c1=descricao,descricao,c,30,100,,
+relacaokey=cliente,$IDORIGEM
+where=add(cliente=$IDORIGEM;ativo=1)/(cliente=$IDORIGEM)and(ativo=1)
+nobrowse=1
+altura=260
+largura=430
+foco=descricao
+t0=Servidor Linux/Windows#007E7E7E\application_view_xp_terminal.png,,,,385, ,
+t1=Equipamento:,descricao,c,50,290,,
+t2=OS:,os,c,50,290,,
+t3=Usuário:,osuser,c,50,150,,
+t4=Senha:,senharoot,c,50,150,,
+t5=IP Local:,ip1,c,50,290,,
+t6=Servidor MySQL#007E7E7E\database.png,,,,385, ,
+t7=Perfil:,perfil,i,2,30,,perfil.rcl,
+t8=IP:,ip2,c,50,170,,
+t9=linha-25
+t10=coluna+230
+t11=Porta:,porta,i,10,60,,
+t12=coluna=20
+t13=Database:,datab,c,50,290,,
+t14=Usuário:,usuario,c,50,150,,
+t15=Senha:,senhasql,c,50,150,,
+t16=linha-25
+t17=coluna+230
+t18=Encrypt:,encrypt,sn,3,30,,
+t19=coluna-230
+t20=Backup:,backup,sn,3,30,,
+t21=linha-25
+t22=coluna+230
+t23=Horário:,horabak,h,5,60,,
+t24=linha-10
+t25=Referência de IP#007E7E7E\database.png,,,,385, ,
+t26=coluna=20
+t27=Cadastro:,refcad,i,6,50,,?cadastro.rcl,
+validacao=mysql_old_password(encrypt)
+
+[ocxml]
+tab=GERENCIADOR DE XMLs CFe - NFe - CTe
+db=equipame
+chave=id
+chavePrincipal=id
+c0=id,id,i,30,50,,
+c1=descricao,descricao,c,30,100,,
+relacaokey=cliente,$IDORIGEM
+where=add(cliente=$IDORIGEM;ativo=1)/(cliente=$IDORIGEM)and(ativo=1)
+nobrowse=1
+altura=260
+largura=430
+foco=satSerie
+forcarleftmask=140
+t0=PARAMETROS OC XML#007E7E7E\application_view_xp_terminal.png,,,,430, ,
+t1=Contador:,contabil,i,6,60,,?cadastro.rcl,
+h1=Contador Responsável
+t2=EMAIL:,emailXml,c,255,290,,
+h2=EMAIL para envio dos XMLs
+t3=Contato:,contato,c,50,290,,
+h3=Contato contabil
+t4=DNS:,satDns,c,3,40,@U,
+h4=Sigla de identificação da empresa
+t5=Pasta:,pasta,c,255,290,,
+h5=Nome da pasta para salvar os XMLs
+t6=Doctos:,docXml,i,3,30,,<#26>geral2.rcl,
+t7=SAT - CF-e#007E7E7E\application_view_xp_terminal.png,,,,430, ,
+t8=Número de Série:,satSerie,c,50,290,,
+h8=Número de Série do equipamento SAT
+t9=Código de Emergência:,satEmergencia,c,50,290,,
+h9=Código de Emergência do equipamento SAT
+t10=Código de Ativação:,satAtivacao,c,50,290,,
+h10=Código de Ativação do SAT
+t11=SWH CNPJ:,satCnpj,c,20,290,,
+h11=CNPJ da Software House
+t12=Validade:,satValid,d,10,84,,
+t13=Assinatura#007E7E7E\database.png,,,,430, ,
+t14=forcarleftmask=10
+t15=coluna=1
+t16=<,satSign,t,0,420x50,,,
+h16=Assinatura da Software House
+
+
+[Fbloqueios]
+tab=CONFIGURAÇÃO DE BLOQUEIOS
+comentario=
+db=cadastro
+rcl=
+chave=codigo
+chavePrincipal=codigo
+c0=Código,codigo,i,30,60,,
+c1=Nome,nome,c,50,200,,
+nobrowse=1
+relacaokey=
+where=(codigo=$IDORIGEM)
+altura=320
+largura=430
+foco=comissao_6
+forcarleftmask=120
+forcarrightlabel=1
+t0=(Bloqueios)#007E7E7E\lock.png,,,,385, ,
+t1=Senha mensal:,passmes,c,15,84,,
+t2=Status:,script,c,30,250,@B,status.rcl,
+
+[negociacao]
+tab=NEGOCIAÇÃO DE IMPLANTAÇÃO DE SISTEMA
+comentario=
+db=cadastro
+rcl=
+chave=codigo
+chavePrincipal=codigo
+c0=Código,codigo,i,30,60,,
+c1=Nome,nome,c,50,200,,
+nobrowse=1
+relacaokey=
+where=(codigo=$IDORIGEM)
+altura=320
+largura=430
+foco=comissao_6
+forcarleftmask=120
+forcarrightlabel=1
+t0=Valores#007E7E7E\money.png,,,,420, ,
+t1=Valor fechado:,comissao_6,f,11,84,,
+t2=coluna+200
+t3=linha-25
+t4=Data:,dserial,d,11,84,,
+t5=coluna=20
+t6=Comissão:,comissao_5,f,11,84,,
+t7=coluna+200
+t8=linha-25
+t9=Saldo:,comissao_4,f,11,84,@R&cor(clsilver|clblack),
+t10=coluna=20
+t11=Pessoas#007E7E7E\money.png,,,,420, ,
+t12=Vendedor:,idvendedor,i,6,50,,?cadastro.rcl,
+t13=Negociado com:,marca,c,30,300,,
+t14=Por:,modelo,c,30,300,,
+t15=Prazo de implantação:,ano,i,6,50,,
+t16=Perfil:,linha,i,2,30,,perfil.rcl,
+t17=Mensalidade#007E7E7E\money.png,,,,385, ,
+t18=Valor mensal:,ddmensal,f,11,84,,
+t19=linha-25
+t20=coluna+225
+t21=Dia do vencimento:,ddvencto,c,2,30,@BU,dias.rcl,
+t22=coluna=20
+t23=Primeiro vencto:,venc_app,d,10,84,,
+t24=Comissão:,comissao_3,p,9,50,,
+calc0=comissao_4=+comissao_6-comissao_5
+
+
+
+[scripts]
+tab=SCRIPTS
+comentario=
+db=cliscrip
+db2=
+rcl=
+chave=id
+chavePrincipal=id
+c0=Cd,id,+,5,50,,
+c1=Descrição,descricao,c,30,100,,
+relacaokey=idcliente,$IDORIGEM
+where=(cliscrip.idcliente=$IDORIGEM)
+altura=260
+largura=650
+foco=descricao
+t0=Descrição:,descricao,c,100,500,,
+t1=Script:,dados,t,0,500x90,,
+t2=Ativo:,ativo=Sim,sn,3,30,,
+validacao=campoPreenchido(descricao)
+
+[backup]
+tab=ULTIMOS BACKUP S
+comentario=
+db=backup
+db2=
+rcl=
+chave=id
+chavePrincipal=id
+c0=Data,&datahora(data|hora|) as data,d,10,100,,
+c1=Arquivo,arquivos,c,255,100,,
+ordem=id desc limit 0,365
+relacaokey=cliente,$IDORIGEM
+where=(cliente=$IDORIGEM)
+altura=330
+largura=450
+foco=banco
+t0=ID:,id,+,4,30,,
+t1=Data:,data,d,10,80,,
+t2=Hora:,hora,c,8,80,,
+t3=Arquivo:,arquivos,c,255,300,,
+t4=Destino:,destino,c,255,300,,
+t5=Size:,maxsize,i,15,80,,
+t6=Terminal:,terminal,c,10,80,,
+t7=Usuário:,usuario,c,50,300,,
+
+[login]
+tab=Login do Usuário
+db=usuarios
+chave=codigo
+chavePrincipal=codigo
+c0=Código,codigo,i,30,60,,
+c1=Nome,nome,c,50,200,,
+nobrowse=1
+where=(codigo=$IDORIGEM)
+altura=320
+largura=430
+foco=serial
+forcarleftmask=120
+forcarrightlabel=1
+t0=Login#007E7E7E\user_business.png,,,,385, ,
+t1=Usuário:,nome,c,15,260,@U,
+t2=EMAIL:,email,c,255,260,,
+t3=Senha:,senha,c,15,160,@U#,
+//validacao=validarsenha(senha),campoPreenchido(nome)
+

@@ -1,0 +1,170 @@
+#
+#   Processo executado apos a criação das tabelas
+#   -dbf
+#
+
+[modulos]
+f0=Formulas
+f1=CFOP|8
+f2=ART_ICMS
+f3=CUSTOS
+f4=OCORRENCIAS
+f5=CATEGORIAS
+f6=GRUPOVEN
+f7=pdx
+f8=bancos-updates
+f9=ocorrencias-updates
+f10=ibge
+
+[Formulas]
+tabela=tabfrete
+f0=Diária Veículo|diariaveiculo|tabeladiaria|1|
+f1=Valor da Mercadoria|advalorem|tabelavalores|1|
+f2=Valor da Mercadoria por Faixa|advalorem2|tabelavalores2|1|
+f3=Peso por Tonelada|tonelada|tabelatonelada|1|
+f4=Peso por Tonelada II|tonelada2|tabelatonelada2|0|
+f5=Peso Fracionado|pesofracionado|tabelafracionada|1|
+f6=Peso Fracionado II|pesofracionadoII|tabelafracionadoII|1|
+f7=Peso/Cubagem|peso/cubagem|tabelapesocubagem|1|
+f8=Peso Excedido|pesoexcedido|tabelapesoexcedido|1|
+f9=Peso VB25|pesovb25|tabelavb25|1|
+f10=Cargas Aereas/Rodoviario|cargasaereas|tabelacargasaereas|1|
+f11=TR-Mista|multiregioes|tabelamultiregioes|1|
+f12=Peso Excedido II|pesoexcedidoII|tabelapesoexcedidoII|1|
+f13=Peso Excedido III|pesoexcedidoIII|tabelapesoexcedidoIII|1|
+f14=Produtos 100kg|tipodeprodutos100|tabelatipodeprodutos100|1|
+f15=Produtos 200kg|tipodeprodutos200|tabelatipodeprodutos200|1|
+f16=Simples 200kg|simples200|tabelasimples200|1|
+f17=Viagem Fechada|viagemfechada|tabelaviagemfechada|1|
+f18=Viagem Fechada M3|viagemfechadam3|tabelaviagemfechadam3|1|
+f19=Peso Excedido IV|pesoexcedidoiv|tabelapesoexcedidoiv|1|
+f20=Fator Peso|fatorpeso|tabelafatorpeso|1|
+f21=Volumes|volumes|tabelavolumes|1|
+f22=Lotação|lotacao|tabelalotacao|1|
+f23=Peso e Destino|pesodestino|tabelapesodestino|1|
+f24=Tarifas por Cidades (Peso)|tarifacidade|tabelatarifacidade|1|
+f25=100Kg - CFL|100kg|tabela100kg|1|1|
+f26=200Kg - CFL|200kg|tabela200kg|1|1|
+f27=Medical 1|bion|tabelabion|1|1|
+f28=Medical 2|medical2|tabelamedical2|1|1|
+f29=Medical 3|medical3|tabelamedical3|1|1|
+f30=Peso Livre|pesolivre|tabelapesolivre|1|1|
+f31=10Kg - CF|10kg|tabela10kg|1|1|
+f32=Rodoviaria Expressa|unika|tabelaunika|1|1|
+f33=Peso Excedido III v1|pesoexcedidoIII_v1|tabelapesoexcedidoIII_v1|1|
+f34=#Peso/ Container|pesocontainer|tabelapesocontainer|0|1|
+f35=#Cargas Aereas 2|cargasaereas2|tabelacargasaereas2|0|1|
+f36=#Medical 2 Kilos|medical4|tabelamedical4|0|1|
+f37=#Medical 3 Kilos|medical5|tabelamedical5|0|1|
+f38=#Cargas Aereas 3|cargasaereas3|tabelacargasaereas3|0|1|
+f39=#Cargas Aereas - CFL|cargasaereascfl|tabelacargasaereascfl|0|1|
+f40=#Rodoviaria NE|unkne|tabelaunkne|0|1|
+f41=#Rodoviaria CO|unkco|tabelaunkco|0|1|
+f42=#Aereo Pequenas Encomendas|unkape|tabelaunkape|0|1|
+f43=#Aereo Proximo Voo|unkapv|tabelaunkapv|0|1|
+f44=#Distribuicao SP|unkdsp|tabelaunkdsp|0|1|
+f45=#SIMPRESS|simpress|tabelasimpress|0|1|
+f46=#Carga Fracionada (FABINJECT)|unkfab|tabelaunkfab|0|1|
+f47=#SIMPRESS2|simpress2|tabelasimpress2|0|1|
+f48=Conciliacao de Carga|conciliacao|tabelaconciliacao|0|1|
+f49=#ChegouFarma|chegoufarma|tabelachegoufarma|0|1|
+f50=#ChegouFarma2|chegoufarma2|tabelachegoufarma2|0|1|
+f51=Carga Fracionada (PHL)|cargafracionada|tabelacargafracionada|0|1|
+f52=Viagem Fechada I(PHL)|vf_phl_1|tabelavf_phl_1|0|1|
+f53=Viagem Fechada II(PHL)|vf_phl_2|tabelavf_phl_2|0|1|
+
+[CFOP]
+tabela=cfopnota
+c0=codigo="5.360"|ncfop="TRANSPORTES"|ndescricao="TRANSPORTES"|
+c1=codigo="6.360"|ncfop="TRANSPORTES"|ndescricao="TRANSPORTES"|outro_uf="1"|
+c2=codigo="5.357"|ncfop="TRANSPORTES"|ndescricao="TRANSPORTES"|
+c3=codigo="6.357"|ncfop="TRANSPORTES"|ndescricao="TRANSPORTES"|
+c4=codigo="5.352"|ncfop="TRANSPORTES"|ndescricao="TRANSPORTES"|no_uf="1"|industria="1"|
+c5=codigo="5.353"|ncfop="TRANSPORTES"|ndescricao="TRANSPORTES"|no_uf="1"|
+c6=codigo="6.352"|ncfop="TRANSPORTES"|ndescricao="TRANSPORTES"|outro_uf="1"|industria="1"|
+c7=codigo="6.353"|ncfop="TRANSPORTES"|ndescricao="TRANSPORTES"|outro_uf="1"|
+c8=codigo="5.357"|ncfop="TRANSPORTES"|ndescricao="TRANSPORTES"|
+c9=codigo="6.932"|ncfop="TRANSPORTES"|ndescricao="TRANSPORTES"|
+c10=codigo="5.932"|ncfop="TRANSPORTES"|ndescricao="TRANSPORTES"|
+c11=codigo="6.351"|ncfop="TRANSPORTES DA MESMA NATUREZA"|ndescricao="TRANSPORTES"|
+c12=codigo="5.933"|ncfop="SERVICOS DE TRANSPORTES"|ndescricao="Prestação de serviço tributado pelo ISSQN"|
+
+[ART_ICMS]
+tabela=articms
+c0=artigo="Art.317"|descricao="SUBST. TRIBUTARIA ART. 317 DO RICMS."|
+c1=artigo="Art.139"|descricao="ISENCAO DE ICMS CONFORME ARTIGO 139 ANEXO I DO RICMS."|
+c2=artigo="GNRE"|descricao="ICMS RECOLHIDO ANTECIPADAMENTE."|
+c3=artigo="SIMPLES"|descricao="OPTANTE PELO SIMPLES NACIONAL NAO GERA CREDITO FISCAL DE ICMS."|
+c4=artigo="AEREO"|descricao="ICMS ALIQ 4% CONF RES 95/96 SEN FEDERAL."|
+c5=artigo="AEREO+"|descricao="ICMS ALIQ <autoicms>% CONF RES 95/96 SEN FEDERAL."|
+c6=artigo="ICMSST"|descricao="SUBST. TRIBUTARIA ARTIGO 536 I DECRETO 2473/2008."|
+c7=artigo="Art.14"|descricao="TRANSPORTE SUB CONTRATACAO DESC. 50% ART.14 LEI 1558/2005."|obs="1"|
+
+[CUSTOS]
+tabela=centrocu
+c0=id="1"|descricao="Escritório"|auto="1"|ativo="1"|
+
+[OCORRENCIAS]
+tabela=ocorrenc
+c0=id="1"|nocorrenci="Inclusão"|
+c1=id="2"|nocorrenci="Alteração"|
+c2=id="3"|nocorrenci="Registro Excluido"|
+c3=id="4"|nocorrenci=""|
+c4=id="5"|nocorrenci="Baixa"|
+c5=id="6"|nocorrenci="Estorno"|
+c6=id="7"|nocorrenci="Deposito"|
+c7=id="8"|nocorrenci="Cancelamento"|
+c8=id="9"|nocorrenci=""|
+c9=id="10"|nocorrenci="Entrada de Produto no Estoque"|
+c10=id="11"|nocorrenci="Estorno de Produto no Estoque"|
+c11=id="12"|nocorrenci="Inclusão de Pagamentos"|
+c12=id="13"|nocorrenci="Exclusão de Pagamentos"|
+c13=id="14"|nocorrenci="Publicado na WEB"|
+c14=id="15"|nocorrenci="Arquivo criado"|
+
+[CATEGORIAS]
+tabela=categori
+//c0=id="0"|descricao="Automático"|
+c0=id="1"|descricao="Clientes"|
+c1=id="2"|descricao="Vendedores"|
+c2=id="3"|descricao="Transportadoras"|
+c3=id="4"|descricao="Fornecedores/Credores"|
+c4=id="5"|descricao="Compradores"|
+c5=id="6"|descricao="Funcionários"|
+c6=id="7"|descricao="Usuários do sistema"|
+c7=id="8"|descricao="Cobradores"|
+c8=id="9"|descricao="Captadores"|
+c9=id="10"|descricao="Atendentes"|
+c10=id="11"|descricao="Advogados"|
+c11=id="12"|descricao="Motoristas"|
+c12=id="13"|descricao="Fabricantes"|
+c13=id="14"|descricao="Remetentes"|
+c14=id="15"|descricao="Destinatários"|
+c15=id="16"|descricao="Representantes"|
+c16=id="17"|descricao="Usuário de serviços"|
+c17=id="18"|descricao="Auto Posto"|
+c18=id="19"|descricao="Comissárias"|
+
+[GRUPOVEN]
+tabela=grupoven
+c0=id="1"|descricao="Padrão"|ativo="1"|
+
+[pdx]
+tabela=pdx
+c0=codigo="REC00001"\descricao="Duplicata"\modulo="receber"\grupo="Duplicatas"\arquivo="duplicaa.pdx"\1"
+c1=codigo="REC00002"|descricao="Duplicata - Primeira via"|modulo="receber"|grupo="Duplicatas"|arquivo="desiner.pdx"|1"
+
+[bancos-updates]
+tabela=bancos
+alterar=Sim
+c0=id="33"|nbanco="SANTANDER S/A"
+
+[ocorrencias-updates]
+tabela=ocorrenc
+alterar=Sim
+c0=id="9"|nocorrenci="Autorização"
+
+[ibge]
+tabela=ibge
+c0=municipionome="Embu das Artes"|ufsigla="SP"|uf="35"|ufnome="São Paulo"|merg="3515"|mergn="Metropolitana de São Paulo"|mirg="35060"|mirgn="Itapecerica da Serra"|municipio="3515004"|distrito="5"|distritonome="Embu"|
+

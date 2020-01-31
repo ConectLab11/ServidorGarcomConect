@@ -1,0 +1,257 @@
+24/01 18:44:22 - empresa_carregar_segmentos
+24/01 18:44:22 - salvando log -> C:\rcsv\App\mobile64\log\logs\LOG_APP_MOBILE_SERVICE_64_P4409_2.log
+24/01 18:44:22 - rcs_iniciar_variaveis_globais
+24/01 18:44:22 - terminal_id
+24/01 18:44:22 - Lista de atendentes
+24/01 18:44:22 - mesas_comandas
+24/01 18:44:22 - LPRINT
+24/01 18:44:22 - Status: Config => 192.168.88.83:9100
+24/01 18:44:22 - Status: Config => 192.168.88.83:9100
+24/01 18:44:22 - Status: Config => c:9100
+24/01 18:44:22 - Status: Config => 192.168.88.83:9100
+24/01 18:44:22 - LISTA DE IMPRESSORAS CARREGADA 4
+24/01 18:44:22 - carregarImp
+24/01 18:44:22 - objetos
+24/01 18:44:22 - produtos_gerenciamento_de_estoque
+24/01 18:44:22 - # status 100%
+24/01 18:44:22 - servico_status: {"operacao":"status","token":"c000a003","terminal":"16","id":"ywvkmtm3mti2odbingvhyq: ="}
+24/01 18:44:22 - servico_status: {"status":"ok","terminal":"16","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+24/01 18:44:22 - tempo: ERRO => 0,344 =>  ->
+24/01 18:46:08 - Iniciando Suporte Mobile 64 bit Versao: 1.15.17/12/2019 20:06
+24/01 18:46:08 - Variaveis
+24/01 18:46:08 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+24/01 18:46:08 - TCP Servidor
+24/01 18:46:08 - TCP Cliente
+24/01 18:46:08 - Iniciado na porta => 4409
+24/01 18:46:08 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+24/01 18:46:08 - Formato Data   : 24/01/2020 18:46:08
+24/01 18:46:08 - Flags debug 1 sem log 0
+24/01 18:46:08 - h > 192.168.88.44 p > 3306 d > hbecia u > root
+24/01 18:46:08 - ERRO AO CONECTAR NO BANCO DE DADOS: 192.168.88.44:hbecia,root
+24/01 18:46:08 - Cannot connect to server on host '192.168.88.44':
+Uma operação de soquete foi tentada em uma rede inacessível.
+Socket Error Code: 10051($2743)
+24/01 18:46:29 - -----> REINICIANDO SERVICO
+24/01 18:46:29 - Iniciando Suporte Mobile 64 bit Versao: 1.15.17/12/2019 20:06
+24/01 18:46:29 - Variaveis
+24/01 18:46:29 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+24/01 18:46:29 - |
+24/01 18:46:29 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+24/01 18:46:29 - Formato Data   : 24/01/2020 18:46:29
+24/01 18:46:29 - Flags debug 1 sem log 0
+24/01 18:46:29 - h > 192.168.88.44 p > 3306 d > hbecia u > root
+24/01 18:46:29 - Terminal: 1
+24/01 18:46:29 - BANCO DE DADOS ONLINE > 192.168.88.44:hbecia
+24/01 18:46:29 - PRECO => 23 /            23,00/23/23
+24/01 18:46:29 - iniciar_identificacao_computador
+24/01 18:46:29 - sistema_pegar_perfil
+24/01 18:46:29 - empresa_carregar_segmentos
+24/01 18:46:29 - rcs_iniciar_variaveis_globais
+24/01 18:46:29 - terminal_id
+24/01 18:46:29 - Lista de atendentes
+24/01 18:46:29 - mesas_comandas
+24/01 18:46:29 - LPRINT
+24/01 18:46:29 - Status: Config => 192.168.88.83:9100
+24/01 18:46:29 - Status: Config => 192.168.88.83:9100
+24/01 18:46:29 - Status: Config => c:9100
+24/01 18:46:29 - Status: Config => 192.168.88.83:9100
+24/01 18:46:29 - LISTA DE IMPRESSORAS CARREGADA 4
+24/01 18:46:29 - carregarImp
+24/01 18:46:29 - objetos
+24/01 18:46:29 - produtos_gerenciamento_de_estoque
+24/01 18:46:29 - # status 100%
+24/01 18:46:29 - servico_status: {"operacao":"status","token":"c000a003","terminal":"16","id":"ywvkmtm3mti2odbingvhyq: ="}
+24/01 18:46:29 - servico_status: {"status":"ok","terminal":"16","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+24/01 18:46:29 - tempo: ERRO => 0,359 =>  ->
+24/01 18:47:44 - servico_status: {"operacao":"status","token":"c000a003","terminal":"16","id":"ywvkmtm3mti2odbingvhyq: ="}
+24/01 18:47:44 - servico_status: {"status":"ok","terminal":"16","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+24/01 18:47:44 - tempo: ERRO => 0,016 =>  ->
+24/01 19:17:48 - servico_status: {"operacao":"status","token":"c000a003","terminal":"16","id":"ywvkmtm3mti2odbingvhyq: ="}
+24/01 19:17:48 - servico_status: {"status":"ok","terminal":"16","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+24/01 19:17:48 - tempo: ERRO => 0,047 =>  ->
+24/01 19:25:14 - servico_status: {"operacao":"status","token":"c000a003","terminal":"16","id":"ywvkmtm3mti2odbingvhyq: ="}
+24/01 19:25:14 - servico_status: {"status":"ok","terminal":"16","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+24/01 19:25:14 - tempo: ERRO => 0,016 =>  ->
+24/01 19:29:16 - servico_status: {"operacao":"status","token":"c000a003","terminal":"16","id":"ywvkmtm3mti2odbingvhyq: ="}
+24/01 19:29:16 - servico_status: {"status":"ok","terminal":"16","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+24/01 19:29:16 - tempo: ERRO => 0,015 =>  ->
+24/01 19:31:04 - servico_status: {"operacao":"status","token":"c000a003","terminal":"","id":"ywvkmtm3mti2odbingvhyq: ="}
+24/01 19:31:04 - servico_status: {"status":"ok","terminal":"16","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+24/01 19:31:04 - tempo: ERRO => 0,031 =>  ->
+24/01 19:31:09 - servico_status: {"operacao":"status","token":"c000a003","terminal":"16","id":"ywvkmtm3mti2odbingvhyq: ="}
+24/01 19:31:09 - servico_status: {"status":"ok","terminal":"16","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+24/01 19:31:09 - tempo: ERRO => 0,016 =>  ->
+24/01 19:31:19 - servico_login GET: {"operacao":"login","token":"c000a003","terminal":"16","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+24/01 19:31:19 - servico_login PUT: {"status":"ok","codigo":"11","code":"201","aviso":"Conectado","timeout":259200,"comanda":"1;42;100;10000"}
+24/01 19:31:19 - tempo: ERRO => 0,062 =>  ->
+24/01 19:31:19 - servico_mysql GET: {"operacao":"mysql","token":"c000a003","terminal":"16","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+24/01 19:31:19 - servico_mysql PUT: {"status":"ok","ip":"192.168.88.44","porta":"3306","database":"hbecia","username":"*C9166421","password":"*D85E94BA65E2F5"}
+24/01 19:31:19 - tempo: ERRO => 0,015 =>  ->
+27/01 13:37:54 - servico_status: {"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+27/01 13:37:54 - servico_status: {"status":"ok","terminal":"15","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+27/01 13:37:54 - tempo: ERRO => 0,047 =>  ->
+27/01 13:38:02 - servico_login GET: {"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+27/01 13:38:02 - servico_login PUT: {"status":"ok","codigo":"11","code":"201","aviso":"Conectado","timeout":259200,"comanda":"1;42;100;10000"}
+27/01 13:38:02 - tempo: ERRO => 0,062 =>  ->
+27/01 13:38:02 - servico_mysql GET: {"operacao":"mysql","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+27/01 13:38:02 - servico_mysql PUT: {"status":"ok","ip":"192.168.88.44","porta":"3306","database":"hbecia","username":"*C9166421","password":"*D85E94BA65E2F5"}
+27/01 13:38:02 - tempo: ERRO => 0,016 =>  ->
+27/01 13:38:44 - servico_status: {"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+27/01 13:38:44 - servico_status: {"status":"ok","terminal":"15","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+27/01 13:38:44 - tempo: ERRO => 0,015 =>  ->
+27/01 13:39:39 - servico_status: {"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+27/01 13:39:39 - servico_status: {"status":"ok","terminal":"15","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+27/01 13:39:39 - tempo: ERRO => 0,031 =>  ->
+27/01 13:41:30 - servico_status: {"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+27/01 13:41:30 - servico_status: {"status":"ok","terminal":"15","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+27/01 13:41:30 - tempo: ERRO => 0,047 =>  ->
+27/01 13:42:15 - servico_status: {"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+27/01 13:42:15 - servico_status: {"status":"ok","terminal":"15","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+27/01 13:42:15 - tempo: ERRO => 0,031 =>  ->
+27/01 13:43:00 - servico_login GET: {"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+27/01 13:43:00 - servico_login PUT: {"status":"ok","codigo":"11","code":"201","aviso":"Conectado","timeout":259200,"comanda":"1;42;100;10000"}
+27/01 13:43:00 - tempo: ERRO => 0,047 =>  ->
+27/01 13:43:01 - servico_mysql GET: {"operacao":"mysql","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+27/01 13:43:01 - servico_mysql PUT: {"status":"ok","ip":"192.168.88.44","porta":"3306","database":"hbecia","username":"*C9166421","password":"*D85E94BA65E2F5"}
+27/01 13:43:01 - tempo: ERRO => 0,016 =>  ->
+27/01 14:16:35 - servico_status: {"operacao":"status","token":"c000a003","terminal":"","id":"ywvkmtm3mti2odbingvhyq: ="}
+27/01 14:16:35 - servico_status: {"status":"ok","terminal":"16","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+27/01 14:16:35 - tempo: ERRO => 0,047 =>  ->
+27/01 14:16:41 - servico_login GET: {"operacao":"login","token":"c000a003","terminal":"16","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+27/01 14:16:41 - servico_login PUT: {"status":"ok","codigo":"11","code":"201","aviso":"Conectado","timeout":259200,"comanda":"1;42;100;10000"}
+27/01 14:16:41 - tempo: ERRO => 0,062 =>  ->
+27/01 14:16:42 - servico_mysql GET: {"operacao":"mysql","token":"c000a003","terminal":"16","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+27/01 14:16:42 - servico_mysql PUT: {"status":"ok","ip":"192.168.88.44","porta":"3306","database":"hbecia","username":"*C9166421","password":"*D85E94BA65E2F5"}
+27/01 14:16:42 - tempo: ERRO => 0,031 =>  ->
+27/01 14:17:53 - servico_status: {"operacao":"status","token":"c000a003","terminal":"16","id":"ywvkmtm3mti2odbingvhyq: ="}
+27/01 14:17:53 - servico_status: {"status":"ok","terminal":"16","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+27/01 14:17:53 - tempo: ERRO => 0,032 =>  ->
+27/01 14:18:01 - servico_login GET: {"operacao":"login","token":"c000a003","terminal":"16","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+27/01 14:18:01 - servico_login PUT: {"status":"ok","codigo":"11","code":"201","aviso":"Conectado","timeout":259200,"comanda":"1;42;100;10000"}
+27/01 14:18:01 - tempo: ERRO => 0,015 =>  ->
+27/01 14:18:01 - servico_mysql GET: {"operacao":"mysql","token":"c000a003","terminal":"16","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+27/01 14:18:01 - servico_mysql PUT: {"status":"ok","ip":"192.168.88.44","porta":"3306","database":"hbecia","username":"*C9166421","password":"*D85E94BA65E2F5"}
+27/01 14:18:01 - tempo: ERRO => 0,016 =>  ->
+27/01 17:26:31 - servico_status: {"operacao":"status","token":"c000a003","terminal":"","id":"y2u3otbkzgnlzwe2mjcxnw: ="}
+27/01 17:26:31 - servico_status: {"status":"ok","terminal":"17","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+27/01 17:26:31 - tempo: ERRO => 0,016 =>  ->
+27/01 17:26:45 - servico_login GET: {"operacao":"login","token":"c000a003","terminal":"17","usuario":"*F16560C450","senha":"*8A038F7E"}
+27/01 17:26:45 - erro login: 104-Usuario nao cadastrado
+27/01 17:26:45 - servico_login PUT: {"status":"erro","erro":"104","aviso":"Usuario nao cadastrado"}
+27/01 17:26:45 - tempo: ERRO => 0,031 =>  ->
+27/01 17:27:23 - servico_login GET: {"operacao":"login","token":"c000a003","terminal":"17","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+27/01 17:27:23 - servico_login PUT: {"status":"ok","codigo":"11","code":"201","aviso":"Conectado","timeout":259200,"comanda":"1;42;100;10000"}
+27/01 17:27:23 - tempo: ERRO => 0,032 =>  ->
+27/01 17:27:23 - servico_mysql GET: {"operacao":"mysql","token":"c000a003","terminal":"17","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+27/01 17:27:23 - servico_mysql PUT: {"status":"ok","ip":"192.168.88.44","porta":"3306","database":"hbecia","username":"*C9166421","password":"*D85E94BA65E2F5"}
+27/01 17:27:23 - tempo: ERRO => 0,031 =>  ->
+27/01 17:27:51 - servico_status: {"operacao":"status","token":"c000a003","terminal":"17","id":"y2u3otbkzgnlzwe2mjcxnw: ="}
+27/01 17:27:51 - servico_status: {"status":"ok","terminal":"17","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+27/01 17:27:51 - tempo: ERRO => 0,016 =>  ->
+27/01 17:27:54 - servico_login GET: {"operacao":"login","token":"c000a003","terminal":"17","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+27/01 17:27:54 - servico_login PUT: {"status":"ok","codigo":"11","code":"201","aviso":"Conectado","timeout":259200,"comanda":"1;42;100;10000"}
+27/01 17:27:54 - tempo: ERRO => 0,031 =>  ->
+27/01 17:27:55 - servico_mysql GET: {"operacao":"mysql","token":"c000a003","terminal":"17","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+27/01 17:27:55 - servico_mysql PUT: {"status":"ok","ip":"192.168.88.44","porta":"3306","database":"hbecia","username":"*C9166421","password":"*D85E94BA65E2F5"}
+27/01 17:27:55 - tempo: ERRO => 0,031 =>  ->
+27/01 17:30:42 - servico_status: {"operacao":"status","token":"c000a003","terminal":"17","id":"y2u3otbkzgnlzwe2mjcxnw: ="}
+27/01 17:30:42 - servico_status: {"status":"ok","terminal":"17","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+27/01 17:30:42 - tempo: ERRO => 0,031 =>  ->
+27/01 17:30:45 - servico_login GET: {"operacao":"login","token":"c000a003","terminal":"17","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+27/01 17:30:45 - servico_login PUT: {"status":"ok","codigo":"11","code":"201","aviso":"Conectado","timeout":259200,"comanda":"1;42;100;10000"}
+27/01 17:30:45 - tempo: ERRO => 0,032 =>  ->
+27/01 17:30:45 - servico_mysql GET: {"operacao":"mysql","token":"c000a003","terminal":"17","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+27/01 17:30:45 - servico_mysql PUT: {"status":"ok","ip":"192.168.88.44","porta":"3306","database":"hbecia","username":"*C9166421","password":"*D85E94BA65E2F5"}
+27/01 17:30:45 - tempo: ERRO => 0,016 =>  ->
+27/01 17:31:22 - servico_status: {"operacao":"status","token":"c000a003","terminal":"17","id":"y2u3otbkzgnlzwe2mjcxnw: ="}
+27/01 17:31:22 - servico_status: {"status":"ok","terminal":"17","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+27/01 17:31:22 - tempo: ERRO => 0,016 =>  ->
+27/01 17:33:58 - servico_login GET: {"operacao":"login","token":"c000a003","terminal":"17","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+27/01 17:33:58 - servico_login PUT: {"status":"ok","codigo":"11","code":"201","aviso":"Conectado","timeout":259200,"comanda":"1;42;100;10000"}
+27/01 17:33:58 - tempo: ERRO => 0,031 =>  ->
+27/01 17:33:59 - servico_mysql GET: {"operacao":"mysql","token":"c000a003","terminal":"17","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+27/01 17:33:59 - servico_mysql PUT: {"status":"ok","ip":"192.168.88.44","porta":"3306","database":"hbecia","username":"*C9166421","password":"*D85E94BA65E2F5"}
+27/01 17:33:59 - tempo: ERRO => 0,031 =>  ->
+27/01 17:36:11 - servico_status: {"operacao":"status","token":"c000a003","terminal":"17","id":"y2u3otbkzgnlzwe2mjcxnw: ="}
+27/01 17:36:11 - servico_status: {"status":"ok","terminal":"17","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+27/01 17:36:11 - tempo: ERRO => 0,047 =>  ->
+27/01 17:36:14 - servico_login GET: {"operacao":"login","token":"c000a003","terminal":"17","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+27/01 17:36:14 - servico_login PUT: {"status":"ok","codigo":"11","code":"201","aviso":"Conectado","timeout":259200,"comanda":"1;42;100;10000"}
+27/01 17:36:14 - tempo: ERRO => 0,032 =>  ->
+27/01 17:36:15 - servico_mysql GET: {"operacao":"mysql","token":"c000a003","terminal":"17","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+27/01 17:36:15 - servico_mysql PUT: {"status":"ok","ip":"192.168.88.44","porta":"3306","database":"hbecia","username":"*C9166421","password":"*D85E94BA65E2F5"}
+27/01 17:36:15 - tempo: ERRO => 0,031 =>  ->
+27/01 17:36:44 - servico_status: {"operacao":"status","token":"c000a003","terminal":"17","id":"y2u3otbkzgnlzwe2mjcxnw: =","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+27/01 17:36:44 - servico_status: {"status":"ok","terminal":"17","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+27/01 17:36:44 - tempo: ERRO => 0,031 =>  ->
+27/01 18:01:26 - servico_login GET: {"operacao":"login","token":"c000a003","terminal":"17","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+27/01 18:01:26 - servico_login PUT: {"status":"ok","codigo":"11","code":"201","aviso":"Conectado","timeout":259200,"comanda":"1;42;100;10000"}
+27/01 18:01:26 - tempo: ERRO => 0,047 =>  ->
+27/01 18:01:26 - servico_mysql GET: {"operacao":"mysql","token":"c000a003","terminal":"17","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+27/01 18:01:26 - servico_mysql PUT: {"status":"ok","ip":"192.168.88.44","porta":"3306","database":"hbecia","username":"*C9166421","password":"*D85E94BA65E2F5"}
+27/01 18:01:26 - tempo: ERRO => 0,031 =>  ->
+27/01 23:12:23 - servico_status: {"operacao":"status","token":"c000a003","terminal":"16","id":"ywvkmtm3mti2odbingvhyq: ="}
+27/01 23:12:23 - servico_status: {"status":"ok","terminal":"16","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+27/01 23:12:23 - tempo: ERRO => 0,047 =>  ->
+27/01 23:12:33 - servico_login GET: {"operacao":"login","token":"c000a003","terminal":"16","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+27/01 23:12:33 - servico_login PUT: {"status":"ok","codigo":"11","code":"201","aviso":"Conectado","timeout":259200,"comanda":"1;42;100;10000"}
+27/01 23:12:33 - tempo: ERRO => 0,062 =>  ->
+27/01 23:12:33 - servico_mysql GET: {"operacao":"mysql","token":"c000a003","terminal":"16","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+27/01 23:12:33 - servico_mysql PUT: {"status":"ok","ip":"192.168.88.44","porta":"3306","database":"hbecia","username":"*C9166421","password":"*D85E94BA65E2F5"}
+27/01 23:12:33 - tempo: ERRO => 0,031 =>  ->
+27/01 23:20:54 - servico_status: {"operacao":"status","token":"c000a003","terminal":"16","id":"ywvkmtm3mti2odbingvhyq: ="}
+27/01 23:20:54 - servico_status: {"status":"ok","terminal":"16","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+27/01 23:20:54 - tempo: ERRO => 0,031 =>  ->
+27/01 23:20:56 - servico_login GET: {"operacao":"login","token":"c000a003","terminal":"16","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+27/01 23:20:56 - servico_login PUT: {"status":"ok","codigo":"11","code":"201","aviso":"Conectado","timeout":259200,"comanda":"1;42;100;10000"}
+27/01 23:20:56 - tempo: ERRO => 0,031 =>  ->
+27/01 23:20:57 - servico_mysql GET: {"operacao":"mysql","token":"c000a003","terminal":"16","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+27/01 23:20:57 - servico_mysql PUT: {"status":"ok","ip":"192.168.88.44","porta":"3306","database":"hbecia","username":"*C9166421","password":"*D85E94BA65E2F5"}
+27/01 23:20:57 - tempo: ERRO => 0,016 =>  ->
+28/01 23:06:33 - servico_status: {"operacao":"status","token":"c000a003","terminal":"16","id":"y2u3otbkzgnlzwe2mjcxnw: =","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+28/01 23:06:33 - servico_status: {"status":"ok","terminal":"17","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+28/01 23:06:33 - tempo: ERRO => 0,031 =>  ->
+28/01 23:06:35 - servico_login GET: {"operacao":"login","token":"c000a003","terminal":"17","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+28/01 23:06:35 - servico_login PUT: {"status":"ok","codigo":"11","code":"201","aviso":"Conectado","timeout":259200,"comanda":"1;42;100;10000"}
+28/01 23:06:35 - tempo: ERRO => 0,078 =>  ->
+28/01 23:06:35 - servico_mysql GET: {"operacao":"mysql","token":"c000a003","terminal":"17","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+28/01 23:06:35 - servico_mysql PUT: {"status":"ok","ip":"192.168.88.44","porta":"3306","database":"hbecia","username":"*C9166421","password":"*D85E94BA65E2F5"}
+28/01 23:06:35 - tempo: ERRO => 0,047 =>  ->
+29/01 01:26:31 - servico_status: {"operacao":"status","token":"c000a003","terminal":"14","id":"y2q1mmy4zdm4ytczmmexma: ="}
+29/01 01:26:31 - servico_status: {"status":"ok","terminal":"14","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+29/01 01:26:31 - tempo: ERRO => 0,031 =>  ->
+29/01 01:26:33 - servico_login GET: {"operacao":"login","token":"c000a003","terminal":"14","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+29/01 01:26:33 - servico_login PUT: {"status":"ok","codigo":"11","code":"201","aviso":"Conectado","timeout":259200,"comanda":"1;42;100;10000"}
+29/01 01:26:33 - tempo: ERRO => 0,031 =>  ->
+29/01 01:26:33 - servico_mysql GET: {"operacao":"mysql","token":"c000a003","terminal":"14","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+29/01 01:26:33 - servico_mysql PUT: {"status":"ok","ip":"192.168.88.44","porta":"3306","database":"hbecia","username":"*C9166421","password":"*D85E94BA65E2F5"}
+29/01 01:26:33 - tempo: ERRO => 0,016 =>  ->
+29/01 01:48:47 - servico_status: {"operacao":"status","token":"c000a003","terminal":"14","id":"y2q1mmy4zdm4ytczmmexma: ="}
+29/01 01:48:47 - servico_status: {"status":"ok","terminal":"14","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+29/01 01:48:47 - tempo: ERRO => 0,031 =>  ->
+29/01 01:48:50 - servico_login GET: {"operacao":"login","token":"c000a003","terminal":"14","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+29/01 01:48:50 - servico_login PUT: {"status":"ok","codigo":"11","code":"201","aviso":"Conectado","timeout":259200,"comanda":"1;42;100;10000"}
+29/01 01:48:50 - tempo: ERRO => 0,015 =>  ->
+29/01 01:48:51 - servico_mysql GET: {"operacao":"mysql","token":"c000a003","terminal":"14","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+29/01 01:48:51 - servico_mysql PUT: {"status":"ok","ip":"192.168.88.44","porta":"3306","database":"hbecia","username":"*C9166421","password":"*D85E94BA65E2F5"}
+29/01 01:48:51 - tempo: ERRO => 0,016 =>  ->
+29/01 01:49:10 - servico_status: {"operacao":"status","token":"c000a003","terminal":"14","id":"y2q1mmy4zdm4ytczmmexma: ="}
+29/01 01:49:10 - servico_status: {"status":"ok","terminal":"14","nome":"HAMBURGUERIA E CIA","code":"200","aviso":"Em operacao","timeout":5000}
+29/01 01:49:10 - tempo: ERRO => 0,031 =>  ->
+29/01 01:49:26 - servico_login GET: {"operacao":"login","token":"c000a003","terminal":"14","usuario":"*F16560C45E","senha":"*8A40A3F180A9"}
+29/01 01:49:26 - erro login: 104-Usuario nao cadastrado
+29/01 01:49:26 - servico_login PUT: {"status":"erro","erro":"104","aviso":"Usuario nao cadastrado"}
+29/01 01:49:26 - tempo: ERRO => 0,032 =>  ->
+29/01 01:49:36 - servico_login GET: {"operacao":"login","token":"c000a003","terminal":"14","usuario":"*F16560C45E","senha":"*8A40A3F180A9"}
+29/01 01:49:36 - erro login: 104-Usuario nao cadastrado
+29/01 01:49:36 - servico_login PUT: {"status":"erro","erro":"104","aviso":"Usuario nao cadastrado"}
+29/01 01:49:36 - tempo: ERRO => 0,032 =>  ->
+29/01 01:49:45 - servico_login GET: {"operacao":"login","token":"c000a003","terminal":"14","usuario":"*F16560C45EE6447F","senha":"*8A40A3F180A9"}
+29/01 01:49:45 - erro login: 104-Usuario nao cadastrado
+29/01 01:49:45 - servico_login PUT: {"status":"erro","erro":"104","aviso":"Usuario nao cadastrado"}
+29/01 01:49:45 - tempo: ERRO => 0,032 =>  ->
+29/01 01:49:52 - servico_login GET: {"operacao":"login","token":"c000a003","terminal":"14","usuario":"*F6","senha":"*8A40A3F180A9"}
+29/01 01:49:52 - erro login: 104-Usuario nao cadastrado
+29/01 01:49:52 - servico_login PUT: {"status":"erro","erro":"104","aviso":"Usuario nao cadastrado"}
+29/01 01:49:52 - tempo: ERRO => 0,032 =>  ->
+29/01 01:49:58 - servico_login GET: {"operacao":"login","token":"c000a003","terminal":"14","usuario":"*F16560C450","senha":"*8A40A3F180A9"}

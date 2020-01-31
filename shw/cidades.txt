@@ -1,0 +1,48 @@
+[capital]
+AC=Rio Branco
+AL=Maceió
+AP=Macapá 
+AM=Manaus
+BA=Salvador
+CE=Fortaleza
+DF=Brasília
+ES=Vitória
+GO=Goiânia
+MA=São Luís
+MT=Cuiabá
+MS=Campo Grande
+MG=Belo Horizonte
+PA=Belém
+PB=João Pessoa
+PR=Curitiba
+PE=Recife
+PI=Teresina
+RN=Natal
+RS=Porto Alegre
+RJ=Rio de Janeiro
+RO=Porto Velho
+RR=Boa Vista
+SC=Florianópolis
+SP=São Paulo
+SE=Aracaju
+TO=Tocantins 
+
+[SP]
+c0=santa barbara do oeste=Santa Bárbara d'Oeste
+c1=santana do livramento=Sant'Ana do Livramento
+c2=mogi mirim=Moji Mirim
+c3=santana do parnaiba=Santana de Parnaiba
+c4=moji das cruzes=Mogi das Cruzes
+c5=santa clara do oeste=Santa Clara d'Oeste
+
+[MA]
+c0=sao luiz=São Luis
+
+[ES]
+c0=sao matheus=São Mateus
+
+[RS]
+c0=nao me toque=Não-Me-Toque
+
+[SC]
+c0=friburgo=fraiburgo

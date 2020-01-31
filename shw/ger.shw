@@ -1,0 +1,49 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# ConectLab Informatica
+# Data: 09/05/2017
+#
+#
+# a todos
+
+[arquivo]
+modulo=Gerencial
+nivelprincipal=0
+nivelauxiliar=0
+pdx=
+
+[Opcoes]
+o0=Gerencial, 0123456789, 1, 0, x
+
+[Gerencial]
+o0=CRM, Classificar clientes, ClassCli, 0123456789, 0, 13,x
+
+#
+# Parametros de tela
+#
+
+[ClassCli]
+tab=CLASSIFICAÇÃO DE CLIENTES
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Código,codigo,i,3,60,,
+c1=Descrição,descricao,c,50,300,,
+c2=Dias,valor,i,6,60,,
+nobrowse=0
+autoIncluir=0
+SET_MULT_VALIDA=codigo
+SET_MULT=CRM_CLASSIFICACAO_CLIENTES
+relacaokey=nome,"CRM_CLASSIFICACAO_CLIENTES"
+where=nome='CRM_CLASSIFICACAO_CLIENTES'
+altura=210
+largura=440
+foco=descricao
+forcarleftmask=130
+t0=Código:,codigo,+,3,40,,
+t1=Descrição:,descricao,c,100,250,,
+#t2=Tipo:,txt_1,c,5,300,@BU,<#6>geral3.rcl,
+t2=Dias sem atividades:,valor,i,3,40,,
+

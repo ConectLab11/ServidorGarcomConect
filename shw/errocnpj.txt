@@ -1,0 +1,17 @@
+Registro
+
+NÚMERO DO CNPJ/CPF NÃO É VÁLIDO, VOCÊ PRECISA RESOLVER ESTE PROBLEMA.
+
+1.) ENTRE AGORA COM A SUA SENHA
+2.) ESCOLHA NO MENU PRINCIPAL A OPÇÃO 
+
+[Sistema] ->
+        [Manutenção] ->     
+                   [Configuração inicial] ->
+                                        [Licença para empresa]
+
+    E DIGITE O CNPJ/CPF CORRETAMENTE.
+
+
+                                                      OBRIGADO!  
+ 

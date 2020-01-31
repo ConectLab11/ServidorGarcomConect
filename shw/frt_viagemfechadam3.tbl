@@ -1,0 +1,132 @@
+
+#
+# Parametros do menu de manutenção do Sistema
+# RCLSoft Comércio e Serviços LTDA. ME.
+#
+
+[Criação]
+Responsavel=Ronaldo
+Data=05/01/2012
+Hora=17:57
+TabelaNome=Viagem Fechada M3
+FonteDados=Alessandro Express
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=tabvalor.pdx
+disableMenu=0
+telalargura=750
+telaaltura=0
+Posicionar=1
+whereexterno=mygroup='tabelaviagemfechadam3'
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,+Viagem Fechada M3, tabelaviagemfechadam3, 0123456789, 9, 25,a
+o2=nil,+Destinos, destinos , 0123456789, 9, 23,a
+
+#
+# Parametros de tela
+#
+ 
+[tabelaviagemfechadam3]
+tab=TABELA VIAGEM FECHADA M3
+comentario=
+db=tabefret
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=90
+forcarleftmask=90
+nobrowse=1
+altura=200
+largura=400
+foco=descr
+t0=Descrição:,descr,c,50,230,,
+h0=Descrição completa
+t1=linha-25
+t2=coluna+290
+t3=Validade:,validade,d,10,80,,
+h3=Prazo de validade
+t4=coluna-290
+t5=Local de embarque#007E7E7E\text_align_justify.png,,,,470, ,
+t6=UF:,uf,c,2,30,@BU,estado2.rcl,
+h6=Sigla do Estado
+t7=coluna+110
+t8=linha-25
+t9=Cidade:,cidade,c,50,250,@B,<#17>geral.rcl{ufsigla=uf/"Interior"},
+h9=Nome da Cidade
+t10=coluna-110
+t11=#Entregas#007E7E7E\text_align_justify.png,,,,470, ,
+t12=#Limite:,minimo=3,i,3,50,,
+h12=#Qtde limite de entrega(s)
+t13=#linha-25
+t14=#coluna+180
+t15=#forcarleftmask=200
+t16=#Taxa por entregas excedidas:,entrega,f,11,84,,
+h16=#Taxa por entregas excedidas
+t17=#forcarleftmask=90
+t18=#coluna-180
+t19=Generalidades#007E7E7E\text_align_justify.png,,,,470, ,
+t20=Despacho:,despacho,f,11,84,,
+h20=Taxa por emissao do CT-e
+t21=ADValorem:,advalorem,p,11,84,,
+h21=Porcentagem de ADValorem
+t22=Pedágio:,pedagio,f,11,84,,
+t23=linha-50
+t24=coluna+305
+t25=Devolução:,devolucao,p,11,60,,
+h25=Porcentagem do frete quando for devolução
+t26=Reentrega:,reentrega,p,11,60,,
+h26=Porcentagem do frete quando for reentrega
+t27=forcarleftmask=110
+t28=coluna-20
+t29=Compartilhada:,compartilhada,sn,3,30,,
+h29=Compartilhar esta tabela com os clientes sem tabela.
+
+[destinos]
+tab=DESTINOS PARA CALCULO DE VIAGEM FECHADA M3
+comentario=
+db=tabaereo
+ordem=siglas,uf,cidade
+rcl=tabaereo.rcl
+chave=tabela
+chavePrincipal=id
+relacaokey=tabela,$IDORIGEM
+tituloWidth=35
+where=tabela="$IDORIGEM"
+c0=UF,uf,c,2,30,,
+c1=Cidade,cidade,c,50,270,,
+c2=M3,valorpeso,f,11,84,,
+c3=ADValorem,advalorem,p,11,84,,
+Rlt=
+msg=
+altura=260
+largura=400
+forcarleftmask=90
+foco=uf
+t0=UF:,uf,c,2,30,@BU,estado2.rcl,
+h0=Sigla do Estado
+t1=#coluna+110
+t2=#linha-25
+t3=Cidade:,cidade,c,50,250,@B,<#17>geral.rcl{ufsigla=uf/"INTERIOR/CAPITAL"},
+h3=Nome da Cidade
+t4=#coluna-110
+t5=Taxas#007E7E7E\color_swatch_2.png,,,,550, ,
+t6=M3:,valorpeso,f,11,84,,
+h6=Taxa M3
+t7=ADValorem:,advalorem,p,11,84,,
+h7=Porcentagem de ADValorem
+validacao=campoPreenchido(uf),campoPreenchido(cidade)

@@ -1,0 +1,906 @@
+[BancoDir]
+c1=BANCOS\BRASIL
+c33=BANCOS\SANTANDER
+c104=BANCOS\CEF
+c237=BANCOS\BRADESCO
+c275=BANCOS\REAL
+c341=BANCOS\ITAU
+c409=BANCOS\UNIBANCO
+c479=BANCOS\BOSTON
+c356=BANCOS\REAL
+c389=BANCOS\MERCANTIL
+
+[CnabPrefixo]
+c1=BB
+c33=SA
+c104=CA
+c237=BR
+c275=RE
+c341=IT
+c409=UN
+c479=BO
+c356=RE
+c389=ME
+
+#
+# AUTORIZAÇÃO DE BAIXA MANUAL
+# SE FOR A CARTEIRA ABAIXO 
+# DEVE TER AUTORIZAÇÃO DO MASTER
+#
+
+[RegistroNoBanco]
+carteria1=7
+carteira104=4
+carteira237=9
+carteira275=2
+carteira341=109
+carteira409=4
+carteira479=
+carteira389=1
+carteira33=5
+
+___________________________________________________________
+_Santander_________________________________________________
+
+[Carteira33]
+c0= -Nenhuma
+c1=101-Cobrança Simples Rápida COM Registro
+c2=102-Cobrança simples SEM Registro
+c3=201-Penho
+
+[s]
+c1=1-Eletrônica com Registro
+c2=3-Caucionada Eletrônica
+c3=4-Cobrança sem Registro
+c4=5-Rápida com Registro (BLOQUETE EMITIDO PELO CLIENTE) 
+c5=6-Caucionada Rápida 
+c6=7-Descontada Eletrônica
+
+[Ocorrencia33]
+c0=01-Entrada de Títulos
+c1=02-Baixa de Título
+c2=04-Concessão de Abatimento
+c3=05-Cancelamento de Abatimento
+c4=06-Prorrogação de Vencimento
+c5=07-Alt. Número cont. Cedente
+c6=08-Alteração do seu número
+c7=09-Protestar
+c8=18-Sustar Protesto
+
+[Especie33]
+c0=01-DM-Duplicata Mercantil
+c1=02-NP-Nota Promissória
+c2=03-AP-Apólice/Nota de Seguro
+c3=05-RE-Recibo
+c4=06-DS-Duplicata de Serviço
+c5=07-LC-Letra de Cambio
+
+[AInstrucao33]
+c0=00-Não há instruções
+c1=02-Baixar após quinze dias do vencimento
+c2=03-Baixar após 30 dias do vencimento
+c3=04-Não Baixar
+c4=06-Protestar
+c5=07-Não Protestar
+c6=08-Não cobrar juros de mora
+
+[BInstrucao33]
+c0=Quantidade de dias para protesto
+
+
+___________________________________________________________
+_Caixa Economica Federal___________________________________
+
+[Carteira104]
+c0= -Nenhuma
+c1=01-Cobrança Com Registro
+c2=02-Cobrança Sem Registro
+
+//c1=01-RG-Cobrança
+//c2=02-SR=Cobrança Sem Registro / Serviços
+//c1=11-CS=Cobrança Simples
+//c2=12-CR=Cobrança Rápida
+//c1=14-CR=
+//c2=14-SR=Cobrança Sem Registro
+//c5=14-RG=SIGCB COM REGISTRO
+//c6=24-SR=SIGCB SEM REGISTRO
+//c7=90-CR=SICOB COBRANCA AZUL COM REGISTRO
+//c8=82-SR=SICOB COBRANCA AZUL SEM REGISTRO
+//c9=9-SR=SINCO SEM REGISTRO
+
+[Ocorrencia104]
+c0=01-Entrada de Títulos
+c1=02-Pedido de Baixa
+c2=04-Concessão de Abatimento
+c3=05-Cancelamento de Abatimento
+c4=06-Alteração de Vencimento
+c5=07-Conceção de Desconto
+c6=08-Cancelamento de Desconto
+c7=09-Protestar
+c8=10-Cancelamento/Sustação da Instrução de Protesto
+c9=31-Alteração de Outros Dados
+
+[Especie104]
+c0=01-CH-Cheque
+c1=02-DM-Duplicata Mercantil
+c2=03-DMI-Duplicata Mercantil p/ indicação
+c3=04-DS-Duplicata de Serviço
+c4=05-DSI-Duplicata de Serviço p/ indicação
+c5=06-DR-Duplicata Rural
+c6=07-LC-Letra de Cambio
+c7=08-NCC-Nota de Crédito Comercial
+c8=09-NCE-Nota de Crédito à Exportação
+c9=10-NCI-Nota de Crédito à Industria
+c10=11-NCR-Nota de Crédito Rural
+c11=12-NP-Nota Promissória
+c12=13-NPR-Nota Promissória Rural
+c13=14-TM-Triplicata Mercantil
+c14=15-TS-Triplicata de Serviços
+c15=16-NS-Nota de Seguro
+c16=17-RC-Recibo
+c17=18-FAT-Fatura
+c18=19-ND-Nota de Débito
+c19=20-AP-Apólice de Seguro
+c20=21-ME-Mensalidade Escolar
+c21=22-PC-Parcela de Consorcio
+c22=99-Outros
+
+[AInstrucao104]
+c0=1-Protestar Dias Corridos
+c1=2-Não Protestar
+
+[BInstrucao104]
+c0=2-Dias
+c1=5-Dias
+c2=10-Dias
+c3=15-Dias
+c4=20-Dias
+c5=25-Dias
+c6=30-Dias
+c7=35-Dias
+c8=40-Dias
+c9=45-Dias
+c10=50-Dias
+c11=55-Dias
+c12=60-Dias
+c13=65-Dias
+c14=70-Dias
+c15=75-Dias
+c16=80-Dias
+c17=85-Dias
+c18=90-Dias
+
+___________________________________________________________
+_Banco Bradesco S/A________________________________________
+
+[Carteira237]
+c0= -Nenhuma
+c1=06-Cobrança Simples
+c2=09-Cobrança Registrada
+
+[Ocorrencia237]
+c0=01-Remessa
+c1=02-Pedido de baixa
+c2=04-Concessão de abatimento
+c3=05-Cancelamento de abatimento concedido
+c4=06-Alteração de vencimento
+c5=07-Alteração do controle do participante
+c6=08-Alteração do seu número
+c7=09-Pedido de protesto
+c8=18-Sustar protesto e baixar Título
+c9=19-Sustar protesto e manter em carteira
+c10=31-Alteração de outros dados
+
+c11=35-Desagendamento do débito automático
+c12=68-Acerto nos dados do rateio de Crédito
+c13=69-Cancelamento do rateio de crédito
+
+[Especie237]
+c0=01-DM-Duplicata
+c1=02-NP-Nota Promissória
+c2=03-NS-Nota de Seguro
+c3=04-CS-Cobrança Seriada
+c4=05-RC-Recibo
+c5=10-LC-Letras de Câmbio
+c6=11-ND-Nota de Débito
+c7=12-DS-Duplicata de Serviço
+c8=99-Outros
+
+[AInstrucao237]
+c0=06-Protesto
+c1=08-Não cobrar juros de mora
+c2=09-Não receber após o vencimento
+c3=10-Multa de 10% após o quarto dia do vencimento
+c4=11-Não receber após o 8. dia do vencimento
+c5=12-Cobrar encargos após o 5. dia do vencimento
+c6=13-Cobrar encargos após o 10. dia do vencimento
+c7=14-Cobrar encargos após o 15. dia do vencimento
+c8=15-Conceder desconto mesmo se pago após o vencimento
+c9=99-Cancelamento de Protesto
+c10=00-Nenhum
+
+[BInstrucao237]
+c0=5 -Dias (mínimo)
+c1=7 -Dias 
+c2=10-Dias
+c3=15-Dias
+c4=20-Dias
+c5=25-Dias
+c6=30-Dias
+c7=99-Cancelamento de Protesto
+c8=00-Nenhum
+
+___________________________________________________________
+_Banco Real S/A____________________________________________
+
+[Carteira275]
+c0= -Nenhuma
+c1=1-Cobrança Simples
+c2=2-Cobrança Registrada
+
+[Ocorrencia275]
+c0=01-Entrada
+c1=02-Baixa
+c2=04-Conceder Abatimento
+c3=05-Cancelar Abatimento
+c4=06-Alterar Vencimento
+c5=07-Alterar campo Especial
+c6=08-Alterar Número do Cedente
+c7=09-Protestar
+c8=10-Sustar protesto e conservar em carteira (após título ser enviado a cartório)
+c9 =11-Não protestar (antes do título ser enviado a cartório)
+c10=13-Cancelar Multa
+c11=14-Alterar Multa
+c12=16-Sustar protesto e baixar o título (após título ser enviado à cartório)
+c13=17-Conceder Desconto
+c14=18-Cancelar Protesto Automático
+
+[Especie275]
+c0=01-DS-Duplicata De Serviço
+c1=02-NP-Nota Promissória
+c2=03-NS-Nota de Seguro
+c3=04-CS-Cobrança Seriada
+c4=05-RC-Recibo
+c5=06-Banco emitirá Bloquetos
+c6=07-Banco não emitirá Bloquetos
+c7=08-DS-Duplicata de Serviço
+c8=99-Outros
+
+[AInstrucao275]
+
+[BInstrucao275]
+c0=00-Confirma instrução Agência
+c1=03 até 55 número de dias vencidos para protesto
+c2=99-Não Protestar
+
+[Carteira356]
+c0= -Nenhuma
+c1=00-Carteira do convênio
+c2=20-Cobrança Simples
+c3=31-Cobrança Câmbio
+c4=42-Cobrança Caucionada
+c5=47-Cobr. Caucionada Crédito Imobiliário
+c6=85-Cobrança Partilhada
+
+[Ocorrencia356]
+c0=01-Entrada
+c1=02-Baixa
+c2=04-Conceder Abatimento
+c3=05-Cancelar Abatimento
+c4=06-Alterar Vencimento
+c5=07-Alterar campo Especial
+c6=08-Alterar Número do Cedente
+c7=09-Protestar
+c8=10-Sustar protesto e conservar em carteira (após título ser enviado a cartório)
+c9 =11-Não protestar (antes do título ser enviado a cartório)
+c10=13-Cancelar Multa
+c11=14-Alterar Multa
+c12=16-Sustar protesto e baixar o título (após título ser enviado à cartório)
+c13=17-Conceder Desconto
+c14=18-Cancelar Protesto Automático
+
+[Especie356]
+c0=01-DM-Duplicata De Serviço
+c1=02-NP-Nota Promissória
+c2=03-NS-Nota de Seguro
+c3=04-CS-Cobrança Seriada
+c4=05-RC-Recibo
+c5=06-Banco emitirá Bloquetos
+c6=07-Banco não emitirá Bloquetos
+c7=08-DS-Duplicata de Serviço
+c8=99-Outros
+
+[AInstrucao356]
+
+[BInstrucao356]
+c0=00-Confirma instrução Agência
+c1=03 até 55 número de dias vencidos para protesto
+c2=99-Não Protestar
+
+___________________________________________________________
+_Banco ITAU S/A____________________________________________
+
+[Carteira341]
+c0=   -Nenhuma
+c1=112-ESCRITURAL ELETRÔNICA – SIMPLES
+c2=115-ESCRITURAL ELETRÔNICA – SIMPLES – FAIXA NOSSO NÚMERO LIVRE
+c3=104-ESCRITURAL ELETRÔNICA – CARNÊ
+c4=147-ESCRITURAL ELETRÔNICA – DÓLAR
+c5=188-ESCRITURAL ELETRÔNICA - COBRANÇA INTELIGENTE (B2B)
+c6=108-DIRETA ELETRÔNICA EMISSÃO INTEGRAL – CARNÊ
+c7=109-DIRETA ELETRÔNICA SEM EMISSÃO – SIMPLES
+c8=150-DIRETA ELETRÔNICA SEM EMISSÃO – DÓLAR
+c9=121-DIRETA ELETRÔNICA EMISSÃO PARCIAL – SIMPLES
+c10=180-DIRETA ELETRÔNICA EMISSÃO INTEGRAL – SIMPLES
+c11=175-SEM REGISTRO SEM EMISSÃO COM PROTESTO ELETRÔNICO
+c12=198-SEM REGISTRO SEM EMISSÃO 15 DÍGITOS
+c13=142-SEM REGISTRO SEM EMISSÃO 15 DÍGITOS IOF 4%
+c14=143-SEM REGISTRO SEM EMISSÃO 15 DÍGITOS COM IOF 7%
+c15=174-SEM REGISTRO EMISSÃO PARCIAL COM PROTESTO BORDERÔ 
+c16=177-SEM  REGISTRO EMISSÃO PARCIAL COM PROTESTO ELETRÔNICO
+c17=129-SEM REGISTRO EMISSÃO PARCIAL SEGUROS COM IOF 2%
+c18=139-SEM REGISTRO EMISSÃO PARCIAL SEGUROS COM IOF 4%
+c19=169-SEM REGISTRO EMISSÃO PARCIAL SEGUROS COM IOF 7%
+c20=172-SEM REGISTRO  COM EMISSÃO INTEGRAL
+c21=102-SEM REGISTRO COM EMISSÃO INTEGRAL – CARNÊ
+c22=107-SEM REGISTRO  COM EMISSÃO INTEGRAL – 15 POSIÇÕES - CARNÊ
+c23=173-SEM REGISTRO COM EMISSÃO E ENTREGA
+c24=103-SEM REGISTRO COM EMISSÃO E ENTREGA – CARNÊ
+c25=196-SEM REGISTRO COM EMISSÃO E ENTREGA – 15 POSIÇÕES
+
+[Ocorrencia341]
+c0=01-REMESSA
+c1=02-PEDIDO DE BAIXA
+c2=04-CONCESSÃO DE ABATIMENTO (INDICADOR 12.5) 
+c3=05-CANCELAMENTO DE ABATIMENTO
+c4=06-ALTERAÇÃO DO VENCIMENTO 
+c5=07-ALTERAÇÃO DO USO DA EMPRESA
+c6=08-ALTERAÇÃO DO SEU NÚMERO 
+c7=09-PROTESTAR (emite aviso ao sacado após xx dias do vencimento, e envia ao cartório após 5 dias úteis)
+c8=10-NÃO PROTESTAR (inibe protesto automático, quando houver instrução permanente na conta corrente) 
+c9=11-PROTESTO PARA FINS FALIMENTARES
+c10=18-SUSTAR O PROTESTO 
+c11=31-ALTERAÇÃO DE OUTROS DADOS 
+c12=34-BAIXA POR TER SIDO PAGO DIRETAMENTE AO CEDENTE
+c13=35-CANCELAMENTO DE INSTRUÇÃO
+c14=37-ALTERAÇÃO DO VENCIMENTO E SUSTAR PROTESTO
+c15=38-CEDENTE NÃO CONCORDA COM ALEGAÇÃO DO SACADO
+c16=47-CEDENTE SOLICITA DISPENSA DE JUROS
+
+[Especie341]
+c0=01-DM-DUPLICATA MERCANTIL
+c1=02-NP-NOTA PROMISSÓRIA
+c2=03-NS-NOTA DE SEGURO
+c3=04-ME-MENSALIDADE ESCOLAR
+c4=05-Recibo-RECIBO
+c5=06-Contrato-CONTRATO
+c6=07-COSSEGURO-COSSEGUROS
+c7=08-DS-DUPLICATA DE SERVIÇO
+c8=09-LC-LETRA DE CÂMBIO
+c9=13-ND-NOTA DE DÉBITOS
+c10=15-DD-DOCUMENTO DE DÍVIDA
+c11=16-EC-ENCARGOS CONDOMINIAIS
+c12=17-CPS-CONTA DE PRESTAÇÃO DE SERVIÇOS
+c13=99-DIV-DIVERSOS
+
+[AInstrucao341]
+c0=00-OUTROS
+c1=02-DEVOLVER APÓS 05 DIAS DO VENCIMENTO
+c2=03-DEVOLVER APÓS 30 DIAS DO VENCIMENTO
+c3=05-RECEBER CONFORME INSTRUÇÕES NO PRÓPRIO TÍTULO
+c4=06-DEVOLVER APÓS 10 DIAS DO VENCIMENTO
+c5=07-DEVOLVER APÓS 15 DIAS DO VENCIMENTO
+c6=08-DEVOLVER APÓS 20 DIAS DO VENCIMENTO
+c7=09-PROTESTAR
+c8=10-NÃO PROTESTAR (inibe protesto, quando houver instrução permanente na conta corrente)
+c9=11-DEVOLVER APÓS 25 DIAS DO VENCIMENTO
+c10=12-DEVOLVER APÓS 35 DIAS DO VENCIMENTO
+c11=13-DEVOLVER APÓS 40 DIAS DO VENCIMENTO
+c12=14-DEVOLVER APÓS 45 DIAS DO VENCIMENTO
+c13=15-DEVOLVER APÓS 50 DIAS DO VENCIMENTO
+c14=16-DEVOLVER APÓS 55 DIAS DO VENCIMENTO
+c15=17-DEVOLVER APÓS 60 DIAS DO VENCIMENTO
+c16=18-DEVOLVER APÓS 90 DIAS DO VENCIMENTO
+c17=19-NÃO RECEBER APÓS 05 DIAS DO VENCIMENTO
+c18=20-NÃO RECEBER APÓS 10 DIAS DO VENCIMENTO
+c19=21-NÃO RECEBER APÓS 15 DIAS DO VENCIMENTO
+c20=22-NÃO RECEBER APÓS 20 DIAS DO VENCIMENTO
+c21=23-NÃO RECEBER APÓS 25 DIAS DO VENCIMENTO
+c22=24-NÃO RECEBER APÓS 30 DIAS DO VENCIMENTO
+c23=25-NÃO RECEBER APÓS 35 DIAS DO VENCIMENTO
+c24=26-NÃO RECEBER APÓS 40 DIAS DO VENCIMENTO
+c25=27-NÃO RECEBER APÓS 45 DIAS DO VENCIMENTO
+c26=28-NÃO RECEBER APÓS 50 DIAS DO VENCIMENTO
+c27=29-NÃO RECEBER APÓS 55 DIAS DO VENCIMENTO
+c28=30-IMPORTÂNCIA DE DESCONTO POR DIA
+c29=31-NÃO RECEBER APÓS 60 DIAS DO VENCIMENTO
+c30=32-NÃO RECEBER APÓS 90 DIAS DO VENCIMENTO
+c31=33-CONCEDER ABATIMENTO REF. À PIS-PASEP/COFIN/CSSL, MESMO APÓS VENCIMENTO
+c32=34-PROTESTAR APÓS XX DIAS CORRIDOS DO VENCIMENTO
+c33=35-PROTESTAR APÓS XX DIAS ÚTEIS DO VENCIMENTO
+c34=37-RECEBER ATÉ O ÚLTIMO DIA DO MÊS DE VENCIMENTO
+c35=38-CONCEDER DESCONTO MESMO APÓS VENCIMENTO
+c36=39-NÃO RECEBER APÓS O VENCIMENTO
+c37=40-CONCEDER DESCONTO CONFORME NOTA DE CRÉDITO
+c38=42-PROTESTO PARA FINS FALIMENTARES
+c39=43-SUJEITO A PROTESTO SE NÃO FOR PAGO NO VENCIMENTO
+c40=44-IMPORTÂNCIA POR DIA DE ATRASO A PARTIR DE DDMMAA
+c41=45-TEM DIA DA GRAÇA
+c42=46-USO DO BANCO
+c43=47-DISPENSAR JUROS/COMISSÃO DE PERMANÊNCIA
+c44=51-RECEBER SOMENTE COM A PARCELA ANTERIOR QUITADA
+c45=52-EFETUAR O PAGAMENTO SOMENTE ATRAVÉS DESTE BOLETO E NA REDE BANCÁRIA
+c46=53-USO DO BANCO
+c47=54-APÓS VENCIMENTO PAGÁVEL SOMENTE NA EMPRESA
+c48=56-USO DO BANCO
+c49=57-SOMAR VALOR DO TÍTULO AO VALOR DO CAMPO MORA/MULTA CASO EXISTA
+c50=58-DEVOLVER APÓS 365 DIAS DE VENCIDO
+c51=59-COBRANÇA NEGOCIADA. PAGÁVEL SOMENTE POR ESTE BOLETO NA REDE BANCÁRIA
+c52=61-TÍTULO ENTREGUE EM PENHOR EM FAVOR DO BENEFICIÁRIO ACIMA
+c53=62-TÍTULO TRANSFERIDO A FAVOR DO BENEFICIÁRIO
+c54=66-ENTRADA EM NEGATIVAÇÃO EXPRESSA (IMPRIME: SUJEITO A NEGATIVAÇÃO APÓS O VENCIMENTO)
+c55=67-NÃO NEGATIVAR (INIBE A ENTRADA EM NEGATIVAÇÃO EXPRESSA)
+c56=78-VALOR DA IDA ENGLOBA MULTA DE 10% PRO RATA
+c57=79-COBRAR JUROS APÓS 15 DIAS DA EMISSÃO (para títulos com vencimento à vista)
+c58=80-PAGAMENTO EM CHEQUE: SOMENTE RECEBER COM CHEQUE DE EMISSÃO DO PAGADOR
+
+[341antiga]
+c0=02-DEVOLVER APÓS 05 DIAS DO VENCIMENTO
+c1=03-DEVOLVER APÓS 30 DIAS DO VENCIMENTO
+c2=05-RECEBER CONFORME INSTRUÇÕES NO PRÓPRIO TÍTULO
+c3=06-DEVOLVER APÓS 10 DIAS DO VENCIMENTO
+c4=07-DEVOLVER APÓS 15 DIAS DO VENCIMENTO
+c5=08-DEVOLVER APÓS 20 DIAS DO VENCIMENTO
+c6=09-PROTESTAR (emite aviso ao sacado após XX dias do vencimento, e envia ao cartório após 5 dias úteis)
+c7=10-NÃO PROTESTAR (inibe protesto, quando houver instrução permanente na conta corrente) 
+c8=11-DEVOLVER APÓS 25 DIAS DO VENCIMENTO
+c9=12-DEVOLVER APÓS 35 DIAS DO VENCIMENTO
+c10=13-DEVOLVER APÓS 40 DIAS DO VENCIMENTO
+c11=14-DEVOLVER APÓS 45 DIAS DO VENCIMENTO
+c12=15-DEVOLVER APÓS 50 DIAS DO VENCIMENTO
+c13=16-DEVOLVER APÓS 55 DIAS DO VENCIMENTO
+c14=17-DEVOLVER APÓS 60 DIAS DO VENCIMENTO
+c15=18-DEVOLVER  APÓS 90 DIAS DO VENCIMENTO
+c16=19-NÃO RECEBER APÓS 05 DIAS DO VENCIMENTO
+c17=20-NÃO RECEBER APÓS 10 DIAS DO VENCIMENTO
+c18=21-NÃO RECEBER APÓS 15 DIAS DO VENCIMENTO
+c19=22-NÃO RECEBER APÓS 20 DIAS DO VENCIMENTO
+c20=23-NÃO RECEBER APÓS 25 DIAS DO VENCIMENTO
+c21=24-NÃO RECEBER APÓS 30 DIAS DO VENCIMENTO
+c22=25-NÃO RECEBER APÓS 35 DIAS DO VENCIMENTO
+c23=26-NÃO RECEBER APÓS 40 DIAS DO VENCIMENTO
+c24=27-NÃO RECEBER APÓS 45 DIAS DO VENCIMENTO
+c25=28-NÃO RECEBER APÓS 50 DIAS DO VENCIMENTO
+c26=29-NÃO RECEBER APÓS 55 DIAS DO VENCIMENTO
+c27=30-IMPORTÂNCIA DE DESCONTO POR DIA
+c28=31-NÃO RECEBER APÓS 60 DIAS DO VENCIMENTO
+c29=32-NÃO RECEBER APÓS 90 DIAS DO VENCIMENTO
+c30=33-CONCEDER ABATIMENTO REF. À PIS-PASEP/COFIN/CSSL, MESMO APÓS VENCIMENTO
+c31=37-RECEBER ATÉ O ÚLTIMO DIA DO MÊS DE VENCIMENTO
+c32=38-CONCEDER DESCONTO MESMO APÓS VENCIMENTO
+c33=39-NÃO RECEBER APÓS O VENCIMENTO
+c34=40-CONCEDER DESCONTO CONFORME NOTA DE CRÉDITO
+c35=42-PROTESTO PARA FINS FALIMENTARES
+c36=43-SUJEITO A PROTESTO SE NÃO FOR PAGO NO VENCIMENTO
+c37=44-IMPORTÂNCIA POR DIA DE ATRASO A PARTIR DE DDMMAA
+c38=45-TEM DIA DA GRAÇA
+c39=46-USO DO BANCO
+c40=47-DISPENSAR JUROS/COMISSÃO DE PERMANÊNCIA
+c41=51-RECEBER SOMENTE COM A PARCELA ANTERIOR QUITADA
+c42=52-FAVOR EFETUAR PGTO  SOMENTE ATRAVÉS DESTA COBRANÇA BANCÁRIA
+c43=53-USO DO BANCO
+c44=54-APÓS VENCIMENTO PAGÁVEL SOMENTE NA EMPRESA
+c45=56-USO DO BANCO
+c46=57-SOMAR VALOR DO TÍTULO AO VALOR DO CAMPO MORA/MULTA CASO EXISTA
+c47=58-DEVOLVER APÓS 365 DIAS DE VENCIDO
+c48=59-COBRANÇA NEGOCIADA. PAGÁVEL SOMENTE POR ESTE BLOQUETO NA REDE BANCÁRIA
+c49=61-TÍTULO ENTREGUE EM PENHOR EM FAVOR DO CEDENTE ACIMA
+c50=62-TÍTULO TRANSFERIDO A FAVOR DO CEDENTE
+c51=70-USO DO BANCO
+c52=71-USO DO BANCO
+c53=72-USO DO BANCO
+c54=73-USO DO BANCO
+c55=74-USO DO BANCO
+c56=75-USO DO BANCO
+c57=76-VALOR DA IDA ENGLOBA MULTA DE 10% PRO RATA
+c58=79-COBRAR JUROS APÓS 15 DIAS DA EMISSÃO (para títulos com vencimento à vista)
+c59=80-PAGAMENTO EM CHEQUE: SOMENTE RECEBER COM CHEQUE DE EMISSÃO DO SACADO
+c60=81-PROTESTAR APÓS XX DIAS CORRIDOS DO VENCIMENTO
+c61=82-PROTESTAR APÓS XX DIAS ÚTEIS DO VENCIMENTO
+c62=83-OPERAÇÃO REF A VENDOR
+c63=84-APÓS VENCIMENTO CONSULTAR A AGÊNCIA CEDENTE
+c64=86-ANTES DO VENCIMENTO OU APÓS 15 DIAS, PAGÁVEL SOMENTE EM NOSSA SEDE
+c65=87-USO DO BANCO
+c66=88-NÃO RECEBER ANTES DO VENCIMENTO
+c67=89-USO DO BANCO
+c68=90-NO VENCIMENTO PAGÁVEL EM QUALQUER AGÊNCIA BANCÁRIA
+c69=91-NÃO RECEBER APÓS XX DIAS DO VENCIMENTO
+c70=92-DEVOLVER APÓS XX DIAS DO VENCIMENTO
+c71=93-MENSAGENS NOS BLOQUETOS COM 30 POSIÇÕES
+c72=94-MENSAGENS NOS BLOQUETOS COM 40 POSIÇÕES
+c73=95-USO DO BANCO
+c74=96-USO DO BANCO
+c75=97-USO DO BANCO
+c76=98-DUPLICATA / FATURA Nº
+
+[BInstrucao341]
+c0=  -Nenhum
+
+___________________________________________________________
+_Banco Unibanco____________________________________________
+
+[Carteira409]
+c0= -Nenhuma
+c1=1-UniCobrança Simples
+c2=2-Seguro
+c3=3-Carnê
+c4=4-Direta
+c5=5-Escritural
+c6=6-Caução
+c7=7-Desconto
+c8=8-Vinculada p/ Novo Desconto
+c9=12-Vendor
+
+[Ocorrencia409]
+c0=01-Remessa do título
+c1=02-Pedido de baixa do título
+c2=04-Concessão de abatimento (após a data de envio, não existe possibilidade de cancelamento)
+c3=06-Alteração de vencimento do título	
+c4=07-Alteração do campo
+c5=08-Alteração do campo seu número
+c6=09-Protestar o título  (inicia o processo de protesto)
+c7=10-Não protestar / Sustar protesto  (desagenda o protesto ou solicita retirada do cartório)
+c8=12-Transf. Para Cobrança Vendor-SOE 
+c9=14-Desconto financeiro  
+c10=15-Alteração do valor do título
+
+[CodigoMoeda409]
+c0=R$14-Real
+c1=US$4-Dólar
+c2=TRM5-TR
+c3=IG51-IGPM
+
+[Especie409]
+c0=01-DM-Duplicata Mercantil
+c1=02-NP-Nota Promissoria
+c2=03-NS-Nota de Seguro
+c3=05-Recibo-Recibo
+c4=06-DM-Duplicata
+c5=10-LC-LC
+c6=11-DS-Duplicata de Serviço
+c7=99-Outros-Outros
+
+[AInstrucao409]
+c0=01-Não receber o principal sem os encargos de mora
+c1=02-Devolver se não pago até 15 dias após o vencimento
+c2=03-Devolver se não pago até 30 dias após o vencimento
+c3=04-Devolver só a pedido
+c4=05-Acatar as instruções contidas no título
+c5=06-Protestar
+c6=07-Não Protestar
+c7=08-Não cobrar juros de mora
+# c0=01-Mora estabelecida pelo cedente 
+# c1=50-Mora Banco (No bloqueto aparecerá: Mora Vide Circular)
+
+[BInstrucao409]
+c0=  -Nenhum
+
+___________________________________________________________
+_Banco do Brasil S/A________________________________________
+
+[Carteira1]
+c0= -Nenhuma
+c1=1-Cobrança Simples
+c2=2-Cobrança Vinculada
+c3=3-Cobrança Caucionada
+c4=4-Cobrança Descontada
+c5=7-Cobrança Direta Especial /carteira 17/
+c6=16-Corança Sem Registro
+c7=17-Cobrança Direte Especial
+c8=18-Corança Sem Registro
+
+[Ocorrencia1]
+c0=C-Lancamento a Credito
+c1=D-Lancamento a Debito
+c2=E-Extrato para Conciliacao
+c3=I-Informacoes de titulos capturados do proprio banco
+c4=R-Arquivo Remessa
+c5=T-Arquivo Retorno
+
+[TipoServico1]
+
+c0=01-Cobranca
+c1=02-Cobranca sem Papel
+c2=03-Bloqueto Eletronico
+c3=04-Conciliacao Bancaria
+c4=05-Debitos
+c5=10-Pagamento Dividendos
+c6=20-Pagamento Fornecedor
+c7=30-Pagamento Salarios
+c8=50-Pagamento Sinistros Segurados
+c9=60-Pagamento Despesas Viajante em Transito
+c10=70-Pagamento Autorizado
+c11=75-Pagamento Credenciados
+c12=80-Pagamento Representantes/Vendedores Autorizados
+c13=90-Pagamento Beneficios
+c14=98-Pagamento Diversos
+
+[Especie1]
+c0=01-CH-Cheque
+c1=02-DM-Duplicata Mercantil
+c2=03-DMI-Duplicata Mercantil p/ Indicacao
+c3=04-DS-Duplicata de Servico
+c4=05-DSI-Duplicata de Servico p/ Indicacao
+c5=06-DR-Duplicata Rural
+c6=07-LC-Letra de Cambio
+c7=08-NCC-Nota de Credito Comercial
+c8=09-NCE-Nota de Credito A Exportacao
+c9=10-NCI-Nota de Credito Industrial
+c10=11-NCR-Nota de Credito Rural
+c11=12-NP-Nota Promissoria
+c12=13-NPR-Nota Promissoria Rural
+c13=14-TM-Triplicata Mercantil
+c14=15-TS-Triplicata de Servico
+c15=16-NS-Nota de Seguro
+c16=17-RC-Recibo
+c17=18-FAT-Fatura
+c18=19-ND-Nota de Debito
+c19=20-AP-Apolice de Seguro
+c20=21-ME-Mensalidade Escolar
+c21=22-PC-Parcela de Consorcio
+c22=99-  -Outros
+
+[AInstrucao1]
+c0=1-Protestar Dias Corridos
+c2=2-Protestar Dias Uteis
+c3=3-Não Protestar
+
+[BInstrucao1]
+c0=5 -Dias (mínimo)
+c1=10-Dias
+c2=15-Diasc3=20-Diasc4=30-Dias
+
+
+
+c5=99-Cancelamento de Protesto
+
+
+[AInstrucao237]
+c0=01-Entrada de Titulos
+c1=02-Pedido de Baixa
+c2=04-Concessao de Abatimento
+c3=05-Cancelamento de Abatimento
+c4=06-Alteracao de Vencimento
+c5=07-Concessao de Desconto
+c6=08-Cancelamento de Desconto
+c7=09-Protestar
+c8=10-Cancela/Sustacao da Instrucao de protesto
+c9=30-Recusa da Alegacao do Sacado
+c10=31-Alteracao de Outros Dados
+c11=40-Alteracao de modalidade
+
+
+[BInstrucao237]
+c0=5 -Dias (mínimo)
+c1=99-Cancelamento de Protesto
+                                                                  
+[FormaLancamento1]
+#
+# Indica a forma de lancamento que o lote contem
+#
+c0=01-Credito em Conta Corrente
+c1=02-Cheque Pagamento/Administrativo
+c2=03-DOC/TED
+c3=04-Cartao Salario /Servico Tipo 30/
+c4=05-Credito em Conta Poupanca
+c5=10-OP à disposição
+c6=30-Liquidacao de Titulos do proprio Banco
+c7=31-Pagamento de Titulos de outros Bancos
+
+[TipoMovimento1]
+c0=0-INCLUSAO
+c1=3-ESTORNO
+c2=5-ALTERACAO
+c3=9-EXCLUSAO
+c4=00-Inclusao de Registro Detalhe Liberado
+c5=09-Inclusao do Registro Detalhe Bloqueado
+
+
+
+
+
+
+
+
+*-----------------------------------------------------------------*   
+!    NOTAS        !   INFORMACOES COMPLEMENTARES                  !   
+!-----------------------------------------------------------------!   
+!/12/             !  10 - Alteracao  do  Pagamento  Liberado  para!   
+!MOVIMENTO /CONT./!       Bloqueado /Bloqueio/                    !   
+!                 !  11 - Alteracao  do  Pagamento  Bloqueado para!   
+!                 !       liberado /Liberacao/                    !   
+!                 !  17 - Alteracao do Valor do Titulo            !   
+!                 !  19 - Alteracao da Data de Pagamento          !   
+!                 !  23 - Pagamento Direto ao Fornecedor - Baixar !   
+!                 !  25 - Manutencao em Carteira - Nao Pagar      !   
+!                 !  27 - Retirada de Carteira - Nao Pagar        !   
+!                 !  33 - Estorno por Devolucao da Camara  Centra-!   
+!                 !       lizadora /somente para Movimento do tipo!   
+!                 !       3/                                      !   
+!                 !  40 - Alegacao do Sacado                      !   
+!                 !  99 - Exclusao do registro detalhe incluido   !   
+!                 !       anteriormente                           !   
+!-----------------!-----------------------------------------------!   
+!/13/             !BTN - Bonus do Tesouro Nacional + TR           !   
+!MOEDA            !BRL - Real                                     !   
+!                 !USD - Dolar Americano                          !   
+!                 !PTE - Escudo Portugues                         !   
+!                 !FRF - Franco Frances                           !   
+!                 !CHF - Franco Suico                             !   
+!                 !JPY - Ien Japones                              !   
+!                 !IGP - Indice Geral de Precos                   !   
+!-----------------!-----------------------------------------------!   
+!/13/             !IGM - Indice Geral de Precos de Mercado        !   
+!MOEDA            !GBP - Libra Esterlina                          !   
+!/cont./          !ITL - Lira Italiana                            !   
+!                 !DEM - Marco Alemao                             !   
+!                 !TRD - Taxa Referencial Diaria                  !   
+!                 !UPC - Unidade Padrao de Capital                !   
+!                 !UPF - Unidade Padrao de Financiamento          !   
+!                 !UFR - Unidade Fiscal de Referencia             !   
+!                 !XEU - Unidade Monetaria Europeia.              !   
+!                 !Obs.: Moeda baseada em tabela padrao S.W.I.F.T.!   
+!                 !acrescida dos principais indices nacionais.    !   
+!-----------------!-----------------------------------------------!   
+[CategoriaLancamentos1]
+c0=101-Cheques
+c1=102-Encargos
+c2=103-Estornos
+c3=104-Lancamento Avisado
+c4=105-Tarifas
+# CREDITOS
+c5=201-Depositos
+c6=202-Liquido de Cobranca
+c7=203-Devolucao de Cheques
+c8=204-Estornos
+c9=205-Lancamento Avisado
+
+
+[EmissaoBloqueto1]
+#
+# Obs.: Os codigos 4 e 5 so serao aceitos para
+#       codigo de movimento para remessa 31
+#
+c0=1-Banco emite
+c1=2-Cliente emite
+c2=3-Banco pre-emite e cliente complementa
+c3=4-Banco reemite
+c4=5-Banco nao reemite
+c5=6-Cobranca sem Papel
+
+[CodigoMora1]
+c0=1-Valor por Dia
+c1=2-Taxa Mensal e
+c2=3-Isento
+
+[CodigoDesconto1]
+c0=1-Valor Fixo ate a data informada
+c1=2-Percentual ate a data informada
+c2=3-Valor Por Antecipacao Dia Corrido
+c3=4-Valor Por Antecipacao Dia Util
+c4=5-Percentual sobre o Valor Nominal Dia Corrido
+c5=6-Percentual sobre o Valor Nominal Dia Util
+
+[CodigoMoeda1]
+c0=01-Reservado para uso futuro
+c1=02-Dolar Americano Comercial /Venda/
+c2=03-Dolar Americano Turismo /Venda/
+c3=04-ITRD
+c4=05-IDTR
+c5=06-UFIR Diaria
+c6=07-UFIR Mensal
+c7=08-FAJ-TR
+c8=09-REAL
+
+[CodigoImpressao1]
+c0=1-Frente do bloqueto.                        !   
+c1=2-Verso do bloqueto.                         !   
+c2=3-Campo de instrucoes da ficha de compensacao do bloqueto.                               !   
+c3=8-Bloqueto por e-mail                        !   
+
+[LinhasImpressa1]
+# F - Frente : podera variar de "01"   "36"
+# V - Verso  : podera variar de "01"   "24"
+# Zeros      : para envio de bloqueto por e-mail
+
+[TipoFonte1]
+c0=01-Normal
+c1=02-Italico
+c2=00-para envio de bloqueto por e-mail
+c2=03-Normal negrito
+c3=04-Italico negrito
+
+[codigoMovimento1]
+c0=01-Remessa para debito
+c1=02-Retirada de debito
+c2=03-Remessa para debito rejeitada
+c3=04-Retirada de debito rejeitada
+
+[TipoServico1]
+#
+#  Obs.: Este campo so devera ser utilizado para a
+#        cobranca sem papel.
+# '02' - Cobranca sem Papel
+#
+c0=01-Controle do registro header invalido
+c1=02-Codigo de remessa diferente de "1"
+c2=03-Data de geracao invalida ou diferente de D+0
+c3=04-Numero sequencial do arq.nao numerico ou fora de sequencia
+c4=05-Numero da versao do layout do arquivo invalido
+c5=06-Tipo de servico diferente de "02"
+c6=07-Controle do registro trailer invalido
+c7=08-Arquivo nao aceito - Totais do arquivo com diferenca
+
+___________________________________________________________
+_Mercantil do Brasil____________________________________________
+
+[Carteira389]
+c0= -Nenhuma
+c1=1-Cobrança Simples
+c2=2-Cob. Vinculada
+c3=3-Cob. Caucionada
+c4=5-Desconto Escritural
+c5=6-Cob. Sem Registro
+c6=8-Cob. Seguro
+
+[Ocorrencia389]
+c0=01-Remessa - Entrada Normal
+c1=02-Baixa - Pedido do Cliente
+c2=04-Alteração - Concessão de Abatimento
+c3=05-Alteração - Cancelamento de Abatimento
+c4=06-Alteração - Prorrogação de Vencimento
+c5=07-Conceder desconto
+c6=09-Protestar sem mais aviso consulta
+
+[CodigoMoeda389]
+c0=1-Real
+c1=2-Dólar Comercial - Venda
+c2=3-TRDA_DU
+c3=4-IDTR
+c4=5-UFIR
+c5=6-URV
+
+[Especie389]
+c0=01-DM-Duplicata Mercantil
+c1=02-NP-Nota Promissoria
+c2=03-Recibo-Recibo
+c3=05-NS-Nota de Seguro
+c4=06-DS-Duplicata de Prestação de Serviços
+c5=07-Outros-Outros Documentos
+c6=09-Desconto Escritural
+
+[AInstrucao389]
+c0= -Nenhum
+c1=11-Dispensar juros de mora
+c2=19-Protestar em 03 dias
+c3=20-Protestar em 05 dias
+c4=21-Protestar em 10 dias úteis
+c5=22-Protestar em 15 dias
+c6=23-Devolver após 05 dias de vencido
+c7=24-Devolver após 15 dias do vencido
+c8=25-Devolver após 30 dias do vencido
+c9=26-Não dispensar juros de mora
+c10=27-Não Protestar
+c11=28-Devolver após 06 dias de vencido
+c12=29-Devolver após 07 dias de vencido
+c13=30-Devolver após 08 dias de vencido
+c14=31-Devolver após 09 dias de vencido
+c15=32-Devolver após 10 dias de vencido
+c16=52-Não receber após vencido
+c17=53-Protestar com 01 dia de vencido
+c18=54-Protestar com 07 dias de vencido
+c19=55-Protestar com 30 dias de vencido
+
+[BInstrucao389]
+c0=  -Nenhum
+

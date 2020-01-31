@@ -1,0 +1,231 @@
+#
+#    Modelagem para Camada de Versão
+#
+#	Atualizado: 04/06/2013
+#
+
+[arquivo]
+modulo=UI - Atualização de Versão
+nivelprincipal=0
+telalargura=0
+telaaltura=500
+
+[Opcoes]
+o0=UI_versao, 0123456789, 9, 0,aec
+
+[UI_versao]
+o0=Atualizar,Sistema, sistema1, 0123456789, 9, 47:9,ae
+o1=Atualizar,Relatórios, relatorios, 0123456789, 9, 47:50,ae
+o2=Atualizar,Upload, sistema2, 0123456789, 0, 47,ae
+o3=Histórico,Atualização, historico, 0123456789, 0, 3:9,ae
+o4=Histórico,Versão, versao, 0123456789, 0, 3:47,ae
+o5=nil,Terminais, terminais, 0123456789, 0, 6,ae
+#
+# Parametros de tela
+#
+
+[sistema1]
+tab=Atualização de Versão do Sistema
+db=rcs.ini|versao|down
+chave=id
+chavePrincipal=id
+dados=RAW
+raw=id|versao
+nobrowse=1
+btfst=$$
+botaoExtra=conectar7
+botaoAlterar=Nao
+resetar=
+c0=Ordem,id,c,3,50,,
+c1=Versão,versao,c,50,200,,
+net_oper=nao
+relacaokey=
+altura=320
+largura=430
+foco=destino
+forcarleftmask=0
+forcarrightlabel=1
+t0=linha=30
+t1=label|Verificar se existe nova Versão do Sistema|Tahoma,10,clgreen,
+t2=linha+5
+t3=frame|380|150
+t4=#coluna+10
+t5=#linha+10
+t6=#gauge|360|30
+t7=#linha+15
+t8=#gauge|360|5
+t9=#linha-10
+t10=#label|$...|Tahoma,10,clblue,
+
+[relatorios]
+tab=Atualização de Relatórios
+db=rcs.ini|versao|down
+chave=id
+chavePrincipal=id
+dados=RAW
+raw=id|versao
+net_oper=nao
+nobrowse=1
+btfst=$$
+botaoExtra=conectar8
+botaoAlterar=Nao
+resetar=
+c0=Ordem,id,c,3,50,,
+c1=Versão,versao,c,50,200,,
+relacaokey=
+altura=320
+largura=430
+foco=destino
+forcarleftmask=0
+forcarrightlabel=1
+t0=linha=30
+t1=label|Atualizar Relatórios|Tahoma,10,clgreen,
+t2=linha+5
+t3=frame|380|150
+t4=#coluna+10
+t5=#linha+10
+t6=#gauge|360|30
+t7=#linha+10
+t8=#label|$...|Tahoma,10,clblue,
+
+[sistema2]
+tab=Upload da Nova Versão do Sistema
+db=rcs.ini|upload|up
+chave=id
+chavePrincipal=id
+dados=RAW
+raw=id|origem|resetado|manutencao|obrigatorio
+net_oper=nao
+nobrowse=1
+btfst=$$
+botaoExtra=conectar9
+c0=Ordem,id,c,3,50,,
+c1=Origem,origem,c,50,200,,
+altura=320
+largura=430
+foco=origem
+forcarleftmask=20
+forcarrightlabel=1
+t0=linha=10
+t1=label|Opções de Upload|Tahoma,10,clgreen,
+t2=linha+3
+t3=frame|390|180
+t4=coluna+10
+t5=linha+10
+t6=label|Local de Origem
+t7=,origem,c,255,350,@B,opendir,
+t8=linha+25
+t9=Atualizar todos Arquivos,resetado,k,1,150,,
+t10=Manutenção automática do Banco de Dados,manutencao,k,1,250,,
+t11=Atualização Obrigatória,obrigatorio,k,1,150,,
+t11=linha+25
+t12=coluna-10
+t13=#label|Status do Upload|Tahoma,10,clgreen,
+t14=#linha+3
+t15=#frame|390|150
+t16=#linha+15
+t17=#coluna+20
+t18=#gauge|345|30
+t19=#linha+15
+t20=#gauge|345|5
+t21=#linha-15
+t22=#label|$...|Tahoma,9,clblue,
+
+[historico]
+tab=Histórico de Atualização
+db=download
+ordem=id desc limit 0,500
+chave=id
+chaveprincipal=id
+c0=id,id,c,10,70,,
+c1=Versão,versao,c,15,80,,
+c2=Data,&datahora(data|hora|) as data,d,10,100,,
+c3=Histórico,detalhes,c,255,-1,,
+c4=Size,tamanho,c,15,80,,
+c5=Terminal,terminal,c,10,50,,
+campoinfo=detalhes,Detalhes,c,100
+net_oper=nao
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Não
+nobrowse=0
+Rlt=*
+altura=400
+largura=460
+foco=versao
+forcarleftmask=100
+t0=Data:,data,d,10,80,,
+t1=Hora:,hora,h,10,80,,
+t2=Versão:,versao,c,50,300,,
+t3=Histórico:,detalhes,t,0,300x190,,
+
+[versao]
+tab=Histórico de Versão
+db=*versao|historico|v
+chave=id
+chavePrincipal=id
+dados=RAW
+raw=id|versao|acao|descricao|modulo|data|descricao2
+//btfst=+|-|a|=|8|2|o
+c0=Versão,versao,c,10,65,,
+c1=Ação,acao,c,30,50,,
+c2=Detalhes,descricao2,c,255,-1,,
+c3=Descrição,descricao,c,255,230,,
+c4=Data,data,d,10,60,,
+net_oper=nao
+botaoAlterar=Nao
+botaoIncluir=Nao
+botaoExcluir=Nao
+altura=350
+largura=600
+foco=versao
+forcarleftmask=90
+forcarrightlabel=1
+campoinfo=descricao2,Detalhes,c,100
+t0=Versão:,versao,c,10,80,,
+t1=Ação:,acao,c,20,450,,
+t2=Descrição:,descricao,c,255,450,,
+t3=Módulo:,modulo,c,3,50,,
+t4=Data:,data,d,10,80,,
+t5=Histórico:,descricao2,t,0,450x100,,
+
+[terminais]
+tab=CADASTRO DE TERMINAIS
+db=regtermi
+chave=id
+chaveprincipal=id
+ordem=id
+c0=Terminal,id,c,20,75,,
+c1=Versão,versao,c,15,75,,
+c2=Bloqueado,bloqueado,sn,3,75,,
+c3=Nome,terminal,c,20,120,,
+net_oper=nao
+altura=480
+largura=380
+BotaoExcluir=RCL
+BotaoAlterar=
+BotaoIncluir=
+foco=descricao
+t0=Terminal:,id,+,4,30,,
+t1=Descrição:,descricao,c,50,200,,
+t2=Departamento:,departamento,c,50,200,,
+t3=MACADRESS:,local,c,50,200,,
+t4=ID_CPU:,modelocpu,c,50,200,,
+t5=Nome:,terminal,c,50,200,,
+t6=Bloqueado:,bloqueado,sn,30,40,,
+t7=Modelo:,modelo,c,50,200,,
+#t3=Fabricante:,fabricante,c,50,300,,
+#t4=CPU MHZ:,mhzcpu,i,11,50,!9999999;1; ,
+#t5=CPU Modelo:,modelocpu,c,50,200,,
+t8=OS:,os,c,100,200,,
+t9=Placa de rede:,placaderede,c,50,200,,
+#t5=Drive:,drive,c,50,200,,
+#t9=Plug & Play:,plugplay,sn,3,30,,
+#t10=IRQ:,irq,c,5,50,,
+#t11=Port:,port,c,5,50,,
+t10=IP:,ip,c,20,200,,
+t11=NetMask:,netmask,c,20,200,,
+#t15=Compra:,compra,d,10,80,,
+t12=Nota Fiscal:,notafiscal,i,11,100,!9999999999;1; ,
+t13=Garantia:,garantia,c,20,100,,
+t14=Preço:,preco,f,11,84,,

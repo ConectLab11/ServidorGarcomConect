@@ -1,0 +1,257 @@
+12/10 18:15:05 - passo 4
+12/10 18:15:05 - salvando log -> C:\rcsv\App\mobile64\log\logs\LOG_APP_MOBILE_SERVICE_64_1.log
+12/10 18:15:05 - passo 5
+12/10 18:15:05 - passo 6
+12/10 18:15:05 - passo 7
+12/10 18:15:05 - passo 7A-0
+12/10 18:15:05 - VALORES? 19,90/19,9/19,9/,/"19.9"
+12/10 18:15:05 - passo 7B-0
+12/10 18:15:05 - passo 7C-0
+12/10 18:15:05 - passo 7D-0
+12/10 18:15:05 - passo 8
+12/10 18:15:05 - passo 9
+12/10 18:15:05 - PRODUCAO => id:330 user:2term:3 hora: sessao:1210201918143813140275028353636090131404MOBILEADM
+12/10 18:15:05 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=330 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="1210201918143813140275028353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+12/10 18:15:05 - GRUPOS:<1,1218>
+12/10 18:15:05 - Status: Config => 192.168.88.83:9100
+12/10 18:15:05 - CIS Status: Create
+12/10 18:15:06 - CIS Status: Exception = > Falha da impressora => 192.168.88.83
+12/10 18:15:07 - Status: Config => 192.168.88.83:9100
+12/10 18:15:07 - CIS Status: Create
+12/10 18:15:08 - CIS Status: Exception = > Falha da impressora => 192.168.88.83
+12/10 18:15:09 - PERFIL 7
+12/10 18:15:09 - ERRO 50
+12/10 18:15:09 - SPOOLER
+12/10 18:15:09 - passo 10
+12/10 18:15:09 0 - {"sessao":"1210201918143813140275028353636090131404MOBILEADM","operacao":"PIT","pedido":"330","usuario":"1","terminal":"3","conf":"1|1","items":[{"i0":"14|1|3C323E4D41494F4E4553452053524952414348417C3C323E4D4F4C484F2042415242454355457C3C323E4D4F4C484F20444520434845444441527C3C333E50414F204252494F4348457E|2D2D2D630A3C2B3E0A5B504F4E544F5F41535341444F5D0A50414F204252494F4348450A50414F204155535452414C49414E4F0A424F56494E4F0A43414C4142524553410A455256494C48410A46414C4146454C0A4652414E474F0A514A20434845444441520A514A20505241544F|9,4"}]}
+12/10 18:15:09 2 -  4,078t OK
+12/10 18:16:19 - PEDIDOS SOLICITADO {"sessao":"121020191815461344474572353636090131404MOBILEADM","operacao":"PIT","pedido":"330","usuario":"1","terminal":"3","conf":"1|1","items":[{"i0":"18|1|3C323E4D41494F4E4553452053524952414348417C3C323E4D4F4C484F2042415242454355457C3C323E4D4F4C484F20444520434845444441527C3C323E4D4F4C484F20455350454349414C7C3C323E534F555220435245414D7C3C323E515545494A4F20505241544F7C3C323E515545494A4F20434845444441527C3C323E515545494A4F20444520434F414C484F20454D50414E41444F7C3C323E414C46414345204520544F4D4154457C3C323E4345424F4C4120524F58417C3C323E434F4C45534C41577C3C323E5041535452414D497C3C323E5049434B4C45537C3C323E4345424F4C4120434152414D454C495A4144417C3C323E4352495350204445204345424F4C417C3C323E434F47554D454C4F537C3C323E4C4547554D455320434F4E46495441444F537C3C323E4241434F4E2048427C3C323E4F564F7C3C323E48414D425552475545522045585452417C3C323E4D41494F4E4553452045585452417E|2D2D2D630A3C2B3E|75,6"}]}
+12/10 18:16:19 - sessao: 121020191815461344474572353636090131404MOBILEADM
+12/10 18:16:19 - id: 330
+12/10 18:16:19 - usuario: 1
+12/10 18:16:19 - terminal: 3
+12/10 18:16:19 - conf: 1|1
+12/10 18:16:19 0 - 18|1|3C323E4D41494F4E4553452053524952414348417C3C323E4D4F4C484F2042415242454355457C3C323E4D4F4C484F20444520434845444441527C3C323E4D4F4C484F20455350454349414C7C3C323E534F555220435245414D7C3C323E515545494A4F20505241544F7C3C323E515545494A4F20434845444441527C3C323E515545494A4F20444520434F414C484F20454D50414E41444F7C3C323E414C46414345204520544F4D4154457C3C323E4345424F4C4120524F58417C3C323E434F4C45534C41577C3C323E5041535452414D497C3C323E5049434B4C45537C3C323E4345424F4C4120434152414D454C495A4144417C3C323E4352495350204445204345424F4C417C3C323E434F47554D454C4F537C3C323E4C4547554D455320434F4E46495441444F537C3C323E4241434F4E2048427C3C323E4F564F7C3C323E48414D425552475545522045585452417C3C323E4D41494F4E4553452045585452417E|2D2D2D630A3C2B3E|75,6
+12/10 18:16:19 - dados
+12/10 18:16:19 - passo 1
+12/10 18:16:19 - passo 2
+12/10 18:16:19 - passo 3
+12/10 18:16:19 - passo 4
+12/10 18:16:19 - passo 5
+12/10 18:16:19 - passo 6
+12/10 18:16:19 - passo 7
+12/10 18:16:19 - passo 7A-0
+12/10 18:16:19 - VALORES? 25,80/25,8/25,8/,/"25.8"
+12/10 18:16:19 - passo 7B-0
+12/10 18:16:19 - passo 7C-0
+12/10 18:16:19 - passo 7D-0
+12/10 18:16:19 - passo 8
+12/10 18:16:19 - passo 9
+12/10 18:16:19 - PRODUCAO => id:330 user:2term:3 hora: sessao:121020191815461344474572353636090131404MOBILEADM
+12/10 18:16:19 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=330 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="121020191815461344474572353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+12/10 18:16:19 - GRUPOS:<1,1219>
+12/10 18:16:19 - Status: Config => 192.168.88.83:9100
+12/10 18:16:19 - CIS Status: Create
+12/10 18:16:20 - CIS Status: Exception = > Falha da impressora => 192.168.88.83
+12/10 18:16:21 - Status: Config => 192.168.88.83:9100
+12/10 18:16:21 - CIS Status: Create
+12/10 18:16:22 - CIS Status: Exception = > Falha da impressora => 192.168.88.83
+12/10 18:16:23 - PERFIL 7
+12/10 18:16:23 - ERRO 50
+12/10 18:16:23 - SPOOLER
+12/10 18:16:23 - passo 10
+12/10 18:16:23 0 - {"sessao":"121020191815461344474572353636090131404MOBILEADM","operacao":"PIT","pedido":"330","usuario":"1","terminal":"3","conf":"1|1","items":[{"i0":"18|1|3C323E4D41494F4E4553452053524952414348417C3C323E4D4F4C484F2042415242454355457C3C323E4D4F4C484F20444520434845444441527C3C323E4D4F4C484F20455350454349414C7C3C323E534F555220435245414D7C3C323E515545494A4F20505241544F7C3C323E515545494A4F20434845444441527C3C323E515545494A4F20444520434F414C484F20454D50414E41444F7C3C323E414C46414345204520544F4D4154457C3C323E4345424F4C4120524F58417C3C323E434F4C45534C41577C3C323E5041535452414D497C3C323E5049434B4C45537C3C323E4345424F4C4120434152414D454C495A4144417C3C323E4352495350204445204345424F4C417C3C323E434F47554D454C4F537C3C323E4C4547554D455320434F4E46495441444F537C3C323E4241434F4E2048427C3C323E4F564F7C3C323E48414D425552475545522045585452417C3C323E4D41494F4E4553452045585452417E|2D2D2D630A3C2B3E|75,6"}]}
+12/10 18:16:23 2 -  4,078t OK
+15/10 14:32:05 - Iniciando Suporte Mobile 64bit Versao: 1.13
+15/10 14:32:05 - Variaveis
+15/10 14:32:05 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+15/10 14:32:05 - TCP Servidor
+15/10 14:32:05 - TCP Cliente
+15/10 14:32:05 - Iniciado na porta => 4406
+15/10 14:32:05 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+15/10 14:32:05 - Formato Data   : 15/10/2019 14:32:05
+15/10 14:32:05 - Flags debug 1 sem log 0
+15/10 14:32:05 - h > 192.168.88.37 p > 3306 d > hbecia u > root
+15/10 14:32:05 - ERRO AO CONECTAR NO BANCO DE DADOS: 192.168.88.37:hbecia,root
+15/10 14:32:05 - Cannot connect to server on host '192.168.88.37':
+Uma operação de soquete foi tentada em uma rede inacessível.
+Socket Error Code: 10051($2743)
+16/10 17:36:39 - ***  SERVIÇO PARADO
+16/10 17:36:42 - Iniciando Suporte Mobile 64bit Versao: 1.13
+16/10 17:36:42 - Variaveis
+16/10 17:36:42 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+16/10 17:36:42 - TCP Servidor
+16/10 17:36:42 - TCP Cliente
+16/10 17:36:42 - Iniciado na porta => 4406
+16/10 17:36:42 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+16/10 17:36:42 - Formato Data   : 16/10/2019 17:36:42
+16/10 17:36:42 - Flags debug 1 sem log 0
+16/10 17:36:42 - h > 192.168.88.37 p > 3306 d > hbecia u > root
+16/10 17:36:42 - Terminal: 1
+16/10 17:36:42 - BANCO DE DADOS ONLINE > 192.168.88.37:hbecia
+16/10 17:36:42 - PRECO => 23 /            23,00/23/23
+16/10 17:36:42 - iniciar_identificacao_computador
+16/10 17:36:42 - sistema_pegar_perfil
+16/10 17:36:42 - empresa_carregar_segmentos
+16/10 17:36:42 - rcs_iniciar_variaveis_globais
+16/10 17:36:42 - terminal_id
+16/10 17:36:42 - mesas_comandas
+16/10 17:36:42 - LPRINT
+16/10 17:36:42 - Status: Config => 192.168.88.83:9100
+16/10 17:36:42 - Status: Config => 192.168.88.83:9100
+16/10 17:36:42 - Status: Config => c:9100
+16/10 17:36:42 - Status: Config => 192.168.88.83:9100
+16/10 17:36:42 - LISTA DE IMPRESSORAS CARREGADA 4
+16/10 17:36:42 - carregarImp
+16/10 17:36:42 - objetos
+16/10 17:36:42 - produtos_gerenciamento_de_estoque
+16/10 17:36:42 - # status 100%
+16/10 18:24:20 - Iniciando Suporte Mobile 64bit Versao: 1.13
+16/10 18:24:20 - Variaveis
+16/10 18:24:20 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+16/10 18:24:20 - TCP Servidor
+16/10 18:24:20 - TCP Cliente
+16/10 18:24:20 - Iniciado na porta => 4406
+16/10 18:24:20 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+16/10 18:24:20 - Formato Data   : 16/10/2019 18:24:20
+16/10 18:24:20 - Flags debug 1 sem log 0
+16/10 18:24:20 - h > 192.168.88.37 p > 3306 d > hbecia u > root
+16/10 18:24:21 - ERRO AO CONECTAR NO BANCO DE DADOS: 192.168.88.37:hbecia,root
+16/10 18:24:21 - Cannot connect to server on host '192.168.88.37':
+Uma operação de soquete foi tentada em uma rede inacessível.
+Socket Error Code: 10051($2743)
+16/10 21:55:33 - ***  SERVIÇO PARADO
+16/10 21:55:36 - Iniciando Suporte Mobile 64bit Versao: 1.13
+16/10 21:55:36 - Variaveis
+16/10 21:55:36 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+16/10 21:55:36 - TCP Servidor
+16/10 21:55:36 - TCP Cliente
+16/10 21:55:36 - Iniciado na porta => 4406
+16/10 21:55:36 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+16/10 21:55:36 - Formato Data   : 16/10/2019 21:55:36
+16/10 21:55:36 - Flags debug 1 sem log 0
+16/10 21:55:36 - h > 192.168.88.37 p > 3306 d > hbecia u > root
+16/10 21:55:36 - Terminal: 1
+16/10 21:55:36 - BANCO DE DADOS ONLINE > 192.168.88.37:hbecia
+16/10 21:55:36 - PRECO => 23 /            23,00/23/23
+16/10 21:55:36 - iniciar_identificacao_computador
+16/10 21:55:36 - sistema_pegar_perfil
+16/10 21:55:36 - empresa_carregar_segmentos
+16/10 21:55:36 - rcs_iniciar_variaveis_globais
+16/10 21:55:36 - terminal_id
+16/10 21:55:36 - mesas_comandas
+16/10 21:55:36 - LPRINT
+16/10 21:55:36 - Status: Config => 192.168.88.83:9100
+16/10 21:55:36 - Status: Config => 192.168.88.83:9100
+16/10 21:55:36 - Status: Config => c:9100
+16/10 21:55:36 - Status: Config => 192.168.88.83:9100
+16/10 21:55:36 - LISTA DE IMPRESSORAS CARREGADA 4
+16/10 21:55:36 - carregarImp
+16/10 21:55:36 - objetos
+16/10 21:55:36 - produtos_gerenciamento_de_estoque
+16/10 21:55:36 - # status 100%
+16/10 22:00:49 - Iniciando Suporte Mobile 64bit Versao: 1.13
+16/10 22:00:49 - Variaveis
+16/10 22:00:49 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+16/10 22:00:49 - TCP Servidor
+16/10 22:00:49 - TCP Cliente
+16/10 22:00:49 - Iniciado na porta => 4406
+16/10 22:00:49 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+16/10 22:00:49 - Formato Data   : 16/10/2019 22:00:49
+16/10 22:00:49 - Flags debug 1 sem log 0
+16/10 22:00:49 - h > 192.168.88.37 p > 3306 d > hbecia u > root
+16/10 22:00:49 - ERRO AO CONECTAR NO BANCO DE DADOS: 192.168.88.37:hbecia,root
+16/10 22:00:49 - Cannot connect to server on host '192.168.88.37':
+Uma operação de soquete foi tentada em uma rede inacessível.
+Socket Error Code: 10051($2743)
+17/10 12:57:05 - ***  SERVIÇO PARADO
+17/10 12:57:08 - Iniciando Suporte Mobile 64bit Versao: 1.13
+17/10 12:57:08 - Variaveis
+17/10 12:57:08 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+17/10 12:57:08 - TCP Servidor
+17/10 12:57:08 - TCP Cliente
+17/10 12:57:08 - Iniciado na porta => 4406
+17/10 12:57:08 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+17/10 12:57:08 - Formato Data   : 17/10/2019 12:57:08
+17/10 12:57:08 - Flags debug 1 sem log 0
+17/10 12:57:08 - h > 192.168.88.37 p > 3306 d > hbecia u > root
+17/10 12:57:08 - Terminal: 1
+17/10 12:57:08 - BANCO DE DADOS ONLINE > 192.168.88.37:hbecia
+17/10 12:57:08 - PRECO => 23 /            23,00/23/23
+17/10 12:57:08 - iniciar_identificacao_computador
+17/10 12:57:08 - sistema_pegar_perfil
+17/10 12:57:08 - empresa_carregar_segmentos
+17/10 12:57:08 - rcs_iniciar_variaveis_globais
+17/10 12:57:08 - terminal_id
+17/10 12:57:08 - mesas_comandas
+17/10 12:57:08 - LPRINT
+17/10 12:57:08 - Status: Config => 192.168.88.83:9100
+17/10 12:57:08 - Status: Config => 192.168.88.83:9100
+17/10 12:57:08 - Status: Config => c:9100
+17/10 12:57:08 - Status: Config => 192.168.88.83:9100
+17/10 12:57:08 - LISTA DE IMPRESSORAS CARREGADA 4
+17/10 12:57:08 - carregarImp
+17/10 12:57:08 - objetos
+17/10 12:57:08 - produtos_gerenciamento_de_estoque
+17/10 12:57:08 - # status 100%
+23/10 19:47:59 - Iniciando Suporte Mobile 64bit Versao: 1.13
+23/10 19:47:59 - Variaveis
+23/10 19:47:59 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+23/10 19:47:59 - TCP Servidor
+23/10 19:47:59 - TCP Cliente
+23/10 19:48:00 - Iniciado na porta => 4406
+23/10 19:48:00 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+23/10 19:48:00 - Formato Data   : 23/10/2019 19:48:00
+23/10 19:48:00 - Flags debug 1 sem log 0
+23/10 19:48:00 - h > 192.168.88.37 p > 3306 d > hbecia u > root
+23/10 19:48:00 - ERRO AO CONECTAR NO BANCO DE DADOS: 192.168.88.37:hbecia,root
+23/10 19:48:00 - Cannot connect to server on host '192.168.88.37':
+Uma operação de soquete foi tentada em uma rede inacessível.
+Socket Error Code: 10051($2743)
+30/10 19:00:37 - Iniciando Suporte Mobile 64bit Versao: 1.13
+30/10 19:00:37 - Variaveis
+30/10 19:00:37 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+30/10 19:00:37 - TCP Servidor
+30/10 19:00:37 - TCP Cliente
+30/10 19:00:37 - Iniciado na porta => 4406
+30/10 19:00:37 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+30/10 19:00:37 - Formato Data   : 30/10/2019 19:00:37
+30/10 19:00:37 - Flags debug 1 sem log 0
+30/10 19:00:37 - h > 192.168.88.37 p > 3306 d > hbecia u > root
+30/10 19:00:37 - ERRO AO CONECTAR NO BANCO DE DADOS: 192.168.88.37:hbecia,root
+30/10 19:00:37 - Cannot connect to server on host '192.168.88.37':
+Uma operação de soquete foi tentada em uma rede inacessível.
+Socket Error Code: 10051($2743)
+04/11 19:29:58 - Iniciando Suporte Mobile 64bit Versao: 1.13
+04/11 19:29:58 - Variaveis
+04/11 19:29:58 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+04/11 19:29:58 - TCP Servidor
+04/11 19:29:58 - TCP Cliente
+04/11 19:29:58 - Iniciado na porta => 4406
+04/11 19:29:58 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+04/11 19:29:58 - Formato Data   : 04/11/2019 19:29:58
+04/11 19:29:58 - Flags debug 1 sem log 0
+04/11 19:29:58 - h > 192.168.88.37 p > 3306 d > hbecia u > root
+04/11 19:29:58 - ERRO AO CONECTAR NO BANCO DE DADOS: 192.168.88.37:hbecia,root
+04/11 19:29:58 - Cannot connect to server on host '192.168.88.37':
+Uma operação de soquete foi tentada em uma rede inacessível.
+Socket Error Code: 10051($2743)
+07/11 23:44:53 - Iniciando Suporte Mobile 64bit Versao: 1.13
+07/11 23:44:53 - Variaveis
+07/11 23:44:53 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+07/11 23:44:53 - TCP Servidor
+07/11 23:44:53 - TCP Cliente
+07/11 23:44:53 - Iniciado na porta => 4406
+07/11 23:44:53 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+07/11 23:44:53 - Formato Data   : 07/11/2019 23:44:53
+07/11 23:44:53 - Flags debug 1 sem log 0
+07/11 23:44:53 - h > 192.168.88.37 p > 3306 d > hbecia u > root
+07/11 23:44:53 - ERRO AO CONECTAR NO BANCO DE DADOS: 192.168.88.37:hbecia,root
+07/11 23:44:53 - Cannot connect to server on host '192.168.88.37':
+Uma operação de soquete foi tentada em uma rede inacessível.
+Socket Error Code: 10051($2743)
+12/11 21:18:39 - Iniciando Suporte Mobile 64bit Versao: 1.13
+12/11 21:18:39 - Variaveis
+12/11 21:18:39 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+12/11 21:18:39 - TCP Servidor
+12/11 21:18:39 - TCP Cliente

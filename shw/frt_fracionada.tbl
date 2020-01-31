@@ -1,0 +1,184 @@
+#
+#  Parametros do menu de manutenção do Sistema
+#  Desenvolvido por Ronaldo C Silva
+#  RCLSoft Comércio e Serviços LTDA. ME.
+#  Data       : 28/01/2010
+#  Atualização: 10/06/2011 - Ajustes no layout para compatibilidade com 
+#                            personalização de layout por cliente.   
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=tabfraci.pdx
+disableMenu=0
+telalargura=830
+telaaltura=0
+Posicionar=1
+whereexterno=mygroup='tabelafracionada'
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil, Tabela, tabelafracionada, 0123456789, 9, 25,a
+o2=nil,Observação, tabelafracionadaobservacao, 0123456789, 9, 25,a
+o3=nil,Customizar, tabelafracionadacustomizar, 0123456789, 9, 35,a
+
+#
+# Parametros de tela
+#
+
+[tabelafracionada]
+tab=TABELA PESO FRACIONADO
+comentario=
+db=tabefret
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+forcarcoluna=150
+c0=ID,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descricao,descr,c,50,200,,
+altura=480
+largura=380
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+botaoExtra=imprimir
+forcarcoluna=120
+forcarleftmask=140
+nobrowse=1
+foco=descr
+t0=Descrição:,descr,c,50,250,,
+h0=Nome completo
+t1=linha-25
+t2=coluna+320
+t3=Validade:,validade,d,10,70,,
+h3=Prazo de validade
+t4=coluna-320
+t5=Composição do frete#007E7E7E\calculator.png,,,,530, ,
+t6=Fator peso(kg):,{lb}tablepeso=100,e,11,84,,
+h6=Peso para cálculo de cubagem
+t7=linha-25
+t8=coluna+305
+t9=M3 por{lb|tablepeso|100} kg:,precom3,e,11,84,,
+h9=Taxa de cubagem por kilos.
+t10=coluna-305
+t11=Fator peso(kg):,{lb}kgpedagio=100,e,11,84,,
+h11=Peso para cálculo do pedágio@Exemplo: a cada 100kg cobrar a taxa de pedágio.
+t12=linha-25
+t13=coluna+305
+t14=Pedágio à cada{lb|kgpedagio|100} kg:,pedagio,f,11,84,,
+t15=coluna-305
+t16=GRIS:,gris,p,11,84,,
+t17=linha-25
+t18=coluna+305
+t19=ADvalorem:,advalorem,p,11,84,,
+t20=coluna-305
+t21=Frete Peso(por kg):,tonelada,e,11,84,,
+h21=Taxa por peso 
+t22=linha-25
+t23=coluna+305
+t24=Frete Mínimo:,minimo,f,11,84,,
+t25=Taxas complementares#007E7E7E\delivery.png,,,,530, ,
+t26=coluna-305
+t27=Coleta:,seccat,f,11,84,,
+t28=linha-25
+t29=coluna+150
+t30=Despacho:,despacho,f,11,84,,
+t31=linha-25
+t32=coluna+155
+t33=Outros:,outros,f,11,84,,
+t34=coluna-305
+t35=Generalidades#007E7E7E\tag.png,,,,530, ,
+t36=Devolução:,devolucao,p,11,60,,
+h36=Porcentagem do frete quando for devolução
+t37=linha-25
+t38=coluna+150
+t39=Reentrega:,reentrega,p,11,60,,
+h39=Porcentagem do frete quando for reentrega
+
+[tabelafracionadaobservacao]
+tab=TABELA PESO FRACIONADO
+comentario=
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Cliente,clientefinal,f,16,100,,
+c4=Redespacho,redespacho,f,16,100,,
+botaoExtra=imprimir
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=100
+forcarleftmask=110
+nobrowse=1
+altura=532
+largura=400
+foco=observacao
+t0=Observação#007E7E7E\text_align_justify.png,,,,530, ,
+t1=linha+5
+t2=coluna=0
+t3=forcarleftmask=15
+t4= ,observacao,tw,0,480x330,B|10|fretes|Copiar observações da tabela original,	
+
+[tabelafracionadacustomizar]
+tab=TABELA PESO FRACIONADO
+comentario=
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Cliente,clientefinal,f,16,100,,
+c4=Redespacho,redespacho,f,16,100,,
+botaoExtra=imprimir
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=100
+forcarleftmask=150
+nobrowse=1
+altura=532
+largura=400
+foco=frt_minitotal
+t0=Calculo do Frete#007E7E7E\tag.png,,,,530, ,
+t1=Frete mínimo:,frt_minitotal,sn,3,30,,
+h1=Verificar o frete mínimo pelo campo Total do Frete.
+t2=#ICMS embutido:,icmsx,sn,3,30,,
+h2=ICMS faz parte do frete
+t3=Diversos#007E7E7E\tag.png,,,,530, ,
+t4=Compartilhada:,compartilhada,sn,3,30,,
+h4=Permitir compartilhar esta tabela com os cliente sem tabela
+t5=linha-25
+t6=coluna+250
+t7=forcarleftmask=250
+t8=Ignorar dados do cliente na impressão:,semcliente,sn,3,30,,
+h9=Ignorar dados do cliente na impressão da tabela
+
+[correcao_de_valores]
+; Tipo p - Permite ajustar os campos abaixo apenas por porcentagems.
+; Tipo v - Permite ajustar os campos abaixo subtraindo e adicionando valores
+tipo=pv
+c0=precom3 ,pv,M3 por 100kg
+c1=pedagio ,pv,Pedágio à cada 100kg
+c2=tonelada,pv,Frete Peso(por kg)
+c3=minimo  ,pv,Frete Mínimo
+c4=seccat  ,pv,Coleta
+c5=despacho,pv,Despacho
+c6=outros  ,pv,Outros

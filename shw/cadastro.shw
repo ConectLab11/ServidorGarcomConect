@@ -1,0 +1,84 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 12/12/2003
+#
+#
+# a todos
+# d nota de despesas
+# g agenda
+# m movimento de caixa
+# n cadastro de bancos
+# o plano de contas
+# p pagar
+# q gerenciador de ocorrencias
+# r receber
+# s script inicial
+# t conta caixa
+
+[arquivo]
+modulo=OPÇÕES DO CADASTRO
+nivelprincipal=0
+nivelauxiliar=0
+
+[Opcoes]
+o0=Cadastro, 0123456789, 9, 0,a
+
+[Cadastro]
+o0=nil, Contas, contas, 0123456789, 9, 21,a
+
+#
+# Parametros de tela
+#
+
+[contas]
+tab=CONTAS BANCÁRIAS
+comentario=
+db=contas
+db2=bancos
+rcl=
+chave=id
+chavePrincipal=id
+c0=Banco,banco,i,30,50,,
+c1=Nome,nbanco,c,30,100,,
+c2=Agência,agencia,c,10,70,,
+c3=Conta,conta,c,15,80,,
+c4=Títular,titular,c,50,100,,
+relacaokey=idcliente,$IDORIGEM
+where=(contas.idcliente=$IDORIGEM)and(contas.banco=bancos.id)
+altura=290
+largura=480
+foco=banco
+t0=Dados da Conta#007E7E7E\vcard.png,,,,450, ,
+t1=Banco:,banco,i,3,30,,bancos.rcl,
+h1=Código do banco
+t2=Agência:,agencia,c,15,100,,
+h2=Código da agência
+t3=Conta:,conta,c,15,100,,
+h3=Número da conta
+t4=linha-25
+t5=coluna+160
+t6=Tipo:,idtipo=1,i,3,30,,<#6>geral.rcl,
+h6=Tipo de conta
+t7=coluna-160
+t8=Dados do Títular#007E7E7E\user_silhouette.png,,,,450, ,
+t9=CNPJ/CPF:,cpf=[cadastro|codigo|cpf],c,20,110,$validarCnpj(),
+h9=CNPJ ou CPF para transferencia com DOC/TED
+t10=Nome:,titular=[cadastro|codigo|nome],c,40,325,,
+h10=Nome completo do títular
+#t6=Cheques:,cheques,i,6,50,!999999;1; \&0,
+validacao=noZero(idtipo),campoPreenchido(titular),noZero(banco)
+
+[cadaveic]
+altura=400
+largura=400
+c0=Placa:,c,8,130
+c1=Ano:,i,4,80
+c2=Ano Mod:,i,4,80
+c3=Montadora:,i,4,130,cadastro.rcl
+c4=Modelo:,c,100,80
+c5=Cor:,c,50,80
+c6=KM:,c,9,80
+
+

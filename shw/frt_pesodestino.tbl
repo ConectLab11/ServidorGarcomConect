@@ -1,0 +1,72 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 28/01/2010
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=0
+nivelauxiliar=0
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=nil, Peso e Destino, tabelapesodestino, 0123456789, 9, 22,a
+
+#
+# Parametros de tela
+#
+
+[tabelapesodestino]
+tab=TABELA PESO E DESTINO
+comentario=Tabela Peso e Destino
+db=tabefret
+ordem=id
+chave=cliente
+chaveprincipal=id
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=120
+forcarleftmask=110
+nobrowse=1
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+altura=532
+largura=380
+foco=descr
+t0=label|Cidade Destino
+t1=<,descr,c,50,370,,
+t2=linha+10
+t3=label|Faixa de Peso po Kilos
+t4=linha+5
+t5=frame|370|130
+t6=linha+15
+t7=Até 50:,ate_50,f,11,84,,
+t8=51 a 100:,ate_100,f,11,84,,
+t9=101 a 180:,ate_200,f,11,84,,
+t10=Acima:,tonelada,f,11,84,,
+t11=linha+30
+t12=label|Outros
+t13=frame|370|80
+t14=linha+15
+t15=Volumosa A:,frt_val1,f,11,84,,
+t16=Volumosa B:,frt_val2,f,11,84,,
+t17=linha+30
+t18=Compartilhada:,compartilhada,sn,3,30,,
+
+[correcao_de_valores]
+; Tipo p - Permite ajustar os campos abaixo apenas por porcentagems.
+; Tipo v - Permite ajustar os campos abaixo subtraindo e adicionando valores
+tipo=pv
+c0=ate_50  ,pv,Até 50
+c1=ate_100 ,pv,51 a 100
+c2=ate_200 ,pv,101 a 180
+c3=tonelada,pv,Acima
+c4=frt_val1,pv,Volumosa A
+c5=frt_val2,pv,Volumosa B

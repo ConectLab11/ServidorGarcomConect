@@ -1,0 +1,133 @@
+#
+# 	Parametros do menu de manutenção do Sistema
+# 	Desenvolvido por Ronaldo C Silva
+# 	ConectLab Informatica Ltda
+# 	Data	   : 28/01/2010
+#	Atualizacao: 07/01/2015
+#
+# 	a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=tabvalor.pdx
+disableMenu=0
+telalargura=830
+telaaltura=0
+Posicionar=1
+whereexterno=mygroup='tabelapesoexcedidoiv'
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,+Pesos, tabelapesoexcedidoiv, 0123456789, 9, 25,a
+o2=nil,+Destinos, destinos, 0123456789, 9, 23,a
+
+#
+# Parametros de tela
+#
+
+[tabelapesoexcedidoiv]
+tab=TABELA PESO EXCEDIDO IV
+comentario=
+db=tabefret
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+forcarcoluna=130
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Por tonelada,tonelada,f,16,100,,
+altura=532
+
+
+largura=380
+foco=descr
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=0
+forcarleftmask=110
+nobrowse=1
+t0=coluna=0
+t1=Descrição:,descr,c,50,445,,
+h1=Descrição completa da Tabela.
+t2=Cidade de Origem#007E7E7E\map.png,,,,545, ,	
+t3=UF:,uf,c,2,30,@BU,estado2.rcl,
+h3=Sigla da UF (Estado) <F2>
+t4=linha-25
+t5=coluna+110
+t6=Cidade:,cidade,c,30,185,@B,<#17>geral.rcl{ufsigla=uf/""},
+h6=Nome da Cidade
+t7=coluna-110
+t8=Faixa de Pesos (em Kilos)#007E7E7E\delivery.png,,,,545, ,	
+t9=linha+10
+t10=10kg,ate_50,f,11,84,,
+h10=Peso até 10 Kilos
+t11=20kg,ate_100,f,11,84,,
+h11=Peso até 20 Kilos
+t12=30kg,ate_150,f,11,84,,
+h12=Peso até 30 Kilos
+t13=50kg,ate_200,f,11,84,,
+h13=Peso até 50 Kilos
+t14=70kg,ate_250,f,11,84,,
+h14=Peso até 70 Kilos
+t15=100kg,ate_300,f,11,84,,
+h15=Peso 100 Kilos
+t16=Excedido/Kg,tonelada,e,11,84,,
+h16=Taxa por kilo excedido do limite (acima de 100Kg)
+t17=Generalidades#007E7E7E\text_align_justify.png,,,,545, ,
+t18=Seguro:,advalorem,p,11,60,,
+h18=Taxa de Seguro
+t19=linha-25
+t20=coluna+130
+t21=Devolução:,devolucao,p,11,60,,
+h21=Porcentagem do frete quando for devolução
+t22=linha-25
+t23=coluna+130
+t24=Reentrega:,reentrega,p,11,60,,
+h24=Porcentagem do frete quando for reentrega
+t25=coluna+150
+t26=linha-25
+t27=Compartilhada:,compartilhada,sn,3,30,,
+h27=Compartilhar esta tabela com os clientes sem tabela.
+
+[destinos]
+tab=CIDADES DESTINOS
+comentario=
+db=tabaereo
+ordem=uf,cidade
+rcl=
+chave=tabela
+chavePrincipal=id
+relacaokey=tabela,$IDORIGEM
+tituloWidth=35
+where=tabela="$IDORIGEM"
+c0=UF,uf,c,2,50,,
+c1=Cidade,cidade,c,50,150,,
+Rlt=
+msg=
+altura=180
+largura=400
+forcarleftmask=80
+foco=siglas
+t0=UF:,uf,c,2,30,@BU,estado2.rcl,
+t1=Cidade:,cidade,c,50,250,@B,<#17>geral.rcl{ufsigla=uf/"Interior"},
+validacao=campoPreenchido(uf),campoPreenchido(cidade)
+
+[correcao_de_valores]
+; Tipo p - Permite ajustar os campos abaixo apenas por porcentagems.
+; Tipo v - Permite ajustar os campos abaixo subtraindo e adicionando valores
+tipo=pv
+c0=ate_50  ,pv,até 10kg
+c1=ate_100 ,pv,até 20kg
+c2=ate_150 ,pv,até 30kg
+c3=ate_200 ,pv,até 50kg
+c4=ate_250 ,pv,até 70kg
+c5=ate_300 ,pv,até 100kg
+c6=tonelada,pv,Kg Excedido

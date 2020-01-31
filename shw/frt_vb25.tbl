@@ -1,0 +1,134 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 28/01/2010
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=0
+nivelauxiliar=0
+disableMenu=1
+telalargura=610
+telaaltura=0
+pdx=
+individual=1
+
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=nil, VB25, tabelavb25, 0123456789, 9, 7,a
+
+#
+# Parametros de tela
+#
+
+[tabelavb25]
+tab=TABELA VB25 - PESO
+comentario=Tabela VB25 peso
+db=tabefret
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+forcarcoluna=130
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Por tonelada,tonelada,f,16,100,,
+altura=532
+
+
+largura=380
+foco=descr
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=0
+forcarleftmask=100
+nobrowse=1
+t0=Descrição:,descr,c,50,445,,
+h0=Descrição completa da Tabela.
+t1=linha-10
+t2=Faixa de Pesos (em Kilos)#007E7E7E\delivery.png,,,,545, ,	
+t3=0 à 10,ate_50,f,11,84,,
+h3=Peso até 10 Kilos
+t4=11 à 20,ate_100,f,11,84,,
+h4=Peso de 11 à 20 Kilos
+t5=21 à 30,ate_150,f,11,84,,
+h5=Peso de 21 à 30 Kilos
+t6=31 à 50,ate_200,f,11,84,,
+h6=Peso de 31 à 50 Kilos
+t7=51 à 70,ate_250,f,11,84,,
+h7=Peso de 51 à 70 Kilos
+t8=coluna+180
+t9=linha-125
+t10=71 à 100,ate_300,f,11,84,,
+h10=Peso de 71 à 100 Kilos
+t11=101 à 150,ate_350,f,11,84,,
+h11=Peso de 101 à 150 Kilos
+t12=151 à 200,ate_400,f,11,84,,
+h12=Peso de 151 à 200 Kilos
+t13=201 à 250,ate_450,f,11,84,,
+h13=Peso de 201 à 250 Kilos
+t14=251 à 500,ate_500,f,11,84,,
+h14=Peso de 251 à 500 Kilos
+t15=coluna+180
+t16=linha-125
+t17=501 à 750,ate_550,f,11,84,,
+h17=Peso de 501 à 750 Kilos
+t18=751 à 1000,ate_600,f,11,84,,
+h18=Peso de 751 à 1000 Kilos
+t19=acima,tonelada,f,11,84,,
+h19=Peso acima de 1000 Kilos
+t20=coluna-360
+t21=linha+50
+t22=Taxas complementares#007E7E7E\sum.png,,,,545, ,
+t23=Sec/Cat:,seccat,f,11,84,,
+h23=Taxa Sec/Cat
+t24=coluna+180
+t25=linha-25
+t26=Despacho:,despacho,f,11,84,,
+h26=Taxa de Despacho
+t27=coluna+180
+t28=linha-25
+t29=Outros:,outros,f,11,84,,
+h29=Outras Taxas
+t30=coluna-360
+t31=linha-0
+t32=ADvalorem:,advalorem,p,11,84,,
+h32=Porcentagem de ADvalorem @(Calculado pelo valor da mercadoria)
+t33=coluna+180
+t34=linha-25
+t35=GRIS:,gris,p,11,84,,
+h35=Porcentagem GRIS @(Calculado pelo valor da mercadoria)
+t36=coluna+180
+t37=linha-25
+t38=GRIS mínimo:,minimored,f,11,84,,
+h38=Valor mínimo do GRIS
+t39=coluna-360
+t40=Pedágio/100Kg:,pedagio,f,11,84,,
+h40=Valor do pedágio por cada 100 Kilos
+t41=coluna+180
+t42=linha-25
+t43=Frete Mínimo:,minimo,f,11,84,,
+h43=Valor mínimo do frete
+t44=coluna+180
+t45=linha-25
+t46=Devolução:,devolucao,p,11,84,,
+h46=Porcentagem a cobrar do frete quando devolução
+t47=coluna-360
+t48=Reentrega:,reentrega,p,11,84,,
+h48=Porcentagem a cobrar do frete quando reentrega
+t49=Outros#007E7E7E\exclamation_octagon_fram.png,,,,545, ,
+t50=#Com ICMS:,icmsx,sn,3,30,,
+h50=Valor do ICMS será embutido no total do frete ?
+t51=#coluna+180
+t52=#linha-25
+t53=Compartilhada:,compartilhada,sn,3,30,,
+h53=Esta tabela pode ser compartilhada entre os clientes sem tabela ?

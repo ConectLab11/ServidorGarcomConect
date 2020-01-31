@@ -1,0 +1,130 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 28/01/2010
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=0
+nivelauxiliar=0
+#pdx=tabpecub.pdx
+
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=nil, Peso e Cubagem, tabelapesocubagem, 0123456789, 9, 7,a
+
+#
+# Parametros de tela
+#
+
+[tabelapesocubagem]
+tab=TABELA PESO E CUBAGEM
+comentario=Tabela Peso e Cubagem
+db=tabefret
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=120
+forcarleftmask=140
+nobrowse=1
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+altura=532
+largura=380
+foco=descr
+t0=Descrição:,descr,c,50,240,,
+h0=Texto de identificação desta tabela no momento do cálculo do frete.
+t1=linha-10
+t2=Taxas por Kilos#007E7E7E\ok.bmp,,,,380, ,
+t3=de     0 à    50 Kgs,ate_50,f,11,84,,
+h3=Taxa para transporte de mercadorias com peso até 50 Kilos.
+t4=de    51 à   100 Kgs,ate_100,f,11,84,,
+h4=Taxa para transporte de mercadorias com peso de 51 até 100 Kilos.
+t5=de   101 à   300 Kgs,ate_300,f,11,84,,
+h5=Taxa para transporte de mercadorias com peso de 101 até 300 Kilos.
+t6=de   301 à   500 Kgs,ate_500,f,11,84,,
+h6=Taxa para transporte de mercadorias com peso de 301 até 500 Kilos.
+t7=de   501 à  1000 Kgs,ate_1000,f,11,84,,
+h7=Taxa para transporte de mercadorias com peso de 501 até 1000 Kilos.
+t8=de  1001 à  3000 Kgs,ate_3000,f,11,84,,
+h8=Taxa para transporte de mercadorias com peso de 1001 até 3000 Kilos.
+t9=de  3001 à  6000 Kgs,ate_6000,f,11,84,,
+h9=Taxa para transporte de mercadorias com peso de 3001 até 6000 Kilos.
+t10=de  6001 à 12000 Kgs,ate_12000,f,11,84,,
+h10=Taxa para transporte de mercadorias com peso de 6001 até 12000 Kilos.
+t11=de 12001 à 25000 Kgs,ate_25000,f,11,84,,
+h11=Taxa para transporte de mercadorias com peso de 12001 até 25000 Kilos.
+t12=Acima de   25000 Kgs,tonelada,f,11,84,,
+h12=Taxa para transporte de mercadorias com peso acima de 25000 Kilos.
+t13=linha-10
+t14=Taxas complementares#007E7E7E\ok.bmp,,,,380, ,
+t15=forcarleftmask=100
+t16=Ad Valorem:,advalorem,p,11,84,,
+h16=Taxa de Ad Valorem
+t17=linha-25
+t18=coluna+180
+t19=GRis:,gris,p,11,84,,
+h19=Taxa de Gerenciamento de Riscos
+t20=coluna=20
+t21=Sec/Cat:,seccat,f,11,84,,
+h21=Taxa Serviço de Coleta/Custo Adicional de Transporte
+t22=linha-25
+t23=coluna+180
+t24=Despacho:,despacho,f,11,84,,
+h24=Taxa de despachos
+t25=coluna=20
+t26=Pedágio:,pedagio,f,11,84,,
+h26=Taxa de pedágio
+t27=linha-25
+t28=coluna+180
+t29=Outros:,outros,f,11,84,,
+h29=Outras taxas sem classificação
+t30=coluna=20
+t31=Ajd Aereo:,ajudaereo,f,11,84,,
+h31=Taxa de ajudante Aereo
+t32=linha-25
+t33=coluna+180
+t34=Ajd Maritimo:,ajudmaritimo,f,11,84,,
+h34=Taxa de ajudante Maritimo
+t35=coluna=20
+t36=Ajudante:,ajudante,f,11,84,,
+h36=Taxa de ajudante
+t37=linha-25
+t38=coluna+180
+t39=Escolta,escolta,f,11,84,,
+h39=Taxa de escolta
+t40=coluna=20
+t41=DTA:,dta,f,11,84,,
+h41=Taxa de DTA (Documento de Trânsito Aduaneiro)
+t42=linha-25
+t43=coluna+180
+t44=Frete mínimo:,minimo,f,11,84,,
+h44=Valor mínimo a ser cobrado do cliente
+t45=coluna=20
+t46=Devolução:,devolucao,p,11,84,,
+h46=Quando for devolução cobrar frete diferenciado Ex: 50% do total do frete
+t47=linha-25
+t48=coluna+180
+t49=Reentrega:,reentrega,p,11,84,,
+h49=Quando for reentrega cobrar frete diferenciado Ex: 50% do total do frete
+t50=coluna=20
+t51=Opções da tabela#007E7E7E\ok.bmp,,,,380, ,
+t52=forcarleftmask=335
+t53=#ICMS faz parte do frete:,icmsx,sn,3,30,,
+h53=Sim - O ICMS não é somado com o total do frete    Não - O ICMS é somado com o total do frete
+t54=Verificar frete mínimo do (Frete total):,frt_minitotal,sn,3,30,,
+h54=Sim - O frete mínimo deve ser verificado do (Frete total)   Não - O frete mínimo deve ser verificado do (frete peso + frete valor). 
+t55=Tabela compartilhada:,compartilhada,sn,3,30,,
+h55=Compartilha esta tabela com outros clientes.

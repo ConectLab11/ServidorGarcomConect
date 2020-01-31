@@ -1,0 +1,154 @@
+#
+# 	Pacote de Instalaçao de Tabelas
+# 	Desenvolvido por Ronaldo C Silva
+# 	email: ronaldocalhau@gmail.com
+# 	Data: 20/02/2014
+#
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=
+disableMenu=0
+telalargura=830
+telaaltura=0
+Posicionar=1
+whereexterno=mygroup='tabelataxaestados'
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,+Taxas por Estados, generalidades, 0123456789, 9, 25,a
+o2=nil,+Tarifas, tarifas , 0123456789, 9, 23,a
+
+[generalidades]
+tab=Tabela Taxas por Estados
+comentario=
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=90
+forcarleftmask=90
+nobrowse=1
+altura=200
+largura=400
+foco=descr
+t0=Descrição:,descr,c,50,310,,
+h0=Descrição completa
+t1=linha-25
+t2=coluna+380
+t3=Validade:,validade,d,10,80,,
+h3=Prazo de validade
+t4=coluna-380
+t5=Taxas de Coleta#007E7E7E\text_align_justify.png,,,,500, ,
+t6=Capital:,faixa_1,f,11,84,,
+t7=linha-25
+t8=coluna+180
+t9=forcarleftmask=120
+t10=Excedente 10kg:,faixa_2,e,6,60,,
+t11=forcarleftmask=90
+t12=coluna-180
+t13=Interior:,faixa_3,f,11,84,,
+t14=linha-25
+t15=coluna+180
+t16=forcarleftmask=120
+t17=Excedente 10kg:,faixa_4,e,6,60,,
+t18=forcarleftmask=90
+t19=coluna-180
+t20=Taxas de Entrega#007E7E7E\text_align_justify.png,,,,500, ,
+t21=Capital:,faixa_5,f,11,84,,
+t22=linha-25
+t23=coluna+180
+t24=forcarleftmask=120
+t25=Excedente 10kg:,faixa_6,e,6,60,,
+t26=forcarleftmask=90
+t27=coluna-180
+t28=Interior:,faixa_7,f,11,84,,
+t29=linha-25
+t30=coluna+180
+t31=forcarleftmask=120
+t32=Excedente 10kg:,faixa_8,e,6,60,,
+t33=forcarleftmask=90
+t34=coluna-180
+t35=Generalidades#007E7E7E\text_align_justify.png,,,,500, ,
+t36=Redespacho:,faixa_9,f,11,84,,
+t37=linha-25
+t38=coluna+180
+t39=forcarleftmask=120
+t40=Excedente 10kg:,faixa_10,e,6,60,,
+t41=forcarleftmask=90
+t42=coluna-180
+t43=TDE:,tde,f,11,84,,
+t44=Ad.Valorem:,advalorem,p,11,84,,
+t45=GRIS:,gris,p,11,84,,
+t46=Outros#007E7E7E\text_align_justify.png,,,,500, ,
+t47=Devolução:,devolucao,p,11,60,,
+h47=Porcentagem do frete quando for devolução
+t48=linha-25
+t49=coluna+160
+t50=Reentrega:,reentrega,p,11,60,,
+h50=Porcentagem do frete quando for reentrega
+t51=linha-25
+t52=coluna+160
+t53=forcarleftmask=120
+t54=Compartilhada:,compartilhada,sn,3,30,,
+h54=Compartilhar esta tabela com os clientes sem tabela.
+
+[tarifas]
+tab=TARIFAS PARA CALCULO
+comentario=
+db=tabaereo
+ordem=uf,cidade
+rcl=
+chave=tabela
+chavePrincipal=id
+relacaokey=tabela,$IDORIGEM
+tituloWidth=35
+where=tabela="$IDORIGEM"
+c0=UF,uf,c,2,30,,
+c1=ate 25kg,faixa_1,f,11,100,,
+c2=De/n25 à 50,faixa_2,f,11,100,,
+c3=De/n50 à 100,faixa_3,f,11,100,,
+c4=De/n100 à 300,faixa_4,f,11,100,,
+c5=De/n300 à 500,faixa_5,f,11,100,,
+c6=Excedente,acima,f,11,100,,
+Rlt=
+msg=
+altura=450
+largura=600
+forcarleftmask=120
+foco=uf
+t0=UF:,uf,c,2,30,@BU,estado2.rcl,
+t1=forcarleftmask=120
+t2=Tarifas por (Kg)#007E7E7E\color_swatch_2.png,,,,550, ,
+t3=Até 25:,faixa_1,f,11,84,,
+t4=de  25 até  50:,faixa_2,f,11,84,,
+t5=de  50 até  100:,faixa_3,f,11,84,,
+t6=de 100 até 300:,faixa_4,f,11,84,,
+t7=de 300 até 500:,faixa_5,f,11,84,,
+t8=de 500 até 1000:,faixa_6,f,11,84,,
+t9=Excedente:,acima,f,11,84,,
+validacao=campoPreenchido(uf)
+#campoPreenchido(cidade)
+
+[calculo]
+versao=1
+x0=fretepeso:pesoCidade[EXCEDENTE2,faixa_1{0:10},faixa_2{11:20},faixa_3{20.1:35},faixa_4{35.1:50},faixa_5{50.1:70},faixa_6{70.1:100},faixa_7{100.1:300},faixa_8{300.1:500},acima{500.1}]
+x1=fretepeso:pesoMinimo[faixa_1,10kg,2]
+x2=seguro:porcentNfeValor[advalorem]
+x3=gris:porcentNfeValor[gris]
+x4=outros:tabelaValor[tde]
+
+
+

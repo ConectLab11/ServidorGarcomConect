@@ -1,0 +1,543 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 28/01/2010
+#
+#
+# a todos
+
+[arquivo]
+modulo=TAXAS E VALORES DO FRETE
+nivelprincipal=0
+nivelauxiliar=0
+pdx=capamin.pdx
+
+[Opcoes]
+o0=Valores, 0123456789, 9, 0, v
+o1=Processos, 789, 2, 0, pe
+
+[Valores]
+o0=nil, Valores, taxas1, 0123456789, 9, 7,v
+
+[Processos]
+o0=nil, Processo, capaProcesso, 0789, 2, 27, p
+o1=nil, Coleta / Entrega, coletaEntrega, 0789, 2, 3, p
+o2=nil, Anotações, anotacoes, 0789, 2, 17, p
+o3=nil, Devolução, devolucao, 0789, 2, 17, p
+o4=nil, Edit Master, editMaster, 0789, 2, 17, p
+o5=nil, Posição de Entrega, entrega, 0789, 2, 3, p
+o6=nil, Ocorrências de Viagem, viagem, 0123456789, 9, 2, e
+o7=EDI,Ocorrências, ocotrans, 0789, 4, 25:18,e
+o8=nil, Temperaturas, temperaturas, 0123456789, 9, 2, e
+
+#
+# Parametros de tela
+#
+
+[taxas1]
+tab=TAXAS E VALORES DO FRETE
+comentario=Taxas e valores do frete
+db=minengo
+ordem=id
+rcl=
+relacao=
+chave=id
+chaveprincipal=id
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=120
+forcarleftmask=140
+nobrowse=1
+c0=Minuta,id,c,10,60,,
+c1=Mask,mask,c,4,50,,
+altura=532
+largura=380
+foco=taxadta
+t0=DTA:,taxadta,f,11,84,,
+t1=Taxa entrega:,taxaajud,f,11,84,,
+t2=Excedente por KM:,expediente,f,11,84,,
+t3=Taxa ajudante:,ajudante,f,11,84,,
+t4=ICMS:,vlr_icms,f,11,84,,
+t5=Outros:,outros,f,11,84,,
+t6=Embarque:,despacho,f,11,84,,
+t7=Taxa mínima:,percurso,f,11,84,,
+t8=Excedente:,estadia,f,11,84,,
+t9=ADvalorem:,fator,f,11,84,,
+t10=Redespacho:,gris,f,11,84,,
+t11=Taxa urgência:,armazenagem,f,11,84,,
+t12=Agente:,pedagio,f,11,84,,
+t13=Total:,totalgeral2,f,11,84,,
+
+[entrega]
+tab=POSIÇÃO DE ENTREGA
+btautoedit=0
+comentario=
+db=tabela[1]
+rcl=
+trus=1
+chave=id
+chavePrincipal=id
+c0=Processo,id,i,30,60,,
+c1=Emissão,emissao,d,11,84,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=320
+largura=430
+foco=pos_dCarrega
+forcarleftmask=150
+forcarrightlabel=1
+#botaoExtra=imprimir
+t0=linha=0
+t1=Data/Hora de Entrega#clgray\clock.png,,,,10*390*65*1*1, ,
+t2=#coluna-180
+t3=Carregamento:,pos_dCarrega,d,10,70,,
+h3=Data do carregamento
+t4=linha-25
+t5=coluna+75
+t6=,pos_hCarrega,h,5,40,,
+h6=Hora do carregamento
+t7=coluna-75
+t8=Saída:,pos_dSaida,d,10,70,,
+h8=Data da saída
+t9=linha-25
+t10=coluna+75
+t11=,pos_hSaida,h,5,40,,
+h11=Hora da saída
+t12=coluna-75
+t13=linha+5
+t14=Posição da Entrega#clgray\clock.png,,,,10*390*220*1*1, ,
+t15=Previsão:,pos_previsao,d,10,70,,
+h15=Data de previsão da entrega
+t16=linha-25
+t17=coluna+75
+t18=,pos_prehora,h,5,40,,
+h18=Hora prevista para entrega
+t19=linha-25
+t20=coluna+75
+t21=à,pos_prehora2,h,5,40,,
+h21=Hora prevista para entrega
+
+t22=coluna-150
+t23=Em transito p/ coleta:,pos_coleta,sn,3,30,,
+h23=Transporte a caminho para fazer a coleta
+t24=No armazem:,pos_armazem,sn,3,30,,
+h24=Mercadorias esta no armazem
+t25=linha-25
+t26=coluna+75
+t27=,pos_armnome,c,20,120,@B,<#2>armazem.rcl,
+h27=Nome do armazem
+t28=coluna-75
+t29=Em transito p/ entrega:,pos_entrega,sn,3,30,,
+h29=Transporte esta a caminho para entrega
+t30=Entrega:,pos_dataentrega,d,10,70,,
+h30=Data da entrega
+t31=linha-25
+t32=coluna+75
+t33=,pos_horaentrega,h,5,40,,
+h33=Hora da entrega
+t34=coluna-75
+t35=Garantia:,pos_garantia,c,50,210,,
+h35=Garantia de entrega
+t36=Recebido por:,recebidopor,c,50,210,,
+h36=Nome do responsável pelo recebimento 
+
+[capaProcesso]
+tab=CAPA DO PROCESSO
+btautoedit=0
+comentario=
+db=tabela[1]
+rcl=
+chave=id
+chavePrincipal=id
+c0=Processo,id,i,30,60,,
+c1=Emissão,emissao,d,11,84,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=320
+largura=430
+foco=dLiberado
+forcarleftmask=120
+forcarrightlabel=1
+#botaoExtra=imprimir
+t0=linha=0
+t1=Processo#clblack\delivery.png,,,,10*390*120*1*1, ,
+t2=linha+5
+t3=Responsável:,cResp,i,6,50,@D&cor(clsilver|clgray),cadastro.rcl,
+h3=Responsável pela conclusão do processo
+t4=Concluido em:,dLiberado,d,10,70,,
+h4=Data da Conclusão
+t5=Minuta devolução:,devolucao,sn,3,30,,
+h5=Esta Minuta é de Devolução ?
+t6=linha-25
+t7=coluna+200
+t8=forcarleftmask=150
+t9=Comprovante de entrega:,cEntrega,sn,3,30,,
+h9=Tem Comprovante de entregas ?
+t10=forcarleftmask=120
+t11=coluna-200
+t12=Dev.Container:,devcont,c,30,260,,
+h12=Devolução Container
+t13=linha+10
+t14=Valores do Frete#clblack\money.png,,,,10*390*200*1*1, ,
+t15=Mot. terceirizado:,mTerceiro,sn,3,30,,
+h15=Motorista é terceirizado ?
+t16=forcarleftmask=170
+t17=coluna+125
+t18=linha-25
+t19=Fretes:,motofrete,f,11,84,,
+h19=Valor do Frete combinado com o motorista
+t20=Pernoite:,pernoite,f,11,84,,
+h20=Taxa de Pernoite
+t21=Escolta:,escolta,f,11,84,,
+h21=Taxa de Escolta
+t22=Outros:,outros,f,11,84,,
+h22=Taxa outros
+t23=linha-30
+t24=Ajudante(s)#00CCAACC\group.png,,,,20*360*24*7*0, ,
+t25=coluna-200
+t26=linha-6
+t27=Qtde(s):,qtdeajud,i,3,40,,
+h27=Quantidade de Ajudantes
+t28=linha-25
+t29=coluna+100
+t30=Taxa:,tAjudante,f,9,70,,
+h30=Taxa por ajudante
+t31=linha-25
+t32=coluna+100
+t33=,ajudante,f,11,84,@R&cor(clblue|clwhite),
+h33=Total em ajudantes
+t34=linha+5
+t35=Total:,cTotal,f,11,84,@R&cor(clblue|clwhite),
+h35=Total geral
+calc0=ajudante=+qtdeajud,*tAjudante
+calc1=cTotal=+motofrete,+outros,+pernoite,+escolta,+ajudante
+
+[anotacoes]
+tab=ANOTAÇÕES DO PROCESSO
+btautoedit=0
+comentario=
+db=tabela[1]
+rcl=
+chave=id
+chavePrincipal=id
+c0=Processo,id,i,30,60,,
+c1=Emissão,emissao,d,11,84,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=320
+largura=430
+foco=pos_obs
+forcarleftmask=120
+forcarrightlabel=1
+#botaoExtra=imprimir
+t0=linha=0
+t1=Anotações#007E7E7E\attach_2.png,,,,0*410*285*0*1, ,
+t2=forcarleftmask=10
+t3=,pos_obs,t,0,395x270,,
+h3=Anotações
+
+[devolucao]
+tab=DADOS PARA DEVOLUÇÃO DE CONTAINER
+btautoedit=0
+comentario=
+db=tabela[1]
+rcl=
+chave=id
+chavePrincipal=id
+c0=Processo,id,i,30,60,,
+c1=Emissão,emissao,d,11,84,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=320
+largura=430
+foco=devcon
+forcarleftmask=90
+forcarrightlabel=1
+#botaoExtra=imprimir
+t0=Cadastro:,devcon,i,6,50,,cadastro.rcl,
+h0=Cadastro do endereço de devolução
+
+
+[editMaster]
+tab=AJUSTES MANUAL
+btautoedit=0
+comentario=
+db=tabela[1]
+rcl=
+chave=id
+chavePrincipal=id
+c0=Processo,id,i,30,60,,
+c1=Emissão,emissao,d,11,84,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=320
+largura=430
+foco=conhecimento
+forcarleftmask=90
+forcarrightlabel=1
+t0=CT-e:,conhecimento,i,6,70,,
+t1=Origem:,maskctrc,c,3,40,@U,
+
+[minutadetalhada]
+c0=Minuta|id||80|80||conta|
+c1=Origem|mask||60|60|||
+c2=Emissão|emissao|d|70|70|||
+c3=Importador|nome||150|150|||
+c4=Destinatario|ndest||150|150|||
+c5=Comissária|$nomecomissaria||150|150|||
+c6=Tipo|naturez2||70|70|||
+c7=Número do#13 Documento|num_di||90|90|||
+c8=AWB|con_master||90|90|||
+c9=HAWB|con_hawb||90|90|||
+c10=NF|fax_nf||90|90|||
+c11=Protocolo|protocolo||90|90|||
+c12=Temperatura|temperatura||90|90|||
+c13=Ambiente|ambiente|0|80|80|||
+c14=Refrigerado|refrigerado|0|80|80|||
+c15=Congelado|congelado|0|80|80|||
+c16=Qtde|bioQtde|0|80|80|||
+c17=Q Gelo|geloQtde|0|80|80|||
+c18=Total|bioTotal|0|80|80|||
+c19=Reposição Gelo|0|80|80|||
+c20=Caixa Coleta|sn|50|50|||
+c21=Conteúdo|conteudo||90|90|||
+c22=V. Aduaneiro|vAduaneiro|f|80|80|d||
+c23=Coleta|cidade1||100|100|||
+c24=UF|uf1||60|60|||
+c25=Entrega|cidade2||100|100|||
+c26=UF|uf2||60|60|||
+c27=Volumes |volumes|e|70|70|d|soma|
+c28=Peso|peso|e|70|70|d|soma|
+c29=Dimensões|dimensoes|e|80|80|||
+c30=Mercadoria |vlr_mercadoria|f|90|90|d|soma|
+c31=Previsão de#13 Entrega|pos_previsao-d,. ,pos_prehora-h|D|100|100|||
+c32=Status|$status||150|150|||
+c33=Placa|placa||70|70|||
+c34=Motorista|$nomemotorista||150|150|||
+c35=Observação|pos_obs||150|150|||
+c36=Garantia|pos_garantia||150|150|||
+c37=CTRC|conhecimento||80|80|||
+c38=Filial|maskctrc||60|60|||
+c39=Frete|fretetotal|f|70|70|d|soma|
+c40=Custos|ctotal|f|70|70|d|soma|
+c41=Líquido|$liquido|f|70|70|d|soma|
+c42=Saída|$dhsaida||100|100|||
+c43=Entrega|$dhentrega||100|100|||
+c44=Tempo|$dhtempo||100|100|||
+c45=Horas|$dhhoras||70|70|||
+c46=Folgas Hrs|$dhfolgas||70|70||
+c47=Real Hrs|$dhhorasreal||70|70|||
+c48=Dias|$dhdias||60|60|||
+c49=Referencia#13 Cliente|fax_referencia2||90|90|||
+c50=Especie de#13 Carga|espCarga||80|80|||
+c51=Temperatura|temperatura||80|80|||
+c52=Taxado|cubagem1|f|80|80|d||
+c53=Tipo de#13 Serviço|tabTransp||80|80|||
+c54=Tabela|$@xtabelafrete||80|80|||
+c55=Taxa|. |p|70|70|||
+c56=Seguro|$@fseguro|f|70|70|||
+c57=Aliquota#13ICMS|$@paliquotaIcms|p|70|70|||
+c58=Serviço|$@fvalorIcms|f|70|70|||
+c59=Agendamento|pos_previsao-d,. ,pos_prehora-h,. a ,pos_prehora2-h|D|120|120|||
+c60=Confirmacao de#13 Coleta|colData-d,. ,colHora-h|D|100|100|||
+c61=Confirmacao de#13 Entrega|pos_dataentrega-d,. ,pos_horaentrega-h|D|100|100|||
+c62=Recebido_por|recebidopor||100|100||
+c63=Tipo de Imposto|referencia2||80|80||
+c64=Número Imposto|num_di||80|80||
+c65=Valor Impostos|impostos|f|80|80|d||
+c66=Seguro|segcat|f|80|80|d||
+c67=Outros|outros|f|80|80|d||
+
+
+[bioProtocolos]
+tab=LISTA DE PROTOCOLOS
+db=set_mult
+ordem=txt_1
+chave=id
+chaveprincipal=id
+c0=Protocolo,txt_1,c,255,240,,
+nobrowse=0
+relacaokey=nome,"LISTA_DE_PROTOCOLOS_BIO"
+autoIncluir=0
+where=nome='LISTA_DE_PROTOCOLOS_BIO'
+altura=150
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Protocolo:,txt_1,c,50,300,,
+
+[bioConteudos]
+tab=LISTA DE CONTEUDOS
+db=set_mult
+ordem=txt_1
+chave=id
+chaveprincipal=id
+c0=Conteúdos,txt_1,c,255,240,,
+nobrowse=0
+relacaokey=nome,"LISTA_DE_CONTEUDOS_BIO"
+autoIncluir=0
+where=nome='LISTA_DE_CONTEUDOS_BIO'
+altura=150
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Conteúdo:,txt_1,c,50,300,,
+
+[coletaEntrega]
+tab=Posição de Coleta e Entrega
+btautoedit=0
+comentario=
+db=tabela[1]
+rcl=
+trus=1
+chave=id
+chavePrincipal=id
+c0=Processo,id,i,30,60,,
+c1=Emissão,emissao,d,11,84,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=320
+largura=430
+foco=pos_previsao
+forcarleftmask=150
+forcarrightlabel=1
+t0=Agendamento:,pos_previsao,d,10,70,,
+h0=Data de agendamento
+t1=linha-25
+t2=coluna+90
+t3=,pos_prehora,h,5,40,,
+t4=linha-25
+t5=coluna+60
+t6=à,pos_prehora2,h,5,40,,
+t7=coluna-150
+t8=linha+20
+
+t9=Confirmação de Coleta:,colData,d,10,70,,
+h9=Data da Coleta
+t10=linha-25
+t11=coluna+90
+t12=,colHora,h,5,40,,
+t13=coluna-90
+t14=linha+20
+
+t15=Confirmação de Entrega:,pos_dataentrega,d,10,70,,
+h15=Data da entrega
+t16=linha-25
+t17=coluna+90
+t18=,pos_horaentrega,h,5,40,,
+h18=Hora da entrega
+t19=coluna-90
+t20=Recebido por:,recebidopor,c,50,210,,
+h20=Nome do responsável pelo recebimento 
+t21=OBS:,pos_garantia,c,50,210,,
+h21=Observação
+
+[viagem]
+tab=OCORRÊNCIAS DE VIAGEM
+comentario=
+db=ctrchist
+ignoreforcedb=Sim
+ordem=data desc,hora desc
+rcl=
+chave=id
+chaveprincipal=id
+c0=Data,&DataHora(data|hora|) as data,d,10,100,,
+c1=Descrição,&rclArq(ocorrencia|ocotrans.rcl),c,255,280,,
+c2=Stage,stage,p,3,40,,
+#c1=Descrição,anote,c,0,100,,
+#BotaoIncluir=Não
+#BotaoExcluir=Não
+#BotaoAlterar=Sim
+nobrowse=0
+reservado=0
+where=(documento=$IDORIGEM)and(tpdoc=9) 
+relacaokey=documento,$IDORIGEM
+relacaokey2=tipo,"$IDORIGEM2"
+relacaokey3=tpdoc,"9"
+whereextra=manifesto=0
+campoinfo=anote,Descrição completa,c,100
+Rlt=
+altura=450
+largura=520
+foco=data
+forcarleftmask=90
+t0=#
+t1=Data:,data,d,10,70,,
+h1=Data da Ocorrência
+t2=linha-25
+t3=coluna+110
+t4=Hora:,hora,h,5,40,,
+h4=Hora da Ocorrência
+t5=coluna-110
+t6=Ocorrência:,ocorrencia,ci,6,40,$validarStage(),ocotrans.rcl,
+t7=Stage:,Stage=@0;25;50;75;100,l,3,50,,
+t8=label|%|,,,,70,145
+t8=linha+5
+t9=Local#007E7E7E\textfield.png,,,,490, ,
+t10=UF:,uf1,c,2,30,@BU,estado2.rcl,
+h10=Sigla da UF (Estado) <F2>
+t11=linha-25
+t12=coluna+130
+t13=Cidade:,cidade1,c,30,185,@B,<#17>geral.rcl{ufsigla=uf1/""},
+h13=Nome da Cidade
+t14=Informações Complementar#007E7E7E\textfield.png,,,,490, ,
+t15=forcarleftmask=10
+t16=,anote,t,0,480x140,@U,
+h16=Descrição Completa da Ocorrência
+t17=#,tipo=<M>,c,3,30,,
+t18=,manifesto=Nao,sn,3,30,@V,
+
+[ocotrans]
+tab=OCORRËNCIAS DE ENTREGA - PADRÃO EDI
+comentario=
+db=ocotrans
+ordem=codigo
+rcl=
+chave=codigo
+chaveprincipal=id
+c0=Código,codigo,c,8,60,,
+c1=Descrição,descricao,c,100,275,,
+c2=Pers.,codigo2,c,5,40,,
+c3=Ativo,ativo,sn,3,30,,
+reservado=1..24
+Rlt=conhecim.ocorrencia,conheci1.ocorrencia,conheci2.ocorrencia,minuta.ocorrencia
+msg=DOCUMENTO(s)
+altura=280
+largura=470
+foco=codigo
+botaoExcluir=
+t0=Código:,codigo,i,3,30,,
+h0=Código da ocorrência
+t1=Descrição:,descricao,c,100,300,,
+h1=Descrição completa da ocorrência
+t2=Ativo:,ativo=Sim,sn,3,30,,
+h2=Ocorrência ativa (Sim/Não)
+t3=Personalização#007E7E7E\page_white_edit.png,,,,395, ,
+t4=Código:,codigo2,c,10,100,,
+h4=Código da ocorrência
+t5=Descrição:,descricao2,c,100,300,,
+h5=Descrição completa da ocorrência
+
+[temperaturas]
+tab=LISTA DE TEMPERATURAS
+db=set_mult
+ordem=txt_1
+chave=id
+chaveprincipal=id
+c0=Descrição,txt_1,c,255,240,,
+nobrowse=0
+relacaokey=nome,"LISTA_DE_TEMPERATURAS_TRANSPORTES"
+autoIncluir=0
+where=nome='LISTA_DE_TEMPERATURAS_TRANSPORTES'
+altura=150
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Descriçãp:,txt_1,c,50,300,,

@@ -1,0 +1,22 @@
+[historico]
+v0=5.01.2094|Ajustes|Ajustes no Recibo de Pagamento NEC|CRE|17/07/2013|Incluido campo tipo de Documento Fiscal e campo Conta Bancária.
+v1=5.01.2093|Customização|Relatório de Coletas Inconclusivas|RGE|16/07/2013|Relatório de Coletas Inconclusivas
+v2=5.01.2093|Customização|Campos Coletas Inconclusivas|OCC|16/07/2013|Campo Coleta Inconcluisva e Observação da Baixa da Coleta.
+v3=5.01.2093|Novo|Recibo de Pagamento NEC|CRE|16/07/2013|Recibo de Pagamento NEC, Contas à Receber.
+v4=5.01.2092|Novo|Layout Seguro Itaú|CFE|15/07/2013|Layout gerar arquivo com dados para seguro Itaú.
+v5=5.01.2091|Correção|Perda do arquivo na impressão|GDOC|15/07/2013|Estabilizado
+v6=5.01.2090|Novo|Inclusão da Chave da NF-e na emissão do CT-e|CFE|13/07/2013|Permite a inclusão da Chave da NF-e na emissão do CT-e
+v7=5.01.2089|Ajuste|Sintegra com suporte a grandes arquivos|SIN|12/07/2013|Agora Sintegra pode gerar arquivos com grande volume de dados.
+v8=5.01.2088|Ajustes|Adaptador de Versão para Contrato de Fretes|GMR|12/07/2013|Compatibilidade entre contratos do manifesto e conhecimento.
+v9=5.01.2087|Ajustes|Melhorias no Upload de Versões|VER|12/07/2013|Otimização no processo de upload.
+v10=5.01.2086|Novo|Relatório de Custo Carreteiro|RGE|11/07/2013|Relatório suporta contratos por manifesto e conhecimento.
+v11=5.01.2086|Ajustes|Exportação para Excel - Conversão de Campo|RGE|11/07/2013|Melhorias na conversão de campos na exportação de dados para excel
+v12=5.01.2085|Novo|Faturamento - Número do Documento + Ano|FAT|11/07/2013|Configuração para preencher o campo Documento com Número + Ano (1234/13)
+v13=5.01.2085|Novo|Manifesto - Identificação do CTRB por CTRC|GMR|11/07/2013|Configuração para habilitar que no número do Contrato de Frete seja o número do CTRC
+v14=5.01.2084|Ajustes|Filtro na Agenda de Cobrança|AGD|11/07/2013|O usuário Master pode acessar qualquer agenda em tempo de execução.
+v15=5.01.2083|Novo|Contrato de Fretes por Conhecimento|CFE|11/07/2013|Implementado a opção no módulo Conhecimento de Fretes para gerenciar pagamentos e contrato de fretes.
+v16=5.01.2081|Ajustes|Ajustes GDO|GDO|01/01/2013|.
+v17=5.01.2081|Novo|Layout CNAB Banco 033-Santander|CRE|01/01/2013|Funcionalidades para emissão de Boleto e gerar arquivos CNAB do Banco Santander. 
+v18=5.01.2081|Novo|Opção de copiar CT-e|CFE|01/01/2013|Permite fazer cópia de um CT-e existente para um novo CT-e.
+v19=5.01.2081|Ajustes|Suporte Contábil para fechamento CT-e versão 1.03|SIC|01/01/2013|Suporte Contábil reconhece os XML do CT-e 1.03.
+v20=5.01.2081|Novo|Nova Versão do CT-e 1.04|CFE|01/01/2013|Sistema foi atualizado para nova versão do CT-e 1.04. 

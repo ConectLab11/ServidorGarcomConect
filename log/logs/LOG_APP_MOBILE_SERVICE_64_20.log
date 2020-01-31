@@ -1,0 +1,259 @@
+18/12 21:36:43 - LOGOFF DO USUARIO {"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"}
+18/12 21:36:43 - salvando log -> C:\rcsv\App\mobile64\log\logs\LOG_APP_MOBILE_SERVICE_64_19.log
+18/12 21:36:43 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"} => OK
+18/12 21:36:43 - LOGOFF DO USUARIO {"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"}
+18/12 21:36:43 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"} => OK
+18/12 21:36:43 - LOGOFF DO USUARIO {"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"}
+18/12 21:36:43 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"} => OK
+18/12 21:36:43 - LOGOFF DO USUARIO {"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"}
+18/12 21:36:43 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"} => OK
+18/12 21:36:43 - LOGOFF DO USUARIO {"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"}
+18/12 21:36:43 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"} => OK
+18/12 21:36:44 - LOGOFF DO USUARIO {"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"}
+18/12 21:36:44 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"} => OK
+18/12 21:36:44 - LOGOFF DO USUARIO {"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"}
+18/12 21:36:44 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"} => OK
+18/12 21:36:44 - LOGOFF DO USUARIO {"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"}
+18/12 21:36:44 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"} t:0,015 => OK
+18/12 21:36:44 - LOGOFF DO USUARIO {"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"}
+18/12 21:36:44 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"} => OK
+18/12 21:36:44 - LOGOFF DO USUARIO {"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"}
+18/12 21:36:44 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"} => OK
+18/12 21:36:44 - LOGOFF DO USUARIO {"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"}
+18/12 21:36:44 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"} t:0,015 => OK
+18/12 21:36:45 - LOGOFF DO USUARIO {"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"}
+18/12 21:36:45 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"} t:0,016 => OK
+18/12 21:36:45 - LOGOFF DO USUARIO {"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"}
+18/12 21:36:45 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"} => OK
+18/12 22:11:38 - ***  SERVIÇO PARADO
+18/12 22:11:41 - Iniciando Suporte Mobile 64 bit Versao: 1.15.17/12/2019 20:06
+18/12 22:11:41 - Variaveis
+18/12 22:11:41 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+18/12 22:11:41 - TCP Servidor
+18/12 22:11:41 - TCP Cliente
+18/12 22:11:41 - Iniciado na porta => 4409
+18/12 22:11:41 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+18/12 22:11:41 - Formato Data   : 18/12/2019 22:11:41
+18/12 22:11:41 - Flags debug 1 sem log 0
+18/12 22:11:41 - h > LOCALHOST p > 3306 d > hbecia u > root
+18/12 22:11:41 - Terminal: 1
+18/12 22:11:41 - BANCO DE DADOS ONLINE > LOCALHOST:hbecia
+18/12 22:11:41 - PRECO => 23 /            23,00/23/23
+18/12 22:11:41 - iniciar_identificacao_computador
+18/12 22:11:41 - sistema_pegar_perfil
+18/12 22:11:41 - empresa_carregar_segmentos
+18/12 22:11:41 - rcs_iniciar_variaveis_globais
+18/12 22:11:41 - terminal_id
+18/12 22:11:41 - mesas_comandas
+18/12 22:11:41 - LPRINT
+18/12 22:11:41 - Status: Config => 192.168.88.83:9100
+18/12 22:11:41 - Status: Config => 192.168.88.83:9100
+18/12 22:11:41 - Status: Config => c:9100
+18/12 22:11:41 - Status: Config => 192.168.88.83:9100
+18/12 22:11:41 - LISTA DE IMPRESSORAS CARREGADA 4
+18/12 22:11:41 - carregarImp
+18/12 22:11:41 - objetos
+18/12 22:11:41 - produtos_gerenciamento_de_estoque
+18/12 22:11:41 - # status 100%
+18/12 23:05:06 - ***  SERVIÇO PARADO
+18/12 23:05:09 - Iniciando Suporte Mobile 64 bit Versao: 1.15.17/12/2019 20:06
+18/12 23:05:09 - Variaveis
+18/12 23:05:09 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+18/12 23:05:09 - TCP Servidor
+18/12 23:05:09 - TCP Cliente
+18/12 23:05:09 - Iniciado na porta => 4409
+18/12 23:05:09 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+18/12 23:05:09 - Formato Data   : 18/12/2019 23:05:09
+18/12 23:05:09 - Flags debug 1 sem log 0
+18/12 23:05:09 - h > LOCALHOST p > 3306 d > hbecia u > root
+18/12 23:05:09 - Terminal: 1
+18/12 23:05:09 - BANCO DE DADOS ONLINE > LOCALHOST:hbecia
+18/12 23:05:09 - PRECO => 23 /            23,00/23/23
+18/12 23:05:09 - iniciar_identificacao_computador
+18/12 23:05:09 - sistema_pegar_perfil
+18/12 23:05:09 - empresa_carregar_segmentos
+18/12 23:05:09 - rcs_iniciar_variaveis_globais
+18/12 23:05:09 - terminal_id
+18/12 23:05:09 - mesas_comandas
+18/12 23:05:09 - LPRINT
+18/12 23:05:09 - Status: Config => 192.168.88.83:9100
+18/12 23:05:09 - Status: Config => 192.168.88.83:9100
+18/12 23:05:09 - Status: Config => c:9100
+18/12 23:05:09 - Status: Config => 192.168.88.83:9100
+18/12 23:05:09 - LISTA DE IMPRESSORAS CARREGADA 4
+18/12 23:05:09 - carregarImp
+18/12 23:05:09 - objetos
+18/12 23:05:09 - produtos_gerenciamento_de_estoque
+18/12 23:05:09 - # status 100%
+18/12 23:05:15 - LOGOFF DO USUARIO {"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"}
+18/12 23:05:15 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"} => OK
+18/12 23:05:19 - LOGOFF DO USUARIO {"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"}
+18/12 23:05:19 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"} => OK
+18/12 23:05:40 - STATUS DO SERVIDOR {"operacao":"status",
+"token":"c001a001",
+"id":"TERMIX"}

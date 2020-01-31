@@ -1,0 +1,184 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 01/08/2011
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=tabvalor.pdx
+disableMenu=0
+telalargura=830
+telaaltura=600
+Posicionar=1
+whereexterno=mygroup='tabelaunkdsp'
+solicitante=unika
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,Distribuicao SP, geral, 0123456789, 9, 25,a
+o2=nil,+Tarifas, tarifas , 0123456789, 9, 23,a
+o3=nil,Região, regiao , 0123456789, 9, 23,a
+#
+# Parametros de tela
+#
+ 
+[geral]
+tab=Distribuicao SP
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=90
+forcarleftmask=90
+nobrowse=1
+altura=200
+largura=400
+foco=descr
+t0=Descrição:,descr,c,50,410,,
+h0=Descrição completa
+t1=Validade:,validade,d,10,80,,
+h1=Prazo de validade
+t2=linha-25
+t3=coluna+320
+t4=forcarleftmask=150
+t5=linha+25
+t6=forcarleftmask=100
+t7=coluna-320
+t8=Taxas#007E7E7E\text_align_justify.png,,,,500, ,
+t9=Coleta:,coleta,f,11,84,,
+t10=linha-25
+t11=coluna+160
+t12=até (kg):,actn20,e,6,60,,
+t13=linha-25
+t14=coluna+160
+t15=Excedente:,actn40,f,11,84,,
+t16=coluna-320
+t17=Redespacho:,redespacho,f,11,84,,
+t18=linha-25
+t19=coluna+160
+t20=até (kg):,bctn20,e,6,60,,
+t21=linha-25
+t22=coluna+160
+t23=Excedente:,bctn40,f,11,84,,
+t24=coluna-320
+t25=Entrega:,entrega,f,11,84,,
+t26=linha-25
+t27=coluna+160
+t28=até (kg):,cctn20,e,6,60,,
+t29=linha-25
+t30=coluna+160
+t31=Excedente:,cctn40,f,11,84,,
+t32=coluna-320
+t33=Outras#007E7E7E\text_align_justify.png,,,,500, ,
+t34=TDE:,tde,p,11,84,,
+t35=Despacho:,despacho,f,11,84,,
+t36=GRIS:,gris,p,11,84,,
+t37=Pedágio:,pedagio,f,11,84,,
+h37=Taxa de pedágio a cobrar para cada fração de peso.
+t38=Outros#007E7E7E\tag.png,,,,530, ,
+t39=forcarleftmask=100
+t40=Devolução:,devolucao,p,11,60,,
+h40=Porcentagem do frete quando for devolução
+t41=linha-25
+t42=coluna+160
+t43=Reentrega:,reentrega,p,11,60,,
+h43=Porcentagem do frete quando for reentrega
+t44=coluna+160
+t45=linha-25
+t46=Compartilhada:,compartilhada,sn,3,30,,
+h46=Compartilhar esta tabela com os clientes sem tabela.
+
+[tarifas]
+tab=TARIFAS PARA CALCULO DISTRIBUICAO SP
+comentario=
+db=tabaereo
+ordem=cidade
+rcl=tabaereo.rcl
+chave=tabela
+chavePrincipal=id
+relacaokey=tabela,$IDORIGEM
+tituloWidth=35
+where=tabela="$IDORIGEM"
+foco=cidade
+c0=Cidade,cidade,c,50,150,,
+c1=ATÉ 10KG,faixa_1,f,11,80,,
+c2=11 a 20KG,faixa_2,f,11,80,,
+c3=21 a 30KG,faixa_3,f,11,80,,
+c4=31 a 50KG,faixa_4,f,11,80,,
+c5=51 a 100KG,faixa_5,f,11,80,,
+c6=ACIMA,acima,f,11,80,,
+c7=ADVALOREM,advalorem,p,11,80,,
+Rlt=
+msg=
+altura=450
+largura=600
+forcarleftmask=110
+foco=cidade
+t0=UF:,uf=SP,c,2,30,@D,
+t1=Descrição:,cidade=@SAO PAULO/ GRD SP;VALE DO PARAIBA;INTERIOR DE SAO PAULO (1);INTERIOR DE SAO PAULO (2),l,50,300,,
+t2=Generalidades#007E7E7E\color_swatch_2.png,,,,550, ,
+t3=ADvalorem:,advalorem,p,11,84,,
+t4=Taxas (Kg)#007E7E7E\color_swatch_2.png,,,,550, ,
+t5=até 10KG:,faixa_1,f,11,84,,
+t6=11 a 20KG:,faixa_2,f,11,84,,
+t7=21 a 30KG:,faixa_3,f,11,84,,
+t8=31 a 50KG:,faixa_4,f,11,84,,
+t9=51 a 100KG:,faixa_5,f,11,84,,
+t10=Acima:,acima,f,11,84,,
+validacao=campoPreenchido(cidade)
+
+[regiao]
+tab=SAO PAULO POR REGIAO
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Região,descricao,c,50,150,,
+c1=Cidade,txt_1,c,255,240,,
+nobrowse=0
+relacaokey=nome,"tabela_regiao_sp"
+autoIncluir=0
+where=nome='tabela_regiao_sp'
+altura=220
+largura=440
+foco=descricao
+forcarleftmask=90
+t0=Descrição:,descricao=@SAO PAULO/ GRD SP;VALE DO PARAIBA;INTERIOR DE SAO PAULO (1);INTERIOR DE SAO PAULO (2),l,50,300,,
+t1=UF:,txt_2=SP,c,2,30,@D,
+t2=Cidade:,txt_1,c,50,285,@B,<#17>geral.rcl{ufsigla=txt_2},
+validacao=campoPreenchido(descricao),campoPreenchido(txt_1),campoPreenchido(txt_2)
+
+[calculo]
+versao=8
+x0=precalc:coleta{Tem Coleta:,ck,0,,0}
+x1=precalc:redespacho{Tem Redespacho:,ck,0,,0}
+x2=precalc:entrega{Tem Entrega:,ck,0,,0}
+x3=fretepeso:pesoCidade[EXCEDENTE_GDE_SP,*faixa_1{0:10},faixa_2{11:20},faixa_3{21:30},faixa_4{31:50},faixa_5{51:100},acima{100}]
+x4=itr:porcentNfeValor[tde]
+x5=itr:valorMinimoMaximo[tdeminimo,frt_val1]
+x6=outros:0
+x7=outros:taxaComPesoExcedente[coleta,coleta,actn20,actn40]
+x8=outros:taxaComPesoExcedente[redespacho,redespacho,bctn20,bctn40]
+x9=outros:taxaComPesoExcedente[entrega,entrega,cctn20,cctn40]
+x10=despacho:tabelaValor[despacho]
+x11=gris:porcentNfeValor[gris]
+x12=pedagio:tabelaValor[pedagio]
+x13=outros:tabelaValor[adicional,+]
+x14=seguro:porcentNfeValor[advalorem]

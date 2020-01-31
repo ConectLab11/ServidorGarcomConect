@@ -1,0 +1,169 @@
+#
+# 	Parametros do menu de manutenção do Sistema
+# 	Desenvolvido por Ronaldo C Silva
+# 	ConectLab Informatica Ltda
+# 	Data	   : 28/01/2010
+#	Atualizacao: 07/01/2015
+#
+# 	a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=tabvalor.pdx
+disableMenu=0
+telalargura=830
+telaaltura=0
+Posicionar=1
+whereexterno=mygroup='tabelacargafracionada'
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,+Pesos, tabelacargafracionada, 0123456789, 9, 25,a
+o2=nil,+Cidades Destinos, destinos, 0123456789, 9, 23,a
+o3=nil,Capitais, capitais, 0123456789, 9, 25,a
+#
+# Parametros de tela
+#
+
+[tabelacargafracionada]
+tab=TABELA CARGA FRACIONADA (PHL)
+comentario=
+db=tabefret
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+forcarcoluna=130
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Por tonelada,tonelada,f,16,100,,
+altura=532
+
+
+largura=380
+foco=descr
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=0
+forcarleftmask=150
+nobrowse=1
+t0=coluna=0
+t1=Descrição:,descr,c,50,345,,
+h1=Descrição completa da Tabela.
+t2=Cidade Origem#007E7E7E\map.png,,,,545, ,	
+t3=UF:,uf,c,2,30,@BU,estado2.rcl,
+h3=Sigla da UF (Estado) <F2>
+t4=linha-25
+t5=coluna+110
+t6=Cidade:,cidade,c,30,185,@B,<#17>geral.rcl{ufsigla=uf/""},
+h6=Nome da Cidade
+t7=coluna-110
+t8=Generalidades#007E7E7E\text_align_justify.png,,,,545, ,
+t9=Pedágio a cada 100Kg:,pedagio,f,11,84,,
+h9-Taxa de pedágio a cada 100kg.
+t10=#linha-25
+t11=#coluna+130
+t12=Devolução:,devolucao,p,11,60,,
+h12=Porcentagem do frete quando for devolução
+t13=linha-25
+t14=coluna+130
+t15=Reentrega:,reentrega,p,11,60,,
+h15=Porcentagem do frete quando for reentrega
+t16=coluna+150
+t17=linha-25
+t18=Compartilhada:,compartilhada,sn,3,30,,
+h18=Compartilhar esta tabela com os clientes sem tabela.
+
+[destinos]
+tab=CIDADES DESTINOS
+comentario=
+db=tabaereo
+ordem=uf,cidade
+rcl=
+chave=tabela
+chavePrincipal=id
+relacaokey=tabela,$IDORIGEM
+tituloWidth=35
+where=tabela="$IDORIGEM"
+c0=UF,uf,c,2,30,,
+c1=Cidade,cidade,c,50,150,,
+c2=ate 10kg,faixa_1,f,11,70,,
+c3=De/n10.01 à 20,faixa_2,f,11,70,,
+c4=De/n20.01 à 30,faixa_3,f,11,70,,
+c5=De/n30.01 à 40,faixa_4,f,11,70,,
+c6=De/n40.01 à 50,faixa_5,f,11,70,,
+c7=De/n50.01 à 70,faixa_6,f,11,70,,
+c8=De/n70.01 à 100,faixa_7,f,11,70,,
+c9=De/n100.01 à 150,faixa_8,f,11,70,,
+c10=Kg Adicional,excedente,f,11,70,,
+c11=Taxa/nEmissão,valor,f,11,70,,
+c12=Advalorem,advalorem,p,11,70,,
+Rlt=
+msg=
+altura=530
+largura=500
+forcarleftmask=120
+foco=uf
+t0=UF:,uf,c,2,30,@BU,estado2.rcl,
+t1=#coluna+110
+t2=#linha-25
+t3=Cidade:,cidade,c,50,320,@B,<#17>geral.rcl{ufsigla=uf/"Capital/Interior"},
+t4=#coluna-110
+t5=#forcarleftmask=120
+t6=Tarifas por (Kg)#007E7E7E\color_swatch_2.png,,,,550, ,
+t7=Até 10:,faixa_1,f,11,84,,
+t8=de 10.01 até  20:,faixa_2,f,11,84,,
+t9=de 20.01 até  30:,faixa_3,f,11,84,,
+t10=de 30.01 até  40:,faixa_4,f,11,84,,
+t11=de 40.01 até  50:,faixa_5,f,11,84,,
+t12=de 50.01 até  70:,faixa_6,f,11,84,,
+t13=de 70.01 até 100:,faixa_7,f,11,84,,
+t14=de 100.01 até  150:,faixa_8,f,11,84,,
+t15=Kg Adicional:,excedente,f,11,84,,
+t16=Outros#007E7E7E\color_swatch_2.png,,,,550, ,
+t17=Taxa Emissão:,valor,f,11,84,,
+t18=Advalorem:,advalorem,p,11,84,,
+validacao=campoPreenchido(uf),campoPreenchido(cidade)
+
+[capitais]
+tab=Capitais
+db=capitais
+ordem=uf,cidade
+modcampoorigem=UF:/120/40//NE/162/10/estados.rcl/
+campoorigem=UF do Estado:/120/40//NE/162/200/estados.rcl/
+chave=id
+chaveprincipal=id
+where=uf="$IDORIGEM"
+relacaokey=uf,"$IDORIGEM"
+//ENUMERAR=filho/where uf="$IDORIGEM"
+c0=UF,uf,c,6,60,,
+c1=Cidade,cidade,c,50,300,,
+#c2=Região,regiao,c,50,150,,
+altura=200
+largura=450
+foco=uf
+forcarleftmask=100
+CampoForcado=
+t0=#UF:,uf,c,2,30,@BU,estado2.rcl,
+h0=#Sigla da UF (Estado) <F2>
+t1=Cidade:,cidade,c,30,250,@B,<#17>geral.rcl{ufsigla=$uf/""},
+h1=Nome da Cidade
+t2=#Região:,regiao=@;Norte;Nordeste;Centro-Oeste;Sudeste;Sul,l,50,250,,
+h1=#Região
+validacao=campoPreenchido(cidade)
+
+[calculo]
+versao=15
+x0=fretepeso:pesoCidade[EXCEDENTE_SIMPLES$outros=valor,*faixa_1{0:10},faixa_2{10.01:20},faixa_3{20.01:30},faixa_4{30.01:40},faixa_5{40.01:50},faixa_6{50.01:70},faixa_7{70.01:100},faixa_8{100.01:150},excedente{150}]
+
+[correcao_de_valores]
+; Tipo p - Permite ajustar os campos abaixo apenas por porcentagems.
+; Tipo v - Permite ajustar os campos abaixo subtraindo e adicionando valores
+tipo=pv

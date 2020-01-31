@@ -1,0 +1,257 @@
+16/06 21:44:46 - ***  SERVIÇO PARADO
+16/06 21:44:49 - Iniciando Suporte Mobile 64bit Versao: 1.13
+16/06 21:44:49 - Variaveis
+16/06 21:44:49 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+16/06 21:44:49 - TCP Servidor
+16/06 21:44:49 - TCP Cliente
+16/06 21:44:49 - Iniciado na porta => 4406
+16/06 21:44:49 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+16/06 21:44:49 - Formato Data   : 16/06/2019 21:44:49
+16/06 21:44:49 - Flags debug 1 sem log 0
+16/06 21:44:49 - BANCO DE DADOS ONLINE > 192.168.88.28:comodoro
+16/06 21:44:49 - PRECO => 30 /            30,00/30/30
+16/06 21:44:49 - iniciar_identificacao_computador
+16/06 21:44:49 - sistema_pegar_perfil
+16/06 21:44:49 - empresa_carregar_segmentos
+16/06 21:44:49 - rcs_iniciar_variaveis_globais
+16/06 21:44:49 - terminal_id
+16/06 21:44:49 - mesas_comandas
+16/06 21:44:49 - LPRINT
+16/06 21:44:49 - Status: Config => 192.168.88.200:9100
+16/06 21:44:49 - Status: Config => 192.168.88.200:9100
+16/06 21:44:49 - Status: Config => c:9100
+16/06 21:44:49 - Status: Config => 192.168.88.200:9100
+16/06 21:44:49 - LISTA DE IMPRESSORAS CARREGADA 4
+16/06 21:44:49 - carregarImp
+16/06 21:44:49 - objetos
+16/06 21:44:49 - produtos_gerenciamento_de_estoque
+16/06 21:44:49 - # status 100%
+16/06 21:44:58 - PEDIDOS SOLICITADO {"sessao":"160620192150121537367951353636090131404MOBILEADM","operacao":"PIT","pedido":"9370","usuario":"1","terminal":"53","conf":"1|1","items":[{"i0":"4|1"}]}
+16/06 21:44:58 - sessao: 160620192150121537367951353636090131404MOBILEADM
+16/06 21:44:58 - id: 9370
+16/06 21:44:58 - usuario: 1
+16/06 21:44:58 - terminal: 53
+16/06 21:44:58 - conf: 1|1
+16/06 21:44:58 0 - 4|1
+16/06 21:44:58 - dados
+16/06 21:44:58 - VALORES? 15,00/15/15/,/"15"
+16/06 21:45:23 - PEDIDOS SOLICITADO {"sessao":"1606201921503615360205980353636090131404MOBILEADM","operacao":"PIT","pedido":"9370","usuario":"1","terminal":"53","conf":"1|1","items":[{"i0":"5|1"}]}
+16/06 21:45:23 - sessao: 1606201921503615360205980353636090131404MOBILEADM
+16/06 21:45:23 - id: 9370
+16/06 21:45:23 - usuario: 1
+16/06 21:45:23 - terminal: 53
+16/06 21:45:23 - conf: 1|1
+16/06 21:45:23 0 - 5|1
+16/06 21:45:23 - dados
+16/06 21:45:23 - VALORES? 12,90/12,9/12,9/,/"12.9"
+16/06 21:45:53 - PEDIDOS SOLICITADO {"sessao":"1606201921510715324070412353636090131404MOBILEADM","operacao":"PIT","pedido":"9371","usuario":"1","terminal":"53","conf":"1|1","items":[{"i0":"5|1"}]}
+16/06 21:45:53 - sessao: 1606201921510715324070412353636090131404MOBILEADM
+16/06 21:45:53 - id: 9371
+16/06 21:45:53 - usuario: 1
+16/06 21:45:53 - terminal: 53
+16/06 21:45:53 - conf: 1|1
+16/06 21:45:53 0 - 5|1
+16/06 21:45:53 - dados
+16/06 21:45:53 - VALORES? 12,90/12,9/12,9/,/"12.9"
+16/06 21:47:42 - ***  SERVIÇO PARADO
+16/06 21:47:44 - Iniciando Suporte Mobile 64bit Versao: 1.13
+16/06 21:47:44 - Variaveis
+16/06 21:47:44 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+16/06 21:47:44 - TCP Servidor
+16/06 21:47:44 - TCP Cliente
+16/06 21:47:44 - Iniciado na porta => 4406
+16/06 21:47:44 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+16/06 21:47:44 - Formato Data   : 16/06/2019 21:47:44
+16/06 21:47:44 - Flags debug 1 sem log 0
+16/06 21:47:44 - BANCO DE DADOS ONLINE > 192.168.88.28:comodoro
+16/06 21:47:44 - PRECO => 30 /            30,00/30/30
+16/06 21:47:44 - iniciar_identificacao_computador
+16/06 21:47:44 - sistema_pegar_perfil
+16/06 21:47:44 - empresa_carregar_segmentos
+16/06 21:47:44 - rcs_iniciar_variaveis_globais
+16/06 21:47:44 - terminal_id
+16/06 21:47:44 - mesas_comandas
+16/06 21:47:44 - LPRINT
+16/06 21:47:44 - Status: Config => 192.168.88.200:9100
+16/06 21:47:44 - Status: Config => 192.168.88.200:9100
+16/06 21:47:44 - Status: Config => c:9100
+16/06 21:47:44 - Status: Config => 192.168.88.200:9100
+16/06 21:47:44 - LISTA DE IMPRESSORAS CARREGADA 4
+16/06 21:47:44 - carregarImp
+16/06 21:47:44 - objetos
+16/06 21:47:44 - produtos_gerenciamento_de_estoque
+16/06 21:47:44 - # status 100%
+16/06 21:48:00 - PEDIDOS SOLICITADO {"sessao":"1606201921531215317174041353636090131404MOBILEADM","operacao":"PIT","pedido":"9370","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"4|1"},{"i1":"5|1"}]}
+16/06 21:48:00 - sessao: 1606201921531215317174041353636090131404MOBILEADM
+16/06 21:48:00 - id: 9370
+16/06 21:48:00 - usuario: 1
+16/06 21:48:00 - terminal: 53
+16/06 21:48:00 - conf: 2|1
+16/06 21:48:00 0 - 4|1
+16/06 21:48:00 1 - 5|1
+16/06 21:48:00 - dados
+16/06 21:48:00 - VALORES? 15,00/15/15/,/"15"
+16/06 21:48:00 - VALORES? 12,90/12,9/12,9/,/"12.9"
+16/06 21:48:00 - PRODUCAO => id:9370 user:1term:53 hora: sessao:1606201921531215317174041353636090131404MOBILEADM
+16/06 21:48:00 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=9370 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="1606201921531215317174041353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+16/06 21:48:00 - GRUPOS:<2,125402><2,125403>
+16/06 21:48:00 - CIS Status: Create
+16/06 21:48:01 - CIS Status: Connect
+16/06 21:48:01 - Status: Write cmd #16#4 (1..4)
+16/06 21:48:01 - Status: ok
+16/06 21:48:01 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 21:48:01 - CIS Status: Close
+16/06 21:48:01 - PERFIL 7
+16/06 21:48:01 - cupom_impressao_producao(9370,True,"",[],125402
+125403
+,1);
+16/06 21:48:01 - IOK 1 STAGE => 28
+16/06 21:49:02 - ***  SERVIÇO PARADO
+16/06 21:49:38 - Iniciando Suporte Mobile 64bit Versao: 1.13
+16/06 21:49:38 - Variaveis
+16/06 21:49:38 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+16/06 21:49:38 - TCP Servidor
+16/06 21:49:38 - TCP Cliente
+16/06 21:49:38 - Iniciado na porta => 4406
+16/06 21:49:38 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+16/06 21:49:38 - Formato Data   : 16/06/2019 21:49:38
+16/06 21:49:38 - Flags debug 1 sem log 0
+16/06 21:49:38 - BANCO DE DADOS ONLINE > 192.168.88.28:comodoro
+16/06 21:49:38 - PRECO => 30 /            30,00/30/30
+16/06 21:49:38 - iniciar_identificacao_computador
+16/06 21:49:38 - sistema_pegar_perfil
+16/06 21:49:38 - empresa_carregar_segmentos
+16/06 21:49:38 - rcs_iniciar_variaveis_globais
+16/06 21:49:38 - terminal_id
+16/06 21:49:38 - mesas_comandas
+16/06 21:49:38 - LPRINT
+16/06 21:49:38 - Status: Config => 192.168.88.200:9100
+16/06 21:49:38 - Status: Config => 192.168.88.200:9100
+16/06 21:49:38 - Status: Config => c:9100
+16/06 21:49:38 - Status: Config => 192.168.88.200:9100
+16/06 21:49:38 - LISTA DE IMPRESSORAS CARREGADA 4
+16/06 21:49:38 - carregarImp
+16/06 21:49:38 - objetos
+16/06 21:49:38 - produtos_gerenciamento_de_estoque
+16/06 21:49:38 - # status 100%
+16/06 21:50:25 - PEDIDOS SOLICITADO {"sessao":"1606201921553915349408972353636090131404MOBILEADM","operacao":"PIT","pedido":"9355","usuario":"1","terminal":"53","conf":"1|1","items":[{"i0":"5|1"}]}
+16/06 21:50:25 - sessao: 1606201921553915349408972353636090131404MOBILEADM
+16/06 21:50:25 - id: 9355
+16/06 21:50:25 - usuario: 1
+16/06 21:50:25 - terminal: 53
+16/06 21:50:25 - conf: 1|1
+16/06 21:50:25 0 - 5|1
+16/06 21:50:25 - dados
+16/06 21:50:25 - VALORES? 12,90/12,9/12,9/,/"12.9"
+16/06 21:50:25 - PRODUCAO => id:9355 user:1term:53 hora: sessao:1606201921553915349408972353636090131404MOBILEADM
+16/06 21:50:25 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=9355 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="1606201921553915349408972353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+16/06 21:50:25 - GRUPOS:<2,125404>
+16/06 21:50:25 - CIS Status: Create
+16/06 21:50:25 - CIS Status: Connect
+16/06 21:50:25 - Status: Write cmd #16#4 (1..4)
+16/06 21:50:25 - Status: ok
+16/06 21:50:25 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 21:50:25 - CIS Status: Close
+16/06 21:50:25 - PERFIL 7
+16/06 21:50:25 - cupom_impressao_producao(9355,True,"",[],125404
+,1);
+16/06 21:50:25 - IOK 1 STAGE => 28
+16/06 21:50:43 - PEDIDOS SOLICITADO {"sessao":"1606201921555615356424015353636090131404MOBILEADM","operacao":"PIT","pedido":"9356","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"4|1"},{"i1":"5|1"}]}
+16/06 21:50:43 - sessao: 1606201921555615356424015353636090131404MOBILEADM
+16/06 21:50:43 - id: 9356
+16/06 21:50:43 - usuario: 1
+16/06 21:50:43 - terminal: 53
+16/06 21:50:43 - conf: 2|1
+16/06 21:50:43 0 - 4|1
+16/06 21:50:43 1 - 5|1
+16/06 21:50:43 - dados
+16/06 21:50:43 - VALORES? 15,00/15/15/,/"15"
+16/06 21:50:43 - VALORES? 12,90/12,9/12,9/,/"12.9"
+16/06 21:50:43 - PRODUCAO => id:9356 user:1term:53 hora: sessao:1606201921555615356424015353636090131404MOBILEADM
+16/06 21:50:43 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=9356 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="1606201921555615356424015353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+16/06 21:50:43 - GRUPOS:<2,125405><2,125406>
+16/06 21:50:43 - CIS Status: Create
+16/06 21:50:43 - CIS Status: Connect
+16/06 21:50:43 - Status: Write cmd #16#4 (1..4)
+16/06 21:50:43 - Status: ok
+16/06 21:50:43 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 21:50:43 - CIS Status: Close
+16/06 21:50:43 - PERFIL 7
+16/06 21:50:43 - cupom_impressao_producao(9356,True,"",[],125405
+125406
+,1);
+16/06 21:50:44 - IOK 1 STAGE => 28
+16/06 21:51:05 - PEDIDOS SOLICITADO {"sessao":"1606201921561815327682734353636090131404MOBILEADM","operacao":"PIT","pedido":"9372","usuario":"1","terminal":"53","conf":"3|1","items":[{"i0":"348|1"},{"i1":"4|1"},{"i2":"5|1"}]}
+16/06 21:51:05 - sessao: 1606201921561815327682734353636090131404MOBILEADM
+16/06 21:51:05 - id: 9372
+16/06 21:51:05 - usuario: 1
+16/06 21:51:05 - terminal: 53
+16/06 21:51:05 - conf: 3|1
+16/06 21:51:05 0 - 348|1
+16/06 21:51:05 1 - 4|1
+16/06 21:51:05 2 - 5|1
+16/06 21:51:05 - dados
+16/06 21:51:05 - VALORES? 11,90/11,9/11,9/,/"11.9"
+16/06 21:51:05 - VALORES? 15,00/15/15/,/"15"
+16/06 21:51:05 - VALORES? 12,90/12,9/12,9/,/"12.9"
+16/06 21:51:05 - PRODUCAO => id:9372 user:1term:53 hora: sessao:1606201921561815327682734353636090131404MOBILEADM
+16/06 21:51:05 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=9372 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="1606201921561815327682734353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+16/06 21:51:05 - GRUPOS:<2,125407><2,125408><2,125409>
+16/06 21:51:05 - CIS Status: Create
+16/06 21:51:05 - CIS Status: Connect
+16/06 21:51:05 - Status: Write cmd #16#4 (1..4)
+16/06 21:51:05 - Status: ok
+16/06 21:51:05 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 21:51:05 - CIS Status: Close
+16/06 21:51:05 - PERFIL 7
+16/06 21:51:05 - cupom_impressao_producao(9372,True,"",[],125407
+125408
+125409
+,1);
+16/06 21:51:05 - IOK 1 STAGE => 28
+16/06 21:52:39 - ***  SERVIÇO PARADO
+16/06 21:52:42 - Iniciando Suporte Mobile 64bit Versao: 1.13
+16/06 21:52:42 - Variaveis
+16/06 21:52:42 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+16/06 21:52:42 - TCP Servidor
+16/06 21:52:42 - TCP Cliente
+16/06 21:52:42 - Iniciado na porta => 4406
+16/06 21:52:42 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+16/06 21:52:42 - Formato Data   : 16/06/2019 21:52:42
+16/06 21:52:42 - Flags debug 1 sem log 0
+16/06 21:52:42 - BANCO DE DADOS ONLINE > 192.168.88.28:comodoro
+16/06 21:52:42 - PRECO => 30 /            30,00/30/30
+16/06 21:52:42 - iniciar_identificacao_computador
+16/06 21:52:42 - sistema_pegar_perfil
+16/06 21:52:42 - empresa_carregar_segmentos
+16/06 21:52:42 - rcs_iniciar_variaveis_globais
+16/06 21:52:42 - terminal_id
+16/06 21:52:42 - mesas_comandas
+16/06 21:52:42 - LPRINT
+16/06 21:52:42 - Status: Config => 192.168.88.200:9100
+16/06 21:52:42 - Status: Config => 192.168.88.200:9100
+16/06 21:52:42 - Status: Config => c:9100
+16/06 21:52:42 - Status: Config => 192.168.88.200:9100
+16/06 21:52:42 - LISTA DE IMPRESSORAS CARREGADA 4
+16/06 21:52:42 - carregarImp
+16/06 21:52:42 - objetos
+16/06 21:52:42 - produtos_gerenciamento_de_estoque
+16/06 21:52:42 - # status 100%
+16/06 21:53:01 - ***  SERVIÇO PARADO
+16/06 21:53:11 - Iniciando Suporte Mobile 64bit Versao: 1.13
+16/06 21:53:11 - Variaveis
+16/06 21:53:11 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+16/06 21:53:11 - TCP Servidor
+16/06 21:53:11 - TCP Cliente
+16/06 21:53:11 - Iniciado na porta => 4406
+16/06 21:53:11 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+16/06 21:53:11 - Formato Data   : 16/06/2019 21:53:11
+16/06 21:53:11 - Flags debug 1 sem log 0
+16/06 21:53:11 - BANCO DE DADOS ONLINE > 192.168.88.28:comodoro
+16/06 21:53:11 - PRECO => 30 /            30,00/30/30
+16/06 21:53:11 - iniciar_identificacao_computador
+16/06 21:53:11 - sistema_pegar_perfil
+16/06 21:53:11 - empresa_carregar_segmentos
+16/06 21:53:11 - rcs_iniciar_variaveis_globais
+16/06 21:53:11 - terminal_id
+16/06 21:53:11 - mesas_comandas

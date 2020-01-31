@@ -1,0 +1,1274 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 12/12/2003
+# Atualizacao: 05/05/2014
+#
+# a - Todos Scripts
+# e - E-mail
+#
+#
+ 
+[arquivo]
+modulo=OPÇÕES DO CADASTRO
+nivelprincipal=0
+//telalargura=480
+//telaaltura=380
+
+
+[Opcoes]
+o0=Cadastro, 0123456789, 9, 11,aegcu
+
+[Cadastro]
+o0=nil, Classificação de Grupo, cadflags, 0123456789, 0, 13:25,g
+o1=nil, +Grupos, categorias, 0123456789, 0, 18,g
+o2=nil, Lembretes, lembrete, 0123456789, 0, 26,a
+o3=nil, Tributação ICMS, tributacao, 0123, 4, 7,a
+o4=nil, Registro ABAC, registroabac, 01, 9, 7,a
+o5=#nil, Tipo, classificatipo, 0123456789, 9, 7,a
+o6=#nil, Flags, classificaflags, 0123456789, 9, 7,a
+o7=nil,E-MAIL Compartilhado, emailp, 0123456789, 9, 5:20,e
+o8=nil,Meu E-MAIL, email, 0123456789, $u, 5:1,e	
+o9=Usuário, Login, login, 0123456789, $u, 11:11,au
+o10=Usuário, E-MAIL, email, 0123456789, $u, 11:5,au
+o11=Cliente, Vendas, vendas, 0123456789, $cli, 15,a
+o12=Cliente, Geral, clientegeraltransp, 0123456789, $cli, 15,a,8
+o13=Cliente, Geral, clientegeralvendas, 0123456789, $cli, 15,a,!8
+o14=Cliente, NFSe, clienteNfse, 0123456789, $cli, 15,a
+o15=Cliente, Contas Bancárias, contas, 0123456789, $cli, 1:23,a
+o16=Cliente, Observação, obsctrc, 0789, $cli, 25, a
+o17=Cliente, Faturamento, clientefaturamento, 0123456789, $cli, 22,a
+o18=Cliente, Faturamento Mensal, clientefaturamentomensal, 0123456789, $cli, 22,a
+#o16=#Cliente, Outro endereço, clienteendereco, 0123456789, $cli, 7,a
+o19=#Cliente, Correspondência, clientecorreio, 0123456789, $cli, 7,a
+o20=Funcionário, Depto Pessoal, funcionariodeptopessoal, 0123456789, $f, 7,a
+o21=Funcionário, Acessórios, funcionarioacessorios, 0123456789, $f, 7,a
+o22=Cobrança, Preferências, cobrancacredor, 04, 9, 22,a
+o23=#Cobrança, Devedor, cobrancadevedor, 04, 9, 22,a
+o24=Cobrança, Comissões, cobrancacomissao, 04, 9, 22,a
+o25=Motorista, Geral, motorista, 0123456789, $m, 7,a
+o26=Motorista, Comissão, motoristacomissao, 0789, $m, 7,a
+o27=Motorista, Veículos, motoristaveiculos, 0789, $m, 7,a
+o28=Motorista, Frete Combinado, fretcomb, 0789, $m, 7, a
+o29=Vendedor, Grupo de vendas, grupoven, 0123456789, $master$v, 11:40,a
+o30=Vendedor, Comissão, vendedorComissao, 0123456789, $9$v, 11:21,a
+o31=Vendedor, Comissão por Cliente, vendedorComissaoCliente, 0123456789, $9$v, 11:20,a
+o32=Plano de Contas, Centro de Custo , centroDeCusto, 0123456789, 0, 13:25,a
+o33=Plano de Contas, Origem de Débito, planoDeContas, 0123456789, 0, 13:25,a
+o34=Avançado,Opções,avancado, 0123456789, 0, 13:25,a
+o35=nil,Colaboradores, colaboradores, 0123456789, 0, 13:25,ac
+o36=nil,Contatos, contatos, 0123456789, 0, 13:25,ac
+
+
+[aaa]
+o0=nil, Geral, geral, 0123456789, 9, 7,a
+o1=nil, Comissão, geral, 0123456789, 9, 7,a
+
+o5=Usuários do Sistema, Filtros, email, 0123456789, 9, 7,a
+o6=Funcionários, Depto Pessoal, geral, 0123456789, 9, 7,a
+o7=Fabricante, Registro ABAC, geral, 0123456789, 9, 7,a
+
+#
+# Parametros de tela
+#
+
+[lembrete]
+tab=LEMBRETES OU RESTRIÇÕES
+comentario=
+db=cadamais
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=restriçao,restricao,c,200,200,,
+relacaokey=idcliente,$IDORIGEM
+where=(idcliente=$IDORIGEM)
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=restricao
+forcarleftmask=20
+forcarrightlabel=1
+t0=Texto informativo#007E7E7E\stop.png,,,,410, ,
+t1=,restricao,t,0,370x350,,
+
+[login]
+tab=Login do Usuário
+db=usuarios
+chave=codigo
+chavePrincipal=codigo
+c0=Código,codigo,i,30,60,,
+c1=Nome,nome,c,50,200,,
+nobrowse=1
+where=(codigo=$IDORIGEM)
+altura=320
+largura=430
+foco=senha
+forcarleftmask=120
+forcarrightlabel=1
+t0=Login#007E7E7E\user_business.png,,,,385, ,
+t1=Usuário:,nome,c,15,260,@U,
+t2=#EMAIL:,email,c,255,260,,
+t3=Senha:,senha,c,15,160,@U#*,
+h3=Senha do usuário para acesso ao Sistema
+t4=Confirmação:,@passuser2,c,15,160,@U#*,
+h4=Confirmação da senha digitada
+validacao=validarSenha(senha),campoPreenchido(nome)
+
+
+
+[__usuarios]
+tab=Login
+comentario=
+db=usuarios
+rcl=
+chave=codigo
+chavePrincipal=codigo
+c0=Código,codigo,i,30,60,,
+c1=Nome,nome,c,40,100,,
+where=(codigo=$IDORIGEM)
+nobrowse=1
+relacaokey=codigo,$IDORIGEM
+altura=320
+largura=430
+foco=nome
+forcarleftmask=90
+forcarrightlabel=1
+t0=Login#007E7E7E\lock.png,,,,410, ,
+t1=Usuário:,nome,c,50,300,,
+h1=Nome do usuário para acesso ao Sistema
+t2=Senha:,senha,c,15,160,@U#*,
+h2=Senha do usuário para acesso ao Sistema
+t3=Confirmação:,@passuser2,c,15,160,@U#*,
+h3=Confirmação da senha digitada
+validacao=validarSenha(senha),campoPreenchido(nome)
+
+[email]
+tab=CONTA DE E-MAIL POR USUÁRIO
+db=cadamais
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Email,out_email,c,200,180,,
+c1=Email de saída,out_smtp,c,200,180,,
+relacaokey=idcliente,$IDORIGEM
+where=(idcliente=$IDORIGEM)
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=out_email
+//forcarleftmask=120
+//forcarrightlabel=1
+t0=Conta de E-MAIL#007E7E7E\email.png,,,,400, ,
+t1=E-MAIL:,out_email,c,255,300,@L,
+h1=Conta de E-MAIL por usuário
+t2=Senha:,out_pass,c,50,300,@{*},
+h2=Senha da conta
+t3=Apelido:,out_apelido,c,50,300,,
+h3=Apelido
+t4=Servidor SMTP#007E7E7E\inbox.png,,,,400, ,
+t5=Endereço:,out_smtp,c,255,300,@L,,
+h5=Endereço do Servidor SMTP. Exemplo: smtp-mail.outlook.com port 587
+t6=Porta:,portasmtp=@;25;587;993;995;26;443;465,l,5,60,@B,
+h6=Número da Porta SMTP (Não é obrigatório o preenchimento)
+t7=Autenticação:,out_autent,sn,3,30,,
+h7=Servidor requer autenticação.
+t8=SSL:,out_ssl,sn,3,30,,
+h8=Servidor requer conexão criptografada.
+t9=forcarleftmask=10
+t10=Informação no Rodapé do E-MAIL#007E7E7E\telephone.png,,,,400, ,
+t11=,out_rodape,tw,0,400x110,,
+h11=Informações para incluir no rodapé do E-MAIL.
+
+[clientegeraltransp]
+tab=GENERALIDADES DO CLIENTE
+comentario=
+db=cadastro
+rcl=
+moduloOcorrencia=cadastro
+chave=codigo
+chavePrincipal=codigo
+c0=Código,codigo,i,30,60,,
+c1=Nome,nome,c,50,200,,
+nobrowse=1
+relacaokey=
+where=(codigo=$IDORIGEM)
+altura=320
+largura=430
+foco=hrEntrada
+forcarleftmask=80
+forcarrightlabel=1
+t0=Horário de Atendimento#007E7E7E\clock.png,,,,395, ,
+t1=Abre:,hrEntrada,h,5,50,,
+h1=Horário de abertura da empresa
+t2=linha-25
+t3=coluna+120
+t4=Fecha:,hrSaida,h,5,50,,
+h4=Horário de fechamento da empresa
+t5=linha-25
+t6=coluna+130
+t7=forcarleftmask=100
+t8=Preferência:,hrPref,h,5,50,,
+h8=Horário de preferência de atendimento
+t9=forcarleftmask=80
+t10=coluna-130
+t11=Dados para Transporte#007E7E7E\delivery.png,,,,395, ,
+t12=coluna-120
+t13=Produtos:,natureza,c,60,120,,
+h13=Tipo de produto a transportar
+t14=linha-25
+t15=coluna+180
+t16=Espécie:,especie,c,20,120,@B,<#26>geral.rcl,
+h16=Espécie de carga a transportar
+t17=coluna-180
+t18=Modelo:,nfmodelo,c,3,35,@B,<#14>geral2.rcl,
+h18=Modelo de Notas Fiscais
+t19=linha-25
+t20=coluna+100
+t21=Série:,nfserie,i,3,30,,
+h21=Número de série das Notas Fiscais
+t22=linha-25
+t23=coluna+100
+t24=Frete:,frete,f,11,84,,
+h24=Taxa de Frete Fixa
+t25=coluna-200
+t26=Faturar:,condPagto,i,3,30,,tabvenda.rcl,
+h26=Condições de pagamento
+t27=DACTE:,dacte=@;Padrao;dacte.pdx;dacte_1.pdx;dacte_2.pdx;dacte_3.pdx,l,50,130,,
+//t27=#Módulo:,as_trafix,i,3,30,,tipotran.rcl,
+t28=Seguro#007E7E7E\lock.png,,,,395, ,
+t29=forcarleftmask=90
+t30=Seguradora:,cSeg,i,6,50,,?cadastro.rcl,
+h30=Seguradora responsável pelo transporte da carga
+t31=Apólice 1:,nApol,c,20,110,,
+h31=Número da Apólice de seguro 1
+t32=linha-25
+t33=coluna+180
+t34=Apólice 2:,nApol2,c,20,110,,
+h34=Número da Apólice de seguro 2
+t35=coluna-180
+t36=#respSeg#007E7E7E\tag.png,,,,400, ,
+t37=respSeg:,respSeg,tw,0,300x100,,
+h37=Informações para incluir no rodapé do E-MAIL.
+t38=Compras#007E7E7E\money.png,,,,395, ,
+t39=Limites:,limite,f,11,84,,
+h39=Limite de compras
+t40=Tipo:,aprazo,ci,3,30,,<#3>geral2.rcl,
+h40=Permitir pagamento à prazo 
+t41=Outros#007E7E7E\world.png,,,,395, ,
+t42=WEB:,intranet,sn,3,30,,
+h42=Permitir divulgar dados na internet
+
+[clientegeralvendas]
+tab=GENERALIDADES DO CLIENTE
+comentario=
+db=cadastro
+rcl=
+moduloOcorrencia=cadastro
+chave=codigo
+chavePrincipal=codigo
+c0=Código,codigo,i,30,60,,
+c1=Nome,nome,c,50,200,,
+nobrowse=1
+relacaokey=
+where=(codigo=$IDORIGEM)
+altura=320
+largura=430
+foco=hrEntrada
+forcarleftmask=80
+forcarrightlabel=1
+t0=Horário de Atendimento#007E7E7E\clock.png,,,,395, ,
+t1=Abre:,hrEntrada,h,5,50,,
+h1=Horário de abertura da empresa
+t2=linha-25
+t3=coluna+120
+t4=Fecha:,hrSaida,h,5,50,,
+h4=Horário de fechamento da empresa
+t5=linha-25
+t6=coluna+130
+t7=forcarleftmask=100
+t8=Preferência:,hrPref,h,5,50,,
+h8=Horário de preferência de atendimento
+t9=forcarleftmask=80
+t10=coluna-250
+t11=Outros#007E7E7E\money.png,,,,395, ,
+t12=Tx entrega:,frete,f,11,84,,
+t13=Compras#007E7E7E\money.png,,,,395, ,
+t14=Limites:,limite,f,11,84,,
+h14=Limite de compras
+t15=Tipo:,aprazo,ci,3,30,,<#3>geral2.rcl,
+h15=Permitir pagamento à prazo 
+t16=Outros#007E7E7E\world.png,,,,395, ,
+t17=WEB:,intranet,sn,3,30,,
+h17=Permitir divulgar dados na internet
+t18=Conta Cadastrada#007E7E7E\world.png,,,,395, ,
+t19=Ativa:,as_conta,sn,3,30,,
+h19=Conta Cadastrada Ativada
+t20=linha-25
+t21=coluna+230
+t22=Saldo:,vContaCad,f,11,84,@R&cor(clsilver|clblack),
+
+
+[obsctrc]
+tab=OBSERVACOES NO CONHECIMENTO DE TRANSPORTE
+comentario=
+db=cadamais
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=restriçao,restricao,c,200,200,,
+relacaokey=idcliente,$IDORIGEM
+where=(idcliente=$IDORIGEM)
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=obs1
+forcarleftmask=20
+forcarrightlabel=1
+t0=Observação no Conhecimento de Transporte#007E7E7E\page_white_edit.png,,,,410, ,
+t1=,obs1,t,0,370x350,,
+
+[clientectrc]
+tab=Dados do CTRC
+comentario=
+db=cadastro
+rcl=
+chave=codigo
+chavePrincipal=codigo
+c0=Código,codigo,i,30,60,,
+c1=Nome,nome,c,50,200,,
+nobrowse=1
+relacaokey=
+where=(codigo=$IDORIGEM)
+altura=320
+largura=430
+foco=natureza
+forcarleftmask=120
+forcarrightlabel=1
+t0=Natureza da carga:,natureza,c,60,200,,
+t1=Espécie de carga:,especie,c,20,200,,
+t2=Nr. de série da NF:,nfserie,i,3,30,,
+t3=#Frete somar ICMS:,icmsoutros,sn,3,30,,
+t4=Módulo:,as_trafix,i,3,30,,tipotran.rcl,
+t5=Seguro#007E7E7E\page_white_edit.png,,,,395, ,
+t6=Seguradora:,cSeg,i,6,50,,?cadastro.rcl,
+t7=Apólice:,nApol,c,20,250,,
+t8=#RNTRC:,rntrc,c,14,200,,
+
+[clienteendereco]
+tab=Outro endereço
+comentario=
+db=cadastro
+rcl=
+chave=codigo
+chavePrincipal=codigo
+c0=Código,codigo,i,30,60,,
+c1=Nome,nome,c,50,200,,
+nobrowse=1
+relacaokey=
+where=(codigo=$IDORIGEM)
+altura=320
+largura=430
+foco=endereco2
+forcarleftmask=100
+forcarrightlabel=1
+t0=Endereço,endereco2,c,40,290,,
+t1=CEP:,cep2,c,9,90,!99999-999;1; ,
+t2=Bairro:,bairro2,c,30,200,,
+t3=Cidade:,cidade2,c,30,200,,
+t4=UF:,uf2,c,2,30,@BU,estado2.rcl,
+
+[clientecorreio]
+tab=Endereço para correspondências
+comentario=
+db=cadastro
+rcl=
+chave=codigo
+chavePrincipal=codigo
+c0=Código,codigo,i,30,60,,
+c1=Nome,nome,c,50,200,,
+nobrowse=1
+relacaokey=
+where=(codigo=$IDORIGEM)
+altura=320
+largura=430
+foco=cadend
+forcarleftmask=100
+forcarrightlabel=1
+t0=Destinatário:,cadend,i,6,50,,?cadastro.rcl,
+
+[funcionarioacessorios]
+tab=Roupas e acessórios de trabalho
+comentario=
+db=funcaces
+rcl=
+chave=id
+chavePrincipal=id
+ordem=data,id
+c0=Data,data,d,10,80,,
+c1=Qtde,qtde,i,6,60,,
+c2=Descrição,descricao,c,100,150,,
+relacaokey=cadastro,$IDORIGEM
+where=cadastro=$IDORIGEM
+altura=210
+largura=430
+foco=data
+forcarleftmask=100
+forcarrightlabel=1
+t0=Data:,data,d,10,80,,
+t1=Quantidade:,qtde,i,6,50,!999999;1; \&0,
+t2=Descrição:,descricao,c,100,270,,
+validacao=noZero(qtde),campoPreenchido(descricao)
+
+[cobrancacredor]
+tab=PREFERENCIAS DE COBRANÇA
+comentario=
+db=cadastro
+rcl=
+chave=codigo
+chavePrincipal=codigo
+c0=Código,codigo,i,30,60,,
+c1=Nome,nome,c,50,200,,
+nobrowse=1
+relacaokey=
+where=(codigo=$IDORIGEM)
+altura=320
+largura=430
+foco=tabela
+forcarleftmask=180
+forcarrightlabel=1
+t0=Credor#007E7E7E\doc_stand.png,,,,410, ,
+t1=Tabela de Correção dos Títulos:,tabela,i,3,30,,tabcalcu.rcl,
+h1=Tabela Personalizada para Correção dos Títulos na Cobrança
+t2=Comissão Contratada:,comissao_6,p,7,70,,
+h2=Porcentagem de Comissão Definida em Contrato
+t3=Agenda de Cobrança:,cobAgenda,i,3,30,,agenda.rcl,
+h3=Agenda Pesonalizada para os Títulos deste Credor
+t4=Devedor#007E7E7E\doc_stand.png,,,,410, ,
+t5=Juros Personalizado:,juros,p,7,60,,
+h5=Porcentagem Personalizada de Juros para este Devedor
+t6=Calcular com Pro-Rata:,prorata,sn,3,30,,
+h6=Calculo com Pro-Rata
+
+[registroabac]
+tab=Configuração do Registro ABAC
+comentario=Utilizado para calculodo código de barras quando fabricante
+db=cadastro
+rcl=
+chave=codigo
+chavePrincipal=codigo
+c0=Código,codigo,i,30,60,,
+c1=Nome,nome,c,50,200,,
+nobrowse=1
+relacaokey=
+where=(codigo=$IDORIGEM)
+altura=320
+largura=430
+foco=cod_pais
+forcarleftmask=180
+forcarrightlabel=1
+t0=Código do País:,cod_pais,i,3,70,!999;1; ,
+t1=Código ABAC:,cod_abac,i,5,70,!99999;1; ,
+
+[motorista]
+tab=Dados do motorista
+comentario=Dados do motorista
+db=cadastro
+ordem=codigo
+rcl=
+chave=codigo
+chaveprincipal=codigo
+c0=CNH,cnh,c,20,100,,
+c1=CAT,cnh_cat,c,5,40,,
+relacaokey=codigo,$IDORIGEM
+where=(codigo=$IDORIGEM)
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=cnh
+forcarleftmask=120
+forcarrightlabel=1
+t0=CNH:,cnh,c,20,180,,
+t1=CAT:,cnh_cat,c,5,80,@U,
+t2=Registro:,cnh_registro,c,20,180,,
+t3=1a. Habilitação:,cnh_data,d,10,80,,
+t4=Vencimento:,cnh_vencto,d,10,80,,
+
+[motoristacomissao]
+tab=Comissão do motorista
+comentario=Definir comissão do motorista
+db=cadastro
+ordem=codigo
+rcl=
+chave=codigo
+chaveprincipal=codigo
+c0=CNH,cnh,c,20,100,,
+c1=CAT,cnh_cat,c,5,40,,
+relacaokey=codigo,$IDORIGEM
+where=(codigo=$IDORIGEM)
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=com_moto
+forcarleftmask=180
+forcarrightlabel=1
+t0=Comissão:,com_moto,p,7,80,,
+
+[motoristaveiculos]
+tab=Veículos vinculado ao motorista
+comentario=
+db=cadastro
+ordem=codigo
+rcl=
+chave=codigo
+chaveprincipal=codigo
+c0=CNH,cnh,c,20,100,,
+c1=CAT,cnh_cat,c,5,40,,
+relacaokey=codigo,$IDORIGEM
+where=(codigo=$IDORIGEM)
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=com_moto
+forcarleftmask=120
+forcarrightlabel=1
+t0=
+
+[funcionariodeptopessoal]
+tab=Dados Departamento Pessoal
+comentario=
+db=cadastro
+ordem=codigo
+rcl=
+chave=codigo
+chaveprincipal=codigo
+c0=Código,codigo,i,8,60,,
+c1=Nome,nome,c,40,150,,
+relacaokey=codigo,$IDORIGEM
+where=(codigo=$IDORIGEM)
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=funcativo
+forcarleftmask=100
+forcarrightlabel=1
+t0=Funcionário#007E7E7E\admin3.bmp,,,,385, ,
+t1=Ativo:,funcativo,sn,3,30,,
+t2=Admissão:,admissao,d,10,80,,
+t3=Demissão:,demissao,d,10,80,,
+t4=Cargo:,profissao,c,40,265,,
+t5=Salário:,salario,f,11,84,,
+t6=Documentos\registr2.bmp,,,,380, ,
+t7=CPF:,cpf,c,20,120,$validarcnpj(),
+t8=RG:,rg,c,20,120,,
+t9=CTPS:,ctps,c,20,120,,
+t10=PIS:,pis,c,20,120,,
+t11=Titulo de eleitor:,titeleitor,c,20,120,,
+t12=Pessoal\admin3.bmp,,,,380, ,
+t13=Nascido:,nascimento,d,10,80,,
+t14=Local:,naturalida,c,30,150,,
+t15=Estado civil:,idec,i,3,30,,<#3>geral.rcl,
+t16=Conjuge:,nomeconj,c,40,265,,
+t17=Trabalho anterior\voltar.bmp,,,,380, ,
+t18=Empresa:,empresa,c,40,265,,
+validacao=validarcnpj(cpf),campoPreenchido(cpf)
+
+[cadastroprive]
+tab=Dados corporal
+comentario=
+db=cadamais
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Pseudonimo,pseudonimo,c,50,200,,
+relacaokey=idcliente,$IDORIGEM
+where=(idcliente=$IDORIGEM)
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=pseudonimo
+forcarleftmask=100
+forcarrightlabel=1
+t0=Pseudonimo:,pseudonimo,c,50,265,,
+t1=Sexo:,sexo,i,1,30,,<#4>geral.rcl,
+t2=Tipo fisico:,idfisico,i,3,30,,fisico.rcl,
+t3=Idade:,idade,i,3,30,!999;1; ,
+t4=Cor do olhos,olhos,c,30,265,,
+t5=Peso:,peso,e,7,60,,
+t6=Altura,altura,e,7,60,,
+t7=Tamanho do pé:,pes,i,3,60,!999;1; ,
+t8=Busto:,busto,c,30,265,,
+t9=Cintura:,cintura,c,30,265,,
+t10=Quadril:,quadril,c,30,265,,
+t11=Disponibilidade\voltar.bmp,,,,380, ,
+t12=Local:,disponib,c,50,265,,
+t13=Dias:,dias,c,50,265,,
+t14=Horários:,horario,c,50,265,,
+t15=Texto compl.:,anote2,t,0,265,,
+
+
+[cobrancacomissao]
+tab=Outras comissões
+comentario=Definir comissão
+db=cadastro
+ordem=codigo
+rcl=
+chave=codigo
+chaveprincipal=codigo
+c0=Código,codigo,i,8,70,,
+c1=Nome,nome,c,40,200,,
+relacaokey=codigo,$IDORIGEM
+where=(codigo=$IDORIGEM)
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=comissao_1
+forcarleftmask=180
+forcarrightlabel=1
+t0=Atendente:,comissao_2,p,7,80,,
+t1=Cobrador interno:,comissao_3,p,7,80,,
+t2=Cobrador externo:,comissao_4,p,7,80,,
+t3=Advogado:,comissao_5,p,7,80,,
+
+[classificatipo]
+tab=Classificação do cadastro
+comentario=
+db=cadastro
+ordem=codigo
+rcl=
+chave=codigo
+chaveprincipal=codigo
+c0=Código,codigo,i,8,70,,
+c1=Nome,nome,c,40,200,,
+relacaokey=codigo,$IDORIGEM
+where=(codigo=$IDORIGEM)
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=nome
+forcarleftmask=120
+forcarrightlabel=1
+t0=
+
+[cadflags]
+tab=GRUPO DE CLIENTES
+comentario=
+dbflg=cadflags
+dbflgcoluna=1
+dbflgcampo=idfiltro
+dbflgwhere=idcliente=$IDORIGEM
+db=categori
+btautoedit=1
+ordem=descricao
+rcl=
+chave=id
+chaveprincipal=id
+c0=Flag,flag,sn,3,40,,
+c1=Código,id,i,8,60,,
+c2=Descrição,descricao,c,50,200,,
+#relacaokey=idcliente,$IDORIGEM
+where=(ativo=1)
+nobrowse=1
+reservado=1
+Rlt=*
+altura=520
+largura=750
+foco=nome
+forcarleftmask=120
+forcarrightlabel=1
+t0=linha=0
+t1=painelflags
+
+[clientefaturamento]
+tab=DADOS PARA FATURAMENTO
+comentario=
+db=cadamais
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=pagopor,pagopor,i,10,80,,
+relacaokey=idcliente,$IDORIGEM
+where=(idcliente=$IDORIGEM)
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=prazo
+forcarleftmask=90
+forcarrightlabel=1
+t0=Dados para faturamento#007E7E7E\data.png,,,,385, ,
+t1=Prazo:,prazo,i,3,60,,
+h1=Prazo para pagamento (em dias)
+t2=linha-25
+t3=coluna+190
+t4=forcarleftmask=150
+t5=Prazo após vencimento:,prazo2,i,3,60,,
+h5=Prazo para cobrança dos títulos após o vencimento (em dias)
+t6=forcarleftmask=90
+t7=coluna-190
+t8=Desconto:,descontos,p,7,60,,
+h8=Porcentagem de descontos no faturamento
+t9=linha-25
+t10=coluna+120
+t11=Praça:,pracapagto,c,30,190,,
+h11=Praça para pagamento
+t12=coluna-120
+t13=Pago por:,pagopor,i,8,60,,cadastrx.rcl,
+
+[clientefaturamentomensal]
+tab=FATURAMENTO MENSAL
+comentario=
+db=cadastro
+rcl=
+moduloOcorrencia=cadastro
+chave=codigo
+chavePrincipal=codigo
+c0=Código,codigo,i,30,60,,
+c1=Nome,nome,c,50,200,,
+nobrowse=1
+relacaokey=
+where=(codigo=$IDORIGEM)
+altura=320
+largura=430
+foco=ddvencto
+forcarleftmask=80
+forcarrightlabel=1
+t0=Faturamento Mensal#007E7E7E\data.png,,,,385, ,
+t1=Vencto:,ddvencto,i,3,60,,
+h1=Dia do vencimento
+t2=Valor:,ddmensal,f,11,84,,
+h2=Valor a cobrar
+t3=Obs:,obs,c,255,300,,
+
+[contas]
+tab=CONTAS BANCÁRIAS
+comentario=
+db=contas
+db2=bancos
+rcl=
+chave=id
+chavePrincipal=id
+c0=Banco,banco,i,30,50,,
+c1=Nome,nbanco,c,30,100,,
+c2=Agência,agencia,c,10,70,,
+c3=Conta,conta,c,15,80,,
+c4=Títular,titular,c,50,100,,
+relacaokey=idcliente,$IDORIGEM
+where=(contas.idcliente=$IDORIGEM)and(contas.banco=bancos.id)
+altura=290
+largura=480
+foco=banco
+t0=Dados da Conta#007E7E7E\vcard.png,,,,450, ,
+t1=Banco:,banco,i,3,30,,bancos.rcl,
+h1=Código do banco
+t2=Agência:,agencia,c,15,100,,
+h2=Código da agência
+t3=Conta:,conta,c,15,100,,
+h3=Número da conta
+t4=linha-25
+t5=coluna+160
+t6=Tipo:,idtipo=1,i,3,30,,<#6>geral.rcl,
+h6=Tipo de conta
+t7=coluna-160
+t8=Dados do Títular#007E7E7E\user_silhouette.png,,,,450, ,
+t9=CNPJ/CPF:,cpf=[cadastro|codigo|cpf],c,20,110,$validarCnpj(),
+h9=CNPJ ou CPF para transferencia com DOC/TED
+t10=Nome:,titular=[cadastro|codigo|nome],c,40,325,,
+h10=Nome completo do títular
+#t6=Cheques:,cheques,i,6,50,!999999;1; \&0,
+validacao=noZero(idtipo),campoPreenchido(titular),noZero(banco)
+
+[tributacao]
+tab=TRIBUTAÇÃO
+comentario=
+db=cadamais
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=pagopor,pagopor,i,10,80,,
+relacaokey=idcliente,$IDORIGEM
+where=(idcliente=$IDORIGEM)
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=icmsst
+forcarleftmask=180
+forcarrightlabel=1
+t0=Tem Substituição Tributária:,icmsst,sn,3,30,,
+
+[categorias]
+tab=GRUPO DE CADASTRO
+comentario=
+db=categori
+resetar=cadflags
+ordem=descricao
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,c,8,60,,
+c1=Descrição,descricao,c,100,300,,
+c2=Ativo,ativo,sn,3,40,,
+reservado=1..19
+Rlt=cadflags.idfiltro
+msg=
+altura=200
+largura=470
+foco=descricao
+botaoExcluir=
+t0=Código:,id,+,3,30,,
+h0=Código da categoria
+t1=Descrição:,descricao,c,50,300,,
+h1=Descrição da categoria
+t2=Ativo:,ativo=Sim,sn,3,30,,
+h2=Categoria ativa (sim/näo)
+
+[veicProp]
+tab=PROPRIETARIO DE VEICULO
+comentario=
+db=cadastro
+ordem=
+rcl=
+chave=codigo
+chaveprincipal=codigo
+c0=Código,codigo,i,8,70,,
+c1=Nome,nome,c,40,200,,
+relacaokey=codigo,$IDORIGEM
+where=(codigo=$IDORIGEM)
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=rntrc
+forcarleftmask=180
+forcarrightlabel=1
+t0=RNTRC:,rntrc,c,20,200,,
+t1=Tipo:,tpProp,i,1,20,,<#22>geral.rcl,
+
+[emailp]
+tab=CONTA DE E-MAIL PRINCIPAL
+comentario=
+db=rclsoft
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=E-MAIL,em_email,c,200,200,,
+c1=Servidor SMTP,em_smtp,c,200,200,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=MCL
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=em_email
+t0=Conta de E-MAIL#007E7E7E\email.png,,,,400, ,
+t1=E-MAIL:,em_email,c,255,300,@L,
+h1=Conta de E-MAIL principal.
+t2=Senha:,em_pass,c,20,300,@{*},
+h2=Senha da conta
+t3=Apelido:,em_apelido,c,50,300,,
+h3=Apelido
+t4=Servidor SMTP#007E7E7E\inbox.png,,,,400, ,
+t5=Endereço:,em_smtp,c,255,300,@LB,,
+h5=Endereço do Servidor SMTP. Exemplo: smtp.rclsoft.com.br
+t6=Porta:,portasmtp=@;25;587;993;995;26;465,l,5,60,@B,
+h6=Número da Porta SMTP (Não é obrigatório o preenchimento)
+t7=Autenticação:,em_auth,sn,3,30,,
+h7=Servidor requer autenticação.
+t8=SSL:,em_ssl,sn,3,30,,
+h8=Servidor requer conexão criptografada.
+t9=forcarleftmask=10
+t10=Informação no Rodapé do E-MAIL#007E7E7E\telephone.png,,,,400, ,
+t11=,em_rodape,tw,0,400x110,,
+h11=Informações para incluir no rodapé do E-MAIL.
+
+[fretcomb]
+tab=FRETE COMBINADO COM MOTORISTA
+comentario=
+db=fretcomb
+db2=
+ordem=tpRod
+rcl=
+chave=id
+chaveprincipal=id
+campos=
+c0=Veículo,tpRod,c,2,60,,
+c1=Observação,obs,c,255,150,,
+c2=Coleta,coleta,f,11,70,,
+c3=Ajudante,ajudante,f,11,70,,
+c4=Outros,outros,f,11,70,,
+relacaokey=cadastro,$IDORIGEM
+where=fretcomb.cadastro=$IDORIGEM
+nobrowse=0
+reservado=0
+Rlt=
+altura=270
+largura=450
+foco=cadastro
+forcarleftmask=100
+forcarrightlabel=1
+t0=Veículo:,tpRod,ci,2,30,,<#20>geral.rcl,
+h0=Tipo de Veículo
+t1=Taxas#007E7E7E\calculator.png,,,,400, ,
+t2=Coleta:,coleta,f,11,84,,
+h2=Taxa por coleta
+t3=Ajudante:,ajudante,f,11,84,,
+h3=Taxa por ajudante
+t4=Outros:,outros,f,11,84,,
+h4=Outras taxas
+t5=Observação:,obs,c,255,300,,
+h5=Observação
+validacao=campoPreenchido(tpRod)
+
+[grupoven]
+tab=GRUPO DE VENDEDORES
+db=grupoven
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,i,5,60,,
+c1=Descrição,descricao,c,50,220,,
+c2=Comissão,comissao,p,11,80,,
+c3=Ativo,ativo,sn,3,30,,
+where=
+reservado=1
+Rlt=*
+altura=250
+largura=450
+foco=descricao
+t0=#Código:,id,+,5,30,,
+h0=Código do Grupo de vendedores
+t1=Descrição:,descricao,c,50,300,,
+h1=Descrição completa 
+t2=Comissões#007E7E7E\money.png,,,,400, ,
+t3=Vendas:,comissao,p,11,84,,
+h3=Porcentagem de comissão de vendas
+t4=Mensal:,cmMensal,p,11,84,,
+h4=Porcentagem de comissão mensal
+t5=Ativo:,ativo=Sim,sn,3,30,,
+h5=Grupo ativo
+validacao=campoPreenchido(descricao)
+
+[vendedorcomissao]
+tab=PARAMETROS DO VENDEDOR
+comentario=
+db=cadastro
+ordem=codigo
+rcl=
+chave=codigo
+chaveprincipal=codigo
+c0=Código,codigo,i,8,70,,
+c1=Nome,nome,c,40,200,,
+relacaokey=codigo,$IDORIGEM
+where=(codigo=$IDORIGEM)
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=comissao_1
+forcarleftmask=90
+forcarrightlabel=1
+t0=Grupo de vendedores#007E7E7E\gerente.png,,,,400, ,
+t1=Grupo:,gpVend,i,3,30,,<#29>geral.rcl,
+h1=Grupo de vendedores
+t2=Comissões#007E7E7E\money.png,,,,400, ,
+t3=Vendas:,comissao_1,p,7,80,,
+h3=Porcentagem de comissão do vendedor
+t4=Mensal:,cmMensal,p,7,80,,
+h4=Porcentagem de comissão em mensalidades.
+
+[vendedorComissaoCliente]
+tab=COMISSÃO DO VENDEDOR POR CLIENTE
+comentario=
+db=comivend
+db2=cadastro
+ordem=cadastro.nome
+rcl=
+chave=id
+chaveprincipal=id
+campos=comivend.id,comivend.vendedor,comivend.cliente,comivend.comissao,cadastro.nome
+c0=Código,cliente,i,8,70,,
+c1=Nome,nome,c,40,250,,
+c2=Comissão,comissao,p,11,84,,
+relacaokey=vendedor,$IDORIGEM
+where=(vendedor=$IDORIGEM) and (comivend.cliente=cadastro.codigo)
+nobrowse=0
+reservado=0
+Rlt=
+altura=230
+largura=450
+foco=cliente
+forcarleftmask=80
+forcarrightlabel=1
+t0=Cliente:,cliente,i,6,50,,?cadastro.rcl,
+h0=Código do cliente
+t1=Comissões#007E7E7E\money.png,,,,400, ,
+t2=Vendas:,comissao,p,11,84,,
+h2=Porcentagem de comissão de vendas
+t3=Mensal:,cmMensal,p,11,84,,
+h3=Porcentagem de comissão mensal
+validacao=campoPreenchido(cliente)
+
+[centroDeCusto]
+tab=CENTRO DE CUSTO
+comentario=
+dbflg=oriflags
+dbflgcoluna=1
+dbflgcampo=idfiltro
+dbflgwhere=idcliente=$IDORIGEM and tipo=2
+dbflgtipo=2
+db=centrocu
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Modulo,auto,i,8,60,,
+c1=Código,id,i,8,60,,
+c2=Descrição,descricao,c,50,200,,
+where=ativo=1
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=
+forcarleftmask=120
+forcarrightlabel=1
+t0=linha=0
+t1=painelflags
+
+[planoDeContas]
+tab=PLANO DE CONTAS
+comentario=
+dbflg=oriflags
+dbflgcoluna=1
+dbflgcampo=idfiltro
+dbflgwhere=idcliente=$IDORIGEM and tipo=1
+dbflgtipo=1
+db=solicita
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Modulo,modulo,i,8,60,,
+c1=Código,id,i,8,60,,
+c2=Descrição,nsolicita,c,50,200,,
+where=(solicita.ativo=1) and (solicita.modulo<>2)
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=nome
+forcarleftmask=120
+forcarrightlabel=1
+t0=linha=0
+t1=painelflags
+
+[planoDeContas2]
+tab=PLANO DE CONTAS
+comentario=
+dbflg=oriflags
+dbflgcoluna=1
+dbflgcampo=idfiltro
+dbflgwhere=idcliente=$IDORIGEM
+db=subconta
+db2=solicita
+ordem=subconta.origem, subconta.conta
+rcl=
+chave=id
+chaveprincipal=id
+campos=subconta.id,subconta.conta,subconta.descricao,subconta.origem,solicita.nsolicita,solicita.modulo
+c0=Código,id,i,8,60,,
+c1=Conta,conta,c,6,60,,
+c2=Descrição,descricao,c,50,200,,
+#relacaokey=idcliente,$IDORIGEM
+where=(solicita.ativo=1) and (subconta.origem=solicita.id) and (solicita.modulo=1)
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=nome
+forcarleftmask=120
+forcarrightlabel=1
+t0=linha=0
+t1=painelflags
+
+[vendas]
+tab=Parametros de Vendas
+comentario=
+db=cadamais
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=restriçao,restricao,c,200,200,,
+relacaokey=idcliente,$IDORIGEM
+where=(idcliente=$IDORIGEM)
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=lucroRev
+forcarleftmask=200
+forcarrightlabel=1
+t0=Margem de Lucro para Revenda:,lucroRev,p,11,80,,
+
+[avancado]
+tab=OPÇÕES AVANÇADAS
+comentario=Dados do motorista
+db=cadastro
+ordem=codigo
+rcl=
+chave=codigo
+chaveprincipal=codigo
+c0=Código,codigo,+,20,100,,
+c1=Nome,nome,c,50,50,,
+where=(codigo=$IDORIGEM)
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=cadCancelado
+forcarleftmask=120
+forcarrightlabel=1
+t0=Cad. cancelado:,cadCancelado,sn,3,30,,
+t1=Conta Cadastrada:,as_conta,sn,3,30,,
+
+[clienteNfse]
+tab=CONFIGURAÇÃO ISS
+comentario=
+db=cadamais
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=id,id,i,200,200,,
+relacaokey=idcliente,$IDORIGEM
+where=(idcliente=$IDORIGEM)
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=issRet
+forcarleftmask=120
+forcarrightlabel=1
+t0=Reter ISS:,issRet,sn,3,30,,
+
+[contatos]
+tab=CONTATOS DO CADASTRO
+db=cadaende
+Rlt=$minutaBioContatos
+msg=MINUTA(S)
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Código,codigo,+,10,80,,
+c1=Nome,nome,c,50,220,,
+c2=Telefone,fone1,c,20,80,,
+SET_MULT_VALIDA=codigo
+SET_MULT=*(chave="CONTATOS") and (idcliente=$IDORIGEM) 
+where=(idcliente=$IDORIGEM) and (chave="CONTATOS")
+relacaokey=idcliente,$IDORIGEM
+relacaokey2=chave,"CONTATOS"
+altura=480
+largura=450
+forcarleftmask=90
+foco=cpf
+t0=Código:,codigo,+,15,70,,
+t1=CPF:,cpf,c,20,120,$validarCnpj(),
+t2=linha-25
+t3=coluna+190
+t4=CRM:,crm,c,20,120,,
+t5=coluna-190
+t6=Nome:,nome,c,50,310,@U,
+t7=CEP:,cep,c,9,70,@B$fcep(),cep(cep;endereco;bairro;uf;cidade),
+h7=Número do CEP
+t8=Endereço:,endereco,c,100,310,@U,
+h8=Endereço Rua, Av, etc...
+t9=Bairro:,bairro,c,50,310,@U,
+h9=Nome do Bairro
+t10=UF:,uf,c,2,30,@U,,
+h10=Sigla da UF (Estado)|{,,,clnavy}(F2) Opções
+t11=Cidade:,cidade,c,50,295,@U,,
+h11=Nome da Cidade
+#t10=UF:,uf,c,2,30,@BU,estado2.rcl,
+#h10=Sigla da UF (Estado)|{,,,clnavy}(F2) Opções
+#t11=Cidade:,cidade,c,50,295,@B,<#17>geral.rcl{ufsigla=uf/""},
+#h11=Nome da Cidade
+t12=Telefone#007E7E7E\money.png,,,,400, ,
+t13=Telefone:,fone1,c,50,310,,
+t14=Celular:,fone2,c,50,310,,
+t15=Outros#007E7E7E\money.png,,,,400, ,
+t16=Ativo:,ativo=Sim,sn,3,30,,
+validacao=campoPreenchido(nome)
+
+[colaboradores]
+tab=COLABORADORES POR CADASTRO
+comentario=
+db=cadastro
+rcl=
+moduloOcorrencia=cadastro
+chave=codigo
+chavePrincipal=codigo
+c0=Código,codigo,i,30,60,,
+c1=Nome,nome,c,50,200,,
+nobrowse=1
+relacaokey=
+where=(codigo=$IDORIGEM)
+altura=320
+largura=430
+foco=idvendedor
+forcarleftmask=110
+forcarrightlabel=1
+t0=Vendedor:,idvendedor,i,6,70,,?cadastro.rcl,
+t1=[!8]Atendente:,idatende,i,6,70,,?cadastro.rcl,
+t2=[!8]Transportadora:,idtransp,i,6,70,,?cadastro.rcl,
+
+t3=[!8]Cobrador#007E7E7E\doc_stand.png,,,,400, ,
+t4=[!8]Interno:,idcobrint,i,6,70,,?cadastro.rcl,
+t5=[!8]Externo:,idcobrext,i,6,70,,?cadastro.rcl,
+
+t6=Outros#007E7E7E\doc_stand.png,,,,400, ,
+t7=[!8]Advogado:,idadvoga,i,6,70,,?cadastro.rcl,
+t8=Comissária 1:,idcomissaria1,i,6,70,,?cadastro.rcl,
+t9=Comissária 2:,idcomissaria2,i,6,70,,?cadastro.rcl,
+t10=Comissária 3:,idcomissaria3,i,6,70,,?cadastro.rcl,

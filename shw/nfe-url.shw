@@ -1,0 +1,11 @@
+URL de consulta de Nota Fiscal Eletronica
+
+[SP]
+homologacao=http://homologacao.nfe.fazenda.sp.gov.br/ConsultaNFe/consulta/publica/ConsultarNFe.aspx
+producao=http://nfe.fazenda.sp.gov.br/ConsultaNFe/consulta/publica/ConsultarNFe.aspx
+[AM]
+homologacao=http://homnfe.sefaz.am.gov.br/nfeweb/formConsulta.do?tipoConsulta=Completa
+producao=http://nfe.sefaz.am.gov.br/nfeweb/formConsultaSubmit.do?acao=submitConsultaCompleta&tipoConsulta=Completa
+[PR]
+homologacao=
+producao=

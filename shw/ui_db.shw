@@ -1,0 +1,425 @@
+#
+#    Modelagem para Camada de Banco de Dados
+#
+#	Atualizado: 04/06/2013
+#
+
+[arquivo]
+modulo=UI - Banco de Dados
+nivelprincipal=0
+telalargura=0
+telaaltura=370
+
+[Opcoes]
+o0=UIdb, 0123456789, 9, 0,aec
+
+[UIdb]
+o0=Conexão,Multiplas, empresas, 0123456789, 0, 42:44,ae
+o1=Conexão,Automático, conexao1, 0123456789, 0, 42:45,ac
+o2=Conexão,Manual, conexao2, 0123456789, 0, 42:46,ac
+o3=Conexão,Roteamento, roteamento, 0123456789, 0, 42:41,ar
+o4=Conexão,FireWall, firewall, 0123456789, $rcl, 42:49,ar
+o5=Conexão,Outros Servidores, servidores, 0123456789, 9, 47:43,ad
+o6=Conexão,Servidor Principal, servidormain, 0123456789, 9, 47:43,ad
+o7=Dados,Manutenção, manutencao, 0123456789, 0, 47:43,ad
+o8=Dados,Backup, backup, 0123456789, 9, 47:8,ad
+o9=Dados,Restaurar, restaurar, 0123456789, 9, 47:48,ad
+o10=Dados,Históricos, historico, 0123456789, 9, 47:3,ad
+
+
+#
+# Parametros de tela
+#
+
+[empresas]
+tab=Empresas (Conexões)
+comentario=
+db=rcs.ini|db|db
+rcl=
+chave=id
+chavePrincipal=id
+dados=RAW
+raw=id|ref|host|port|database|user|password|empresa|skin
+btfst=+|-|a|=|8|2|o
+buscarColuna=2
+ordemColuna=empresa
+botaoExtra=conectar0
+btclose=halt
+c0=Ordem,id,c,3,50,,
+c1=DNS,ref,c,3,40,,
+c2=Empresa,empresa,c,50,200,,
+net_oper=nao
+relacaokey=
+where=
+altura=330
+largura=430
+foco=empresa
+forcarleftmask=90
+forcarrightlabel=1
+t0=linha-15
+t1=Dados da Conexão#007E7E7E\databases.png,,,,400, ,
+t2=linha+10
+t3=Empresa:,empresa,c,50,300,,
+h3=Nome completo da empresa
+t4=Apelido:,ref,c,3,30,@U,
+h4=Apelido da conexão para acesso via browser WEB (opcional)
+t5=Servidor:,host,c,50,300,,
+h5=Endereço do servidor DB "host/IP"
+t6=Porta:,port=3306,c,10,60,,
+h6=Porta do servidor DB
+t7=Database:,database,c,50,300,,
+h7=Nome do Banco de Dados
+t8=Usuário:,user,c,50,300,@#,
+h8=Nome do usuário para conectar no servidor DB
+t9=Senha:,password,c,50,300,@#*,
+h9=Senha do usuário para conectar no servidor DB
+validacao=campoPreenchido(empresa),campoPreenchido(host)
+
+[conexao1]
+tab=Suporte de Conexão (Automárico por Login)
+comentario=
+db=rcs.ini|automatico|db
+rcl=
+chave=id
+chavePrincipal=id
+dados=RAW
+raw=id|login|senha
+nobrowse=1
+btfst=$$
+botaoExtra=conectar1
+btclose=halt
+net_oper=nao
+c0=Ordem,id,c,3,50,,
+c1=Login,login,c,50,200,,
+altura=320
+largura=430
+foco=login
+forcarleftmask=120
+forcarrightlabel=1
+t0=Usuário:,login,c,50,280,,
+h0=Nome do usuário "fornecido pelo suporte ao sistema"
+t1=Senha:,senha,c,50,280,@#*,
+h1=Senha do usuário "fornecido pelo suporte ao sistema"
+t2=Status de Conexão#007E7E7E\disconnect.png,,,,400, ,
+t3=coluna=30
+t4=label|$...|Tahoma,10,clblue,
+t5=gauge|370|20
+validacao=campoPreenchido(login)
+
+[conexao2]
+tab=Suporte de Conexão (Manual)
+comentario=
+db=rcs.ini|manual|db
+rcl=
+chave=id
+chavePrincipal=id
+dados=RAW
+raw=id|ref|host|port|database|user|password|empresa|skin
+btfst=$$
+botaoExtra=conectar2
+btclose=halt
+c0=Ordem,id,c,3,50,,
+c1=Empresa,empresa,c,50,200,,
+net_oper=nao
+relacaokey=
+nobrowse=1
+where=
+altura=320
+largura=430
+foco=host
+forcarleftmask=120
+forcarrightlabel=1
+t0=Dados da Conexão#007E7E7E\database.png,,,,400, ,
+t1=Empresa:,empresa,c,50,280,,
+h1=Nome completo da empresa
+t2=Apelido:,ref,c,3,30,@U,
+h2=Apelido da conexão para acesso via browser WEB (opcional)
+t3=Servidor:,host,c,50,280,,
+h3=Endereço do servidor DB "host/IP"
+t4=Porta:,port=3306,c,10,60,,
+h4=Porta do servidor DB
+t5=Database:,database,c,50,280,,
+h5=Nome do Banco de Dados
+t6=Usuário:,user,c,50,280,@#,
+h6=Nome do usuário para conectar no servidor DB
+t7=Senha:,password,c,50,280,@#*,
+h7=Senha do usuário para conectar no servidor DB
+validacao=campoPreenchido(empresa),campoPreenchido(host)
+
+[manutencao]
+tab=Manutenção de Tabelas
+comentario=
+db=rcs.ini|manutencao|db
+rcl=
+chave=id
+chavePrincipal=id
+dados=RAW
+raw=id|reparos|limpeza|tabela_nova|campo_novo|campo_alterado|indexar
+nobrowse=1
+btfst=$$
+botaoExtra=conectar3
+btclose=halt
+resetar=historico
+c0=Ordem,id,c,3,50,,
+c1=Reparo,reparos,c,50,200,,
+net_oper=nao
+relacaokey=
+where=
+altura=320
+largura=430
+foco=login
+forcarleftmask=180
+forcarrightlabel=1
+t0=Processos#007E7E7E\database.png,,,,400, ,
+t1=Reparo de Tabelas,reparos,k,1,150,,
+t2=Limpeza de Tabelas,limpeza,k,1,150,,
+t3=#linha-50
+t4=#coluna+200
+t5=Novas Tabela,tabela_nova,k,1,150,,
+t6=Verificar Novos Campos,campo_novo,k,1,150,,
+t7=Verificar Campos Alterado,campo_alterado,k,1,150,,
+t8=Indexar Tabelas,indexar,k,1,150,,
+t9=#coluna=30
+t10=#forcarleftmask=0
+t11=#linha-10
+t12=#Status dos Processos#007E7E7E\database.png,,,,400, ,
+t13=#label|$...|Tahoma,10,clblue,
+t14=#linha+20
+t15=#gauge|370|20
+
+[backup]
+tab=Backup do Banco de Dados
+comentario=
+db=rcs.ini|backup|db
+rcl=
+chave=id
+chavePrincipal=id
+dados=RAW
+raw=id|logs|ocorrencias|ediarquivos|naosobrepor|diasemana|destino
+net_oper=nao
+nobrowse=1
+btfst=$$
+botaoExtra=conectar4
+resetar=historico
+c0=Ordem,id,c,3,50,,
+c1=Logs,logs,c,50,200,,
+relacaokey=
+altura=320
+largura=430
+foco=destino
+forcarleftmask=0
+forcarrightlabel=1
+t0=Opções#007E7E7E\accept.png,,,,400, ,
+t1=Logs dos Usuários,logs,k,1,150,,
+t2=#linha-25
+t3=#coluna+200
+t4=Ocorrências dos Usuários,ocorrencias,k,1,150,,
+t5=#linha-25
+t6=#coluna-200
+t7=Residuos de Arquivos,*ediarquivos,k,1,150,,
+t8=#linha-25
+t9=#coluna+200
+t10=Nunca Sobrepor os Arquivos,naosobrepor,k,1,200,,
+t11=#coluna-200
+t12=#forcarleftmask=200
+t13=Separar Arq. por Dia da Semana,diasemana,k,1,180,,
+t14=Pasta Destino#007E7E7E\drive_disk.png,,,,400, 
+t15=coluna-75
+t16=,destino=@c:\backup\,c,255,360,@B,opendir,
+t17=#coluna+75
+t18=#coluna=30
+t19=#forcarleftmask=0
+t20=#Status do Backup#007E7E7E\database.png,,,,400, ,
+t21=####linha+10
+t22=#gauge|170|16
+t23=#linha-25
+t24=#coluna+175
+t25=#gauge|170|16
+
+[restaurar]
+tab=Restaurar Backup
+comentario=
+db=rcs.ini|restaurar|db
+rcl=
+chave=id
+chavePrincipal=id
+dados=RAW
+raw=id|arquivo|tabela
+net_oper=nao
+nobrowse=1
+btfst=$$
+botaoAlterar=rcl
+botaoExtra=conectar5
+resetar=historico
+c0=Ordem,id,c,3,50,,
+c1=Arquivo,arquivo,c,50,200,,
+relacaokey=
+altura=320
+largura=430
+foco=arquivo
+forcarleftmask=0
+forcarrightlabel=1
+t0=Arquivo#007E7E7E\drive_disk.png,,,,400, 
+t1=coluna-80
+t2=,arquivo=@=,c,255,360,@B,openfile[~dat rcs rex^*.dat;*.rcs;*.rex],
+t3=Tabela#007E7E7E\page_code.png,,,,400, ,
+t4=,tabela=@=,c,255,375,,
+t5=#Status da Restauração#007E7E7E\database.png,,,,400, ,
+t6=#coluna+80
+t7=#linha+10
+t8=#gauge|370|16
+
+[historico]
+tab=Histórico de Backup, Restauração e Manutenção
+db=logs_db
+chave=id
+chavePrincipal=id
+c0=Processo,processo,c,15,100,,
+c1=Data,&datahora(data|hora|) as data,d,10,100,,
+c2=Arquivo,arquivo,c,255,100,,
+net_oper=nao
+ordem=id desc limit 0,365
+botaoExcluir=rcl
+botaoAlterar=nao
+botaoIncluir=nao
+botaoVer=sim
+buscarColuna=2
+altura=370
+largura=450
+forcarleftmask=90
+foco=terminal
+t0=Tempos do Processo#007E7E7E\clock.png,,,,400, 
+t1=Inicio:,data,d,10,70,,
+t2=linha-25
+t3=coluna+75
+t4=,hora,c,8,50,,
+t5=coluna-75
+t6=Termino:,finaldata,d,10,70,,
+t7=linha-25
+t8=coluna+75
+t9=,finalhora,c,8,50,,
+t10=coluna-75
+t11=Tempo:,tempo,c,8,125,@&cor(clsilver|clred),
+t12=Detalhes do Arquivo#007E7E7E\drive_disk.png,,,,400, 
+t13=#coluna-75
+t14=Terminal:,terminal,c,10,40,,
+t15=Usuário:,usuario,i,6,60,,?cadastro.rcl,
+t16=Pasta:,localDest,c,255,300,,
+t17=Arquivo:,arquivo,c,255,300,,
+t18=Tamanho:,tamanho,i,15,300,@&cor(clsilver|clblue),
+
+[servidores]
+tab=Servidor Externo
+db=router
+chave=id
+chavePrincipal=id
+colorir=0,1,2|3|Não=,clsilver,R|3|3|Não=,clred
+c0=Ordem,prioridade,i,3,50,,
+c1=Nome,nome,c,30,200,,
+c2=Host/IP,host,c,50,120,,
+c3=Ativo,ativo,sn,3,30,,
+ordem=ativo desc,prioridade
+net_oper=nao
+where=tipo=1
+relacaokey=tipo,1
+#botaoExcluir=rcl
+#botaoAlterar=nao
+#botaoIncluir=nao
+botaoVer=sim
+buscarColuna=0
+altura=370
+largura=450
+forcarleftmask=90
+foco=nome
+t0=Prioridade:,prioridade=@1,i,3,30,,
+h0=Ordem de prioridade.
+t1=Nome:,nome,c,50,300,,
+t2=Ativo:,ativo=Sim,sn,3,30,,
+t3=Dados para Conexão#007E7E7E\database.png,,,,400, ,
+t4=Host/IP:,host,c,50,300,,
+t5=Porta:,porta=3306,i,10,60,,
+t6=Database:,db,c,50,300,,
+t7=Usuário:,usuario,c,50,300,,
+t8=Senha:,senha,c,20,300,@#*,
+
+[roteamento]
+tab=Roteamento de Conexão
+comentario=
+db=rcs.ini|roteamento|db
+chave=id
+chavePrincipal=id
+dados=RAW
+raw=id|terminal|automatico
+btfst=$$
+botaoExtra=conectar6
+btclose=halt
+forcarGravacao=////
+c0=Ordem,id,c,3,50,,
+c1=Terminal,terminal,c,50,200,,
+net_oper=nao
+relacaokey=
+nobrowse=1
+altura=320
+largura=430
+foco=terminal
+forcarleftmask=120
+forcarrightlabel=1
+t0=Terminal de Roteamento#007E7E7E\world.png,,,,400, ,
+t1=linha+10
+t2=Terminal:,terminal=@$cpu,c,255,280,,
+t3=linha+10
+t4=coluna+100
+t5=Roteamento Automático,automatico,k,1,180,,
+
+[firewall]
+tab=Regras de Conexão (FIREWALL)
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=id,id,+,8,60,,
+c1=Nome,nome,c,50,100,,
+autoIncluir=1
+net_oper=nao
+where=nome='firewall'
+nobrowse=1
+Rlt=*
+altura=420
+largura=450
+foco=txt_1
+forcarleftmask=0
+t0=Filtro por Placa de Rede#007E7E7E\drive_network.png,,,,400, ,
+t1=forcarleftmask=10
+t2=coluna=0
+t3=,txt_1,t,0,390x60,,
+t4=linha-30
+t5=Filtro por IP#007E7E7E\target.png,,,,400, ,
+t6=,txt_2,t,0,390x60,,
+t7=linha-30
+t8=Filtro por Usuário#007E7E7E\user.png,,,,400, ,
+t9=,txt_3,t,0,390x60,,
+
+[servidormain]
+tab=SERVIDOR PRINCIPAL
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=id_1,id_1,c,255,150,,
+c1=id_2,id_2,c,255,240,,
+net_oper=nao
+nobrowse=1
+relacaokey=nome,"CONEXAO_SERVIDOR_PRINCIPAL"
+autoIncluir=1
+where=nome='CONEXAO_SERVIDOR_PRINCIPAL'
+altura=180
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=IP:,txt_1,c,50,300,,,
+t1=Porta:,id_1,i,6,70,,,
+t2=Database:,txt_2,c,50,300,,,
+t3=Usuário:,txt_3,c,50,300,,,
+t4=Senha:,txt_4,c,50,300,@##,,
+
+h1=O pedido de produção deve ser o pedido completo

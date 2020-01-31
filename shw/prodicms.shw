@@ -1,0 +1,395 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 12/12/2003
+#
+#
+# a todos
+# d nota de despesas
+# g agenda
+# m movimento de caixa
+# n cadastro de bancos
+# o plano de contas
+# p pagar
+# q gerenciador de ocorrencias
+# r receber
+# s script inicial
+# t conta caixa
+
+[arquivo]
+modulo=OPÇÕES DA NOTA FISCAL
+nivelprincipal=0
+nivelauxiliar=1
+
+[Opcoes]
+o0=Nota, 0123456789, 9, 0,as
+
+[Nota]
+o0=Geral, Tipo, tiponota, 0123, 1, 8,a
+o1=Geral, Países, paises, 0123, 1, 8,a
+o2=Geral, IBGE, ibge, 0123, 1, 8,a
+o3=NF-Eletrônica, Básico, cfgemissao,0123456789, , 7,a
+o4=NF-Eletrônica, Pastas WEB Service, pastas, 0123456789, , 7,a
+o5=NF-Eletrônica, DANFE, danfe, 0123456789, , 7,a
+o6=Tabelas de Tributação, Classificação Fiscal(NCM), classfis, 0123456789, 4, 8,a
+o7=Tabelas de Tributação, Subst. Tributária(MVA), tabmvaprod, 0123456789, 1, 8,a
+o8=Tabelas de Tributação, ICMS, tabicms, 0123789, 1, 8,a
+a7=Tabelas de Tributação, Subst. Tributária(Padrão), tabmva, 0123456789, 1, 8,a
+o9=Tabelas de Tributação, Artigos do ICMS, articms, 0123456789, 1, 8,a
+o10=Tabelas de Tributação, CFOP, cfopnota, 0123456789, 1, 8,a
+
+#
+# Parametros de tela
+#
+
+[cfgemissao]
+tab=CONFIGURAÇÃO PARA EMISSÃO DE NOTA FISCAL
+comentario=
+db=rclsoft
+ordem=empresa
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,5,60,,
+c1=Empresa,empresa,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=170
+largura=460
+foco=nfmodelo
+forcarleftmask=150
+t0=Modelo:,nfmodelo,c,5,50,,
+t1=Série:,nfserie,c,5,50,,
+t2=UF:,nfuf,c,5,30,@BU,estado2.rcl,
+t3=Municipio origem:,nfcidade,c,50,240,,
+t4=Ambiente:,ambiente,c,20,224,@B,ambiente.rcl,
+t5=Modalidade BC ICMS:,modBC,i,11,20,,modbc.rcl,
+t6=Modalidade BC ST ICMS:,modBCST,i,11,20,,modbcst.rcl,
+t7=Arquivo de impressão:,notafiscal,c,20,240,,
+t8=Máximo de prod. por NF:,limitenf,i,4,50,,
+
+[pastas]
+tab=PASTAS PARA GERAR OS ARQUIVOS XML
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=170
+largura=460
+foco=xmlienvio
+forcarleftmask=100
+t0=Envio individual:,xmlienvio,c,255,300,,
+t1=Envio lote:,xmllenvio,c,255,300,,
+t2=Retornos:,xmlretorno,c,255,300,,
+t3=Enviados:,xmlenviado,c,255,300,,
+t4=Erros:,xmlerro,c,255,300,,
+t5=Backup:,xmlbackup,c,255,300,,
+t6=Validos:,xmlvalido,c,255,300,,
+t7=Do usuário:,xmlrex,c,255,300,,
+t8=Software WS:,webserv_exe,c,255,300,,
+t9=IP do Servidor:,ipservidor,c,16,300,,
+t10=URL Consulta:,url,c,255,300,,
+
+[internos]
+tab=CONTROLES INTERNOS
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=170
+largura=460
+foco=modbc
+forcarleftmask=150
+t0=Modalidade BC ICMS:,modBC,i,11,20,,modbc.rcl,
+t1=Modalidade BC ST ICMS:,modBCST,i,11,20,,modbcst.rcl,
+
+[tabmva]
+tab=TABELA DE SUBSTITUIÇÃO TRIBUTÁRIA (PADRÃO)
+comentario=
+db=estados
+ordem=uf
+rcl=estados.rcl
+chave=uf
+chaveprincipal=id
+c0=Sigla,uf,c,12,40,,
+c1=Descrição,nuf,c,50,150,,
+c2=Interna,aliq_interna,p,11,90,,
+//c3=Interestadual,aliq_interestadual,p,11,90,,
+c3=MVA,aliq_mva,p,11,84,,
+reservado=1..27
+altura=230
+largura=420
+BotaoExcluir=Não
+BotaoAlterar=Sim
+BotaoIncluir=Não
+forcarleftmask=150
+foco=aliq_interna
+t0=Sigla:,uf,+,2,60,,
+t1=Descrição:,nuf,+,50,200,,
+t2=Alíquota interna:,aliq_interna,p,11,84,,
+//t3=Aliq. interestadual:,aliq_interestadual,p,11,84,,
+t3=Alíquota MVA:,aliq_mva,p,11,84,,
+
+[tabicms]
+tab=TABELA DE ICMS
+comentario=
+db=tabicms
+ordem=
+rcl=icms.rcl
+chave=id
+chaveprincipal=id
+c0=Origem,uforigem,c,8,80,,
+c1=Destino,ufdestino,c,8,80,,
+c2=Alíquota,valor,p,11,60,,
+// c3=Alíq ST,valor2,p,11,60,,
+// c4=Redução,reducao,p,11,60,,
+// c5=Fixa,fixa,sn,3,30,,
+altura=210
+largura=250
+foco=uforigem
+t0=Origem:,uforigem,c,2,30,@BU,estado2.rcl,
+t1=Destino:,ufdestino,c,2,30,@BU,estado2.rcl,
+t2=Alíquota:,valor,p,10,60,,
+// t3=Alíquota ST:,valor2,p,10,60,,
+// t4=Redução:,reducao,p,10,60,,
+// t5=Margem fixa:,fixa,sn,3,30,,
+validacao=campoPreenchido(uforigem),campoPreenchido(ufdestino),validarIcms(uforigem;ufdestino)
+
+[cfopnota]
+tab=CFOP
+comentario=CFOP
+db=cfopnota
+ordem=codigo
+rcl=cfopnota.rcl
+chave=codigo
+chaveprincipal=id
+c0=Código,codigo,c,8,60,,
+c1=Descrição,ncfop,c,50,300,,
+CampoForcado=codigo
+Rlt=notafisc.cfop,conhecim.operacao,minuta.operacao,conheci1.operacao,minconhe.cfop
+msg=
+altura=180
+largura=450
+foco=codigo
+forcarleftmask=
+t0=Código:,codigo,c,5,60,,
+t1=Descrição:,ncfop,c,50,300,,
+
+[articms]
+tab=ARTIGOS DO ICMS
+comentario=ARTIGOS DO ICMS
+db=articms
+ordem=artigo
+rcl=articms.rcl
+chave=artigo
+chaveprincipal=id
+c0=Artigos,artigo,c,10,90,,
+c1=Descrição,descricao,c,65,300,,
+campoforcado=artigo
+Rlt=conhecim.articms,minuta.articms,conheci1.articms,minconhe.articms
+msg=CTRC(s)
+altura=240
+largura=500
+foco=artigo
+t0=Artigo:,artigo,c,15,80,,
+t1=Descrição:,descricao,t,0,350,,
+
+[tiponota]
+tab=OPERAÇÃO COM NOTAS FISCAIS
+comentario=
+db=tiponota
+ordem=id
+rcl=tiponota.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Descrição,ntiponota,c,50,200,,
+reservado=1,2
+Rlt=*
+altura=170
+largura=300
+BotaoExcluir=Não
+BotaoAlterar=Sim
+BotaoIncluir=Não
+foco=ntiponota
+t0=Código:,id,+,4,30,!999;1; ,
+t1=Descrição:,ntiponota,c,50,150,,
+
+[paises]
+tab=TABELA DE PAÍSES - BACEN
+comentario=
+db=paises
+ordem=nome
+rcl=paises.rcl
+chave=id
+chaveprincipal=id
+c0=Código,codigo,c,5,60,,
+c1=País,nome,c,50,200,,
+
+reservado=
+Rlt=*
+altura=180
+largura=400
+BotaoExcluir=Não
+BotaoAlterar=Sim
+BotaoIncluir=Sim
+foco=nome
+t0=Código:,codigo,c,5,50,!99999;1; ,
+t1=Nome:,nome,c,50,250,,
+
+[classfis]
+tab=TABELA DE CLASSIFICAÇÃO FISCAL - NCM (IPI/PIS/COFINS)
+comentario=Tabela NCM
+db=classfis
+ordem=aordem,codigo
+rcl=classfis.rcl
+chave=id
+chavePrincipal=id
+c0=Código NCM,codigo,c,9,80,,
+c1=Descrição,descricao,c,45,300,,
+Rlt=estoque.cf
+//relacao=classfis->mvaprod, id->grupo
+msg=
+altura=530
+largura=450
+foco=codigo
+t0=Código NCM:,codigo,c,10,100,@U!9999.99.99;1; !,
+t1=Descrição:,descricao,c,60,300,,
+t2=Tabela MVA:,ncmpai,c,10,100,@BU!9999.99.99;1; !,classfis.rcl,
+t3=Ativo:,ativo,sn,3,30,,
+t4=IPI (Alíquotas)#007E7E7E\ok2.bmp,,,,385, ,
+t5=Na entrada:,ipientrada,p,11,84,,
+t6=Na saída:,ipisaida,p,11,84,,
+t7=PIS (Alíquotas)#007E7E7E\ok2.bmp,,,,385, ,
+t8=Na entrada:,pisentrada,p,11,84,,
+t9=Na saída:,pissaida,p,11,84,,
+t10=COFINS (Alíquotas)#007E7E7E\ok2.bmp,,,,385, ,
+t11=Na entrada:,cofinsentrada,p,11,84,,
+t12=Na saída:,cofinssaida,p,11,84,,
+t13=II - Imposto de importação#007E7E7E\ok2.bmp,,,,385, ,
+t14=Alíquota:,ii,p,11,84,,
+validacao=validarNCM(codigo)
+
+[mvaprod]
+tab=TABELA MVA POR PRODUTO
+comentario=
+db=mvaprod
+ordem=uf
+rcl=
+chave=grupo
+chaveprincipal=id
+c0=UF,uf,c,9,80,,estados.rcl,
+c1=Interna,aliq_interna,p,11,84,,
+c2=MVA,aliq_mva,p,11,84,,
+Rlt=
+msg=
+altura=200
+largura=350
+foco=uf
+forcarleftmask=150
+t0=UF:,uf,c,2,40,@BU,estados.rcl,
+t1=Alíquota interna:,aliq_interna,p,11,84,,
+t2=Alíquota MVA:,aliq_mva,p,11,84,,
+validacao=campoPreenchido(uf)
+
+[ibge]
+tab=TABELA DE CÓDIGO DE MUNICIPIOS IBGE
+comentario=
+db=ibge
+ordem=ufsigla,municipionome
+rcl=ibge.rcl
+chave=id
+chaveprincipal=id
+c0=Código,uf,c,3,50,,
+c1=UF,ufsigla,c,5,30,,
+c2=Estado,ufnome,c,50,80,,
+c3=Municipio,municipio,c,7,70,,
+c4=Nome,municipionome,c,50,80,,
+reservado=
+Rlt=*
+altura=250
+largura=400
+BotaoExcluir=Não
+BotaoAlterar=Sim
+BotaoIncluir=Sim
+foco=nome
+t0=UF:,ufsigla,c,5,30,@BU,
+t1=Estado:,ufnome,c,50,200,,
+t2=Código:,uf,c,3,30,!999;1; ,
+t3=Municipio:,municipio,c,7,80,!9999999;1; ,
+t4=Nome:,municipionome,c,50,200,,
+
+[tabmvaprod]
+tab=TABELA SUBST. TRIBUTÁRIA POR PRODUTO
+comentario=
+db=mvaprod
+ordem=uf
+rcl=mva.rcl
+modcampoorigem=Código NCM:/100/70/!9999.99.99;1; /NE/160/10/classfis.rcl/
+campoorigem=Código NCM:/100/70//NE/171/200/classfis.rcl/
+chave=id
+chaveprincipal=id
+where=referencia="$IDORIGEM"
+relacaokey=referencia,"$IDORIGEM"
+c0=Destino,uf,c,9,80,,estados.rcl,
+c1=Interna,aliq_interna,p,11,84,,
+c2=MVA,aliq_mva,p,11,84,,
+Rlt=
+msg=
+altura=200
+largura=350
+foco=uf
+forcarleftmask=150
+t0=Destino:,uf,c,2,40,@BU,estados.rcl,
+t1=Alíquota interna:,aliq_interna,p,11,84,,
+t2=Alíquota MVA:,aliq_mva,p,11,84,,
+validacao=campoPreenchido(uf)
+
+[danfe]
+tab=CONFIGURAÇÃO DO DANFE
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=170
+largura=460
+foco=logo
+forcarleftmask=100
+t0=Impressão:,tipodanfe,c,20,224,@B,danfe.rcl,
+t1=LOGOTIPO#007E7E7E\ok2.bmp,,,,385, ,
+t2=Origem:,logo,i,6,50,,?cadastro.rcl,
+t3=Altura:,logoh,i,4,50,!9999;1; ,
+t4=Largura:,logow,i,4,50,!9999;1; ,
+t5=Textos:,logotextos,sn,3,30,,
+

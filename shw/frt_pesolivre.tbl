@@ -1,0 +1,103 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 20/02/2014
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=
+disableMenu=0
+telalargura=830
+telaaltura=0
+Posicionar=1
+whereexterno=mygroup='tabelapesolivre'
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,+Peso Livre, tabelapesolivre, 0123456789, 9, 25,a
+o2=nil,+Taxas por Peso, taxas, 0123456789, 9, 23,a
+
+#
+# Parametros de tela
+#
+ 
+[tabelapesolivre]
+tab=TABELA PESO LIVRE
+comentario=Tabela para calculo de fretes 
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=90
+forcarleftmask=90
+nobrowse=1
+altura=200
+largura=400
+foco=descr
+t0=Descrição:,descr,c,50,410,,
+h0=Descrição completa
+t1=Validade:,validade,d,10,80,,
+h1=Prazo de validade
+t2=Taxas#007E7E7E\text_align_justify.png,,,,500, ,
+t3=forcarleftmask=120
+t4=Kilo Excedente:,adicional,f,11,84,,
+t5=forcarleftmask=120
+t6=Generalidades#007E7E7E\text_align_justify.png,,,,500, ,
+t7=Devolução:,devolucao,p,11,60,,
+h7=Porcentagem do frete quando for devolução
+t8=linha-25
+t9=coluna+160
+t10=Reentrega:,reentrega,p,11,60,,
+h10=Porcentagem do frete quando for reentrega
+t11=linha-25
+t12=coluna+160
+t13=forcarleftmask=120
+t14=Compartilhada:,compartilhada,sn,3,30,,
+h15=Compartilhar esta tabela com os clientes sem tabela.
+
+[taxas]
+tab=TAXAS POR PESO
+comentario=
+db=tabaereo
+ordem=faixa_1,faixa_2
+rcl=
+chave=tabela
+chavePrincipal=id
+relacaokey=tabela,$IDORIGEM
+tituloWidth=35
+where=tabela="$IDORIGEM"
+c0=Peso(Kg) De,faixa_1,e,11,100,,
+c1=Peso(Kg) Até,faixa_2,e,11,100,,
+c2=Taxa,valorpeso,f,11,84,,
+Rlt=
+msg=
+altura=200
+largura=300
+forcarleftmask=130
+foco=qtde
+t0=Peso(Kg) De:,faixa_1,e,11,84,,
+t1=Peso(Kg) Até:,faixa_2,e,11,84,,
+t2=Taxa:,valorpeso,f,11,84,,
+
+[calculo]
+versao=2
+x0=fretepeso:pesoLivre()
+x1=fretepeso:pesoLivreExcedente()
+

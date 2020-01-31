@@ -1,0 +1,3307 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 12/12/2003
+#
+#
+# a todos
+# d nota de despesas
+# g agenda
+# m movimento de caixa
+# n cadastro de bancos
+# o plano de contas
+# p pagar
+# q gerenciador de ocorrencias
+# r receber
+# s script inicial
+# t conta caixa
+# w Preferencias do Speed
+
+Tabela de cores
+
+$000000F0 - Vemelho
+$00FB0000 - Azul
+$007E7E7E - Cinza
+$00009100 - Verde
+
+[arquivo]
+modulo=PREFERÊNCIAS
+nivelprincipal=1
+nivelauxiliar=0
+Expande=Nao
+
+[Opcoes]
+o0=Básico, 0123456789, 9, 0,aes w
+o1=Dispositivos, 0123456789, 1, 6,a
+o2=Geral, 0123456789, 1, 10,aprmqdgnto
+o3=Sistema, 0123456789, $rcl, 10,a
+o4=#Transportes, 0789, 1, 12,a
+o5=#Outros, 0123456789, 1, 10,a
+o6=WEB Site, 0123456789, 1, 41,a,!20
+o7=insert(shw\transpor.shw)
+o8=insert(shw\estoque.shw)
+o9=insert(shw\nfe.shw)
+o10=#insert(shw\cte.shw)
+o11=insert(shw\tabtribu.shw)
+
+[Básico]
+o0=nil, Licença, rclsoft, 0123456789, 9, 1,as w
+o1=nil, Segmento, segmento, 0123456789, 9, 1,as w
+o2=nil, Contador, contador, 0123456789, 9, 1,as w
+o3=nil, Fisco, fisco, 0123456789, 9, 1,as w
+o4=nil, Formulários, duplicata, 0123456789, 9, 2,a
+o5=nil, +Cores, customizarcores, 0123456789, 9, 37,a
+o6=nil, Variaveis, variaveisform, 0123456789, 9, 37,a
+o7=nil, Agendas, agendas, 0123456789, 5, 3,aprg
+o8=nil, Referências, parametros, 0123456789, 9, 4,a
+o9=nil, Cobrança, paracobranca, 0123456789, 9, 2,a
+o10=nil, +Acordo - Correção de Valores, tabcalcu, 0123456789, 1, 8,a
+o11=nil, E-MAIL, email, 0123456789, 1, 5,ae
+o12=nil, Servidor Root, rootServer, 0123456789, 1$sup, 4,ae,0
+
+[Dispositivos]
+o0=nil, Backups, backup, 0123456789, 9, 8,a
+o1=nil, Terminais, regtermi, 0123456789, 9, 9,a
+o2=nil, Bina, bina, 0123456789, 9, 9,a
+o3=nil, +Ramais, binaraml, 0123456789, 9, 9,a
+o4=nil, +Servidor, binasrv, 0123456789, 9, 9,a
+o5=insert(shw\printprn.shw)
+
+[Geral]
+o0=Vendas$13, Vendedores, vendedor, 0123, 0, 11,a 
+o1=Vendas, Impressão do Cupom, vendacupom, 0123, 9, 7,a
+o2=Vendas, Condições de Pagto, tabvenda, 0123, 1, 11:21,a
+o3=Vendas, Tabela de Fretes, tabfretevendas, 0123, 1, 12,a
+o4=Vendas, Caixa/Turno - Grupo de Clientes, grupoTurnos, 0123, 1,12,a
+o4=#Ordem de Serviço$13, Categorias Help Desk, catdesk, 0123789, 1, 8,a
+o5=Ordem de Serviço, Técnicos, tecnicos, 0123789, 1, 8,a
+o6=Ordem de Serviço, Serviços, listserv, 0123789, 1, 8,a
+o7=Ordem de Serviço, Despesas, despesa2, 0123789, 1, 8,7=a
+o8=Ordem de Serviço, Preço por hora, precohor, 0123789, 1, 8,a
+
+o9=Nota de Despesas,Documentos,docanexo, 0123456789, 1, 8,d
+o10=Nota de Despesas, Eventos (Débito/Crédito), debicred, 0123456789, 4, 8,d
+
+#o7=Financeiro, Tipo de documento, tipo, 0123456789, 4, 8,apr
+o11=#Financeiro, Agendas, agendas, 0123456789, 5, 8,aprg
+o12=#Financeiro, Eventos (Débito/Crédito), debicred, 0123456789, 4, 8,a
+
+
+o13=Cobrança, Serviços, lvservic, 0123456789, 1, 8,a
+o13=#Cobrança, Orgãos de negativação, orgao, 0123456789, 1, 8,ar
+o14=#Cobrança, Tarifas de cobranca, tarifas, 0123456789, 1, 8,ar
+o15=Cobrança, Envio de Docto, enviostp, 0123456789, 1, 8,ar
+
+o16=Armazenagem, Armazens, armazem, 0123456789, 1, 8,a
+o17=Armazenagem, Operações, armazena, 0123456789, 1, 8,a
+o18=Armazenagem, Unidades, unidades, 0123456789, 4, 8,a
+o19=#Armazenagem, Tabela NCM, classfis, 0123456789, 4, 8,a
+o20=Armazenagem, Avarias, avaria, 0123456789, 1, 8,a
+
+o21=#Veículos, Tipo, veicutip, 0123456789, 1, 12:23,a
+o22=#Veículos, Marca, veicmarc, 0123456789, 1, 8,a
+o23=#Veículos, Modelo, veicmode, 0123456789, 1, 8,a
+o24=#Veículos, Uso, seguso, 0789, 1, 8,a
+o25=#Veículos, Combustivel, veicugas, 0123456789, 1, 8,a
+
+o26=Financeiro, Bancos, bancos, 0123456789, 1, 21:18,apmn
+o27=Financeiro, Alineas, alinea, 0123456789, 1, 21:18,ap
+o28=Financeiro, Grupo de contas, grupocc, 0123456789, 1, 21:10,amt
+o29=Financeiro, Feriados, feriados, 0123456789, 5,  3,a
+o30=Financeiro, Prefixo de moedas, prefixo, 045, 1, 8,a
+o31=#Financeiro, Módulo Financeiro, modfinan, 0123456789, 1, 8,ao
+o32=Financeiro, Eventos (Débito/Crédito), debicred, 0123456789, 4, 21:8,a
+o33=#Financeiro, Tipo de Conta, contatip, 0123456789, 1, 8,an
+
+o34=#Financeiro, Espécie de documento, especied, 0123456789, 1, 8,ar
+o35=Financeiro, Cotação de Moedas, moedas, 0123456789, 1, 8,a
+o36=#Financeiro, Correção de valores, tabcalcu, 0123456789, 1, 8,a
+
+o37=Cartões, Operadoras, operacard, 0123456789, 1, 13,a
+o38=Cartões, Bandeiras, bandcard, 0123456789, 1, 13,a
+o39=Cartões, Taxas, taxacard, 0123456789, 1, 13,a
+
+
+o40=#Seguro, Tipo, segtipo, 0123456789, 1, 8,a
+o41=#Seguro, Coberturas, segcober, 0123456789, 1, 8,a
+
+o42=#Diversos, Estado civil, estcivil, 0123456789, 1, 8,a
+o43=Diversos, Operações c/ produtos, operacao, 0123456789, 1, 23:8,a
+o44=Diversos, Estados, estados, 0123456789, 1, 8,a
+o45=Diversos, Tipo de telefone, tfones, 0123456789, 1, 8,a
+o46=#Diversos, Perfil de usuário, direitos, 0123456789, 1, 8,a
+o47=#Diversos, Sexo, sexo, 0123456789, 1, 8,a
+o48=#Diversos, Cores, cores, 0123456789, 1, 8,a
+o49=#Diversos, Tipo de impressora, modprint, 0123456789, 1, 8,a
+o50=Diversos, Minutos de Sabedoria, minsaber, 0123456789, 1,  8,a
+o51=Diversos, Filiais, filiais, 0123456789, 1, 8,a
+o52=Diversos, Atividades, atividad, 0123456789, 1, 8,a
+o53=#Diversos, Filtros, filtros, 0123456789, 1, 8,a
+o54=Diversos, Classificação de Históricos, clashist, 0123456789, 1, 8,a
+o55=Diversos, Históricos Rápido, prehisto, 0123456789, 1, 8,a
+o56=Diversos, Ocorrências, ocorrenc, 0123456789, 4, 8,aq
+o57=Diversos, Tipo fisico, fisico, 0123456789, 1, 8,a
+o58=Diversos, Operação com Notas Fiscais, tiponota, 0123, 1, 8,a
+o59=Diversos, Tipo de Serviços (NF/OS), tiponfos, 0123456789, 1, 8,a
+o60=Diversos, Tipo de Veículo, veicutip, 0123456789, 1, 12,a
+o61=nil, Processos Pendentes,processPend,0123456789, , 15,a
+
+[Sistema]
+o0=nil, Perfil do sistema, perfil, 0123456789, 9, 8,a
+o1=nil, Pesquisas, pesquisa, 0123456789, 9, 8,a
+
+/*
+[Transportes]
+o0=nil, Dinâmico, tipotran, 0789, 9, 20,a
+o1=nil, Ocorrências, ocotrans, 0789, 4, 8,a
+o2=nil, Código de OBS p/ ocorr. de entrega, ocorrobs, 0789, 4, 8,a
+#o3=InterCâmbio Itapemirim, Remessa-Cliente, notfis1, 0789, 9, 8,a
+#o4=InterCâmbio Itapemirim, Remessa-Processados, notfis2, 0789, 9, 8,a
+o3=#InterCâmbio EDI, Importação, edi1, 0789, 9, 8,a
+o4=#InterCâmbio EDI, Importação-Processada, edi2, 0789, 9, 8,a
+o5=nil, Avaria, avaria, 0789, 1, 8,a
+o6=nil, Natureza, natureza, 0789, 1, 8,a
+o7=nil, Espécie, especie, 012345678, 4, 8,a
+o8=nil, Tipo de Natureza, naturez2, 0789, 1, 8,a
+o9=nil, Tipo de manutenção, tipgasto, 0789, 9, 8,a
+o10=#nil, Objetos de mudança, objmudan, 0789, 1, 8,a
+o11=nil, Rotas, rotas, 0789, 1, 8,a
+*/
+
+[Outros]
+o0=#nil, CFOP, cfopnota, 0123456789, 1, 8,a
+o1=#nil, Tabela de ICMS, tabicms, 0123789, 1, 8,a
+o2=#nil, Artigos do ICMS, articms, 0123456789, 1, 8,a
+o3=#nil, ISS por Municipio, iss, 0123789, 1, 8,a
+o4=#nil, Cotação de Moedas, moedas, 0123456789, 1, 8,a
+o5=#nil, Correção de valores, tabcalcu, 0123456789, 1, 8,a
+o6=#nil, Cálculo de Fretes, tabfrete, 0789, 1, 8,a
+o7=#nil, ADValorem, advalore, 0789, 1, 8,a
+
+[WEB Site]
+o0=Servidores, MySql, mysql, 0123456789, 1, 20:15,a
+o1=Servidores, FTP, ftp, 0123456789, 1, 15:15,a
+o2=Transportadora,Geral,rastrear, 0123456789, 1, 20:15,a
+o3=Transportadora,EMAIL dos Pedidos,transpsmtp, 0123456789, 1, 20:15,a
+o4=Mensagens, Contato, webcontato, 0123456789, 1, 15:18,a
+o5=Mensagens, Inscrição, webinscricao, 0123456789, 1, 15:18, a
+o6=Geral, Cores, coresweb, 0123456789, 1, 15:18,a
+o7=Geral, Downloads, webdown, 0123456789, 1, 15:18,a
+o8=Geral,+Categorias, catwebdown, 0123456789, 1, 15:18,a
+o9=Geral, Agenda, webagenda, 0123456789, 1 , 15:18,a
+o10=Geral, Parceiros, webparceiros, 0123456789, 1, 15:18,a
+o11=Geral, Social, websocial, 0123456789, 1, 15:18,a
+o12=Geral, Noticias, webnoticias, 0123456789, 1, 15:18,a
+o12=#Site, Informativos, informe, 0123456789, 1, 8,a
+o13=#Site, Fale conosco, website1, 0123456789, 1, 8,a
+o14=#Site, Links, weblink, 0123456789, 1, 8,a
+o15=#Site, Perguntas e Respostas, questoes, 0123456789, 1, 8,a
+o16=#Servidor RCL,Forçar IP,iprcl, 0123456789, 1, 8,a
+o17=Produtos, Fornecedor, fornsql, 0123456789, 1, 15:15,a
+o18=Produtos, Geral, prodgeral, 0123, 1, 8,a
+o19=Produtos, Descrição, descricao, 0123, 1, 8,a
+
+// [Formulários]
+// o0=nil, Fatura/Duplicata, duplicata, 0123456789, 9, 8,a
+
+
+#
+# Parametros de tela
+#
+
+[rclsoft]
+tab=EMPRESA
+comentario=
+db=rclsoft
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,6,60,,
+c1=Licença,serial,c,40,100,,
+c2=Empresa,empresa,c,50,300,,
+c3=Ativa,ativo,sn,5,30,,
+nobrowse=1
+reservado=1
+Rlt=*
+altura=420
+largura=450
+foco=serial
+Rlt=*
+t0=Licença de uso#007E7E7E\rclsoft.bmp,,,,410, ,
+t1=Licença:,serial,c,30,310,{rcl*},
+h1=Número da Licença para uso do Sistema
+t2=Identificação da empresa#007E7E7E\doc_stand.png,,,,410, ,
+t3=CNPJ/CPF:,cnpj,c,20,130,{rcl^}$validarCnpj(),
+h3=CNPJ ou CPF
+t4=linha-25
+t5=coluna+180
+t6=IE/RG:,ie,c,20,130,,
+h6=Inscrição Estadual ou RG
+t7=coluna-180
+t8=IM:,im,c,20,130,,
+h8=Inscrição Municipal
+t9=linha-25
+t10=coluna+180
+t11=Regime:,crt,ci,1,20,,<#2>nfecfg.rcl,
+#t11=#IE ST:,iest,c,20,130,,
+#h11=Inscrição Estadual de Substituição Tributária
+t12=coluna-180
+t13=Razão Social:,empresa,c,100,310,{rcl*},
+h13=Nome Completo
+t14=Nome Fantasia:,fantasia,c,50,180,,
+h14=Nome Fantasia
+t15=linha-25
+t16=coluna+240
+t17=CNAE:,cnae,c,20,70,,
+h17=Classificação Nacional de Atividades Econômicas
+t18=coluna-240
+t19=Localização#007E7E7E\house.png,,,,410, ,
+t20=Endereço:,endereco,c,50,310,,
+h20=Endereço Rua, Av, etc...
+t21=CEP:,cep,c,9,70,@B$fcep(),cep(cep;endereco;bairro;uf;cidade),
+h21=Número do CEP
+t22=linha-25
+t23=coluna+140
+t24=Bairro:,bairro,c,30,170,,
+h24=Nome do Bairro
+t25=coluna-140
+t26=UF:,uf,c,2,30,@BU,estado2.rcl,
+h26=Sigla da UF (Estado)|{,,,clnavy}(F2) Opções
+t27=linha-25
+t28=coluna+110
+t29=Cidade:,cidade,c,30,185,@B,<#17>geral.rcl{ufsigla=uf/""},
+h29=Nome da Cidade
+t30=coluna-110
+t31=Contato#007E7E7E\telephone.png,,,,410, ,
+
+t32=Telefones:,ddd,i,3,30,,
+h32=DDD
+t33=linha-25
+t34=coluna+35
+
+t35=,telefones,c,60,100,,
+h35=Número do Telefone
+t36=linha-25
+t37=coluna+145
+
+t38=FAX:,fax,c,60,130,,
+h38=Número do FAX
+t39=coluna-180
+t40=Responsável:,contato,c,30,130,
+h40=Nome do Responsável pela empresa
+t41=linha-25
+t42=coluna+180
+t43=EMAIL:,email,c,255,130,,
+h43=Endereço de E-MAIL
+validacao=validarCnpj(cnpj),campoPreenchido(empresa)
+
+[paracobranca]
+tab=PARAMETROS PARA COBRANÇA DE TÍTULOS
+comentario=
+db=rclsoft
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,5,60,,
+c1=Empresa,empresa,c,50,300,,
+nobrowse=1
+reservado=1
+Rlt=*
+altura=275
+largura=462
+foco=credor
+t0=Cobradora:,credor,i,6,50,,?cadastro.rcl,
+t1=C. de Custo:,custos,i,3,50,,centrocu.rcl,
+t2=Origem:,origem,i,3,50,,solicita.rcl, 	
+t3=Sub-Origem:,aco_subconta,i,11,80,,<#3>subconta.rcl|origem=$origem,
+t4=Tipo de Pagto:,tipo,i,3,50,,tipo.rcl,
+t5=Tab. Correção:,tab_corr,i,4,50,,tabcalcu.rcl,
+t6=Filial:,filial,i,4,50,,
+
+[parametros]
+tab=REFERÊNCIAS
+comentario=
+db=rclsoft
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,5,60,,
+c1=Empresa,empresa,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=450
+largura=462
+foco=pagar
+forcarleftmask=110
+forcarrightlabel=1
+t0=Contas à Pagar#007E7E7E\attach_2.png,,,,410, ,
+t1=Agenda:,pagar,i,11,30,,agenda.rcl,
+h1=Inclui automaticamente nos títulos cadastrado no contas à pagar
+t2=Contas à Receber/Cobrança#007E7E7E\attach_2.png,,,,410, ,
+t3=Agenda:,receber,i,11,30,,agenda.rcl,
+h3=Inclui automaticamente nos títulos cadastrado no contas à receber
+t4=Vendas/Faturamento#007E7E7E\attach_2.png,,,,410, ,
+t5=forcarleftmask=110
+t6=Agenda:,agfatura,i,11,30,,agenda.rcl,
+h6=Agenda de Vendas pendente de faturamento
+t7=Plano de Contas:,vnd_subconta,i,11,80,,<#3>subconta.rcl,
+h7=Plano de Contas para faturamento
+t8=Conta Caixa:,caixa,i,11,80,,contacc.rcl,
+h8=Conta caixa para faturamento
+t9=Compras#007E7E7E\attach_2.png,,,,410, ,
+t10=Plano de Contas:,cpr_subconta,i,11,80,,<#4>subconta.rcl,
+h10=Plano de Contas para lançamentos no Contas à Pagar
+t11=OS#007E7E7E\attach_2.png,,,,410, 
+t12=Plano de Contas:,srv_subconta,i,11,80,,<#3>subconta.rcl,
+h12=Plano de Contas para faturamento
+t13=#Pastas Temporárias#007E7E7E\file1.bmp,,,,385, ,
+t14=#Arquivos JPG:,net_jpg,c,255,220,,
+t15=#Arquivos Geral:,pathtemp,c,255,220,,
+
+t12=#Impressão#007E7E7E\print.bmp,,,,385, ,
+t13=#Linhas por página:,linhasporpagina,i,6,60,,
+t14=#Linhas por meia página:,linhasmeiapagina,i,6,60,,
+t15=#Mensagem:,mensagem,t,0,300,,
+
+@t19=Permitir duplicar CNPJ/CPF:,cpfduplo,sn,3,30,,
+
+[vendacupom]
+tab=AJUSTES DA IMPRESSÃO DO CUPOM
+comentario=
+db=rclsoft
+ordem=empresa
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=Codigo,id,+,5,60,,
+c1=Empresa,empresa,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=410
+largura=460
+foco=consumidor
+t0=Cadastro Relacionado a Venda ao Consumidor#007E7E7E\house.png,,,,410, ,
+t1=forcarleftmask=0
+t2=coluna-30
+t3= ,consumidor,i,6,60,,cadastrx.rcl,
+h3=Cadastro relacionado a venda ao consumidor<F2>
+t4=linha-5
+t5=Cabeçalho do Cupom#007E7E7E\house.png,,,,410, ,
+t6=forcarleftmask=10
+t7=,cup_cabeca,t,0,400x70,,
+h7=Informações para imprimir no cabeçalho do Cupom@Exemplo: Nome da empresa/Endereço/Telefone@@Variaveis@<FF> = Ignora linha@<B> = Ativar Negrito@<b> = Desativar Negrito@<G> = Ativar Fonte Grande@<N> = Ativar Fonte Normal@<c> = Ativar Fonte Pequena
+t8=linha-15
+t9=Rodapé do Cupom#007E7E7E\house.png,,,,410, ,
+t10=,cup_msg,t,0,400x70,,
+h10=Informações para imprimir no rodapé do Cupom@Variaveis@<FF> = Ignora linha@<B> = Ativar Negrito@<b> = Desativar Negrito@<G> = Ativar Fonte Grande@<N> = Ativar Fonte Normal@<c> = Ativar Fonte Pequena
+t11=linha-15
+t12=Outros#007E7E7E\house.png,,,,410, ,
+t13=forcarleftmask=100
+t14=Título:,cup_titulo,c,40,330,,
+h14=Texto para imprimir apos o cabeçalho@Variaveis@[AUTO_VENDA] = Imprime PEDIDO DE VENDA ou ORCAMENTO
+t15=Loja:,cup_loja,i,6,60,,
+h15=Código da Loja
+t16=linha-25
+t17=coluna+130
+t18=Colunas:,cup_coluna,i,3,40,,
+t19=linha-25
+t20=coluna+110
+t21=forcarleftmask=150
+t22=Avanço do papel:,cup_avanco,i,3,40,,
+h22=Quantidade de linhas para avançar o papel
+t23=coluna-200
+t24=Impressão Compactada,cup_compact,sn,3,30,,
+t25=#Vendedor fixo:,vendFixo,i,6,50,,?cadastro.rcl,
+
+[layoutnf]
+tab=ARQUIVO DE IMPRESSÃO DE NOTA FISCAL
+comentario=
+db=rclsoft
+ordem=empresa
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,5,60,,
+c1=Empresa,empresa,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=170
+largura=460
+foco=notafiscal
+forcarleftmask=190
+t0=Arquivo Nota Fiscal de Vendas:  ,notafiscal,c,20,200,,
+t1=Arquivo Nota Fiscal de Serviços:,nfservico,c,20,200,,
+
+[printers]
+tab=IMPRESSORAS DE CONEXÃO DIRETA - LPT/COM/USB
+comentario=
+db=printers
+rcl=printers.rcl
+chave=id
+chavePrincipal=id
+c0=Descrição,descricao,c,30,250,,
+c1=Porta,porta,c,25,120,,
+//c2=Módulo,modulo,c,15,80,,
+altura=410
+largura=480
+foco=descricao
+forcarleftmask=120
+t0=Descrição:,descricao,c,200,315,,
+h0=Nome Completo da Impressora
+t1=#USB:,usb,sn,3,30,,
+h1=Porta tipo USB.
+t2=Porta:,porta,c,100,300,@BX,geral.rcl,
+h2=Porta de Comunicação da Impressora<F2>
+t3=#IP/Terminal:,terminal,c,100,300,@B,<#10>geral.rcl,
+//GetNameTerminal(),
+h3=IP ou Nome do Computador Conectado na Impressora<F2>
+t4=Compartilhamento:,share,c,255,300,,
+h4=Nome do compartilhamento da impressora.
+t5=#Editar:,path,sn,3,30,,
+h5=#Porta de Comunicação pode ser alterada no momento da impressão
+t6=Módulo:,modulo,c,50,300,@BX,<#2>geral.rcl,
+h6=Vinculo da Impressora por Módulos do Sistema
+t7=Fonte:,idfonte,i,3,20,,modprint.rcl,
+h7=Comandos da Impressora
+t8=Ativo:,ativa=Sim,sn,3,30,,
+h8=Impressora Ativa
+t9=coluna+285
+t10=linha-25
+t11=Ignorar cópias:,nocopias,sn,3,30,,
+h11=Ignorar campo cópias
+t12=coluna-285
+t13=Informações:,comentario,t,0,315x90,,
+h13=Informações detalhada da Impressora
+
+[backup]
+tab=HISTÓRICO DE BACKUP
+comentario=Sistema de backup. Parametros para fazer cópias de segurança do banco de dados, caso ocorra do equipamento ter problemas que possa impedir o uso do sistema, com o backup você pode instalar o sistema em outro equipamento e continuar usando normalmente.
+db=backup
+rcl=
+chave=id
+chaveprincipal=id
+ordem=id desc
+c0=Data,&datahora(data|hora|) as data,d,10,100,,
+c1=Arquivo,arquivos,c,255,100,,
+BotaoIncluir=RCL
+BotaoAlterar=RCL
+BotaoVer=
+BotaoExcluir=RCL
+BotaoImprimir=
+BotaoFechar=
+altura=330
+largura=450
+foco=arquivos
+t0=ID:,id,+,4,80,,
+t1=Data:,data,d,10,80,,
+t2=Hora:,hora,c,8,80,,
+t3=Arquivo:,arquivos,c,255,300,,
+t4=Destino:,destino,c,255,300,,
+t5=Size:,maxsize,i,15,80,,
+t6=Terminal:,terminal,c,10,80,,
+t7=Usuário:,usuario,c,50,300,,
+
+[regtermi]
+tab=CADASTRO DE TERMINAIS
+comentario=Computadores conectados a rede. Cada login que um terminal faz no sistema, ele é registrado e recebe um número de terminal.
+db=regtermi
+rcl=
+chave=id
+chaveprincipal=id
+ordem=id
+c0=Terminal,id,c,20,60,,
+c1=Versão,versao,c,15,60,,
+c2=Nome,terminal,c,20,120,,
+c3=Bloqueado,bloqueado,sn,3,80,,
+c4=MAC Address,local,c,20,100,,
+altura=480
+largura=380
+BotaoExcluir=RCL
+BotaoAlterar=
+BotaoIncluir=
+foco=descricao
+t0=Terminal:,id,+,4,30,,
+t1=Descrição:,descricao,c,50,200,,
+t2=Departamento:,departamento,c,50,200,,
+t3=MACADRESS:,local,c,50,200,,
+t4=ID_CPU:,modelocpu,c,50,200,,
+t5=Nome:,terminal,c,50,200,,
+t6=Bloqueado:,bloqueado,sn,30,40,,
+t7=Modelo:,modelo,c,50,200,,
+t8=Impressora:,impressora,i,3,30,,printers.rcl,
+#t3=Fabricante:,fabricante,c,50,300,,
+#t4=CPU MHZ:,mhzcpu,i,11,50,!9999999;1; ,
+#t5=CPU Modelo:,modelocpu,c,50,200,,
+t9=OS:,os,c,100,200,,
+t10=Placa de rede:,placaderede,c,50,200,,
+#t5=Drive:,drive,c,50,200,,
+#t9=Plug & Play:,plugplay,sn,3,30,,
+#t10=IRQ:,irq,c,5,50,,
+#t11=Port:,port,c,5,50,,
+t11=IP:,ip,c,20,200,,
+t12=NetMask:,netmask,c,20,200,,
+#t15=Compra:,compra,d,10,80,,
+t13=Nota Fiscal:,notafiscal,i,11,100,!9999999999;1; ,
+t14=Garantia:,garantia,c,20,100,,
+t15=Preço:,preco,f,11,84,,
+
+[secao]
+tab=SEÇÃO PRODUTOS
+comentario=
+db=secao
+ordem=nsecao
+rcl=secao.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Descrição,nsecao,c,50,300,,
+Rlt=estoque.idsecao
+msg=PRODUTO(S)
+altura=300
+largura=450
+foco=nsecao
+t0=Código:,id,+,4,30,,
+t1=Descrição:,nsecao,c,50,280,,
+t2=Impostos#007E7E7E\ok2.bmp,,,,385, ,
+t3=NCM:,ncm,c,10,84,@BU,classfis.rcl,
+t4=Tributação:,st,i,3,30,,classtri.rcl, 
+t5=Alíq fixa ICMS:,icms,p,11,84,,
+
+
+[abc]
+// t5=ICMS SUBSTITUIÇÃO TRIBUTÁRIA#007E7E7E\ok2.bmp,,,,385, ,
+// t6=Alíquota fixa:,subicms,p,11,84,,
+t6=PIS (Alíquotas)#007E7E7E\ok2.bmp,,,,385, ,
+t7=Na entrada:,pisentrada,p,11,84,,
+t8=Na saída:,pissaida,p,11,84,,
+t9=COFINS (Alíquotas)#007E7E7E\ok2.bmp,,,,385, ,
+t10=Na entrada:,cofinsentrada,p,11,84,,
+t11=Na saída:,cofinssaida,p,11,84,,
+t12=II - Imposto de importação#007E7E7E\ok2.bmp,,,,385, ,
+t13=Alíquota:,ii,p,11,84,,
+
+[especie]
+tab=Espécie
+comentario=Espécie de produtos
+db=unidades
+ordem=nunidade
+rcl=
+chave=nunidade
+chavePrincipal=id
+c0=Unidade,nunidade,c,8,60,,
+c1=Descrição,udescricao,c,50,250,,
+altura=200
+largura=450
+foco=nunidade
+t0=Código:,id,+,4,30,,
+t1=Unidade:,nunidade,c,3,60,,
+t2=Descrição:,udescricao,c,50,300,,
+
+
+[tipo]
+tab=Tipo de documento
+comentario=Cadastro de tipo de documento, utilizado no cadastro de títulos no Contas à Receber e Contas à Pagar. Exemplo ( Cheque, Duplicata, Fatura, Boleto, ... )
+db=tipo
+ordem=ntipo
+rcl=tipo.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Descrição,ntipo,c,50,200,,
+altura=350
+largura=450
+foco=ntipo
+t0=Código:,id,+,4,30,,
+t1=Descrição:,ntipo,c,50,300,,
+t2=Operação Bancária:,banco,sn,3,30,,
+t3=Operação com Boleto:,boleto,sn,3,30,,
+t4=Dias p/ compensação:,dias,i,3,60,,
+t5=Numerador:,numerador,c,20,300,,
+t6=CPMF:,cpmf,e,11,84,,
+t7=TEF:,tef,sn,3,30,,
+t8=Filtro ECF:,ecf,sn,3,30,,
+
+[agendas]
+tab=CADASTRO DE AGENDAS
+comentario=
+db=agendas
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,c,8,60,,
+c1=Descrição,descricao,c,100,200,,
+reservado=1,2
+Rlt=pagar.idagenda,receber.idagenda
+msg=TÍTULO(S)
+altura=300
+largura=450
+foco=descricao
+t0=#Código:,id,+,3,30,,
+t1=Descrição:,descricao,c,100,310,,
+h1=Nome completo da agenda
+t2=Usuários autorizado a gerenciar esta agenda#007E7E7E\user.png,,,,410, ,
+t3=Usuário 1:,operador,i,6,60,,cadaoper.rcl,
+h3=Usuário com acesso a esta agenda
+t4=Usuário 2:,operador2,i,6,60,,cadaoper.rcl,
+h4=Usuário com acesso a esta agenda
+t5=Usuário 3:,operador3,i,6,60,,cadaoper.rcl,
+h5=Usuário com acesso a esta agenda
+t6=Usuário 4:,operador4,i,6,60,,cadaoper.rcl,
+h6=Usuário com acesso a esta agenda
+t7=Usuário 5:,operador5,i,6,60,,cadaoper.rcl,
+h7=Usuário com acesso a esta agenda
+
+[debicred]
+tab=Débito/Crédito
+comentario=Lançamentos de débito ou crédito, quando você cadastra um título é possivel detalhar o valor com vários lançamento de débito ou crédito e o valor do título será o saldo dos lançamntos.
+db=debicred
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,c,8,60,,
+c1=Descrição,descricao,c,50,300,,
+c2=Tipo,tipo,c,1,30,,
+c3=Ativo,ativo,sn,3,30,,
+altura=210
+largura=450
+foco=descricao
+t0=Código:,id,+,4,30,,
+t1=Descrição:,descricao,c,100,300,,
+t2=Tipo (D)débito (C)crédito:,tipo,c,1,30,,
+t3=Ativo,ativo,sn,3,30,,
+
+[grupocc]
+tab=GRUPOS DE CONTA CAIXA
+comentario=
+db=grupocc
+ordem=descricao
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,c,5,60,,
+c1=Descrição,descricao,c,50,200,,
+reservado=1,2,3
+Rlt=contacc.grupo/descricao
+msg=CONTA(S) CAIXA(S)
+altura=180
+largura=450
+foco=descricao
+t0=Código:,id,+,3,40,,
+h0=Código do grupo
+t1=Descrição:,descricao,c,50,300,,
+h1=Descrição completa do grupo
+[alinea]
+tab=ALINEAS DE DEVOLUÇÃO DE CHEQUES
+comentario=
+db=alinea
+ordem=alinea
+rcl=alinea.rcl
+chave=alinea
+chaveprincipal=id
+c0=Alinea,alinea,c,3,60,999,
+c1=Descrição,descricao,c,75,300,,
+altura=180
+largura=550
+foco=alinea
+t0=Alinea:,alinea,i,3,60,,
+h0=Código da alinea
+t1=Descrição:,descricao,c,240,400,,
+h1=Descrição completa da alinea
+
+[bancos]
+tab=CADASTRO DE BANCOS
+comentario=
+db=bancos
+ordem=id
+rcl=bancos.rcl
+ordem=id
+chave=id
+chaveprincipal=idx
+c0=Código,id,c,3,60,999,
+c1=Nome,nbanco,c,70,300,,
+altura=180
+largura=450
+BotaoExcluir=Não
+BotaoAlterar=Sim
+BotaoIncluir=Simfoco=id
+t0=Código:,id,i,3,50,,
+h0=Código do banco
+t1=Nome:,nbanco,c,50,300,,
+h1=Nome do banco
+validacao=campoPreenchido(id),campoPreenchido(nbanco),duplicidades(id;[id-bancos])
+
+[operacao]
+tab=Operacao
+comentario=Operacao de compra e venda. Usado na emissao de pedido.
+db=operacao
+ordem=noperacao
+rcl=operacao.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Descrição,noperacao,c,50,300,,
+reservado=1,2
+Rlt=pedidos.idoperacao
+msg=COMPRA(s) OU VENDA(s)
+altura=290
+largura=420
+BotaoExcluir=Não
+BotaoAlterar=Sim
+BotaoIncluir=Sim
+foco=noperacao
+t0=Código:,id,+,4,30,!999;1; ,
+t1=Descrição:,noperacao,c,50,300,,
+t2=Op.venda:,venda,sn,3,30,
+t3=Op.compra:,compra,sn,3,30,
+t4=Op.OS:,os,sn,3,30,
+t5=Op.orçamento:,orcamento,sn,3,30,
+
+[tiponota]
+tab=OPERAÇÃO COM NOTAS FISCAIS
+comentario=
+db=tiponota
+ordem=ntiponota
+rcl=tiponota.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Descrição,ntiponota,c,50,200,,
+
+reservado=1,2
+Rlt=*
+altura=170
+largura=300
+BotaoExcluir=Não
+BotaoAlterar=Sim
+BotaoIncluir=Não
+foco=ntiponota
+t0=Código:,id,+,4,30,!999;1; ,
+t1=Descrição:,ntiponota,c,50,150,,
+
+[tiponfos]
+tab=Tipo de NF/OS
+comentario=Tipo de nota fiscal. 
+db=tiponfos
+ordem=descricao
+rcl=tiponfos.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Descrição,descricao,c,50,200,,
+altura=200
+largura=440
+foco=descricao
+t0=Código:,id,+,4,30,!999;1; ,
+t1=Descrição:,descricao,c,50,300,,
+t2=D. Nota:,descricaonf,c,255,300,,
+
+[estados]
+tab=SIGLA DOS ESTADOS BRASILEIRO
+comentario=
+db=estados
+ordem=uf
+rcl=estados.rcl
+chave=uf
+chaveprincipal=id
+c0=UF,uf,c,5,80,,
+c1=Descrição,nuf,c,50,200,,
+reservado=1..27
+altura=170
+largura=420
+BotaoExcluir=Sim
+BotaoAlterar=Sim
+BotaoIncluir=Sim
+foco=uf
+t0=UF:,uf,c,2,60,@U,
+t1=Descrição:,nuf,c,50,250,,
+
+[tfones]
+tab=Tipo de telefone
+comentario=Tipo de telefone. Usado no cadastro de telefone.
+db=tfones
+ordem=nfone
+rcl=tfones.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Descrição,nfone,c,50,200,,
+reservado=1..5
+Rlt=telefone.idtipo
+msg=TELEFONE(s)
+altura=160
+largura=420
+foco=nfone
+t0=Código:,id,+,4,30,,
+t1=Descrição:,nfone,c,50,300,,
+
+[direitos]
+tab=Perfil de usuários
+comentario=Classificacao do usuario no sistema.
+db=direitos
+ordem=id
+rcl=direitos.rcl
+chave=id
+chaveprincipal=id
+c0=Codigo,id,+,8,60,,
+c1=Descricao,descricao,c,50,250,,
+reservado=1..9
+altura=160
+largura=420
+foco=descricao
+t0=Codigo:,id,+,4,30,,
+t1=Descricao:,descricao,c,50,300,,
+
+[prefixo]
+tab=Prefixos
+comentario=Prefixo monetario.
+db=prefixo
+ordem=inicio
+rcl=
+chave=id
+chaveprincipal=id
+c0=Prefixo,prefixo,c,15,60,,
+c1=Descricao,nome,c,35,150,,
+c2=Inicio,inicio,d,10,80,,
+c3=Termino,final,d,10,80,,
+altura=240
+largura=420
+foco=prefixo
+t0=ID:,id,+,4,30,,
+t1=Prefixo:,prefixo,c,10,80,,
+t2=Descricao:,nome,c,50,300,,
+t3=Inicio:,inicio,d,10,80,,
+t4=Termino:,final,d,10,80,,
+
+[veicutip]
+tab=TIPO DE VEÍCULO
+comentario=
+db=veicutip
+ordem=cubagem1,descricao
+rcl=
+chave=id
+chaveprincipal=id
+c0=Ref,tpRod,c,5,60,,
+c1=Descrição,descricao,c,50,190,,
+c2=Peso de,cubagem1,i,10,80,,
+c3=Peso até,cubagem2,i,10,80,,
+altura=230
+largura=420
+foco=tpRod
+t0=Tipo:,tpRod,ci,2,30,,<#20>geral.rcl,
+h0=Tipo de rodagem, código usado para cálculo do frete
+t1=Descrição:,descricao,c,50,250,,
+h1=Descrição completa
+t2=Peso de:,cubagem1,i,10,100,,
+h2=Peso inicial em Kilos
+t3=Peso até:,cubagem2,i,10,100,,
+h3=Peso final em Kilos
+validacao=campoPreenchido(tpRod)
+
+[cores]
+tab=COR
+comentario=Cadastro de cores. Usado no cadastro de veiculos.
+db=cores
+ordem=descricao
+rcl=
+chave=id
+chaveprincipal=id
+c0=Cores,hex,c,15,60,,
+c1=Descricao,descricao,c,50,300,,
+altura=200
+largura=420
+foco=descricao
+t0=ID:,id,+,4,30,,
+t1=Descricao:,descricao,c,50,300,,
+t2=Hex:,hex,c,15,60,,
+
+[modprint]
+tab=Tipo de Impressora
+comentario=Impressoras Matriciais, Jato de Tinta, Laser.
+db=modprint
+ordem=descricao
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,15,60,,
+c1=Descrição,descricao,c,50,300,,
+reservado=1,2,3
+Rlt=printers.idfonte
+msg=IMPRESSORA(s)
+altura=400
+largura=450
+foco=descricao
+t0=ID:,id,+,4,30,,
+t1=Descrição:,descricao,c,50,300,,
+t2=Reset:,reset,c,50,300,,
+t3=Reset font:,resetfont,c,50,300,,
+t4=Bold:,bold,c,50,300,,
+t5=Bold<-:,bold0,c,50,300,,
+t6=Italic:,italico,c,50,300,,
+t7=Italic<-:,italico0,c,50,300,,
+t8=Underline:,underline,c,50,300,,
+t9=Underline<-:,underline0,c,50,300,,
+t10=LPI6:,lpi6,c,50,300,,
+t11=LPI8:,lpi8,c,50,300,,
+t12=CPI5:,cpi5,c,50,300,,
+t13=CPI6:,cpi6,c,50,300,,
+t14=CPI8:,cpi8,c,50,300,,
+t15=CPI10:,cpi10,c,50,300,,
+t16=CPI12:,cpi12,c,50,300,,
+t17=CPI17:,cpi17,c,50,300,,
+t18=CPI20:,cpi20,c,50,300,,
+t19=Ejetar:,ejetar,c,50,300,,
+t20=Guilhotina:,guilhotina,c,50,300,,
+t21=Gaveta:,gaveta,c,50,300,,
+t22=Beep:,bipe,c,50,300,,
+t23=Colunas:,colunas,i,3,40,,
+t24=Col. Extras:,colCpl,i,3,40,,
+t25=Avançar:,avancar,i,3,40,,
+
+[articms]
+tab=ARTIGOS DO ICMS
+comentario=ARTIGOS DO ICMS
+db=articms
+ordem=artigo
+rcl=articms.rcl
+chave=artigo
+chaveprincipal=id
+c0=Artigos,artigo,c,10,100,,
+c1=Descrição,descricao,c,65,300,,
+campoforcado=artigo
+Rlt=conhecim.articms,minuta.articms,conheci1.articms,minconhe.articms
+msg=CTRC(s)
+altura=230
+largura=480
+foco=artigo
+t0=Artigo:,artigo,c,15,80,,
+t1=Descrição:,descricao,t,0,350,,
+
+[atividad]
+tab=Ramo/Atividade
+comentario=Para classificar o cadastro. Exemplo: ( RCLSOFT ) atividade=Informatica
+db=atividad
+ordem=nome
+rcl=atividad.rcl
+chave=id
+chavePrincipal=id
+c0=Codigo,id,+,8,60,,
+c1=Descricao,nome,c,50,300,,
+altura=170
+largura=450
+foco=nome
+t0=Codigo:,id,+,4,30,,
+t1=Descricao:,nome,c,50,300,,
+
+[filtros]
+tab=Filtros
+comentario=Para filtrar o cadastro.
+db=filtros
+ordem=id
+rcl=filtros.rcl
+chave=id
+chavePrincipal=id
+c0=Código,id,+,8,60,,
+c1=Descrição,nome,c,50,380,,
+c2=Auto,auto,sn,3,30,,
+altura=200
+largura=450
+foco=nome
+t0=Código:,id,+,4,30,,
+t1=Descrição:,nome,c,50,300,,
+t2=Auto cadastro:,auto,sn,3,30,
+
+[ocorrenc]
+tab=Ocorrências
+comentario=Usado em todo o sistema automaticamente.
+db=ocorrenc
+ordem=id
+rcl=ocorrenc.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,c,8,60,,
+c1=Descrição,nocorrenci,c,50,300,,
+BotaoExcluir=Não
+BotaoAlterar=RCL
+BotaoIncluir=RCL
+Rlt=regocorr.oco_idocorr
+msg=OCORRÊNCIA(S)
+altura=170
+largura=450
+foco=nocorrenci
+t0=Código:,id,+,4,30,,
+t1=Descrição:,nocorrenci,c,50,300,,
+
+[lvservic]
+tab=Serviços
+comentario=Serviços do levantamento de dados.
+db=lvservic
+ordem=nome
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,c,8,60,,
+c1=Descrição,nome,c,50,300,,
+altura=170
+largura=450
+foco=nome
+t0=Código:,id,+,4,30,,
+t1=Descrição:,nome,c,100,300,,
+
+[docanexo]
+tab=Documentos
+comentario=Tipo de Documento
+db=lvservic
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,c,8,60,,
+c1=Descrição,nome,c,50,300,,
+c2=Ativo,ativo,sn,3,30,,
+altura=195
+largura=450
+foco=nome
+t0=Código:,id,+,4,30,,
+t1=Descrição:,nome,c,100,300,,
+t2=Ativo:,ativo,sn,3,30,,
+
+[orgao]
+tab=ORGÃO DE NEGATIVAÇÃO
+comentario=
+db=orgao
+ordem=nome
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,c,8,60,,
+c1=Descrição,nome,c,50,300,,
+altura=330
+largura=450
+foco=nome
+t0=Código:,id,+,4,30,,
+t1=Descrição:,nome,c,50,300,,
+t2=Custo:,valor,f,11,84,,
+t3=Cadastro:,associado,i,6,50,,cadastrx.rcl,
+t4=Informante:,informante,c,50,300,,
+t5=Sistema:,sistema,i,6,80,,
+t6=Sequencia:,sequencia,i,6,80,,
+t7=Path:,path,c,200,300,,
+
+[prehisto]
+tab=Históricos
+comentario=Históricos Rápido
+db=prehisto
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Descrição,texto,c,65,300,,
+altura=220
+largura=450
+foco=texto
+t0=Código:,id,+,4,30,,
+t1=Descrição:,texto,t,0,300x60,,
+
+[clashist]
+tab=Class.Hist.
+comentario=Classificação de Históricos
+db=clashist
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Descrição,descricao,c,65,300,,
+altura=220
+largura=450
+foco=descricao
+t0=Código:,id,+,4,30,,
+t1=Descrição:,descricao,c,0,300,,
+t2=Adicionar ao Relatório:,addrelatorio,sn,3,30,
+t3=Agendar Títulos:,agetitulo,sn,3,30,
+
+[perfil]
+tab=Perfil
+comentario=Perfil do sistema.
+db=perfil
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Perfil,id,+,8,60,,
+c1=Descrição,descricao,c,65,300,,
+reservado=1..9
+Rlt=*
+msg=
+altura=400
+largura=450
+BotaoExcluir=RCL
+BotaoAlterar=RCL
+BotaoIncluir=RCL
+foco=descricao
+t0=Perfil:,id,+,4,30,,
+t1=Descrição:,descricao,c,100,300,,
+t2=Password de objetos:,passobj,c,15,90,,
+t3=Mod. Vendas:,show_vendas,sn,3,30,,
+t4=Mod. Compras:,show_compras,sn,3,30,,
+t5=Mod. Produtos:,show_produtos,sn,3,30,,
+t6=Mod. Acordos:,show_acordos,sn,3,30,,
+t7=Mod. Conhec.:,show_conhecimento,sn,3,30,,
+t8=Mod. Manifesto:,show_manifesto,sn,3,30,,
+t9=Mod. Agenda:,show_agenda,sn,3,30,,
+t10=Mod. Receber:,show_receber,sn,3,30,,
+t11=Mod. Pagar:,show_pagar,sn,3,30,,
+t12=Mod. Pesquisa:,show_pesquisa,sn,3,30,,
+t13=Mod. NF:,show_notafiscal,sn,3,30,,
+t14=Mod. Historico:,show_historico,sn,3,30,,
+t15=Mod. Hit.cobr.:,show_histcobr,sn,3,30,,
+t16=Mod. Producao:,show_producao,sn,3,30,,
+t17=Mod. Manut.Frota:,show_expedicao,sn,3,30,,
+t18=Mod. Proposta:,show_proposta,sn,3,30,,
+t19=Mod. O.S.:,show_os,sn,3,30,,
+t20=Mod. O.S. auto:,show_osauto,sn,3,30,,
+t21=Mod. Equipa.:,show_equipa,sn,3,30,,
+t22=LB cadcod:,lab_cadcod,c,100,200,,
+t23=LB vended:,lab_vendedor,c,100,200,,
+t24=LB cobint:,lab_cobint,c,100,200,,
+t25=LB cobext:,lab_cobext,c,100,200,,
+t26=LB advg:,lab_advg,c,100,200,,
+t27=LB atend:,lab_atend,c,100,200,,
+t28=LB Endereco:,lab_qdrend,c,100,200,,
+t29=LB transp:,lab_transp,c,100,200,,
+t30=Perfil:,perfil,i,2,60,,
+t31=DB Telefone:,dbtelefone,sn,3,30,,
+t32=Mod. Minuta:,show_minuta,sn,3,30,,
+t33=Mod. Veiculos:,show_veiculos,sn,3,30,,
+t34=Mod. Prc Cobr:,show_prccobranca,sn,3,30,,
+t35=Mod. Nota Servico:,show_notaservico,sn,3,30,,
+t36=Mod. Armazem:,show_armazem,sn,3,30,,
+t37=Mod. Estoque Serial,show_e_serial,sn,3,30,,
+t38=Mod. Pag. Mot.,show_agregados,sn,3,30,,
+t39=Mod. Rodizios,show_rodizio,sn,3,30,,
+t40=Lb Fabricante:,lab_fabrica,c,100,200,,
+t41=Triagem:,sTriagem,sn,3,30,,
+t42=Monta Carga:,sMontaCarga,sn,3,30,,
+t43=Desp. Viagem:,sDespViagem,sn,3,30,,
+t44=Ord. Serviço:,sOrdServico,sn,3,30,, 
+t45=Ord. Coleta:,sColeta,sn,3,30,,
+
+[pesquisa]
+tab=Pesquisas
+comentario=Pesquisas e relatorios do sistema.
+db=pesquisa
+ordem=ordem
+rcl=pesquisa.rcl
+chave=ordem
+chaveprincipal=id
+c0=ID,id,+,5,60,,
+c1=Ordem,ordem,c,3,50,,
+c2=Descrição,npesquisa,c,70,300,,
+altura=200
+largura=450
+BotaoExcluir=RCL
+BotaoAlterar=RCL
+BotaoIncluir=RCL
+foco=npesquisa
+t0=ID:,id,+,4,30,,
+t1=Ordem:,ordem,i,3,30,,
+t2=Descrição:,npesquisa,c,200,300,,
+
+[tarifas]
+tab=Tarifas
+comentario=Tarifas de cobranca.
+db=tarifas
+ordem=nome
+rcl=
+chave=id
+chaveprincipal=id
+c0=Codigo,id,+,8,60,,
+c1=Valor,valor,f,11,84,,
+c2=Descricao,nome,c,50,200,,
+altura=270
+largura=450
+foco=nome
+t0=Codigo:,id,+,4,30,,
+t1=Descricao:,nome,c,50,300,,
+t2=Valor:,valor,f,11,84,,
+t3=Cobr.apos:,dias,i,5,60,,
+t4=Tipo:,tipo,i,3,30,!999;1; ,tipo.rcl,
+t5=Ativo:,ativo,sn,3,30,,
+
+[tabicms]
+tab=TABELA DE ICMS
+comentario=
+db=tabicms
+ordem=
+rcl=icms.rcl
+chave=id
+chaveprincipal=id
+c0=Origem,uforigem,c,8,80,,
+c1=Destino,ufdestino,c,8,80,,
+c2=Alíquota,valor,p,11,60,,
+// c3=Alíq ST,valor2,p,11,60,,
+// c4=Redução,reducao,p,11,60,,
+// c5=Fixa,fixa,sn,3,30,,
+altura=210
+largura=250
+foco=uforigem
+t0=Origem:,uforigem,c,2,30,@BU,estado2.rcl,
+t1=Destino:,ufdestino,c,2,30,@BU,estado2.rcl,
+t2=Alíquota:,valor,p,10,60,,
+// t3=Alíquota ST:,valor2,p,10,60,,
+// t4=Redução:,reducao,p,10,60,,
+// t5=Margem fixa:,fixa,sn,3,30,,
+validacao=campoPreenchido(uforigem),campoPreenchido(ufdestino),validarIcms(uforigem;ufdestino)
+
+{
+   @BU
+   @ Comando
+   B Botão por um campo
+   U Campo com uppercase
+   L Campo com lowercase
+}
+
+[moedas]
+tab=CADASTRO DE MOEDAS
+comentario=
+db=moedas
+ordem=simbolo
+rcl=
+relacao=moedas->cotacao, id->id
+chave=id
+chaveprincipal=id
+c0=Simbolo,simbolo,c,10,60,,
+c1=Descrição,nome,c,45,200,,
+c2=País,pais,c,15,80,,
+altura=220
+largura=470
+foco=simbolo
+t0=Símbolo:,simbolo,c,10,100,,
+t1=Descrição:,nome,c,50,315,,
+t2=País:,pais,c,50,300,@BU,paises.rcl,
+t3=Mensal:,pormes,sn,3,30,,
+
+[tabcalcu]
+tab=Tabela de Correção de Valores - Acordo de Cobrança
+comentario=Tabela de Correção de Valores
+db=tabcalcu
+ordem=nome
+rcl=
+chave=id
+chaveprincipal=id
+c0=Codigo,id,+,8,60,,
+c1=Descricao,nome,c,50,200,,
+altura=450
+largura=540
+foco=nome
+forcarleftmask=150
+t0=Codigo:,id,+,4,30,,
+t1=Descrição:,nome,c,50,300,,
+t2=Multa:,multa,p,11,84,,
+t3=Juros:,juros,p,11,84,,
+t4=#Juros por Atraso:,juros_atz,p,11,84,,
+t5=Honorário:,hon_por,p,11,84,,
+t6=Honorário Fixo:,hon_fixo,f,11,84,,
+t7=Honorário Mínimo:,hon_min,f,11,84,,
+t8=Descontos:,descpor,p,11,84,,
+t9=Pro-Rata:,prorata,sn,3,30,,
+t10=Indices:,indice,i,3,30,,moedas.rcl,
+t11=Margem Minima:,minimo,p,11,84,, 
+
+[cotacao]
+tab=Cotação de Moedas
+comentario=Indices.
+db=cotacao
+ordem=data desc
+rcl=
+chave=id
+chaveprincipal=idx
+c0=Data,data,d,10,80,,
+c1=Hora,hora,c,5,80,,
+c2=Cotação,valor1,e,16,100,,
+altura=215
+largura=380
+foco=data
+t0=Código:,idx,+,4,60,,
+t1=Data:,data,d,10,80,,
+t2=Hora:,hora,h,5,80,,
+t3=Cotação:,valor1,e,16,160,,
+
+[email]
+tab=CONTA DE E-MAIL PRINCIPAL
+comentario=
+db=rclsoft
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=E-mail,em_email,c,200,200,,
+c1=Servidor SMTP,em_smtp,c,200,200,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=em_email
+t0=Conta de E-mail#007E7E7E\email.png,,,,400, ,
+t1=E-mail:,em_email,c,255,300,@L,
+h1=Conta de E-mail principal.
+t2=Senha:,em_pass,c,50,300,@{*},
+h2=Senha da conta
+t3=Servidor SMTP#007E7E7E\inbox.png,,,,400, ,
+t4=Endereço:,em_smtp,c,255,300,@L,,
+h4=Endereço do Servidor SMTP. Exemplo: smtp-mail.outlook.com port 587
+t5=Porta:,portasmtp=@;25;587;993;995;26;443;465,l,5,60,@B,
+h5=Número da Porta SMTP (Não é obrigatório o preenchimento)
+t6=Autenticação:,em_auth,sn,3,30,,
+h6=Servidor requer autenticação.
+t7=SSL:,em_ssl,sn,3,30,,
+h7=Servidor requer conexão criptografada.
+t8=forcarleftmask=10
+t9=Informação no Rodapé do E-mail#007E7E7E\telephone.png,,,,400, ,
+t10=,em_rodape,tw,0,400x130,,
+h10=Informações para incluir no rodapé do E-mail.
+
+[notfis1]
+tab=NOTFIS-Cliente
+comentario=NOTFIS-Cliente pre layout.
+db=notfis1
+ordem=cliente
+rcl=
+chave=id
+chaveprincipal=id
+c0=LayOut,layout,c,50,100,,
+c1=Descricao,descricao,c,100,200,,
+c2=Cliente,cliente,c,6,60,,
+c3=Arquivo,arquivo2,c,255,100,,
+altura=380
+largura=430
+foco=descricao
+t0=Codigo:,id,+,3,30,,
+t1=Descricao:,descricao,c,100,300,,
+t2=Cliente:,cliente,i,6,60,,cadastrx.rcl,
+t3=Local:,recebe,c,255,300,,
+t4=Arquivo:,arquivo1,c,255,300,,
+t5=Compactado:,temcompac,sn,3,30,,
+t6=Compactador:,mycompac,c,50,200,,
+t7=Parametros:,myparam,c,50,200,,
+t8=Arquivo texto:,arquivo2,c,255,300,,
+t9=Backup:,backup,c,255,300,,
+t10=Red/Transp:,redesp,i,6,60,,cadastrx.rcl,
+t11=Tabela:,tabfrete,i,3,50,,tabefret.rcl,
+t12=CFOP fixo:,cfopfix,c,15,80,,cfopnota.rcl,
+t13=EMail:,email,c,255,300,,
+t14=Layout:,layout,c,50,200,,
+t15=Usar data:,usadata,sn,3,30,,
+
+[notfis2]
+tab=NOTFIS-Processado
+comentario=NOTFIS-Processado.
+db=notfis2
+ordem=data
+rcl=
+chave=id
+chaveprincipal=id
+c0=Descricao,descricao,c,60,100,,
+c1=Arquivo,arquivo,c,100,100,,
+c2=Data,arqdata,d,10,70,,
+c3=Hora,arqhora,c,8,60,,
+c4=Total,total,i,11,60,,
+c5=Status,progresso,i,11,60,,
+c6=Mercadoria,mercadoria,c,16,85,,
+c7=Frete,frete,c,16,85,,
+c8=Conh1,conh1,c,10,85,,
+c9=Conh2,conh2,c,10,85,,
+altura=300
+largura=430
+foco=codigo
+t0=Descricao:,descricao,c,100,300,,
+t1=Arquivo:,arquivo,c,255,300,,
+t2=Data:,arqdata,d,10,80,,
+t3=Hora:,arqhora,c,8,80,,
+t4=Processado:,data,d,10,80,,
+t5=Hora:,hora,c,8,80,,
+t6=Total:,total,i,11,80,,
+t7=Status:,progresso,i,11,80,,
+
+[edi1]
+tab=Importação EDI
+comentario=Parametros para importação de dados padrão EDI.
+db=sysedi1
+ordem=cliente
+rcl=
+chave=id
+chaveprincipal=id
+c0=Descricao,descricao,c,100,200,,
+c1=Cliente,cliente,c,6,60,,
+c2=Tabela,tabela,c,6,60,,
+c3=E-Mail,email,c,20,100,,
+altura=380
+largura=430
+foco=descricao
+t0=Codigo:,id,+,3,30,,
+t1=LayOut:,layout,i,3,60,,
+t2=Descrição:,descricao,c,100,300,,
+t3=Transportadora:,transp,i,6,60,,cadastrx.rcl,
+t4=Cliente:,cliente,i,6,60,,cadastrx.rcl,
+t5=Tabela:,tabela,i,3,50,,tabefret.rcl,
+t6=Sequência:,sequencia,i,6,60,,
+t7=Path Retorno:,path,c,255,300,,
+t8=E-Mail:,email,c,255,300,,
+t9=Responsavel:,responsavel,c,50,300,,
+t10=Ativo:,ativo,sn,3,30,,
+
+[edi2]
+tab=Importação EDI-Processadas
+comentario=Lista de Importação processada.
+db=sysedi2
+ordem=data
+rcl=
+chave=id
+chaveprincipal=id
+c0=Data,data,d,10,80,,
+c1=Hora,hora,c,8,80,,
+c2=Inicial,inicio,c,8,80,,
+c3=Final,final,c,8,80,,
+c4=Registros,registros,c,8,80,,
+c5=Valores,valores,f,11,84,,
+altura=370
+largura=430
+foco=data
+t0=Data:,data,d,10,84,,
+t1=Hora:,hora,c,8,84,,
+t2=Inicial:,inicio,c,8,84,,
+t3=Final:,final,c,8,84,,
+t4=Registros:,registros,i,11,84,,
+t5=Mercadoria:,vl_merca,f,11,84,,
+t6=Frete:,vl_frete,f,11,84,,
+t7=Usuário:,usuario,i,6,60,,cadastrx.rcl,
+t8=Terminal:,terminal,c,6,80,,
+t9=Arquivo:,arquivo,c,255,300,,
+
+[tipgasto]
+tab=Manutenção
+comentario=Tipo de manutenção de veículos.
+db=tipgasto
+ordem=descricao
+rcl=tipgasto.rcl
+chave=id
+chavePrincipal=id
+c0=Codigo,id,+,8,60,,
+c1=Descricao,descricao,c,50,200,,
+c2=Arquivo,lpt,c,50,200,,
+altura=200
+largura=430
+foco=descricao
+t0=Codigo:,id,+,4,30,!999;1; ,
+t1=Descricao:,descricao,c,50,300,,
+t2=Arquivo:,lpt,c,15,300,,
+
+[tabfrete]
+tab=Tabelas de Frete
+comentario=Tabelas de Frete
+db=tabfrete
+ordem=id
+rcl=
+relacao=
+mygroup=
+chave=id
+chaveprincipal=id
+c0=Código,id,c,10,50,,
+c1=Descrição,descricao,c,50,320,,
+c2=Ativo,ativo,sn,30,60,,
+altura=250
+largura=450
+foco=descricao
+BotaoIncluir=RCL
+BotaoAlterar=RCL
+BotaoExcluir=RCL
+t0=Código:,id,+,4,30,,
+t1=Descrição:,descricao,c,50,300,,
+t2=Referência:,mygroup,c,50,300,,
+t3=Cálculo:,formula,c,100,300,,,
+t4=Ativo:,ativo,sn,3,30,,
+
+[subconta]
+tab=Sub-origem
+comentario=Sub-origem 
+db=subconta
+ordem=id
+rcl=
+chave=origem
+chaveprincipal=id
+c0=Codigo,id,c,8,60,,
+c1=Descricao,descricao,c,50,250,,
+altura=190
+largura=450
+foco=descricao
+t0=Codigo:,id,+,4,30,,
+t1=Descricao:,descricao,c,50,300,,
+t2=Multi-Origem,multiorigem,sn,3,30,,
+
+[formulas]
+tab=Formulas
+comentario=Formulas
+db=formulas
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,c,8,60,,
+c1=Descrição,descricao,c,200,250,,
+c2=Função,funcao,c,200,250,,
+altura=200
+largura=450
+foco=descricao
+t0=Código:,id,+,4,30,,
+t1=Função:,funcao,c,200,300,,
+t2=Descrição:,descricao,c,200,300,,
+
+[mysql]
+tab=SERVIDOR MYSQL DO WEBSITE
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=170
+largura=460
+foco=sql_ip
+forcarleftmask=100
+where=id="3"
+relacaokey=id,"3"
+t0=Host/IP:,sql_ip,c,255,300,,
+t1=Usuário:,sql_usuario,c,50,150,,
+t2=Senha:,sql_senha,c,255,150,@{*},
+t3=Database:,sql_database,c,255,150,,
+
+[ftp]
+tab=SERVIDOR FTP DO WEBSITE
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=170
+largura=460
+foco=web_ftp
+forcarleftmask=100
+where=id="3"
+relacaokey=id,"3"
+t0=FTP:,web_ftp,c,255,300,,
+t1=Usuário:,web_usuario,c,50,150,,
+t2=Senha:,web_senha,c,255,150,@{*},
+t3=Path Primário:,web_ftpprimaria,c,50,300,,
+t4=Path Fotos:,web_fotos,c,255,300,,
+t5=Path Mini Fotos:,web_fotospqn,c,255,300,,
+
+[webcontato]
+tab=CONTATO PELO WEBSITE
+comentario=
+db=website
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+autoIncluir=1
+where=id=1
+c0=Codigo,id,c,8,60,,
+c1=Smtp,smtp,c,100,200,,
+altura=450
+largura=450
+foco=email
+nobrowse=1
+t0=Mensagem#007E7E7E\vcard.png,,,,410, ,
+t1=E-MAIL:,email,c,255,300,,
+h1=E-MAIL para direcionar mensagem de contato pelo site
+t2=Senha:,senha,c,20,100,@{*},
+h2=Senha do serviço SMTP
+t3=SMTP:,smtp,c,255,200,,
+h3=Endereço do servidor SMTP
+t4=linha-25
+t5=coluna+260
+t6=Porta:,porta,i,5,40,,
+t7=coluna-260
+t8=Autenticação:,xAuth,sn,3,30,,
+t9=linha-25
+t10=coluna+150
+t11=SSL:,xSSL,sn,3,30,,
+t12=coluna-150
+t13=Nome:,nomeuser,c,255,300,,
+h13=Nome do usuário
+t14=Apelido:,apelido,c,255,300,,
+h14=Apelido do usuário
+t15=Resposta automática#007E7E7E\email.png,,,,410, ,
+t16=Resposta:,resposta,t,0,300x60,,
+t17=linha-40
+t18=Outros Contatos#007E7E7E\telephone.png,,,,410, ,
+t19=Nome:,contato1,c,20,300,,
+t20=Descrição:,descricao1,t,0,300x40,,
+t21=linha-40
+t22=Nome:,contato2,c,20,300,,
+t23=Descrição:,descricao2,t,0,300x40,,
+t24=linha-40
+t25=Nome:,contato3,c,20,300,,
+t26=Descrição:,descricao3,t,0,300x40,,
+t27=linha-40
+t28=Nome:,contato4,c,20,300,,
+t29=Descrição:,descricao4,t,0,300x40,,
+
+[transpsmtp]
+tab=EMAIL PARA RECEBER PEDIDOS DE COLETA/COTAÇÃO/ETC...
+comentario=
+db=website
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+autoIncluir=1
+where=id=3
+c0=Codigo,id,c,8,60,,
+c1=Smtp,smtp,c,100,200,,
+altura=450
+largura=450
+foco=email
+nobrowse=1
+t0=Mensagem#007E7E7E\vcard.png,,,,410, ,
+t1=E-MAIL:,email,c,255,300,,
+h1=E-MAIL para direcionar mensagem de contato pelo site
+t2=Senha:,senha,c,20,100,@{*},
+h2=Senha do serviço SMTP
+t3=SMTP:,smtp,c,255,200,,
+h3=Endereço do servidor SMTP
+t4=linha-25
+t5=coluna+260
+t6=Porta:,porta,i,5,40,,
+t7=coluna-260
+t8=Autenticação:,xAuth,sn,3,30,,
+t9=linha-25
+t10=coluna+150
+t11=SSL:,xSSL,sn,3,30,,
+t12=coluna-150
+t13=Nome:,nomeuser,c,255,300,,
+h13=Nome do usuário
+t14=Apelido:,apelido,c,255,300,,
+h14=Apelido do usuário
+t15=Resposta Automática#007E7E7E\email.png,,,,410, ,
+t16=Resposta:,resposta,t,0,300x60,,
+t17=linha-30
+t18=Identificação do EMAIL de Cotação#007E7E7E\email.png,,,,410, ,
+t19=Descrição:,descricao1,c,255,300,,
+t20=Identificação do EMAIL de Coleta#007E7E7E\email.png,,,,410, ,
+t21=Descrição:,descricao2,c,255,300,,
+
+[rastrear]
+tab=EMAIL PARA RECEBER PEDIDOS DE COLETA/COTAÇÃO/ETC...
+comentario=
+db=website
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+autoIncluir=1
+where=id=2
+c0=Codigo,id,c,8,60,,
+c1=Smtp,smtp,c,100,200,,
+altura=450
+largura=450
+foco=idREx
+forcarleftmask=130
+nobrowse=1
+t0=ID REx:,idREx,i,6,100,,
+h0=Código de Identificação do REx
+t1=Limite NF:,limiteNf,i,6,100,,
+h1=Limite de Notas Fiscais por consulta
+t2=Recuos:,recuo,i,6,100,,
+t3=Opções de Rastreamento Por#007E7E7E\accept.png,,,,410, ,
+t4=Código:,op1,sn,3,30,,
+h4=Ativar opção de rastreamento de NF por Código/(Código enviado por EMAIL via Sistema)
+t5=Cliente Final:,op2,sn,3,30,,
+h5=Ativar opção de rastreamento de NF por Cliente Final
+t6=Remetente:,op3,sn,3,30,,
+h6=Ativar opção de rastreamento de NF por Remetente
+t7=Remetente (por Dias),op4,sn,3,30,,
+h7=Ativar opção de rastreamento de NF por Remetente (por Dias)
+t8=Destinatário:,op5,sn,3,30,,
+h8=Ativar opção de rastreamento de NF por Destinatário
+t9=Pagador:,op6,sn,3,30,,
+h9=Ativar opção de rastreamento de NF por Pagador do Frete
+
+[d]
+t2=Site Principal#007E7E7E\vcard.png,,,,410, ,
+t3=URL:,url1,c,255,300,,
+h3=URL do Site Principal
+t4=Acesso do Cliente#007E7E7E\vcard.png,,,,410, ,
+t5=URL:,url2,c,255,300,,
+h5=URL do Menu de Opções do Cliente
+
+
+[websocial]
+tab=REDES SOCIAL
+comentario=
+db=website
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+autoIncluir=1
+where=id=2
+c0=Codigo,id,c,8,60,,
+c1=Smtp,smtp,c,100,200,,
+altura=450
+largura=450
+foco=descricao1
+nobrowse=1
+t0=Twitter#007E7E7E\twitter.png,,,,410, ,
+t1=Endereço:,descricao1,c,255,300,,
+t2=Facebook#007E7E7E\facebook.png,,,,410, ,
+t3=Endereço:,descricao2,c,255,300,,
+t4=YouTube#007E7E7E\youtube.png,,,,410, ,
+t5=Endereço:,descricao3,c,255,300,,
+
+[coresweb]
+tab=CORES DO WEBSITE
+comentario=
+db=website
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+autoIncluir=1
+where=id=2
+c0=Codigo,id,c,8,60,,
+c1=Smtp,smtp,c,100,200,,
+altura=450
+largura=450
+foco=
+nobrowse=1
+t0=Base#007E7E7E\color_swatch_2.png,,,,400, ,
+t1=Fundo:,corFundo=@$00FFC1C1,color,3,40,,
+t2=Moldura,corFundoMoldura=@$00FFC1C1,color,3,40,,
+t2=Fonte:,corFundoFonte=@$FFFFFF,color,3,40,,
+t3=Titulo#007E7E7E\color_swatch_2.png,,,,400, ,
+t4=Fundo:,corTitulo=@$00FFC1C1,color,3,40,,
+t5=Moldura,corTituloMoldura=@$00FFC1C1,color,3,40,,
+t6=Fonte:,corTituloFonte=@$000000,color,3,40,,
+t7=Sub Titulo#007E7E7E\color_swatch_2.png,,,,400, ,
+t8=Fundo:,corSubTitulo=@$00FFC1C1,color,3,40,,
+t9=Moldura,corSubTituloMoldura=@$00FFC1C1,color,3,40,,
+t10=Fonte:,corSubTituloFonte=@$000000,color,3,40,,
+t11=Normal#007E7E7E\color_swatch_2.png,,,,400, ,
+t12=Fundo:,corNormal=@$FFFFFF,color,3,40,,
+t13=Fonte:,corNormalFonte=@$000000,color,3,40,,
+t14=Normal 2#007E7E7E\color_swatch_2.png,,,,400, ,
+t15=Fundo:,corNormal2=@$FFFFFF,color,3,40,,
+t16=Fonte:,corNormalFonte2=@$000000,color,3,40,,
+t17=Selecionado#007E7E7E\color_swatch_2.png,,,,400, ,
+t18=Fundo:,corSelecao=@$000000,color,3,40,,
+t19=Fonte:,corSelecaoFonte=@$FFFFFF,color,3,40,,
+t20=Alternativa#007E7E7E\color_swatch_2.png,,,,400, ,
+t21=Fundo:,corAlter=@$FFFFFF,color,3,40,,
+t22=Moldura,corAlterMoldura=@$FFFFFF,color,3,40,,
+t23=Fonte:,corAlterFonte=@$000000,color,3,40,,
+t24=Mensagem#007E7E7E\color_swatch_2.png,,,,400, ,
+t25=Fundo:,corMsg=@$0099CCFF ,color,3,40,,
+t26=Moldura,corMsgMoldura=@$003300CC,color,3,40,,
+t27=Fonte:,corMsgFonte=@$000000,color,3,40,,
+t28=Entrada no Campo (onFocus)#007E7E7E\color_swatch_2.png,,,,400, ,
+t29=Fundo:,corCpE=@$0099CCFF ,color,3,40,,
+t30=Moldura,corCpEMoldura=@$003300CC,color,3,40,,
+t31=Fonte:,corCpEFonte=@$000000,color,3,40,,
+t32=Saida do Campo (onBlur)#007E7E7E\color_swatch_2.png,,,,400, ,
+t33=Fundo:,corCpS=@$0099CCFF ,color,3,40,,
+t34=Moldura,corCpSMoldura=@$003300CC,color,3,40,,
+t35=Fonte:,corCpSFonte=@$000000,color,3,40,,
+t36=Botão#007E7E7E\color_swatch_2.png,,,,400, ,
+t37=Fundo:,corBotao=@$0099CCFF ,color,3,40,,
+t38=Moldura,corBotaoMoldura=@$003300CC,color,3,40,,
+t39=Fonte:,corBotaoFonte=@$000000,color,3,40,,
+t40=Informações Detalhada#007E7E7E\color_swatch_2.png,,,,400, ,
+t41=Fundo:,corDeta=@$0099CCFF ,color,3,40,,
+t42=Moldura,corDetaMoldura=@$003300CC,color,3,40,,
+t43=Fonte:,corDetaFonte=@$000000,color,3,40,,
+
+[webinscricao]
+tab=INSCRICAO PELO WEBSITE
+comentario=
+db=website
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+autoIncluir=1
+where=id=2
+c0=Codigo,id,c,8,60,,
+c1=Smtp,smtp,c,100,200,,
+altura=450
+largura=450
+foco=email
+nobrowse=1
+t0=Mensagem#007E7E7E\vcard.png,,,,410, ,
+t1=E-MAIL:,email,c,255,300,,
+h1=E-MAIL para direcionar mensagem de contato pelo site
+t2=Senha:,senha,c,20,100,@{*},
+h2=Senha do serviço SMTP
+t3=SMTP:,smtp,c,255,200,,
+h3=Endereço do servidor SMTP
+t4=linha-25
+t5=coluna+260
+t6=Porta:,porta,i,5,40,,
+t7=coluna-260
+t8=Autenticação:,xAuth,sn,3,30,,
+t9=linha-25
+t10=coluna+150
+t11=SSL:,xSSL,sn,3,30,,
+t12=coluna-150
+t13=Nome:,nomeuser,c,255,300,,
+h13=Nome do usuário
+t14=Apelido:,apelido,c,255,300,,
+h14=Apelido do usuário
+t15=Resposta automática#007E7E7E\email.png,,,,410, ,
+t16=Resposta:,resposta,t,0,300x180,,
+
+[weblink]
+tab=WebLinks
+comentario=Links
+db=weblink
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Codigo,id,c,8,60,,
+c1=Descricao,descricao,c,80,150,,
+c2=Empresa,empresa,c,150,150,,
+c3=URL,url,c,100,200,,
+altura=320
+largura=450
+foco=descricao
+t0=Codigo:,id,+,3,30,,
+t1=Descricao:,descricao,c,255,300,,
+t2=Empresa:,empresa,c,255,300,,
+t3=Icone:,imagem,c,255,300,,
+t4=Ativo:,ativo,sn,3,30,,
+t5=Data do Arq.:,showdata,sn,3,30,,
+t6=URL:,url,t,0,300,,
+
+[webdown]
+tab=DOWNLOAD
+comentario=
+db=webdown
+ordem=ativo desc,categoria,descricao
+rcl=
+chave=id
+chaveprincipal=id
+c0=Categoria,categoria,i,30,70,,
+c1=Descrição,descricao,c,80,120,,
+c2=Arquivo,arquivo,c,150,110,,
+c3=Contador,contador,i,6,70,,
+c4=Ativo,ativo,sn,3,30,,
+altura=370
+largura=570
+foco=descricao
+t0=Descrição:,descricao,c,255,400,,
+h0=Descrição completa do download
+t1=Categoria:,categoria=1,i,3,30,,<#32>geral.rcl,
+h1=Categoria de downloads
+t2=Data:,data,d,10,80,,
+h2=Data do arquivo
+t3=Arquivo:,arquivo,c,255,400,,
+h3=Nome do arquivo
+t4=Icone:,icone,icones2,3,40,,
+h4=Selecione o icone que representa o arquivo
+t5=Ativo:,ativo,sn,3,30,,
+h5=Se o download deste arquivo esta disponivel ou não
+t6=Destaque:,destaque,sn,3,40,,
+h6=Download em destaque
+t7=URL:,url,t,0,400x80,,
+h7=Preencher somente se o arquivo não estiver na pasta "arq\" 
+validacao=campoPreenchido(categoria),campoPreenchido(descricao)
+
+[informe]
+tab=WebInforme
+comentario=Informe
+db=informe
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Codigo,id,c,8,60,,
+c1=Titulo,titulo,c,80,150,,
+c2=Descricao,descricao,c,80,150,,
+c3=URL,url,c,100,200,,
+altura=320
+largura=450
+foco=titulo
+t0=Codigo:,id,+,3,30,,
+t1=Titulo:,titulo,c,255,300,,
+t2=Descricao:,descricao,t,0,300,,
+t3=Foto:,imagem,c,255,300,,
+t4=Ativo:,ativo,sn,3,30,,
+t5=Cor Moldura:,moldura,c,30,300,,
+t6=Cor Titulo:,cortit,c,30,300,,
+t7=URL:,url,t,0,300,,
+
+[webagenda]
+tab=AGENDA DE TREINAMENTO
+comentario=
+db=webagenda
+ordem=ativo desc,data desc, hora desc
+rcl=
+chave=id
+chaveprincipal=id
+c0=Data,&DataHora(data|hora|) as data,d,10,100,,
+c1=Descrição,descricao,c,255,100,,
+altura=400
+largura=600
+foco=data
+t0=Data:,data,d,10,70,,
+h0=Data do treinamento
+t1=linha-25
+t2=coluna+120
+t3=Inicio:,hora,h,5,35,,
+h3=Hora de inicio do treinamento
+t4=linha-25
+t5=coluna+100
+t6=Termino:,hora2,h,5,35,,
+h6=Hora do termino do treinamento
+t7=linha-25
+t8=coluna+140
+t9=Carga horária:,totalhoras,i,5,70,,
+t10=coluna-360
+t11=Descrição:,descricao,c,255,430,,
+t12=Instrutor:,responsavel,c,30,430,,
+t13=Ativo:,ativo,sn,3,30,,
+t14=Objetivo#007E7E7E\zone.png,,,,540, ,
+t15=forcarleftmask=10
+t16=,objetivo,t,0,530x50,,
+h16=Objetivo do treinamento
+t17=linha-40
+t18=Pre-requisitos#007E7E7E\zone.png,,,,540, ,
+t19=forcarleftmask=10
+t20=,requisitos,t,0,530x80,,
+h20=Pré-requisitos do treinamento
+t21=linha+0
+t22=Conteúdo#007E7E7E\zone.png,,,,540, ,
+t23=forcarleftmask=10
+t24=,info,t,0,530x200,,
+h24=Detalhes do treinamento
+//calc0=totalhoras=+hora2,-hora
+
+[webparceiros]
+tab=LISTA DE PARCEIROS
+comentario=
+db=webdiv
+db2=cadastro
+ordem=ordem desc,nome
+rcl=
+chave=id
+chaveprincipal=id
+campos=webdiv.id,webdiv.ordem,webdiv.tema,webdiv.cadastro,webdiv.ativo,cadastro.nome
+c0=Grupo,ordem,c,1,55,,
+c1=Parceiro,nome,c,50,300,,
+c2=Ativo,ativo,sn,3,30,,
+altura=300
+largura=550
+where=(webdiv.tema="PARCEIROS")and(webdiv.cadastro=cadastro.codigo)
+//relacaokey=tema,"PARCEIROS"
+//relacaokey2=tipo,"$IDORIGEM2"
+foco=cadastro
+t0=Tema:,tema=PARCEIROS,c,50,200,{rcl*},
+t1=Cadastro:,cadastro,i,6,50,,?cadastro.rcl,
+t2=Grupo:,ordem=100,c,5,60,@B,<#31>geral.rcl,
+h2=Grupo de importância
+t3=Descrição:,descricao,c,255,380,,
+t4=Web Site:,site,c,255,380,,
+t5=EMAIL:,email,c,255,380,,
+t6=Ativo:,ativo=Sim,sn,3,30,,
+validacao=campoPreenchido(cadastro),campoPreenchido(ordem),duplicidades(cadastro;[cadastro-webdiv])
+ftplogo=cadastro
+
+[webnoticias]
+tab=NOTICIAS
+comentario=
+db=webdiv
+ordem=data desc,hora desc
+rcl=
+chave=id
+chaveprincipal=id
+campos=
+c0=Data,&datahora(data|hora|) as data,d,10,100,,
+c1=Título,descricao,c,255,280,,
+c2=Ativo,ativo,sn,3,30,,
+altura=500
+largura=550
+where=(tema="NOTICIAS")
+foco=data
+t0=Tema:,tema=NOTICIAS,c,50,200,{rcl*},
+t1=Data:,data,d,10,70,,
+t2=linha-25
+t3=coluna+120
+t4=Hora:,hora,h,5,35,,
+t5=coluna-120
+t6=Título:,descricao,c,255,380,,
+t7=label|Informações
+t8=<,info,t,0,380x90,,
+t9=Ativo:,ativo=Sim,sn,3,30,,
+ftplogo=
+
+
+[catwebdown]
+tab=CATEGORIA DE DOWNLOADS
+comentario=
+db=catweb
+db2=
+ordem=ordem,descricao
+rcl=
+chave=id
+chaveprincipal=id
+campos=
+c0=Ordem,ordem,c,2,55,,
+c1=Código,id,c,1,55,,
+c2=Descrição,descricao,c,50,300,,
+altura=160
+largura=450
+where=
+foco=descricao
+t0=Descrição:,descricao,c,50,280,,
+h0=Descrição completa da categoria
+t1=Ordem:,ordem,c,2,60,@U,
+h1=Ordem da listagem
+validacao=campoPreenchido(descricao),campoPreenchido(ordem)
+
+[fisico]
+tab=Tipo fisico
+comentario=Tipo fisico
+db=fisico
+ordem=descricao
+rcl=fisico.rcl
+chave=id
+chaveprincipal=id
+c0=Codigo,id,+,8,60,,
+c1=Feminino,feminino,c,50,200,,
+c2=Masculino,masculino,c,50,200,,
+c3=Menu,menu,c,50,200,,
+altura=260
+largura=420
+foco=feminino
+t0=Codigo:,id,+,4,30,!999;1; ,
+t1=Feminino:,feminino,c,50,300,,
+t2=Masculino:,masculino,c,50,300,,
+t3=Menu:,menu,c,50,300,,
+
+[sexo]
+tab=Sexo
+comentario=Sexo
+db=sexo
+ordem=descricao
+rcl=sexo.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Descrição,descricao,c,50,200,,
+reservado=1,2
+altura=160
+largura=420
+foco=descricao
+t0=Código:,id,+,4,30,!999;1; ,
+t1=Descriçao:,descricao,c,50,300,,
+
+[segtipo]
+tab=Seguros
+comentario=Tipo de seguros
+db=segtipo
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Codigo,id,c,8,60,,
+c1=Descricao,descricao,c,80,150,,
+altura=200
+largura=450
+foco=descricao
+t0=Codigo:,id,+,3,30,,
+t1=Descricao:,descricao,c,100,300,,
+t2=Ativo:,ativo,sn,3,30,,
+
+[segcober]
+tab=Coberturas
+comentario=Cobertura de seguros
+db=segcober
+ordem=descricao
+rcl=segcober.rcl
+chave=id
+chaveprincipal=id
+c0=Codigo,id,+,8,60,,
+c1=Descricao,descricao,c,50,200,,
+altura=160
+largura=420
+foco=descricao
+t0=Codigo:,id,+,4,30,!999;1; ,
+t1=Descricao:,descricao,c,50,300,,
+
+[seguso]
+tab=AUTO uso
+comentario=Tipo de uso do veiculo.
+db=seguso
+ordem=descricao
+rcl=seguso.rcl
+chave=id
+chaveprincipal=id
+c0=Codigo,id,+,8,60,,
+c1=Descricao,descricao,c,50,200,,
+altura=160
+largura=420
+foco=descricao
+t0=Codigo:,id,+,4,30,!999;1; ,
+t1=Descricao:,descricao,c,50,300,,
+
+
+[veicmarc]
+tab=Marca de Veic.
+comentario=Marca de veiculos.
+db=veicmarc
+ordem=descricao
+rcl=veicmarc.rcl
+chave=id
+chaveprincipal=id
+c0=Codigo,id,+,8,60,,
+c1=Descricao,descricao,c,50,200,,
+altura=160
+largura=420
+foco=descricao
+t0=Codigo:,id,+,4,30,!999;1; ,
+t1=Descricao:,descricao,c,50,300,,
+
+
+[tecnicos]
+tab=Técnico
+comentario=Cadastro de técnicos
+db=tecnicos
+ordem=
+rcl=tecnicos.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Nome,nome,c,50,300,,
+c2=Ativo,ativo,sn,3,30,,
+Rlt=servicos.tecnico
+msg=ORDEM DE SERVIÇO
+altura=270
+largura=470
+foco=nome
+t0=Código:,id,+,4,30,!999;1; ,
+t1=Nome:,nome,c,50,300,,
+t2=Cadastro:,cadastro,i,6,60,,cadastrx.rcl,
+t3=Comissão %:,comissao,e,11,84,,
+t4=Preço Hora:,precohora,f,11,84,,
+t5=Ativo:,ativo=Sim,sn,3,30,,
+
+[vendedor]
+tab=VENDEDORES
+comentario=CADASTRO DE VENDEDOR
+db=vendedor
+ordem=
+rcl=vendedor.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Nome,nome,c,50,230,,
+c2=Comissão,comissao,p,11,70,,
+c3=Ativo,ativo,sn,3,30,,
+Rlt=cupons.vendedo_
+msg=VENDA(S)
+altura=250
+largura=470
+foco=nome
+t0=Código:,id,+,4,30,{rcl^},
+t1=Nome:,nome,c,50,300,,
+h1=Nome do vendedor
+t2=Cadastro:,cadastro,i,6,60,,cadastrx.rcl,
+h2=Cadastro relacionado a este vendedor<F2>
+t3=Comissão:,comissao,p,11,60,,
+h3=Porcentagem de comissão do vendedor
+t4=Ativo:,ativo=Sim,sn,3,30,,
+h4=Vendedor esta ativo ? Sim/Não
+validacao=campoPreenchido(nome)
+
+[questoes]
+tab=Perguntas e Respostas
+comentario=Perguntas e Respostas
+db=questoes
+ordem=
+rcl=questoes.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Pergunta,pergunta,c,50,200,,
+altura=420
+largura=470
+foco=data
+t0=Codigo:,id,+,4,30,!999;1; ,
+t1=Data:,data,d,10,80,,
+t2=Módulo/Grupo:,grupo,c,100,300,,
+t3=Pergunta:,pergunta,t,0,300,,
+t4=Resposta:,resposta,t,0,300,,
+t5=Ativo:,ativo,sn,3,30,,
+
+[frota]
+tab=Frota
+comentario=Frota de veiculos
+db=frota
+ordem=
+rcl=frota.rcl
+chave=id
+chaveprincipal=id
+c0=Numero,numero,+,8,60,,
+c1=Descricao,descricao,c,50,200,,
+altura=200
+largura=470
+foco=numero
+t0=Numero:,numero,i,4,30,!999;1; ,
+t1=Descricao:,descricao,c,50,300,,
+
+[filiais]
+tab=Filiais
+comentario=Filiais
+db=filiais
+ordem=
+rcl=filiais.rcl
+chave=numero
+chaveprincipal=id
+c0=Número,id,+,8,60,,
+c1=Descrição,nome,c,50,200,,
+c2=Sigla,sigla,c,50,200,,
+Rlt=pagar.filial
+msg=TITULOS(S)
+altura=200
+largura=470
+foco=nome
+t0=Número:,id,+,4,30,,
+t1=Descrição:,nome,c,50,300,,
+t2=Sigla:,sigla,c,10,200,,
+
+[natureza]
+tab=Natureza
+comentario=Natureza
+db=natureza
+ordem=
+rcl=natureza.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,c,5,60,,
+c1=Descrição,descricao,c,50,200,,
+c2=Padrão,padrao,sn,30,60,,
+c3=DTA,dta,sn,30,50,,
+altura=235
+largura=470
+foco=descricao
+t0=Codigo:,id,+,4,30,!999;1; ,
+t1=Descricao:,descricao,c,50,300,,
+t2=Padrao:,padrao,sn,3,30,,
+t3=DTA:,dta,sn,3,30,,
+
+[naturez2]
+tab=Tipos de Natureza
+comentario=Tipos de Natureza
+db=naturez2
+ordem=
+rcl=naturez2.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,c,5,60,,
+c1=Descrição,descricao,c,50,200,,
+altura=200
+largura=470
+foco=descricao
+t0=Código:,id,+,4,30,!999;1; ,
+t1=Descrição:,descricao,c,50,300,,
+;t2=Padrao:,padrao,sn,3,30,,
+
+[iss]
+tab=TABELA DE ISS
+comentario=
+db=iss
+ordem=
+rcl=iss.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,c,5,60,,
+c1=Estado,estado,c,2,60,,
+c2=Municipio,municipio,c,50,180,,
+c3=ISS,iss,p,11,84,,
+altura=230
+largura=400
+foco=estado
+t0=Código:,id,+,4,30,!999;1; ,
+t1=Estado:,estado,c,2,40,@BU,estado2.rcl,
+t2=Municipio:,municipio,c,50,200,,
+t3=ISS:,iss,p,11,40,,
+
+[advalore]
+tab=ADValorem
+comentario=Tabela de ADValorem
+db=advalore
+ordem=
+rcl=advalore.rcl
+chave=id
+chaveprincipal=id
+c0=Codigo,id,c,5,60,,
+c1=Descricao,descricao,c,50,200,,
+c2=Fator,fator,c,11,84,,
+altura=200
+largura=470
+foco=descricao
+t0=Codigo:,id,+,4,30,!999;1; ,
+t1=Descricao:,descricao,c,50,300,,
+t2=Fator:,fator,c,11,84,,
+
+[despesa2]
+tab=Despesas
+comentario=Cadastro de Despesas
+db=despesa2
+ordem=
+rcl=despesa2.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,c,5,60,,
+c1=Descrição,descricao,c,50,200,,
+c2=KM,km,sn,3,50,,
+c3=Ativo,ativo,sn,3,50,,
+Rlt=despesos.iddespesa
+msg=DESPESA(s)
+altura=220
+largura=470
+foco=descricao
+t0=Código:,id,+,4,30,!999;1; ,
+t1=Descrição:,descricao,c,50,300,,
+t2=KM:,km,sn,3,30,,
+t3=Ativo:,ativo,sn,3,30,,
+
+[listserv]
+tab=Serviços
+comentario=Tabela de Serviços
+db=listserv
+ordem=marca
+rcl=listserv.rcl
+chave=id
+chaveprincipal=id
+c0=Codigo,id,c,5,60,,
+c1=Marca,marca,c,20,80,,
+c2=Descrição,descricao,c,50,200,,
+c3=Preço 1,valor1,f,11,84,,
+c4=Preço 2,valor2,f,11,84,,
+altura=300
+largura=470
+foco=descricao
+t0=Código:,id,+,4,30,!999;1; ,
+t1=Descrição:,descricao,c,50,300,,
+t2=Marca:,marca,c,30,300,,veicmar2.rcl,
+t3=Seção:,secao,i,3,40,,secao.rcl,
+t4=Grupo:,grupo,i,3,40,,grupos.rcl,
+t5=Preço 1:,valor1,f,11,84,,
+t6=Preço 2:,valor2,f,11,84,,
+
+[precohor]
+tab=Hora Técnica
+comentario=Tabela de Preço por Hora
+db=precohor
+ordem=
+rcl=precohor.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,c,5,60,,
+c1=Descrição,descricao,c,100,350,,
+c2=Preço Hora,preco,f,11,84,,
+altura=200
+largura=470
+foco=descricao
+t0=Código:,id,+,4,30,!999;1; ,
+t1=Descrição:,descricao,c,100,300,,
+t2=Preço Hora:,preco,f,11,84,,
+
+[especied]
+tab=Especie Doc
+comentario=Especie Doc
+db=especied
+ordem=
+rcl=especied.rcl
+chave=id
+chaveprincipal=id
+c0=Banco,banco,i,3,40,,
+c1=Codigo,codigo,c,3,60,,
+c2=Sigla,sigla,c,3,50,,
+c3=Descricao,descricao,c,50,200,,
+altura=210
+largura=470
+foco=banco
+t0=Banco:,banco,i,3,40,,bancos.rcl,
+t1=Codigo:,codigo,i,4,30,!999;1; ,
+t2=Sigla:,sigla,c,3,60,,
+t3=Descricao:,descricao,c,50,300,,
+
+[veicmode]
+tab=Modelo de veiculos
+comentario=Modelo de veiculos
+db=veicmode
+db2=veicmarc
+campos=veicmode.id,veicmode.marca,veicmode.descricao,veicmarc.descricao as descr
+where=veicmarc.id=veicmode.marca
+ordem=marca,descricao
+rcl=
+chave=id
+chaveprincipal=id
+c0=Marca,descr,+,15,60,,
+c1=Descricao,descricao,c,50,300,,
+altura=190
+largura=450
+foco=id
+t0=ID:,id,+,4,30,!999;1; ,
+t1=Marca:,marca,i,3,30,,veicmarc.rcl,
+t2=Descricao:,descricao,c,30,300,,
+
+[tabvenda]
+tab=CONDIÇÕES DE PAGAMENTOS
+comentario=
+db=tabvenda
+ordem=
+rcl=tabvenda.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,c,5,60,,
+c1=Descrição,descricao,c,100,350,,
+altura=300
+largura=450
+foco=descricao
+//t0=Código:,id,+,4,30,!999;1; ,
+//h0=Código da Condições de Pagamento
+t0=Descrição:,descricao,c,200,300,,
+h0=Descrição Completa
+t1=Tipo de Pagto:,tipo,i,3,30,,tipo.rcl,
+h1=Tipo de Pagamento <F2>
+t2=Condições:,prazo,c,200,300,!999/999/999/999/999/999/999/999/999/999/999/999,
+h2=Prazos de Pagamento por quantidade de dias
+t3=Mesmo Dia:,diaigual,sn,3,30,,
+h3=Ajustar a data de vencimento para o mesmo dia do mês@@- Usar somente quando parcelamento de 30 em 30 dias.
+t4=Juros ao Mês:,juros,p,11,84,,
+h4=Juros ao Mês
+t5=Desconto:,desconto,p,11,84,,
+h5=Descontos ao Mês
+t6=Baixar:,baixa=Não,sn,3,30,,
+h6=Baixar Automaticamente
+t7=Ativo:,ativo=Sim,sn,3,30,,
+h7=Ativo (Sim/Não)
+
+[duplicata]
+tab=CABEÇALHO PARA OS FORMULÁRIOS
+comentario=
+db=rclsoft
+ordem=dup_nome
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=CNPJ,dup_cnpj,c,220,120,,
+c1=Nome,dup_nome,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=370
+largura=470
+foco=dup_cnpj
+t0=Cadastro para pegar o logotipo#007E7E7E\picture.png,,,,400, ,
+t1=coluna=20
+t2=forcarleftmask=10
+t3= ,logotipo,i,6,50,,?cadastro.rcl,
+h3=Código do cadastro para pegar o logotipo a imprimir nos formulários
+t4=forcarleftmask=70
+t5=Ajustes no tamanho do Logotipo#007E7E7E\ruler_crop.png,,,,400, ,
+t6=Altura:,logoh,i,4,40,,
+h6=Altura do logotipo
+t7=coluna+100
+t8=linha-25
+t9=Largura:,logow,i,4,40,,
+h9=Largura do logotipo
+t10=#linha-25
+t11=#coluna+160
+t12=#forcarleftmask=100
+t13=#Cor dominante:,color,color,3,40,,
+h13=Cor dominante na impressão dos formulários
+t14=forcarleftmask=70
+t15=coluna-160
+t16=Textos de identificação da empresa#007E7E7E\layout_select.png,,,,400, ,
+t17=coluna=20
+t18=CNPJ:,dup_cnpj,c,20,120,,
+h18=CNPJ ou CPF
+t19=coluna+210
+t20=linha-25
+t21=IE:,dup_ie,c,20,120,,
+h21=Inscrição Estadual
+t22=coluna=20
+t23=Nome:,dup_nome,c,100,330,,
+h23=Nome da empresa
+t24=Fones:,dup_telefones,c,100,330,,
+h24=Telefones
+t25=End:,dup_endereco1,c,100,330,,
+h25=Endereço
+t26= ,dup_endereco2,c,100,330,,
+h26=Endereço
+t27=Praça:,praca,c,100,330,,
+t28=Layout de duplicata#007E7E7E\layout_select.png,,,,400, ,
+t29=forcarleftmask=70
+t30=Mercantil:,dup_tipo_mercantil,sn,3,30,,
+h30=Impressão da duplicata de vendas
+t31=coluna+110
+t32=linha-25
+t33=forcarleftmask=140
+t34=Serviços:,dup_tipo_transporte,sn,3,30,,
+h34=Impressão de duplicata de serviços
+t35=coluna=0
+t36=Conta Bancária:,contaBancaria,ci,20,80,,contacor.rcl,
+//t9=Numerador,dup_numerador,c,30,300,,
+
+[feriados]
+tab=FERIADOS
+comentario=
+db=feriados
+ordem=data desc
+rcl=feriados.rcl
+chave=id
+chaveprincipal=id
+c0=Data,data,d,10,80,,
+c1=Tipo,tipo,c,50,150,,
+c2=Descrição,descricao,c,100,380,,
+c3=Lei,lei,c,50,100,,
+altura=340
+largura=470
+foco=data
+t0=Data:,data,d,10,80,,
+h0=Data do feriado
+t1=Tipo:,tipo=@Nacional,c,50,300,@B,<#13>geral2.rcl,
+h1=Tipo de feriado Nacional, Estadual, Municipal
+t2=Descrição:,descricao,c,200,300,,
+h2=Descrição do feriado
+t3=Lei:,lei,c,50,300,,
+h3=Lei do feriado
+t4=Dia útil:,trabalha,sn,3,30,,
+h4=É um dia útil ? Sim ou Não
+t5=Quando Feriado Municipal#007E7E7E\map.png,,,,410, ,
+t6=UF:,uf,c,2,30,@BU,estado2.rcl,
+h6=Sigla da UF (Estado) <F2>
+t7=Cidade:,cidade,c,30,300,@B,<#17>geral.rcl{ufsigla=uf/""},
+h7=Nome da Cidade
+
+
+
+
+[enviostp]
+tab=Tipo de Envios
+comentario=Tipo de Envios
+db=enviostp
+ordem=
+rcl=enviostp.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,c,5,60,,
+c1=Descrição,descricao,c,100,350,,
+altura=170
+largura=470
+foco=descricao
+t0=Código:,id,+,4,30,!999;1; ,
+t1=Descrição:,descricao,c,200,300,,
+
+[tabelaarmazenagem]
+tab=Tabela Armazenagem
+comentario=Tabela para Calculo de Armazenagem
+db=tabefret
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=ID,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descricao,descr,c,50,200,,
+c3=Cliente,clientefinal,f,16,100,,
+c4=Redespacho,redespacho,f,16,100,,
+altura=440
+largura=400
+foco=descr
+t0=Descrição:,descr,c,50,200,,
+t1=Entrega no cliente:,clientefinal,p,11,84,,
+t2=Frete mínimo:,minimo,f,11,84,,
+t3=Entrega no Redespacho:,redespacho,p,11,84,,
+t4=Frete mínimo:,minimored,f,11,84,,
+t5=Aplicar na Base de cálculo:,basecalculo,p,11,84,,
+t6=Advalorem:,advalorem,p,11,84,,
+t7=SEC/CAT:,seccat,f,11,84,,
+t8=Despacho:,despacho,f,11,84,,
+t9=Pedágio:,pedagio,f,11,84,,
+t10=Outros:,outros,f,11,84,,
+t11=Devolução:,devolucao,p,11,84,,
+t12=Reentrega:,reentrega,p,11,84,,
+
+[armazem]
+tab=Armazem
+comentario=Cadastro de Armazens
+db=armazem
+ordem=id
+rcl=armazem.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,4,60,!999;1; ,
+c1=Quadra,quadra,c,15,150,,
+c2=Descrição,descricao,c,100,380,,
+c3=Vlr Seguro,seguro,f,11,84,,
+altura=245
+largura=470
+foco=quadra
+BotaoExcluir=Não
+t0=Código:,id,+,4,30,,
+t1=Quadra:,quadra,c,15,150,,
+t2=Descrição:,descricao,c,200,300,,
+t3=Vlr Seguro:,seguro,f,11,84,,
+t4=Ativo,ativo,sn,3,30,,
+
+[armazena]
+tab=Operações
+comentario=Operações com Armazenagem
+db=armazena
+ordem=id
+rcl=armazena.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,4,60,,
+c1=Descrição,descricao,c,100,380,,
+altura=230
+largura=470
+foco=descricao
+t0=Código:,id,+,4,30,,
+t1=Descrição:,descricao,c,200,300,,
+t2=Entrada no Armazem:,e_deposito,sn,3,30,,
+t3=Saída do Armazem:,e_retirada,sn,3,30,,
+
+[iprcl]
+tab=Servidor RCLSoft
+comentario=Configuração do servidor RCLSoft.
+db=rclsoft
+ordem=iprcl
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,5,60,,
+c1=IP,iprcl,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=170
+largura=460
+foco=iprcl
+t0=Endereço IP:,iprcl,c,50,200,,
+
+[unidades]
+tab=Unidades
+comentario=Campo utilizado no cadastro de produtos, para definir as quantidade na compra ou venda. Exemplo:( 1 Dz Lanranja ) ( 1 Cx Sapato )... 
+db=unidades
+ordem=nunidade
+rcl=
+chave=nunidade
+chavePrincipal=id
+c0=Unidade,nunidade,c,8,60,,
+c1=Descrição,udescricao,c,50,250,,
+Rlt=estoque.undv/nunidade
+msg=PRODUTO(S)
+altura=180
+largura=450
+foco=nunidade
+//t0=Código:,id,+,4,30,,
+t0=Unidade:,nunidade,c,3,60,,
+t1=Descrição:,udescricao,c,50,300,,
+
+[tabfretevendas]
+tab=TABELA DE FRETES
+comentario=
+db=tabefret
+ordem=id
+rcl=
+relacao=
+chave=id
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Descrição,descr,c,50,200,,
+altura=240
+largura=500
+foco=descr
+forcarleftmask=150
+t0=Descrição:,descr,c,50,300,,
+h0=Descrição da tabela de frete
+t1=Frete Valor:,clientefinal,p,11,50,,
+h1=Porcentagem para cálculo do frete pelo valor da venda
+t2=ADvalorem:,advalorem,p,11,50,,
+h2=Porcentagem para cálculo do seguro
+t3=Taxas:,outros,f,11,84,,
+h3=Outras taxas
+t4=Frete mínimo:,minimo,f,11,84,,
+h4=Valor mínimo do frete
+
+[minsaber]
+tab=MINUTOS DE SABEDORIA
+comentario=
+db=minsaber
+ordem=id
+rcl=
+relacao=
+chave=id
+chaveprincipal=id
+c0=Página,pagina,i,10,60,,
+c1=Mensagem,mensagem,c,50,200,,
+altura=450
+largura=350
+foco=pagina
+forcarleftmask=100
+t0=Página:,pagina,i,3,40,,
+h0=Número da página
+t1=Mensagem:,mensagem,t,0,200x300,,
+h1=Mensagem do livro
+validacao=limiteInt(pagina;[1-400]),duplicidades(pagina;[pagina-minsaber])
+
+[catdesk]
+tab=CATEGORIAS HELP DESK
+comentario=
+db=catdesk
+ordem=id
+rcl=
+relacao=
+chave=id
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Descrição,descricao,c,50,200,,
+altura=180
+largura=450
+foco=descricao
+forcarleftmask=90
+t0=#Código:,id,+,3,30,,
+t1=Icone:,icone,icones,3,40,,
+t2=Descrição:,descricao,c,50,300,,
+h2=Descrição completa
+t3=Ativo:,ativo=Sim,sn,3,30,,
+h3=Ativo Sim ou Não
+validacao=campoPreenchido(descricao)
+
+[customizarcores]
+tab=CORES DA EMPRESA
+comentario=
+db=rclsoft
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=id,id,i,6,100,,
+c1=cnpj,dup_cnpj,c,220,120,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=370
+largura=470
+foco=
+t0=Personalizar cores#007E7E7E\color_swatch_2.png,,,,400, ,
+t1=Cor dominante:,color=@$00FFC1C1,color,3,40,,
+h1=Cor dominante na impressão dos formulários
+t2=linha+5
+t3=#coluna+200
+t4=Cor da fonte:,colorfont0=@$00000000,color,3,40,,
+h4=Cor da fonte na impressão dos formulários
+t5=#coluna-200
+t6=Grids#007E7E7E\table.png,,,,400, ,
+t7=Cor da linha 1:,color0=@$00FFFFEA,color,3,40,,
+h7=Cor da linha 1 na impressão dos formulários
+t8=linha+5
+t9=#coluna-200
+t10=Cor da linha 2:,color1=@$00FFFFF4,color,3,40,,
+h10=Cor da linha 2 na impressão dos formulários
+t11=linha+5
+t12=Cor da fonte:,colorfont1=@$00000000,color,3,40,,
+h12=Cor da fonte na impressão dos formulários
+t13=Menu#007E7E7E\table.png,,,,400, ,
+t14=Layout:,xmenu=@;Padrão;Vendas;NFE;Transportes;Bares;PDV;AUTO,l,5,150,@B,
+[contador]
+tab=DADOS CADASTRAIS DO CONTABILISTA
+comentario=
+db=sped
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Nome,nome,c,50,100,,
+nobrowse=1
+relacaokey=
+autoIncluir=1
+where=id=1
+altura=440
+largura=460
+BotaoAlterar=
+foco=nome
+forcarleftmask=80
+t0=Nome:,nome,c,50,330,,
+h0=Nome do contador responsável
+t1=CPF:,cpf,c,18,110,,
+h1=CPF do contador responsável
+t2=linha-25
+t3=coluna+220
+t4=CRC:,crc,c,18,110,,
+h4=CRC do contador responsável
+t5=coluna-220
+t6=CNPJ:,cnpj,c,20,110,,
+h6=CNPJ do escritório de contabilidade (se houver)
+t7=Localização#007E7E7E\house.png,,,,410, ,
+t8=Endereço:,endereco,c,50,330,,
+h8=Endereço Rua, Av, etc...
+t9=CEP:,cep,c,9,70,@B$fcep(),cep(cep;endereco;bairro;uf;cidade),
+h9=Número do CEP
+t10=linha-25
+t11=coluna+140
+t12=Bairro:,bairro,c,30,190,,
+h12=Nome do Bairro
+t13=coluna-140
+t14=UF:,uf,c,2,30,@BU,estado2.rcl,
+h14=Sigla da UF (Estado) <F2>
+t15=linha-25
+t16=coluna+110
+t17=Cidade:,cidade,c,30,205,@B,<#17>geral.rcl{ufsigla=uf/""},
+h17=Nome da Cidade
+t18=coluna-110
+t19=Contato#007E7E7E\telephone.png,,,,410, ,
+t20=Telefones:,fone,c,60,130,,
+h20=Número do Telefone
+t21=linha-25
+t22=coluna+200
+t23=FAX:,fax,c,60,130,,
+h23=Número do FAX
+t24=coluna-200
+t25=EMAIL:,email,c,255,330,@L,
+h25=Endereço de E-MAIL
+validacao=validarCnpj(cpf),validarCnpj(cnpj)
+
+[fisco]
+tab=CLASSIFICAÇÃO FISCAL DA EMPRESA
+comentario=
+db=rclsoft
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,6,60,,
+c1=Licença,serial,c,40,100,,
+c2=Empresa,empresa,c,50,300,,
+c3=Ativa,ativo,sn,5,30,,
+nobrowse=1
+reservado=1
+Rlt=*
+altura=420
+largura=450
+foco=iest
+Rlt=*
+t0=Contribuinte Substituição Tributária#007E7E7E\doc_stand.png,,,,410, ,
+t1=UF:,uf,c,2,30,@BU,estado2.rcl,
+h1=Sigla da UF (Estado) <F2>
+t2=IE:,iest,c,20,130,,
+h2=Inscrição Estadual de Substituição Tributária
+
+[fornsql]
+tab=ECOMMERCE Sistema do fornecedor
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=170
+largura=460
+foco=forn_ip
+forcarleftmask=100
+where=id="3"
+relacaokey=id,"3"
+t0=Host/IP:,forn_ip,c,255,300,,
+t1=Usuário:,forn_usuario,c,50,150,,
+t2=Senha:,forn_senha,c,255,150,,
+t3=Database:,forn_database,c,255,150,,
+
+[prodgeral]
+tab=ECOMMERCE PARAMETROS GERAIS
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=170
+largura=460
+foco=webprazo
+forcarleftmask=200
+where=id="3"
+relacaokey=id,"3"
+t0=Entrega dos Produtos#007E7E7E\ok2.bmp,,,,385, ,
+t1=Dias de prazo de entrega:,webprazo,i,3,70,,
+
+[descricao]
+tab=DESCRIÇÃO DETALHADA DOS PRODUTOS
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=170
+largura=460
+foco=descricao1
+forcarleftmask=100
+where=id="3"
+relacaokey=id,"3"
+t0=Descrição 1:,descricao1,c,30,300,,
+t1=Descrição 2:,descricao2,c,30,300,,
+t2=Descrição 3:,descricao3,c,30,300,,
+
+[grupoTurnos]
+tab=Grupo de Cliente por Turno - Exemplo 1,2,3,4
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Código,id,+,3,60,,
+c1=Descrição,txt_1,c,255,240,,
+c2=Grupos,txt_2,c,255,100,,
+nobrowse=0
+relacaokey=nome,"grupo_turnos"
+autoIncluir=0
+where=nome='grupo_turnos'
+altura=280
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Código:,id,+,10,60,,
+t1=Descrição:,txt_1,c,255,300,,
+t2=,txt_2,t,0,300x100,,
+
+[variaveisform]
+tab=VARIAVEIS DO SISTEMA
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Nome,txt_1,c,255,140,,
+c1=Descrição,txt_2,c,255,240,,
+nobrowse=0
+relacaokey=nome,"VARIAVEIS_DO_SISTEMA_RCS"
+autoIncluir=0
+where=nome='VARIAVEIS_DO_SISTEMA_RCS'
+altura=420
+largura=680
+foco=txt_1
+forcarleftmask=90
+t0=Nome:,txt_1,c,255,540,,
+t1=,txt_2,t,0,540x250,,
+
+
+[segmento]
+tab=SEGMENTO DA EMPRESA
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Código,id_1,+,3,60,,
+c1=Descrição,&rclArq(id_1|<#22>geral2.rcl),c,255,240,,
+nobrowse=0
+relacaokey=nome,"SEGMENTO_EMPRESA"
+autoIncluir=0
+where=nome='SEGMENTO_EMPRESA'
+altura=150
+largura=440
+foco=id_1
+forcarleftmask=90
+t0=Segmento:,id_1,i,3,50,,<#22>geral2.rcl,
+
+[operacard]
+tab=OPERADORAS DE CARTÃO
+db=set_mult
+ordem=codigo
+chave=id
+chaveprincipal=id
+c0=Código,codigo,i,5,60,,
+c1=Descrição,descricao,c,100,200,,
+c2=Cadastro,&rclArq(id_1|cadastro.rcl),c,255,50,,
+nobrowse=0
+SET_MULT_VALIDA=codigo
+SET_MULT=BANDEIRA_PAGTO_OPERADORA
+relacaokey=nome,"BANDEIRA_PAGTO_OPERADORA"
+autoIncluir=0
+where=nome='BANDEIRA_PAGTO_OPERADORA'
+altura=200
+largura=440
+foco=descricao
+forcarleftmask=90
+t0=Código:,codigo,+,5,60,,
+t1=Descrição:,descricao,c,100,300,,
+t2=Cadastro:,id_1,i,6,60,,?cadastro.rcl,
+
+[bandcard]
+tab=BANDEIRAS DE PAGAMENTO COM CARTÃO
+db=set_mult
+ordem=id_1
+chave=id
+chaveprincipal=id
+#c0=Ordem,id_1,i,3,50,,
+c0=Código,codigo,c,3,60,,
+c1=Descrição,descricao,c,255,130,,
+c2=Operadora,&rclArq(txt_1|<#30>geral2.rcl),c,255,190,,
+c3=Ordem,id_1,i,3,40,,
+nobrowse=0
+SET_MULT_VALIDA=codigo
+SET_MULT=BANDEIRA_PAGTO_CARTAO
+relacaokey=nome,"BANDEIRA_PAGTO_CARTAO"
+autoIncluir=0
+where=nome='BANDEIRA_PAGTO_CARTAO'
+altura=270
+largura=440
+foco=descricao
+forcarleftmask=90
+t0=Código:,codigo,+,3,40,,
+t1=Descrição:,descricao,c,100,300,,
+t2=Operadora:,txt_1,i,5,40,,<#30>geral2.rcl,
+t3=Ordem:,id_1,i,3,40,,
+t4=Script:,txt_4,c,500,300,,
+
+
+[taxacard]
+tab=TAXAS DE CARTÃO
+db=set_mult
+ordem=id_1,txt_1,id_5
+chave=id
+chaveprincipal=id
+c0=Bandeira,&rclArq(txt_1|<#31>geral2.rcl),c,255,85,,
+c1=Pagto,&rclArq(id_1|tipo.rcl),c,255,100,,
+c2=Taxa,valor,p,11,50,,
+c3=De,id_2,i,3,30,,
+c4=Ate,id_3,i,3,30,,
+c5=x Dias,id_4,i,3,50,,
+c6=Ant,rstIcon,sn,3,30,,
+c7=Tipo,&rclArq(id_5|<#32>geral2.rcl),c,255,50,,
+c8=Ref,txt_3,c,20,100,,
+c9=Ativo,ativo,sn,3,40,,
+nobrowse=0
+relacaokey=nome,"BANDEIRA_PAGTO_TAXAS"
+autoIncluir=0
+where=nome='BANDEIRA_PAGTO_TAXAS'
+altura=460
+largura=440
+foco=txt_1
+forcarleftmask=105
+t0=Bandeira:,txt_1,ci,5,40,,<#31>geral2.rcl,
+t1=linha+10
+t2=Pagto:,id_1,i,3,40,,tipo.rcl,
+t3=linha+10
+t4=Taxa(%):,valor,p,11,80,,
+t5=linha+10
+t6=Tipo:,id_5,i,1,30,,<#32>geral2.rcl,
+t7=linha+10
+t8=Parcela de:,id_2,i,3,40,,
+t9=linha-25
+t10=coluna+70
+t11=até,id_3,i,3,40,,
+t12=coluna-70
+t13=linha+10
+t14=Dias:,id_4,i,3,40,,
+t15=linha+10
+t16=Conta Bancária:,txt_2,ci,20,80,,contacor.rcl,
+t17=linha+10
+t18=Antecipáveis:,rstIcon,sn,3,30,,
+t19=linha+10
+t20=Referência:,txt_3,c,255,300,,
+t21=linha+10
+t22=Ativo:,ativo=Sim,sn,3,30,,
+
+[bina]
+tab=BINA TELEFONICO
+comentario=
+db=bina
+ordem=id desc
+rcl=
+chave=id
+chaveprincipal=id
+c0=Data,&datahora(data|hora|) as data,d,10,100,,
+c1=Tempo,tempo,c,10,50,,
+c2=Tipo,tipo,i,3,35,,
+c3=Ramal,ramal,i,3,35,,
+c4=DDD,ddd,c,3,40,,
+c5=Fone,numero,c,10,75,
+c6=Nome,nome,c,50,300,,
+BotaoIncluir=RCL
+BotaoAlterar=RCL
+altura=400
+largura=450
+foco=numero
+t0=ID:,id,+,4,30,,
+t1=DDD:,ddd,i,3,30,,
+t2=Fone:,numero,c,10,100,,
+
+[binaraml]
+tab=BINA RAMAIS
+comentario=
+db=binaraml
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,10,60,,
+c1=Número,numero,c,9,150,,
+c2=Descrição,descricao,c,100,150,,
+#BotaoIncluir=RCL
+#BotaoAlterar=RCL
+BotaoExcluir=Não
+altura=200
+largura=450
+foco=numero
+t0=Código:,id,+,4,30,,
+t1=Número:,numero,c,50,300,,
+t2=Descrição:,descricao,c,100,300,,
+
+[binasrv]
+tab=SERVIDOR BINA
+comentario=
+db=rclsoft
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,10,60,,
+c1=IP,binaSrv,c,50,150,,
+c2=Porta,binaPort,i,6,60,,
+nobrowse=1
+#BotaoIncluir=RCL
+#BotaoAlterar=RCL
+#BotaoExcluir=Não
+altura=200
+largura=450
+foco=binaSrv
+t0=Ativo:,binaAtivo=Não,sn,3,30,,
+t1=IP do Servidor:,binaSrv,c,50,300,,
+t2=Porta:,binaPort,i,6,60,0,
+
+[rootServer]
+tab=ROOT SERVER
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Usuário,txt_1,c,255,380,,
+c1=Ativo,ativo,sn,3,30,,
+nobrowse=0
+relacaokey=nome,"usuario_root_server_conect"
+autoIncluir=0
+where=nome='usuario_root_server_conect'
+altura=280
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Username:,txt_1,c,255,300,,
+t1=Password:,txt_2,c,255,300,@{*},
+t2=Ativo:,ativo,sn,3,30,,
+
+[processPend]
+tab=PROCESSOS PENDENTES
+comentario=
+db=ctrl_process
+ordem=data_ini,hora_ini
+rcl=
+chave=id
+chaveprincipal=id
+c0=Data,data_ini,d,10,80,,
+c1=Hora,hora_ini,h,5,50,
+c2=Modulo,descricao,c,50,200,,
+c3=Evento,evento,c,50,80,,
+where=concluido=0
+reservado=
+Rlt=*
+BotaoExcluir=
+BotaoAlterar=
+BotaoIncluir=
+altura=600
+largura=450
+BotaoExcluir=Sim
+BotaoAlterar=Sim
+BotaoIncluir=Sim
+foco=nome
+t0=Processo:,id,+,9,80,,
+t1=Documento:,idModulo,i,9,80,,
+t2=Modulo:,modulo,c,50,300,,
+t3=Descrição:,descricao,c,50,300,,
+t4=Extra:,tags,c,50,300,,
+t5=Evento:,evento,c,50,300,,
+t6=Inicio:,data_ini,d,10,70,,
+t7=,hora_ini,h,5,70,,
+t8=Final:,data_end,d,10,70,,
+t9=,hora_end,h,5,70,,
+t10=Usuário:,usuario,i,9,60,,
+t11=Terminal:,terminal,i,5,60,,
+t12=Progress:,progress,i,3,60,,
+t13=Concluido:,concluido,sn,3,30,,
+t14=Histórico:,historico,t,0,300x120,,

@@ -1,0 +1,84 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 28/01/2010
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=0
+nivelauxiliar=0
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=nil, Tonelada, tabelatonelada, 0123456789, 9, 7,a
+
+#
+# Parametros de tela
+#
+
+[tabelatonelada]
+tab=TABELA TONELADA
+comentario=Tabela Tonelada
+db=tabefret
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Por tonelada,tonelada,f,16,100,,
+altura=532
+largura=380
+foco=id
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=120
+forcarleftmask=130
+nobrowse=1
+t0=Descrição:,descr,c,50,200,,
+t1=de   0 à  50 Kg:,ate_50,f,11,84,,
+t2=de  51 à 100 Kg:,ate_100,f,11,84,,
+t3=de 101 à 150 Kg:,ate_150,f,11,84,,
+t4=de 151 à 200 Kg:,ate_200,f,11,84,,
+t5=de 201 à 250 Kg:,ate_250,f,11,84,,
+t6=de 251 à 300 Kg:,ate_300,f,11,84,,
+t7=de 301 à 350 Kg:,ate_350,f,11,84,,
+t8=de 351 à 400 Kg:,ate_400,f,11,84,,
+t9=de 401 à 450 Kg:,ate_450,f,11,84,,
+t10=de 451 à 500 Kg:,ate_500,f,11,84,,
+t11=de 501 à 550 Kg:,ate_550,f,11,84,,
+t12=de 551 à 600 Kg:,ate_600,f,11,84,,
+t13=de 601 à 650 Kg:,ate_650,f,11,84,,
+t14=de 651 à 700 Kg:,ate_700,f,11,84,,
+t15=de 701 à 750 Kg:,ate_750,f,11,84,,
+t16=de 751 à 800 Kg:,ate_800,f,11,84,,
+t17=de 801 à 850 Kg:,ate_850,f,11,84,,
+t18=de 851 à 900 Kg:,ate_900,f,11,84,,
+t19=de 901 à 950 Kg:,ate_950,f,11,84,,
+t20=de 951 à 1000 Kg:,ate_1000,f,11,84,,
+t21=Acima de 1000 Kg:,tonelada,f,11,84,,
+t22=ADvalorem:,advalorem,p,11,84,,
+t23=GRIS:,gris,p,11,84,,
+t24=Preço M3 p/ 100kg:,precom3,e,11,84,,
+t25=Seg/Cat:,seccat,f,11,84,,
+t26=Despacho:,despacho,f,11,84,,
+t27=Pedágio:,pedagio,f,11,84,,
+t28=linha-25
+t29=coluna+180
+t30=Pedágio p/ Kg:,adicional,e,11,84,,
+t31=coluna-180
+t32=Outros:,outros,f,11,84,,
+t33=Frete Mínimo:,minimo,f,11,84,,
+t34=Devolução:,devolucao,p,11,84,,
+t35=Reentrega:,reentrega,p,11,84,,
+t36=#ICMS faz parte do frete:,icmsx,sn,3,30,,
+t37=Compartilhada:,compartilhada,sn,3,30,,
+t38=Verificar Frete Mínimo do Total:,frt_minitotal,sn,3,30,,

@@ -1,0 +1,122 @@
+
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 12/12/2003
+#
+#
+# a todos
+# p Programação de entregas data e hora
+# n Baixa por Notas Fiscais
+
+[arquivo]
+modulo=CONFIGURAÇÃO DA ORDEM DE COLETA
+nivelprincipal=0
+nivelauxiliar=0
+
+
+[Opcoes]
+o0=OrdemColeta, 0123456789, 9, 0, as
+
+[OrdemColeta]
+o0=nil, Configuração,  cfgcoleta, 07, 9, 13, a
+o1=Motorista, Fretes Geral, veicutip, 0123456789, 1, 12,a
+o2=Motorista, Fretes Combinado, fretcomb, 0123456789, 1, 12,a
+
+[cfgcoleta]
+tab=CONFIGURAÇÃO
+comentario=
+db=tipotran
+ordem=descricao
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Sigla,mask,c,3,60,,
+nobrowse=1
+relacaokey=
+where=id=1
+altura=440
+largura=460
+BotaoAlterar=
+foco=lpt3
+forcarleftmask=100
+t0=#Layout de Impressão#007E7E7E\printer.png,,,,410, ,
+t1=Arquivo LPT:,lpt3,c,20,280,@LB,<#25>geral.rcl,
+h1=Arquivo de layout da Ordem de Coleta
+
+[veicutip]
+tab=FRETE POR TIPO DE VEÍCULO
+comentario=
+db=veicutip
+ordem=cubagem1,descricao
+rcl=
+chave=id
+chaveprincipal=id
+c0=Ref,tpRod,c,5,40,,
+c1=Descrição,descricao,c,50,160,,
+c2=Coleta,coleta,f,11,70,,
+c3=Ajudante,ajudante,f,11,70,,
+c4=Outros,outros,f,11,70,,
+altura=330
+largura=420
+foco=coleta
+t0=Tipo:,tpRod,ci,2,30,,<#20>geral.rcl,
+h0=Tipo de rodagem, código usado para cálculo do frete
+t1=Descrição:,descricao,c,50,250,,
+h1=Descrição completa
+t2=Peso de:,cubagem1,i,10,100,,
+h2=Peso inicial em Kilos
+t3=Peso até:,cubagem2,i,10,100,,
+h3=Peso final em Kilos
+t4=Taxas#007E7E7E\calculator.png,,,,400, ,
+t5=Coleta:,coleta,f,11,84,,
+h5=Taxa por coleta
+t6=Ajudante:,ajudante,f,11,84,,
+h6=Taxa por ajudante
+t7=Outros:,outros,f,11,84,,
+h7=Outras taxas
+validacao=campoPreenchido(tpRod)
+
+[fretcomb]
+tab=FRETE COMBINADO COM MOTORISTA
+comentario=
+db=fretcomb
+db2=cadastro
+ordem=cadastro.nome
+rcl=
+chave=id
+chaveprincipal=id
+campos=fretcomb.id,fretcomb.cadastro,fretcomb.tpRod,fretcomb.coleta,fretcomb.ajudante,fretcomb.outros,fretcomb.obs,cadastro.nome
+c0=Código,cadastro,i,8,70,,
+c1=Nome,nome,c,40,250,,
+c2=Veículo,tpRod,c,2,60,,
+c3=Observação,obs,c,255,100,,
+c4=Coleta,coleta,f,11,70,,
+c5=Ajudante,ajudante,f,11,70,,
+c6=Outros,outros,f,11,70,,
+relacaokey=
+where=fretcomb.cadastro=cadastro.codigo
+nobrowse=0
+reservado=0
+Rlt=
+altura=300
+largura=450
+foco=cadastro
+forcarleftmask=100
+forcarrightlabel=1
+t0=Motorista:,cadastro,i,6,50,,?cadastro.rcl,
+h0=Código do Motorista
+t1=Veículo:,tpRod,ci,2,30,,<#20>geral.rcl,
+h1=Tipo de Veículo
+t2=Taxas#007E7E7E\calculator.png,,,,400, ,
+t3=Coleta:,coleta,f,11,84,,
+h3=Taxa por coleta
+t4=Ajudante:,ajudante,f,11,84,,
+h4=Taxa por ajudante
+t5=Outros:,outros,f,11,84,,
+h5=Outras taxas
+t6=Observação:,obs,c,255,300,,
+h6=Observação
+validacao=campoPreenchido(tpRod)

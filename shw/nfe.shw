@@ -1,0 +1,1178 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 12/12/2003
+#
+#
+# a todos
+# d nota de despesas
+# g agenda
+# m movimento de caixa
+# n cadastro de bancos
+# o plano de contas
+# p pagar
+# q gerenciador de ocorrencias
+# r receber
+# s script inicial
+# t conta caixa
+
+[arquivo]
+modulo=NOTA FISCAL ELETRÔNICA
+tituloE=CARTA DE CORREÇÃO
+nivelprincipal=1
+nivelauxiliar=0
+
+[Opcoes]
+o0=NF-E, 0123456789, 9, 0,ase
+o1=insert(shw\tabtribu.shw)
+
+[NF-E]
+o0=nil, Certificado, certificado,0123456789, , 20:14,a
+o1=nil, Certificado Digital, certificado2,0123456789, , 20:14,a
+#o1=#nil, Comp. de Impostos, impostos, 0123456789, 9, 20:2, a
+o2=nil, Emissão, cfgemissao, 0123456789, , 2,a
+o3=nil, DANFE, danfe, 0123456789, ,16,a
+o4=nil, Informações adicionais, infoadic, 0123456789, , 15,a
+o5=nil, Auto Preenchimento, auto, 0123456789, , 15,a
+o6=nil, Controle de Erros,controleDeErros,0123456789, , 15,a
+o7=nil, Processos Pendentes,processPend,0123456789, , 15,a
+#DANFE, Logotipo, danfelogo, 0123456789, ,13,a
+o8=#DANFE, Descrição do produto, danfedescricao, 0123456789, ,13,a
+o9=#DANFE, Nota Fiscal antiga, danfeoutros, 0123456789, ,13,a
+o10=#Tabelas de Tributação, CFOP, cfopnota, 0123456789, 1, 20:24,a
+o11=#Tabelas de Tributação, CST, classtri, 012345678, 1, 20:24,a
+o12=#Tabelas de Tributação, NCM, classfis, 0123456789, 1, 20:24,a
+o13=#Tabelas de Tributação, MVA, tabmvaprod, 0123456789, 1, 20:24,a
+o14=#Tabelas de Tributação, Subst. Tributária(Padrão), tabmva, 0123456789, 1, 15,a
+o15=#Tabelas de Tributação, Artigos do ICMS, articms, 0123456789, 1, 20:24,a
+o16=#Tabelas de Tributação, Tabela de ICMS, tabicms, 0123456789, 1, 20:22,a
+o17=#Tabelas de Tributação, Simples Nacional, simples, 0123456789, 1, 20:22,a
+o18=Vendas, Condições de Pagto, tabvenda, 0123456789, 1, 20:21,a,!20
+o19=Vendas, Tabela de Fretes, tabfretevendas, 0123456789, 1, 20:12,a,!20
+o20=Complementos, Países, paises, 0123456789, 1, 17:23,a
+o21=Complementos, IBGE, ibge, 0123456789, 1, 17:23,a
+o22=nil, Carta de Correção, cartadecorrecao, 0123456789, 9, 2,e
+
+
+[tabicms]
+tab=TABELA DE ICMS
+comentario=
+db=tabicms
+ordem=
+rcl=icms.rcl
+chave=id
+chaveprincipal=id
+c0=Origem,uforigem,c,8,80,,
+c1=Destino,ufdestino,c,8,80,,
+c2=Alíq. 1,valor,p,11,60,,
+c3=Alíq. 2,valor2,p,11,60,,
+altura=230
+largura=250
+foco=uforigem
+t0=Origem:,uforigem,c,2,30,@BU,estado2.rcl,
+h0=Estado de Origem <F2>
+t1=Destino:,ufdestino,c,2,30,@BU,estado2.rcl,
+h1=Estado de Destino <F2>
+t2=Alíq. PJ:,valor,p,10,60,,
+h2=Alíquota para Pessoa Juridica
+t3=Alíq. PF:,valor2,p,10,60,,
+h3=Alíquota para Pessoa Física
+validacao=campoPreenchido(uforigem),campoPreenchido(ufdestino),validarIcms(uforigem;ufdestino)
+
+[articms]
+tab=ARTIGOS DO ICMS
+comentario=ARTIGOS DO ICMS
+db=articms
+ordem=artigo
+rcl=articms.rcl
+chave=artigo
+chaveprincipal=id
+c0=Artigos,artigo,c,10,90,,
+c1=Descrição,descricao,c,65,300,,
+campoforcado=artigo
+Rlt=conhecim.articms,minuta.articms,conheci1.articms,minconhe.articms
+msg=CTRC(s)
+altura=240
+largura=500
+foco=artigo
+t0=Artigo:,artigo,c,15,80,,
+h0=Código do artigo do ICMS.
+t1=Descrição:,descricao,t,0,350,,
+h1=Descrição do artigo do ICMS.
+
+[cfopnota]
+tab=CFOP
+comentario=CFOP
+db=cfopnota
+ordem=codigo
+rcl=cfopnota.rcl
+chave=codigo
+chaveprincipal=id
+c0=Código,codigo,c,8,60,,
+c1=Descrição,ncfop,c,50,300,,
+CampoForcado=codigo
+Rlt=notafisc.cfop,conhecim.operacao,minuta.operacao,conheci1.operacao,minconhe.cfop
+msg=
+altura=280
+largura=450
+foco=codigo
+forcarleftmask=
+t0=Código:,codigo,c,5,60,!9.999;1; ,
+h0=Código do CFOP.
+t1=Descrição:,ncfop,c,50,300,,
+h1=Descrição do CFOP.
+t2=Não Faturar:,nocobranca,sn,3,30,,
+h2=Não faturar NF-e ou CT-e
+t3=Tributação#007E7E7E\attach_2.png,,,,385, ,
+t4=CST/CSO:,cst,ci,3,40,,classtri.rcl,
+h4=Código da Situação Tributária/ Código de Situação da Operação - Simples Nacional
+t5=Sem ICMS:,noicms,sn,3,30,,
+h5=Sem tributação - não destacar ICMS na NF-e ou CT-e
+validacao=duplicidades(codigo;[codigo-cfopnota])
+
+[classfis]
+tab=TABELA DE CLASSIFICAÇÃO FISCAL - NCM (IPI/PIS/COFINS)
+comentario=Tabela NCM
+db=classfis
+ordem=aordem,codigo
+rcl=classfis.rcl
+chave=id
+chavePrincipal=id
+c0=Código NCM,codigo,c,9,80,,
+c1=Descrição,descricao,c,45,300,,
+Rlt=estoque.cf
+//relacao=classfis->mvaprod, id->grupo
+msg=
+altura=460
+largura=450
+foco=codigo
+t0=Código NCM:,codigo,c,10,100,@U!9999.99.99;1; !,
+h0=Código NCM.
+t1=Descrição:,descricao,c,60,300,,
+h1=Descrição do código NCM.
+t2=Tabela MVA:,ncmpai,c,10,100,@BU!9999.99.99;1; !,classfis.rcl,
+h2=Código da tabela MVA principal (Pai) - O Sistema copia os dados desta tabela.
+t3=Ativo:,ativo,sn,3,30,,
+h3=Ativar esta tabela ? Sim ou não
+t4=IPI (Alíquotas)#007E7E7E\attach_2.png,,,,385, ,
+t5=Na entrada:,ipientrada,p,11,84,,
+h5=Porcentagem do IPI quando Nota Fiscal de entrada.
+t6=linha-25
+t7=coluna+190
+t8=Na saída:,ipisaida,p,11,84,,
+h8=Porcentagem do IPI quando Nota Fiscal de saida.
+t9=coluna=20
+t10=PIS (Alíquotas)#007E7E7E\attach_2.png,,,,385, ,
+t11=Na entrada:,pisentrada,p,11,84,,
+h11=Porcentagem de PIS quando Nota Fiscal de entrada.
+t12=linha-25
+t13=coluna+190
+t14=Na saída:,pissaida,p,11,84,,
+h14=Porcentagem de PIS quando Nota Fiscal de saida.
+t15=coluna=20
+t16=COFINS (Alíquotas)#007E7E7E\attach_2.png,,,,385, ,
+t17=Na entrada:,cofinsentrada,p,11,84,,
+h17=Porcentagem de COFINS quando Nota Fiscal de entrada.
+t18=linha-25
+t19=coluna+190
+t20=Na saída:,cofinssaida,p,11,84,,
+h20=Porcentagem de COFINS quando Nota Fiscal de saida.
+t21=coluna=20
+t22=II - Imposto de importação#007E7E7E\attach_2.png,,,,385, ,
+t23=Alíquota:,ii,p,11,84,,
+h23=Porcentagem para imposto de importação.
+validacao=validarNCM(codigo)
+
+[tabmvaprod]
+tab=TABELA SUBST. TRIBUTÁRIA POR PRODUTO
+comentario=
+db=mvaprod
+ordem=uf
+rcl=mva.rcl
+modcampoorigem=Código NCM:/100/70/!9999.99.99;1; /NE/160/10/classfis.rcl/
+campoorigem=Código NCM:/100/70//NE/171/200/classfis.rcl/
+chave=id
+chaveprincipal=id
+where=referencia="$IDORIGEM"
+relacaokey=referencia,"$IDORIGEM"
+c0=Destino,uf,c,9,80,,estados.rcl,
+c1=Interna,aliq_interna,p,11,84,,
+c2=MVA,aliq_mva,p,11,84,,
+Rlt=
+msg=
+altura=200
+largura=350
+foco=uf
+forcarleftmask=150
+t0=Destino:,uf,c,2,40,@BU,estados.rcl,
+h0=UF de destino da mercadoria.<F2>
+t1=Adicional BC ST:,aliq_mva,p,11,84,,
+h1=Porcentagem adicional a Base de Cálculo do ICMS de Substituição Tributária definida pelo estado destino.
+t2=Alíq ICMS ST:,aliq_interna,p,11,84,,
+h2=Alíquota do ICMS de Substituição Tributária definida pelo estado destino.
+validacao=campoPreenchido(uf)
+
+[paises]
+tab=TABELA DE PAÍSES - ORIGEM BACEN
+comentario=
+db=paises
+ordem=nome
+rcl=paises.rcl
+chave=id
+chaveprincipal=id
+c0=Código,codigo,c,5,60,,
+c1=País,nome,c,50,200,,
+reservado=
+Rlt=*
+BotaoExcluir=RCL
+BotaoAlterar=RCL
+BotaoIncluir=RCL
+altura=180
+largura=400
+BotaoExcluir=Não
+BotaoAlterar=Sim
+BotaoIncluir=Sim
+foco=nome
+t0=Código:,codigo,c,5,50,!99999;1; ,
+h0=Código do país conforme tabela BACEN.
+t1=Nome:,nome,c,50,250,,
+h1=Nome do país.
+
+[ibge]
+tab=TABELA DE CÓDIGO DE MUNICIPIOS - ORIGEM IBGE
+comentario=
+db=ibge
+ordem=ufsigla,municipionome limit 0,500
+rcl=ibge.rcl
+chave=id
+chaveprincipal=id
+c0=Código,uf,c,3,50,,
+c1=UF,ufsigla,c,5,30,,
+c2=Estado,ufnome,c,50,80,,
+c3=Municipio,municipio,c,7,70,,
+c4=Nome,municipionome,c,50,80,,
+reservado=
+forcarleftmask=130
+Rlt=*
+BotaoExcluir=RCL
+BotaoAlterar=RCL
+BotaoIncluir=RCL
+altura=300
+largura=400
+BotaoExcluir=Não
+BotaoAlterar=Sim
+BotaoIncluir=Sim
+foco=nome
+t0=Estado brasileiro#007E7E7E\image_2.png,,,,350, ,
+t1=UF:,ufsigla,c,5,30,@BU,estados.rcl,
+h1=Sigla dos estados brasileiro.
+t2=Código:,uf,c,3,30,!999;1; ,
+h2=Código do estado brasileiro.
+t3=Nome:,ufnome,c,50,220,,
+h3=Nome do estado brasileiro.
+t4=Municipio#007E7E7E\image_2.png,,,,350, ,
+t5=Código:,municipio,c,7,80,!9999999;1; ,
+h5=Código do municipio.
+t6=Nome:,municipionome,c,50,220,,
+h6=Nome do municipio.
+
+[internos]
+tab=CONTROLES INTERNOS
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=170
+largura=460
+foco=modbc
+forcarleftmask=150
+where=id="1"
+relacaokey=id,"1"
+t0=Modalidade BC ICMS:,modBC,i,11,20,,modbc.rcl,
+t1=Modalidade BC ST ICMS:,modBCST,i,11,20,,modbcst.rcl,
+
+[tabmva]
+tab=TABELA DE SUBSTITUIÇÃO TRIBUTÁRIA (PADRÃO)
+comentario=
+db=estados
+ordem=uf
+rcl=estados.rcl
+chave=uf
+chaveprincipal=id
+c0=Sigla,uf,c,12,40,,
+c1=Descrição,nuf,c,50,150,,
+c2=Interna,aliq_interna,p,11,90,,
+//c3=Interestadual,aliq_interestadual,p,11,90,,
+c3=MVA,aliq_mva,p,11,84,,
+reservado=1..27
+altura=230
+largura=420
+BotaoExcluir=Não
+BotaoAlterar=Sim
+BotaoIncluir=Não
+forcarleftmask=150
+foco=aliq_interna
+t0=Sigla:,uf,+,2,60,,
+t1=Descrição:,nuf,+,50,200,,
+t2=Alíquota interna:,aliq_interna,p,11,84,,
+//t3=Aliq. interestadual:,aliq_interestadual,p,11,84,,
+t3=Alíquota MVA:,aliq_mva,p,11,84,,
+
+[tiponota]
+tab=OPERAÇÃO COM NOTAS FISCAIS
+comentario=
+db=tiponota
+ordem=id
+rcl=tiponota.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Descrição,ntiponota,c,50,200,,
+reservado=1,2
+Rlt=*
+altura=170
+largura=300
+BotaoExcluir=Não
+BotaoAlterar=Sim
+BotaoIncluir=Não
+foco=ntiponota
+t0=Código:,id,+,4,30,!999;1; ,
+t1=Descrição:,ntiponota,c,50,150,,
+
+[mvaprod]
+tab=TABELA MVA POR PRODUTO
+comentario=
+db=mvaprod
+ordem=uf
+rcl=
+chave=grupo
+chaveprincipal=id
+c0=UF,uf,c,9,80,,estados.rcl,
+c1=Interna,aliq_interna,p,11,84,,
+c2=MVA,aliq_mva,p,11,84,,
+Rlt=
+msg=
+altura=200
+largura=350
+foco=uf
+forcarleftmask=150
+t0=UF:,uf,c,2,40,@BU,estados.rcl,
+t1=Alíquota interna:,aliq_interna,p,11,84,,
+t2=Alíquota MVA:,aliq_mva,p,11,84,,
+validacao=campoPreenchido(uf)
+[classtri]
+tab=CLASSIFICAÇÃO TRIBUTÁRIA DO ICMS
+comentario=
+db=classtri
+ordem=codigo
+rcl=classtri.rcl
+chave=id
+chaveprincipal=id
+c0=Código,codigo,+,8,60,,
+c1=Descrição,descricao,c,70,400,,
+Rlt=estoque.st/codigo
+msg=PRODUTO(S)
+altura=180
+largura=450
+foco=codigo
+t0=Código:,codigo,c,5,40,,
+h0=CST - Código da Situação Tributária do Produto
+t1=Descrição:,descricao,c,50,300,,
+h1=Descrição
+BotaoExcluir=Não
+BotaoAlterar=RCL
+validacao=campoPreenchido(codigo)
+
+[tabvenda]
+tab=CONDIÇÕES DE PAGAMENTOS
+comentario=
+db=tabvenda
+ordem=
+rcl=tabvenda.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,c,5,60,,
+c1=Descrição,descricao,c,100,350,,
+altura=300
+largura=450
+foco=descricao
+t0=Descrição:,descricao,c,200,300,,
+h0=Descrição da Condições de Pagamento
+t1=Tipo de Pagto:,tipo,i,3,30,,tipo.rcl,
+h1=Tipo de Pagamento <F2>
+t2=Condições:,prazo,c,200,300,!999/999/999/999/999/999/999/999/999/999/999/999,
+h2=Prazo de Pagamento por dias
+t3=Mesmo Dia:,diaigual,sn,3,30,,
+h3=Ajustar a data de vencimento sempre no mesmo dia@@- Usar somente quando parcelamento de 30 em 30 dias.
+t4=Juros ao Mês:,juros,p,11,84,,
+h4=Juros ao Mês
+t5=Desconto:,desconto,p,11,84,,
+h5=Descontos ao Mês
+t6=Ativo:,ativo,sn,3,30,,
+h6=Condições Ativa (Sim/Não)
+
+#
+# Parametros de tela
+#
+
+[certificado]
+tab=CERTIFICADO DIGITAL
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=certificado,certificado,c,50,100,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=1
+where=id=1
+anexoLocal=url
+Rlt=*
+altura=170
+largura=460
+foco=certificado
+forcarleftmask=110
+t0=Certificado Digital#007E7E7E\key.png,,,,400, ,
+t1=Número de Série:,certificado,c,500,265,@B,acbrnfe1,
+h1=Número de série do Certificado Digital@ - Selecione um certificado digital.
+t2=Certificado:,certifstr,t,0,280x90,@R,,
+t3=Vencimento:,datavenc,d,10,80,@R,
+t4=Senha:,certifpass,c,20,280,@{*},
+t5=Arquivo PFX:,url,c,255,280,@LB,openfile[=~pfx^*.pfx],
+
+
+[certificado2]
+tab=CERTIFICADO DIGITAL
+comentario=
+db=set_mult
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=certificado,txt_1,c,50,100,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+relacaokey=nome,"NFE_CERTIFICADO_DIGITAL"
+autoIncluir=1
+where=nome='NFE_CERTIFICADO_DIGITAL'
+reservado=1
+anexoLocal=txt_4
+Rlt=*
+altura=170
+largura=460
+foco=txt_1
+forcarleftmask=110
+t0=Certificado Digital#007E7E7E\key.png,,,,400, ,
+t1=Número de Série:,txt_1,c,500,265,@B,acbrnfe1,
+h1=Número de série do Certificado Digital@ - Selecione um certificado digital.
+t2=Certificado:,txt_2,t,0,280x90,@R,,
+t3=Vencimento:,txt_3,d,10,80,@R,
+t4=Senha:,codigo,c,20,280,@{*},
+t5=Arquivo PFX:,txt_4,c,255,280,@LB,openfile[=~pfx^*.pfx],
+
+
+[ss]
+t4=Tipo de Comunicação com SEFAZ#007E7E7E\world.png,,,,400, ,
+t5=WS:,tipows,i,1,20,{rcl*},tipows.rcl,
+h5=Tipo de envio da NF-e para o SEFAZ@- 1. O Terminal REx envia os dados para SEFAZ@- 2. O Servidor RExnfe envia os dados para SEFAZ (em rede).@- 3. O Servidor unimake envia os dados para o SEFAZ (em rede).@- 4. Modo demonstração do software.
+t6=Software para Validação da NF-e#007E7E7E\rclsoft.bmp,,,,400, ,
+t7=IP:,ipservidor,c,16,280,,
+h7=IP do servidor RExnfeTm@- Digite o ip da máquina onde o software RExnfeTm.exe esta instalado.
+
+[cfgemissao]
+tab=AJUSTES PARA EMISSÃO DA NOTA FISCAL ELETRÔNICA
+comentario=
+db=rclsoft
+ordem=empresa
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,5,60,,
+c1=Empresa,empresa,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=1
+where=id=1
+Rlt=*
+altura=170
+largura=460
+foco=crt
+forcarleftmask=150
+t0=Emissão da NF-e#007E7E7E\page_white_edit.png,,,,395, ,
+t1=Modelo:,nfmodelo,c,5,35,{rcl*},
+h1=Código do Modelo da NF-e@-> Consultar contador.
+t2=linha-25
+t3=coluna+100
+t4=Série:,nfserie,c,5,35,{rcl*},
+h4=Número de Série da NF-e@-> Consulta contador.
+t5=linha-25
+t6=coluna+95
+t7=UF:,nfuf,c,5,35,{rcl*}@BU,estado2.rcl,
+h7=UF de origem@- Sigla do estado onde sua empresa esta estabelecida.
+t8=coluna=20
+t9=Municipio:,nfcidade,c,50,245,{rcl*},
+h9=Municipio de Origem@- Nome do municipio onde sua empresa esta estabelecida.
+t10=Ambiente:,ambiente,c,20,230,{rcl*}@B,<#7>nfecfg.rcl,
+h10=Ambiente de emissão da NF-e@- 1. Produção (com validade fiscal).@- 2. Homologação (sem validade fiscal) Testes.
+t11=Forma:,formaemissao,c,30,230,{rcl*}@B,formaemt.rcl,
+h11=Forma de emissão da NF-e@- 1. Normal@- 2. Contingência.
+t12=Finalidade:,finalidadeemissao,c,30,230,{rcl*}@B,finalida.rcl,
+h12=Finalidade da emissão da NF-e@- 1. NF-e normal@- 2. NF-e complementar@- 3. NF-e de ajuste
+t13=#Ajustes do Simples Nacional#007E7E7E\page_white_edit.png,,,,395, ,
+t14=Regime Tributário:,crt,ci,1,30,,<#2>nfecfg.rcl,
+t15=Modalidade da Base de Cálculo do ICMS#007E7E7E\page_white_edit.png,,,,395, ,
+t16=ICMS:,modBC,i,11,20,,modbc.rcl,
+h16=Modalidade da Base de Cálculo do ICMS@- 0. Margem valor agregado(%)@- 1. Pauta(Valor)@- 2. Preço tabelado Max.(Valor)@- 3. Valor da operação@-> Consultar contador.
+t17 =Subst. Trib. ICMS:,modBCST,i,11,20,,modbcst.rcl,
+h17=Modalidade da Base de Cálculo da Substituição Tributária do ICMS@- 0. Preção tabelado ou maximo sugerido@- 1. Lista negra(Valor)@- 2. Lista positiva(Valor)@- 3. Lista neutra(Valor)@- 4. Margem valor agregado(Valor)@- 5. Pauta(Valor)@-> Consultar contador.
+t18=Limites permitido na NF-e#007E7E7E\exclamation.png,,,,395, ,
+t19=Qtde de produtos:,limitenf,i,3,35,,
+h19=Limitar a quantidade de itens (produtos) por NF-e.
+t20=linha-25
+t21=coluna+170
+t22=Código ISS:,cISS,c,5,60,@B,iss_cod.rcl,
+t23=coluna-170
+t24=Qtde de NF-e pendente:,maxnfepend,i,3,35,,
+t25=linha-25
+t26=coluna+200
+t27=Crédto ICMS:,aliqCredIcms,p,11,50,,
+t28=coluna-200
+t29=Venda Simples#007E7E7E\page_white_edit.png,,,,395, ,
+t30=CFOP:,nfeCfop,ci,5,40,,cfopnota.rcl,
+h30=Código Fiscal de Operação de Entrada e saída de mercadorias  <F2>
+t31=#ICMS#007E7E7E\calculator.png,,,,400, ,
+t32=CST ICMS:,nfeCst,ci,3,30,,classtri.rcl, 
+h32=Código da Situação Tributária do ICMS <F2>
+t33=WS Timeout:,wsTimeOut,i,9,100,,
+
+
+validacao=limiteInt(limitenf;[1-990]),limiteInt(maxnfepend;[1-100])
+
+[pastas]
+tab=PASTAS PARA GERAR OS ARQUIVOS XML
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=170
+largura=460
+foco=xmlienvio
+forcarleftmask=100
+where=id=1
+relacaokey=id,1
+t0=Pasta de armazenamento dos XML#007E7E7E\folder.png,,,,390, ,
+t1=Envio:,xmlienvio,c,255,300,,
+h1=Pasta para processar arquivos XML
+t2=Validos:,xmlvalido,c,255,300,,
+h2=Pasta para salvar os arquivos XML validados e assinados.
+t3=Software para Validação da NF-e#007E7E7E\rclsoft.bmp,,,,390, ,
+t4=IP:,ipservidor,c,16,300,,
+h4=IP do servidor RExnfeTm@- Digite o ip da máquina onde o software RExnfeTm.exe esta instalado.
+#t12=linha-5
+#t13=URL de Consulta#007E7E7E\ok2.bmp,,,,390, ,
+#t14=Homologação:,urltest,c,255,300,,
+#t15=Produção:,url,c,255,300,,
+
+[danfe]
+tab=AJUSTES PARA IMPRESSÃO DO DANFE
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+where=id=1
+Rlt=*
+altura=170
+largura=460
+foco=tipodanfe
+forcarleftmask=120
+t0=Impressão no papel#007E7E7E\grid_dot.png,,,,390, ,
+t1=Tipo:,tipodanfe,c,20,255,@B,<#12>nfecfg.rcl,
+h1=Tipo de impressão@- Retrato@- Paisagem
+t2=Ajustes do Logotipo#007E7E7E\doc_resize.png,,,,390, ,
+t3=Cadastro origem:,logo,i,6,50,,?cadastro.rcl,
+h3=Código do Cadastro@- Configure seu logotipo no cadastro de código 1, e preencha este campo com o código 1. 
+t4=Linha:,logol,i,4,30,!9999;1; ,
+h4=Posição da linha do logotipo
+t5=linha-25
+t6=coluna+80
+t7=Coluna:,logoc,i,4,30,!9999;1; ,
+h7=Posição da coluna do logotipo
+t8=coluna+80
+t9=linha-25
+t10=Altura:,logoh,i,4,30,!9999;1; ,
+h10=Altura da imagem
+t11=linha-25
+t12=coluna+80
+t13=Largura:,logow,i,4,30,!9999;1; ,
+h13=Largura da imagem
+t14=coluna-240
+t15=Ajustes do Nome da empresa#007E7E7E\doc_resize.png,,,,390, ,
+t16=Ativo:,logotextos,sn,3,30,,
+h16=Imprimir o nome da empresa (Sim/Não)
+t17=linha-25
+t18=coluna+80
+t19=Linha:,razaol,i,4,30,!9999;1; ,
+h19=Posição da linha do nome da empresa
+t20=linha-25
+t21=coluna+80
+t22=Coluna:,razaoc,i,4,30,!9999;1; ,
+h22=Posição da coluna do nome da empresa
+t23=coluna+80
+t24=linha-25
+t25=Fonte:,razaosize,i,4,30,!9999;1; ,
+h25=Tamanho da fonte do nome da empresa
+t26=coluna-240
+t27=Ajustes de Endereço/Telefone#007E7E7E\doc_resize.png,,,,390, ,
+t28=Ativo:,ativotext,sn,3,30,,
+h28=Imprimir endereço/telefone (Sim/Não)
+t29=linha-25
+t30=coluna+80
+t31=Linha:,texth,i,4,30,!9999;1; ,
+h31=Posição da linha do texto
+t32=linha-25
+t33=coluna+80
+t34=Coluna:,textw,i,4,30,!9999;1; ,
+h34=Posição da coluna do texto
+t35=coluna+80
+t36=linha-25
+t37=Fonte:,textsize,i,4,30,!9999;1; ,
+h37=Tamanho da fonte dos textos na impressão do DANFE.
+t38=coluna-240
+t39=Descrição do Produto#007E7E7E\doc_resize.png,,,,390, ,
+t40=+ Lote:,descr_lote,sn,3,30,,
+h40=Imprimir o número do lote na descrição
+t41=linha-25
+t42=coluna+100
+t43=Descrição:,descr_lotenome,c,20,150,,
+h43=Descrição do lote@Obs: // = 1 Espaço
+
+
+
+[danfelogo]
+tab=AJUSTES DO LOGOTIPO NO DANFE
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+where=id=1
+Rlt=*
+altura=170
+largura=460
+foco=logo
+forcarleftmask=120
+t0=Ajustes do Logotipo#007E7E7E\doc_resize.png,,,,390, ,
+t1=Cadastro origem:,logo,i,6,50,,?cadastro.rcl,
+h1=Código do Cadastro@- Configure seu logotipo no cadastro de código 1, e preencha este campo com o código 1. 
+t2=Linha:,logol,i,4,30,!9999;1; ,
+h2=Posição da linha do logotipo
+t3=linha-25
+t4=coluna+80
+t5=Coluna:,logoc,i,4,30,!9999;1; ,
+h5=Posição da coluna do logotipo
+t6=coluna+80
+t7=linha-25
+t8=Altura:,logoh,i,4,30,!9999;1; ,
+h8=Altura da imagem
+t9=linha-25
+t10=coluna+80
+t11=Largura:,logow,i,4,30,!9999;1; ,
+h11=Largura da imagem
+t12=coluna-240
+t13=Ajustes do Nome da empresa#007E7E7E\doc_resize.png,,,,390, ,
+t14=Ativo:,logotextos,sn,3,30,,
+h14=Imprimir o nome da empresa (Sim/Não)
+t15=linha-25
+t16=coluna+80
+t17=Linha:,razaol,i,4,30,!9999;1; ,
+h17=Posição da linha do nome da empresa
+t18=linha-25
+t19=coluna+80
+t20=Coluna:,razaoc,i,4,30,!9999;1; ,
+h20=Posição da coluna do nome da empresa
+t21=coluna+80
+t22=linha-25
+t23=Fonte:,razaosize,i,4,30,!9999;1; ,
+h23=Tamanho da fonte do nome da empresa
+t24=coluna-240
+t25=Ajustes de Endereço/Telefone#007E7E7E\doc_resize.png,,,,390, ,
+t26=Ativo:,ativotext,sn,3,30,,
+h26=Imprimir endereço/telefone (Sim/Não)
+t27=linha-25
+t28=coluna+80
+t29=Linha:,texth,i,4,30,!9999;1; ,
+h29=Posição da linha do texto
+t30=linha-25
+t31=coluna+80
+t32=Coluna:,textw,i,4,30,!9999;1; ,
+h32=Posição da coluna do texto
+t33=coluna+80
+t34=linha-25
+t35=Fonte:,textsize,i,4,30,!9999;1; ,
+h35=Tamanho da fonte dos textos na impressão do DANFE.
+
+[danfeoutros]
+tab=NOTA FISCAL ANTIGA
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+where=id=1
+Rlt=*
+altura=170
+largura=460
+foco=arqlpt
+forcarleftmask=120
+t0=Arquivo \lpt:,arqlpt,c,20,270,,
+h0=Nome do arquivo de impressão@- Mantido para compatibilidade com usuários que ainda não utiliza NF-e.
+
+[danfedescricao]
+tab=AJUSTES NA DESCRIÇÃO DO PRODUTO
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+where=id=1
+Rlt=*
+altura=170
+largura=460
+foco=descr_lote
+forcarleftmask=120
+t0=+ Lote:,descr_lote,sn,3,30,,
+h0=Imprimir o número do lote na descrição
+t1=linha-25
+t2=coluna+100
+t3=Descrição:,descr_lotenome,c,20,150,,
+h3=Descrição do lote@Obs: // = 1 Espaço
+
+[compativel]
+tab=COMPATIBILIDADES ANTERIOR A NF-e
+comentario=
+db=rclsoft
+ordem=empresa
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,5,60,,
+c1=Empresa,empresa,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=RCL
+nobrowse=1
+reservado=1
+where=id=1
+Rlt=*
+altura=170
+largura=460
+foco=notafiscal
+forcarleftmask=150
+t0=Impressão#007E7E7E\printer.png,,,,395, ,
+t1=Arquivo:,notafiscal,c,20,240,,
+h1=Nome do arquivo de impressão@- Mantido para compatibilidade com usuários que ainda não utiliza NF-e.
+t2=Máximo de prod. por NF:,limitenf,i,4,50,,
+h2=Limitar a quantidade de itens (produtos) por NF-e.
+
+[simples]
+tab=TABELA DE CRÉDITO DO SIMPLES NACIONAL
+comentario=
+db=simples
+ordem=ano+mes desc
+rcl=simples.rcl
+chave=id
+chaveprincipal=id
+c0=Mês,mes,i,2,45,,
+c1=Ano,ano,i,4,45,,
+c2=Alíquota,aliquota,p,11,84,,
+altura=150
+largura=450
+foco=mes
+t0=Mês:,mes,c,2,40,@BU,<#8>geral.rcl,
+h0=Mês<F2>
+t1=linha-25
+t2=coluna+100
+t3=Ano:,ano,c,4,40,@BU,<#9>geral.rcl,
+h3=Ano <F2>
+t4=linha-25
+t5=coluna+120
+t6=Alíquota:,aliquota,p,11,84,,
+h6=Alíquota
+validacao=limiteInt(mes;[1-12]),limiteInt(ano;[2011-2020])
+
+[infoadic]
+tab=INFORMAÇÕES ADICIONAIS
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+where=id=1
+Rlt=*
+altura=170
+largura=460
+foco=infonfe
+forcarleftmask=10
+t0=Informações por Artigo#007E7E7E\page_white_star.png,,,,410, ,
+t1=,infoArt,tw,0,400x80,,
+h1=Lista de Artigos
+t2=Informações Adicionais para NF-e#007E7E7E\page_white_star.png,,,,410, ,
+t3=,infonfe,tw,0,400x150,,
+h3=Informações Adicionais para NF-e
+t4=linha+80
+t5=label|Artigo do ICMS
+t6=<,artigoIcms,ci,15,80,,articms.rcl,
+t7=linha+5
+t8=label|TAGs abaixo pode ser utilizada para gerar conteúdo|,,clred
+t9=label|<AUTO_SIMPLESNACIONAL>|,,clblue
+t10=label|<CREDITOICMS>|,,clblue
+t11=label|<LEI_12741>|,,clblue
+t12=label|<IBPT>|,,clblue
+t13=label|<valorcreditoicms>|,,clblue
+t14=label|<aliquotacreditoicms>|,,clblue
+
+[tabfretevendas]
+tab=TABELA DE FRETES
+comentario=
+db=tabefret
+ordem=id
+rcl=
+relacao=
+chave=id
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Descrição,descr,c,50,200,,
+altura=240
+largura=500
+foco=descr
+forcarleftmask=150
+t0=Descrição:,descr,c,50,300,,
+h0=Descrição da tabela de frete
+t1=Frete Valor:,clientefinal,p,11,50,,
+h1=Porcentagem para cálculo do frete pelo valor da venda
+t2=ADvalorem:,advalorem,p,11,50,,
+h2=Porcentagem para cálculo do seguro
+t3=Taxas:,outros,f,11,84,,
+h3=Outras taxas
+t4=Frete mínimo:,minimo,f,11,84,,
+h4=Valor mínimo do frete
+
+[cartadecorrecao]
+tab=CARTA DE CORREÇÃO
+comentario=
+db=ctrchist
+ignoreforcedb=Sim
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+naoEditar=nProt,,dt,CARTA DE CORREÇÃO PROTOCOLADA E NÃO PODE SER
+c0=Data,&DataHora(data|hora|) as data,d,10,100,,
+c1=Detalhes,anote,c,0,220,,
+c2=Protocolo,nProt,c,0,80,,
+#BotaoIncluir=Não
+#BotaoExcluir=Não
+#BotaoAlterar=Sim
+nobrowse=0
+reservado=0
+where=(documento=$IDORIGEM)and(tpdoc=3)and(tipo="$IDORIGEM2")
+relacaokey=documento,$IDORIGEM
+relacaokey2=tipo,"$IDORIGEM2"
+relacaokey3=tpdoc,"3"
+campoinfo=anote,Descrição completa,c,100
+Rlt=
+altura=360
+largura=520
+foco=data
+forcarleftmask=70
+t0=Data:,data,d,10,70,,
+h0=Data do Evento
+t1=linha-25
+t2=coluna+110
+t3=Hora:,hora,h,5,40,,
+h3=Hora do Evento
+t4=linha-25
+t5=coluna+110
+t6=Usuário:,usuario=$user,i,6,50,@D&cor(clsilver|clgray),cadastro.rcl,
+h6=Usuário Responsável
+t7=coluna-220
+t8=Evento#007E7E7E\textfield.png,,,,490, ,
+t9=forcarleftmask=10
+t10=,anote,t,0,480x140,,
+h10=Descrição do Evento
+t11=linha+60
+t12=forcarleftmask=60
+t13=Seq:,nSeq,i,3,30,@D&cor(clyellow|clblack),
+t14=forcarleftmask=80
+t15=linha-25
+t16=coluna+80
+t17=Protocolo:,nProt,c,15,100,@D&cor(clyellow|clblack),
+t18=linha-25
+t19=coluna+150
+t20=Data:,dRecb,d,10,70,@D&cor(clyellow|clblack),
+t21=linha-25
+t22=coluna+120
+t23=Hora:,hRecb,c,8,50,@D&cor(clyellow|clblack),
+validacao=campoPreenchido(descricao)
+
+[auto]
+tab=PREENCHIMENTO AUTOMATICO NA INCLUSAO
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Transportadora,id_1,i,9,150,,
+c1=Placa,txt_1,c,255,250,,
+nobrowse=1
+relacaokey=nome,"NFE_PREENCIMENTO_AUTOMATICO"
+autoIncluir=1
+where=nome='NFE_PREENCIMENTO_AUTOMATICO'
+largura=480
+altura=200
+foco=id_1
+forcarleftmask=120
+t0=linha=30
+t1=Transportadora:,id_1,i,6,60,,cadastro.rcl,
+t2=Placa:,txt_1,c,8,120,,
+t3=UF:,txt_2,c,2,30,@BU,estado2.rcl,
+h3=Sigla do Estado
+
+[controleDeErros]
+tab=CONTROLE DE ERROS NFE
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Transportadora,id_1,i,9,150,,
+c1=Placa,txt_1,c,255,250,,
+nobrowse=1
+relacaokey=nome,"NFE_CONTROLE_DE_ERROS"
+autoIncluir=1
+where=nome='NFE_CONTROLE_DE_ERROS'
+largura=480
+altura=200
+foco=id_1
+forcarleftmask=140
+t0=linha=10
+t1=label|Limites de Campos
+t2=linha+15
+t3=Número máximo da NF-e:,id_1,i,9,90,,
+t4=Valor máximo da NF-e:,valor,f,16,120,,
+
+[autoXXX]
+tab=Variaveis para preenchimento no Inclusão
+db=rcs.ini|nfe_auto|db
+chave=id
+chavePrincipal=id
+dados=RAW
+raw=id|placa|uf
+nobrowse=1
+c0=Ordem,id,c,3,50,,
+c1=Placa,placa,c,50,200,,
+altura=320
+largura=430
+foco=placa
+forcarleftmask=120
+forcarrightlabel=1
+t0=Placa:,placa,c,8,90,,
+t1=UF:,uf,c,2,30,@BU,estado2.rcl,
+
+[impostos]
+tab=Composição do Imposto
+db=nfecfg
+ordem=id
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=certificado,certificado,c,50,100,,
+nobrowse=1
+where=id=1
+altura=440
+largura=460
+foco=impIRPJ
+forcarleftmask=100
+t0=IRPJ:,impIRPJ,p,11,84,,
+h0=Imposto sobre a Renda da Pessoa Jurídica
+t1=IPI:,impIPI,p,11,84,,
+h1=Imposto sobre Produtos Industrializados, exceto o incidente na importação
+t2=CSLL:,impCSLL,p,11,84,,
+h2=Contribuição Social sobre o Lucro Líquido
+t3=COFINS:,impCOFINS,p,11,84,,
+h3=Contribuição para o Financiamento da Seguridade Social, exceto a incidente na importação
+t4=PIS/PASEP:,impPIS,p,11,84,,
+h4=Contribuição para o Programa de Integração Social e de Formação do Patrimônio do Servidor Público, exceto a incidente na importação
+t5=INSS:,impINSS,p,11,84,,
+h5=Contribuição para a Seguridade Social, a cargo da pessoa jurídica (patronal), exceto as receitas dos Anexos IV e V
+t6=ICMS:,impICMS,p,11,84,,
+h6=Imposto sobre operações relativas à circulação de mercadorias e sobre prestações de serviços de transporte interestadual e intermunicipal e de comunicação
+t7=ISS:,impISS,p,11,84,,
+h7=Imposto sobre serviços de qualquer natureza
+t8=Total:,impostos,p,11,84,@R&cor(clblue|clwhite),
+t9=linha+30
+t10=#label|Crédito de ICMS
+t11=frame|380|40
+t12=linha+10
+t13=Credito ICMS:,aliqCredIcms,p,11,84,,
+calc0=impostos=+impIRPJ,+impIPI,+impCSLL,+impCOFINS,+impPIS,+impINSS,+impICMS,+impISS
+
+[nfeCtlErro]
+tab=CONTROLE DE ERROS NF-E
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=170
+largura=460
+foco=nfeCtlErro
+forcarleftmask=200
+where=id="1"
+relacaokey=id,"1"
+t0=Permitir protocolar NFe até:,nfeCtlErro,i,11,100,,
+h0=Opção para evitar erros de perda de sequencia da NFe
+
+[processPend]
+tab=PROCESSOS PENDENTES
+comentario=
+db=ctrl_process
+ordem=data_ini,hora_ini
+rcl=
+chave=id
+chaveprincipal=id
+c0=Data,data_ini,d,10,80,,
+c1=Hora,hora_ini,h,5,50,
+c2=Modulo,descricao,c,50,200,,
+c3=Evento,evento,c,50,80,,
+where=concluido=0
+reservado=
+Rlt=*
+BotaoExcluir=
+BotaoAlterar=
+BotaoIncluir=
+altura=600
+largura=450
+BotaoExcluir=Sim
+BotaoAlterar=Sim
+BotaoIncluir=Sim
+foco=nome
+t0=Processo:,id,+,9,80,,
+t1=Documento:,idModulo,i,9,80,,
+t2=Modulo:,modulo,c,50,300,,
+t3=Descrição:,descricao,c,50,300,,
+t4=Extra:,tags,c,50,300,,
+t5=Evento:,evento,c,50,300,,
+t6=Inicio:,data_ini,d,10,70,,
+t7=,hora_ini,h,5,70,,
+t8=Final:,data_end,d,10,70,,
+t9=,hora_end,h,5,70,,
+t10=Usuário:,usuario,i,9,60,,
+t11=Terminal:,terminal,i,5,60,,
+t12=Progress:,progress,i,3,60,,
+t13=Concluido:,concluido,sn,3,30,,
+t14=Histórico:,historico,t,0,300x120,,
+
+
+[EventosDFe]
+e0=110110=Carta de Correção
+e1=110111=Cancelamento
+e2=110112=Encerramento Homologado
+e3=110113=EPEC CT-e
+e4=110114=Inclusão de Condutor
+e5=110140=EPEC NF-e
+e6=110160=Registro Multimodal
+e7=210200=Confirmação da Operação
+e8=210210=Ciência da Operação
+e9=210220=Desconhecimento da Operação
+e10=210240=Operação não Realizada
+e11=310620=Registro de Passagem
+e12=310610=MDF-e Autorizado para CT-e
+e13=310611=MDF-e Cancelado Vinculado a CT-e
+e14=510620=Registro de Passagem BRID
+e15=610500=Registro Passagem NF-e
+e16=610501=Registro de Passagem para NF-e Cancelado
+e17=610510=Registro de Passagem de NFe propagado pelo MDFe
+e18=610514=Registro de Passagem de NFe propagado pelo MDFe/CTe
+e19=610550=Registro de Passagem para NF-e RFID
+e20=610552=Registro de Passagem Automatico MDFe
+e21=610554=Registro de Passagem Automatico MDF-e com CT-e
+e22=610600=CT-e Autorizado para NF-e
+e23=610601=CT-e Cancelado
+e24=610610=MDF-e Autorizado
+e25=610611=MDF-e Cancelado
+e26=990900=Vistoria Suframa
+e27=610614=MDF-e Autorizado com CT-e
+e28=610615=Cancelamento de MDF-e Autorizado com CT-e
+e29=790700=Averbação para Exportação
+

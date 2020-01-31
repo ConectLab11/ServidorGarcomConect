@@ -1,0 +1,166 @@
+#
+# 	Parametros do menu de manutenção do Sistema
+# 	Desenvolvido por Ronaldo C Silva (Arquivo original)
+# 	ConectLab Informatica Ltda
+# 	Data	     : 28/01/2010
+#	Atualizacao : 07/01/2015
+#
+# 	a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=tabvalor.pdx
+disableMenu=0
+telalargura=830
+telaaltura=0
+Posicionar=1
+whereexterno=mygroup='tabelasimpress'
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,+Pesos, tabelasimpress, 0123456789, 9, 25,a
+o2=nil,+Cidades de Origem, origem, 0123456789, 9, 23,a
+o3=nil,Capitais, capitais, 0123456789, 9, 25,a
+#
+# Parametros de tela
+#
+
+[tabelasimpress]
+tab=TABELA SIMPRESS 2
+comentario=
+db=tabefret
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+forcarcoluna=130
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Por tonelada,tonelada,f,16,100,,
+altura=532
+
+
+largura=380
+foco=descr
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=0
+forcarleftmask=110
+nobrowse=1
+t0=coluna=0
+t1=Descrição:,descr,c,50,445,,
+h1=Descrição completa da Tabela.
+t2=Cidade de Destino#007E7E7E\map.png,,,,545, ,	
+t3=UF:,uf,c,2,30,@BU,estado2.rcl,
+h3=Sigla da UF (Estado) <F2>
+t4=linha-25
+t5=coluna+110
+t6=Cidade:,cidade,c,30,185,@B,<#17>geral.rcl{ufsigla=uf/""},
+h6=Nome da Cidade
+t7=coluna-110
+t8=Generalidades#007E7E7E\text_align_justify.png,,,,545, ,
+t9=#Seguro:,advalorem,p,11,60,,
+h9=Taxa de Seguro
+t10=#linha-25
+t11=#coluna+130
+t12=Devolução:,devolucao,p,11,60,,
+h12=Porcentagem do frete quando for devolução
+t13=linha-25
+t14=coluna+130
+t15=Reentrega:,reentrega,p,11,60,,
+h15=Porcentagem do frete quando for reentrega
+t16=coluna+150
+t17=linha-25
+t18=Compartilhada:,compartilhada,sn,3,30,,
+h18=Compartilhar esta tabela com os clientes sem tabela.
+
+[origem]
+tab=CIDADES DE ORIGEM
+comentario=
+db=tabaereo
+ordem=uf,cidade
+rcl=
+chave=tabela
+chavePrincipal=id
+relacaokey=tabela,$IDORIGEM
+tituloWidth=35
+where=tabela="$IDORIGEM"
+c0=UF,uf,c,2,30,,
+c1=Cidade,cidade,c,50,150,,
+c2=ate 6kg,faixa_1,f,11,70,,
+c3=De/n6.1 à 12,faixa_2,f,11,70,,
+c4=De/n12.1 à 18,faixa_3,f,11,70,,
+c5=De/n18.1 à 24,faixa_4,f,11,70,,
+c6=De/n24.1 à 30,faixa_5,f,11,70,,
+c7=De/n30.1 à 60,faixa_6,f,11,70,,
+c8=Kg Adicional,excedente,f,11,70,,
+c9=Advalorem,advalorem,p,11,70,,
+c10=GRIS,gris,p,11,70,,
+Rlt=
+msg=
+altura=450
+largura=600
+forcarleftmask=80
+foco=uf
+t0=UF:,uf,c,2,30,@BU,estado2.rcl,
+t1=coluna+110
+t2=linha-25
+t3=Cidade:,cidade,c,50,320,@B,<#17>geral.rcl{ufsigla=uf/"Capital/Interior"},
+t4=coluna-110
+t5=forcarleftmask=120
+t6=Tarifas por (Kg)#007E7E7E\color_swatch_2.png,,,,550, ,
+t7=Até 6:,faixa_1,f,11,84,,
+t8=de  6.1 até  12:,faixa_2,f,11,84,,
+t9=de  12.1 até  18:,faixa_3,f,11,84,,
+t10=de  18.1 até  24:,faixa_4,f,11,84,,
+t11=de  24.1 até 30:,faixa_5,f,11,84,,
+t12=de  30.1 até 60:,faixa_6,f,11,84,,
+t13=Kg Adicional:,excedente,f,11,84,,
+t14=Outros#007E7E7E\color_swatch_2.png,,,,550, ,
+t15=Advalorem:,advalorem,p,11,84,,
+t16=GRIS:,gris,p,11,84,,
+validacao=campoPreenchido(uf),campoPreenchido(cidade)
+
+[capitais]
+tab=Capitais
+db=capitais
+ordem=uf,cidade
+modcampoorigem=UF:/120/40//NE/162/10/estados.rcl/
+campoorigem=UF do Estado:/120/40//NE/162/200/estados.rcl/
+chave=id
+chaveprincipal=id
+where=uf="$IDORIGEM"
+relacaokey=uf,"$IDORIGEM"
+//ENUMERAR=filho/where uf="$IDORIGEM"
+c0=UF,uf,c,6,60,,
+c1=Cidade,cidade,c,50,300,,
+#c2=Região,regiao,c,50,150,,
+altura=200
+largura=450
+foco=uf
+forcarleftmask=100
+CampoForcado=
+t0=#UF:,uf,c,2,30,@BU,estado2.rcl,
+h0=#Sigla da UF (Estado) <F2>
+t1=Cidade:,cidade,c,30,250,@B,<#17>geral.rcl{ufsigla=$uf/""},
+h1=Nome da Cidade
+t2=#Região:,regiao=@;Norte;Nordeste;Centro-Oeste;Sudeste;Sul,l,50,250,,
+h1=#Região
+validacao=campoPreenchido(cidade)
+
+[calculo]
+versao=8
+x0=fretepeso:pesoCidade[EXCEDENTE_REVERSO2,*faixa_1{0:6},faixa_2{6.1:12},faixa_3{12.1:18},faixa_4{18.1:24},faixa_5{24.1:30},faixa_6{30.1:60},excedente{60.01}]
+
+
+[correcao_de_valores]
+; Tipo p - Permite ajustar os campos abaixo apenas por porcentagems.
+; Tipo v - Permite ajustar os campos abaixo subtraindo e adicionando valores
+tipo=pv

@@ -1,0 +1,108 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 01/08/2011
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=tabvalor.pdx
+disableMenu=0
+telalargura=830
+telaaltura=600
+Posicionar=1
+whereexterno=mygroup='tabelaconciliacao'
+solicitante=unika
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,Conciliação de Cargas, geral, 0123456789, 9, 25,a
+o2=#nil,+Tarifas, tarifas , 0123456789, 9, 23,a
+o3=#nil,Região, regiao , 0123456789, 9, 23,a
+#
+# Parametros de tela
+#
+ 
+[geral]
+tab=CONCILIAÇÃO DE CARGAS
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=90
+forcarleftmask=90
+nobrowse=1
+altura=200
+largura=400
+foco=descr
+t0=Descrição:,descr,c,50,410,,
+h0=Descrição completa
+t1=Validade:,validade,d,10,80,,
+h1=Prazo de validade
+t2=linha-25
+t3=coluna+320
+t4=forcarleftmask=150
+t5=linha+25
+t6=forcarleftmask=100
+t7=coluna-320
+t8=Carreta até 25 Ton#007E7E7E\text_align_justify.png,,,,500, ,
+t9=Frete:,tonelada,f,11,84,,
+t10=linha-25
+t11=coluna+220
+t12=Pedágio:,pedagio,f,11,84,,
+t13=coluna-220
+t14=Demais Despesas#007E7E7E\text_align_justify.png,,,,500, ,
+t15=Carga:,frt_val1,f,11,84,,
+t16=Descarga:,frt_val2,f,11,84,,
+t17=Diária P/H:,diaria,f,11,84,,
+t18=GRIS:,gris,p,11,84,,
+t19=Tipo de Caminhão para Custos de Coleta#007E7E7E\text_align_justify.png,,,,500, ,
+t20=Carreta:,faixa_1,f,11,84,,
+t21=Truck:,faixa_2,f,11,84,,
+t22=3/4:,faixa_3,f,11,84,,
+t23=Toco:,faixa_4,f,11,84,,
+t24=Vuc:,faixa_5,f,11,84,,
+t25=Van:,faixa_6,f,11,84,,
+t26=forcarleftmask=100
+t27=linha-150
+t28=coluna+300
+t29=Devolução:,devolucao,p,11,60,,
+h29=Porcentagem do frete quando for devolução
+t30=Reentrega:,reentrega,p,11,60,,
+h30=Porcentagem do frete quando for reentrega
+t31=Compartilhada:,compartilhada,sn,3,30,,
+h32=Compartilhar esta tabela com os clientes sem tabela.
+
+[tarifas]
+
+[regiao]
+
+[calculo]
+versao=24
+x0=precalc:taxa_carga{Carga/Descarga:,l,80,[|1. Carga|2. Descarga|3. Ambos],0}
+x1=precalc:taxa_coleta{Coleta Caminhão:,l,100,[|1. Carreta|2. Truck|3. 3/4|4. Toco|5. Vuc|6. Van],0}
+x2=precalc:taxa_extra{Coleta Extra:,v,100,[0],0}
+x3=precalc:taxa_diaria{Diaria/Hora:,l,60,[0...44],0}
+x4=fretepeso:tabelaValor[tonelada]
+x5=pedagio:tabelaValor[pedagio]
+x6=despacho:tabelaValor[despacho]
+x7=outros:0
+x8=percurso:0
+x9=outros:taxasConciliacao[taxa_carga,taxa_coleta,taxa_extra,taxa_diaria]
+x10=gris:porcentNfeValor[gris]

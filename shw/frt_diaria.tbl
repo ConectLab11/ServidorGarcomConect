@@ -1,0 +1,106 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 28/01/2010
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=0
+nivelauxiliar=0
+
+[Opcoes]
+o0=Tabela, 0123456789, 2, 0,a
+
+[tabela]
+o0=nil, Diária de veículos, tabeladiaria, 0123456789, 2, 7,a
+
+#
+# Parametros de tela
+#
+
+[tabeladiaria]
+tab=DIÁRIA DE VEÍCULOS
+comentario=Diária de Veículos
+db=tabefret
+ordem=id
+rcl=
+relacao=
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=120
+chave=cliente
+chaveprincipal=id
+c0=Codigo,id,c,10,50,,
+c1=Veículo,veiculo,c,30,100,,
+c2=Diária,diaria,f,16,100,,
+altura=532
+largura=350
+foco=descr
+nobrowse=1
+forcarleftmask=130
+t0=Tipo de veículo:,descr,c,30,250,@BU,veicutip.rcl,
+h0=Descrição do tipo de veículo, alterar somente pela lista disponivel no botão ao lado.
+t1=Valor da diária:,diaria,f,11,84,,
+h1=Valor a cobrar por um dia de trabalho do veículo.
+t2=savelinha
+t3=savecoluna
+t4=linha-25
+t5=coluna+180
+t6=Adicional:,morveicu,p,11,84,,
+h6=Taxa adicional à cobrar se o veículo trabalhar em horário fora do expediente.
+t7=coluna=20
+t8=Diária ajudante:,diaajuda,f,11,84,,
+h8=Valor da diária do ajudante.
+t9=linha-25
+t10=coluna+180
+t11=Adicional:,morajuda,p,11,84,,
+h11=Taxa adicional à cobrar se o ajudante trabalhar em horário fora do expediente.
+t12=coluna=20
+t13=Taxa por entrega:,entrega,f,11,84,,
+h13=Taxa à cobrar para cada entrega realizada no dia.
+t14=linha-25
+t15=coluna+180
+t16=Taxa por coleta:,coleta,f,11,84,,
+h16=Taxa à cobrar para cada coleta realizada no dia.
+t17=coluna=20
+t18=Frete mínimo:,minimo,f,11,84,,
+h18=Valor mínimo do frete, se as taxas e diárias for inferior ao frete mínimo o valor do frete mínimo é assumido.
+t19=linha-10
+t20=Impostos e Despesas#007E7E7E\ok.bmp,,,,405, ,
+h20=Barra de título
+t21=Fora do perímetro:,perimetro,f,11,84,,
+h21=Taxa para o veículo transportar para uma região diferente.
+t22=linha-25
+t23=coluna+180
+t24=Pernoite:,pernoite,f,11,84,,
+h24=Taxa para o veículo pernoitar.
+t25=coluna=20
+t26=Seguro:,seguro,p,11,84,,
+h26=Taxa do seguro.
+t27=linha-25
+t28=coluna+180
+t29=Despacho:,despacho,f,11,84,,
+h29=Taxa de despacho.
+t30=coluna=20
+t31=Pedágio:,pedagio,f,11,84,,
+h31=Valor do pedágio.
+t32=linha-25
+t33=coluna+180
+t34=Sec/Cat:,seccat,f,11,84,,
+h35=Taxa Serviço de Coleta/Custo Adicional de Transporte
+t35=coluna=20
+t36=Preço M3 p/ 100kg:,precom3,e,11,84,,
+h36=Preço por metro cubico transportado a cada 100 Kilos.
+t37=linha-10
+t38=Outros#007E7E7E\ok.bmp,,,,405, ,
+t39=Tabela Compartilhada:,allcli,sn,3,30,,
+h39=Compartilha esta tabela com outros clientes.
+t40=linha-25
+t41=coluna+140
+t42=labelwidth=200
+t43=Verificar frete mínimo do (Frete total):,frt_minitotal,sn,3,30,,
+h43=Sim - O frete mínimo deve ser verificado do (Frete total)   Não - O frete mínimo deve ser verificado do (frete peso + frete valor). 

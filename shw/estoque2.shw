@@ -1,0 +1,60 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 12/12/2003
+#
+#
+# a todos
+# d nota de despesas
+# g agenda
+# m movimento de caixa
+# n cadastro de bancos
+# o plano de contas
+# p pagar
+# q gerenciador de ocorrencias
+# r receber
+# s script inicial
+# t conta caixa
+
+[arquivo]
+modulo=PROMOÇÃO
+nivelprincipal=0
+nivelauxiliar=0
+disableMenu=1
+
+[Opcoes]
+o0=Produtos, 0123456789, 9, 0,as
+
+[Produtos]
+o0=nil, Promoção, promocao, 012345678, 4, 21,p
+
+[promocao]
+tab=PRODUTO
+db=pacotes
+db2=estoque
+#ignoreforcedb=Sim
+ordem=id
+chave=id
+chaveprincipal=id
+campos=pacotes.id,pacotes.idsubprod,pacotes.pcqtde,pacotes.pcpreco,pacotes.pcdesc,estoque.descricao,estoque.undv,estoque.preco
+c0=Código,idsubprod,i,15,70,,
+c1=Descrição,descricao,c,60,240,,
+c2=Qtde,pcqtde,e,9,60,,
+c3=Und,undv,c,3,40,,
+c4=Preço,preco,f,11,80,,
+c5=Desc,pcdesc,p,9,40,,
+c6=Promoção,pcpreco,f,11,80,,
+BotaoIncluir=Sim
+BotaoExcluir=Sim
+BotaoAlterar=Sim
+where=(pacotes.idproduto=$IDORIGEM) and (pacotes.idsubprod=estoque.codigo)
+relacaokey=idproduto,$IDORIGEM
+altura=240
+largura=500
+foco=idsubprod
+forcarleftmask=90
+t0=Produto:,idsubprod,i,6,60,,?estoque3.rcl,
+t1=Qtde:,pcqtde,e,11,84,,
+t2=Descontos:,pcdesc,p,11,84,,
+t3=Preço Und:,pcpreco,f,11,84,,

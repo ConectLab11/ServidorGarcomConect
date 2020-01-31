@@ -1,0 +1,80 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 12/12/2003
+#
+#
+# a todos
+# d nota de despesas
+# g agenda
+# m movimento de caixa
+# n cadastro de bancos
+# o plano de contas
+# p pagar
+# q gerenciador de ocorrencias
+# r receber
+# s script inicial
+# t conta caixa
+
+[arquivo]
+modulo=FATURAMENTO
+nivelprincipal=0
+nivelauxiliar=0
+
+[Opcoes]
+o0=Parametros, 0123456789, 9, 0,a
+
+[Parametros]
+o0=nil, Configurações, cfg, 0123456789, 9, 15,a
+
+#
+# Parametros de tela
+#
+
+[cfg]
+tab=CONFIGURAÇÕES DO FATURAMENTO
+comentario=
+db=rclsoft
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=cnpj,cnpj,c,14,80,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=1
+where=id>0
+Rlt=*
+altura=170
+largura=460
+foco=fat_origem
+forcarleftmask=110
+t0=Plano de Contas#007E7E7E\page_white_edit.png,,,,395, ,
+t1=Centro de Custo:,fat_custos,i,5,40,,centrocu.rcl,
+h1=Centro de Custos principal
+t2=Faturamento Normal#007E7E7E\page_white_edit.png,,,,395, ,
+t3=Origem:,fat_origem,i,5,40,$limparsuborigem(),<#3>solicita.rcl,
+h3=Origem do crédito para faturamento
+t4=Sub-origem:,fat_subori,i,5,40,,subconta.rcl|origem=$fat_origem,
+h4=Sub-origem de crédito para faturamento
+t5=Tipo:,fat_tipo,i,5,40,,tipo.rcl,
+h5=Tipo de documento para faturamento
+t6=Veículos Terceiros#007E7E7E\page_white_edit.png,,,,395, ,
+t7=Origem:,fat_origem_terc,i,5,40,$limparsuborigem(),<#3>solicita.rcl,
+h7=Origem do crédito para faturamento
+t8=Sub-origem:,fat_subori_terc,i,5,40,,subconta.rcl|origem=$fat_origem_terc,
+h8=Sub-origem de crédito para faturamento
+t9=Veículos Agregados#007E7E7E\page_white_edit.png,,,,395, ,
+t10=Origem:,fat_origem_agre,i,5,40,$limparsuborigem(),<#3>solicita.rcl,
+h10=Origem do crédito para faturamento
+t11=Sub-origem:,fat_subori_agre,i,5,40,,subconta.rcl|origem=$fat_origem_agre,
+h11=Sub-origem de crédito para faturamento
+t12=Outros#007E7E7E\page_white_edit.png,,,,395, ,
+t13=Impressão duplicata#007E7E7E\printer.png,,,,395, ,
+t14=Layout:,fat_duplicata,c,50,280,@B,<#23>geral.rcl,
+h14=Arquivo para impressão da duplicata.
+

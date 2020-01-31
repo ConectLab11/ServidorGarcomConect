@@ -1,0 +1,25 @@
+URL de consulta de Conhecimento Eletronica
+
+[SP]
+homologacao=https://homologacao.nfe.fazenda.sp.gov.br/cteConsulta/consulta/publica/ConsultarCTe.aspx
+producao=https://nfe.fazenda.sp.gov.br/cteConsulta/consulta/publica/ConsultarCTe.aspx
+
+[GO]
+homologacao=https://www.cte.fazenda.gov.br//FormularioDePesquisa.aspx?tipoconsulta=completa
+producao=https://www.cte.fazenda.gov.br//FormularioDePesquisa.aspx?tipoconsulta=completa
+
+[MS]
+homologacao=http://homologacao.consultacte.ms.gov.br/
+producao=http://producao.consultacte.ms.gov.br/
+
+[ES]
+homologacao=https://www.cte.fazenda.gov.br//FormularioDePesquisa.aspx?tipoconsulta=completa
+producao=https://www.cte.fazenda.gov.br//FormularioDePesquisa.aspx?tipoconsulta=completa
+
+[PR]
+homologacao=http://www.sped.fazenda.pr.gov.br/modules/conteudo/conteudo.php?conteudo=88
+producao=http://www.sped.fazenda.pr.gov.br/modules/conteudo/conteudo.php?conteudo=88
+
+[PADRAO]
+homologacao=https://www.cte.fazenda.gov.br//FormularioDePesquisa.aspx?tipoconsulta=completa
+producao=https://www.cte.fazenda.gov.br//FormularioDePesquisa.aspx?tipoconsulta=completa

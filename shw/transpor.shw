@@ -1,0 +1,461 @@
+#
+#    Parametros para perfil Transportes
+#    Desenvolvido por Ronaldo C Silva
+#    RCLSoft Comércio e Serviços LTDA. ME.
+#    Data: 23/08/2011
+#
+#
+
+[arquivo]
+modulo=TRANSPORTES
+nivelprincipal=1
+nivelauxiliar=0
+
+[Opcoes]
+o0=Transportes, 0123456789, 9, 0,as
+
+[Transportes]
+o0=nil, Dinâmico, tipotran, 0789, 9, 20,a
+o1=nil, Rotas/Praças, rotas, 0123456789, 1, 12,a
+o2=#nil, Praças, pracas, 0123456789, 1, 25:18,a
+o3=nil,+Cidades por Rotas/Praças, pracacidades, 0123456789, 1, 25:18,a
+o4=nil,+Capitais, capitais, 0123456789, 1, 25:18,a
+o5=nil, Triagem, triagem, 0789, 1, 25:18,a
+o6=EDI,Ocorrências, ocotrans, 0789, 4, 25:18,a
+o7=EDI,Observações, ocorrobs, 0789, 4, 25:18,a
+o8=Carga, Espécie, especie, 012345678, 4, 25:18,a
+o9=Carga, Tipo, naturez2, 0789, 1, 25:18,a
+o10=Carga, Avarias, avaria, 0789, 1, 25:18,a
+o11=Carga, Produtos, prods, 0789, 1, 25:18,a
+o12=#Frota, Tipo de manutenção, tipgasto, 0789, 9, 8,a
+o13=Carga, Natureza, natureza, 0789, 1, 18,a
+o14=nil,Vale Pedágio, valePed, 0789, 1, 18,a
+o15=nil,Percurso de UF, infPercurso, 0789, 1, 18,a
+
+[tipotran]
+tab=CONFIGURADOR DE MODULOS
+comentario=
+db=tipotran
+ordem=descricao
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Sigla,mask,c,3,60,,
+c2=Descrição,descricao,c,80,200,,
+c3=Tabela,tabela,c,100,200,,
+altura=440
+largura=460
+BotaoExcluir=RCL
+BotaoAlterar=RCL
+BotaoIncluir=RCL
+foco=mask
+forcarleftmask=100
+t0=Código:,id,+,4,30,,
+t1=linha-25
+t2=coluna+230
+t3=forcarleftmask=140
+t4=Criar automaticamente:,criar,sn,3,30,,
+t5=forcarleftmask=100
+t6=coluna-230
+t7=Sigla:,mask,c,3,40,@U,
+t8=Descrição:,descricao,c,100,300,,
+t9= #[ Módulo Primário (minuta/ctrc) ],,,,420, ,
+t10=#Descrição:,modulo,c,100,300,,
+t11=Tabela:,tabela,c,100,300,@L$validarArquivoNome(),
+t12=Arquivo lpt:,lpt,c,20,300,@L,
+t13=#Off-Line,stopminuta,sn,3,30,,
+t14=#Bloqueado:,blkminuta,sn,3,30,,
+t15=#Inclusão bloq.:,noincluir,sn,3,30,,
+t16=# [ Módulo Segundário (ctrc) ],,,,420, ,
+t17=#Descrição:,modulo1,c,100,300,,
+t18=#Tabela,tabela1,c,100,300,@L$validarArquivoNome(),
+t19=#Arquivo lpt:,lpt2,c,20,300,@L,
+t20=#Off-line:,stopconhec,sn,3,30,,
+t21=#Bloqueado:,blkconhec,sn,3,30,,
+t22=Ativo:,ativo,sn,3,30,,
+[x]
+t22= [ Contabilidade ],,,,420, ,
+t23=forcarleftmask=170
+t24=coluna+50
+t25=Número de Série:,serie,c,10,80,@BU,<#3>tipotran.rcl,
+t26=Sub-Série:,subserie,c,10,80,@BU,<#3>tipotran.rcl,
+t27=Exportação de dados,,,,420, ,
+t28=Faturamento:,faturar,sn,3,30,,
+t29=Sintegra:,fiscal,sn,3,30,,
+t30=Suporte Contabilidade:,contabil,sn,3,30,,
+t31=Seguro:,seguro,sn,3,30,,
+t32=EDI-Entradas:,edi_entrada,sn,3,30,,
+t33=EDI-Saidas:,edi,sn,3,30,,
+t34=NFS-e:,nfse,sn,3,30,,
+t35=Módulo único:,fixado,sn,3,30,,
+t36=Ativo:,ativo,sn,3,30,,
+t37= [ Personalizar filial ],,,,420, ,
+t38=coluna-120
+t39=Personalizar:,ajusteform,sn,3,30,,
+t40=Razão social:,razao,c,50,300,,
+t41=CNPJ:,cnpj,c,18,300,,
+t42=IE:,ie,c,18,300,,
+t43=Endereço:,endereco,c,50,300,,
+t44=CEP:,cep,c,9,90,,
+t45=Bairro:,bairro,c,30,300,,
+t46=Cidade:,cidade,c,30,300,,
+t47=UF:,uf,c,2,30,,
+t48=Telefones:,telefones,c,60,300,,
+t49=Contato:,contato,c,50,300,,
+validacao=campoPreenchido(mask),campoPreenchido(descricao),campoPreenchido(modulo),duplicidades(mask;[mask-tipotran])
+
+[ocotrans]
+tab=OCORRËNCIAS DE ENTREGA - PADRÃO EDI
+comentario=
+db=ocotrans
+ordem=codigo
+rcl=
+chave=codigo
+chaveprincipal=id
+c0=Código,codigo,c,8,60,,
+c1=Descrição,descricao,c,100,275,,
+c2=Pers.,codigo2,c,5,40,,
+c3=Ativo,ativo,sn,3,30,,
+reservado=1..24
+Rlt=conhecim.ocorrencia,conheci1.ocorrencia,conheci2.ocorrencia,minuta.ocorrencia
+msg=DOCUMENTO(s)
+altura=280
+largura=470
+foco=codigo
+botaoExcluir=
+t0=Código:,codigo,i,3,30,,
+h0=Código da ocorrência
+t1=Descrição:,descricao,c,100,300,,
+h1=Descrição completa da ocorrência
+t2=Ativo:,ativo=Sim,sn,3,30,,
+h2=Ocorrência ativa (Sim/Não)
+t3=Personalização#007E7E7E\page_white_edit.png,,,,395, ,
+t4=Código:,codigo2,c,10,100,,
+h4=Código da ocorrência
+t5=Descrição:,descricao2,c,100,300,,
+h5=Descrição completa da ocorrência
+
+[ocorrobs]
+tab=OBSERVAÇÃO DE OCORRÊNCIAS DE ENTREGA - PADRAO EDI
+comentario=
+db=ocorrobs
+ordem=codigo
+rcl=
+chave=codigo
+chaveprincipal=id
+c0=Código,codigo,c,8,60,,
+c1=Descrição,descricao,c,100,200,,
+altura=190
+largura=470
+foco=codigo
+botaoExcluir=Não
+reservado=1..8
+t0=Código:,codigo,i,3,30,,
+h0=Código da ocorrência
+t1=Descrição:,descricao,c,100,300,,
+h1=Descrição completa da ocorrência
+
+[avaria]
+tab=AVARIAS DE CARGA
+comentario=
+db=avaria
+ordem=
+rcl=avaria.rcl
+chave=id
+chaveprincipal=id
+#c0=Código,id,c,8,70,,
+c0=Referência,codigo,c,8,80,,
+c1=Descrição,descricao,c,50,200,,
+altura=190
+largura=470
+foco=codigo
+t0=#Código:,id,+,4,30,,
+t1=Referência:,codigo,c,4,30,!A;1; ,
+h1=Código de referência da avaria
+t2=Descrição:,descricao,c,50,300,,
+h2=Descrição completa da avaria
+
+[natureza]
+tab=NATUREZA DE TRANSPORTE
+comentario=
+db=natureza
+ordem=
+rcl=natureza.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,c,5,60,,
+c1=Descrição,descricao,c,50,200,,
+c2=Automático,padrao,sn,30,60,,
+c3=DTA,dta,sn,30,50,,
+altura=450
+largura=470
+foco=descricao
+t0=Código:,id,+,4,30,!999;1; ,
+h0=Código da natureza
+t1=Descricao:,descricao,c,50,300,,
+h1=Descrição completa da natureza
+t2=Automático:,padrao,sn,3,30,,
+h2=Preencher automaticamente no formulário
+t3=DTA:,dta,sn,3,30,,
+h3=Este transporte utiliza DTA ?
+t4=Regras de ICMS#007E7E7E\page_white_edit.png,,,,395, ,
+t5=Ativa:,icmsAtivo,sn,3,30,,
+t6=CST:,icmsCst,ci,3,30,,<#3>classtri.rcl,
+t7=Aliquota:,icmsAliq,p,3,84,,
+t8=,icmsInfo,t,0,290x80,,
+
+[especie]
+tab=ESPÉCIE DE CARGA
+comentario=
+db=unidades
+ordem=nunidade
+rcl=unidades.rcl
+chave=nunidade
+chavePrincipal=id
+c0=Unidade,nunidade,c,8,60,,
+c1=Descrição,udescricao,c,50,250,,
+altura=200
+largura=450
+foco=nunidade
+t0=#Código:,id,+,4,30,,
+t1=Unidade:,nunidade,c,3,60,,
+h1=Sigla da espécie exemplo: CX = Caixa
+t2=Descrição:,udescricao,c,50,300,,
+h2=Descrição completa da espécie
+
+[naturez2]
+tab=NATUREZA DA CARGA
+comentario=
+db=naturez2
+ordem=
+rcl=naturez2.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,c,5,60,,
+c1=Descrição,descricao,c,50,200,,
+altura=200
+largura=470
+foco=descricao
+t0=Código:,id,+,4,30,!999;1; ,
+h0=Código da natureza
+t1=Descrição:,descricao,c,50,300,,
+h1=Descrição completa da natureza
+t2=Automático:,padrao,sn,3,30,,
+h2=Preencher automaticamente no formulário
+
+[objmudan]
+tab=Objetos de mudanca
+comentario=Objetos de mudanca
+db=objmudan
+ordem=
+rcl=objmudan.rcl
+chave=id
+chaveprincipal=id
+c0=Codigo,id,c,5,60,,
+c1=Descricao,descricao,c,100,350,,
+altura=200
+largura=470
+foco=descricao
+t0=Codigo:,id,+,4,30,!999;1; ,
+t1=Descricao:,descricao,c,100,300,,
+t2=Cubagem:,cubagem,f,11,84,,
+t3=Comercial:,comercial,sn,3,30,,
+
+[tipgasto]
+tab=Manutenção
+comentario=Tipo de manutenção de veículos.
+db=tipgasto
+ordem=descricao
+rcl=tipgasto.rcl
+chave=id
+chavePrincipal=id
+c0=Codigo,id,+,8,60,,
+c1=Descricao,descricao,c,50,200,,
+c2=Arquivo,lpt,c,50,200,,
+altura=200
+largura=430
+foco=descricao
+t0=Codigo:,id,+,4,30,!999;1; ,
+t1=Descricao:,descricao,c,50,300,,
+t2=Arquivo:,lpt,c,15,300,,
+
+[rotas]
+tab=CADASTRO DE ROTAS
+comentario=CADASTRO DE ROTAS
+db=rotas
+ordem=id
+rcl=rotas.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,i,5,60,,
+c1=Descrição,rota,c,50,100,,
+altura=300
+largura=470
+foco=rota
+t0=Código:,id,+,4,50,,
+h0=Código da rota
+t1=Descrição:,rota,c,50,300,,
+h1=Descrição da rota
+t2=AEROPORTO#007E7E7E\page_white_edit.png,,,,395, ,
+t3=Sigla:,sigla,c,5,80,,
+h3=Sigla do aeroporto
+t4=Estado:,uf,c,2,35,@BU,estado2.rcl,
+h4=UF<F2>
+t5=Nome:,cidade,c,50,300,,
+h5=Nome do aeroporto
+
+[prods]
+tab=TIPO DE PRODUTOS
+comentario=
+db=prods
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,i,5,60,,
+c1=Descrição,descricao,c,50,280,,
+c2=Artigo,articms,c,15,60,,
+altura=220
+largura=470
+foco=descricao
+t0=Descrição:,descricao,c,50,300,,
+h0=Descrição completa
+t1=Artigos do ICMS#007E7E7E\page_white_edit.png,,,,395, ,
+t2=Artigo:,articms,c,15,80,@B,articms.rcl,
+h2=Vinculo com artigo do ICMS.
+
+[triagem]
+tab=TRIAGEM DE NOTAS FISCAIS
+comentario=
+db=nfecfg
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,5,60,,
+c1=Certificado,certificado,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=RCL
+nobrowse=1
+reservado=1
+where=id=3
+Rlt=*
+altura=170
+largura=460
+foco=tria_nfse
+forcarleftmask=100
+t0=coluna=0
+t1=Nfse:,tria_nfse,ci,10,40,,<#2>tipotran.rcl,
+t2=CTRC:,tria_ctrc,ci,10,40,,<#2>tipotran.rcl,
+
+[pracas]
+tab=Praças para entrega
+db=pracas
+ordem=uf,descricao
+chave=id
+chaveprincipal=id
+c0=Código,id,i,5,60,,
+c1=UF,uf,c,2,40,,
+c2=Descrição,descricao,c,50,100,,
+altura=200
+largura=470
+foco=uf
+t0=Código:,id,+,4,50,,
+h0=Código da praça
+t1=Estado:,uf,c,2,35,@BU,estado2.rcl,
+h1=UF<F2>
+t2=Descrição:,descricao,c,255,300,,
+h2=Descrição da praça
+
+[pracacidades]
+tab=Cidades para Praças de entrega
+db=pracas	
+ordem=uf,cidade
+modcampoorigem=Código da Praça:/120/40/!9999.99.99;1; /NE/162/10/pracas.rcl/
+campoorigem=Código da Praça:/120/40//NE/162/200/pracas.rcl/
+chave=id
+chaveprincipal=id
+where=praca="$IDORIGEM"
+relacaokey=praca,"$IDORIGEM"
+//ENUMERAR=filho/where praca="$IDORIGEM"
+c0=UF,uf,c,6,60,,
+c1=Cidade,cidade,c,50,300,,
+altura=200
+largura=450
+foco=uf
+forcarleftmask=100
+CampoForcado=
+t0=UF:,uf,c,2,30,@BU,estado2.rcl,
+h0=Sigla da UF (Estado) <F2>
+t1=Cidade:,cidade,c,30,185,@B,<#17>geral.rcl{ufsigla=uf/""},
+h1=Nome da Cidade
+validacao=campoPreenchido(cidade)
+
+[valePed]
+tab=Vale Pedágio
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Descrição,descricao,c,50,100,,
+relacaokey=nome,"valePed"
+where=nome='valePed'
+altura=230
+largura=560
+foco=descricao
+forcarleftmask=90
+t0=Descrição:,descricao,c,100,400,,
+t1=Fornecedor:,id_1,i,6,50,,?cadastro.rcl,
+t2=Pagador:,id_2,i,6,50,,?cadastro.rcl,
+
+[infPercurso]
+tab=Percurso de UF para MDFE
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Origem,txt_1,c,2,60,,
+c1=Destino,txt_2,c,2,60,,
+c2=Percurso,txt_3,c,2,60,,
+relacaokey=nome,"infPercurso"
+where=nome='infPercurso'
+altura=350
+largura=440
+foco=txt_1
+forcarleftmask=90
+foco=txt_1
+t0=Origem:,txt_1,c,2,30,@BU,estado2.rcl,
+h0=Estado de Origem <F2>
+t1=Destino:,txt_2,c,2,30,@BU,estado2.rcl,
+h1=Estado de Destino <F2>
+t2=Percurso Exemplo: RJ/MG/AL#007E7E7E\textfield.png,,,,400, ,
+t3=forcarleftmask=10
+t4=,txt_3,t,0,390x140,,
+validacao=campoPreenchido(txt_1),campoPreenchido(txt_2)
+
+[capitais]
+tab=Capitais
+db=capitais
+ordem=uf,cidade
+modcampoorigem=UF:/120/40//NE/162/10/estados.rcl/
+campoorigem=UF do Estado:/120/40//NE/162/200/estados.rcl/
+chave=id
+chaveprincipal=id
+where=uf="$IDORIGEM"
+relacaokey=uf,"$IDORIGEM"
+//ENUMERAR=filho/where uf="$IDORIGEM"
+c0=UF,uf,c,6,60,,
+c1=Cidade,cidade,c,50,300,,
+altura=200
+largura=450
+foco=uf
+forcarleftmask=100
+CampoForcado=
+t0=#UF:,uf,c,2,30,@BU,estado2.rcl,
+h0=#Sigla da UF (Estado) <F2>
+t1=Cidade:,cidade,c,30,185,@B,<#17>geral.rcl{ufsigla=$uf/""},
+h1=Nome da Cidade
+validacao=campoPreenchido(cidade)

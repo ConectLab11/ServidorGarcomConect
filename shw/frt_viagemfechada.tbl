@@ -1,0 +1,175 @@
+
+#
+# Parametros do menu de manutenção do Sistema
+# RCLSoft Comércio e Serviços LTDA. ME.
+#
+
+[Criação]
+Responsavel=Ronaldo
+Data=05/01/2012
+Hora=15:57
+TabelaNome=Viagem Fechada
+FonteDados=Alessandro Express
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=tabvalor.pdx
+disableMenu=0
+telalargura=750
+telaaltura=0
+Posicionar=1
+whereexterno=mygroup='tabelaviagemfechada'
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,+Viagem Fechada, tabelaviagemfechada, 0123456789, 9, 25,a
+o2=nil,+Destinos, destinos , 0123456789, 9, 23,a
+
+#
+# Parametros de tela
+#
+ 
+[tabelaviagemfechada]
+tab=TABELA VIAGEM FECHADA
+comentario=
+db=tabefret
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=90
+forcarleftmask=90
+nobrowse=1
+altura=200
+largura=400
+foco=descr
+t0=Descrição:,descr,c,50,230,,
+h0=Descrição completa
+t1=linha-25
+t2=coluna+290
+t3=Validade:,validade,d,10,80,,
+h3=Prazo de validade
+t4=coluna-290
+t5=Local de embarque#007E7E7E\text_align_justify.png,,,,470, ,
+t6=UF:,uf,c,2,30,@BU,estado2.rcl,
+h6=Sigla do Estado
+t7=coluna+110
+t8=linha-25
+t9=Cidade:,cidade,c,50,250,@B,<#17>geral.rcl{ufsigla=uf/"Interior"},
+h9=Nome da Cidade
+t10=coluna-110
+t11=Entregas#007E7E7E\text_align_justify.png,,,,470, ,
+t12=Limite:,minimo=3,i,3,50,,
+h12=Qtde limite de entrega(s)
+t13=linha-25
+t14=coluna+180
+t15=forcarleftmask=200
+t16=Taxa por entregas excedidas:,entrega,f,11,84,,
+h16=Taxa por entregas excedidas
+t17=forcarleftmask=90
+t18=coluna-180
+t19=Generalidades#007E7E7E\text_align_justify.png,,,,470, ,
+t20=forcarleftmask=110
+t21=Peso Limite(Kg):,limite=@10,e,11,60,,
+h21=Peso Limite em (Kilos), acima deste peso é entendido como excedido 
+t22=Despacho:,despacho,f,11,84,,
+h22=Taxa por emissao do CT-e
+t23=linha-25
+t24=coluna+270
+t25=Coleta,coleta,f,11,84,,
+h25=Taxa de Coleta
+t26=coluna-270
+t27=Capital:,frt_val1,f,11,84,,
+h27=Taxa de entrega na capital
+t28=linha-25
+t29=coluna+270
+t30=Interior:,frt_val2,f,11,84,,
+h30=Taxa de entrega no interior
+t31=coluna-270
+t32=GRIS:,gris,p,11,84,,
+h32=Taxa de Gerenciamento de Risco
+t33=linha-25
+t34=coluna+270
+t35=ADValorem:,advalorem,p,11,84,,
+h35=Porcentagem de ADValorem
+t36=coluna-270
+t37=Outros:,outros,f,11,84,,
+h37=Valor outros
+t38=linha-25
+t39=coluna+270
+t40=Pedágio:,pedagio,f,11,84,,
+h40=Valor do pedágio
+t41=#
+t42=coluna-270
+t43=Devolução:,devolucao,p,11,60,,
+h43=Porcentagem do frete quando for devolução
+t44=linha-25
+t45=coluna+270
+t46=Reentrega:,reentrega,p,11,60,,
+h46=Porcentagem do frete quando for reentrega
+t47=coluna-270
+t48=Compartilhada:,compartilhada,sn,3,30,,
+h48=Compartilhar esta tabela com os clientes sem tabela.
+t49=linha-25
+t50=coluna+220 
+t51=forcarleftmask=160
+#t47=Ignorar Tipo de Veiculo:,tipotab,sn,3,30,,
+#h47=Sera calculado o frete independente se o veiculo for Truck ou Carreta.
+
+[destinos]
+tab=DESTINOS PARA CALCULO DE VIAGEM FECHADA
+comentario=
+db=tabaereo
+ordem=siglas,uf,cidade
+rcl=tabaereo.rcl
+chave=tabela
+chavePrincipal=id
+relacaokey=tabela,$IDORIGEM
+tituloWidth=35
+where=tabela="$IDORIGEM"
+c0=UF,uf,c,2,30,,
+c1=Cidade,cidade,c,50,160,,
+c2=KM,km,i,10,40,,
+c3=Truck,truck,f,11,60,,
+c4=Carreta,carreta,f,11,60,,
+c5=Mínimo,minima,f,11,60,,
+c6=Exced.,excedente,f,11,60,,
+Rlt=
+msg=
+altura=360
+largura=400
+forcarleftmask=80
+foco=uf
+t0=UF:,uf,c,2,30,@BU,estado2.rcl,
+h0=Sigla do Estado
+t1=coluna+110
+t2=linha-25
+t3=Capital:,capital,c,50,155,@D,
+t4=coluna-110
+t5=Cidade:,cidade,c,50,250,@B,<#17>geral.rcl{ufsigla=uf/"Interior"},
+h5=Nome da Cidade
+t6=KM:,km,i,10,84,,
+h6=Kilometragem apartir da cidade de embarque
+t7=Taxas#007E7E7E\color_swatch_2.png,,,,550, ,
+t8=Truck:,truck,f,11,84,,
+h8=Taxa para veículo Truck
+t9=Carreta:,carreta,f,11,84,,
+h9=Taxa para veículo Carrega
+t10=Tx.Mínima:,minima,f,11,84,,
+h10=TAxa mínima
+t11=Excedente:,excedente,f,11,84,,
+h11=Excedente por Kilo
+validacao=setCapital(uf),campoPreenchido(uf),campoPreenchido(cidade)
+
+

@@ -1,0 +1,50 @@
+[SituacaoTributaria]
+i0=00-Tributada integralmente
+i1=10-Tributada e com cobrança do ICMS por substituição tributária
+i2=20-Com redução de base de cálculo
+i3=30-Isenta ou não tributada e com cobrança do ICMS por substituição tributária
+i4=40-Isenta
+i5=41-Não Tributada
+i6=50-Com Suspenção
+i7=51-Deferimento
+i8=60-ICMS cobrado anteriormente por substituição tributária
+i9=70-Com redução de base de cálculo e cobrança do ICMS por substituição tributária
+i10=90-Outras
+
+[Secao]
+i0=Padrão
+
+[Unidades]
+i0=CM-Centimetros
+i1=CT-Centos
+i2=CX-Caixas
+i3=DZ-Dúzias
+i4=GR-Gramas
+i5=KG-Kilos
+i6=MT-Metros
+i7=PC-Peças
+i8=RL-Rolos
+i9=TB-Tambores
+i10=UN-Unidades
+
+[Tipo]
+i0=Dinheiro,0
+i1=Cartão Crédito,1
+i2=Cartão Débito,1
+i3=Cheque,0
+i4=Carne,0
+
+[rclsoft]
+nome=EMPRESA DEMONSTRACAO
+cnpj=00.000.000/0001-21
+ie=111.111.111.111
+endereco=Rua ABC, 132
+cep=00000-000
+bairro=Centro
+cidade=Sao Paulo
+uf=SP
+telefone=1111-2222
+
+
+
+

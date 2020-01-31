@@ -1,0 +1,112 @@
+#
+# 	Parametros do menu de manutenção do Sistema
+# 	Desenvolvido por Ronaldo C Silva
+# 	ConectLab Informatica Ltda.
+# 	Data	   : 28/01/2010
+#	Atualizacao: 07/01/2015
+#
+# 	a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=0
+nivelauxiliar=0
+disableMenu=1
+telalargura=550
+telaaltura=550
+pdx=
+individual=1
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=nil, Volumes, tabelavolumes, 0123456789, 9, 7,a
+
+#
+# Parametros de tela
+#
+
+[tabelavolumes]
+tab=TABELA VOLUMES
+comentario=
+db=tabefret
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+forcarcoluna=130
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Por tonelada,tonelada,f,16,100,,
+altura=200
+
+largura=400
+foco=descr
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=0
+forcarleftmask=110
+nobrowse=1
+t0=coluna=0
+t1=Descrição:,descr,c,50,380,,
+h1=Descrição completa da Tabela.
+t2=Volume Mínimo#007E7E7E\peso.png,,,,480, ,
+t3=Volumes:,frt_val1=@10,e,9,60,,
+h3=Volumes Mínimo
+t4=linha-25
+t5=coluna+130
+t6=NF até:,frt_val2=@1.000,f,11,84,,
+h6=Valor de Nota Fiscal Mínimo
+t7=linha-25
+t8=coluna+160
+t9=Taxa:,frt_val3,f,11,84,,
+t10=coluna-290
+t11=Volumes Acima#007E7E7E\peso.png,,,,480, ,
+t12=Taxa:,frt_val4,f,11,84,,
+h12=Taxa por Volumes
+t13=#linha-25
+t14=#coluna+130
+t15=Frete Valor:,advalorem,p,11,60,,
+h15=Frete Valor
+t16=#linha-25
+t17=#coluna+160
+t18=Pedágio/100Kg:,pedagio,f,11,84,,
+t19=#coluna-290
+t20=Pesos#007E7E7E\peso.png,,,,480, ,
+t21=Até 50Kg:,ate_50,f,11,84,,
+t22=de 51 até 100Kg:,ate_100,f,11,84,,
+t23=Acima:,tonelada,f,11,84,,
+t24=linha-75
+t25=coluna+190
+t26=forcarleftmask=210
+t27=Coleta de Caminhão acima de(Kg):,Btonelada=@800,e,11,84,,
+t28=Taxa:,precom3,f,11,84,,
+t29=coluna-190
+t30=linha+25
+t31=forcarleftmask=110
+t32=Generalidades#007E7E7E\peso.png,,,,480, ,
+t33=Devolução:,devolucao,p,11,84,,
+h33=Porcentagem a cobrar do frete quando devolução
+t34=linha-25
+t35=coluna+160
+t36=Reentrega:,reentrega,p,11,84,,
+h36=Porcentagem a cobrar do frete quando reentrega
+t37=linha-25
+t38=coluna+190
+t39=Compartilhada:,compartilhada,sn,3,30,,
+h39=Esta tabela pode ser compartilhada entre os clientes sem tabela ?
+
+[correcao_de_valores]
+; Tipo p - Permite ajustar os campos abaixo apenas por porcentagems.
+; Tipo v - Permite ajustar os campos abaixo subtraindo e adicionando valores
+tipo=pv
+c0=frt_val3,pv,Taxa para o volume mínimo
+c1=frt_val4,pv,Taxa para o volume acima do mínimo
+c2=pedagio ,pv,Pedágio/100Kg
+c3=ate_50  ,pv,Peso até 50Kg
+c4=ate_100 ,pv,Peso de 51 até 100Kg
+c5=tonelada,pv,Peso acima de 100Kg
+c6=precom3 ,pv,Taxa para caminhão acima de 800kg

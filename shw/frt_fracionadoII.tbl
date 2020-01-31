@@ -1,0 +1,84 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 28/01/2010
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=0
+nivelauxiliar=0
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=nil, Fracionada II, tabelafracionadoII, 0123456789, 9, 7,a
+
+#
+# Parametros de tela
+#
+
+[tabelafracionadoII]
+tab=Tabela Peso Fracionado II
+comentario=Tabela Peso Fracionado II
+db=tabefret
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+forcarcoluna=130
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Por tonelada,tonelada,f,16,100,,
+altura=532
+
+
+largura=380
+foco=descr
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=120
+forcarleftmask=130
+nobrowse=1
+t0=Descrição:,descr,c,50,200,,
+t1=de     0 à  10 Kgs,ate_50,f,11,84,,
+t2=de  10.5 à  20 Kgs,ate_100,f,11,84,,
+t3=de  20.5 à  35 Kgs,ate_150,f,11,84,,
+t4=de  35.5 à  70 Kgs,ate_200,f,11,84,,
+t5=de  70.5 à 100 Kgs,ate_250,f,11,84,,
+t6=de 100.5 à 300 Kgs,ate_300,f,11,84,,
+t7=de 300.5 à 500 Kgs,ate_350,f,11,84,,
+t8=Acima de 500 Kgs,tonelada,f,11,84,,
+t9=ADvalorem:,advalorem,p,11,84,,
+t10=Taxa Seg/Cat:,seccat,f,11,84,,
+t11=GRIS:,gris,p,11,84,,
+t12=GRIS mínimo:,minimored,f,11,84,,
+t13=Pedágio/100Kg:,pedagio,f,11,84,,
+t14=Frete Mínimo:,minimo,f,11,84,,
+t15=Devolução:,devolucao,p,11,84,,
+t16=Reentrega:,reentrega,p,11,84,,
+t17=#ICMS faz parte do frete:,icmsx,sn,3,30,,
+t18=Tabela compartilhada:,compartilhada,sn,3,30,,
+
+[correcao_de_valores]
+; Tipo p - Permite ajustar os campos abaixo apenas por porcentagems.
+; Tipo v - Permite ajustar os campos abaixo subtraindo e adicionando valores
+tipo=pv
+c0=ate_50  ,pv,até 10kg
+c1=ate_100 ,pv,até 20kg
+c2=ate_150 ,pv,até 35kg
+c3=ate_200 ,pv,até 70kg
+c4=ate_250 ,pv,até 100kg
+c5=ate_300 ,pv,até 300kg
+c6=ate_350 ,pv,até 500kg
+c7=tonelada,pv,Kg Excedido
+c8=minimo  ,pv,Frete Minimo
+c9=minimored,pv,GRIS Minimo
+c10=seccat,pv,Taxa Seg/Cat
+c11=pedagio,pv,Pedagio

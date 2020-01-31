@@ -1,0 +1,405 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 09/08/2011
+#
+#
+# a todos
+# d nota de despesas
+# g agenda
+# m movimento de caixa
+# n cadastro de bancos
+# o plano de contas
+# p pagar
+# q gerenciador de ocorrencias
+# r receber
+# s script inicial
+# t conta caixa
+
+[arquivo]
+modulo=DIVERSOS
+nivelprincipal=0
+disableMenu=1
+telalargura=500
+telaaltura=380
+
+[Opcoes]
+o0=Diversos, 0123456789, 9, 0,cosrmpfgl
+
+[Diversos]
+o0=nil, Consolidar, CEFconsolidar, 0123456789, 0, 27,c
+o1=nil, Baixa de Coleta, OCCbaixa, 0123456789, 0, 27,o
+# Contabil
+o2=nil, Mês, Sped, 0123456789, 0, 27,s
+o3=nil, Apuração do ICMS, apuraIcms, 0123456789, 0, 27,i
+o4=nil, Retiradas, retiradas, 0123456789, 0, 27,r
+# Contrato de Fretes
+o5=Contas, Adiantamento, adiantamento, 0123456789, 0, 27,m
+o6=Contas, Pagamentos, contrato, 0123456789, 0, 27,m
+o7=nil,DRE, dreScript, 0123456789, 0, 27,p
+o8=nil,Observação CEF,cefObs, 0123456789,0 , 27,f
+o9=nil,Contas á Pagar, cfgSangria, 0123456789,0 , 27,g
+o10=nil,Módulos de Relatórios, modRelatorios,0123456789,0 , 27,l
+
+#
+# Parametros de tela
+#
+
+[CEFconsolidar]
+btautoedit=1
+tab=CONSOLIDAR COTAÇÃO DE FRETE
+comentario=
+db=cotafret
+rcl=
+chave=id
+chavePrincipal=id
+c0=CEF,id,i,30,60,,
+nobrowse=1
+#BotaoIncluir=RCL
+#BotaoAlterar=RCL
+relacaokey=
+where=(id=$IDORIGEM)
+altura=400
+largura=500
+foco=aprovado
+forcarleftmask=120
+forcarrightlabel=1
+t0=Cotação:,id,+,10,60,,
+h0=Número da cotação
+t1=Dados para confirmação#007E7E7E\attach_2.png,,,,410, ,
+t2=Status:,aprovado,i,3,30,,<#20>geral2.rcl,
+t3=Data:,consdata,d,10,70,,
+h3=Data da consolidação
+t4=Hora:,conshora,h,5,40,,
+h4=Hora da consolidação
+t5=Autorizado por:,conspor,c,50,290,,
+h5=Nome do responsável pela autorização
+t6=,consolidado,sn,3,30,@V,
+t7=linha-25
+t8=Quando Reprovado#007E7E7E\attach_2.png,,,,410, ,
+t9=Motivo:,motivo,c,250,290,,
+validacao=DataFlag(consdata;consolidado)
+#,campoPreenchido(conspor)
+
+[OCCbaixa]
+btautoedit=1
+tab=BAIXA DE ORDEM DE COLETA
+comentario=
+db=coleta
+rcl=
+chave=id
+chavePrincipal=id
+c0=OCC,id,i,30,60,,
+c1=Baixa,baixa,d,10,80,,
+nobrowse=1
+#BotaoIncluir=RCL
+#BotaoAlterar=RCL
+relacaokey=
+where=(id=$IDORIGEM)
+altura=500
+largura=430
+foco=baixa
+forcarleftmask=120
+forcarrightlabel=1
+t0=Coleta:,id,+,10,60,,
+h0=Número da Ordem de Coleta
+t1=Taxas para Terceiros#007E7E7E\attach_2.png,,,,360, ,
+t2=#Tabela
+t3=Coleta(s):,entregas,i,3,70,,
+h3=Quantidade de coleta
+t4=Taxa:,taxas,f,11,84,,
+h4=Taxa por coleta
+t5=Total:,frete,f,11,84,@R&cor(clsilver|clblack),
+h5=Total do frete
+t6=Dados para confirmação#007E7E7E\attach_2.png,,,,360, ,
+t7=Data:,baixa,d,10,70,,
+h7=Data da baixa
+t8=linha-25
+t9=coluna+120
+t10=Hora:,horab,h,5,40,,
+h10=Hora da baixa
+t11=forcarleftmask=1
+t12=coluna=10
+t13=linha+15
+t14=label|Resultados Inconclusivos:|Tahoma,10,clred
+t15=linha-20
+t16=coluna+170
+t17=,inconclusivo,sn,3,30,,
+t18=coluna=10
+t19=linha+5
+t20=frame|350|100
+t21=coluna=20
+t22=linha+5
+t23=label|Observação
+t24=forcarleftmask=20
+t25=,obsBaixa,t,0,330x70,,
+t26=,flag,sn,3,30,@V,
+calc0=frete=+taxas,*entregas
+validacao=DataFlag(baixa;flag)
+
+[Sped]
+btautoedit=1
+tab=SPED FISCAL
+comentario=
+db=spedefd
+rcl=
+chave=id
+chavePrincipal=id
+c0=SPED,id,i,30,60,,
+c1=Origem,origem,c,10,80,,
+nobrowse=1
+#BotaoIncluir=RCL
+#BotaoAlterar=RCL
+relacaokey=
+where=(id=$IDORIGEM)
+altura=520
+largura=500
+foco=origem
+forcarleftmask=120
+forcarrightlabel=1
+t0=label|EFD
+t1=<,layout=@ICMS/IPI;Contribuições,l,@B,190,,
+t2=linha-40
+t3=coluna+200
+t4=label|Tipo de arquivo
+t5=<,tipo=@Normal;Substituto,l,@B,190,,
+h5=Tipo de arquivo a ser gerado
+t6=coluna-200
+t7=linha+10
+t8=label|Origem dos dados
+t9=<,origem,c,3,40,@BU{}$pegarCodSped(),<#5>tipotran.rcl,
+h9=Selecionar a origem dos documentos
+t10=Periodo de Apuração#007E7E7E\data.png,,,,410, ,
+t11=Mês:,mes,c,2,40,@BU,<#8>geral.rcl,
+h11=Mês de apuração
+t12=linha-25
+t13=coluna+100
+t14=Ano:,ano,c,4,40,@BU,<#9>geral.rcl,
+h14=Ano de apuração
+t15=coluna-100
+t16=ICMS#007E7E7E\accept.png,,,,410, ,
+t17=Código ICMS:,codIcms,ci,3,30,,<#2>icms.rcl,
+t18=Vencto:,vencto,d,10,84,,
+t19=#Valor:,valor,f,11,84,@R&cor(clsilver|clblack),
+t20=Código da receita:,codReceita,c,6,60,@BUt,<#34>geral.rcl,
+t21=forcarleftmask=150
+t22=CREDITO OUTORGADO:,icmsOutorgado,p,11,84,,
+t23=Ajuste de Crédito:,ajusteCredito,f,11,84,,
+t24=,chave,c,10,80,@V,
+validacao=criaChave(chave;[layout-tipo-origem-mes-ano]),campoPreenchido(codIcms),limiteInt(mes;[1-12]),limiteInt(ano;[2010-2020]),nodatas(vencto),duplicidades(chave;[chave-spedefd]),campoPreenchido(codReceita)
+
+[apuraIcms]
+btautoedit=1
+tab=APURAÇÃO DO ICMS - OPERAÇÕES PRÓPRIAS
+comentario=
+db=spedefd
+rcl=
+chave=id
+chavePrincipal=id
+c0=SPED,id,i,30,60,,
+c1=Origem,origem,c,10,80,,
+nobrowse=1
+#BotaoIncluir=RCL
+#BotaoAlterar=RCL
+relacaokey=
+where=(id=$IDORIGEM)
+altura=390
+largura=700
+foco=origem
+forcarleftmask=320
+forcarrightlabel=1
+t0=Débitos de ICMS#007E7E7E\doc_table.png,,,,410, ,
+t1=Total dos Débitos por Saídas e Prest. com Débito do Imposto:,VL_TOT_DEBITOS,f,11,84,,
+t2=Total dos Ajustes a Débito Decorrentes do Documento Fiscal:,VL_AJ_DEBITOS,f,11,84,,
+t3=Ajustes de Outros Débitos:,VL_TOT_AJ_DEBITOS,f,11,84,,
+t4=Ajustes de Estornos de Créditos:,VL_ESTORNOS_CRED,f,11,84,,
+t5=Total dos Débitos:,TOTAL_DEBITOS,f,11,84,,
+
+t6=Créditos de ICMS#007E7E7E\doc_table.png,,,,410, ,
+t7=Saldo Credor do Período Anterior:,VL_SLD_CREDOR_ANT,f,11,84,,
+t8=Total dos Créditos por Entrada e Aquis. com Crédito do Imposto:,VL_TOT_CREDITOS,f,11,84,,
+t9=Total dos Ajustes a Crédito decorrentes do Documento Fiscal:,VL_AJ_CREDITOS,f,11,84,,
+t10=Ajustes de Outros Créditos:,VL_TOT_AJ_CREDITOS,f,11,84,,
+t11=Ajustes de Estornos de Débitos:,VL_ESTORNOS_DEB,f,11,84,,
+t12=Total dos Créditos:,TOTAL_CREDITOS,f,11,84,,
+
+t13=Apuração dos Saldos#007E7E7E\doc_table.png,,,,410, ,
+t14=Saldo Devedor:,VL_SLD_APURADO,f,11,84,,
+t15=Deduções:,VL_TOT_DED,f,11,84,,
+t16=ICMS à Recolher:,VL_ICMS_RECOLHER,f,11,84,,
+t17=Saldo Credor a Transportar para o Período Seguinte:,VL_SLD_CREDOR_TRANSPORTAR,f,11,84,,
+
+t18=Outras Informações#007E7E7E\doc_table.png,,,,410, ,
+t19=Valores Recolhidos ou a Recolher - Extra-Apuração:,DEB_ESP,f,11,84,,
+
+[retiradas]
+tab=CONTAS PARA RETIRADAS
+comentario=
+db=rclsoft
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=rtorigem,rtorigem,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=1
+where=id>0
+Rlt=*
+altura=470
+largura=450
+foco=rtcusto
+forcarleftmask=110
+t0=Plano de Contas#007E7E7E\page_white_edit.png,,,,395, ,
+t1=Centro de Custo:,rtcusto,i,5,50,,centrocu.rcl,
+t2=Origem:,rtorigem,i,10,50,$limparsuborigem(),<#4>solicita.rcl,
+t3=Sub-Origem:,rtsub,i,10,50,,subconta.rcl|origem=$rtorigem,
+t4=Documento#007E7E7E\page_white_edit.png,,,,395, ,
+t5=Tipo:,rttipo,i,5,30,,tipo.rcl,
+
+[contrato]
+tab=Plano de Contas para Pagamentos
+db=set_mult
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=ID,id,+,8,60,,
+c1=Nome,nome,c,50,100,,
+nobrowse=1
+relacaokey=nome,"conta_contrato"
+autoIncluir=1
+where=nome='conta_contrato'
+altura=440
+largura=460
+BotaoAlterar=
+foco=nome
+forcarleftmask=90
+t0=C.de Custo:,id_1,i,6,80,,centrocu.rcl,
+t1=Origem:,id_2,i,6,80,$limparsuborigem(),<#4>solicita.rcl,
+t2=Sub-Origem:,id_3,i,6,80,,subconta.rcl|origem=$id_2,
+t3=Caixa:,id_4,i,10,100,,contacc.rcl,
+
+[adiantamento]
+tab=Plano de Contas para Adiantamento
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=ID,id,+,8,60,,
+c1=Nome,nome,c,50,100,,
+nobrowse=1
+autoIncluir=1
+where=nome='conta_contrato_adianta'
+altura=440
+largura=460
+BotaoAlterar=
+foco=nome
+forcarleftmask=90
+t0=C.de Custo:,id_1,i,6,80,,centrocu.rcl,
+t1=Origem:,id_2,i,6,80,$limparsuborigem(),<#4>solicita.rcl,
+t2=Sub-Origem:,id_3,i,6,80,,subconta.rcl|origem=$id_2,
+t3=Caixa:,id_4,i,10,100,,contacc.rcl,
+
+[drescript]
+tab=DRE Script
+comentario=
+db=rclsoft
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=rtorigem,rtorigem,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=1
+where=id>0
+Rlt=*
+altura=500
+largura=600
+foco=dreScript
+forcarleftmask=0
+t0=Script#007E7E7E\page_code.png,,,,400, ,
+t1=forcarleftmask=10
+t2=coluna=0
+t3=,dreScript,t,0,600x350,,
+
+[cefObs]
+tab=Observação Cotação de Fretes
+autoIncluir=1
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=cefObs,cefObs,c,50,100,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=1
+where=id=1
+Rlt=*
+altura=170
+largura=460
+foco=cefObs
+forcarleftmask=10
+t0=Observação da Cotação de Fretes#007E7E7E\page_white_star.png,,,,620, ,
+t1=,cefObs,tw,0,620x350,,
+
+[cfgSangria]
+tab=Parametros do Contas à Pagar
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Id,id,i,3,50,,
+c1=Descrição,descricao,c,100,400,,
+nobrowse=1
+relacaokey=nome,"SANGRIA_CONTAS_A_PAGAR"
+autoIncluir=1
+where=nome='SANGRIA_CONTAS_A_PAGAR'
+altura=200
+largura=440
+foco=id_1
+forcarleftmask=120
+t0=Centro de Custo:,id_1,i,6,80,,centrocu.rcl,
+h0=Centro de Custo
+t1=Conta:,id_2,i,11,80,,contacc.rcl,
+h1=Conta para Compensação
+t2=Lançamento no Contas à Pagar#007E7E7E\page_white_star.png,,,,620, ,
+t3=Obrigatório:,id_3,sn,3,30,,
+h3=É Obrigatório preencher os campos do Contas à Pagar
+
+[modRelatorios]
+tab=MÓDULOS DE RELATÓRIOS
+comentario=
+db=pesquisa
+rcl=
+chave=id
+chaveprincipal=id
+ordem=ativo desc,id
+c0=ID,id,i,6,60,,
+c1=Descrição,npesquisa,c,200,320,,
+c2=Ativo,ativo,sn,3,30,,
+BotaoIncluir=RCL
+BotaoAlterar=RCL
+BotaoVer=
+BotaoExcluir=Não
+BotaoImprimir=
+BotaoFechar=
+altura=230
+largura=450
+foco=arquivos
+t0=ID:,id,+,4,80,,
+t1=Descrição:,npesquisa,c,200,300,,
+t2=Ativo:,ativo,sn,3,30,,

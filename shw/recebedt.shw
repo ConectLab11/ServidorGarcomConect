@@ -1,0 +1,384 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 12/12/2003
+#
+#
+# a todos
+# d nota de despesas
+# g agenda
+# m movimento de caixa
+# n cadastro de bancos
+# o plano de contas
+# p pagar
+# q gerenciador de ocorrencias
+# r receber
+# s script inicial
+# t conta caixa
+
+[arquivo]
+modulo=EDITAR TÍTULO CONTAS À RECEBER
+nivelprincipal=0
+nivelauxiliar=0
+
+[Opcoes]
+o0=Recebimentos, 0123456789, 9, 0,ahn
+
+[Recebimentos]
+o0=nil, Título, receber, 0123456789, 9, 0,a
+o1=nil, Negativação, negativartit, 0123456789, 9, 15:15,na
+o2=nil,+Orgãos, orgao, 0123456789, 9, 23,na
+o3=nil, Despesas, despesastit, 0123456789, 9, 15:15,na
+o4=nil,+Taxas, tarifas, 0123456789, 9, 23,na
+o5=nil,Pagto com Cheque, pgtoCheque, 0123456789, 9, 15:13, ha
+o6=nil,Transmissão, Transmissao, 0123456789, 9, 15:13, ha
+o7=nil,Taxa Vinculada, taxaVinculada, 0123456789, 9, 15:13, ha
+o8=nil,Conta de Descontos, contaDesc, 0123456789, 9, 15:13, ha
+
+#
+# Parametros de tela
+#
+
+[receber]
+tab=TÍTULO DO CONTAS À RECEBER
+comentario=
+db=receber
+ordem=numero
+rcl=receber.rcl
+chave=numero
+chaveprincipal=numero
+c0=numero,numero,+,5,60,,
+c1=descricao,descricao,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=1
+where=numero=$IDORIGEM
+validacao=noZero(solicitant),noZero(suborigem),noZero(portador)
+Rlt=*
+altura=170
+largura=460
+foco=descricao
+forcarleftmask=110
+t0=Portador:,portador,i,6,60,,?cadastro.rcl,
+t1=Descrição:,descricao,c,50,300,,,
+t2=Emissão:,cadastro,d,10,80,,
+t3=linha-25
+t4=coluna+220
+t5=Vencto:,vencto,d,10,80,,
+t6=coluna-220
+t7=Plano de Contas#007E7E7E\page_white_edit.png,,,,395, ,
+t8=Centro de Custo:,custos,i,5,30,,centrocu.rcl,
+t9=Origem:,solicitant,i,5,30,$limparsuborigem(),<#3>solicita.rcl,
+t10=Sub-origem:,suborigem,i,5,30,,subconta.rcl|origem=$solicitant,
+t11=Documento#007E7E7E\page_white_edit.png,,,,395, ,
+t12=Tipo:,tipo,i,5,30,,tipo.rcl,
+t13=Nota Fiscal:,notafiscal,i,8,80,,,
+t14=linha-25
+t15=coluna+220
+t16=Documento:,docto,c,15,80,,,
+t17=coluna-220
+t18=Banco#007E7E7E\page_white_edit.png,,,,395, ,
+t19=Banco:,banco,i,5,30,,bancos.rcl,
+t20=Agência:,agencia,c,10,80,,
+t21=linha-25
+t22=coluna+220
+t23=Conta:,c_c,c,10,80,,
+t24=coluna-220
+t25=Acordo:,acordo,i,6,60,,
+t26=coluna+220
+t27=linha-25
+t28=Sub acordo:,idacordo,i,6,60,,
+
+[negativartit]
+tab=NEGATIVAÇÃO POR TÍTULO
+modulo=auto
+comentario=
+db=negativa
+db2=orgao,cadastro
+ordem=e_data desc
+rcl=
+chave=id
+chaveprincipal=id
+campos=negativa.id,negativa.e_data,negativa.dataNeg,negativa.contrato,orgao.nome as norgao,negativa.baixa,cadastro.nome
+c0=Pedido,e_data,d,10,70,,
+c1=Negat,dataNeg,d,10,70,,
+c2=Contrato,contrato,c,10,70,,
+c3=Orgão,norgao,c,20,80,,
+c4=Baixa,baixa,d,10,70,,
+c5=Cliente,nome,c,50,150,,
+botaoExtra=Baixar
+TodosCampos=isnull(baixa)
+relacaokey=idtitulo,$IDORIGEM
+where=(negativa.idtitulo=$IDORIGEM) and (orgao.id=negativa.orgao) and (cadastro.codigo=negativa.idcliente)
+altura=360
+largura=520
+foco=e_data
+forcarleftmask=90
+t0=linha=5
+t1=Data de Entrada e Saída da Negativação#007E7E7E\data.png,,,,460, ,
+t2=Pedido:,e_data,d,10,70,,
+h2=Data da negativação do documento
+t3=linha-25
+t4=coluna+160
+t5=Negativado:,dataNeg,dn,10,84,,
+t6=linha-25
+t7=coluna+140
+t8=Baixa:,baixa,dn,10,84,,
+h8=Data de baixa da negativação
+t9=coluna-300
+t10=Documento negativado#007E7E7E\page_white_edit.png,,,,460, ,
+t11=Cliente:,idcliente=[receber|numero|titular],i,8,60,,?cadastro.rcl,
+h11=Cliente a ser negativado
+t12=Contrato:,contrato=[receber|numero|docto],c,15,80,,
+h12=Número do documento ou contrato
+t13=linha-25
+t14=coluna+145
+t15=Vencto:,vencto=[receber|numero|vencto],d,10,70,,
+h15=Data de vencimento do documento
+t16=linha-25
+t17=coluna+145
+t18=Valor:,valor=[receber|numero|total],f,11,84,,
+h18=Valor do documento
+t19=coluna-290
+t20=Nascimento:,nascido=[cadastro|codigo{receber~numero~titular}|nascimento],D,10,70,,
+h20=Data de nascimento
+t21=linha-25
+t22=coluna+145
+t23=Tipo:,tipodoc=[receber|numero|tipo],i,3,30,,tipo.rcl,
+h23=Tipo de documento
+t24=coluna-145
+t25=Tipo de negativação#007E7E7E\vcard.png,,,,460, ,
+t26=Orgão:,orgao,i,3,170x30,$getvalor(orgao;custo;[orgao|id|valor]),<#2>receber.rcl,
+h26=Orgão de negativação
+t27=linha-25
+t28=coluna+290
+t29=Custos:,custo,f,11,84,,
+h29=Taxa de negativação
+t30=coluna-290
+t31=,flag,sn,3,30,@V,
+t32=,flag2,sn,3,30,@V,
+validacao=noDatas(e_data),noZero(idcliente),noDatas(vencto),noZero(tipodoc),noZero(orgao),DataFlag(baixa;flag),DataFlag(dataNeg;flag2)
+
+
+[baixarnegativartit]
+tab=BAIXA DE NEGATIVAÇÃO POR TÍTULO
+modulo=auto
+comentario=
+db=negativa
+db2=orgao,cadastro
+ordem=e_data desc
+rcl=
+chave=id
+chaveprincipal=id
+campos=negativa.id,negativa.e_data,negativa.contrato,orgao.nome as norgao,negativa.baixa,cadastro.nome
+c0=Data,e_data,d,10,70,,
+c1=Contrato,contrato,c,10,70,,
+c2=Orgão,norgao,c,20,80,,
+c3=Baixa,baixa,d,10,70,,
+c4=Cliente,nome,c,50,150,,
+botaoExtra=Baixar
+TodosCampos=isnull(baixa)
+relacaokey=idtitulo,$IDORIGEM
+where=(negativa.idtitulo=$IDORIGEM) and (orgao.id=negativa.orgao) and (cadastro.codigo=negativa.idcliente)
+altura=160
+largura=250
+foco=baixa
+forcarleftmask=90
+t0=Baixa:,baixa,d,10,84,,
+h0=Data de baixa da negativação
+t1=,flag,sn,3,30,@V,
+validacao=noDatas(baixa),DataFlag(baixa;flag)
+
+
+[orgao]
+tab=ORGÃO DE NEGATIVAÇÃO
+comentario=
+db=orgao
+ordem=nome
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,c,8,60,,
+c1=Descrição,nome,c,50,300,,
+altura=430
+largura=450
+foco=nome
+t0=Código:,id,+,4,30,,
+t1=Descrição:,nome,c,50,300,,
+t2=Custo:,valor,f,11,84,,
+t3=Despesa Vinculada#007E7E7E\vcard.png,,,,460, ,
+t4=Conta:,idconta,ci,3,30,,<#3>receber.rcl,
+t5=Outros#007E7E7E\vcard.png,,,,460, ,
+t6=Cadastro:,associado,i,6,50,,cadastrx.rcl,
+t7=Informante:,informante,c,50,300,,
+t8=Sistema:,sistema,i,6,80,,
+t9=Sequencia:,sequencia,i,6,80,,
+t10=Path:,path,c,200,300,,
+
+[tarifas]
+tab=TAXAS DE COBRANÇA
+comentario=
+db=tarifas
+ordem=nome
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Descrição,nome,c,50,250,,
+c2=Valor,valor,f,11,84,,
+altura=250
+largura=450
+foco=nome
+t0=#Codigo:,id,+,4,30,,
+t1=Descrição:,nome,c,50,300,,
+h1=Descrição completa da taxa
+t2=Taxa:,valor,f,11,84,,
+h2=Valor da taxa
+t3=Cobrar após:,dias,i,5,60,,
+h3=Cobrar taxa após dias
+t4=Tipo:,tipo,i,3,30,,tipo.rcl,
+h4=Tipo de documento
+t5=Ativo:,ativo=Sim,sn,3,30,,
+h5=Taxa ativa (Sim/Não)
+validacao=campopreenchido(nome)
+
+[despesastit]
+tab=DESPESAS POR TÍTULO
+comentario=
+db=fixado
+ordem=data desc
+rcl=
+chave=id
+chaveprincipal=id
+c0=Data,data,d,10,70,,
+c1=Descrição,nome,c,50,240,,
+c2=Valor,valor,f,11,84,,
+altura=230
+largura=450
+foco=data
+relacaokey=idcadastro,$IDORIGEM
+where=(fixado.idcadastro=$IDORIGEM)
+t0=Data:,data,d,10,70,,
+t1=Despesa:,idconta,ci,3,30,$getvalor(idconta;valor|nome;[tarifas|id|valor|nome]),<#3>receber.rcl,
+t2=Descrição:,nome,c,50,300,,
+t3=Valor:,valor,f,11,84,,
+validacao=noDatas(data),noZero(idconta),campopreenchido(nome)
+
+[pgtoCheque]
+tab=PAGAMENTO COM CHEQUE TERCEIROS
+comentario=
+db=receber
+ordem=numero
+rcl=
+chave=numero
+chaveprincipal=numero
+c0=numero,numero,+,5,60,,
+c1=descricao,descricao,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=1
+where=numero=$IDORIGEM
+Rlt=*
+altura=170
+largura=460
+foco=chNumero
+forcarleftmask=110
+t0=Títular:,titular,i,6,60,,?cadastro.rcl,
+h0=Títular do cheque
+t1=Descrição:,descricao,c,50,300,,,
+h1=Descrição do pagamento
+t2=Cheque:,chNumero,i,11,80,,
+h2=Número do Cheque
+t3=linha-25
+t4=coluna+220
+t5=Vencto:,vencto,d,10,80,,
+h5=Data do vencimento do cheque
+t6=coluna-220
+t7=Conta bancária#007E7E7E\page_white_edit.png,,,,395, ,
+t8=Conta:,chConta,c,15,100,,
+h8=Número da conta bancária (incluir digito)
+t9=Banco:,chBanco,i,3,30,,bancos.rcl,
+h9=Número do banco
+t10=Agência:,chAgencia,c,15,100,,
+h10=Número da agência
+validacao=noZero(titular)
+
+[Transmissao]
+tab=Transmissões EDI
+comentario=
+db=receber
+ordem=numero
+rcl=
+chave=numero
+chaveprincipal=numero
+c0=numero,numero,+,5,60,,
+c1=descricao,descricao,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=1
+where=numero=$IDORIGEM
+Rlt=*
+altura=170
+largura=460
+foco=oftp2
+forcarleftmask=110
+t0=EDI DOCCOB:,edisys,i,10,80,,
+t1=OFTP2 enviado:,oftp2,sn,1,30,,,
+
+[taxaVinculada]
+tab=TAXA VINCULADA
+comentario=
+db=cfgvenda
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+autoIncluir=1
+forcarleftmask=120
+where=id=1
+c0=Codigo,id,c,8,60,,
+c1=Decimal,decimal,c,100,200,,
+altura=450
+largura=450
+foco=vincOrigem
+nobrowse=1
+t0=Lançamento automático no Contas à Pagar#clgray\vcard.png,,,,10*425*180*1*1, ,
+t1=linha+15
+t2=Conta Origem:,vincOrigem,i,8,60,,solicita.rcl,
+t3=linha+10
+t4=Tipo de Pagto:,vincPagto,i,8,60,,tipo.rcl,
+t5=linha+10
+t6=Descrição:,vincDescr,c,50,280,,
+t7=linha+10
+t8=Ativo:,vincAtivo,sn,3,30,,
+
+[contaDesc]
+tab=LANÇAMENTO DE DESCONTOS
+db=set_mult
+ordem=txt_1
+chave=id
+chaveprincipal=id
+c0=Código,id_1,+,10,50,,
+c1=Tipo,txt_1,c,255,340,,
+c2=Ativo,ativo,sn,3,30,,
+nobrowse=0
+Rlt=$IDDESC
+SET_MULT=LISTA_CONTA_DESCONTOS
+relacaokey=nome,"LISTA_CONTA_DESCONTOS"
+autoIncluir=0
+where=nome='LISTA_CONTA_DESCONTOS'
+altura=210
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Código:,id_1,+,10,50,,
+t1=Tipo:,txt_1,c,50,300,,
+t2=Ativo:,ativo=Sim,sn,3,30,,
+validacao=campoPreenchido(txt_1)

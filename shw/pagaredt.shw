@@ -1,0 +1,77 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 12/12/2003
+#
+#
+# a todos
+# d nota de despesas
+# g agenda
+# m movimento de caixa
+# n cadastro de bancos
+# o plano de contas
+# p pagar
+# q gerenciador de ocorrencias
+# r receber
+# s script inicial
+# t conta caixa
+
+[arquivo]
+modulo=EDITAR TÍTULO CONTAS À PAGAR
+nivelprincipal=0
+nivelauxiliar=0
+
+[Opcoes]
+o0=Pagamentos, 0123456789, 9, 0,a
+
+[Pagamentos]
+o0=nil, Título, pagar, 0123456789, 9, 25,a
+
+#
+# Parametros de tela
+#
+
+[pagar]
+tab=TÍTULO DO CONTAS À PAGAR
+comentario=
+db=pagar
+ordem=numero
+rcl=pagar.rcl
+chave=numero
+chaveprincipal=numero
+c0=numero,numero,+,5,60,,
+c1=descricao,descricao,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=1
+where=numero=$IDORIGEM
+Rlt=*
+altura=170
+largura=460
+foco=descricao
+forcarleftmask=110
+t0=Credor:,credor,i,6,60,,cadastro.rcl,
+t1=Descrição:,descricao,c,50,300,,,
+t2=Emissão:,cadastro,d,10,80,,
+t3=linha-25
+t4=coluna+220
+t5=Vencto:,vencto,d,10,80,,
+t6=coluna-220
+t7=Plano de Contas#007E7E7E\page_white_edit.png,,,,395, ,
+t8=Centro de Custo:,custos,i,5,30,,centrocu.rcl,
+t9=Origem:,solicitant,i,5,30,$limparsuborigem(),<#4>solicita.rcl,
+t10=Sub-origem:,subconta,i,5,30,,subconta.rcl|origem=$solicitant,
+t11=Documento#007E7E7E\page_white_edit.png,,,,395, ,
+t12=Tipo:,tipo,i,5,30,,tipo.rcl,
+t13=Nota Fiscal:,notaf,c,100,80,,,
+t14=linha-25
+t15=coluna+220
+t16=Documento:,docto,c,15,80,,,
+t17=coluna-220
+t18=Outros#007E7E7E\page_white_edit.png,,,,395, ,
+t19=Observação:,anote,c,255,300,,
+t20=          :,autorizado,c,255,300,,
+t21=Contábil:,contabil,sn,3,30,,,

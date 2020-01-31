@@ -1,0 +1,646 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 28/01/2010
+#
+#
+# a todos
+
+[arquivo]
+modulo=TAXAS E VALORES DO FRETE
+nivelprincipal=0
+nivelauxiliar=0
+pdx=capamin.pdx
+
+[Opcoes]
+o0=Opcionais, 0123456789, 9, 0, pxy
+
+[Opcionais]
+o0=nil, Protocolos, protocolos, 0789, 2, 17, p
+o1=nil, Tipo de Serviço, tipoServico, 0789, 2, 17, p
+o2=nil, Conteúdos, conteudos, 0789, 2, 17, p
+o3=nil, Tipo de Imposto, tipoImposto, 0789, 2, 17, p
+o4=nil, Siglas, siglas, 0789, 2, 17, p
+o5=nil, Modal, modal, 0789, 2, 17, p
+o6=Tabela, Coleta/ Embalagem, coleta, 0789, 2, 17, p
+o7=Tabela, Gelo Seco, geloseco, 0789, 2, 17, p
+o8=nil, Ocorrências de Viagem, viagem, 0123456789, 9, 2, x
+o9=Status, Agendamento, agendamento, 0789, 2, 3, x
+o10=Status, Coleta, confColeta, 0789, 2, 3, x
+o11=Status, Embarque, confEmbarque, 0789, 2, 33, x
+o12=Status, Entrega, confEntrega, 0789, 2, 3, x
+o13=nil, Processo, capaProcesso, 0789, 2, 27, y
+o14=#nil, Posição de Entrega, entrega, 0789, 2, 3, x
+o15=nil,Ocorrências, ocotrans, 0789, 4, 25:18, x
+o16=Embarque, CIA, cia, 0789, 2, 17, p
+o17=Embarque, Modalidade, modalidade, 0789, 2, 17, p
+o18=nil, Outros, confOutros, 0789, 2, 33, x
+
+
+#
+# Parametros de tela
+#
+
+[protocolos]
+tab=LISTA DE PROTOCOLOS
+db=set_mult
+ordem=txt_1
+chave=id
+chaveprincipal=id
+c0=Protocolo,txt_1,c,255,240,,
+nobrowse=0
+relacaokey=nome,"LISTA_DE_PROTOCOLOS_BIO"
+autoIncluir=0
+where=nome='LISTA_DE_PROTOCOLOS_BIO'
+altura=220
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Protocolo:,txt_1,c,50,300,,
+t1=Cliente/CRO:,txt_2,c,50,300,,
+t2=Destino:,txt_3,c,50,300,,
+
+[tipoServico]
+tab=LISTA DE TIPO DE SERVIÇOS
+db=set_mult
+ordem=txt_1
+chave=id
+chaveprincipal=id
+c0=Tipo de Serviço,txt_1,c,255,270,,
+c1=Valor,valor,f,11,84,,
+c2=Percentual,aliquota,p,11,84,,
+nobrowse=0
+relacaokey=nome,"LISTA_DE_TIPO_SERVICO_BIO"
+autoIncluir=0
+where=nome='LISTA_DE_TIPO_SERVICO_BIO'
+altura=220
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Descrição:,txt_1,c,50,300,,
+t1=Valor:,valor,f,11,84,,
+t2=Percentual:,aliquota,p,11,84,,
+
+[conteudos]
+tab=LISTA DE CONTEUDOS
+db=set_mult
+ordem=txt_1
+chave=id
+chaveprincipal=id
+c0=Conteúdos,txt_1,c,255,240,,
+nobrowse=0
+relacaokey=nome,"LISTA_DE_CONTEUDOS_BIO"
+autoIncluir=0
+where=nome='LISTA_DE_CONTEUDOS_BIO'
+altura=150
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Conteúdo:,txt_1,c,50,300,,
+
+[tipoImposto]
+tab=LISTA DE TIPO DE IMPOSTO
+db=set_mult
+ordem=txt_1
+chave=id
+chaveprincipal=id
+c0=Tipo de Imposto,txt_1,c,255,240,,
+nobrowse=0
+relacaokey=nome,"LISTA_DE_TIPO_IMPOSTO_BIO"
+autoIncluir=0
+where=nome='LISTA_DE_TIPO_IMPOSTO_BIO'
+altura=200
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Descrição:,txt_1,c,50,300,,
+t1=Taxa ADM:,valor,f,11,84,,
+
+[geloseco]
+tab=TABELA GELO SECO
+db=tabefret
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Peso,faixa_1,e,90,240,,
+nobrowse=1
+relacaokey=descr,"LISTA_TABELA_GELO_SECO"
+autoIncluir=1
+where=descr='LISTA_TABELA_GELO_SECO'
+altura=240
+largura=440
+BotaoIncluir=Não
+foco=faixa_1
+forcarleftmask=150
+t0=Peso Mínimo(KG):,faixa_1,e,11,84,,
+t1=Valor Peso mínimo:,faixa_2,f,11,84,,
+t2=Valor Peso adicional:,faixa_3,f,11,84,,
+
+[coleta]
+tab=TABELA COLETA/ EMBALAGEM
+db=tabefret
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Tabelas,produto,c,90,300,,
+c1=Origem,destino1,c,4,60,,
+c2=Destino,destino2,c,4,60,,
+nobrowse=0
+relacaokey=descr,"LISTA_TABELA_COLETA_EMBALAGEM"
+autoIncluir=0
+where=descr='LISTA_TABELA_COLETA_EMBALAGEM'
+altura=550
+largura=600
+foco=produto
+forcarleftmask=90
+t0=Descrição:,produto,c,100,430,,
+t1=Origem#007E7E7E\page_code.png,,,,530, ,
+t2=Sigla origem:,destino1,c,10,50,@BU,<#37>geral2.rcl,
+t3=linha-25
+t4=coluna+120
+t5=UF:,uf,c,2,30,@BU,estado2.rcl,
+t6=linha-25
+t7=coluna+110
+t8=Cidade:,cidade,c,30,185,@B,<#17>geral.rcl{ufsigla=uf/""},
+t9=coluna-230
+t10=Destino#007E7E7E\page_code.png,,,,530, ,
+t11=Sigla destino:,destino2,c,10,50,@BU,<#37>geral2.rcl,
+t12=linha-25
+t13=coluna+120
+t14=UF:,destino3,c,2,30,@BU,estado2.rcl,
+t15=linha-25
+t16=coluna+110
+t17=Cidade:,destino4,c,30,185,@B,<#17>geral.rcl{ufsigla=destino3/""},
+t18=coluna-230
+t19=linha+20
+t20=label|Transporte|9,B,clred
+t21=frame|250|100
+t22=forcarleftmask=150
+t23=linha+10
+t24=Peso Mínimo(KG):,faixa_1,e,11,84,,
+t25=Valor Peso mínimo:,faixa_2,f,11,84,,
+t26=Valor Peso adicional:,faixa_3,f,11,84,,
+t27=linha-100
+t28=coluna+280
+t29=label|Embalagem|9,B,clred
+t30=frame|250|100
+t31=forcarleftmask=150
+t32=linha+10
+t33=Peso Mínimo(KG):,faixa_4,e,11,84,,
+t34=Valor Peso mínimo:,faixa_5,f,11,84,,
+t35=Valor Peso adicional:,faixa_6,f,11,84,,
+t36=coluna-280
+t37=linha+20
+t38=Outros#007E7E7E\page_code.png,,,,530, ,
+t39=Taxa veiculo dedicado:,faixa_7,f,11,84,,
+t40=Seguro:,advalorem,p,11,84,,
+t41=GRIS:,gris,p,11,84,,
+t41=Taxa ADM:,faixa_9,f,11,84,,
+
+
+[siglas]
+tab=LISTA DE SIGLAS
+db=set_mult
+ordem=txt_1
+chave=id
+chaveprincipal=id
+c0=Siglas,txt_1,c,255,80,,
+c1=UF,txt_2,c,2,40,,
+c2=Cidade,txt_3,c,50,100,,
+c3=Descrição,txt_4,c,255,240,,
+nobrowse=0
+relacaokey=nome,"LISTA_DE_SIGLAS"
+autoIncluir=0
+where=nome='LISTA_DE_SIGLAS'
+altura=230
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Sigla:,txt_1,c,4,150,@U,
+#t1=UF:,txt_2,c,2,30,@BU,estado2.rcl,
+#t2=linha-25
+#t3=coluna+110
+#t4=Cidade:,txt_3,c,30,185,@B,<#17>geral.rcl{ufsigla=txt_2/""},
+t1=UF:,txt_2,c,2,30,@U,,
+t2=linha-25
+t3=coluna+110
+t4=Cidade:,txt_3,c,30,185,@U,,
+t5=coluna-110
+t6=Descrição:,txt_4,c,50,300,,
+
+[agendamento]
+tab=AGENDAMENTO DE COLETA
+btautoedit=0
+comentario=
+db=tabela[1]
+rcl=
+trus=1
+chave=id
+chavePrincipal=id
+c0=Processo,id,i,30,60,,
+c1=Emissão,emissao,d,11,84,,
+process_ext=MINUTA_OCORRENCIA_200
+nobrowse=1
+relacaokey=
+resetar=viagem
+oper=ctex.agendamento|pos_previsao|pos_prehora|pos_prehora2
+where=(id=$IDORIGEM)
+altura=320
+largura=430
+foco=pos_previsao
+forcarleftmask=110
+forcarrightlabel=1
+t0=linha=0
+t1=Agendamento#clgray\clock.png,,,,10*390*65*1*1, ,
+t2=linha+15
+t3=Data:,pos_previsao,d,10,70,,
+h3=Data de agendamento
+t4=linha-25
+t5=coluna+90
+t6=,pos_prehora,h,5,40,,
+t7=linha-25
+t8=coluna+60
+t9=à,pos_prehora2,h,5,40,,
+t10=coluna-150
+t11=linha+20
+
+[entrega]
+tab=POSIÇÃO DE ENTREGA
+btautoedit=0
+comentario=
+db=tabela[1]
+rcl=
+trus=1
+chave=id
+chavePrincipal=id
+c0=Processo,id,i,30,60,,
+c1=Emissão,emissao,d,11,84,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=320
+largura=430
+foco=pos_dCarrega
+forcarleftmask=150
+forcarrightlabel=1
+#botaoExtra=imprimir
+t0=linha=0
+t1=Data/Hora de Entrega#clgray\clock.png,,,,10*390*65*1*1, ,
+t2=#coluna-180
+t3=Carregamento:,pos_dCarrega,d,10,70,,
+h3=Data do carregamento
+t4=linha-25
+t5=coluna+75
+t6=,pos_hCarrega,h,5,40,,
+h6=Hora do carregamento
+t7=coluna-75
+t8=Saída:,pos_dSaida,d,10,70,,
+h8=Data da saída
+t9=linha-25
+t10=coluna+75
+t11=,pos_hSaida,h,5,40,,
+h11=Hora da saída
+t12=coluna-75
+t13=linha+5
+t14=Posição da Entrega#clgray\clock.png,,,,10*390*220*1*1, ,
+t15=Previsão:,pos_previsao,d,10,70,,
+h15=Data de previsão da entrega
+t16=linha-25
+t17=coluna+75
+t18=,pos_prehora,h,5,40,,
+h18=Hora prevista para entrega
+t19=linha-25
+t20=coluna+75
+t21=à,pos_prehora2,h,5,40,,
+h21=Hora prevista para entrega
+
+t22=coluna-150
+t23=Em transito p/ coleta:,pos_coleta,sn,3,30,,
+h23=Transporte a caminho para fazer a coleta
+t24=No armazem:,pos_armazem,sn,3,30,,
+h24=Mercadorias esta no armazem
+t25=linha-25
+t26=coluna+75
+t27=,pos_armnome,c,20,120,@B,<#2>armazem.rcl,
+h27=Nome do armazem
+t28=coluna-75
+t29=Em transito p/ entrega:,pos_entrega,sn,3,30,,
+h29=Transporte esta a caminho para entrega
+t30=Entrega:,pos_dataentrega,d,10,70,,
+h30=Data da entrega
+t31=linha-25
+t32=coluna+75
+t33=,pos_horaentrega,h,5,40,,
+h33=Hora da entrega
+t34=coluna-75
+t35=Garantia:,pos_garantia,c,50,210,@U,
+h35=Garantia de entrega
+t36=Recebido por:,recebidopor,c,50,210,@U,
+h36=Nome do responsável pelo recebimento 
+
+[cia]
+tab=CIA DE EMBARQUE
+db=set_mult
+ordem=txt_1
+chave=id
+chaveprincipal=id
+c0=Código,codigo,+,3,60,,
+c1=Nome,txt_1,c,255,300,,
+nobrowse=0
+SET_MULT_VALIDA=codigo
+SET_MULT=LISTA_DE_CIA_DE_EMBARQUE
+relacaokey=nome,"LISTA_DE_CIA_DE_EMBARQUE"
+autoIncluir=0
+where=nome='LISTA_DE_CIA_DE_EMBARQUE'
+altura=200
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Código:,codigo,+,4,50,,
+t1=Nome:,txt_1,c,50,300,,
+
+[modalidade]
+tab=MODALIDADE DE EMBARQUE
+db=set_mult
+ordem=txt_1
+chave=id
+chaveprincipal=id
+c0=Código,codigo,+,3,60,,
+c1=Nome,txt_1,c,255,300,,
+nobrowse=0
+SET_MULT_VALIDA=codigo
+SET_MULT=LISTA_DE_MODALIDADE_DE_EMBARQUE
+relacaokey=nome,"LISTA_DE_MODALIDADE_DE_EMBARQUE"
+autoIncluir=0
+where=nome='LISTA_DE_MODALIDADE_DE_EMBARQUE'
+altura=200
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Código:,codigo,+,4,50,,
+t1=Nome:,txt_1,c,50,300,,
+
+
+
+[modal]
+tab=MODAL DE TRANSPORTES
+db=set_mult
+ordem=txt_1
+chave=id
+chaveprincipal=id
+c0=Código,codigo,+,3,60,,
+c1=Nome,txt_1,c,255,300,,
+nobrowse=0
+SET_MULT_VALIDA=codigo
+SET_MULT=LISTA_DE_MODAL_DE_TRANSPORTES
+relacaokey=nome,"LISTA_DE_MODAL_DE_TRANSPORTES"
+autoIncluir=0
+where=nome='LISTA_DE_MODAL_DE_TRANSPORTES'
+altura=200
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Código:,codigo,+,4,50,,
+t1=Nome:,txt_1,c,50,300,,
+
+[confColeta]
+tab=CONFIRMAÇÃO DA COLETA
+btautoedit=0
+comentario=
+db=tabela[1]
+rcl=
+trus=1
+chave=id
+chavePrincipal=id
+c0=Processo,id,i,30,60,,
+c1=Emissão,emissao,d,11,84,,
+nobrowse=1
+relacaokey=
+resetar=viagem
+process_ext=MINUTA_OCORRENCIA_201
+#oper=ctex.data>|colData|pos_previsao|d
+where=(id=$IDORIGEM)
+altura=320
+largura=430
+foco=colData
+forcarleftmask=110
+forcarrightlabel=1
+t0=linha=0
+t1=Confirmação da Coleta#clgray\clock.png,,,,10*390*65*1*1, ,
+t2=linha+15
+t3=Data:,colData,dn,10,70,,
+h3=Data da Coleta
+t4=linha-25
+t5=coluna+90
+t6=,colHora,h,5,40,,
+t7=coluna-90
+t8=linha+20
+
+[confEntrega]
+tab=CONFIRMAÇÃO DA ENTREGA
+btautoedit=0
+comentario=
+db=tabela[1]
+rcl=
+trus=1
+chave=id
+chavePrincipal=id
+c0=Processo,id,i,30,60,,
+c1=Emissão,emissao,d,11,84,,
+nobrowse=1
+process_ext=MINUTA_OCORRENCIA_001
+relacaokey=
+resetar=viagem
+oper=ctex.entrega|pos_dataentrega|pos_horaentrega|entrega
+where=(id=$IDORIGEM)
+altura=320
+largura=430
+foco=pos_dataentrega
+forcarleftmask=110
+forcarrightlabel=1
+t0=linha=0
+t1=Confirmação da Entrega#clgray\clock.png,,,,10*390*120*1*1, ,
+t2=linha+15
+t3=forcarleftmask=110
+t4=Data:,pos_dataentrega,dn,10,70,,
+h4=Data da entrega
+t5=linha-25
+t6=coluna+90
+t7=,pos_horaentrega,h,5,40,,
+h7=Hora da entrega
+t8=coluna-90
+t9=Recebido por:,recebidopor,c,50,280,@U,
+h9=Nome do responsável pelo recebimento 
+t10=OBS:,pos_garantia,c,50,280,@U,
+h10=Observação
+
+[confEmbarque]
+tab=DADOS DO EMBARQUE
+btautoedit=0
+comentario=
+db=tabela[1]
+rcl=
+chave=id
+chavePrincipal=id
+c0=Processo,id,i,30,60,,
+c1=Emissão,emissao,d,11,84,,
+nobrowse=1
+relacaokey=
+resetar=viagem
+process_ext=MINUTA_OCORRENCIA_202
+where=(id=$IDORIGEM)
+altura=320
+largura=430
+foco=agencia
+forcarleftmask=120
+forcarrightlabel=1
+#botaoExtra=imprimir
+t0=linha=0
+t1=Dados do Embarque#007E7E7E\page_code.png,,,,530, ,
+t2=CIA:,agencia,i,6,50,,<#40>geral2.rcl,
+t3=Modalidade:,tipoTrans,i,6,50,,<#39>geral2.rcl,
+t4=AWB:,obs7,c,50,280,@U,
+t5=Dispo.:,dispData,dn,10,70,@,
+t6=linha-25
+t7=coluna+90
+t8=,dispHora,h,5,40,,
+t9=coluna-90
+t10=Aeroporto:,aeroporto,c,30,300,@U,
+t11=Peso:,peso2,e,11,84,,
+t12=Volumes:,volumes2,e,11,84,,
+t13=Modal:,modal,i,3,30,,<#41>geral2.rcl,
+t14=Retirado por:,retiraPor,c,30,300,@U,
+[capaProcesso]
+tab=VALIDAÇÃO DO PROCESSO
+btautoedit=0
+comentario=
+db=tabela[1]
+rcl=
+chave=id
+chavePrincipal=id
+c0=Processo,id,i,30,60,,
+c1=Emissão,emissao,d,11,84,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=320
+largura=430
+foco=dLiberado
+forcarleftmask=120
+forcarrightlabel=1
+#botaoExtra=imprimir
+t0=linha=0
+t1=Processo#clblack\delivery.png,,,,10*390*120*1*1, ,
+t2=linha+25
+t3=Responsável:,cResp,i,6,50,@,cadastro.rcl,
+h3=Responsável pela conclusão do processo
+t4=Concluido em:,dLiberado,d,10,70,,
+h4=Data da Conclusão
+
+[confOutros]
+tab=OUTROS DADOS
+btautoedit=0
+comentario=
+db=tabela[1]
+rcl=
+chave=id
+chavePrincipal=id
+c0=Processo,id,i,30,60,,
+c1=Emissão,emissao,d,11,84,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=320
+largura=430
+foco=minuta
+forcarleftmask=120
+forcarrightlabel=1
+t0=Número da OS:,minuta,i,8,100,,
+
+[viagem]
+tab=OCORRÊNCIAS DE VIAGEM
+comentario=
+db=ctrchist
+ignoreforcedb=Sim
+ordem=data desc,hora desc
+rcl=
+chave=id
+chaveprincipal=id
+c0=Data,&DataHora(data|hora|) as data,d,10,100,,
+c1=Descrição,&rclArq(ocorrencia|ocotrans.rcl),c,255,280,,
+c2=Stage,stage,p,3,40,,
+#c1=Descrição,anote,c,0,100,,
+#BotaoIncluir=Não
+#BotaoExcluir=Não
+#BotaoAlterar=Sim
+nobrowse=0
+reservado=0
+where=(documento=$IDORIGEM)and(tpdoc=0)and(tipo="$IDORIGEM2")
+relacaokey=documento,$IDORIGEM
+relacaokey2=tipo,"$IDORIGEM2"
+relacaokey3=tpdoc,"0"
+whereextra=manifesto=0
+campoinfo=anote,Descrição completa,c,100
+Rlt=
+altura=450
+largura=520
+foco=data
+forcarleftmask=90
+t0=#
+t1=Data:,data,d,10,70,,
+h1=Data da Ocorrência
+t2=linha-25
+t3=coluna+110
+t4=Hora:,hora,h,5,40,,
+h4=Hora da Ocorrência
+t5=coluna-110
+t6=Ocorrência:,ocorrencia,ci,6,40,$validarStage(),ocotrans.rcl,
+t7=Stage:,Stage=@0;25;50;75;100,l,3,50,,
+t8=label|%|,,,,70,145
+t8=linha+5
+t9=Local#007E7E7E\textfield.png,,,,490, ,
+t10=UF:,uf1,c,2,30,@BU,estado2.rcl,
+h10=Sigla da UF (Estado) <F2>
+t11=linha-25
+t12=coluna+130
+t13=Cidade:,cidade1,c,30,185,@B,<#17>geral.rcl{ufsigla=uf1/""},
+h13=Nome da Cidade
+t14=Informações Complementar#007E7E7E\textfield.png,,,,490, ,
+t15=forcarleftmask=10
+t16=,anote,t,0,480x140,@U,
+h16=Descrição Completa da Ocorrência
+t17=#,tipo=<M>,c,3,30,,
+t18=,manifesto=Nao,sn,3,30,@V,
+
+[ocotrans]
+tab=OCORRËNCIAS DE ENTREGA - PADRÃO EDI
+comentario=
+db=ocotrans
+ordem=codigo
+rcl=
+chave=codigo
+chaveprincipal=id
+c0=Código,codigo,c,8,60,,
+c1=Descrição,descricao,c,100,275,,
+c2=Pers.,codigo2,c,5,40,,
+c3=Ativo,ativo,sn,3,30,,
+reservado=1..24
+resetar=viagem
+Rlt=conhecim.ocorrencia,conheci1.ocorrencia,conheci2.ocorrencia,minuta.ocorrencia
+msg=DOCUMENTO(s)
+altura=280
+largura=470
+foco=codigo
+botaoExcluir=
+t0=Código:,codigo,i,3,30,,
+h0=Código da ocorrência
+t1=Descrição:,descricao,c,100,300,,
+h1=Descrição completa da ocorrência
+t2=Ativo:,ativo=Sim,sn,3,30,,
+h2=Ocorrência ativa (Sim/Não)
+t3=Personalização#007E7E7E\page_white_edit.png,,,,395, ,
+t4=Código:,codigo2,c,10,100,,
+h4=Código da ocorrência
+t5=Descrição:,descricao2,c,100,300,,
+h5=Descrição completa da ocorrência

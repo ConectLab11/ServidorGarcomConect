@@ -1,0 +1,257 @@
+23/12 15:09:20 - erro login: 104-Usuario nao cadastrado
+23/12 15:09:20 - salvando log -> C:\rcsv\App\mobile64\log\logs\LOG_APP_MOBILE_SERVICE_64_29.log
+23/12 15:09:20 - servico_login PUT: {"status":"erro","erro":"104","aviso":"Usuario nao cadastrado"}
+23/12 15:09:20 - tempo: ERRO => 0,031 =>  ->
+23/12 15:09:29 - ***  SERVIÇO PARADO
+23/12 15:09:32 - Iniciando Suporte Mobile 64 bit Versao: 1.15.17/12/2019 20:06
+23/12 15:09:32 - Variaveis
+23/12 15:09:32 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+23/12 15:09:32 - TCP Servidor
+23/12 15:09:32 - TCP Cliente
+23/12 15:09:32 - Iniciado na porta => 4409
+23/12 15:09:32 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+23/12 15:09:32 - Formato Data   : 23/12/2019 15:09:32
+23/12 15:09:32 - Flags debug 1 sem log 0
+23/12 15:09:32 - h > LOCALHOST p > 3306 d > hbecia u > root
+23/12 15:09:32 - Terminal: 1
+23/12 15:09:32 - BANCO DE DADOS ONLINE > LOCALHOST:hbecia
+23/12 15:09:32 - PRECO => 23 /            23,00/23/23
+23/12 15:09:32 - iniciar_identificacao_computador
+23/12 15:09:32 - sistema_pegar_perfil
+23/12 15:09:32 - empresa_carregar_segmentos
+23/12 15:09:32 - rcs_iniciar_variaveis_globais
+23/12 15:09:32 - terminal_id
+23/12 15:09:32 - mesas_comandas
+23/12 15:09:32 - LPRINT
+23/12 15:09:32 - Status: Config => 192.168.88.83:9100
+23/12 15:09:32 - Status: Config => 192.168.88.83:9100
+23/12 15:09:32 - Status: Config => c:9100
+23/12 15:09:32 - Status: Config => 192.168.88.83:9100
+23/12 15:09:32 - LISTA DE IMPRESSORAS CARREGADA 4
+23/12 15:09:32 - carregarImp
+23/12 15:09:32 - objetos
+23/12 15:09:32 - produtos_gerenciamento_de_estoque
+23/12 15:09:32 - # status 100%
+23/12 15:09:36 - servico_login GET: {"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD03","senha":"*8A40A3F180A9"}
+23/12 15:09:36 - erro login: 102-Solicite o status antes do login
+23/12 15:09:36 - servico_login PUT: {"status":"erro","erro":"102","aviso":"Solicite o status antes do login"}
+23/12 15:09:36 - tempo: ERRO => 0,015 =>  ->
+23/12 15:09:38 - servico_status: {"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: ","usuario":"*D144024FFD03","senha":"*8A40A3F180A9"}
+23/12 15:09:38 - servico_status: {"status":"ok","terminal":"15","nome":"HAMBURGUERIA E CIA","aviso":"SERVIDOR OPERANDO","timeout":5000}
+23/12 15:09:38 - tempo: ERRO => 0,031 =>  ->
+23/12 15:09:40 - servico_login GET: {"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD03","senha":"*8A40A3F180A9"}
+23/12 15:09:40 - erro login: 104-Usuario nao cadastrado
+23/12 15:09:40 - servico_login PUT: {"status":"erro","erro":"104","aviso":"Usuario nao cadastrado"}
+23/12 15:09:40 - tempo: ERRO => 0,016 =>  ->
+23/12 15:11:55 - servico_status: {"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+23/12 15:11:55 - servico_status: {"status":"ok","terminal":"15","nome":"HAMBURGUERIA E CIA","aviso":"SERVIDOR OPERANDO","timeout":5000}
+23/12 15:11:55 - tempo: ERRO => 0,015 =>  ->
+23/12 15:12:02 - servico_login GET: {"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD03","senha":"*8A40A3F180A9"}
+23/12 15:12:02 - erro login: 104-Usuario nao cadastrado
+23/12 15:12:02 - servico_login PUT: {"status":"erro","erro":"104","aviso":"Usuario nao cadastrado"}
+23/12 15:12:02 - tempo: ERRO => 0,047 =>  ->
+23/12 15:12:09 - servico_login GET: {"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD03","senha":"*8A40A3F180A9"}
+23/12 15:12:09 - erro login: 104-Usuario nao cadastrado
+23/12 15:12:09 - servico_login PUT: {"status":"erro","erro":"104","aviso":"Usuario nao cadastrado"}
+23/12 15:12:09 - tempo: ERRO => 0,031 =>  ->
+23/12 15:12:22 - servico_status: {"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+23/12 15:12:22 - servico_status: {"status":"ok","terminal":"15","nome":"HAMBURGUERIA E CIA","aviso":"SERVIDOR OPERANDO","timeout":5000}
+23/12 15:12:22 - tempo: ERRO => 0,015 =>  ->
+23/12 15:12:25 - servico_login GET: {"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD03","senha":"*8A40A3F180A9"}
+23/12 15:12:25 - erro login: 104-Usuario nao cadastrado
+23/12 15:12:25 - servico_login PUT: {"status":"erro","erro":"104","aviso":"Usuario nao cadastrado"}
+23/12 15:12:25 - tempo: ERRO => 0,031 =>  ->
+23/12 15:12:30 - ***  SERVIÇO PARADO
+23/12 15:12:33 - Iniciando Suporte Mobile 64 bit Versao: 1.15.17/12/2019 20:06
+23/12 15:12:33 - Variaveis
+23/12 15:12:33 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+23/12 15:12:33 - TCP Servidor
+23/12 15:12:33 - TCP Cliente
+23/12 15:12:33 - Iniciado na porta => 4409
+23/12 15:12:33 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+23/12 15:12:33 - Formato Data   : 23/12/2019 15:12:33
+23/12 15:12:33 - Flags debug 1 sem log 0
+23/12 15:12:33 - h > LOCALHOST p > 3306 d > hbecia u > root
+23/12 15:12:33 - Terminal: 1
+23/12 15:12:33 - BANCO DE DADOS ONLINE > LOCALHOST:hbecia
+23/12 15:12:33 - PRECO => 23 /            23,00/23/23
+23/12 15:12:33 - iniciar_identificacao_computador
+23/12 15:12:33 - sistema_pegar_perfil
+23/12 15:12:33 - empresa_carregar_segmentos
+23/12 15:12:33 - rcs_iniciar_variaveis_globais
+23/12 15:12:33 - terminal_id
+23/12 15:12:33 - mesas_comandas
+23/12 15:12:33 - LPRINT
+23/12 15:12:33 - Status: Config => 192.168.88.83:9100
+23/12 15:12:33 - Status: Config => 192.168.88.83:9100
+23/12 15:12:33 - Status: Config => c:9100
+23/12 15:12:33 - Status: Config => 192.168.88.83:9100
+23/12 15:12:33 - LISTA DE IMPRESSORAS CARREGADA 4
+23/12 15:12:33 - carregarImp
+23/12 15:12:33 - objetos
+23/12 15:12:33 - produtos_gerenciamento_de_estoque
+23/12 15:12:33 - # status 100%
+23/12 15:12:38 - servico_login GET: {"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD03","senha":"*8A40A3F180A9"}
+23/12 15:12:38 - erro login: 102-Solicite o status antes do login
+23/12 15:12:38 - servico_login PUT: {"status":"erro","erro":"102","aviso":"Solicite o status antes do login"}
+23/12 15:12:38 - tempo: ERRO => 0,016 =>  ->
+23/12 15:12:40 - servico_status: {"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: ","usuario":"*D144024FFD03","senha":"*8A40A3F180A9"}
+23/12 15:12:40 - servico_status: {"status":"ok","terminal":"15","nome":"HAMBURGUERIA E CIA","aviso":"SERVIDOR OPERANDO","timeout":5000}
+23/12 15:12:40 - tempo: ERRO => 0,031 =>  ->
+23/12 15:12:40 - servico_status: {"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: ","usuario":"*D144024FFD03","senha":"*8A40A3F180A9"}
+23/12 15:12:40 - servico_status: {"status":"ok","terminal":"15","nome":"HAMBURGUERIA E CIA","aviso":"SERVIDOR OPERANDO","timeout":5000}
+23/12 15:12:40 - tempo: ERRO => 0,031 =>  ->
+23/12 15:14:38 - servico_logoff GET: {"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+23/12 15:14:38 - servico_logoff PUT: {"status":"ok","aviso":"USUARIO DESCONECTADO"}
+23/12 15:14:38 - tempo: 0,015 => OK
+23/12 15:14:43 - servico_status: {"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+23/12 15:14:43 - servico_status: {"status":"ok","terminal":"15","nome":"HAMBURGUERIA E CIA","aviso":"SERVIDOR OPERANDO","timeout":5000}
+23/12 15:14:43 - tempo: ERRO => 0,047 =>  ->
+23/12 15:14:46 - servico_login GET: {"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD03","senha":"*8A40A3F180A9"}
+23/12 15:14:46 - erro login: 104-Usuario nao cadastrado
+23/12 15:14:46 - servico_login PUT: {"status":"erro","erro":"104","aviso":"Usuario nao cadastrado"}
+23/12 15:14:46 - tempo: ERRO => 0,062 =>  ->
+23/12 15:14:51 - servico_login GET: {"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+23/12 15:14:51 - servico_login PUT: {"status":"ok","codigo":"11","aviso":"Usuario Ativo","timeout":259200,"comanda":"1;42;100;10000"}
+23/12 15:14:51 - tempo: ERRO => 0,016 =>  ->
+23/12 15:14:55 - servico_logoff GET: {"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+23/12 15:14:55 - servico_logoff PUT: {"status":"ok","aviso":"USUARIO DESCONECTADO"}
+23/12 15:14:55 - tempo: 0,031 => OK
+23/12 15:15:27 - servico_status: {"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+23/12 15:15:27 - servico_status: {"status":"ok","terminal":"15","nome":"HAMBURGUERIA E CIA","aviso":"SERVIDOR OPERANDO","timeout":5000}
+23/12 15:15:27 - tempo: ERRO => 0,032 =>  ->
+23/12 15:15:30 - servico_login GET: {"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9","terminal":"15"}
+23/12 15:15:30 - servico_login PUT: {"status":"ok","codigo":"11","aviso":"Usuario Ativo","timeout":259200,"comanda":"1;42;100;10000"}
+23/12 15:15:30 - tempo: ERRO => 0,032 =>  ->
+23/12 15:16:03 - servico_logoff GET: {"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+23/12 15:16:03 - servico_logoff PUT: {"status":"ok","aviso":"USUARIO DESCONECTADO"}
+23/12 15:16:03 - tempo: 0,015 => OK
+23/12 15:16:19 - servico_status: {"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+23/12 15:16:19 - servico_status: {"status":"ok","terminal":"15","nome":"HAMBURGUERIA E CIA","aviso":"SERVIDOR OPERANDO","timeout":5000}
+23/12 15:16:19 - tempo: ERRO => 0,031 =>  ->
+23/12 15:23:34 - ***  SERVIÇO PARADO
+23/12 15:23:37 - Iniciando Suporte Mobile 64 bit Versao: 1.15.17/12/2019 20:06
+23/12 15:23:37 - Variaveis
+23/12 15:23:37 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+23/12 15:23:37 - TCP Servidor
+23/12 15:23:37 - TCP Cliente
+23/12 15:23:37 - Iniciado na porta => 4409
+23/12 15:23:37 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+23/12 15:23:37 - Formato Data   : 23/12/2019 15:23:37
+23/12 15:23:37 - Flags debug 1 sem log 0
+23/12 15:23:37 - h > LOCALHOST p > 3306 d > hbecia u > root
+23/12 15:23:37 - Terminal: 1
+23/12 15:23:37 - BANCO DE DADOS ONLINE > LOCALHOST:hbecia
+23/12 15:23:37 - PRECO => 23 /            23,00/23/23
+23/12 15:23:37 - iniciar_identificacao_computador
+23/12 15:23:37 - sistema_pegar_perfil
+23/12 15:23:37 - empresa_carregar_segmentos
+23/12 15:23:37 - rcs_iniciar_variaveis_globais
+23/12 15:23:37 - terminal_id
+23/12 15:23:37 - mesas_comandas
+23/12 15:23:37 - LPRINT
+23/12 15:23:37 - Status: Config => 192.168.88.83:9100
+23/12 15:23:37 - Status: Config => 192.168.88.83:9100
+23/12 15:23:37 - Status: Config => c:9100
+23/12 15:23:37 - Status: Config => 192.168.88.83:9100
+23/12 15:23:37 - LISTA DE IMPRESSORAS CARREGADA 4
+23/12 15:23:37 - carregarImp
+23/12 15:23:37 - objetos
+23/12 15:23:37 - produtos_gerenciamento_de_estoque
+23/12 15:23:37 - # status 100%
+23/12 15:23:44 - servico_login GET: {"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+23/12 15:23:44 - servico_login PUT: {"status":"ok","codigo":"11","aviso":"Usuario Ativo","timeout":259200","comanda":"1;42;100;10000"}
+23/12 15:23:44 - tempo: ERRO => 0,047 =>  ->
+23/12 15:25:26 - ***  SERVIÇO PARADO
+23/12 15:25:28 - Iniciando Suporte Mobile 64 bit Versao: 1.15.17/12/2019 20:06
+23/12 15:25:28 - Variaveis
+23/12 15:25:28 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+23/12 15:25:28 - TCP Servidor
+23/12 15:25:28 - TCP Cliente
+23/12 15:25:28 - Iniciado na porta => 4409
+23/12 15:25:28 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+23/12 15:25:28 - Formato Data   : 23/12/2019 15:25:28
+23/12 15:25:28 - Flags debug 1 sem log 0
+23/12 15:25:28 - h > LOCALHOST p > 3306 d > hbecia u > root
+23/12 15:25:28 - Terminal: 1
+23/12 15:25:28 - BANCO DE DADOS ONLINE > LOCALHOST:hbecia
+23/12 15:25:28 - PRECO => 23 /            23,00/23/23
+23/12 15:25:28 - iniciar_identificacao_computador
+23/12 15:25:28 - sistema_pegar_perfil
+23/12 15:25:28 - empresa_carregar_segmentos
+23/12 15:25:28 - rcs_iniciar_variaveis_globais
+23/12 15:25:28 - terminal_id
+23/12 15:25:28 - mesas_comandas
+23/12 15:25:28 - LPRINT
+23/12 15:25:28 - Status: Config => 192.168.88.83:9100
+23/12 15:25:28 - Status: Config => 192.168.88.83:9100
+23/12 15:25:28 - Status: Config => c:9100
+23/12 15:25:28 - Status: Config => 192.168.88.83:9100
+23/12 15:25:28 - LISTA DE IMPRESSORAS CARREGADA 4
+23/12 15:25:28 - carregarImp
+23/12 15:25:28 - objetos
+23/12 15:25:28 - produtos_gerenciamento_de_estoque
+23/12 15:25:28 - # status 100%
+23/12 15:25:31 - servico_login GET: {"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+23/12 15:25:31 - servico_login PUT: {"status":"ok","codigo":"11","aviso":"Usuario Ativo","timeout":259200,"comanda":"1;42;100;10000"}
+23/12 15:25:31 - tempo: ERRO => 0,015 =>  ->
+23/12 15:25:36 - servico_logoff GET: {"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+23/12 15:25:36 - servico_logoff PUT: {"status":"ok","aviso":"USUARIO DESCONECTADO"}
+23/12 15:25:36 - tempo: 0,031 => OK
+23/12 15:33:35 - servico_status: {"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+23/12 15:33:35 - servico_status: {"status":"ok","terminal":"15","nome":"HAMBURGUERIA E CIA","aviso":"SERVIDOR OPERANDO","timeout":5000}
+23/12 15:33:35 - tempo: ERRO => 0,031 =>  ->
+23/12 15:33:56 - servico_login GET: {"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+23/12 15:33:56 - servico_login PUT: {"status":"ok","codigo":"11","aviso":"Usuario Ativo","timeout":259200,"comanda":"1;42;100;10000"}
+23/12 15:33:56 - tempo: ERRO => 0,015 =>  ->
+23/12 15:34:00 - servico_logoff GET: {"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+23/12 15:34:00 - servico_logoff PUT: {"status":"ok","aviso":"USUARIO DESCONECTADO"}
+23/12 15:34:00 - tempo: 0,016 => OK
+23/12 15:46:57 - ***  SERVIÇO PARADO
+23/12 15:47:00 - Iniciando Suporte Mobile 64 bit Versao: 1.15.17/12/2019 20:06
+23/12 15:47:00 - Variaveis
+23/12 15:47:00 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+23/12 15:47:00 - TCP Servidor
+23/12 15:47:00 - TCP Cliente
+23/12 15:47:00 - Iniciado na porta => 4409
+23/12 15:47:00 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+23/12 15:47:00 - Formato Data   : 23/12/2019 15:47:00
+23/12 15:47:00 - Flags debug 1 sem log 0
+23/12 15:47:00 - h > LOCALHOST p > 3306 d > hbecia u > root
+23/12 15:47:00 - Terminal: 1
+23/12 15:47:00 - BANCO DE DADOS ONLINE > LOCALHOST:hbecia
+23/12 15:47:00 - PRECO => 23 /            23,00/23/23
+23/12 15:47:00 - iniciar_identificacao_computador
+23/12 15:47:00 - sistema_pegar_perfil
+23/12 15:47:00 - empresa_carregar_segmentos
+23/12 15:47:00 - rcs_iniciar_variaveis_globais
+23/12 15:47:00 - terminal_id
+23/12 15:47:00 - mesas_comandas
+23/12 15:47:00 - LPRINT
+23/12 15:47:00 - Status: Config => 192.168.88.83:9100
+23/12 15:47:00 - Status: Config => 192.168.88.83:9100
+23/12 15:47:00 - Status: Config => c:9100
+23/12 15:47:00 - Status: Config => 192.168.88.83:9100
+23/12 15:47:00 - LISTA DE IMPRESSORAS CARREGADA 4
+23/12 15:47:00 - carregarImp
+23/12 15:47:00 - objetos
+23/12 15:47:00 - produtos_gerenciamento_de_estoque
+23/12 15:47:00 - # status 100%
+23/12 15:50:18 - ***  SERVIÇO PARADO
+23/12 15:50:21 - Iniciando Suporte Mobile 64 bit Versao: 1.15.17/12/2019 20:06
+23/12 15:50:21 - Variaveis
+23/12 15:50:21 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+23/12 15:50:21 - TCP Servidor
+23/12 15:50:21 - TCP Cliente
+23/12 15:50:21 - Iniciado na porta => 4409
+23/12 15:50:21 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+23/12 15:50:21 - Formato Data   : 23/12/2019 15:50:21
+23/12 15:50:21 - Flags debug 1 sem log 0
+23/12 15:50:21 - h > LOCALHOST p > 3306 d > hbecia u > root
+23/12 15:50:21 - Terminal: 1
+23/12 15:50:21 - BANCO DE DADOS ONLINE > LOCALHOST:hbecia
+23/12 15:50:21 - PRECO => 23 /            23,00/23/23
+23/12 15:50:21 - iniciar_identificacao_computador
+23/12 15:50:21 - sistema_pegar_perfil
+23/12 15:50:21 - empresa_carregar_segmentos
+23/12 15:50:21 - rcs_iniciar_variaveis_globais

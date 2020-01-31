@@ -1,0 +1,3553 @@
+bloco(GET /%7B%22operacao%22:%22status%22,%22id%22:%22TERMIN1%22%7D HTTP/1.1
+Host: 192.168.88.44:4409
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding: gzip, deflate
+Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+
+)
+bloco(GET /favicon.ico HTTP/1.1
+Host: 192.168.88.44:4409
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36
+Accept: image/webp,image/apng,image/*,*/*;q=0.8
+Referer: http://192.168.88.44:4409/%7B%22operacao%22:%22status%22,%22id%22:%22TERMIN1%22%7D
+Accept-Encoding: gzip, deflate
+Accept-Language: pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+
+)
+bloco(
+bloco(
+bloco(
+bloco(
+bloco(
+bloco(
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 38
+
+{"operacao":"status","id":"TERMINALX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 38
+
+{"operacao":"status","id":"TERMINALX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 38
+
+{"operacao":"status","id":"TERMINALX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 38
+
+{"operacao":"status","id":"TERMINALX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 38
+
+{"operacao":"status","id":"TERMINALX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 38
+
+{"operacao":"status","id":"TERMINALX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 38
+
+{"operacao":"status","id":"TERMINALX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 22
+
+{"operacao":","mysql"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 20
+
+{"operacao":"mysql"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 20
+
+{"operacao":"mysql"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 20
+
+{"operacao":"mysql"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 20
+
+{"operacao":"mysql"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 80
+
+{"operacao":"login",
+"terminal","1",
+"usuario","Atendente",
+"senha","123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 80
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"Atendente",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 80
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"Atendente",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 81
+
+{"operacao":"status",
+"terminal":"1",
+"usuario":"Atendente",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 81
+
+{"operacao":"status",
+"terminal":"1",
+"usuario":"Atendente",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 39
+
+{"operacao":"status",
+ "id", "TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 39
+
+{"operacao":"status",
+ "id": "TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 21
+
+{"operacao":"status"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 22
+
+{"operacao":"status"C})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 21
+
+{"operacao":"status"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 37
+
+{"operacao":"status",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 37
+
+{"operacao":"status",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 37
+
+{"operacao":"status",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 38
+
+{"operacao":"status",
+"id":"TERMIX"K})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 37
+
+{"operacao":"status",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 37
+
+{"operacao":"status",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-length: 37
+
+{"operacao":"status",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 37
+
+{"operacao":"status",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 80
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"atendente",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 80
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"atendente",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"Julia",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"status",
+"id":"TERMIX",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 39
+
+{"operacao":"status",
+"id":"TERMIX"}
+)
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 22
+
+
+{"operacao":"mysql"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 20
+
+{"operacao":"mysql"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 20
+
+{"operacao":"mysql"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 37
+
+{"operacao":"status",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 37
+
+{"operacao":"status",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 37
+
+{"operacao":"status",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 78
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"JULIA",
+"senha":"123456"}
+)
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 78
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"JULIA",
+"senha":"123456"}
+)
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 20
+
+{"operacao":"mysql"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 37
+
+{"operacao":"status",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 37
+
+{"operacao":"status",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 37
+
+{"operacao":"status",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 37
+
+{"operacao":"status",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 37
+
+{"operacao":"status",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 37
+
+{"operacao":"status",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 37
+
+{"operacao":"status",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 37
+
+{"operacao":"status",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 37
+
+{"operacao":"status",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 37
+
+{"operacao":"status",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 60
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 74
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":""})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 74
+
+{"operacao":"mysql",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 74
+
+{"operacao":"mysql",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal1":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal1":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal1":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal1":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal1":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal1":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal1":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal1":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal1":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal1":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 75
+
+{"operacao":"logoff",
+ "token":"c009a001",
+"terminal":"1",
+"codigo":"5"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 58
+
+{"operacao":"status",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 58
+
+{"operacao":"status",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 58
+
+{"operacao":"status",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 58
+
+{"operacao":"status",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 58
+
+{"operacao":"status",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 58
+
+{"operacao":"status",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 58
+
+{"operacao":"status",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 58
+
+{"operacao":"status",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+"token":"c001a001",
+"ids":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+"token":"c001a001",
+"ids":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+"token":"c001a001",
+"ids":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+"token":"c001a001",
+"ids":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+"token":"c001a001",
+"ids":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+"token":"c001a001",
+"ids":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+"token":"c001a001",
+"ids":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 58
+
+{"operacao":"status",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 58
+
+{"operacao":"status",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 56
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX")
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 57
+
+{"operacao":"mysql",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 76
+
+{"operacao":"login",
+"terminal":"1",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 60
+
+{"operacao":"status",
+"token":"c001a001",
+"id":"TERMIX"}
+)
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 58
+
+{"operacao":"status",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 98
+
+{"operacao":"login",
+"terminal":"1",
+ "token":"c001a001",
+"usuario":"JULIA",
+"senha":"123456"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 58
+
+{"operacao":"status",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 58
+
+{"operacao":"status",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 58
+
+{"operacao":"status",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 58
+
+{"operacao":"status",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 58
+
+{"operacao":"status",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 58
+
+{"operacao":"status",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 58
+
+{"operacao":"status",
+"token":"c001a001",
+"id":"TERMIX"})
+bloco(POST / HTTP/1.1
+Content-Length: 54
+
+{"operacao":"status","token":"c001a001","id":"TERMIX"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 54
+
+{"operacao":"status","token":"c001a001","id":"TERMIX"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 54
+
+{"operacao":"status","token":"c001a001","id":"TERMIX"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 54
+
+{"operacao":"status","token":"c001a001","id":"TERMIX"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 54
+
+{"operacao":"status","token":"c001a001","id":"TERMIX"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 54
+
+{"operacao":"status","token":"c001a001","id":"TERMIX"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 54
+
+{"operacao":"status","token":"c001a001","id":"TERMIX"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 54
+
+{"operacao":"status","token":"c001a001","id":"TERMIX"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 54
+
+{"operacao":"status","token":"c001a001","id":"TERMIX"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 54
+
+{"operacao":"status","token":"c001a001","id":"TERMIX"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 54
+
+{"operacao":"status","token":"c001a001","id":"TERMIX"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 54
+
+{"operacao":"status","token":"c001a001","id":"TERMIX"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 54
+
+{"operacao":"status","token":"c001a001","id":"TERMIX"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 35
+
+{"operacao":"status","id":"TERMIX"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 54
+
+{"operacao":"status","token","a010a000","id":"TERMIX"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 54
+
+{"operacao":"status","token":"a010a000","id":"TERMIX"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 54
+
+{"operacao":"status","token":"a010a000","id":"TERMIX"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 54
+
+{"operacao":"status","token":"a010a000","id":"TERMIX"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 54
+
+{"operacao":"status","token":"a010a000","id":"TERMIX"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"c000a000","terminal":"14","id":"y2q1mmy4zdm4ytczmmexma: ="}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"c000a000","terminal":"14","id":"y2q1mmy4zdm4ytczmmexma: ="}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"c000a000","terminal":"14","id":"y2q1mmy4zdm4ytczmmexma: ="}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"c000a000","terminal":"14","id":"y2q1mmy4zdm4ytczmmexma: ="}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"c000a000","terminal":"14","id":"y2q1mmy4zdm4ytczmmexma: ="}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"c000a000","terminal":"14","id":"y2q1mmy4zdm4ytczmmexma: ="}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"c000a000","terminal":"14","id":"y2q1mmy4zdm4ytczmmexma: ="}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"13","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 90
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"julia","senha":"123456"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 90
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"julia","senha":"123456"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 90
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"julia","senha":"123456"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 90
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"julia","senha":"123456"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"c000a003","terminal":"14","id":"y2q1mmy4zdm4ytczmmexma: ="}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"c000a003","terminal":"14","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"c000a003","terminal":"14","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"c000a003","terminal":"14","id":"y2q1mmy4zdm4ytczmmexma: ="}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"c000a003","terminal":"14","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"c000a003","terminal":"14","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"c000a003","terminal":"14","id":"y2q1mmy4zdm4ytczmmexma: ="}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"c000a003","terminal":"14","usuario":"*F16560C450","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 103
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A9"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 70
+
+{"operacao":"logoff","token":"a010a003","terminal":"15","codigo":"11"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 111
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A967769ADD"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 111
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A967769ADD"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 111
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*D144024FFD","senha":"*8A40A3F180A967769ADD"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 111
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*DDA1CE25B4","senha":"*8A40A3F180A967769ADD"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 111
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*DDA1CE25B4","senha":"*8A40A3F180A967769ADD"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 111
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*DDA1CE25B4","senha":"*8A40A3F180A967769ADD"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 111
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*DDA1CE25B4","senha":"*8A40A3F180A967769ADD"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 88
+
+{"operacao":"status","token":"a010a003","terminal":"15","id":"ota6qje6mum6rjc6rku6njg: "}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 111
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*DDA1CE25B4","senha":"*8A40A3F180A967769ADD"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 111
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*DDA1CE25B4","senha":"*8A40A3F180A967769ADD"}
+
+)
+bloco(POST / HTTP/1.1
+Content-Length: 111
+
+{"operacao":"login","token":"a010a003","terminal":"15","usuario":"*DDA1CE25B4","senha":"*8A40A3F180A967769ADD"}
+
+)

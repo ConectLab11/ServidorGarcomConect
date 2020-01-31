@@ -1,0 +1,407 @@
+[tela.pedido.campos]
+titulo=Campos na tela do pedido
+v1=Não mostrar vendedor
+v2=---*---
+
+[impressao.pedido.campos]
+titulo=Campos na impressão do pedido
+v1=Não imprimir nome da empresa
+v2=Não imprimir nome do vendedor
+v3=Não imprimir CNPJ da empresa
+v4=Não imprimir IE da empresa
+v5=Imprimir tipo de embalagem para transporte
+v6=Titulo deve ser Orçamento
+v7=Não imprimir campos de Assinatura
+v8=Imprimir Endereço
+v9=Imprimir somente o Nome e Telefone do Cliente
+v10=Colocar CNPJ no Cabecalho
+v11=Cupom - Não Imprimir Linhas de Separação
+v12=Cupom - Não Imprimir Informações de Permanencia
+v13=Cupom - Não Imprimir Código do Produto
+v14=Cupom - Não Imprimir Informações de Descontos
+v15=Cupom - Ignorar Código de Referência
+v16=Cupom - Agrupar Produtos
+v17=Cupom - 2 Vias
+v18=Relatórios Sem Quebra de Linha
+v19=Cupom - Imprimir Preço na mesma linha do Total
+v20=Cupom - Reduzir o Layout
+v21=Cupom - Ignorar Quebra de Linha Quando tive 2 caracteres
+v22=Cupom - Taxa de Serviço OPCIONAL
+v23=Cupom - Reduzir máximo do Layout
+v24=Cupom - Agrupar Opcionais
+v25=Cupom - Ignorar unidade (un)
+v26=Cupom - Formatar texto na observação
+v27=Cupom - Local/Viagem/Entrega/Retira 
+v28=Cupom - Número de Espera => Comanda
+v29=Cupom - Após Imprimir Produção
+v30=Cupom - Opcionais Sem indice
+v31=Cupom - Remover Observação na Pré-Conta
+v32=Cupom - Número Espera = 3 digitos do pedido
+
+[xObs.auto]
+titulo=Colocar na observação automaticamente os dados
+v1=Avarias simples
+v2=Avarias detalhada
+V3=Número da Minuta
+v4=Número da Nota Fiscal
+v5=Valor da Nota Fiscal
+v6=Documento Fiscal - DI/DTA...
+v7=MAWB
+v8=HAWB
+v9=Referência
+v10=Nome da Comissária
+v11=Referência da Comissária
+v12=Nome do Motorisa
+v13=Documentos do Motorista
+v14=Placas
+v15=Valor do GRIS
+v16=Mensagem Simples Nacional
+v17=Não juntar DI/DTA com Nota Fiscal
+
+[xFlag.campos]
+titulo=Ativar e desativar campos
+v1=Redespacho
+v2=Consignatário
+v3=Comissária
+v4=Local Coleta/Entrega
+v5=Calculado Até
+v6=Rota/Praça
+v7=Filial
+v8=Kilometragem
+v9=Reentrega
+v10=Devolução
+v11=DDR
+v12=Negociavel
+v13=Produto Quimico
+v14=Preencher Praça Automaticamente
+
+[desativar.planodeconta]
+titulo=Desativar opções no Plano de Contas
+v1=Centro de Custo
+v2=Origem de Crédito e Débito
+v3=Plano de Juros
+v4=Tipo de Documento
+v5=Conta Bancária
+v6=Conta Caixa
+
+[atualizar.placa.motorista]
+titulo=Atualizar Placa e Motorista no CTRC/Minuta
+v1=Sempre atualizar 
+v2=Atualizar somente os sem placa
+
+[pendencias.cobranca]
+titulo=Comportamento quando o cliente tiver pendencias de cobrança
+v1=Bloquear faturamento se o cliente tiver cobrança pendente
+v2=Avisar quando o cliente tiver cobrança pendente
+
+[impressao.coleta]
+titulo=Opção de layout para impressão da coleta
+v1=Padrão
+v2=Dupla
+v3=Matricial
+
+[ativar.lembrete]
+titulo=Alertas de Cobrança
+v1=Lembrete de Cobrança Pendente
+v2=Autorização de Inadimplente
+v3=Verificar Cotação Pendente
+
+[prazo.validade]
+numerador=nao
+itemUnico=sim
+titulo=Prazo de Validade em dias
+v1=Nenhum
+v2=5 dias
+v3=10 dias
+v4=15 dias
+v5=20 dias
+v6=25 dias
+v7=30 dias
+v8=45 dias
+v9=60 dias
+v10=90 dias
+
+[campos.desativados.cadastrofast]
+titulo=Campos Desativados
+numerador=nao
+v1=CNPJ/CPF
+v2=IE/RG
+v3=Nome Fantasia
+v4=Contato
+v5=E-MAIL
+v6=Telefone
+v7=CEP
+v8=Pais
+v9=Tipo de Local
+v10=Referência
+v11=Taxa de Entrega
+v12=UF/Cidade
+
+[campos.desativados.fracaopizza]
+titulo=Campos Desativados
+numerador=nao
+v1=(4) Fracionamento
+v2=Tipo de Preço
+v3=Preço Final
+v4=Valor Adicional
+v5=Observações
+
+[pve.controle.pedido]
+titulo=Painel do Pedido e Campos
+numerador=nao
+v1=Ativo
+v2=CFOP
+
+[pve.controle.cliente]
+titulo=Painel Cliente e Campos
+numerador=nao
+v1=Ativo
+v2=Tipo de Venda
+v3=Limite de Crédito
+v4=Referência de Atendimento
+v5=Busca por Telefone
+v6=Mostrar Endereço
+v7=Venda à Prazo
+v8=Pegar preço do ultimo pedido
+
+[pve.controle.vendedor]
+titulo=Painel Vendedor e Campos
+numerador=nao
+v1=Ativo
+v2=Número de Pedido
+v3=Comissão
+v4=Estático
+
+[pve.controle.produtos]
+titulo=Produtos
+numerador=nao
+v1=Cadastro Rápido
+v2=Foto
+v3=Não Baixar Fotos Automaticamente
+v4=Não Alterar Quantidades
+v5=Alterar Descontos
+v6=Permitir Qualquer Desconto
+v7=Alterar Preços
+v8=Informações Fiscal
+v9=Destacar IPI
+v10=Não Alterar Taxa Adicional
+
+[pve.controle.entregas]
+titulo=Entregas
+numerador=nao
+v1=Ativo
+v2=Outro Endereço
+v3=Transportadora
+v4=Ponto de Referência
+v5=Controle de Entregador
+
+[pve.controle.pagamento]
+titulo=Pagamentos
+numerador=nao
+v1=Suporte Devolução
+v2=Opções de Faturamento
+v3=Acréscimos
+v4=Fretes
+v5=Frete Percent
+v6=Descontos
+v7=Desconto Percent
+v8=Troco
+v9=Observação 1
+v10=Observação 2
+v11=Representante
+v12=Multi Pagamentos
+v13=Desativar Bandeira de Cartões
+v14=Desativar F7 e F8
+v15=Pagamentos 2.0
+v16=Desativar dinheiro automatico
+
+[pve.impressao.tipo]
+itemUnico=Sim
+numerador=nao
+v1=Matricial
+v2=PDF
+
+[pve.impressao.matricial]
+titulo=Layouts para Impressora Matricial
+numerador=nao
+itemUnico=Sim
+v1=01RDAC-DAC
+v2=0240CO-Impressão 40 Colunas
+v3=030000-Simples
+
+[pve.impressao.pdf]
+titulo=Layouts para PDF
+itemUnico=Sim
+numerador=nao
+v1=01VENDAS-Padrão
+v2=020000-Padrão (obsoleto)
+v3=02RMAD-Madereira (obsoleto)
+v4=02PMAD-Madereira (Paisagem)
+v5=03VENDAS-Pedido Simples
+ 
+[pve.impressao.customizados]
+titulo=Customização de Layouts
+itemUnico=Sim
+v1=RUB
+
+[pve.controles.sat]
+titulo=CF-e SAT
+numerador=nao
+v1=Ativo
+v2=Não Obrigatório por Tipo de Pagamento (Pedido)
+v3=Não Obrigatório por Tipo de Pagamento (Mesa)
+v4=Não Obrigatório por Tipo de Pagamento (PDV)
+v5=Imprimir 2 vias
+v6=Imprimir Pedido depois o CFe
+v7=Cabeçalho com endereço
+v8=Gerar mesmo cancelando cpf
+v9=Unico Documento
+
+[pve.controles.nfe]
+titulo=NF-E
+numerador=nao
+v1=Ativo
+v2=Transportar Descontos para NF-e
+
+[ignorar.caracteres]
+titulo=Ignorar Caracteres na consulta do por Código
+numerador=nao
+v1=(.) Ponto
+v2=(,) Virgula
+v3=(-) Traço
+v4=(/) Barra
+
+[CP.campo.codigo]
+titulo=Campo Codigo
+numerador=nao
+v1=Ativar
+v2=Pular
+
+[CP.campos.extras]
+titulo=Campos Extras
+numerador=nao
+v1=Referência
+v2=Fornecedor/Fabricantes
+v3=Cooper
+v4=Compras
+v5=n/d
+v6=IPI
+v7=Prazo
+v8=Desativar Estoque
+
+[campos.desativados.produtosfast]
+titulo=DESATIVAR CAMPOS
+numerador=nao
+v1=Referência
+v2=Barras
+v3=Fornecedor/ Fabricante
+v4=Grupo
+v5=Seção
+v6=Broto
+
+[cfgTurnos.qtde.turnos]
+titulo=OPCOES
+numerador=nao
+itemUnico=Sim
+v1=1 Turno
+v2=2 Turnos
+v3=3 Turnos
+v4=4 Turnos
+v5=5 Turnos
+v6=10 Turnos
+v7=20 Turnos
+v8=30 Turno
+v9=60 Turnos
+
+[cfgTurnos.expirar.turno]
+titulo=TEMPO PARA EXPIRAR O TURNO ABERTO
+numerador=nao
+itemUnico=Sim
+v1=Padrão (6h)
+v2=30m
+v3=1h
+v4=2h
+v5=4h
+v6=6h
+v7=8h
+v8=10h
+v9=12h
+v10=24h
+v11=Nunca
+
+[boletos.html]
+titulo=ARQUIVO HTML PARA O CORPO DO EMAIL
+numerador=nao
+itemUnico=Sim
+v1=Customizado pelo cliente -> boleto_cliente.html
+v2=boleto_padrao.html
+v3=boleto_conect.html
+
+[tamanho.font.consulta]
+titulo=TAMANHO DA FONTE NA PESQUISA
+numerador=nao
+itemUnico=Sim
+v1=Não definido
+v2=1
+v3=2
+v4=3
+v5=4
+
+[nfe.data.saida]
+titulo=DATA DA SAIDA
+numerador=nao
+itemUnico=Sim
+v1=N/D
+v2=Mesmo dia
+v3=Próximo dia
+
+[nfe.danfe.layouts]
+titulo=DANFE LAYOUT
+numerador=nao
+itemUnico=Sim
+v1=Padrão
+v2=SIMPLES NACIONAL
+
+[uentregas.desativar.campos]
+titulo=CAMPOS DESATIVADOS DO CONTROLE DE ENTREGAS
+v1=Pedido
+v2=Emissão
+v3=Cliente
+v4=Fone
+v5=Bairro
+v6=KM
+v7=Entregador
+v8=Previsto
+v9=Taxa
+v10=Pagto
+v11=Total
+v12=Troco
+v13=Maquina
+v14=Hora Saida
+v15=Hora Entrega
+v16=Tempo da Entrega
+v17=Tempo Total
+
+[epr.impressao.pdf]
+titulo=Layouts para Pedido de Compras em PDF
+itemUnico=Sim
+numerador=nao
+v1=01COMPRAS-Padrão
+v2=020000-Outros (obsoleto)
+
+[arquivos.retorno.limit]
+titulo=Limite de arquivos CNAB
+itemUnico=Sim
+numerador=nao
+v1=500
+v2=700
+v3=1000
+v4=1500
+v5=Ilimitado
+
+[os.layout.impressao]
+titulo=LAYOUT DE IMPRESSÃO DA OS
+itemUnico=Sim
+numerador=nao
+v1=Padrão
+v2=Mecânica

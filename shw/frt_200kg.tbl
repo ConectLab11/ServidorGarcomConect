@@ -1,0 +1,105 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 22/01/2014
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=0
+nivelauxiliar=0
+disableMenu=1
+telalargura=480
+telaaltura=580
+pdx=
+individual=1
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=nil, 200Kg - CFL, tabela200kg, 0123456789, 9, 7,a
+
+#
+# Parametros de tela
+#
+
+[tabela200kg]
+tab=TABELA ATÉ 200KG - CFL
+comentario=
+db=tabefret
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+forcarcoluna=130
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Por tonelada,tonelada,f,16,100,,
+altura=480
+
+
+largura=180
+foco=descr
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=0
+forcarleftmask=110
+nobrowse=1
+t0=coluna=0
+t1=Descrição:,descr,c,50,300,,
+h1=Descrição completa da Tabela.
+t2=Faixa de Pesos (em Kilos)#007E7E7E\delivery.png,,,,380, ,	
+t3=linha+10
+t4=Até 50,faixa_1,f,11,84,,
+h4=Peso até 50 Kilos
+t5=51 à 100,faixa_2,f,11,84,,
+h5=Peso de 51 até 100 Kilos
+t6=101 à 150,faixa_3,f,11,84,,
+h6=Peso de 101 até 150 Kilos
+t7=151 à 200,faixa_4,f,11,84,,
+h7=Peso de 151 até 200 Kilos
+t8=linha-100
+t9=coluna+180
+t10=Excedido Kg,faixa_5,e,11,84,,
+h10=Taxa por kilo excedido acima de 200Kg
+t11=coluna-180
+t12=linha+75
+t13=Generalidades#007E7E7E\sum.png,,,,380, ,
+t14=Devolução:,devolucao=100%,p,11,84,,
+h14=Porcentagem a cobrar do frete quando devolução
+t15=Reentrega:,reentrega=100%,p,11,84,,
+h15=Porcentagem a cobrar do frete quando reentrega
+t16=Taxas:,outros,f,11,84,,
+h16=Outras Taxas
+t17=GRIS:,gris,p,11,84,,
+h17=Porcentagem GRIS @(Calculado pelo valor da mercadoria)
+t18=ADvalorem:,advalorem,p,11,84,,
+h18=Porcentagem de ADvalorem @(Calculado pelo valor da mercadoria)
+t19=linha-25
+t20=coluna+180
+t21=NF-e acima de:,basecalculo,f,11,84,,
+h21=Valor da NF-e para cálculo do Advalorem
+t22=coluna-180
+t23=Pedágio 100kg:,pedagio,f,11,84,,
+h23=Taxa de Pedágio por peso
+t24=Outros#007E7E7E\cog.png,,,,380, ,
+t25=Compartilhada:,compartilhada,sn,3,30,,
+h25=Esta tabela pode ser compartilhada entre os clientes sem tabela ?
+
+[calculo]
+versao=19
+x0=fretepeso:peso[faixa_1{0:50},faixa_2{50:100},faixa_3{100:150},faixa_4{150:200},faixa_4{200}]
+x1=fretepeso:pesoExcedido[faixa_5,200kg,1]
+x2=seguro:porcentNfeValor[advalorem,>=,$basecalculo]
+x3=stop:sePeso[<=,200kg]
+x4=gris:porcentNfeValor[gris]
+x5=outros:tabelaValor[outros]
+x6=pedagio:pedagio[100kg]
+
+

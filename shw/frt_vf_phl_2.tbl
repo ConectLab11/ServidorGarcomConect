@@ -1,0 +1,77 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 22/01/2014
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=0
+nivelauxiliar=0
+disableMenu=1
+telalargura=530
+telaaltura=450
+pdx=
+individual=1
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=nil, Viagem Fechada 2(PHL), layout, 0123456789, 9, 7,a
+
+#
+# Parametros de tela
+#
+
+[layout]
+tab=TABELA VIAGEM FECHADA II (PHL)
+comentario=
+db=tabefret
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+forcarcoluna=130
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Por tonelada,tonelada,f,16,100,,
+altura=280
+
+
+largura=450
+foco=descr
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=0
+forcarleftmask=150
+nobrowse=1
+t0=coluna=0
+t1=Descrição:,descr,c,50,300,,
+t2=Fiorino -    500Kg:,faixa_1,f,11,84,,
+t3=Van -  1.200Kg:,faixa_2,f,11,84,,
+t4=MB 608 -  3.000Kg:,faixa_3,f,11,84,,
+t5=Toco -  6.000Kg:,faixa_4,f,11,84,,
+t6=Truck - 12.000Kg:,faixa_5,f,11,84,,
+t7=Carreta - 25.000Kg:,faixa_6,f,11,84,,
+t8=Taxa de emissão:,outros,f,11,84,,
+t9=Advalorem:,advalorem,p,11,84,,
+t10=GRIS:,gris,p,11,84,,   
+t11=Compartilhada:,compartilhada,sn,3,30,,
+
+[calculo]
+versao=26
+x0=precalc:km{Kilometragem:,e,100,[0],0}
+x1=fretepeso:peso[peso(km),faixa_1{0:500},faixa_2{501:1200},faixa_3{1201:3000},faixa_4{3001:6000},faixa_5{6001:12000},faixa_6{25000}]
+x2=seguro:porcentNfeValor[advalorem]
+x3=gris:porcentNfeValor[gris]
+x4=outros:0
+x5=outros:tabelaValor[outros]
+
+
+

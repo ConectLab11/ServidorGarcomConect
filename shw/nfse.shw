@@ -1,0 +1,194 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 12/12/2003
+#
+#
+# a todos
+# d nota de despesas
+# g agenda
+# m movimento de caixa
+# n cadastro de bancos
+# o plano de contas
+# p pagar
+# q gerenciador de ocorrencias
+# r receber
+# s script inicial
+# t conta caixa
+
+[arquivo]
+modulo=NFS-e 
+nivelprincipal=0
+nivelauxiliar=0
+
+[Opcoes]
+o0=NFS-e, 0123456789, 9, 0,as
+
+[NFS-e]
+o0=nil, Certificado, certificado,0123456789, , 14,a
+o1=nil, Emissão, cfgemissao,0123456789, , 8,a
+o2=nil, NFSE, nfse, 0123456789, , 8,a
+o3=nil, Triagem, triagem, 0123456789, , 8,a
+o4=nil, Compatibilidade, compativel, 0123456789, ,2,a
+
+#
+# Parametros de tela
+#
+
+[certificado]
+tab=CERTIFICADO DIGITAL
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=certificado,certificado,c,50,100,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=1
+where=id=3
+Rlt=*
+altura=170
+largura=460
+foco=certificado
+forcarleftmask=110
+t0=Certificado Digital#007E7E7E\key.png,,,,400, ,
+t1=Número de Série:,certificado,c,500,265,@B,acbrnfe3,
+h1=CERTIFICADO DIGITAL<F2>
+t2=Certificado:,certifstr,t,0,265,,
+t3=Vencimento:,datavenc,d,10,80,,
+t4=Tipo de Comunicação com SEFAZ#007E7E7E\world.png,,,,400, ,
+t5=WS:,tipows,i,1,20,,tipows.rcl,
+h5=Tipo de envio da NF-e para o SEFAZ@- 1. O Terminal REx envia os dados para SEFAZ@- 2. O Servidor RExnfe envia os dados para SEFAZ (em rede).@- 3. O Servidor unimake envia os dados para o SEFAZ (em rede).@- 4. Modo demonstração do software.
+t6=Software para Validação da NF-e#007E7E7E\rclsoft.bmp,,,,400, ,
+t7=IP:,ipservidor,c,16,280,,
+h7=IP do servidor RExnfeTm@- Digite o ip da máquina onde o software RExnfeTm.exe esta instalado.
+
+[cfgemissao]
+tab=AJUSTES PARA EMISSÃO DA NFS-e
+comentario=
+db=nfecfg
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,5,60,,
+c1=Certificado,certificado,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=1
+where=id=3
+Rlt=*
+altura=170
+largura=460
+foco=serie
+forcarleftmask=150
+t0=Emissão da NFS-e#007E7E7E\page_code.png,,,,400, ,
+t1=Série:,serie,c,5,70,,
+t2=Natureza da Operação:,NaturezaOperacao,i,1,30,,nfsenato.rcl,
+t3=Regime especial:,RegimeEspecial,ci,1,30,,<#2>nfsenato.rcl,
+t4=Optante Simples Nacional:,OptanteSimplesNacional,sn,3,30,,
+t5=Incentivador Cultural:,IncentivadorCultural,sn,3,30,,
+t6=Layout:,nfseLayout,c,50,240,{rcl*}@B,<#5>nfsenato.rcl,
+t7=Ambiente:,ambiente,c,20,240,{rcl*}@B,<#4>nfsenato.rcl,
+
+[nfse]
+tab=AJUSTES PARA EMISSÃO DA NFS-e
+comentario=
+db=nfecfg
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,5,60,,
+c1=Certificado,certificado,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=1
+where=id=3
+Rlt=*
+altura=170
+largura=460
+foco=atividade
+forcarleftmask=150
+t0=Código dos Serviços#007E7E7E\page_code.png,,,,400, ,
+t1=forcarleftmask=65
+t2=coluna=10
+t3=CNAE:,atividade,c,20,80,,
+t4=coluna+130
+t5=linha-25
+t6=Código:,ItemListaServico,ci,10,40,,lc116-03.rcl,
+t7=coluna=10
+t8=CNAE:,atividade2,c,20,80,,
+t9=coluna+130
+t10=linha-25
+t11=Código:,ItemListaServico2,ci,10,40,,lc116-03.rcl,
+t12=coluna=10
+t13=Descrição dos Serviços (Padrão)#007E7E7E\page_code.png,,,,400, ,
+t14=forcarleftmask=10
+t15=coluna=0
+t16=,nfseDescricao,t,0,400,,
+
+[triagem]
+tab=TRIAGEM DE NOTAS FISCAIS
+comentario=
+db=nfecfg
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,5,60,,
+c1=Certificado,certificado,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=RCL
+nobrowse=1
+reservado=1
+where=id=3
+Rlt=*
+altura=170
+largura=460
+foco=tria_nfse
+forcarleftmask=100
+t0=coluna=0
+t1=Nfse:,tria_nfse,ci,10,40,,<#2>tipotran.rcl,
+t2=CTRC:,tria_ctrc,ci,10,40,,<#2>tipotran.rcl,
+t3=CNPJ dos Clientes abaixo somente CT-e#007E7E7E\page_code.png,,,,400, ,
+t4=forcarleftmask=10
+t5=coluna=0
+t6=,triagemCte,t,0,400x120,,
+
+
+[compativel]
+tab=COMPATIBILIDADES ANTERIOR A NFS-e
+comentario=
+db=rclsoft
+ordem=empresa
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,5,60,,
+c1=Empresa,empresa,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=RCL
+nobrowse=1
+reservado=1
+where=id=1
+Rlt=*
+altura=170
+largura=460
+foco=notafiscal
+forcarleftmask=150
+t0=Impressão#007E7E7E\printer.png,,,,395, ,
+t1=Arquivo:,nfservico,c,20,240,,
+h1=Nome do arquivo de impressão@- Mantido para compatibilidade com usuários que ainda não utiliza NFS-e.

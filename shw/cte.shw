@@ -1,0 +1,1830 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 12/12/2003
+#
+#
+# a todos
+# p Programação de entregas data e hora
+# n Baixa por Notas Fiscais
+# e Ocorrênciaas de viagem
+# g Configuração de seguro
+
+[arquivo]
+modulo=CONFIGURAÇÃO DINÂMICA PARA $IDTITULO
+tituloG=CONFIGURAÇÕES PARA O SEGURO
+tituloE=OCORRÊNCIAS DE VIAGEM
+tituloP=PROGRAMAÇÃO DE ENTREGA
+tituloN=BAIXA POR NOTA FISCAL
+tituloK=MENSAGEM DE CONTAINER
+tituloM=CARTA DE CORREÇÃO
+nivelprincipal=1
+nivelauxiliar=0
+posicionar=0
+
+[Opcoes]
+o0=#NF-E, 0123456789, 9, 0, as
+o1=Módulo, 0123456789, 9, 20, aeskym
+o2=Eletrônico, 0123456789, 9 , 20, as
+o2=#insert(shw\tabtribu.shw)
+o3=Programação, 0123456789, 9, 20, p
+o4=Baixas, 0123456789, 9, 20, n
+o5=insert(shw\tabtribu.shw)
+o6=Seguro, 0123456789, 9, 29, g
+o7=Intervenção, 0123456789, 9, 29,i
+
+[Intervenção]
+o0=nil,Geral, xGeral, 0123456789, 9, 20:21, i
+o1=nil,ICMS, xICMS, 0123456789, 9, 20:21, i
+o2=nil,NFSe, xNFSe, 0123456789, 9, 20:21, i
+o3=nil,CT-e_,  xCTe, 0123456789, 9, 20:21, i
+o4=nil,Outros, ctemais, 0123456789, 9, 20:21, i 
+o5=nil,OFTP2, oftp2, 0123456789, 9, 20:21, i 
+o6=nil,Seguro, xSeguro, 0123456789, 9, 20:21, i 
+
+[Módulo]
+o0=nil, Configuração,  tipotran, 0123456789, 9, 20:14, a
+o1=nil, Comp. de Impostos, impostos, 0123456789, 9, 20:2, a
+o2=nil, Financeiro, financeiro, 0123456789, 9, 20:21, a
+o3=nil, Emissor, cadastro, 0123456789, 9, 2, a
+o4=nil, Contador, contador, 0123456789, 9, 1,a
+o5=nil, Diversos, diversos, 0123456789, 9, 1,a
+o6=nil, Exportar Dados, exportar, 0123456789, 9, 2, a
+o7=nil, SPED Contribuições, spedcontr, 0123456789, 9, 2, a
+o8=nil, obsCont, obsCont, 0123456789, 9, 2, a
+o9=nil, Validação, validacao, 0123456789, 9, 2, a
+o10=nil, Ocorrências de Viagem, viagem, 0123456789, 9, 2, e
+o11=nil, Divergência de Transporte, divergencia, 0123456789, 9, 2,e
+o12=EDI,Ocorrências, ocotrans, 0789, 4, 25:18,e
+o13=#EDI,Observações, ocorrobs, 0789, 4, 25:18,e
+o14=nil, Container, container, 0123456789, 9, 2,k
+o15=nil, Protocolo de Inutilização, protInut, 0123456789, 9, 2,y
+o16=nil, Cartas (Protocoladas), cartadecorrecao1, 0123456789, 9, 2,m
+o17=Correções,Campos, cartadecorrecao3, 0123456789, 9, 2,m
+o18=Correções,(AUTO)Cadastros, cartadecorrecao2, 0123456789, 9, 2,m
+o19=Correções,(AUTO)Municipios, cartadecorrecao4, 0123456789, 9, 2,m
+
+[seguro]
+o0=nil,Filtros, segfiltr, 0123456789, 9, 20:24, ag
+o1=nil,Outros, segoutros, 0123456789, 9, 20:10, ag
+
+[tipotran]
+tab=IDENTIFICAÇÃO DO MÓDULO
+comentario=
+db=tipotran
+ordem=descricao
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Sigla,mask,c,3,60,,
+c2=Descrição,descricao,c,80,200,,
+c3=Tabela,tabela,c,100,200,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=440
+largura=460
+BotaoAlterar=RCL
+foco=descricao
+forcarleftmask=100
+t0=coluna-30
+t1=#Código:,id,+,4,40,,
+h1=Código do módulo
+t2=Sigla:,mask,c,3,40,@UR,
+h2=Sigla de identificação do módulo
+t3=linha-25
+t4=coluna+120
+t5=Descrição:,descricao,c,120,140,,
+h5=Descrição completa do módulo
+t6=linha-25
+t7=coluna+190
+t8=Ativo:,ativo,sn,3,30,,
+h8=Módulo ativo (Sim ou Não)
+t9=coluna-300
+t10=Arquivo do Banco de Dados de CTRC#007E7E7E\database.png,,,,410, ,
+t11=Tabela:,tabela,c,100,170,@L$validarArquivoNome(),
+h11=Nome da tabela para armazenar os CTRCs
+t12=linha-25
+t13=coluna+270
+t14=forcarleftmask=115
+t15=Bloquear inclusão:,noincluir,sn,3,30,,
+h15=Bloquear a inclusão de documentos por filial
+t16=coluna-270
+t17=forcarleftmask=100
+t18=#Layout de Impressão#007E7E7E\printer.png,,,,410, ,
+t19=Arquivo LPT:,lpt,c,20,320,@LB,openfile[=/lpt/~*LPT PDX^*.lpt;*.pdx],
+h19=Arquivo de layout de impressão de CTRC
+t20=Arquivo do Banco de Dados de Minuta#007E7E7E\database.png,,,,410, ,
+t21=Tabela:,tabela1,c,100,170,@L$validarArquivoNome(),
+h21=Nome da tabela para armazenar as Minutas
+t22=#linha-25
+t23=#coluna+270
+t24=#forcarleftmask=115
+t25=#Bloquear inclusão:,noincluir,sn,3,30,,
+h25=#Bloquear a inclusão de documentos por filial
+t26=#coluna-270
+t27=#forcarleftmask=90
+t28=#Layout de Impressão#007E7E7E\printer.png,,,,410, ,
+t29=Arquivo LPT:,lpt2,c,20,320,@L,
+h29=Arquivo de layout de impressão de Minutas
+t30=#Arquivo do Banco de Dados de Coletas#007E7E7E\database.png,,,,410, ,
+t31=#Tabela:,tabela2,c,100,170,@L$validarArquivoNome(),
+h31=#Nome da tabela para armazenar as Coletas
+t32=#linha-25
+t33=#coluna+270
+t34=forcarleftmask=160
+t35=#Bloquear inclusão:,noincluir,sn,3,30,,
+h35=#Bloquear a inclusão de documentos por filial
+t36=#coluna-270
+t37=#forcarleftmask=90
+t38=#Layout de Impressão#007E7E7E\printer.png,,,,410, ,
+t39=#Arquivo LPT:,lpt3,c,20,320,@L,
+h39=#Arquivo de layout de impressão de Minutas
+t40=Tipo de emissão#007E7E7E\attach_2.png,,,,410, ,
+t41=Emissão de Minuta:,minuta,sn,3,30,,
+t42=Emissão de CT-e:,CTE,sn,3,30,,
+t43=linha-25
+t44=coluna+160
+t45=Módulo Relacionado:,siglaCTe,c,3,50,@B,<#2>tipotran.rcl,
+t46=coluna-160
+t47=Emissão de NFS-e:,nfse,sn,3,30,,
+t48=Emissão de CTMC:,ctmc,sn,3,30,,
+t49=Emissão de MDF-e:,mdfe,sn,3,30,,
+t50=Emissão de CTEx:,bio,sn,3,30,,
+
+t51=Impostos#007E7E7E\attach_2.png,,,,410, ,
+t52=Simples Nacional:,simples,sn,3,30,,
+t53=Destacar ICMS:,fiscal,sn,3,30,,
+t54=Destacar ISS:,iss,sn,3,30,,
+t55=Validação SPED:,sped,sn,3,30,,
+
+t56=Opções do Módulo#007E7E7E\attach_2.png,,,,410, 
+t57=Permitir faturamento:,faturar,sn,3,30,,
+t58=Módulo Estático:,fixado,sn,3,30,,
+t59=Módulo com Romaneio:,manifesto,sn,3,30,,
+
+validacao=campoPreenchido(mask),campoPreenchido(descricao),campoPreenchido(tabela),campoPreenchido(lpt),duplicidades(mask;[mask-tipotran])
+
+[exportar]
+tab=EXPORTAÇÃO DE DADOS PARA ARQUIVOS TEXTO
+comentario=
+db=tipotran
+ordem=descricao
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Sigla,mask,c,3,60,,
+c2=Descrição,descricao,c,80,200,,
+c3=Tabela,tabela,c,100,200,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=440
+largura=460
+BotaoAlterar=RCL
+foco=contabil
+forcarleftmask=110
+t0=Número de Série:,serie=@;1;2;3;4;5;6;7;8;9;10;11;12;13;U;UN;UNI;UNIC;UNICA;C,l,10,80,@BU,<#3>tipotran.rcl,
+t1=Sub-Série:,subserie=@;1;2;3;4;5;6;7;8;9;10;11;12;13;U;UN;UNI;UNIC;UNICA;ONTb;ONT2;ELEb;ELET;EFILb,l,10,80,@BU,<#3>tipotran.rcl,
+t2=label|Código Porto Seguro
+t3=<,codigoSeg=@274;377;680;1351;276b;387b;734b;776b;540b;2031,l,@B,80,,
+t4=Contabilidade:,contabil,sn,3,30,,
+t5=Seguro:,seguro,sn,3,30,,
+t6=Rastreamento:,rastrear,sn,3,30,,
+t7=EDI#007E7E7E\tag.png,,,,410, ,
+t8=Entradas:,edi_entrada,sn,3,30,,
+t9=Saidas:,edi,sn,3,30,,
+
+[cadastro]
+tab=DADOS CADASTRAIS DO EMISSOR DO DOCUMENTO
+comentario=
+db=tipotran
+ordem=descricao
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Sigla,mask,c,3,60,,
+c2=Descrição,descricao,c,80,200,,
+c3=Tabela,tabela,c,100,200,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=440
+largura=460
+BotaoAlterar=RCL
+foco=cnpj
+forcarleftmask=90
+t0=CNPJ/CPF:,cnpj,c,18,110,,
+h0=CNPJ ou CPF do emissor do documento
+t1=linha-25
+t2=coluna+220
+t3=IE/RG:,ie,c,18,110,,
+h3=IE ou RG do emissor do documento
+t4=coluna-220
+t5=Razão social:,razao,c,50,330,,
+h5=Razão social do emissao do documento
+t6=Fantasia:,fantasia,c,50,170,,
+h6=Nome de fantasia
+t7=linha-25
+t8=coluna+220
+t9=IM:,IM,c,20,110,,
+h9=Inscrição Municipal
+t10=coluna-220
+t11=Endereço:,endereco,c,50,330,,
+h11=Endereço completo do emissor do documento
+t12=CEP:,cep,c,9,70,@B$fcep(),cep(cep;endereco;bairro;uf;cidade),
+h12=Número do CEP
+t13=linha-25
+t14=coluna+150
+t15=Bairro:,bairro,c,30,180,,
+h15=Nome do bairro
+t16=coluna-150
+
+t17=UF:,uf,c,2,30,@BU,estado2.rcl,
+h17=Sigla da UF (Estado) <F2>
+t18=linha-25
+t19=coluna+130
+t20=Cidade:,cidade,c,30,185,@B,<#17>geral.rcl{ufsigla=uf/""},
+h20=Nome da Cidade
+
+t21=coluna-130
+t22=Contato:,contato,c,50,330,,
+h22=Nome da pessoa para contato
+t23=Telefone:,telefones,c,60,330,,
+h23=Telefone para contato
+t24=FAX:,fax,c,60,330,,
+h24=Número do FAX
+t25=EMAIL:,email,c,255,330,@L,
+h25=Endereço de email
+validacao=campoPreenchido(uf)
+
+[Eletrônico]
+o0=nil, Certificado, certificado, 0123456789, , 20:14,a
+o1=nil, CT-e, cfgemissao, 0123456789, , 2,a
+o2=nil, NFS-e, nfse, 0123456789, , 2,a
+o3=nil,+Tributação, nfsetrib, 0123456789, , 2,a
+o4=nil, DACTE, dacte, 0123456789, ,16,a
+o5=nil,+ Ajustes, dacteAjustes, 0123456789, ,16,a
+o6=nil, MDF-e, mdfe, 0123456789, ,2,a
+o7=nil, Informações adicionais, infoadic, 0123456789, , 15,a
+o7=#DANFE, Logotipo, danfelogo, 0123456789, ,13,a
+o8=#DANFE, Descrição do produto, danfedescricao, 0123456789, ,13,a
+o9=#DANFE, Nota Fiscal antiga, danfeoutros, 0123456789, ,13,a
+o10=#Tabelas de Tributação, CFOP, cfopnota, 0123456789, 1, 20:24,a
+o11=#Tabelas de Tributação, CST, classtri, 012345678, 1, 20:24,a
+o12=#Tabelas de Tributação, NCM, classfis, 0123456789, 1, 20:24,a
+o13=#Tabelas de Tributação, MVA, tabmvaprod, 0123456789, 1, 20:24,a
+o14=#Tabelas de Tributação, Subst. Tributária(Padrão), tabmva, 0123456789, 1, 15,a
+o15=#Tabelas de Tributação, Artigos do ICMS, articms, 0123456789, 1, 20:24,a
+o16=#Tabelas de Tributação, Tabela de ICMS, tabicms, 0123456789, 1, 20:22,a
+o17=#Tabelas de Tributação, Simples Nacional, simples, 0123456789, 1, 20:22,a
+o18=#Vendas, Condições de Pagto, tabvenda, 0123456789, 1, 20:21,a
+o19=#Vendas, Tabela de Fretes, tabfretevendas, 0123456789, 1, 20:12,a
+o20=#Complementos, Países, paises, 0123456789, 1, 17:23,a
+o21=#Complementos, IBGE, ibge, 0123456789, 1, 17:23,a
+
+[paises]
+tab=TABELA DE PAÍSES - ORIGEM BACEN
+comentario=
+db=paises
+ordem=nome
+rcl=paises.rcl
+chave=id
+chaveprincipal=id
+c0=Código,codigo,c,5,60,,
+c1=País,nome,c,50,200,,
+reservado=
+Rlt=*
+BotaoExcluir=RCL
+BotaoAlterar=RCL
+BotaoIncluir=RCL
+altura=180
+largura=400
+BotaoExcluir=Não
+BotaoAlterar=Sim
+BotaoIncluir=Sim
+foco=nome
+t0=Código:,codigo,c,5,50,!99999;1; ,
+h0=Código do país conforme tabela BACEN.
+t1=Nome:,nome,c,50,250,,
+h1=Nome do país.
+
+[ibge]
+tab=TABELA DE CÓDIGO DE MUNICIPIOS - ORIGEM IBGE
+comentario=
+db=ibge
+ordem=ufsigla,municipionome limit 0,500
+rcl=ibge.rcl
+chave=id
+chaveprincipal=id
+c0=Código,uf,c,3,50,,
+c1=UF,ufsigla,c,5,30,,
+c2=Estado,ufnome,c,50,80,,
+c3=Municipio,municipio,c,7,70,,
+c4=Nome,municipionome,c,50,80,,
+reservado=
+forcarleftmask=130
+Rlt=*
+BotaoExcluir=RCL
+BotaoAlterar=RCL
+BotaoIncluir=RCL
+altura=300
+largura=400
+BotaoExcluir=Não
+BotaoAlterar=Sim
+BotaoIncluir=Sim
+foco=nome
+t0=Estado brasileiro#007E7E7E\image_2.png,,,,350, ,
+t1=UF:,ufsigla,c,5,30,@BU,estados.rcl,
+h1=Sigla dos estados brasileiro.
+t2=Código:,uf,c,3,30,!999;1; ,
+h2=Código do estado brasileiro.
+t3=Nome:,ufnome,c,50,220,,
+h3=Nome do estado brasileiro.
+t4=Municipio#007E7E7E\image_2.png,,,,350, ,
+t5=Código:,municipio,c,7,80,!9999999;1; ,
+h5=Código do municipio.
+t6=Nome:,municipionome,c,50,220,,
+h6=Nome do municipio.
+
+[internos]
+tab=CONTROLES INTERNOS
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=170
+largura=460
+foco=modbc
+forcarleftmask=150
+where=id="1"
+relacaokey=id,"1"
+t0=Modalidade BC ICMS:,modBC,i,11,20,,modbc.rcl,
+t1=Modalidade BC ST ICMS:,modBCST,i,11,20,,modbcst.rcl,
+
+#
+# Parametros de tela
+#
+
+[certificado]
+tab=CERTIFICADO DIGITAL
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=certificado,certificado,c,50,100,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=
+where=tipotran=$IDORIGEM
+Rlt=*
+altura=170
+largura=460
+foco=certificado
+forcarleftmask=110
+t0=Certificado Digital#007E7E7E\chip.png,,,,400, ,
+t1=Número de Série:,certificado,c,500,265,@B,acbrnfe2,
+h1=Número de série do Certificado Digital@ - Selecione um certificado digital.
+t2=Certificado:,certifstr,t,0,280x90,@R,,
+t3=Vencimento:,datavenc,d,10,80,@R,
+t4=Tipo de Comunicação com SEFAZ#007E7E7E\world.png,,,,400, ,
+t5=WS:,tipows,i,1,20,{rcl*},tipows.rcl,
+h5=Tipo de envio da NF-e para o SEFAZ@- 1. O Terminal envia os dados para SEFAZ@- 2. O Servidor RExnfe envia os dados para SEFAZ (em rede).@- 3. O Servidor unimake envia os dados para o SEFAZ (em rede).@- 4. Modo demonstração do software.
+t6=Software para Validação da NF-e#007E7E7E\rclsoft.bmp,,,,400, ,
+t7=IP:,ipservidor,c,16,280,,
+h7=IP do servidor RExnfeTm@- Digite o ip da máquina onde o software RExnfeTm.exe esta instalado.
+
+[cfgemissao]
+tab=AJUSTES PARA EMISSÃO DO CT-e
+comentario=
+db=nfecfg
+ordem=
+rcl=
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=certificado,certificado,c,50,100,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=
+where=tipotran=$IDORIGEM
+Rlt=*
+altura=170
+largura=460
+foco=modelo
+forcarleftmask=110
+t0=Emissão#007E7E7E\page_white_edit.png,,,,395, ,
+t1=Modelo:,modelo,c,5,35,{rcl*}@BU,<#4>tipotran.rcl,
+h1=Código do Modelo do CT-e@-> Consultar contador.
+t2=linha-25
+t3=coluna+100
+t4=Série:,serie,c,5,35,{rcl*},
+h4=Número de Série do CT-e@-> Consulta contador.
+t5=coluna-100
+t6=Forma de emissão:,tpEmi,i,1,30,,<#8>nfecfg.rcl,
+h6=Forma de emissão do CT-e.
+t7=Ambiente:,tpAmb,i,1,30,{rcl*},<#10>nfecfg.rcl,
+h7=Ambiente de emissão da CT-e@- 1. Produção (com validade fiscal).@- 2. Homologação (sem validade fiscal) Testes.
+t8=Tipo de CT-e:,tpCTe,ci,1,30,,<#9>nfecfg.rcl,
+h8=Tipo de CT-e.
+t9=CST:,cst,ci,1,30,,<#3>classtri.rcl,
+h9=Classificação Tributária do Serviço
+t10=Tomador:,tomador,c,10,150,@B,<#22>nfecfg.rcl,
+h10=Tomador do serviço preferencial
+t11=Forma de Pgto:,forpag,i,1,30,,<#23>nfecfg.rcl,
+h11=Forma de pagamento
+//t11=#Processo de emissão:,procEmi,ci,1,30,,<#11>nfecfg.rcl,
+//h11=Processo de emissão do CT-e
+t12=Qtde de CT-e pendente:,limitepen,i,3,35,,
+h12=Quantidades limite de CT-e pendente.
+t13=Unidade de medida:,cUnid,ci,2,30,,<#14>nfecfg.rcl,
+h13=Código da unidade de medida
+t14=Tipo de medida:,tpMed,c,20,200,@B,<#15>nfecfg.rcl,
+h14=Tipo de medida
+t15=RNTRC:,RNTRC,i,8,250,,
+t16=Conta Frete:,CIOT,c,12,300,,
+t17=Seguro#007E7E7E\page_white_edit.png,,,,395, ,
+t18=Responsável:,respSeg,ci,1,30,,<#16>nfecfg.rcl,
+t19=Seguradora:,cSeg,i,6,50,,?cadastro.rcl,
+t20=Apólice 1:,nApol,c,20,110,,
+t21=linha-25
+t22=coluna+180
+t23=Apólice 2:,nApol2,c,20,110,,
+validacao=limiteInt(limitepen;[1-990])
+
+[dacte]
+tab=AJUSTES PARA IMPRESSÃO DO DACTE
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+where=tipotran=$IDORIGEM
+Rlt=*
+altura=170
+largura=460
+foco=tpImp
+forcarleftmask=90
+t0=Ajustes do Logotipo#007E7E7E\doc_resize.png,,,,390, ,
+t1=Cadastro:,logo,i,6,50,,?cadastro.rcl,
+h1=Código do Cadastro@- Configure seu logotipo no cadastro de código 1, e preencha este campo com o código 1. 
+t2=Linha:,logol,i,4,30,!9999;1; ,
+h2=Posição da linha do logotipo
+t3=linha-25
+t4=coluna+80
+t5=Coluna:,logoc,i,4,30,!9999;1; ,
+h5=Posição da coluna do logotipo
+t6=coluna+80
+t7=linha-25
+t8=Altura:,logoh,i,4,30,!9999;1; ,
+h8=Altura da imagem
+t9=linha-25
+t10=coluna+80
+t11=Largura:,logow,i,4,30,!9999;1; ,
+h11=Largura da imagem
+t12=coluna-240
+t13=Ajustes do Nome da empresa#007E7E7E\doc_resize.png,,,,390, ,
+t14=Ativo:,logotextos,sn,3,30,,
+h14=Imprimir o nome da empresa (Sim/Não)
+t15=linha-25
+t16=coluna+80
+t17=Linha:,razaol,i,4,30,!9999;1; ,
+h17=Posição da linha do nome da empresa
+t18=linha-25
+t19=coluna+80
+t20=Coluna:,razaoc,i,4,30,!9999;1; ,
+h20=Posição da coluna do nome da empresa
+t21=coluna-160
+t22=Fonte:,fontName1=Courier New,c,50,80,@B,<#10>geral2.rcl,
+h22=Nome da Fonte
+t23=linha-25
+t24=coluna+160
+t25=Tamanho:,fontSize1=6,i,2,30,,
+h25=Tamanho da fonte
+t26=linha-25
+t27=coluna+80
+t28=Estilo:,fontStyle1,c,10,50,@BU,<#11>geral2.rcl,
+h28=Estilo da fonte
+t29=coluna-240
+t30=Ajustes de Endereço/Telefone#007E7E7E\doc_resize.png,,,,390, ,
+t31=Ativo:,ativotext,sn,3,30,,
+h31=Imprimir endereço/telefone (Sim/Não)
+t32=linha-25
+t33=coluna+80
+t34=Linha:,texth,i,4,30,!9999;1; ,
+h34=Posição da linha do texto
+t35=linha-25
+t36=coluna+80
+t37=Coluna:,textw,i,4,30,!9999;1; ,
+h37=Posição da coluna do texto
+t38=coluna+80
+t39=linha-25
+t40=Espaço:,textspace,i,4,30,!9999;1; ,
+h40=Espaço entre linhas
+t41=coluna-240
+t42=Fonte:,fontName2=Courier New,c,50,80,@B,<#10>geral2.rcl,
+h42=Nome da Fonte
+t43=linha-25
+t44=coluna+160
+t45=Tamanho:,fontSize2=6,i,2,30,,
+h45=Tamanho da fonte
+t46=linha-25
+t47=coluna+80
+t48=Estilo:,fontStyle2,c,10,50,@BU,<#11>geral2.rcl,
+h48=Estilo da fonte
+t49=coluna-240
+t50=Geral#007E7E7E\grid_dot.png,,,,390, ,
+t51=Impressão:,tpImp,i,1,30,,<#13>nfecfg.rcl,
+h51=Tipo de impressão@- Retrato@- Paisagem
+t52=Layout:,layoutPdx=@;Padrao;dacte.pdx;dacte_1.pdx;dacte_2.pdx;dacte_3.pdx;dacte_4.pdx,l,50,130,,
+t53=Fonte padrão:,fontName=Courier New,c,50,80,@B,<#10>geral2.rcl,
+h53=Nome da Fonte
+t54=linha-25
+t55=coluna+160
+t56=Tamanho:,fontSize=6,i,2,30,,
+h56=Tamanho da fonte
+t57=linha-25
+t58=coluna+80
+t59=Estilo:,fontStyle,c,10,50,@BU,<#11>geral2.rcl,
+h59=Estilo da fonte
+t60=coluna-240
+t61=#Dados Cadastrais#007E7E7E\grid_dot.png,,,,390, ,
+t62=Fonte cadastros:,fontName3=Courier New,c,50,80,@B,<#10>geral2.rcl,
+h62=Nome da Fonte
+t63=linha-25
+t64=coluna+160
+t65=Tamanho:,fontSize3=6,i,2,30,,
+h65=Tamanho da fonte
+t66=linha-25
+t67=coluna+80
+t68=Estilo:,fontStyle3,c,10,50,@BU,<#11>geral2.rcl,
+h68=Estilo da fonte
+t69=coluna-240
+t70=#Valores#007E7E7E\grid_dot.png,,,,390, ,
+t71=Fonte valores:,fontName4=Courier New,c,50,80,@B,<#10>geral2.rcl,
+h71=Nome da Fonte
+t72=linha-25
+t73=coluna+160
+t74=Tamanho:,fontSize4=6,i,2,30,,
+h74=Tamanho da fonte
+t75=linha-25
+t76=coluna+80
+t77=Estilo:,fontStyle4,c,10,50,@BU,<#11>geral2.rcl,
+h77=Estilo da fonte
+t78=Scripts#007E7E7E\grid_dot.png,,,,390, ,
+t79=coluna=0
+t80=forcarleftmask=10
+t81=,dacteScript,tw,0,400x100,,
+h81=Script para impressão do DACTE
+
+[infoadic]
+tab=INFORMAÇÕES ADICIONAIS
+comentario=
+db=nfecfg
+ordem=
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=
+where=tipotran=$IDORIGEM
+Rlt=*
+altura=170
+largura=460
+foco=infonfe
+forcarleftmask=10
+t0=Informações Adicionais para o CT-e#007E7E7E\page_white_star.png,,,,410, ,
+t1=,infonfe,tw,0,400x200,,
+h1=Informações Adicionais para NF-e
+t2=linha+120
+t3=label|Artigo do ICMS
+t4=<,artigoIcms,ci,15,80,,articms.rcl,
+t5=linha+20
+t6=label|As variaveis abaixo pode ser utilizada no texto do artigo:|,,clred
+t7=label|<valorcreditoicms>|,,clblue
+t8=label|<aliquotacreditoicms>|,,clblue
+
+[Baixas]
+o0=nil,Notas Fiscais, baixarnf, 0789, 9, 38:39, n
+
+[baixarnf]
+tab=BAIXA POR NOTA FISCAL
+comentario=
+db=notas
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Nota,nota,i,10,70,,
+c1=Série,serie_nf,c,3,50,,
+c2=Entrega,&datahora(entregou|horae|) as entregou,d,10,100,,
+c3=Ocorrência,ocorrencia,c,3,80,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=0
+reservado=
+where=(documento=$IDORIGEM) and (tipo="$IDORIGEM2")
+relacaokey=documento,$IDORIGEM
+relacaokey2=tipo,"$IDORIGEM2"
+Rlt=*
+fnParam=1
+altura=200
+largura=460
+foco=entregou
+forcarleftmask=100
+t0=#Data Programada para entrega#007E7E7E\data.png,,,,410, ,
+t1=Data:,entregou,d,10,80,,
+t2=Hora:,horae,h,10,80,,
+t3=Ocorrência:,ocorrencia,i,3,40,,ocotrans.rcl,
+
+[Programação]
+o0=nil, Data e Hora,  dataHora, 0789, 9, 38:39, p
+
+
+
+[dataHora]
+tab=PROGRAMAÇÃO DE ENTREGA/ DATA E HORA
+comentario=
+db=cteprg
+ordem=
+rcl=
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=
+where=id=$IDORIGEM
+Rlt=*
+fnParam=1
+altura=170
+largura=460
+foco=tpData
+forcarleftmask=100
+t0=Data Programada para entrega#007E7E7E\data.png,,,,410, ,
+t1=Tipo:,tpData,ci,11,20,,<#17>nfecfg.rcl,
+t2=Data:,dPrg,d,10,80,,
+t3=Periodo:,dPrgI,d,10,80,,
+t4=linha-25
+t5=coluna+110
+t6=até:,dPrgF,d,10,80,,
+t7=coluna-110
+t8=Hora Programada para entrega#007E7E7E\clock.png,,,,410, ,
+t9=Tipo:,tpHora,ci,11,20,,<#18>nfecfg.rcl,
+t10=Hora:,hPrg,h,10,80,,
+t11=Intervalo:,hPrgI,h,10,80,,
+t12=linha-25
+t13=coluna+110
+t14=até:,hPrgF,h,10,80,,
+t15=coluna-110
+
+[financeiro]
+tab=PARAMETROS PARA O FINANCEIRO
+comentario=
+db=tipotran
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Sigla,mask,c,3,60,,
+c2=Descrição,descricao,c,80,200,,
+c3=Tabela,tabela,c,100,200,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=440
+largura=460
+BotaoAlterar=RCL
+foco=subserie
+forcarleftmask=110
+t0=Contas á Receber#007E7E7E\tag.png,,,,410, ,
+t1=Centro de Custo:,custo,i,3,40,,centrocu.rcl,
+t2=Fretes tipo FOB#007E7E7E\tag.png,,,,410, ,
+t3=Centro de Custo:,custofob,i,3,40,,centrocu.rcl,
+
+[nfse]
+tab=AJUSTES PARA EMISSÃO DA NFS-e
+comentario=
+db=nfecfg
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,5,60,,
+c1=Certificado,certificado,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=1
+where=tipotran=$IDORIGEM
+Rlt=*
+altura=170
+largura=460
+foco=serie
+forcarleftmask=150
+t0=Emissão da NFS-e#007E7E7E\page_code.png,,,,400, ,
+t1=Modelo:,modelo,c,5,35,{rcl*}@BU,<#4>tipotran.rcl,
+h1=Código do Modelo da NFS-e@-> Consultar contador.
+t2=linha-25
+t3=coluna+120
+t4=Série:,serie,c,5,70,,
+t5=coluna-120
+t6=Natureza da Operação:,NaturezaOperacao,i,1,30,,nfsenato.rcl,
+t7=Regime especial:,RegimeEspecial,ci,1,30,,<#2>nfsenato.rcl,
+t8=Optante Simples Nacional:,OptanteSimplesNacional,sn,3,30,,
+t9=Incentivador Cultural:,IncentivadorCultural,sn,3,30,,
+t10=Layout:,nfseLayout,c,50,240,{rcl*}@B,<#5>nfsenato.rcl,
+t11=Ambiente:,ambiente,c,20,240,{rcl*}@B,<#4>nfsenato.rcl,
+t12=#Código dos Serviços#007E7E7E\page_code.png,,,,400, ,
+t13=#forcarleftmask=65
+
+t14=#coluna=10
+t15=#label|CNAE
+t16=#coluna=-35
+t17=#,atividade,c,20,70,,
+t18=#linha-40
+t19=#coluna+130
+t20=#label|Alíquota
+t21=#<,ItemListaServicoAliq,p,20,50,,
+t22=#linha-40
+t23=#coluna+70
+t24=#label|Código de Tributação
+t25=#<,ItemListaServico,ci,20,50,,lc116-03.rcl,
+
+t26=#coluna=10
+t27=#<,atividade2,c,20,70,,
+t28=#linha-25
+t29=#coluna+85
+t30=#<,ItemListaServicoAliq2,p,20,50,,
+t31=#linha-25
+t32=#coluna+70
+t33=#<,ItemListaServico2,ci,20,50,,lc116-03.rcl,
+
+t34=#coluna=10
+t35=#<,atividade3,c,20,70,,
+t36=#linha-25
+t37=#coluna+85
+t38=#<,ItemListaServicoAliq3,p,20,50,,
+t39=#linha-25
+t40=#coluna+70
+t41=#<,ItemListaServico3,ci,20,50,,lc116-03.rcl,
+
+t42=#coluna=10
+t43=#<,atividade4,c,20,70,,
+t44=#linha-25
+t45=#coluna+85
+t46=#<,ItemListaServicoAliq4,p,20,50,,
+t47=#linha-25
+t48=#coluna+70
+t49=#<,ItemListaServico4,ci,20,50,,lc116-03.rcl,
+
+t50=forcarleftmask=150
+t51=linha+15
+t52=coluna=100
+t53=Sempre Reter o ISS:,issRet,sn,3,30,,
+
+t54=#coluna=10
+t55=#forcarleftmask=0
+t56=#Descrição dos Serviços (Padrão)#007E7E7E\page_code.png,,,,400, ,
+t57=#forcarleftmask=10
+t58=#coluna=0
+t59=#,nfseDescricao,t,0,400x150,,
+
+[viagem]
+tab=OCORRÊNCIAS DE VIAGEM
+comentario=
+db=ctrchist
+ignoreforcedb=Sim
+ordem=data desc,hora desc
+rcl=
+chave=id
+chaveprincipal=id
+c0=Data,&DataHora(data|hora|) as data,d,10,100,,
+c1=Descrição,&rclArq(ocorrencia|ocotrans.rcl),c,255,280,,
+c2=Stage,stage,p,3,40,,
+#c1=Descrição,anote,c,0,100,,
+#BotaoIncluir=Não
+#BotaoExcluir=Não
+#BotaoAlterar=Sim
+nobrowse=0
+reservado=0
+where=(documento=$IDORIGEM)and(tpdoc=0) 
+relacaokey=documento,$IDORIGEM
+relacaokey2=tipo,"$IDORIGEM2"
+relacaokey3=tpdoc,"0"
+whereextra=manifesto=0
+campoinfo=anote,Descrição completa,c,100
+Rlt=
+altura=450
+largura=520
+foco=data
+forcarleftmask=90
+t0=#
+t1=Data:,data,d,10,70,,
+h1=Data da Ocorrência
+t2=linha-25
+t3=coluna+110
+t4=Hora:,hora,h,5,40,,
+h4=Hora da Ocorrência
+t5=coluna-110
+t6=Ocorrência:,ocorrencia,ci,6,40,$validarStage(),ocotrans.rcl,
+t7=Stage:,Stage=@0;25;50;75;100,l,3,50,,
+t8=label|%|,,,,70,145
+t8=linha+5
+t9=Local#007E7E7E\textfield.png,,,,490, ,
+t10=UF:,uf1,c,2,30,@BU,estado2.rcl,
+h10=Sigla da UF (Estado) <F2>
+t11=linha-25
+t12=coluna+130
+
+t13=Cidade:,cidade1,c,30,185,@B,<#17>geral.rcl{ufsigla=uf1/""},
+h13=Nome da Cidade
+
+t14=Informações Complementar#007E7E7E\textfield.png,,,,490, ,
+t15=forcarleftmask=10
+t16=,anote,t,0,480x140,,
+h16=Descrição Completa da Ocorrência
+t17=#,tipo=<M>,c,3,30,,
+t18=,manifesto=Nao,sn,3,30,@V,
+
+[divergencia]
+tab=DIVERGÊNCIA DE TRANSPORTES
+comentario=
+db=ctrchist
+ignoreforcedb=Sim
+ordem=data,hora
+rcl=
+chave=id
+chaveprincipal=id
+c0=Data,&DataHora(data|hora|) as data,d,10,100,,
+c1=Detalhes,anote,c,0,-1,,
+c2=Tipo,descricao,c,0,100,,
+
+#BotaoIncluir=Não
+#BotaoExcluir=Não
+#BotaoAlterar=Sim
+nobrowse=0
+reservado=0
+where=(documento=$IDORIGEM)and(tpdoc=1) 
+relacaokey=documento,$IDORIGEM
+relacaokey2=tipo,"$IDORIGEM2"
+relacaokey3=tpdoc,"1"
+//whereextra=manifesto=0
+campoinfo=anote,Descrição completa,c,100
+Rlt=
+altura=340
+largura=520
+foco=data
+forcarleftmask=70
+t0=Data:,data,d,10,70,,
+h0=Data da Divergência
+t1=linha-25
+t2=coluna+110
+t3=Hora:,hora,h,5,40,,
+h3=Hora da Divergência
+t4=linha-25
+t5=coluna+110
+t6=Usuário:,usuario=$user,i,6,50,@D&cor(clsilver|clgray),cadastro.rcl,
+h6=Usuário Responsável
+t7=coluna-220
+t8=Tipo:,descricao,c,255,380,@BX,<#12>geral2.rcl,
+t9=Descrição#007E7E7E\textfield.png,,,,490, ,
+t10=forcarleftmask=10
+t11=,anote,t,0,480x140,,
+h11=Descrição Completa
+t12=#,tipo=<M>,c,3,30,,
+t13=#,manifesto=Nao,sn,3,30,@V,
+validacao=campoPreenchido(descricao)
+
+[ctemais]
+tab=Outros Campos
+comentario=
+db=ctemais
+ignoreforcedb=Sim
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Navio,navio,c,50,200,,
+c1=Senha,senha,c,6,100,,
+#BotaoIncluir=Não
+#BotaoExcluir=Não
+#BotaoAlterar=Sim
+nobrowse=1
+autoIncluir=1
+reservado=0
+where=(cte=$IDORIGEM) and (orig="$IDORIGEM2")
+relacaokey=cte,$IDORIGEM
+relacaokey2=orig,"$IDORIGEM2"
+relacaokey3=
+altura=340
+largura=520
+foco=senha
+forcarleftmask=70
+t0=Senha:,senha,c,6,100,,
+
+[segfiltr]
+tab=FILTROS PARA EXPORTAÇÃO DOS DADOS PARA SEGURO
+comentario=
+db=segfiltr
+ordem=cnpj
+rcl=
+chave=id
+chaveprincipal=id
+c0=CNPJ/CPF,cnpj,c,20,130,,
+c1=Placa,placa,c,8,70,,
+c2=Valor,valor,f,11,84,,
+c3=Função,funcao,c,30,100,,
+nobrowse=0
+reservado=0
+where=id>2
+relacaokey=
+Rlt=
+altura=220
+largura=460
+foco=funcao
+forcarleftmask=110
+t0=Função:,funcao=@01-Sem valor da mercadoria;02-Cancelados;03-Sem Placa - Preencher com;04-Somente com Manifesto,l,30,250,,
+h0=Tipo de função 
+t1=CNPJ/CPF:,cnpj,c,20,150,,
+h1=CNPJ completo ou parcial Ex: 01.123.568/
+t2=Placa:,placa,c,8,60,@U,
+h2=Placa do veículo
+t3=Valor:,valor,f,11,84,,
+h3=Valor fixo para este cliente
+
+[segOutros]
+tab=OUTRAS CONFIGURAÇÕES REFERENTE AO SEGURO
+comentario=
+db=segfiltr
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=CNPJ/CPF,cnpj,c,20,130,,
+c1=Placa,placa,c,8,70,,
+c2=Valor,valor,f,11,84,,
+c3=Função,funcao,c,30,100,,
+nobrowse=1
+reservado=0
+where=id=1
+relacaokey=
+Rlt=
+altura=220
+largura=460
+foco=seg1
+forcarleftmask=110
+t0=Ativar/Desativar layouts#007E7E7E\accept.png,,,,410, ,
+t1=Porto Seguro:,seg1,sn,3,30,,
+h1=Ativa layout da Porto Seguro no menu 
+t2=AT&M:,seg2,sn,3,30,,
+h2=Ativa layout da AT&M no menu
+t3=Liberty:,seg3,sn,3,30,,
+h3=Ativa layout da Liberty no menu
+t4=Allianz:,seg4,sn,3,30,,
+h4=Ativa layout da Allianz no menu
+t5=Itau:,seg5,sn,3,30,,
+h5=Ativa layout Itau no menu
+t6=Número da Apólice#007E7E7E\attach_2.png,,,,410, ,
+t7=Rodoviário:,apoliceRod,c,30,200,,
+h7=Número da apólice para transportes Rodoviário
+t8=Aéreo:,apoliceAer,c,30,200,,
+h8=Número da apólice para transportes Aéreo
+
+[contador]
+tab=DADOS CADASTRAIS DO CONTABILISTA
+comentario=
+db=sped
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Nome,nome,c,50,100,,
+nobrowse=1
+relacaokey=
+autoIncluir=1
+where=tipotran=$IDORIGEM
+altura=440
+largura=460
+BotaoAlterar=
+foco=nome
+forcarleftmask=80
+t0=Nome:,nome,c,50,330,,
+h0=Nome do contador responsável
+t1=CPF:,cpf,c,18,110,,
+h1=CPF do contador responsável
+t2=linha-25
+t3=coluna+220
+t4=CRC:,crc,c,18,110,,
+h4=CRC do contador responsável
+t5=coluna-220
+t6=CNPJ:,cnpj,c,20,110,,
+h6=CNPJ do escritório de contabilidade (se houver)
+t7=Localização#007E7E7E\house.png,,,,410, ,
+t8=Endereço:,endereco,c,50,330,,
+h8=Endereço Rua, Av, etc...
+t9=CEP:,cep,c,9,70,@B$fcep(),cep(cep;endereco;bairro;uf;cidade),
+h9=Número do CEP
+t10=linha-25
+t11=coluna+140
+t12=Bairro:,bairro,c,30,190,,
+h12=Nome do Bairro
+t13=coluna-140
+t14=UF:,uf,c,2,30,@BU,estado2.rcl,
+h14=Sigla da UF (Estado) <F2>
+t15=linha-25
+t16=coluna+110
+t17=Cidade:,cidade,c,30,205,@B,<#17>geral.rcl{ufsigla=uf/""},
+h17=Nome da Cidade
+t18=coluna-110
+t19=Contato#007E7E7E\telephone.png,,,,410, ,
+t20=Telefones:,fone,c,60,130,,
+h20=Número do Telefone
+t21=linha-25
+t22=coluna+200
+t23=FAX:,fax,c,60,130,,
+h23=Número do FAX
+t24=coluna-200
+t25=EMAIL:,email,c,255,330,@L,
+h25=Endereço de E-MAIL
+validacao=validarCnpj(cpf),validarCnpj(cnpj)
+
+[diversos]
+tab=CAMPOS DIVERSOS
+comentario=
+db=tipotran
+ordem=descricao
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Sigla,mask,c,3,60,,
+c2=Descrição,descricao,c,80,200,,
+c3=Tabela,tabela,c,100,200,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=440
+largura=460
+BotaoAlterar=RCL
+foco=iest
+forcarleftmask=90
+t0=FISCO - Contribuinte Substituição Tributária#007E7E7E\doc_stand.png,,,,410, ,
+t1=UF:,uf,c,2,30,@BU,estado2.rcl,
+h1=Sigla da UF (Estado) <F2>
+t2=IE:,iest,c,20,130,,
+h2=Inscrição Estadual de Substituição Tributária
+t3=Ordem de Coleta#007E7E7E\doc_stand.png,,,,410, ,
+t4=Layout:,lpt3,c,30,150,,
+h4=Layout de impressao
+t5=Outros#007E7E7E\doc_stand.png,,,,410, ,
+t6=forcarleftmask=130
+t7=Dia(s) para Entrega:,dEntrega,i,3,80,,
+h7=Prazo de dias para entrega (Previsão de entrega)
+
+[container]
+tab=MENSAGEM DE CONTAINER
+comentario=
+db=tipotran
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Sigla,mask,c,3,60,,
+c2=Descrição,descricao,c,80,200,,
+c3=Tabela,tabela,c,100,200,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=440
+largura=460
+BotaoAlterar=RCL
+foco=
+forcarleftmask=110
+t0=Mensagem quanto tiver Container#007E7E7E\textfield.png,,,,490, ,
+t1=forcarleftmask=10
+t2=,msgContainer,t,0,420x140,,
+h2=Mensagem Completa
+
+[protInut]
+tab=RECUPERA XML DE INUTILIZAÇÃO
+comentario=
+db=tipotran
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Sigla,mask,c,3,60,,
+c2=Descrição,descricao,c,80,200,,
+c3=Tabela,tabela,c,100,200,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=440
+largura=460
+BotaoAlterar=RCL
+foco=
+forcarleftmask=110
+t0=Campos do XML#007E7E7E\textfield.png,,,,490, ,
+t1=Protocolo:,inutCTeProt,c,15,130,,
+t2=Data:,inutCTeData,d,10,84,,
+t3=Hora:,inutCTeHora,h,5,84,,
+
+[xICMS]
+tab=CÁLCULO DO ICMS
+comentario=
+db=nil
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=DOC,id,+,8,60,,
+c1=Tipo,tipo,c,3,60,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=440
+largura=460
+BotaoAlterar=
+foco=baseicms
+forcarleftmask=100
+t0=CST:,cst,ci,1,30,,<#3>classtri.rcl,
+t1=Redução:,pRedBc,p,11,84,,
+t2=Base do ICMS:,baseicms,f,11,84,,
+t3=Aliquota:,aliquota,p,9,84,,
+t4=Valor ICMS:,valoricms,e,11,84,,
+t5=Total:,total,f,11,84,,
+
+[xNFSe]
+tab=NFSE
+comentario=
+db=nil
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=DOC,id,+,8,60,,
+c1=Tipo,tipo,c,3,60,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=440
+largura=460
+BotaoAlterar=
+foco=nfsNumero
+forcarleftmask=100
+t0=Lote:,nfsNumeroLote,i,11,84,,
+t1=NFSe:,nfsNumero,i,11,84,,
+t2=Base ISS:,baseiss,f,11,84,,
+t3=ISS:,iss,p,11,84,,
+t4=Valor ISS:,valorIss,f,11,84,,
+
+[xCTe]
+tab=CT-e_
+comentario=
+db=nil
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=DOC,id,+,8,60,,
+c1=Tipo,tipo,c,3,60,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=440
+largura=460
+BotaoAlterar=
+foco=ctChave
+forcarleftmask=100
+t0=Código:,cCT,i,10,200,,
+t1=Chave:,ctChave,c,44,300,,
+t2=Prot. de Uso:,ctProtocolo,c,15,100,,
+t3=Recebimento:,ctRecbto,c,20,200,,
+t4=DigVal:,ctDigVal,c,50,200,,
+t5=cStat:,ctStat,c,3,40,,
+t6=Motivo:,ctMotivo,c,50,200,, 
+t7=XML:,ctXml,i,1,30,,
+t8=Cancelamento#007E7E7E\textfield.png,,,,490, ,
+t9=Prot. de Canc:,caProtocolo,c,15,100,,
+#t4=xml:,c
+
+[xGeral]
+tab=GERAL
+comentario=
+db=nil
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=DOC,id,+,8,60,,
+c1=Tipo,tipo,c,3,60,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=440
+largura=460
+BotaoAlterar=
+foco=uf1
+forcarleftmask=100
+t0=Locais#007E7E7E\textfield.png,,,,490, ,
+t1=UF:,uf1,c,2,30,@BU,estado2.rcl,
+h1=Sigla da UF (Estado) <F2>
+t2=linha-25
+t3=coluna+110
+t4=Coleta:,coleta,c,30,185,@B,<#17>geral.rcl{ufsigla=uf1/""},
+h4=Nome da Cidade
+t5=coluna-110
+t6=UF:,uf2,c,2,30,@BU,estado2.rcl,
+h6=Sigla da UF (Estado) <F2>
+t7=linha-25
+t8=coluna+110
+t9=Entrega:,entrega,c,30,185,@B,<#17>geral.rcl{ufsigla=uf2/""},
+h9=Nome da Cidade
+t10=Transporte#007E7E7E\delivery.png,,,,490, ,
+t11=coluna-110
+t12=Motorista:,motorista,i,8,60,,?cadastro.rcl,
+h12=Motorista
+t13=Placa:,placa,c,8,80,@U,
+t14=CFOP:,operacao,ci,5,60,,cfopnota.rcl,
+t15=Outros#007E7E7E\delivery.png,,,,490, ,
+t16=Cancelado:,cancelado,sn,3,30,,
+t17=Inutilizado:,inutilizado,sn,3,30,,
+t18=Motivo:,motivo,c,30,300,,
+t19=Manifesto:,manifesto,i,10,80,,
+t20=Seguro:,seguroEnv,i,10,80,,
+t21=Reentrega:,reentrega,sn,3,30,,
+t22=Devolução:,devolucao,sn,3,30,,
+t23=EDI#007E7E7E\delivery.png,,,,490, ,
+t24=NOTFIS:,edisys,i,10,80,,
+t25=CONEMB:,ediemb,i,10,80,,
+t26=OCOREN:,edioco,i,10,80,,
+t27=#DOCCOB:,edi,i,10,80,,
+
+[OFTP2]
+tab=DADOS OFTP2
+comentario=
+db=nil
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=DOC,id,+,8,60,,
+c1=Tipo,tipo,c,3,60,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=440
+largura=460
+BotaoAlterar=
+foco=cRef
+forcarleftmask=100
+t0=Referencia:,cRef,c,10,80,,
+t1=RefCom:,cRefCom,c,4,80,,
+t2=OFTP2:,oftp2,i,10,80,,
+
+[xSeguro]
+tab=DADOS DO SEGURO
+comentario=
+db=nil
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=DOC,id,+,8,60,,
+c1=Tipo,tipo,c,3,60,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=440
+largura=460
+BotaoAlterar=
+foco=nApol
+forcarleftmask=100
+t0=Seguradora:,cSeg,i,6,60,,?cadastro.rcl,
+t1=Apólice 1:,nApol,c,20,200,,
+t2=Apólice 2:,nApol2,c,20,200,,
+t3=Averbação:,nAver,c,40,200,,
+
+
+[impostos]
+tab=Composição do Imposto
+db=tipotran
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Sigla,mask,c,3,60,,
+nobrowse=1
+where=(id=$IDORIGEM)
+altura=440
+largura=460
+foco=impIRPJ
+forcarleftmask=100
+t0=IRPJ:,impIRPJ,p,11,84,,
+h0=Imposto sobre a Renda da Pessoa Jurídica
+t1=IPI:,impIPI,p,11,84,,
+h1=Imposto sobre Produtos Industrializados, exceto o incidente na importação
+t2=CSLL:,impCSLL,p,11,84,,
+h2=Contribuição Social sobre o Lucro Líquido
+t3=COFINS:,impCOFINS,p,11,84,,
+h3=Contribuição para o Financiamento da Seguridade Social, exceto a incidente na importação
+t4=PIS/PASEP:,impPIS,p,11,84,,
+h4=Contribuição para o Programa de Integração Social e de Formação do Patrimônio do Servidor Público, exceto a incidente na importação
+t5=INSS:,impINSS,p,11,84,,
+h5=Contribuição para a Seguridade Social, a cargo da pessoa jurídica (patronal), exceto as receitas dos Anexos IV e V
+t6=ICMS:,impICMS,p,11,84,,
+h6=Imposto sobre operações relativas à circulação de mercadorias e sobre prestações de serviços de transporte interestadual e intermunicipal e de comunicação
+t7=ISS:,impISS,p,11,84,,
+h7=Imposto sobre serviços de qualquer natureza
+t8=Total:,impostos,p,11,84,@R&cor(clblue|clwhite),
+t9=linha+30
+t10=#label|Crédito de ICMS
+t11=frame|380|40
+t12=linha+10
+t13=Credito ICMS:,aliqCredIcms,p,11,84,,
+calc0=impostos=+impIRPJ,+impIPI,+impCSLL,+impCOFINS,+impPIS,+impINSS,+impICMS,+impISS
+
+[spedcontr]
+tab=SPED Contribuições PIS/COFINS
+comentario=
+db=tipotran
+ordem=descricao
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Sigla,mask,c,3,60,,
+c2=Descrição,descricao,c,80,200,,
+c3=Tabela,tabela,c,100,200,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=440
+largura=460
+foco=EFDcod_inc_trib
+forcarleftmask=180
+t0=Regime de Apuração <Registro 0110>#007E7E7E\database.png,,,,410, ,
+t1=Incidência tributária no periodo:,EFDcod_inc_trib,i,1,30,,sped.rcl,
+t2=Método apropr. créd. comuns:,EFDind_apro_cred,i,1,30,,<#2>sped.rcl,
+t3=Tipo contrib. apurada período:,EFDcod_tipo_cont,i,1,30,,<#3>sped.rcl,
+t4=Alíquotas#007E7E7E\database.png,,,,410, ,
+t5=PIS/PASEP:,EFDpis,p,11,84,,
+t6=COFINS:,EFDcofins,p,11,84,,
+t7=Código CSA <Registro M210 e M610>#007E7E7E\database.png,,,,410, ,
+t8=Cód. Contrib. Social Apurada:,EFDcod_cont,i,3,30,,<#4>sped.rcl,
+
+[cartadecorrecao1]
+tab=CARTA DE CORREÇÃO
+db=ctrchist
+ignoreforcedb=Sim
+ordem=id desc
+chave=id
+chaveprincipal=id
+naoEditar=nProt,,dt,CARTA DE CORREÇÃO PROTOCOLADA E NÃO PODE SER
+c0=Sequencia,nSeq,i,3,80,,
+c1=Data,&DataHora(data|hora|) as data,d,10,120,,
+c2=Protocolo,nProt,c,0,130,,
+c3=Correções,nCorrecoes,i,3,100,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+#BotaoAlterar=Nao
+BotaoExtra=imprimirCCe
+nobrowse=0
+reservado=0
+where=(documento=$IDORIGEM)and(tpdoc=5)and(tipo="$IDORIGEM2")
+relacaokey=documento,$IDORIGEM
+relacaokey2=tipo,"$IDORIGEM2"
+relacaokey3=tpdoc,"5"
+altura=450
+largura=520
+btfst=v
+foco=data
+forcarleftmask=110
+t0=Data:,data,d,10,70,,
+t1=Hora:,hora,h,8,70,,
+t2=Sequencia:,nSeq,i,3,60,,
+t3=Protocolo:,nProt,c,0,130,,
+t4=Correções:,nCorrecoes,i,3,60,,
+t5=Pedido XML#007E7E7E\textfield.png,,,,490, ,
+t6=forcarleftmask=10
+t7=,xmlPed,t,0,480x140,,
+
+[cartadecorrecao2]
+tab=CARTA DE CORREÇÃO
+comentario=
+db=ctrchist
+ignoreforcedb=
+ordem=eventOk,id
+#campoXml desc
+rcl=
+chave=id
+chaveprincipal=id
+naoEditar=nProt,,dt,ESTE ITEM PERTENCE A UMA CARTA DE CORREÇÃO, NÃO PODE SER EXCLUIDO
+c0=Enviado,eventOk,c,10,60,,
+c1=Campo,campoXml,c,255,150,,
+c2=Alteração,anote,c,255,300,,
+btfst=$$$
+#BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Nao
+#BotaoExtra=protocolarCCe
+nobrowse=0
+reservado=0
+resetar=cartadecorrecao1|cartadecorrecao3|cartadecorrecao4
+where=(documento=$IDORIGEM)and(tpdoc=4)and(tipo="$IDORIGEM2")
+relacaokey=documento,$IDORIGEM
+relacaokey2=tipo,"$IDORIGEM2"
+relacaokey3=tpdoc,"4"
+#campoinfo=anote,Descrição completa,c,100
+Rlt=
+altura=250
+largura=520
+foco=data
+forcarleftmask=90
+t0=Alteração de Cadastros#007E7E7E\textfield.png,,,,490, ,
+t1=linha+25
+t2=Grupo:,tipoCad=@;Remetente;Local de Coleta;Expedidor;Destinatario;Local de Entrega;Recebedor;Tomador,l,10,380,,,
+t3=linha+10
+t4=Cadastro:,cadastro,ci,9,60,,?cadastro.rcl,
+validacao=limiteInt(cadastro;[1-999999999]|O Campo cadastro deve ser preenchido)
+
+[cartadecorrecao4]
+tab=CARTA DE CORREÇÃO
+comentario=
+db=ctrchist
+ignoreforcedb=
+ordem=eventOk,id
+#campoXml desc
+rcl=
+chave=id
+chaveprincipal=id
+naoEditar=nProt,,dt,ESTE ITEM PERTENCE A UMA CARTA DE CORREÇÃO, NÃO PODE SER EXCLUIDO
+c0=Enviado,eventOk,c,10,60,,
+c1=Campo,campoXml,c,255,150,,
+c2=Alteração,anote,c,255,300,,
+btfst=$$$
+#BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Não
+#BotaoExtra=protocolarCCe
+nobrowse=0
+reservado=0
+resetar=cartadecorrecao1|cartadecorrecao2|cartadecorrecao3
+where=(documento=$IDORIGEM)and(tpdoc=4)and(tipo="$IDORIGEM2")
+relacaokey=documento,$IDORIGEM
+relacaokey2=tipo,"$IDORIGEM2"
+relacaokey3=tpdoc,"4"
+#campoinfo=anote,Descrição completa,c,100
+Rlt=
+altura=280
+largura=520
+foco=data
+forcarleftmask=90
+t0=Municipio de Envio do CT-e#007E7E7E\textfield.png,,,,480, ,
+t1=UF:,uf1,c,2,30,@XBU,estado2.rcl,
+h1=Sigla da UF (Estado) <F2>
+t2=linha-25
+t3=coluna+110
+t4=Cidade:,cidade1,c,30,270,@XB,<#17>geral.rcl{ufsigla=uf1/""},
+h4=Nome da Cidade
+t5=coluna-110
+t6=Municipio de Inicio do Transporte#007E7E7E\textfield.png,,,,480, ,
+t7=UF:,uf2,c,2,30,@XBU,estado2.rcl,
+h7=Sigla da UF (Estado) <F2>
+t8=linha-25
+t9=coluna+110
+t10=Cidade:,cidade2,c,30,270,@XB,<#17>geral.rcl{ufsigla=uf2/""},
+h10=Nome da Cidade
+t11=coluna-110
+t12=Municipio de Final do Transporte#007E7E7E\textfield.png,,,,480, ,
+t13=UF:,uf3,c,2,30,@XBU,estado2.rcl,
+h13=Sigla da UF (Estado) <F2>
+t14=linha-25
+t15=coluna+110
+t16=Cidade:,cidade3,c,30,270,@XB,<#17>geral.rcl{ufsigla=uf3/""},
+h16=Nome da Cidade
+t17=coluna-110
+
+[cartadecorrecao3]
+tab=CARTA DE CORREÇÃO
+comentario=
+db=ctrchist
+ignoreforcedb=
+ordem=eventOk,id
+#campoXml desc
+rcl=
+chave=id
+chaveprincipal=id
+naoEditar=nProt,,dt,ESTE ITEM PERTENCE A UMA CARTA DE CORREÇÃO, NÃO PODE SER EXCLUIDO
+c0=Enviado,eventOk,c,10,60,,
+c1=Campo,campoXml,c,255,150,,
+c2=Alteração,anote,c,255,300,,
+#BotaoIncluir=Não
+#BotaoExcluir=Não
+#BotaoAlterar=Sim
+BotaoExtra=protocolarCCe
+nobrowse=0
+reservado=0
+resetar=cartadecorrecao1|cartadecorrecao2|cartadecorrecao4
+where=(documento=$IDORIGEM)and(tpdoc=4)and(tipo="$IDORIGEM2")
+relacaokey=documento,$IDORIGEM
+relacaokey2=tipo,"$IDORIGEM2"
+relacaokey3=tpdoc,"4"
+#campoinfo=anote,Descrição completa,c,100
+Rlt=
+altura=340
+largura=520
+foco=campoXml|anote
+forcarleftmask=90
+t0=Campo:,campoXml,ci,255,200,@X,.auto_cte.rcl,
+t1=Novo Conteudo do campo#007E7E7E\textfield.png,,,,490, ,
+t2=#codigo,codigo,i,39,300,,
+t3=forcarleftmask=10
+t4=,anote,t,0,480x140,,
+h4=Descrição do Evento
+validacao=campoPreenchido(campoXml),campos_do_CTe(campoXml)
+
+
+[mdfe]
+tab=AJUSTES PARA EMISSÃO DE MFD-e
+comentario=
+db=nfecfg
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,5,60,,
+c1=Certificado,certificado,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=1
+where=tipotran=$IDORIGEM
+Rlt=*
+altura=170
+largura=460
+foco=mdfeSerie
+forcarleftmask=90
+t0=Emissão da MDF-e#007E7E7E\page_code.png,,,,400, ,
+t1=Modelo:,mdfeModelo=@58,l,3,40,,,
+h1=Código do Modelo da MDF-e@-> Consultar contador.
+t2=Série:,mdfeSerie=1,i,5,50,,
+h2=Número de série da MFD-e
+t3=Ambiente:,mdfeAmbiente=@Homologação;Produção,l,20,240,,
+t4=CITO:,CITO,c,12,240,,
+t5=Informação ao Fisco#007E7E7E\textfield.png,,,,400, ,
+t6=forcarleftmask=10
+t7=,mdfeInfAdFisco,t,0,390x140,,
+
+[obsCont]
+tab=CT-E Campo obsCont
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=certificado,certificado,c,50,100,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=
+where=tipotran=$IDORIGEM
+Rlt=*
+altura=170
+largura=460
+foco=obsCont
+forcarleftmask=110
+t0=Campos:,obsCont,t,0,280x300,,,
+
+
+[nfsetrib]
+tab=NFS-e Tributação
+db=set_mult
+ordem=codigo
+chave=id
+chaveprincipal=id
+c0=Preferencial,ativo,sn,3,80,,
+c1=Código,codigo,c,8,60,,
+c2=Descrição,txt_2,c,255,240,,
+c3=Aliq,aliquota,p,6,60,,
+nobrowse=0
+relacaokey=nome,"nfse_trib"
+autoIncluir=0
+where=nome='nfse_trib'
+altura=440
+largura=600
+foco=codigo
+forcarleftmask=90
+t0=Código:,codigo,c,10,80,,
+t1=CNAE:,txt_1,c,10,80,,
+t2=Descrição:,txt_2,c,255,450,,
+t3=Aliquota:,aliquota,p,11,84,,
+t4=Preferencial:,ativo,sn,3,30,,
+t5=coluna=10
+t6=forcarleftmask=0
+t7=Descrição dos Serviços (Padrão)#007E7E7E\page_code.png,,,,530, ,
+t8=forcarleftmask=10
+t9=coluna=0
+t10=,txt_3,t,0,530x150,,
+
+[validacao]
+tab=Script de Validação
+db=nfecfg
+ordem=id
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=certificado,certificado,c,50,100,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=
+where=tipotran=$IDORIGEM
+Rlt=*
+altura=170
+largura=460
+foco=validacao
+forcarleftmask=20
+t0=label|Script de Validação
+t1=linha+5
+t2=<,validacao,t,0,410x300,,,
+
+[ocotrans]
+tab=OCORRËNCIAS DE ENTREGA - PADRÃO EDI
+comentario=
+db=ocotrans
+ordem=codigo
+rcl=
+chave=codigo
+chaveprincipal=id
+c0=Código,codigo,c,8,60,,
+c1=Descrição,descricao,c,100,275,,
+c2=Pers.,codigo2,c,5,40,,
+c3=Ativo,ativo,sn,3,30,,
+reservado=1..24
+Rlt=conhecim.ocorrencia,conheci1.ocorrencia,conheci2.ocorrencia,minuta.ocorrencia
+msg=DOCUMENTO(s)
+altura=280
+largura=470
+foco=codigo
+botaoExcluir=
+t0=Código:,codigo,i,3,30,,
+h0=Código da ocorrência
+t1=Descrição:,descricao,c,100,300,,
+h1=Descrição completa da ocorrência
+t2=Ativo:,ativo=Sim,sn,3,30,,
+h2=Ocorrência ativa (Sim/Não)
+t3=Personalização#007E7E7E\page_white_edit.png,,,,395, ,
+t4=Código:,codigo2,c,10,100,,
+h4=Código da ocorrência
+t5=Descrição:,descricao2,c,100,300,,
+h5=Descrição completa da ocorrência
+
+[ocorrobs]
+tab=OBSERVAÇÃO DE OCORRÊNCIAS DE ENTREGA - PADRAO EDI
+comentario=
+db=ocorrobs
+ordem=codigo
+rcl=
+chave=codigo
+chaveprincipal=id
+c0=Código,codigo,c,8,60,,
+c1=Descrição,descricao,c,100,200,,
+altura=190
+largura=470
+foco=codigo
+botaoExcluir=Não
+reservado=1..8
+t0=Código:,codigo,i,3,30,,
+h0=Código da ocorrência
+t1=Descrição:,descricao,c,100,300,,
+h1=Descrição completa da ocorrência
+
+[dacteAjustes]
+tab=DACTE AJUSTES
+db=set_mult
+ordem=txt_1
+chave=id
+chaveprincipal=id
+c0=Código,id_1,+,10,50,,
+c1=Tipo,txt_1,c,255,340,,
+c2=Ativo,ativo,sn,3,30,,
+nobrowse=1
+Rlt=
+SET_MULT=DACTE_AJUSTE_DE_CAMPOS
+relacaokey=nome,"DACTE_AJUSTE_DE_CAMPOS"
+autoIncluir=1
+where=nome='DACTE_AJUSTE_DE_CAMPOS'
+altura=210
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Telefones:,txt_1,c,100,300,,
+t1=forcarleftmask=240
+t2=Remover dados motorista na observacao:,id_1,sn,3,30,,
+
+[pentrega]
+tab=POSIÇÃO DA ENTREGA
+btautoedit=0
+comentario=
+db=tabela[1]
+rcl=
+trus=1
+chave=id
+chavePrincipal=id
+c0=Processo,id,i,30,60,,
+c1=Emissão,emissao,d,11,84,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=320
+largura=430
+foco=pos_dCarrega
+forcarleftmask=150
+forcarrightlabel=1
+#botaoExtra=imprimir
+t0=linha=0
+t1=Data/Hora de Entrega#clgray\clock.png,,,,10*390*65*1*1, ,
+t2=#coluna-180
+t3=Carregamento:,pos_dCarrega,d,10,70,,
+h3=Data do carregamento
+t4=linha-25
+t5=coluna+75
+t6=,pos_hCarrega,h,5,40,,
+h6=Hora do carregamento
+t7=coluna-75
+t8=Saída:,pos_dSaida,d,10,70,,
+h8=Data da saída
+t9=linha-25
+t10=coluna+75
+t11=,pos_hSaida,h,5,40,,
+h11=Hora da saída
+t12=coluna-75
+t13=linha+5
+t14=Posição da Entrega#clgray\clock.png,,,,10*390*220*1*1, ,
+t15=Previsão:,pos_previsao,d,10,70,,
+h15=Data de previsão da entrega
+t16=linha-25
+t17=coluna+75
+t18=,pos_prehora,h,5,40,,
+h18=Hora prevista para entrega
+t19=linha-25
+t20=coluna+75
+t21=à,pos_prehora2,h,5,40,,
+h21=Hora prevista para entrega
+
+t23=coluna-150
+t34=Entrega:,pos_dataentrega,d,10,70,,
+h34=Data da entrega
+t35=linha-25
+t36=coluna+75
+t37=,pos_horaentrega,h,5,40,,
+h37=Hora da entrega
+t38=coluna-75
+t39=Garantia:,pos_garantia,c,50,210,,
+h39=Garantia de entrega
+t40=Recebido por:,recebidopor,c,20,210,,
+h40=Nome do responsável pelo recebimento 
+

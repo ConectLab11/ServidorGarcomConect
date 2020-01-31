@@ -1,0 +1,351 @@
+[Cadastros]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Excluir
+m6=Imprimir
+m7=Opções
+m8=Relatórios
+m9=
+
+[Historicos]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Excluir
+m6=Imprimir
+m7=Relatórios
+m8=
+m9=
+
+[Produtos]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Excluir
+m6=Imprimir
+m7=Manutenção
+m8=Ver Movimentos
+m9=Relatórios
+
+[Veiculos]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Excluir
+m6=Imprimir
+m7=Ver Movimentos
+m8=Relatórios
+m9=
+
+[OrdemDeServico]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Cancelar
+m6=Imprimir
+m7=Faturar
+m8=Relatórios
+m9=
+
+[OrdemDeServico-Auto]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Cancelar
+m6=Imprimir
+m7=Faturar
+m8=Relatórios
+m9=
+
+[NotaFiscalServico]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Cancelar
+m6=Imprimir
+m7=Faturar
+m8=Relatórios
+m9=
+
+[PedidoDeVendas]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Cancelar
+m6=Imprimir
+m7=Faturar
+m8=Manutenção
+m9=Relatórios
+
+[DevoluçãoDeProdutos]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=
+m5=Cancelar
+m6=Imprimir
+m7=
+m8=
+m9=Relatórios
+
+[PedidoDeCompras]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Excluir
+m6=Imprimir
+m7=Autorizar
+m8=Manutenção
+m9=Relatórios
+
+[NotaFiscalVendas]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Cancelar
+m6=Imprimir
+m7=Faturar
+m8=Relatórios
+m9=Impressão Remota
+
+[ConhecimentoMinuta]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Cancelar
+m6=Imprimir
+m7=Manutenção
+m8=Relatórios
+m9=Cotação Frete
+
+[ManifestoDeCarga]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Cancelar
+m6=Imprimir
+m7=Baixar
+m8=Relatórios
+m9=
+
+[ConsultaDeNotaFiscal]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=
+m4=
+m5=
+m6=
+m7=
+m8=
+m9=
+
+[OrdemDeServiçoDeTransporte]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Cancelar
+m6=Imprimir
+m7=Relatórios
+m8=
+m9=
+
+[MinutaDeTransporteAduaneiro]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Cancelar
+m6=Imprimir
+m7=Relatórios
+m8=
+m9=
+
+[CTRCDeTransporteAduaneiro]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Cancelar
+m6=Imprimir
+m7=Relatórios
+m8=
+m9=
+
+[OrdemDeColeta]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Cancelar
+m6=Imprimir
+m7=Baixar
+m8=Relatórios
+m9=
+
+[Abastecimento]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Cancelar
+m6=Imprimir
+m7=Baixar
+m8=Relatórios
+m9=
+
+[DemonstrativoDePagamentos]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Cancelar
+m6=Imprimir
+m7=Gera Pagar
+m8=
+m9=
+
+[PlanoDeContas]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Cancelar
+m6=Imprimir
+m7=
+m8=
+m9=
+
+[Faturamento]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Cancelar
+m6=Imprimir
+m7=Manutenção
+m8=
+m9=
+
+[ContasaReceber]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Excluir
+m6=Imprimir
+m7=Baixar
+m8=Manutenção
+m9=Relatórios
+
+
+[ContasaPagar]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Excluir
+m6=Imprimir
+m7=Baixar
+m8=Manutenção
+m9=Relatórios
+
+[MovimentoDeCaixa]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=
+m4=
+m5=
+m6=Imprimir
+m7=
+m8=
+m9=
+
+[ResultadosGerenciais]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=
+m4=
+m5=
+m6=Imprimir
+m7=
+m8=
+m9=
+
+[PesquisasRelatorios]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=
+m4=
+m5=
+m6=Imprimir
+m7=Manutenção
+m8=
+m9=
+
+[MatrizFilial]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=
+m3=
+m4=
+m5=
+m6=
+m7=
+m8=Manutenção
+m9=
+
+[ManutencaoDeParametros]
+m0=Visualizar Opção no menu
+m1=Item Bloqueado
+m2=Consultar
+m3=Incluir
+m4=Alterar
+m5=Excluir
+m6=Imprimir
+m7=
+m8=
+m9=
+
+
+

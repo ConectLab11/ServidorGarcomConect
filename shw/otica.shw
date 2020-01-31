@@ -1,0 +1,192 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# ConectLab Informatica Ltda
+# Data: 04/12/2016
+#
+#
+# a todos
+
+[arquivo]
+modulo=OTICA
+nivelprincipal=0
+nivelauxiliar=0
+pdx=
+
+[Opcoes]
+o0=Otica, 0123456789, 1, 0, ex
+
+[Otica]
+o0=nil, Consultor, consultor, 0123, 0, 11,x 
+o1=nil, Esférico, esferico, 0123, 0, 11,x
+o2=nil, Cilindrico, cilindrico, 0123, 0, 11,x
+o3=nil, EIXO, eixo, 0123, 0, 11, x
+
+
+#o1=nil, Lentes, lentes, 0123, 0, 13, x
+#o2=nil, Tratamentos, tratamentos, 0123, 0, 13, x
+#o3=nil, Armação, armacao, 0123, 0, 13, x
+#
+# Parametros de tela
+#
+
+[geral]
+tab=GERAL
+comentario=
+db=rclsoft
+ordem=empresa
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=Codigo,id,+,5,60,,
+c1=Empresa,empresa,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=410
+largura=460
+foco=consumidor_mesa
+t0=#Cadastro Relacionado#007E7E7E\house.png,,,,410, ,
+t1=forcarleftmask=170
+t2=coluna-30
+t3=Cadastro:,consumidor_mesa,i,6,60,,cadastrx.rcl,
+h3=Cadastro Relacionado a Venda por Mesa||{,,,clnavy}(F2) Opções
+t4=Atendente:,atendente,i,3,30,,vendedo_.rcl,
+h4=Atendente / Garçom
+t5=Tx de Serviço:,taxaServ,p,11,84,,
+h5=Taxa do Atendente
+t6=Tx de entrega p/ Km:,taxaKm,f,11,84,,
+h6=Taxa de entrega por Kilometro
+t7=Tx mínima p/ Km:,taxaMini,f,11,84,,
+h7=Taxa minima para entrega
+
+#t6=Núm. Máximo de Mesas:,maxMesa,i,15,150,,
+
+[consultor]
+tab=CONSULTORES
+db=vendedor
+ordem=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Nome,nome,c,50,300,,
+c2=Ativo,ativo,sn,3,30,,
+Rlt=cupons.vendedo_
+msg=VENDA(S)
+altura=250
+largura=470
+foco=nome
+t0=Código:,id,+,4,30,{rcl^},
+t1=Nome:,nome,c,50,300,,
+t2=Cadastro:,cadastro,i,6,60,,cadastrx.rcl,
+h2=Cadastro relacionado a este vendedor<F2>
+t4=Ativo:,ativo=Sim,sn,3,30,,
+validacao=campoPreenchido(nome)
+
+[lentes]
+tab=TIPO DE LENTES
+db=set_mult
+ordem=descricao
+chave=id
+chaveprincipal=id
+c0=Descrição,descricao,c,100,400,,
+nobrowse=0
+relacaokey=nome,"OTICA_LISTA_LENTES"
+autoIncluir=0
+where=nome='OTICA_LISTA_LENTES'
+altura=200
+largura=440
+foco=descricao
+forcarleftmask=90
+t0=Descrição:,descricao,c,100,300,,
+
+[tratamentos]
+tab=TIPO DE TRATAMENTOS
+db=set_mult
+ordem=descricao
+chave=id
+chaveprincipal=id
+c0=Descrição,descricao,c,100,400,,
+nobrowse=0
+relacaokey=nome,"OTICA_LISTA_TRATAMENTOS"
+autoIncluir=0
+where=nome='OTICA_LISTA_TRATAMENTOS'
+altura=200
+largura=440
+foco=descricao
+forcarleftmask=90
+t0=Descrição:,descricao,c,100,300,,
+
+[armacao]
+tab=TIPO DE ARMAÇÃO
+db=set_mult
+ordem=descricao
+chave=id
+chaveprincipal=id
+c0=Descrição,descricao,c,100,400,,
+nobrowse=0
+relacaokey=nome,"OTICA_LISTA_ARMACAO"
+autoIncluir=0
+where=nome='OTICA_LISTA_ARMACAO'
+altura=200
+largura=440
+foco=descricao
+forcarleftmask=90
+t0=Descrição:,descricao,c,100,300,,
+
+[esferico]
+tab=ESFERICO MEDIDAS
+db=set_mult
+ordem=cast(descricao as SIGNED)
+chave=id
+chaveprincipal=id
+c0=Medidas,descricao,c,100,400,,
+nobrowse=0
+relacaokey=nome,"OTICA_LISTA_ESFERICO"
+autoIncluir=0
+where=nome='OTICA_LISTA_ESFERICO'
+altura=200
+largura=440
+foco=descricao
+forcarleftmask=90
+t0=Valor:,descricao,c,100,300,,
+
+[cilindrico]
+tab=CILINDRICO MEDIDAS
+db=set_mult
+ordem=cast(descricao as SIGNED)
+chave=id
+chaveprincipal=id
+c0=Medidas,descricao,c,100,400,,
+nobrowse=0
+relacaokey=nome,"OTICA_LISTA_CILINDRICO"
+autoIncluir=0
+where=nome='OTICA_LISTA_CILINDRICO'
+altura=200
+largura=440
+foco=descricao
+forcarleftmask=90
+t0=Valor:,descricao,c,100,300,,
+
+
+[EIXO]
+tab=EIXO VALORES
+db=set_mult
+ordem=cast(descricao as SIGNED)
+chave=id
+chaveprincipal=id
+c0=Grau,descricao,c,100,400,,
+nobrowse=0
+relacaokey=nome,"OTICA_LISTA_EIXO"
+autoIncluir=0
+where=nome='OTICA_LISTA_EIXO'
+altura=200
+largura=440
+foco=descricao
+forcarleftmask=90
+t0=Valor:,descricao,c,100,300,,
+
+
+

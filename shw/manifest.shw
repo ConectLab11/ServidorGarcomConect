@@ -1,0 +1,164 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 12/12/2003
+#
+
+[arquivo]
+modulo=MANIFESTO/ROMANEIO
+nivelprincipal=0
+nivelauxiliar=0
+posicionar=3
+
+[Opcoes]
+o0=Manifesto, 0123456789, 9, 0, ae
+
+[Manifesto]
+o0=nil,Ocorrências de viagem, viagem, 0123456789, 9, 15:12, ae
+o1=nil,Generalidades, geral, 0123456789, 9, 15:23, ae
+o2=nil,Baixa de entrega, chegada, 0123456789, 9, 15:3, ae
+
+
+[chegada]
+tab=CONFIRMAÇÃO DE CHEGADA DO MANIFESTO/ROMANEIO
+comentario=
+db=nil
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=placa,placa,c,8,80,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=1
+where=id=$IDORIGEM
+Rlt=*
+altura=170
+largura=460
+foco=dtChegada
+forcarleftmask=110
+t0=#Previsão da chegada/entrega#007E7E7E\clock.png,,,,410, ,
+t1=#Destino:,destino,c,50,300,,
+h1=#Nome da cidade destino
+t2=#Distância:,distancia,i,11,80,,
+h2=#Distância em kilometros
+t3=#Previsão:,prazod,d,10,70,,
+h3=#Data prevista para chegada/entrega
+t4=#linha-25
+t5=#coluna+120
+t6=#Hora:,prazoh,h,5,60,,
+h6=#Hora prevista para chegada/entrega
+#t7=#coluna-120
+t7=linha-20
+t8=Chegada/Entrega#007E7E7E\clock.png,,,,410, ,
+t9=Data:,dtChegada,d,10,70,,
+h9=Data da chegada/entrega
+t10=linha-24
+t11=coluna+120
+t12=Hora:,hrChegada,h,5,60,,
+h12=Hora da chegada/entrega
+t13=coluna-120
+t14=Recebido por:,xRecebido,c,50,300,,
+h14=Nome do resposável pelo recebimento da carga
+t15=Observações#007E7E7E\page_white_edit.png,,,,410, ,
+h15=Observações 
+t16=coluna=0
+t17=forcarleftmask=10
+t18=,xObs,tw,255,400x100,,
+h18=Observações
+t19=,flagChegada,sn,3,30,@V,
+validacao=DataFlag(dtChegada;flagChegada)
+
+[viagem]
+tab=OCORRÊNCIAS DE VIAGEM
+comentario=
+db=ctrchist
+ignoreforcedb=Sim
+ordem=data,hora desc
+rcl=
+chave=id
+chaveprincipal=id
+c0=Data,&DataHora(data|hora|) as data,d,10,100,,
+c1=Descrição,anote,c,0,100,,
+#BotaoIncluir=Não
+#BotaoExcluir=Não
+#BotaoAlterar=Sim
+nobrowse=0
+reservado=0
+where=(documento=$IDORIGEM)and(tipo="$IDORIGEM2")
+relacaokey=documento,$IDORIGEM
+relacaokey2=tipo,"$IDORIGEM2"
+whereextra=manifesto=1
+campoinfo=anote,Descrição completa,c,100
+Rlt=
+altura=330
+largura=460
+foco=data
+forcarleftmask=110
+t0=Data:,data,d,10,70,,
+h0=Data da Ocorrência
+t1=linha-25
+t2=coluna+110
+t3=Hora:,hora,h,5,40,,
+h3=Hora da Ocorrência
+t4=coluna-110
+t5=Ocorrencia:,ocorrencia,ci,6,40,,ocotrans.rcl,
+t6=linha+5
+t7=Local#007E7E7E\textfield.png,,,,490, ,
+t8=UF:,uf1,c,2,30,@BU,estado2.rcl,
+h8=Sigla da UF (Estado) <F2>
+t9=linha-25
+t10=coluna+130
+t11=Cidade:,cidade1,c,30,185,@B,<#17>geral.rcl{ufsigla=uf1/""},
+h11=Nome da Cidade
+t12=Informações Complementar#007E7E7E\textfield.png,,,,490, ,
+t13=forcarleftmask=10
+t14=,anote,t,0,480x140,,
+h14=Descrição Completa da Ocorrência
+t15=,manifesto=Sim,sn,3,30,@V,
+
+[geral]
+tab=CONFIRMAÇÃO DE CHEGADA DO MANIFESTO/ROMANEIO
+comentario=
+db=nil
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=placa,placa,c,8,80,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=1
+where=id=$IDORIGEM
+Rlt=*
+altura=170
+largura=460
+foco=dtSaida
+forcarleftmask=110
+t0=Previsão da chegada/entrega#007E7E7E\clock.png,,,,410, ,
+t1=Destino:,destino,c,50,300,,
+h1=Nome da cidade destino
+t2=Distância:,distancia,i,11,80,,
+h2=Distância em kilometros
+t3=Previsão:,prazod,d,10,70,,
+h3=Data prevista para chegada/entrega
+t4=linha-25
+t5=coluna+120
+t6=Hora:,prazoh,h,5,60,,
+h6=Hora prevista para chegada/entrega
+t7=coluna-120
+t8=Saída#007E7E7E\clock.png,,,,410, ,
+t9=Data:,dtSaida,d,10,70,,
+h9=Data da saída
+t10=linha-24
+t11=coluna+120
+t12=Hora:,hrSaida,h,5,60,,
+h12=Hora da saída
+t13=coluna-120

@@ -1,0 +1,114 @@
+#
+#  Parametros do menu de manutenção do Sistema
+#  Desenvolvido por Ronaldo C Silva
+#  RCLSoft Comércio e Serviços LTDA. ME.
+#
+#  Criação    : 28/01/2010
+#  Atualização: 10/06/2011 - Ajustes no layout para compatibilidade com 
+#                            personalização de layout por cliente.   
+#
+# a todos
+
+[arquivo]
+modulo=TABELA ORIGEM
+nivelprincipal=1
+nivelauxiliar=1
+disableMenu=0
+telalargura=800
+telaaltura=0
+Posicionar=1
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=nil, Origem, tabelaorigem, 0123456789, 9, 33,a
+
+#
+# Parametros de tela
+#
+ 
+[tabelaorigem]
+tab=PERSONALIZAR IMPRESSÃO DA TABELA DE FRETES
+comentario=
+db=tabfrete
+ordem=id
+rcl=
+relacao=
+mygroup=
+chave=id
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Tabela,descricao,c,50,300,,
+c2=Ativa,ativo,sn,30,60,,
+altura=480
+largura=550
+foco=titulo
+BotaoIncluir=Não
+BotaoExcluir=Não
+forcarleftmask=90
+nobrowse=1
+reservado=1
+where=$whereexterno
+t0=Tabela:,descricao,+,50,440,,
+h0=Nome da tabela, não pode ser alterado.
+t1=Título:,titulo,c,255,440,,
+h1=Título da tabela (ultilizado na impressão da tabela).
+t2=Recursos de Impressão\printer.png,,,,530, ,
+t3=Cabeçalho:,cabecalho,sn,3,30,,
+h3=Imprime o logotipo e os dados da empresa.
+t4=Personalizar Cores#007E7E7E\color_swatch_2.png,,,,530, ,
+t5=forcarleftmask=90
+t6=Dominante:,color=@$00FFC1C1,color,3,40,,
+h6=Cor dominante na impressão dos formulários
+t7=linha-25
+t8=coluna+230
+t9=Fonte:,colorfont0=@$00000000,color,3,40,,
+t10=coluna-230
+t11=forcarleftmask=90
+t12=Grids#007E7E7E\color_swatch_2.png,,,,530, ,
+t13=Linha 1:,colorlinha0=@$00FFFFEA,color,3,40,,
+h13=Cor da linha 1 na impressão dos Grids
+t14=linha-25
+t15=coluna+115
+t16=Linha 2:,colorlinha1=@$00FFFFF4,color,3,40,,
+h16=Cor da linha 2 na impressão dos Grids
+t17=linha-25
+t18=coluna+115
+t19=Fonte:,colorfont1=@$00000000,color,3,40,,
+h19=Cor da fonte na impressão dos Grids
+t20=coluna-230
+t21=forcarleftmask=90
+t22=#coluna-365
+t23=LOGOTIPO_TABELAS#007E7E7E\image_1.png,,,,530, ,
+t24=Ativo:,log_ativo,sn,3,30,,
+t25=linha-25
+t26=coluna+90
+t27=Linha:,log_linha,i,4,40,,
+t28=linha-25
+t29=coluna+100
+t30=Coluna:,log_coluna,i,4,40,,
+t31=linha-25
+t32=coluna+100
+t33=Altura:,log_altura,i,4,40,,
+t34=linha-25
+t35=coluna+105
+t36=Largura:,log_largura,i,4,40,,
+t37=coluna=0
+t38=forcarleftmask=10
+t39=Observação padrão#007E7E7E\text_align_left.png,,,,530, ,
+t40=coluna=0
+t41=labelwidth=0
+t42=,observacao,tw,0,515x300,,
+h42=Observação padrão
+t43=linha+215
+t44=forcarleftmask=200
+t45=Máximo de caracter por linha:,maxcol,i,5,50,,
+t46=forcarleftmask=10
+t47=Rodapé#007E7E7E\layout_select_footer.png,,,,530, ,
+t48=,rodape,tw,0,515x60,,
+h48=3 Linhas a imprimir no rodapé
+t49=Cálculo#007E7E7E\layout_select_footer.png,,,,530, ,
+t50=forcarleftmask=160
+t51=Ignorar Tipo de Veículo:,tipoVeic,sn,3,30,,
+t52=Forçar Frete Peso:,forcaFretePeso,sn,3,30,,

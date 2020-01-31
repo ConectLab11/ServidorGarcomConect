@@ -1,0 +1,144 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 28/01/2010
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=0
+nivelauxiliar=0
+disableMenu=1
+telalargura=610
+telaaltura=0
+pdx=
+individual=1
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=nil, Peso Excedido III, tabelapesoexcedidoIII, 0123456789, 9, 7,a
+
+#
+# Parametros de tela
+#
+
+[tabelapesoexcedidoIII]
+tab=TABELA PESO EXCEDIDO III
+comentario=TABELA PESO EXCEDIDO III
+db=tabefret
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+forcarcoluna=130
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Por tonelada,tonelada,f,16,100,,
+altura=532
+
+
+largura=380
+foco=descr
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=0
+forcarleftmask=110
+nobrowse=1
+t0=coluna=0
+t1=Descrição:,descr,c,50,445,,
+h1=Descrição completa da Tabela.
+t2=Faixa de Pesos (em Kilos)#007E7E7E\delivery.png,,,,545, ,	
+t3=linha+10
+t4=0 à 10,ate_50,f,11,84,,
+h4=Peso até 10 Kilos
+t5=> 10 à 20,ate_100,f,11,84,,
+h5=Peso maior que 10 até 20 Kilos
+t6=> 20 à 30,ate_150,f,11,84,,
+h6=Peso maior que 20 até 30 Kilos
+t7=coluna+180
+t8=linha-75
+t9=> 30 à 40,ate_200,f,11,84,,
+h9=Peso maior que 30 até 40 Kilos
+t10=> 40 à 50,ate_250,f,11,84,,
+h10=Peso maior que 40 até 50 Kilos
+t11=> 50 à 70,ate_300,f,11,84,,
+h11=Peso maior que 50 até 70 Kilos
+t12=coluna+180
+t13=linha-75
+t14=> 70 à 100,ate_350,f,11,84,,
+h14=Peso maior que 71 até 100 Kilos
+t15=coluna-180
+t16=linha+50
+t17=Limite de peso:,limite=@100,e,11,84,,
+h17=Limite de peso para cálculo de peso excedido - se não for preenchido, o padrão será 100 Kg
+t18=linha-25
+t19=coluna+180
+t20=Excedido Kg,tonelada,e,11,84,,
+h20=Taxa por kilo excedido do limite (acima de 100Kg)
+t21=#> 70 à 100,ate_450,f,11,84,,
+h21=#Peso maior que 70 até 100 Kilos
+t22=coluna=0
+t23=Taxas complementares#007E7E7E\sum.png,,,,545, ,
+t24=Sec/Cat:,seccat,f,11,84,,
+h24=Taxa Sec/Cat
+t25=coluna+180
+t26=linha-25
+t27=Despacho:,despacho,f,11,84,,
+h27=Taxa de Despacho
+t28=coluna+180
+t29=linha-25
+t30=Outros:,outros,f,11,84,,
+h30=Outras Taxas
+t31=coluna-360
+t32=linha-0
+t33=ADvalorem:,advalorem,p,11,84,,
+h33=Porcentagem de ADvalorem @(Calculado pelo valor da mercadoria)
+t34=coluna+180
+t35=linha-25
+t36=GRIS:,gris,p,11,84,,
+h36=Porcentagem GRIS @(Calculado pelo valor da mercadoria)
+t37=coluna+180
+t38=linha-25
+t39=GRIS mínimo:,minimored,f,11,84,,
+h39=Valor mínimo do GRIS
+t40=coluna-360
+t41=Pedágio/100Kg:,pedagio,f,11,84,,
+h41=Valor do pedágio por fração de 100 Kg
+t42=coluna+180
+t43=linha-25
+t44=TDE:,tde,p,11,84,,
+h44=Taxa de Dificuldade de Entrega
+t45=coluna+180
+t46=linha-25
+t47=TDE mínimo:,tdeminimo,f,11,84,,
+h47=Valor mínimo da Taxa de Dificuldade de Entrega
+t48=coluna=0
+t49=Frete mínimo:,minimo,f,11,84,,
+h49=Valor mínimo do frete
+t50=coluna+180
+t51=linha-25
+t52=Devolução:,devolucao,p,11,84,,
+h52=Porcentagem a cobrar do frete quando devolução
+t53=coluna+180
+t54=linha-25
+t55=Reentrega:,reentrega,p,11,84,,
+h55=Porcentagem a cobrar do frete quando reentrega
+t56=coluna=0
+t57=Outros#007E7E7E\exclamation_octagon_fram.png,,,,545, ,
+t58=#Com ICMS:,icmsx,sn,3,30,,
+h58=Valor do ICMS será embutido no total do frete ?
+t59=#coluna+180
+t60=#linha-25
+t61=Compartilhada:,compartilhada,sn,3,30,,
+h61=Esta tabela pode ser compartilhada entre os clientes sem tabela ?
+t62=coluna+270
+t63=linha-25
+t64=forcarleftmask=200
+t65=Cobrar Ad valorem p/ NF superior a:,basecalculo,f,11,84,,

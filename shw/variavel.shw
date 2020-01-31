@@ -1,0 +1,703 @@
+[Cadastro]
+v0 =Preferências,Colocar Relatório no menu,relatorio.no.menu,0
+v1 =Preferências,Utilizar data e hora do servidor,sistema.data.hora,0
+v2 =Preferências,Definir o tipo de cadastro na inclusão,definir.tipo.inclusao,0
+v3 =#Preferências,Mostar nome da empresa na janela principal,window.nome.empresa,0
+v4 =Preferências,Sempre verificar se ha nova vesão,verificar.nova.versao,1
+v5 =Preferências,Listar Recebimentos por SUB-ORIGEM,lista.receber.suborigem,0
+v6 =Preferências,Listar Cobranca em ordem de vencimento,cobranca.por.vencimento,0
+v7 =Preferências,Bloquear o download automático de fotos,nunca.carregar.foto,0
+v8 =Preferências,Mostrar o campos Cidade na consulta por nome,BuscaComCidade,0
+v9 =Preferências,Busca SQL detalhada,like.partes,0
+v10 =#Preferências,Formatar endereço Rua numero complemento,formatar.endereco,0
+v11=Preferências,Restrição de usuários,restricao.usuarios,0
+v12=Objetos,Segundo endereço,segundo.endereco,1
+v13=Objetos,Seção Motorista,dados.motorista,1
+v14=Objetos,Seção Veículos,dados.veiculo,0
+v15=Objetos,Seção Filiação,dados.filiacao,0
+v16=Objetos,Seção Banco de Telefones,banco.de.telefones,0
+v17=Objetos,Seção Tipo de empresa,tipo.de.empresa,0
+v18=Objetos,Medidas de roupas,botao.medidas,0
+v19=Objetos,Impressão de Recibos Deskjet ou Matricial,impressao.recibo.deskjet,1
+v20=Objetos,Impressâo Somente à LASER/DESKJET,padrao.impressora.laser_deskjet,0
+v21=Campos,Forçar mostrar data de nascimento,forcar.data.nascimento,0
+v22=Campos,Forçar mostrar nome fantasia,forcar.nomefantasia,0
+v23=Campos,Rota de transportes,campo.rota,0
+v24=Campos,Campo CNPJ para endereço de entrega,cnpj.endereco.entrega,0
+v25=#Campos,Atualizar campo email sempre que um email for enviado,atualizar.campo.email,0
+v26=#Campos,Flag Cadastro especial,flag.especial,0
+v27=Campos,Desabilitar campo KM,campo.km,0
+v28=Campos,Desabilitar campo Nome Fantasia,campo.fantasia,0
+v29=Campos,Desabilitar campo Indicado Por,campo.indicado.por,0
+v30=Campos,Desabilitar campo WebSite,campo.website,0
+v31=Campos,Desabilitar campo Observação,campo.observacao,0
+v32=Sistema,Bloquear Suporte técnico,bloquear.suporte.rclsoft,0
+v33=Sistema,Permitir atualizar relatórios/pesquisas,rclsoft.atualizar.relatorios.pesquisas,1
+v34=Sistema,Buscar cotação de moedas na internet,cotacao.moedas.rclsoft,0
+v35=Sistema,Monitorar equipamentos,monitorar.equipamentos,0
+v36=Sistema,Acesso dos terminais ao sistema deve ser controlado,acesso.mac.terminais,0
+v37=#Preferências,Syncronizar Tabelas de Fretes,synconizar.tabefret,0
+v38=Preferências,Desativar alerta de pendências Pagar/Receber,alerta.pendencias,0
+
+[PedidoVenda]
+expande=1
+posicao=1
+v0=titColor{,9,b,clgreen,,clgreen}
+v1=Preferências,Colocar Relatório no menu,relatorio.no.menu,0
+v2=Preferências,Vender Produto Somente com Saldo em Estoque,vender.se.tiver.saldo,0  
+v3=Preferências,Mostar Saldo do Estoque na Venda,mostrar.saldo.estoque,0
+v4=Preferências,Pedido deve ser Cancelado[Não Excluir|Arial||bu|clred],cancelar.pedido,0
+v5=Preferências,Mostrar Histórico de Vendas Automaticamente,situacao.comercial,0
+v6=Preferências,Gerenciador de Turnos,turnos,0
+v7=Preferências,Permitir inclusão de Pedido sem Turnos,turnos.pedido,0
+v8=Preferências,Inclusão Automática,inclusao.automatica,0
+v9=Preferências,MODO Ajuste de Preços,modo.ajustar.precos,0
+v10=Preferências,Alteração somente com autorização do gerente,gerente.autoriza,0
+v11=titColor{,9,b,clblack,clyellow,clgreen,0}
+
+v12=Fiscal,CF-e SAT[<|||b|clgray],pve.controles.sat,000000
+v13=Fiscal,SAT bloqueado forçado,sat.bloqueado.pedido,0
+v14=Fiscal,NF-e[<|||b|clgray],pve.controles.nfe,000
+v15=#Fiscal,Transportar Descontos para NF-e,nfe.incluir.descontos,0
+v16=titColor{,9,b,}
+v17=Controle de Campos,Pedido[<|||b|clgray],pve.controle.pedido,0000000000000000
+v18=Controle de Campos,Cliente[<|||b|clgray],pve.controle.cliente,0000000000000000
+v19=Controle de Campos,Vendedor[<|||b|clgray],pve.controle.vendedor,0000000000000000
+v20=Controle de Campos,Produtos,pve.controle.produtos,0000000000000000
+v21=Controle de Campos,Entregas[<|||b|clgray],pve.controle.entregas,0000000000000000
+v22=Controle de Campos,Pagamento,pve.controle.pagamento,0000000000000000
+v23=Faturamento,Bloquear Faturamento por Pedido,bloquear.faturamento,0
+v24=Faturamento,Faturar Automaticamente,auto.faturamento.<USER>,0
+v25=Faturamento,Agenda de Faturamento,agenda.faturamento,0
+v26=titColor{,9,b,,,,,}
+v27=Impressão,Tipo{||b|clred}[[||7||clgray],pve.impressao.tipo,00
+v28=Impressão,Layout Matricial[<||7||clgray],pve.impressao.matricial,0000000000000000
+v29=Impressão,Layout PDF[<||7||clgray],pve.impressao.pdf,0000000000000000
+v30=Impressão,Logotipo e Cabeçalho{|||clgreen},pve.impressao.logotipo,0
+v31=Impressão,Ordenar Produtos com Letras + Números,ordem.alfa_mix,0
+v32=Impressão,Ajustes de Impressão{|||clnavy},impressao.pedido.campos,00000000000000000000
+v33=Impressão,Pedido de Separação{|||clsilver},impressao.pedido.separacao,0
+v34=Customização,RUB{|||clsilver},impressao.rub,0
+
+[NotaFiscal]
+v0=Preferências,Nota Fiscal Eletrônica (NFe),nfe,0
+v1=Preferências,Alíquota do ICMS sempre zero,empresa.impostos.simples,0
+v2=Preferências,Base de Cálculo do PIS/COFINS Padrão (ignora formula de importação),bc.simples.pis,1
+v3=Preferências,Somar os pesos automaticamente,forcar.soma.peso,0
+v4=Preferências,Mensagem SUBST. TRIB. quando tiver operação -> ICMSST,msg.icmsst,0
+v5=Preferências,Faturamento por NF-e,faturamento.por.notafiscal,0
+v6=Preferências,Faturar NF-e após inclusão (Automático),auto.faturamento,0
+v7=Preferências,NF-e de Serviços,servicos,0
+v8=Preferências,Desativar Pré CFOP,desativar.cfop.pre,0
+v9=Preferências,Data de Saída automatica[<|||b|clgray],nfe.data.saida,000
+v10=Preferências,Anexar Boletos na DANFE,danfe.boleto,0
+v11=Preferências,Editar descrição do produto,editar.descricao,0
+v12=Preferências,Incluir dados do pedido na observacao,dados.pedido,0
+v13=Preferências,Guia de Inclusão,guia.inclusao,0
+v14=Detalhes do produto,Painel geral,ativar.pnl.geral,0
+v15=Detalhes do produto,Painel ICMS,ativar.pnl.icms,0
+v16=Detalhes do produto,Painel ICMS ST,ativar.pnl.icmsst,0
+v17=Detalhes do produto,Painel IPI,ativar.pnl.ipi,0
+v18=Detalhes do produto,Painel IPI - Enquadramento,ativar.pnl.ipi2,0
+v19=Detalhes do produto,Painel PIS,ativar.pnl.pis,0
+v20=Detalhes do produto,Painel PIS ST,ativar.pnl.pisst,0
+v21=Detalhes do produto,Painel COFINS,ativar.pnl.cofins,0
+v22=Detalhes do produto,Painel COFINS ST,ativar.pnl.cofinsst,0
+v23=Detalhes do produto,Painel DI,ativar.pnl.di,0
+v24=Detalhes do produto,Painel DI - Adições,ativar.pnl.di2,0
+v25=Detalhes do produto,Painel Imposto de importação,ativar.pnl.ii,0
+v26=Detalhes do produto,Painel ISSQN,ativar.pnl.issqn,0
+v27=Detalhes do produto,Painel Desabilitar tudo,desativar.tudo,0
+v28=#Avançado,Permitir alterar o número sequencial da NF-e,ajustar.numero,0
+v29=#Compatibilidades (Usuários anterior a NF-e),Permitir estorno de cancelamentos,estornar.cancelamento,0
+v30=#Compatibilidades (Usuários anterior a NF-e),Imprimir após inclusão,imprimir.apos.gravar,0
+v31=#Compatibilidades (Usuários anterior a NF-e),Imprimir desdobramento de duplicatas no corpo da nota,duplicata.corpo.nota,1
+v32=Customização,Formula ICMAX,formula.mva.icmax,0
+v33=DANFE,Layout,nfe.danfe.layouts,00
+
+[Pagar]
+v0=Preferências,Colocar Relatório no menu,relatorio.no.menu,0
+v1=Preferências,Desabilitar campo filial,sem.campo.filial,0
+
+[Receber]
+v0=Preferências,Colocar Relatório no menu,relatorio.no.menu,0
+v1=Objetos,Imprimir somente a primeira via da duplicata,primeira.via.duplicata,0
+v2=Objetos,O número da Duplicata esta no campo descrição,duplicata.descricao,0
+v3=Objetos,Botão Detalhes,botao.detalhes,1
+v4=Objetos,Tipo Matricial,impressao.matricial,1
+v5=Objetos,Tipo Formulário,impressao.formulario,1
+v6=Objetos,Numerador de Recibos,numerador.recibo,0
+v7=Objetos,Sincronizar o Valor Pago com o valor da minuta,sincronizar.valor.minuta,0
+v8=Objetos,Editar cabeçalho do recibo,cabecalho.recibo,0
+v9=Objetos,Permitir alterar campo nosso número,alterar.nossonumero,0
+v10=Campos,Credor,campo.credor,0
+v11=Campos,Alinea,campo.alinea,1
+v12=Campos,Filial,campo.filial,0
+v13=Campos,Data de Devolução,campo.devolucao,0
+v14=Campos,Despesas Automatica,campo.despesas.automatica,0
+v15=Campos,ID_ACORDO,campo.id_acordo,0
+v16=Campos,Desconto de ISS,descontos.iss,0
+v17=#Campos,Taxa Vinculada,campo.taxa.vinculada,0
+v18=Fatura,Forçar o tamanho do logotipo para padrão,forcar.tmh.logo,0
+v19=Fatura,Aumentar tamanho na horizontal,forcar.tmh.horizontal,0
+v20=Fatura,Auto ajuste do logotipo,diminuir.logotipo.fatura,0
+v21=Fatura,Imprimir o Valor da fatura com desconto,fatura.valor.comdesconto,0
+v22=Fatura,Forçar a impressão do número do título,forcar.numero,0
+v23=Fatura,Forçar Lista de CTRC quanto mais de 24 CTRC,fatura.forcar.listctrc,0
+v24=Boletos,Imprimir o Valor do boleto com desconto,boleto.valor.comdesconto,0
+v25=#Boletos,Cancelar boleto em PDF,cancelar.boleto.pdf,0
+v26=Boletos,Usar Fonte Colorida,boletos.font.color,0
+v27=Boletos,Mascara Carteira 09 Bradesco,mascara.carteira.09.brad,0
+v28=Boletos,HTML Corpo do EMAIL,boletos.html,00000
+v29=Segurança,Desativar Gerente de Baixas,seguranca.opcoes,0
+
+[PedidoCompra]
+v0=Preferências,Layout PDF[<||7||clgray],epr.impressao.pdf,0000000000000000
+###v0=Preferências,Imprimir em PDF,impressao.pedido.pdf,0
+v1=Preferências,Impressão Simples,impressao.simples,0
+v2=Preferências,Impressão DeskJet,impressao.deskjet,0
+v3=Preferências,Carregar foto do produto,carregar.foto.produto,1
+v4=Preferências,Autorização de Compra obrigatória,autorizacao.obrigatoria,0
+v5=Objetos,Entrada no estoque após inclusão do pedido,entrada.auto.estoque,0
+v6=Objetos,O Pedido deve ser cancelado não excluido,cancelar.pedido,1
+v7=Objetos,Habilitar campo IPI,campo.ipi,1
+v8=Objetos,Habilitar campo ICMS,campo.icms,1
+v9=XML,Permitir entrada de XML sem o produto cadastrado,xml.produtos.incluisao,0
+
+[Conhecimento1]
+expande=0
+v0=Preferências,Imprimir após incluir,imprimir.apos.gravar,0
+v1=Preferências,Iniciar campo frete como CIF,frete.tipo.cif,1
+v2=Preferências,Tabela de frete personalizada por cliente,tabela.por.cliente,1
+v3=Preferências,Não misturar tabelas compartilhadas,nao.misturar.tabelas.compartilhada,0
+v4=Preferências,Após incluir iniciar uma nova inclusão,auto.incluir.proximo,1
+v5=Preferências,Colocar Relatório no menu,relatorio.no.menu,0
+v6=#Preferências,EDI-Importação/Exportação,edi.remessa,1
+v7=#Preferências,ITAPEMIRIM-Importação/Exportação,intercambio.itapemirim,0
+v8=Preferências,Ativar Lembrete/ Restrições,ativar.lembrete,10
+v9=Preferências,Ativar Histórico de atividades,exibir.historico,0
+v10=Preferências,Forçar CFOP 5.360 Quando (Art.317),forcar.cfop.5360,0
+v11=Preferências,Verificar GNRE automaticamente,auto.gnre,0
+v12=Preferências,Reter valor do ISS,reter.iss,0
+v13=Preferências,Permitir CT-e sem o valor do frete,permitir.frete.0,0
+
+v14=ICMS,Optante pelo Simples,optante.pelo.simples,0
+v15=ICMS,Legislação Paulista,legislacao.icms,0
+v16=ICMS,Tabela para todas UF,icms.para.todos,0
+v17=ICMS,Obrigar Aliquota 12%,icms.12,0
+v18=ICMS,Valor do ICMS faz parte do Frete,icms.acumulado,1
+v19=ICMS,Distribuido em todos os campos,distribuir.icms.todos,0
+v20=ICMS,Desativar controles,desabilitar.controle,0
+v21=#ICMS,Isenção de ICMS conforme Arquivo 139 anexo I do RICMS,artigo.139,0
+v22=ICMS,Campo Despacho,icms.despacho,0
+v23=ICMS,Campo Base de Cálculo diferenciada,base.de.calculo,0
+v24=ICMS,DF e GO quando destinatario for PF ICMS é 12%,DF_GO_ICMS_12,0
+v25=ICMS,Artigo 317 - Transportadora Paulista,artigo.317,0
+v26=ICMS,Ignorar ICMS 4% para Transportes Aereo,icms.ignorar.4p,0
+v27=#Objetos,Multimodal,multimodal,0
+v28=Objetos,maskicms mesclado com valor do ICMS,maskicms,1
+v29=#Objetos,Base do ICMS sempre calculada 0.88,base.icms.calculada,0
+v30=#Objetos,Somar o pedágio automaticamente,somar.pedagio,1
+
+v31=Objetos,Somar o frete peso automaticamente,somar.frete.peso,1
+v32=Objetos,Botão de dados complementares,botao.dados.complementares,0
+
+v33=Objetos,Permitir Alterar ID CTRC,alterar.numero.ctrc,0
+v34=Objetos,Verificar código de municipio,codigo.municipio,0
+v35=#Objetos,Aliquota de ICMS manual,aliquota.icms.manual,0
+v36=Objetos,Obrigar o local de coleta igual ao do remetente,forcar.local.coleta,0
+
+v37=#Objetos,Forçar SUBST. TRIB. quando a origem for SP e o pagador for de SP,icms.consignatario,0
+v38=#Objetos,Sistema EDI em uso limitar qtde de notas para 40,limite.notas.40,0
+v39=Objetos,Sistema EDI liberar opção de cancelamento,edi.permitir.cancelar,0
+
+v40=#Campos,Frete Cif,campo.fretecif,1
+v41=Campos(Obsoleto),Destacar ICMS,campo.destacar.icms,1
+v42=#Campos,Reentrega,campo.reentrega,1
+v43=#Campos,Devolução,campo.devolucao,1
+v44=#Campos,CFOP,campo.cfop,1
+v45=#Campos,Kilometragem,campo.kilometragem,0
+v46=#Campos,Cálculado até,campo.calculado.ate,0
+v47=#Campos,Ordem de coleta,campo.ordem.coleta,0
+v48=#Campos,Natureza,campo.natureza,1
+v49=#Campos,Espécie,campo.especie,1
+v50=#Campos,Frota,campo.frota,0
+v51=#Campos,Placa,campo.placa,0
+v52=#Campos,Dados do veículo,campo.marca.do.veiculo,0
+v53=#Campos,Tipo,campo.tipo,0
+v54=#Campos,Emplacado,campo.emplacado,0
+v55=#Campos,Emplacado UF,campo.emplacado.uf,0
+v56=#Campos,Marca,campo.marca,1
+v57=#Campos,Motorista,campo.motorista,0
+v58=#Campos,Observação 1,campo.observacao1,1
+v59=#Campos,Observação 2,campo.observacao2,1
+v60=#Campos,Observação 3,campo.observacao3,0
+v61=#Campos,Fixar observação,campo.fixar.observacao,0
+v62=#Campos,Manifesto,campo.manifesto,1
+v63=#Campos,Art.ICMS especifico,campo.articms,0
+v64=#Campos,Número,campo.numero,0
+v65=Campos(Obsoleto),*****>Intervalo de Notas,campo.intervalo.notas,0
+
+v66=Campos(Obsoleto),Peso para cálculo,peso.para.calculo,0
+v67=#Campos,Campos Transporte Aduaneiro,campos.sistema.aduaneiro,0
+v68=#Campos,Filial,campo.filial,0
+v69=#Campos,Placa Cavalo,campo.placacavalo,0
+v70=#Campos,Tipo de Transporte [Rodoviario ou Aereo],campo.tipotrans,0
+v71=#Campos,Rota,campo.rota,0
+v72=#Campos,Siglas de Aeroporto,siglas.aeroporto,0
+v73=Descrição de Campos,Número -> Container,numero.igual.container,0
+v74=Descrição de Campos,Romaneio -> Pedido,romaneio.para.pedido,0
+v75=Descrição de Campos,Romaneio -> CTRC,romaneio.para.ctrc,0
+v76=Descrição de Campos,Peso calc 24000,peso.24000,0
+v77=Descrição de Campos,Ajudante -> Coleta,label.ajudante.coleta,0
+v78=Descrição de Campos,Percurso -> Entrega,label.percurso.entrega,0
+v79=Objetos,IGNORAR CFOP 6.932,ignorar.cfop.6932,0
+
+v80=#Objetos,Utilizar formula (base_de_calculo x 12/100),usar.formula.por.12,0
+v81=#Objetos,Permitir Letras no número da Nota Fiscal,permitir.letras.numero.nf,0
+
+v82=Objetos,Limitar variavel AUTO_NF4 para 115 bytes e descarregar na variavel MASKICMS2,limitar.auto_nf4,0
+v83=Contabilidade,Código DIPAM pelo pagador do frete,codigo.dipam.fretepg,0
+v84=Campos,Ativar/Desativar,xFlag.campos,000100001100
+v85=Impressão,Observação Automática,xObs.auto,000000000000
+
+v86=Objetos,Respeitar Notas EDI,respeitarEdi,0
+v87=Customização,Clientes TNIX{|||clnavy||||}[Códigos ||7||clred],ocorrencias.baixas.tnix:script,
+v88=Master,Modo Emergencial,modo.emergencia,0
+v89=Customização,respSeg=5 quando sem DDR,respSeg.ddr,0
+
+[Manifesto]
+v0=Preferências,Imprimir o valor do Frete,imprimir.valor.frete,0
+v1=Preferências,Não imprimir o valor da mercadoria,nao.imprimir.valor.mercadoria,0
+v2=Preferências,Liberar motorista com entregas pendente,motorista.entrega.pendente,0
+v3=Preferências,Liberar CTRC/Minuta com entregas pendente,docto.entrega.pendente,0
+v4=Preferências,Imprimir a Cidade de destino,imprimir.cidade.destino,0
+v5=Preferências,Imprimir campo cubagem,imprimir.campo.cubagem,0
+v6=#Preferências,Colocar Relatório no Menu,relatorio.no.menu,0
+v7=Preferências,Ignorar CTRC Faturado,ignorar.ctrc.faturado,0
+v8=Preferências,Obrigar preencher o campo origem,obrigar.campo.origem,0
+v9=Preferências,Limpar campos,limpar.campos,0
+v10=Preferências,Logo,logo.carta.frete,0
+v11=Preferências,Atualizar Placa/Motorista,atualizar.placa.motorista,00
+v12=Preferências,Marcar Reentrega automaticamente,reentrega.automatica,0
+v13=Preferências,Sem pQ,sem.pQ,0
+v14=Preferências,Bloquerar Duplicidades no Manifesto,bloquear.duplicidade,0
+v15=Preferências,Contrato de Frete - Controle por Conhecimento,ctrb.conhecimento,0
+v16=Preferências,Imprimir CIF/FOB,imprimir.ciffob,0
+v17=Objetos,Habilitar campo ordem de Abastecimento,ordem.abastecimento,0
+
+
+
+[Veiculo]
+v0=Preferências,Colocar Relatório no menu,relatorio.no.menu,0
+
+[Gastos]
+v0=Preferências,Colocar Relatório no menu,relatorio.no.menu,0
+
+[grpservi]
+v0=Preferências,Iniciar Despesas para o cliente pagar,despesas.cliente,0
+v1=Preferências,Movimento de Veiculos,movimento.veiculos,0
+v2=Preferências,Ignorar Cores na impressão,ignorar.cores,0
+// v2=Omitir custos interno nos relatorios,omitir.custos.interno,0
+
+[OsAuto]
+v0=Preferências,Colocar Relatório no menu,relatorio.no.menu,0
+v1=Preferências,Forçar impressão CUPOM 40 colunas,impressao.40.colunas,0
+v2=Preferências,Layout de impressão[<|||b|clgreen],os.layout.impressao,00000
+v3=Preferências,Iniciar edição do item no campo descrição,init.descricao,0
+
+[Produto]
+v0=#Preferências,Consultar por descrição do produto,ignorar.campo.codigo.consulta,0
+v1=Preferências,Colocar Relatório no menu,relatorio.no.menu,0
+v2=Preferências,Campo Referência não pode ser numérico,referencia.so.com.letras,0
+v3=Preferências,Campo Código Manual,codigo.manual,0
+//v3=Preferências,Campo Número serial obrigatório,campo.serial.obrigatorio,0
+v4=Preferências,Aceitar Minusculo e Maiusculo na Descrição,descricao.minusculo,0
+v5=Preferências,Peso do Produto é Obrigatório,peso.obrigatorio,0
+v6=Preferências,Ignorar Margem de Lucro,ignorar.margemlucro,0
+v7=Preferências,Controle de Embalagens,tela.embalagens,0
+v8=Preferências,Alteração somente com autorização do gerente,gerente.autoriza,0
+v9=Preferências,Ignorar Fornecedor,ignorar.fornecedor,0
+v10=Preferências,Campo Capitulo NCM,campo.capitulo.ncm,0
+v11=Preferências,Tabela NCM importada de IBPT,tabela.ncm.ibpt,0
+v12=Preferências,NCM Simples,ncm.simples,0
+v13=Preferências,Ignorar Preço de Custo,sem.custo,0
+v14=Preferências,Ignorar Campos Codigos extras,sem.codigo.extras,0
+v15=Preferências,Ignorar Campos Referencia,sem.codigo.referencia,0
+v16=Preferências,Ignorar Campos Dolar,sem.campo.dolar,0
+v17=Sub-Seção,Desativar,desativar.sub.secao,0
+v18=Sub-Seção,Obrigatorio o preenchimento,obrigatorio.sub.secao,0
+
+v19=Movimento do Estoque,Por Pedido de Venda,estoque.por.pedido,0
+v20=Movimento do Estoque,Por NF-e,estoque.por.notafiscal,0
+v21=Movimento do Estoque,Por ECF,movimenta.estoque.ecf,0
+v22=Movimento do Estoque,Ignorar Estoque,ignorar.estoque,0
+v23=Movimento do Estoque,Iniciar Controle de Estoque na Inclusão,start.ctrl.estoque,0
+v24=Movimento do Estoque,Atualizar Preço de Custo quando comprar,custo.medio.compra,0
+v25=Movimento do Estoque,Preço de Custo c/ media das 3 ultimas compras,custo.medio.ultimas3,0
+v26=#Objetos,Ignorar REFERÊNCIA na pesquisa do produto,pesquisa.ignorar.referencia,0
+v27=Objetos,Operar em Modo Estoque por Número de Série,estoque.por.numero.serial,0
+v28=Objetos,Bloquear Referência Duplicada,bloquear.referencia.duplicada,1
+v29=Objetos,Forçar o Código de Referência (Compras/Vendas),forcar.referencia.compravenda,0
+v30=Objetos,Bloquear Entrada por -> Estoque Avulso,bloquear.estoque.avulso,0
+v31=Objetos,Preço com 3 Casas Decimais,preco.3.decimais,0
+v32=Objetos,Bloquear Inclusão de Produtos por NFE do Fornecedor,bloquerar.inclusao.nfe.fornecedor,0
+v33=#Objetos,Preço de venda à prazo,campo.venda.aprazo,0
+v34=Objetos,Compartilhar as Operações,operacoes.compartilhadas,0
+v35=Habilitar Telas,E-Commerce,tela.website,0
+v36=Habilitar Telas,Tributação,tela.tributacao,1
+v37=Habilitar Telas,Caracteristicas do produto,tela.propriedades,1
+v38=Habilitar Telas,Promoção,tela.promocao,0
+v39=Habilitar Telas,Serviço vinculado,preco.mao.de.obra,0
+v40=Habilitar Telas,Grade,tela.grade,0
+v41=#Habilitar Telas,Ultimas compras,tela.ultimas.compras,1
+v42=#Habilitar Telas,Ultimas vendas,tela.ultimas.vendas,1
+v43=#Habilitar Telas,Controle de Revendas,tela.revendas,0
+v44=#Habilitar Telas,Controle de Embalagens,tela.embalagens,0
+v45=#Ramos,Auto Peças,ramo.autopecas,0
+v46=#Ramos,Madeiras,ramo.madeiras,0
+v47=#Ramos,Pizzaria,ramo.pizzaria,0
+v48=Customização, BurgerG, custom.burgerg, 0
+v49=Campos,Comissão Vendedor,comissao.vendedor,0
+v50=Preferências,Descrição Broto = Meia,broto.meia,0
+
+[Coleta]
+v0=#Preferências,Colocar Relatório no menu,relatorio.no.menu,0
+v1=Preferências,Organizar Busca no cadastro por ordem de cidade,buscar.cidades,0
+v2=Preferências,Impressão,impressao.coleta,000
+v3=Preferências,Comissária/Redespacho,painel.compl,0
+v3=#Preferências,Modelo de Impressão Padrão,layout.padrão,1
+v4=#Preferências,Modelo de Impressão Frete,layout.frete,1
+v5=#Preferências,Modelo de Impressão Tipo 1,layout.tipo1,0
+v6=#Preferências,Modelo de Impressão Tipo 2,layout.tipo2,0
+v7=#Preferências,Modelo de Impressão Tipo 3,layout.tipo3,0
+v8=#Preferências,Modelo de Impressão Tipo 4,layout.tipo4,0
+v9=#Preferências,Modelo de Impressão Tipo 5,layout.tipo5,0
+v10=#Preferências,Modelo de Impressão Tipo Formulário,layout.formulario,0
+
+[CadastroTipo]
+c0=Automático,
+c1=Cliente,0123456789
+c2=Vendedor,0123789
+c3=Transportadora,0123789
+c4=Fornecedor/Credor,0123456789
+c5=Comprador,0123
+c6=Funcionário,0123456789
+c7=Usuário do sistema,0123456789
+c8=Cobrador,04
+c9=Captador,04
+c10=Atendente,04
+c11=Advogado,04
+c12=Motorista,0789
+c13=Fabricante,0123
+c14=Remetente,0789
+c15=Destinatário,0789
+c16=Representante,0123
+c17=Usuário de serviços,0123
+c18=Auto Posto,0123456789
+c19=Comissária,089
+
+[rpa]
+v0=Preferências,Deduzir pedágio do CTRC,deduzir.pedagio,0
+v1=Preferências,Movimento de Motoristas,cadastro.motorista,0
+v2=Preferências,Movimento de Vendedores,cadastro.vendedores,1
+
+[extrato2]
+v0=Preferências,Imprimir logotipo,demonstrativo.logotipo,1
+v1=Preferências,Cabeçalho Padrão,demonstrativo.padrao,0
+v2=Preferências,Cabeçalho Fatura,demonstrativo.cabecalho.fatura,1
+v3=Preferências,Transporte Aduaneiro,demonstrativo.aduaneiro,0
+v4=Preferências,Usar fonte colorida,demonstrativo.font.color,0
+v5=Preferências,Não verificar os dados cadastrais,nao.verificar.cadastro,0
+v6=Preferências,Faturar um documento por fatura,um.docto.fatura,0
+v7=Preferências,O Título do Demonstrativo deve ser [RECIBO],demonstrativo.titulo2,0
+v8=Preferências,Deduzir o ISS do Total da Nota Fiscal de Serviço,abater.iss.nf,0
+v9=Preferências,Ignorar entrega de Notas,ignorar.entregas,0
+v10=Preferências,Cliente com cobrança pendente,pendencias.cobranca,00
+v11=Preferências,Documento + Ano (1234/13),documento.ano,0
+
+[nfservico]
+v0=Preferências,Incluir o valor de ISS Retido no corpo da nota,corpo.iss.retido,0
+v1=Preferências,Limitar descricao em 55 caracteres,limite.descricao.55,0
+v2=Preferências,Colocar Relatório no menu,relatorio.no.menu,0
+v3=Preferências,Reter IRRF (1.5%),reter.irrf,0
+v4=Preferências,Acumular PIS/COFINS/CSLL,acumular.piscofins,0
+v5=Preferências,Bloquear ISS no total do frete,bloquear.iss.frete,0
+v6=Campos,ATIVAR Campo IRRF,ativar.campo.irrf,0
+v7=Campos,ATIVAR Campo PIS/COFINS/CSLL,ativar.campo.pis,0
+v8=Campos,ATIVAR Campo FRETE,ativar.campo.fretes,0
+v9=Campos,ATIVAR Campo Impostos,ativar.campo.impostos,0
+v10=Campos,Campo Faturamento Livre,campo.faturamento.livre,0
+
+[situacaocoml]
+v0=Preferências,Letras Grande,fonte.8,0
+v1=Preferências,Sempre limpar a tela quando iniciado,limpar.tela,0
+v2=Preferências,Mostrar ultimas vendas por produto,ultimas.vendas.produtos,0
+v3=Preferências,Desativar Cobrança,desativar.cobranca,0
+v4=Preferências,Desativar ultimas vendas por pedido,desativar.vendas.pedidos,0
+
+[montarcarga]
+v0=Preferências,Desabilitar campo frete na impressão,desabilitar.campo.frete,0
+
+[fluxodecaixas]
+v0=Preferências,Ativar Dias para compensação bancária,dia.compensacao,0
+v1=Preferências,Ativar filtro de Baixados/Pendentes,filtro.baixadospendentes,0
+v2=Preferências,Buscar despesas com a frota no centro de custo (Pagar),despesas.ctas.pagar,0
+v3=Preferências,Ativar filtro de Origem/Sub-origem,filtro.origens,0
+v4=#Preferências,Ativar Centro de Custos,ativar.centro_de_custos,0
+v5=Preferências,Calcular Descontos de Pedidos,desconto.pedidos,0
+v6=Preferências,Permitir grandes periodos,grandes.periodos,0
+v7=Preferências,Margem de lucro 2,margem.lucro.2,0
+
+[nserial]
+v0=Preferências,Permitir alterar tipo,alterar.tipo,0
+v1=Preferências,Permitir saida sem entrada,permitir.saida.sem.entrada,0
+v2=Preferências,Não verificar estoque Proview,sem.estoque.proview,0
+
+[minutasid]
+v0=Preferências,Renomear campo comissária parar Pagador do Frete,renomear.comissaria.pagadorfrete,0
+v1=Preferências,Campo Referência Simple,campo.referencia.simples,0
+v2=Preferências,Campo Referência vira Descrição da Mercadoria,campo.referencia.descricao,0
+v3=Preferências,Desabilitar cópiar campo comissária,copiar.comissaria,0
+v4=Preferências,Consulta padrão no cadastro deve ser por nome,consulta.padrao.pornome,0
+v5=Preferências,Campo Peso/Volumes com 3 casas decimais,campo.peso.3decimais,0
+v6=Preferências,Formatar Campo AWB com 999-9999 9999,formatar.awb,0
+v7=Preferências,List Avarias,list.avarias,0
+v8=Preferências,Permitir alterar data de emissão,permitir.alterar.emissao,1
+v9=Preferências,Obrigar o fechamento da Minuta (Capa de Processo),capa,0
+v10=Observação Automática,Dados da Nota Fiscal,dados.nf.obs,0
+v11=Observação Automática,Dados do HAWB,dados.hawb.obs,0
+v12=Observação Automática,Dados do Motorista,dados.motorista.obs,0
+v13=Observação Automática,Dados do Motorista RG/CNH,dados.motorista.obs.complemento,0
+v14=Observação Automática,Dados da Comissária,dados.comissaria.obs,0
+v15=Campos,ATIVAR Campo Código de ONU,ativar.campo.onu,0
+v16=Campos,ATIVAR Campo Código de Classificação de Risco,ativar.campo.risco,0
+v17=Campos,ATIVAR Campo Número do Lacre,ativar.campo.lacre,0
+v18=Campos,ATIVAR Campo Valor do Imposto,ativar.campo.imposto,0
+v19=Campos,ATIVAR Campo TIPO SEMI-REBOQUE,ativar.campo.semireboque,0
+v20=Campos,DESATIVAR Campo Referência 2,desativar.campo.referencia2,0
+v21=Campos,ATIVAR Campo Referência da Comissária,ativar.campo.refcomissaria,0
+v22=#Campos,DESATIVAR Campo Tipo,desativar.campo.tipo,0
+v23=Campos,ATIVAR Campos Valores,ativar.campo.valores,1
+
+v24=Customização,DRS,customizacao.drs,0
+v25=Desativar Lembretes,desativar.lembretes,0
+v26=Impressão,Observação Automática,xObs.auto,000000000000
+
+[mincon]
+v0=Preferências,Campo Comissária,campo.comissaria,0
+v1=Preferências,Campo Frete pago por,campo.frete.pagopor,0
+v2=Preferências,Somar Pedágio no total do frete,somar.pedagio,1
+v3=Preferências,Somar Frete Pesos no total do frete,somar.frete.peso,1
+v4=Preferências,Base do ICMS calculada,base.icms.calculada,1
+v5=Preferências,Desabilitar controles do ICMS,desabilitar.controle,0
+v6=Preferências,Legislação do ICMS São Paulo/SP,legislacao.icms,0
+v7=Preferências,Base de cálculo do valor da mercadoria,base.de.calculo,0
+v8=Preferências,Valor de ICMS acumulado no total do frete,icms.acumulado,1
+v9=Preferências,Consulta padrão no cadastro deve ser por nome,consulta.padrao.pornome,0
+v10=Preferências,FAZ PARTE DO SIMPLES NACIONAL,sistema.simples.nacional,0
+v11=Preferências,Ignorar a mensagem do simples nacional,ignorar.msg.simples.nacional,0
+v12=Preferências,Não misturar tabelas compartilhadas,nao.misturar.tabelas.compartilhada,0
+v13=Preferências,Forçar CFOP 5.360 Quando (Art.317),forcar.cfop.5360,0
+v14=Preferências,Mask ICMS NAVIG,maskicms.navigator,0
+v15=Preferências,Ignorar Observações da Minuta,ignorar.obs.minuta,0
+v16=Preferências,Isenção de ICMS conforme Arquivo 139 anexo I do RICMS,artigo.139,0
+V17=Preferências,Aliquota de ICMS sempre 12%,icms.12,0
+v18=Preferências,DESTACAR ICMS PARA TODOS ESTADOS,icms.para.todos,0
+v19=Preferências,Permitir alterar data de emissão,permitir.alterar.emissao,1
+v20=Observação Automática,Dados da Nota Fiscal,dados.nf.obs,0
+v21=Observação Automática,Dados do HAWB,dados.hawb.obs,0
+v22=Observação Automática,Dados do Motorisa,dados.motorista.obs,0
+v23=Observação Automática,Dados do Motorista RG/CNH,dados.motorista.obs.complemento,0
+v24=Observação Automática,Dados da Comissária,dados.comissaria.obs,0
+v25=Observação Automática,Destacar o Valor GRIS,dados.valor.gris,0
+v26=Observação Automática,Dados Mescados,dados.mesclado,0
+v27=Observação Automática,Placa do Reboque,dados.placa.reboque,0
+v28=Campos,ATIVAR Campo Consignatário,ativar.campo.consignatario,0
+v29=Campos,ATIVAR Campo Redespacho,ativar.campo.redespacho,0
+v30=Campos,ATIVAR Campo Taxa de Expediente,ativar.campo.expediente,0
+v31=Campos,ATIVAR Campo Taxa de Estadia,ativar.campo.estadia,0
+v32=Campos,ATIVAR Campo Taxa de Armazenagem,ativar.campo.armazenagem,0
+v33=Campos,ATIVAR Campo Descrição do produto,ativar.campo.descricaoproduto,0
+v34=Campos,Campo Expediente vira Escolta,expediente.escolta,0
+v35=Campos,Campo Estadia vira Col.M.Esq.,estadia.colmesq,0
+v36=Campos,Campo Armazenagem viar Entr.M.Esq.,armazenagem.entrmesq,0
+
+[planodecontas]
+v0=Preferências,Listar Origem em ordem alfabetica,origem.alfabetica,0
+v1=Preferências,Listar Sub-Origem em order alfabetica,suborigem.alfabetica,0
+v2=Preferências,Listar Centro de Custo em order alfabetica,custos.alfabetica,0
+v3=Preferências,Ativar Plano de Juros,plano.de.juros,0
+v4=Preferências,Desativar opções,desativar.planodeconta,000000
+v5=Preferências,Esconder Contas Desativadas,esconder.desativadas,0
+v6=Avançado,Sincronizar Plano de Contas,sincronizar,0
+v7#=Avançado,Ativar Centro de Custos,ativar.centro_de_custos,0
+
+[ostransp]
+v0=Preferências,Impressão 40 colunas,impressao40col,0
+v1=Preferências,Impressao meia folha,impressaoMeia,0
+
+[frtc]
+v0=Preferências,Padrao,impressao40col,0
+
+[Relatorios]
+v0=Preferências,Perfil Misto,perfil.misto,0
+
+[webdesk]
+v0=Preferências,Próprietario do Help Desk,helpdesk.proprio,0
+v1=Preferências,Filtro automático por Responsável,filtrar.tecnico,0
+
+[notafix]
+v0=Preferências,Habilitar campo CNPJ/CPF,ativar.cnpj,0
+
+[CEF]
+#Cotação Eletrônica de Fretes
+v0=Preferências,Habilitar Parceiro de Transporte,parceiro.fretes,0
+v1=Preferências,Não imprimir o nome da tabela,nao.nome.tabela,0
+v2=Preferências,Imprimir Tipo de transporte,imprimir.tipotrans,0
+v3=Preferências,Prazo dias de validade,prazo.validade,0000000000
+v4=Preferências,Desativar cálculo automático do frete,calculo.automatico,0
+
+[tabFretes]
+v0=Preferências,Syncronizar Tabelas de Fretes,synconizar.tabefret,0
+
+[VCA]
+Módulo=Validação Cadastral
+v0=Preferências,Permitir qualquer usuário cadastrar sem CNPJ/CPF,vca.login,0
+
+[cadastro_fast]
+# Cadastro Rapido
+posicao=1
+v0=titColor{,8,b,clgreen}
+v1=Preferências,Desativar Campos,campos.desativados.cadastrofast,000000000
+v2=Preferências,Iniciar UF/Cidade automaticamente,cidade.automatica,0
+v3=Preferências,Não é Obrigatório Preencher o CEP,cep.livre,0
+v4=Preferências,Não é Obrigatório Endereço,endereco.livre,0
+v5=Preferências,Opção de Alertas,opcao.alertas,0
+v6=Preferências,Posicionar no Primeiro campo,posicionar.campo,0
+
+[fracao_pizza]
+# Fracionamento de Produtos
+posicao=1
+v0=titColor{,8,b,clgreen}
+v1=Preferências,Desativar Campos,campos.desativados.fracaopizza,000000000
+
+[consultar_produtos]
+# Consulta de Produtos
+posicao=1
+v0=titColor{,9,b,clgreen}
+v1=itmColor
+v2=Campo Código, Ativo, CP.campo.codigo.ativo,0
+v3=Campo Código, Pular, CP.campo.codigo.pular,0
+v4=Campo Código, Consultar por Partes,parte.codigo,0
+v5=Campo Código, Ignorar Caracteres,ignorar.caracteres,0000
+v6=Preferências, Aumentar Descrição, CP.descricao.grande,0
+v7=Preferências, Buscar quando Digitar a Descrição{||b|clred},CP.digitar.buscar,0
+v8=Preferências, Colunas, CP.campos.extras,0000000000
+v9=Preferências, Touch, CP.touch,0
+v10=Preferências, Limite da Lista de Produtos, limite.consulta,100
+v11=Preferências, Buscar Código e Descrição Misturado, CP.codigo_e_descricao,0
+v12=Preferências, Tamanho fonte, tamanho.font.consulta,00000
+v13=Preferências, Ignorar Prefixo Scanner[<|||b|clgray], prefixo.scanner,
+
+[produto_fast]
+# Cadastro de Produtos Rapido
+posicao=1
+v0=titColor{,8,b,clgreen}
+v1=Preferências,Desativar Campos,campos.desativados.produtosfast,0000000
+
+[cep]
+Módulo=CONSULTA DE CEP
+v0=Preferências,Digitar e Mostrar,digita.aparece,0
+
+[turnos]
+Módulo=CONFIGURAÇÃO DE TURNOS
+v0=Preferências,Limite de qtde de turnos a visualizar (GU)[<|||b|clblue],cfgTurnos.qtde.turnos,000000000
+v1=Preferências,Limite de tempo para expirar o turno aberto[<|||b|clgreen],cfgTurnos.expirar.turno,00000000000
+v2=#Preferências,Não mostrar Valores,nao.mostrar.valores,0
+v3=Preferências,Turno por PDV,por.pdv,0
+v4=Preferências,Turno por Usuário,por.usuario,0
+v5=Preferências,Modo Faturamento,modo.faturamento,0
+v6=Preferências,Produtos automático,produtos.automatico,0
+v7=Preferências,Fita Simplificada,fita.simplificada,0
+
+
+[mesas]
+modulo=PEDIDO BALCÃO/MESA /COMANDA
+v0=Preferências,Comanda Rápida,comanda.rapida,0
+v1=Preferências,Adicionar Produtos ao Cardápio automaticamente,cardapio.automatico,0
+v2=Preferências,Não mostrar total dos pedidos na tela,total.pedidos,0
+v3=Preferências,Colocar Logo no Fundo,logo.backgroud,0
+v4=Preferências,Delivery,opcao.delivery,0
+v5=Preferências,Pedido Balcão da Loja,pedido.balcao,0
+v6=Preferências,Código antes da Quantidade,codigo.antes,0
+v7=#Preferências,Mesa auxiliar,mesa.auxiliar,0
+v8=Preferências,Comanda aleatória,comanda.aleatoria,0
+v9=#Preferências,Gaveta (F12) Livre,gaveta.livre,0
+v10=Preferências,Tipo de entrega indefinida,entrega.indefinida,0
+v11=Preferências,Controle de Produtos do Turno,produtos.do.dia,0
+v12=Preferências,Agenda de entregas,agenda.entregas,0
+v13=Preferências,Desativar order de descrição nos produtos touch,touch.desativa.descricao,0 
+v14=Preferências,Bina Ativo,bina.ativo,0
+v15=Preferências,Tirar preços dos botões,tirar.precos,0
+v16=Preferências,Botão Layout,botao.layout,0
+v17=Preferências,Bloquerar Abrir Automaticamente,bloquear.abertura.automatica,0
+v18=Preferências,Comprovante de Saida,comprovante.saida,0
+v19=Preferências,Desativar IFOOD,desativar.ifood,0
+v20=Preferências,IFOOD Produção Automática,ifood.producao,0
+v21=Preferências,Pedir confirmação para abrir comanda,confirma.abrir.comanda,0
+v22=Preferências,Ativar bloqueio de comandas,bloqueio.automatico,0
+v23=Preferências,Produção por item,producao.por.item,0
+
+//v14=Mobile,Desativar Pedido Rápido,pedido.rapido.desativa,0
+
+
+[nargui]
+modulo=CONTROLE DE NARQUILE
+v0=Preferências,Colocar Logo no Fundo,logo.backgroud,0
+
+[pdv]
+modulo=PDV
+v0=Preferências,Reaproveitar Opções Touch do Controle de Comandas,touch.comandas,0
+v1=Preferências,Definir vendedor no inicio da venda,definir.vendedor,0 
+v2=Preferências,Atualizar preço automaticamente,atualizar.precos,0 
+v3=Preferências,Ignorar Codigo Referencia,ignorar.referencia,0 
+
+[autoriza]
+modulo=AUTORIZAÇÃO
+v0=Preferências,Modo Simples,simples,0
+
+[consumidor]
+modulo=CONSUMIDOR
+v0=Preferências,Modo Simples,simples,0
+v1=Preferências,Teclado Touch,teclado,0
+
+[compras_fin]
+modulo=FINANCEIRO COMPRAS
+v0=Preferências,Não Vincular Conta Caixas,sem.conta.caixa,0
+
+[balanca]
+modulo=AJUSTES DA PESAGEM E BALANÇA
+v0=Preferências,Digitar em Gramas,gramas,0
+
+[mod_entregador]
+modulo=CONTROLE DE ENTREGAS
+v0=Preferências,Desativar Campos,uentregas.desativar.campos,00000000000000000
+v1=Preferências,Baixa Rápida,baixa.rapida,0
+
+
+[edi]
+modulo=EDI
+v0=Preferências,Não Permitir Gerar multipos CT-es,blk.multiplos.ctes,0
+
+[cnab]
+modulo=CNAB
+v0=Preferências,Limite de arquivos [<|||b|clgray],arquivos.retorno.limit,00000
+
+[produtosdia]
+modulo=PRODUTOS DO DIA
+v0=Preferências,Produtos Controlados,produtos.controlados,0
+
+[faturavenda]
+modulo=FATURAMENTO
+v0=Preferências,Baixar automáticamente todos títulos,baixar.tudo,0

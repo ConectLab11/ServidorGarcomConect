@@ -1,0 +1,383 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 12/12/2003
+#
+#
+# a todos
+# d nota de despesas
+# g agenda
+# m movimento de caixa
+# n cadastro de bancos
+# o plano de contas
+# p pagar
+# q gerenciador de ocorrencias
+# r receber
+# s script inicial
+# t conta caixa
+
+[arquivo]
+modulo=HELPDESK - PROCESSO #$IDTITULO
+nivelprincipal=0
+Posicionar=3
+
+[Opcoes]
+o0=WebDesk, 0123456789, 9, 0,abcp
+
+[WebDesk]
+o0=nil, HelpDesk , inclusao1, 0123456789, 0, 25,b
+o1=nil, HelpDesk , inclusao2, 0123456789, 0, 25,c
+o2=nil, Processo , processo , 0123456789, 0, 25,a
+o3=nil, Andamento, andamento, 0123456789, 0,  3,ac
+o4=nil, Anexos   , anexos   , 0123456789, 0, 23,ac
+o5=nil, Conclusão, conclusao, 0123456789, 0, 27,ac
+o6=nil, Pastas   , catdesk  , 0123456789, 0,  0,p
+
+#
+# Parametros de tela
+#
+
+[processo]
+tab=PROCESSO - HELP DESK
+comentario=
+db=suporte
+rcl=
+chave=id
+chavePrincipal=id
+c0=Processo,id,i,30,60,,
+c1=Descrição,descricao,c,50,200,,
+nobrowse=1
+#BotaoIncluir=RCL
+#BotaoAlterar=RCL
+relacaokey=
+where=(id=$IDORIGEM)
+altura=320
+largura=430
+foco=descricao
+forcarleftmask=90
+forcarrightlabel=1
+t0=linha+0
+t1=Processo:,id,+,10,60,,
+h1=Número do Processo
+t2=linha-25
+t3=coluna+198
+t4=Data:,data,d,10,70,,
+h4=Data do Processo
+t5=linha-25
+t6=coluna+72
+t7=,hora,h,5,40,,
+h7=Hora do Processo
+t8=coluna-270
+t9=Cliente:,empresa,i,6,235x60,,?cadastro.rcl,
+h9=Cliente solicitante do Help Desk
+t10=Solicitação#007E7E7E\user_business.png,,,,410, ,
+t11=Solicitante:,usuario,c,50,310,,
+h11=Usuário solicitante do Help Desk
+t12=Categoria:,tipo,ci,3,90x30,,<#11>geral.rcl,
+h12=Categoria da solicitação
+t13=linha-25
+t14=coluna+180
+t15=Pasta:,pasta,i,3,85x30,,<#14>geral.rcl,
+h15=Pasta de trabalho
+t16=coluna-180
+t17=Responsável:,tecnico,i,3,130x30,,tecnicos.rcl,
+h17=Responsável para resolver a solicitação
+t18=linha-25
+t19=coluna+240
+t20=Previsão:,previsao,d,10,70,,
+t21=coluna-240
+t22=#
+t23=Descrição completa#007E7E7E\attach_2.png,,,,410, ,
+t24=Assunto:,descricao,c,50,310,,
+h24=Assunto 
+t25=forcarleftmask=10
+t26=,observacao,t,0,390x150,,
+h26=Descrição completa da solicitação
+validacao=noZero(empresa),campoPreenchido(usuario),noZero(tipo),noZero(pasta),noZero(tecnico)
+
+[andamento]
+tab=ANDAMENTO DO PROCESSO
+comentario=
+db=webdesk
+db2=tecnicos
+rcl=
+BotaoIncluir=
+#BotaoAlterar=RCL
+BotaoExcluir=RCL
+chave=id
+chavePrincipal=id
+ordem=data2 desc,hora2 desc
+c0=Data,&DataHora(data2|hora2|) as data,d,10,100,,
+c1=Responsável,nome,c,20,90,,
+c2=Assunto,tipo,c,15,80,,
+c3=Descrição,descricao,c,500,200,,
+campoinfo=descricao,Descrição completa,c,100
+relacaokey=processo,$IDORIGEM
+where=(processo=$IDORIGEM) and (webdesk.tecnico=tecnicos.id)
+altura=480
+largura=450
+foco=tecnico
+forcarleftmask=90
+t0=Classificação#007E7E7E\accept.png,,,,410, ,
+t1=Responsável:,tecnico,i,3,30,,tecnicos.rcl,
+h1=Responsável por esta ocorrência
+t2=Assunto:,tipo,c,50,290,@BX,<#12>geral.rcl,
+h2=Assunto da ocorrência
+t3=Operacional#007E7E7E\wand.png,,,,410, ,
+t4=OS número:,os,i,6,50,,
+t5=linha-25
+t6=coluna+250
+t7=forcarleftmask=115
+t8=Controle Interno:,interno,sn,3,30,,
+h8=Ocorrência para controle interno não será enviado ao cliente.
+t9=forcarleftmask=90
+t10=coluna-250
+t11=Tempo de trabalhado#007E7E7E\data.png,,,,410, ,
+t12=Inicio:,data1,d,10,70,,
+h12=Data de inicial da ocorrência
+t13=linha-25
+t14=coluna+72
+t15=,hora1,h,5,35,,
+h15=Hora de inicial da ocorrência
+t16=linha-25
+t17=coluna+125
+t18=Termino:,data2,d,10,70,,
+h18=Data do termino da ocorrência
+t19=linha-25
+t20=coluna+72
+t21=Hora:,hora2,h,5,35,,
+h21=Hora final da ocorrência
+t22=Descrição completa#007E7E7E\attach_2.png,,,,410, ,
+t23=forcarleftmask=10
+t24=,descricao,t,0,400x140,,
+h24=Descrição completa da ocorrência
+validacao=noZero(tecnico),noDatas(data1),noDatas(data2),campoPreenchido(tipo)
+
+[conclusao]
+tab=CONCLUSÃO DO PROCESSO - HELP DESK
+comentario=
+db=suporte
+rcl=
+chave=id
+chavePrincipal=id
+c0=Processo,id,i,30,60,,
+c1=Descrição,descricao,c,50,200,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+#BotaoIncluir=RCL
+#BotaoAlterar=RCL
+altura=320
+largura=430
+foco=nivel
+forcarleftmask=100
+forcarrightlabel=1
+t0=#Avaliação técnica#007E7E7E\doc_tag.png,,,,410, ,
+t1=#Dificuldade:,nivel,c,50,300,@B,<#13>geral.rcl,
+t2=#Previsão:,previsao,d,10,80,,
+t3=#Pasta:,pasta,i,3,30,,<#14>geral.rcl,
+t4=Conclusão:,concluido,d,10,80,,
+t5=Descrição completa#007E7E7E\attach_2.png,,,,410, ,
+t6=forcarleftmask=10
+t7=,conclusao,t,0,400x180,,
+t8=,flagb,sn,3,30,@V,
+validacao=DataFlag(concluido;flagb)
+
+[inclusao1]
+tab=INICIO DE PROCESSO - HELP DESK
+btautoedit=1
+comentario=
+db=suporte
+rcl=
+chave=id
+chavePrincipal=id
+c0=Processo,id,i,30,60,,
+c1=Descrição,descricao,c,50,200,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=500
+largura=480
+foco=tipo
+forcarleftmask=100
+forcarrightlabel=1
+t0=linha+0
+t1=Processo:,id,+,10,60,,
+h1=Número do Processo
+t2=linha-25
+t3=coluna+120
+t4=Data:,data,d,10,70,,
+h4=Data do Processo
+t5=linha-25
+t6=coluna+140
+t7=Hora:,hora,h,5,50,,
+h7=Hora do Processo
+t8=coluna-260
+t9=Solicitação#007E7E7E\user_business.png,,,,410, ,
+t10=Solicitante:,usuario,c,50,310,{rcl*},
+h10=Usuário solicitante do Help Desk
+t11=Categoria:,tipo,ci,3,30,,<#11>geral.rcl,
+h11=Categoria
+t12=Assunto:,descricao,c,50,310,,
+h12=Assunto 
+t13=Descrição completa#007E7E7E\attach_2.png,,,,410, ,
+t14=forcarleftmask=10
+t15=,observacao,t,0,400x170,,
+h15=Descrição completa da solicitação
+validacao=noZero(tipo),campoPreenchido(usuario)
+
+[inclusao2]
+tab=INICIO DE PROCESSO - HELP DESK
+btautoedit=1
+comentario=
+db=suporte
+rcl=
+chave=id
+chavePrincipal=id
+c0=Processo,id,i,30,60,,
+c1=Descrição,descricao,c,50,200,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=550
+largura=480
+foco=empresa
+forcarleftmask=100
+forcarrightlabel=1
+t0=linha+0
+t1=Processo:,id,+,10,60,,
+h1=Número do Processo
+t2=linha-25
+t3=coluna+198
+t4=Data:,data,d,10,70,,
+h4=Data do Processo
+t5=linha-25
+t6=coluna+72
+t7=,hora,h,5,40,,
+h7=Hora do Processo
+t8=coluna-270
+t9=Cliente:,empresa,i,6,235x60,,?cadastro.rcl,
+h9=Cliente solicitante do Help Desk
+t10=Solicitação#007E7E7E\user_business.png,,,,410, ,
+t11=Solicitante:,usuario,c,50,310,,
+h11=Usuário solicitante do Help Desk
+t12=Categoria:,tipo,ci,3,90x30,,<#11>geral.rcl,
+h12=Categoria da solicitação
+t13=linha-25
+t14=coluna+180
+t15=Pasta:,pasta,i,3,85x30,,<#14>geral.rcl,
+h15=Pasta de trabalho
+t16=coluna-180
+t17=Responsável:,tecnico,i,3,130x30,,tecnicos.rcl,
+h17=Responsável para resolver a solicitação
+t18=linha-25
+t19=coluna+240
+t20=Previsão:,previsao,d,10,70,,
+t21=coluna-240
+t22=#
+t23=Descrição completa#007E7E7E\attach_2.png,,,,410, ,
+t24=Assunto:,descricao,c,50,310,,
+h24=Assunto 
+t25=forcarleftmask=10
+t26=,observacao,t,0,390x150,,
+h26=Descrição completa da solicitação
+validacao=noZero(empresa),campoPreenchido(usuario),noZero(tipo),noZero(pasta),noZero(tecnico)
+
+[ssss]	
+t0=linha+0
+t1=Processo:,id,+,10,60,,
+h1=Número do Processo
+t2=linha-25
+t3=coluna+120
+t4=Data:,data,d,10,70,,
+h4=Data do Processo
+t5=linha-25
+t6=coluna+140
+t7=Hora:,hora,h,5,50,,
+h7=Hora do Processo
+t8=coluna-260
+t9=Cliente:,empresa,i,6,60,,?cadastro.rcl,
+h9=Cliente solicitante do Help Desk
+t10=Solicitação#007E7E7E\user_business.png,,,,410, ,
+t11=Solicitante:,usuario,c,50,310,,
+h11=Usuário solicitante do Help Desk
+t12=Categoria:,tipo,ci,3,30,,<#11>geral.rcl,
+h12=Categoria
+t13=Assunto:,descricao,c,50,310,,
+h13=Assunto 
+t14=Responsável:,tecnico,i,3,30,,tecnicos.rcl,
+h14=Responsável para resolver a solicitação
+t15=Descrição completa#007E7E7E\attach_2.png,,,,410, ,
+t16=forcarleftmask=10
+t17=,observacao,t,0,400x150,,
+h17=Descrição completa da solicitação
+t18=Flag:,flag=Sim,sn,3,30,@V,
+validacao=noZero(empresa),campoPreenchido(usuario),noZero(tecnico)
+
+[anexos]
+tab=ARQUIVOS ANEXADOS AO PROCESSO
+comentario=
+db=document
+db2=tecnicos
+rcl=
+BotaoIncluir=
+BotaoAlterar=
+BotaoExcluir= 
+BotaoExtra=openfile
+chave=id
+chavePrincipal=id
+ordem=data desc,hora desc
+c0=Data,&DataHora(data|hora|) as data,d,10,100,,
+c1=Responsável,nome,c,20,90,,
+c2=Descrição,assunto,c,255,200,,
+c3=Tipo,filetipo,c,5,60,,
+relacaokey=registro,$IDORIGEM
+where=(registro=$IDORIGEM) and (document.usuario=tecnicos.id)and(document.tipo=1156)
+altura=220
+largura=450
+foco=usuario
+forcarleftmask=90
+t0=#Classificação#007E7E7E\accept.png,,,,460, ,
+t1=Data:,data,d,10,70,,
+h1=Data da ocorrência
+t2=linha-25
+t3=coluna+71
+t4=,hora,h,5,35,,
+h4=Hora da ocorrência
+t5=#linha-25
+t6=coluna-71
+t7=Responsável:,usuario,i,3,30,,tecnicos.rcl,
+h7=Responsável por esta ocorrência
+t8=Descrição:,assunto,c,255,305,,
+h8=Descrição completa
+t9=Arquivo:,descricao,c,255,290,@B,openfile[~PDF JPG DOC XLS ZIP ARJ^*.pdf;*.jpg;*.doc;*.xls;*.xlsx;*.zip;*.arj;*.docx;*.dot],
+h9=Arquivo para anexar ao processo
+anexos=descricao
+t10=,tipo=1156,c,4,35,@V,
+t11=,filetipo,c,15,100,@V,
+validacao=noZero(usuario),campoPreenchido(assunto),arquivoExiste(descricao)
+
+[catdesk]
+tab=PASTAS HELP DESK
+comentario=
+db=catdesk
+ordem=id
+rcl=
+relacao=
+chave=id
+chaveprincipal=id
+c0=Código,id,c,10,1,,
+c1=Descrição,descricao,c,50,400,,
+altura=180
+largura=450
+foco=descricao
+forcarleftmask=90
+t0=#Código:,id,+,3,30,,
+t1=Icone:,icone,icones,3,40,,
+t2=Descrição:,descricao,c,50,300,,
+h2=Descrição completa
+t3=Ativo:,ativo=Sim,sn,3,30,,
+h3=Ativo Sim ou Não
+Rlt=suporte.pasta
+validacao=campoPreenchido(descricao)

@@ -1,0 +1,285 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 28/01/2010
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=0
+nivelauxiliar=0
+disableMenu=0
+telalargura=830
+telaaltura=0
+pdx=tabmulti.pdx
+individual=1
+cadastro=cliente
+Posicionar=1
+whereexterno=mygroup='tabelamultiregioes'
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,+Tabela, tabelamultiregioes, 0123456789, 9, 25,a
+
+
+#
+# Parametros de tela
+#
+
+[tabelamultiregioes]
+tab=TABELA MISTA
+comentario=Tabela Mista
+db=tabefret
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=90
+forcarleftmask=140
+botaoExtra=imprimir
+nobrowse=1
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,420,,
+altura=532
+largura=380
+foco=descr
+t0=Descrição:,descr,c,50,395,,
+t1=Representante:,vendedor,i,6,180x50,,?cadastro.rcl,
+t2=linha-25
+t3=coluna+310
+t4=Validade:,validade,d,10,84,,
+t5=coluna-310
+t6=linha-10
+t7=Transporte por DI/ NF/ Hawb#007E7E7E\peso.png,,,,520, ,
+t8=coluna=0
+t9=Local de coleta,Acoleta,c,50,84,@B,<#3>cidades.rcl,
+t10=linha-5
+t11=Local de entrega,Aentrega,c,50,84,@B,<#3>cidades.rcl,
+t12=savelinha
+t13=linha-25
+t14=.#007E7E7E\nada,,,,520, ,
+t15=#linha-18
+t16=espacoh=20
+t17=       1 à    50 Kgs,ate_50,f,11,84,,
+t18=      51 à   100 Kgs,ate_100,f,11,84,,
+t19=     101 à   300 Kgs,ate_300,f,11,84,,
+t20=     301 à   500 Kgs,ate_500,f,11,84,,
+t21=     501 à  1000 Kgs,ate_1000,f,11,84,,
+t22=    1001 à  3000 Kgs,ate_3000,f,11,84,,
+t23=    3001 à  6000 Kgs,ate_6000,f,11,84,,
+t24=    6001 à 12000 Kgs,ate_12000,f,11,84,,
+t25=   12001 à 25000 Kgs,tonelada,f,11,84,,
+t26=espacoh=20
+t27=linha=savelinha
+t28=coluna+105
+t29=linha-45
+t30= ,Bcoleta,c,50,84,@B,<#3>cidades.rcl,
+t31=#linha-5
+t32= ,Bentrega,c,50,84,@B,<#3>cidades.rcl,
+t33=linha+15
+t34=espacoh=20
+t35= ,Bate_50,f,11,84,,
+t36= ,Bate_100,f,11,84,,
+t37= ,Bate_300,f,11,84,,
+t38= ,Bate_500,f,11,84,,
+t39= ,Bate_1000,f,11,84,,
+t40= ,Bate_3000,f,11,84,,
+t41= ,Bate_6000,f,11,84,,
+t42= ,Bate_12000,f,11,84,,
+t43=,Btonelada,f,11,84,,
+t44=espacoh=25
+t45=linha=savelinha
+t46=coluna+105
+t47=linha-45
+t48= ,Ccoleta,c,50,84,@B,<#3>cidades.rcl,
+t49=#linha-5
+t50= ,Centrega,c,50,84,@B,<#3>cidades.rcl,
+t51=linha+5
+t52=espacoh=20
+t53= ,Cate_50,f,11,84,,
+t54= ,Cate_100,f,11,84,,
+t55= ,Cate_300,f,11,84,,
+t56= ,Cate_500,f,11,84,,
+t57= ,Cate_1000,f,11,84,,
+t58= ,Cate_3000,f,11,84,,
+t59= ,Cate_6000,f,11,84,,
+t60= ,Cate_12000,f,11,84,,
+t61= ,Ctonelada,f,11,84,,
+t62=espacoh=25
+t63=linha=savelinha
+t64=coluna+105
+t65=linha-45
+t66= ,Dcoleta,c,50,84,@B,<#3>cidades.rcl,
+t67=#linha-5
+t68= ,Dentrega,c,50,84,@B,<#3>cidades.rcl,
+t69=linha+5
+t70=espacoh=20
+t71= ,Date_50,f,11,84,,
+t72= ,Date_100,f,11,84,,
+t73= ,Date_300,f,11,84,,
+t74= ,Date_500,f,11,84,,
+t75= ,Date_1000,f,11,84,,
+t76= ,Date_3000,f,11,84,,
+t77= ,Date_6000,f,11,84,,
+t78= ,Date_12000,f,11,84,,
+t79= ,Dtonelada,f,11,84,,
+t80=Transporte por DTAE / DTA 1 #007E7E7E\peso.png,,,,520, ,	
+t81=coluna=0
+t82=linha+5
+t83=Local de coleta,aColDta,c,50,84,@B,<#3>cidades.rcl,
+t84=Local de entrega,aEntDta,c,50,84,@B,<#3>cidades.rcl,
+t85=savelinha
+t86=linha-20
+t87=.#007E7E7E\nada,,,,520, ,
+t88=#linha-15
+t89=espacoh=20
+t90=       1 à   500 Kgs,de1_500,f,11,84,,
+t91=#savelinha
+t92=     501 à  1000 Kgs,de501_1000,f,11,84,,
+t93=    1001 à  3000 Kgs,de1001_3000,f,11,84,,
+t94=    3001 à  6000 Kgs,de3001_6000,f,11,84,,
+t95=    6001 à 12000 Kgs,de6001_12000,f,11,84,,
+t96=#acima de 12000 Kgs,detonelada,f,11,84,,
+t97=espacoh=25
+t98=linha=savelinha
+t99=coluna+105
+t100=linha-40
+t101= ,bColDta,c,50,84,@B,<#3>cidades.rcl,
+t102=linha-5
+t103= ,bEntDta,c,50,84,@B,<#3>cidades.rcl,
+t104=linha+5
+t105=espacoh=20
+t106= ,deB1_500,f,11,84,,
+t107= ,deB501_1000,f,11,84,,
+t108= ,deB1001_3000,f,11,84,,
+t109= ,deB3001_6000,f,11,84,,
+t110= ,deB6001_12000,f,11,84,,
+t111=# ,deBtonelada,f,11,84,,
+t112=espacoh=25
+t113=linha=savelinha
+t114=coluna+105
+t115=linha-40
+t116= ,cColDta,c,50,84,@B,<#3>cidades.rcl,
+t117=linha-5
+t118= ,cEntDta,c,50,84,@B,<#3>cidades.rcl,
+t119=linha+5
+t120=espacoh=20
+t121= ,deC1_500,f,11,84,,
+t122= ,deC501_1000,f,11,84,,
+t123= ,deC1001_3000,f,11,84,,
+t124= ,deC3001_6000,f,11,84,,
+t125= ,deC6001_12000,f,11,84,,
+t126=# ,deCtonelada,f,11,84,,
+t127=espacoh=25
+t128=linha=savelinha
+t129=coluna+105
+t130=linha-40
+t131= ,dColDta,c,50,84,@B,<#3>cidades.rcl,
+t132=linha-5
+t133= ,dEntDta,c,50,84,@B,<#3>cidades.rcl,
+t134=linha+5
+t135=espacoh=20
+t136= ,deD1_500,f,11,84,,
+t137= ,deD501_1000,f,11,84,,
+t138= ,deD1001_3000,f,11,84,,
+t139= ,deD3001_6000,f,11,84,,
+t140= ,deD6001_12000,f,11,84,,
+t141=# ,deDtonelada,f,11,84,,
+t142=#VIAGEM EXCLUSIVA - Lotação do veículo acrescentar#007E7E7E\peso.png,,,,520, ,	
+t143=#coluna=0
+t144=#linha+5
+t145=#1000 Kgs,lt_1000,f,11,84,,
+t146=#savelinha
+t147=#3000 Kgs,lt_3000,f,11,84,,
+t148=#6000 Kgs,lt_6000,f,11,84,,
+t149=#coluna+300
+t150=#linha=savelinha
+t151=#linha-3
+t152=#9000 Kgs,lt_9000,f,11,84,,
+t153=#12000 Kgs,lt_12000,f,11,84,,
+t154=#acima de 12000 Kgs,lttonelada,f,11,84,,
+t155=#linha+20
+t156=Transporte de CONTAINERS#007E7E7E\delivery.png,,,,520, ,	
+t157=coluna=0
+t158=linha+5
+t159=Tipo,Acontainer,c,50,84,,
+t160=savelinha
+t161=20":,Actn20,f,11,84,,
+t162=40":,Actn40,f,11,84,,
+t163=linha=savelinha
+t164=linha-20
+t165=coluna+100
+t166= ,Bcontainer,c,50,84,,
+t167=savelinha
+t168= ,Bctn20,f,11,84,,
+t169= ,Bctn40,f,11,84,,
+t170=linha=savelinha
+t171=linha-20
+t172=coluna+100
+t173= ,Ccontainer,c,50,84,,
+t174=savelinha
+t175= ,Cctn20,f,11,84,,
+t176= ,Cctn40,f,11,84,,
+t177=linha=savelinha
+t178=linha-20
+t179=coluna+100
+t180= ,Dcontainer,c,50,84,,
+t181=savelinha
+t182= ,Dctn20,f,11,84,,
+t183= ,Dctn40,f,11,84,,
+t184=coluna=0
+t185=linha+5
+t186=Devolução +:,frt_val1,f,11,84,,
+t187=Generalidades#007E7E7E\sum.png,,,,520, ,
+t188=linha+5
+t189=coluna=0
+t190=Ad Valorem:,advalorem,p,11,84,,
+t191=Adv Mínimo:,advminimo,f,11,84,,
+t192=GRis:,gris,p,11,84,,
+t193=Pedágio:,pedagio,f,11,84,,
+t194=Sec/Cat:,seccat,f,11,84,,
+t195=Outros:,outros,f,11,84,,
+t196=Estadia:,estadia,p,11,84,,
+t197=DTA:,dta,f,11,84,,
+t198=Percurso:,percurso,f,11,84,,
+t199=linha-180
+t200=coluna+300
+t201=Carga Perigosa:,cargape,p,11,84,,
+t202=Carga Excedente:,cargaex,f,11,84,,
+t203=Ajudante:,ajudante,f,11,84,,
+t204=Ajudante Aereo:,ajudaereo,f,11,84,,
+t205=Ajudante Maritimo:,ajudmaritimo,f,11,84,,
+t206=Despacho São Paulo:,despacho,f,11,84,,
+t207=Despacho Santos:,despacho2,f,11,84,,
+t208=Despacho VCP:,despacho3,f,11,84,,
+t209=Escolta São Paulo:,escolta,f,11,84,,
+t210=Escolta Santo/Campinas:,escolta2,f,11,84,,
+t211=Frete mínimo:,minimo,f,11,84,,
+t212=Outros#007E7E7E\arrow_merge.png,,,,520, ,
+t213=coluna=0
+t214=linha+5
+t215=Pernoite/Hora extra +:,pernoite,p,11,84,,
+t216=Margem esquerda +:,adicional,f,11,84,,
+t217=#coluna=350
+t218=#linha-40
+t219=#ICMS faz parte do frete:,icmsx,sn,3,30,,
+t220=Compartilhada:,compartilhada,sn,3,30,,
+t221=Observação#007E7E7E\text_align_justify.png,,,,520, ,
+t222=linha+5
+t223=coluna=0
+t224=#forcarcoluna=0
+t225=forcarleftmask=15
+t226= ,observacao,tw,0,500x300,B|10|fretes|Observações da tabela,
+t227=linha+30
+t228=_#007E7E7E\nada,,,,520, ,
+t229=espacoh=25

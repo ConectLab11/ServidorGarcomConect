@@ -1,0 +1,139 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 01/08/2011
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=tabvalor.pdx
+disableMenu=0
+telalargura=830
+telaaltura=0
+Posicionar=1
+whereexterno=mygroup='tabelaunkco'
+solicitante=unika
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,+Rodoviária Padrão, tabelaunkco, 0123456789, 9, 25,a
+o2=nil,+Tarifas, tarifas , 0123456789, 9, 23,a
+
+#
+# Parametros de tela
+#
+ 
+[tabelaunkco]
+tab=Rodoviária Padrão
+comentario=Tabela para calculo de fretes
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=90
+forcarleftmask=90
+nobrowse=1
+altura=200
+largura=400
+foco=descr
+t0=Descrição:,descr,c,50,410,,
+h0=Descrição completa
+t1=Validade:,validade,d,10,80,,
+h1=Prazo de validade
+t2=linha-25
+t3=coluna+320
+t4=forcarleftmask=170
+t5=linha+25
+t6=coluna-320
+t7=Taxas#007E7E7E\text_align_justify.png,,,,550, ,
+
+t8=ADValorem:,advalorem,p,11,84,,
+t9=GRIS:,gris,p,11,84,,
+t10=Taxa CTRC:,despacho,f,11,84,,
+
+t11=Pedágio à cada{lb|kgpedagio|100} kg:,pedagio,f,11,84,,
+h11=Taxa de pedágio a cobrar para cada fração de peso.
+t12=linha-25
+t13=coluna+160
+t14=Fração(kg):,{lb}kgpedagio=100,e,11,30,,
+t15=coluna-160
+t16=TDE:,tde,f,11,84,,
+
+t17=Outros#007E7E7E\tag.png,,,,530, ,
+t18=forcarleftmask=100
+t19=Devolução:,devolucao,p,11,60,,
+h19=Porcentagem do frete quando for devolução
+t20=linha-25
+t21=coluna+160
+t22=Reentrega:,reentrega,p,11,60,,
+h22=Porcentagem do frete quando for reentrega
+t23=coluna+160
+t24=linha-25
+t25=Compartilhada:,compartilhada,sn,3,30,,
+h25=Compartilhar esta tabela com os clientes sem tabela.
+
+[tarifas]
+tab=TARIFAS PARA CALCULO
+comentario=
+db=tabaereo
+ordem=uf,faixa_1
+rcl=tabaereo.rcl
+chave=tabela
+chavePrincipal=id
+relacaokey=tabela,$IDORIGEM
+tituloWidth=35
+where=tabela="$IDORIGEM"
+c0=UF,uf,c,2,30,,
+c1=Cidade,cidade,c,50,310,,
+c2=100kg,faixa_1,f,11,80,,
+c3=Acima,acima,f,11,80,,
+Rlt=
+msg=
+altura=430
+largura=600
+forcarleftmask=80
+foco=uf
+t0=UF:,uf,c,2,30,@BU,estado2.rcl,
+t1=coluna+110
+t2=linha-25
+t3=Cidade:,cidade,c,50,250,@B,<#17>geral.rcl{ufsigla=uf/"Interior/Capital"},
+t4=coluna-110
+t5=Pesos#007E7E7E\color_swatch_2.png,,,,550, ,
+t6=até 100:,faixa_1,f,11,84,,
+t7=Acima:,acima,f,11,84,,
+validacao=campoPreenchido(uf),campoPreenchido(cidade)
+
+[calculo]
+versao=12
+x0=precalc:coleta{Tem Coleta:,ck,0,,0}
+x1=precalc:redespacho{Tem Redespacho:,ck,0,,0}
+x2=precalc:entrega{Tem Entrega:,ck,0,,0}
+x3=precalc:qTDE{Qtde de TDE:,l,60,[0|1|2|3|4|5|6|7|8|9|10|11|12],0}
+x4=fretepeso:pesoCidade[EXCEDENTE,*faixa_1{0:100},acima{100.01}]
+x5=outros:0
+x6=outros:taxaComPesoExcedente[coleta,coleta,actn20,actn40]
+x7=outros:taxaComPesoExcedente[redespacho,redespacho,bctn20,bctn40]
+x8=outros:taxaComPesoExcedente[entrega,entrega,cctn20,cctn40]
+x9=itr:0
+x10=itr:seleciona[qTDE,*tde]
+x11=despacho:tabelaValor[despacho]
+x12=gris:porcentNfeValor[gris]
+x13=pedagio:pedagio[$kgpedagio,100kg]
+x14=seguro:porcentNfeValor[advalorem]
+

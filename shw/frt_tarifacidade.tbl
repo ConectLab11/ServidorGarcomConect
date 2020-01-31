@@ -1,0 +1,127 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 21/11/2013
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=tabvalor.pdx
+disableMenu=0
+telalargura=830
+telaaltura=0
+Posicionar=1
+whereexterno=mygroup='tabelatarifacidade'
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,+Generalidades, tabelatarifacidade, 0123456789, 9, 25,a
+o2=nil,+Tarifas,tarifas, 0123456789, 9, 23,a
+o3=nil,+Destinos, destinos, 0123456789, 9, 23,a
+
+#
+# Parametros de tela
+#
+
+[tabelatarifacidade]
+tab=TABELA TARIFA POR CIDADE (PESO)
+comentario=
+db=tabefret
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+forcarcoluna=130
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Por tonelada,tonelada,f,16,100,,
+altura=532
+
+
+largura=380
+foco=descr
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=0
+forcarleftmask=110
+nobrowse=1
+t0=coluna=0
+t1=Descrição:,descr,c,50,445,,
+h1=Descrição completa da Tabela.
+t2=Generalidades#007E7E7E\text_align_justify.png,,,,545, ,
+t3=Ad valorem:,advalorem,p,11,84,,
+t4=GRIS:,gris,p,11,84,,
+t5=Coleta,coleta,f,11,84,,
+t6=Devolução:,devolucao,p,11,60,,
+t7=Reentrega:,reentrega,p,11,60,,
+t8=Compartilhada:,compartilhada,sn,3,30,,
+
+[destinos]
+tab=CIDADES DESTINOS
+comentario=
+db=tabaereo
+ordem=uf,cidade
+rcl=
+chave=tabela
+chavePrincipal=id
+relacaokey=tabela,$IDORIGEM
+relacaokey2=subTabela,"0"
+tituloWidth=35
+where=tabela="$IDORIGEM" and subTabela=0
+c0=UF,uf,c,2,50,,
+c1=Cidade,cidade,c,50,400,,
+c2=Tarifa,tarifa,c,2,50,,
+c3=Prazo,prazo,i,3,50,,
+Rlt=
+msg=
+altura=230
+largura=400
+forcarleftmask=80
+foco=siglas
+t0=UF:,uf,c,2,30,@BU,estado2.rcl,
+t1=Cidade:,cidade,c,50,250,@B,<#17>geral.rcl{ufsigla=uf/"Interior"},
+t2=Tarifa:,tarifa,c,2,30,@BU,<#15>geral2.rcl,
+t3=Prazo:,prazo=1,i,3,30,,
+validacao=campoPreenchido(uf),campoPreenchido(cidade)
+
+[tarifas]
+tab=TARIFAS
+comentario=
+db=tabaereo
+ordem=tarifa
+rcl=
+chave=tabela
+chavePrincipal=id
+relacaokey=tabela,$IDORIGEM
+relacaokey2=subTabela,"$IDORIGEM"
+tituloWidth=35
+where=tabela="$IDORIGEM" and subTabela="$IDORIGEM"
+c0=Tarifa,tarifa,c,2,60,,
+c1=Por Kilo,valorpeso,f,11,90,,
+c2=Pedágio,pedagio,f,11,90,,
+c3=Despacho,despacho,f,11,90,,
+c4=F.Minimo,minima,f,11,90,,
+c5=F.Minimo %,ate10,p,11,90,,
+Rlt=
+msg=
+altura=300
+largura=400
+forcarleftmask=80
+foco=tarifa
+t0=Tarifa:,tarifa,c,2,30,@BU,<#15>geral2.rcl,
+t1=Por Kilo:,valorpeso,e,11,84,,
+t2=Pedágio:,pedagio,f,11,84,,
+t3=Despacho:,despacho,f,11,84,,
+t4=F.Minimo:,minima,f,11,84,,
+t5=F.Minimo%:,ate10,p,11,84,,
+

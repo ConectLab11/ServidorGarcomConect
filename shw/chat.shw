@@ -1,0 +1,68 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 12/12/2003
+#
+#
+# a todos
+# d nota de despesas
+# g agenda
+# m movimento de caixa
+# n cadastro de bancos
+# o plano de contas
+# p pagar
+# q gerenciador de ocorrencias
+# r receber
+# s script inicial
+# t conta caixa
+
+[arquivo]
+modulo=OPÇÕES DO CHAT
+nivelprincipal=0
+nivelauxiliar=1
+
+[Opcoes]
+o0=Chat, 0123456789, 9, 0,as
+
+[Chat]
+o0=CHAT, Salas, chatlist, 0123456789, 1, 8,a
+o1=CHAT, Estado do usuário, chatesta, 0123456789, 1, 8,a
+
+[chatlist]
+tab=SALAS CHAT
+comentario=LISTA DE SALAS
+db=chatlist
+ordem=
+rcl=chatlist.rcl
+chave=id
+chaveprincipal=id
+c0=Descrição,descricao,c,100,350,,
+c1=Ativo,ativo,sn,3,30,,,
+reservado=11
+altura=190
+largura=470
+foco=descricao
+t0=Descrição:,descricao,c,200,300,,
+t1=Host:,host,c,50,150,,
+t2=Ativo:,ativo,sn,3,30,,
+
+[chatesta]
+tab=ESTADO DO USUÁRIO
+comentario=
+db=chatesta
+ordem=
+rcl=chatesta.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,c,5,60,,
+c1=Descrição,descricao,c,100,350,,
+altura=170
+largura=470
+foco=descricao
+t0=Código:,id,+,4,30,!999;1; ,
+t1=Descrição:,descricao,c,200,300,,
+BotaoExcluir=RCL
+BotaoAlterar=RCL
+BotaoIncluir=RCL
+

@@ -1,0 +1,1462 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 12/12/2003
+#
+#
+# a todos
+# p Programação de entregas data e hora
+# n Baixa por Notas Fiscais
+# e Ocorrênciaas de viagem
+# g Configuração de seguro
+
+[camposLayoutVendas]
+c0=*, 2,30,e
+c1=codigo, Código,90,e
+c2=descricao, Descrição,200,e
+c3=opcoes, Opções, 80,e
+c4=qtde,Qtde ,60,d
+c5=unidade, Und, 40,e
+c6=tamanho,Tamanho , 60,d,7
+c7=cor, Cor,60,e
+c8=metragem,Metragem ,60,d,7
+c9=desconto,Desc ,50,d
+c10=preco,Preço ,80,d
+c11=total,Total ,90,d
+c12=ipi,IPI ,50,d
+c13=adicional,Adicional ,80,d
+c14=obs, Obs Alt+V,60,e
+
+
+[camposLayoutNFEntrada]
+c0=*, 2,30,e
+c1=codigo, Código,100,e
+c2=descricao, Descrição,320,e
+c3=qtde,Qtde ,55,d
+c4=unidade, Und, 50,e
+c5=tamanho,Tamanho , 60,d,7
+c6=cor, Cor,60,e
+c7=metragem,Metragem ,60,d,7
+c8=preco,Preço ,90,d
+c9=desconto,Desc ,50,d
+c10=total,Total ,100,d
+c11=cst, CST, 40,e
+c12=cfop, CFOP, 55,e
+c13=bicms,Base \ICMS , 70,d
+c14=picms,Aliq , 30,d
+c15=icms,ICMS , 60,d
+c16=bicmsst,Base \ICMS ST, 70,d
+c17=picmsst,Aliq, 30,d
+c18=icmsst,ICMS ST, 60,d
+c19=pipi,Aliq , 30,e
+c20=ipi,IPI ,80,d
+c21=isentas,Isentas , 80,d
+c22=outras,Outras ,80,d
+
+[arquivo]
+modulo=CONFIGURAÇÃO $IDTITULO
+tituloG=PEDIDO DE VENDA
+tituloE=
+tituloP=
+tituloN=
+nivelprincipal=0
+nivelauxiliar=0
+posicionar=0
+
+[Opcoes]
+o0=Vendas, 0123456789, 9, 20, vcd245
+
+[Vendas]
+o0=#nil, Geral,  geralVenda, 0123456789, 9, 20:15, v
+o1=#nil, Campos, campos, 0123456789, 9, 20:13,v
+o2=nil, Tela, layoutVenda, 0123456789, 9, 20:10, v
+o3=nil, Geral,  geralNota, 0123456789, 9, 20:15,2
+o4=nil, Campos, camposNota, 0123456789, 9, 20:13,2
+o5=nil, Tela, layoutNota, 0123456789, 9, 20:10,2
+o6=nil, Geral,  geralCompra, 0123456789, 9, 20:15,5
+o7=nil, Campos, camposCompra, 0123456789, 9, 20:13,5
+o8=nil, Tela, layoutCompra, 0123456789, 9, 20:10,5
+o9=nil, Geral,  geralDev, 0123456789, 9, 20:15,4
+o10=nil, Campos, camposDev, 0123456789, 9, 20:13,4
+o11=nil, Tela, layoutDev, 0123456789, 9, 20:10,4
+o12=Pedido, Ajustes,pedCompras, 0123456789, 9, 20:10,5
+
+[geralVenda]
+tab=CONFIGURAÇÃO GERAL - PEDIDO DE VENDA
+comentario=
+db=cfgvenda
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+autoIncluir=1
+where=id=1
+forcarleftmask=140
+c0=Codigo,id,c,8,60,,
+c1=Decimal,decimal,c,100,200,,
+altura=450
+largura=450
+foco=decimais
+nobrowse=1
+t0=Valores#007E7E7E\calculator.png,,,,410, ,
+t1=#Editar qtde:,editarQtde,sn,3,30,,
+t2=#Editar Desconto:,editarDesc,sn,3,30,,
+t3=#Editar preço:,editarPreco,sn,3,30,,
+t4=#Casas decimais:,decimais,i,1,30,,
+t5=Modelo de Impressão#007E7E7E\printer.png,,,,410, ,
+t6=#forcarleftmask=80
+t7=#Layout:,layout,ci,10,50,,<#4>geral2.rcl,
+t8=#Logo:,cabLogo,sn,3,30,,
+t9=#Vendedor fixo:,vendFixo,i,6,50,,?cadastro.rcl,
+validacao=limiteInt(decimais;[1-4])
+
+[campos]
+tab=CAMPOS DO PEDIDO
+comentario=
+db=cfgvenda
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+autoIncluir=1
+where=id=1
+forcarleftmask=200
+c0=Codigo,id,c,8,60,,
+c1=Decimal,decimal,c,100,200,,
+altura=450
+largura=450
+foco=cpCfop
+nobrowse=1
+t0=Pedido#007E7E7E\bricks.png,,,,410, ,
+t1=#*Painel:,pnPedido,sn,3,30,,
+t2=#CFOP:,cpCfop,sn,3,30,,
+t3=Cliente#007E7E7E\bricks.png,,,,410, ,
+t4=#*Painel:,pnCliente,sn,3,30,,
+t5=#Tipo:,cpTipo,sn,3,30,,
+t6=#Limite:,cpLimite,sn,3,30,,
+t7=#Busca Fone:,buscaFone,sn,3,30,,
+t8=#Desativar Dados p/ Entrega:,mostraEntrega,sn,3,30,,
+t9=#Mostrar endereço:,clieEnd,sn,3,30,,
+t10=Vendedor#007E7E7E\bricks.png,,,,410, ,
+t11=#*Painel:,pnVendedor,sn,3,30,,
+t12=#Pedido:,cpPedVend,sn,3,30,,
+t13=#Comissão:,cpComissao,sn,3,30,,
+t14=Produtos#007E7E7E\bricks.png,,,,410, ,
+t15=#Botão Avulso:,btAvulso,sn,3,30,,
+t16=#Vendedor fixo:,vendFixo,i,6,50,,?cadastro.rcl,
+ 
+[camposLayoutVendas]
+tab=LAYOUT DA TELA - PEDIDO DE VENDA
+comentario=
+db=cfgvenda
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+autoIncluir=1
+forcarleftmask=90
+where=id=1
+c0=Codigo,id,c,8,60,,
+c1=Decimal,decimal,c,100,200,,
+altura=450
+largura=450
+foco=tmCodigo
+nobrowse=1
+t0=espacoh=24 
+//Campos#007E7E7E\zone.png,,,,410,,
+t1=Código:,codigo=Sim,sn,3,30,{rcl*},
+t2=linha-25 
+t3=coluna+100
+t4=Tamanho,tmCodigo,i,4,40,,
+t5=linha-25
+t6=coluna+100
+t7=Fundo,corCodigo=@$00FFFFFF,color,10,40,,
+t8=linha-25
+t9=coluna+80
+t10=Fonte,corCodigoFont=@$00000000,color,10,40,,
+...
+t11=coluna-280
+t12=Descrição:,descricao=Sim,sn,3,30,{rcl*},
+t13=linha-25
+t14=coluna+100
+t15=,tmDescricao,i,4,40,,
+t16=linha-25
+t17=coluna+100
+t18=,corDescricao=@$FFFFFF,color,3,40,,
+t19=linha-25
+t20=coluna+80
+t21=,corDescricaoFont=@$00000000,color,10,40,,
+
+t22=coluna-280
+t23=Quantidade:,qtde=Sim,sn,3,30,{rcl*},
+t24=linha-25
+t25=coluna+100
+t26=,tmQtde,i,4,40,,
+t27=linha-25
+t28=coluna+100
+t29=,corQtde=@$FFFFFF,color,3,40,,
+t30=linha-25
+t31=coluna+80
+t32=,corQtdeFont=@$00000000,color,10,40,,
+
+t33=coluna-280
+t34=Unidade:,unidade=Sim,sn,3,30,{rcl*},
+t35=linha-25
+t36=coluna+100
+t37=,tmUnidade,i,4,40,,
+t38=linha-25
+t39=coluna+100
+t40=,corUnidade=@$FFFFFF,color,3,40,,
+t41=linha-25
+t42=coluna+80
+t43=,corUnidadeFont=@$00000000,color,10,40,,
+
+t44=coluna-280
+t45=Opções:,opcoes,sn,3,30,{rcl*},
+t46=linha-25
+t47=coluna+100
+t48=,tmOpcoes,i,4,40,,
+t49=linha-25
+t50=coluna+100
+t51=,corOpcoes=@$FFFFFF,color,3,40,,
+t52=linha-25
+t53=coluna+80
+t54=,corOpcoesFont=@$00000000,color,10,40,,
+
+t55=coluna-280
+t56=Tamanho:,tamanho,sn,3,30,{rcl*},
+t57=linha-25
+t58=coluna+100
+t59=,tmTamanho,i,4,40,,
+t60=linha-25
+t61=coluna+100
+t62=,corTamanho=@$FFFFFF,color,3,40,,
+t63=linha-25
+t64=coluna+80
+t65=,corTamanhoFont=@$00000000,color,10,40,,
+
+t66=coluna-280
+t67=Cor:,cor,sn,3,30,{rcl*},
+t68=linha-25
+t69=coluna+100
+t70=,tmCor,i,4,40,,
+t71=linha-25
+t72=coluna+100
+t73=,corCor=@$FFFFFF,color,3,40,,
+t74=linha-25
+t75=coluna+80
+t76=,corCorFont=@$00000000,color,10,40,,
+
+t77=coluna-280
+t78=Metragem:,metragem,sn,3,30,{rcl*},
+t79=linha-25
+t80=coluna+100
+t81=,tmMetragem,i,4,40,,
+t82=linha-25
+t83=coluna+100
+t84=,corMetragem=@$FFFFFF,color,3,40,,
+t85=linha-25
+t86=coluna+80
+t87=,corMetragemFont=@$00000000,color,10,40,,
+
+t88=coluna-280
+t89=Desconto:,desconto,sn,3,30,{rcl*},
+t90=linha-25
+t91=coluna+100
+t92=,tmDesconto,i,4,40,,
+t93=linha-25
+t94=coluna+100
+t95=,corDesconto=@$FFFFFF,color,3,40,,
+t96=linha-25
+t97=coluna+80
+t98=,corDescontoFont=@$00000000,color,10,40,,
+
+t99=coluna-280
+t100=Preço:,preco,sn,3,30,{rcl*},
+t101=linha-25
+t102=coluna+100
+t103=,tmPreco,i,4,40,,
+t104=linha-25
+t105=coluna+100
+t106=,corPreco=@$FFFFFF,color,3,40,,
+t107=linha-25
+t108=coluna+80
+t109=,corPrecoFont=@$00000000,color,10,40,,
+
+t110=coluna-280
+t111=Total:,total,sn,3,30,{rcl*},
+t112=linha-25
+t113=coluna+100
+t114=,tmTotal,i,4,40,,
+t115=linha-25
+t116=coluna+100
+t117=,corTotal=@$FFFFFF,color,3,40,,
+t118=linha-25
+t119=coluna+80
+t120=,corTotalFont=@$00000000,color,10,40,,
+
+t121=coluna-280
+t122=IPI:,ipi,sn,3,30,{rcl*},
+t123=linha-25
+t124=coluna+100
+t125=,tmIpi,i,4,40,,
+t126=linha-25
+t127=coluna+100
+t128=,corIpi=@$FFFFFF,color,3,40,,
+t129=linha-25
+t130=coluna+80
+t131=,corIpiFont=@$00000000,color,10,40,,
+
+t132=coluna-280
+t133=Observação:,obs,sn,3,30,{rcl*},
+t134=linha-25
+t135=coluna+100
+t136=,tmObs,i,4,40,,
+t137=linha-25
+t138=coluna+100
+t139=,corObs=@$FFFFFF,color,3,40,,
+t140=linha-25
+t141=coluna+80
+t142=,corObsFont=@$00000000,color,10,40,,
+
+t143=coluna-280
+t144=Adicional:,adicional,sn,3,30,{rcl*},
+t145=linha-25
+t146=coluna+100
+t147=,tmAdicional,i,4,40,,
+t148=linha-25
+t149=coluna+100
+t150=,corAdicional=@$FFFFFF,color,3,40,,
+t151=linha-25
+t152=coluna+80
+t153=,corAdicionalFont=@$00000000,color,10,40,,
+
+t154=coluna-280
+t155=Seleção#007E7E7E\color_swatch_1.png,,,,410, ,
+t156=forcarleftmask=120
+t157=Barra de seleção:,corSelecao=@clBlue,color,10,40,,
+t158=linha-25
+t159=coluna+80
+t160=Fonte,corSelecaoFont=@$00FFFFFF,color,10,40,,
+t161=coluna-80
+t162=Barra de edição:,corEdicao=@$00000000,color,10,40,,
+t163=linha-25
+t164=coluna+80
+t165=,corEdicaoFont=@$00FFFFFF,color,10,40,,
+t166=coluna-80
+t167=Foco:,corFoco=@$0000FFFF,color,10,40,,
+t168=linha-25
+t169=coluna+80
+t170=,corFocoFont=@$00000000,color,10,40,,
+t171=coluna-80
+
+
+[geralNota]
+tab=CONFIGURAÇÃO GERAL - ENTRADA DE NOTAS FISCAIS
+comentario=
+db=cfgvenda
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+autoIncluir=1
+where=id=2
+forcarleftmask=140
+c0=Codigo,id,c,8,60,,
+c1=Decimal,decimal,c,100,200,,
+altura=450
+largura=450
+foco=decimais
+nobrowse=1
+t0=Valores#007E7E7E\calculator.png,,,,410, ,
+t1=Editar qtde:,editarQtde,sn,3,30,,
+t2=Editar Desconto,editarDesc,sn,3,30,,
+t3=Desc. Porcentagem:,descPercent,sn,3,30,,
+t4=Desc. Neutro:,descNeutro,sn,3,30,,
+t5=Editar preço:,editarPreco,sn,3,30,,
+t6=Casas decimais:,decimais,i,1,30,,
+validacao=limiteInt(decimais;[1-4])
+
+[camposNota]
+tab=CAMPOS
+comentario=
+db=cfgvenda
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+autoIncluir=1
+where=id=2
+forcarleftmask=100
+c0=Codigo,id,c,8,60,,
+c1=Decimal,decimal,c,100,200,,
+altura=450
+largura=450
+foco=cpCfop
+nobrowse=1
+t0=Pedido#007E7E7E\bricks.png,,,,410, ,
+t1=*Painel:,pnPedido,sn,3,30,,
+t2=CFOP:,cpCfop,sn,3,30,,
+t3=Cliente#007E7E7E\bricks.png,,,,410, ,
+t4=*Painel:,pnCliente,sn,3,30,,
+t5=Tipo:,cpTipo,sn,3,30,,
+t6=Limite:,cpLimite,sn,3,30,,
+t7=Vendedor#007E7E7E\bricks.png,,,,410, ,
+t8=*Painel:,pnVendedor,sn,3,30,,
+t9=Pedido:,cpPedVend,sn,3,30,,
+t10=Comissão:,cpComissao,sn,3,30,,
+t11=Produtos#007E7E7E\bricks.png,,,,410, ,
+t12=Botão Avulso:,btAvulso,sn,3,30,,
+
+[layoutNota]
+tab=LAYOUT DA TELA
+comentario=
+db=cfgvenda
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+autoIncluir=1
+forcarleftmask=90
+where=id=2
+c0=Codigo,id,c,8,60,,
+c1=Decimal,decimal,c,100,200,,
+altura=450
+largura=450
+foco=tmCodigo
+nobrowse=1
+t0=espacoh=24 
+//Campos#007E7E7E\zone.png,,,,410,,
+t1=Código:,codigo=Sim,sn,3,30,{rcl*},
+t2=linha-25 
+t3=coluna+100
+t4=Tamanho,tmCodigo,i,4,40,,
+t5=linha-25
+t6=coluna+100
+t7=Fundo,corCodigo=@$00FFFFFF,color,10,40,,
+t8=linha-25
+t9=coluna+80
+t10=Fonte,corCodigoFont=@$00000000,color,10,40,,
+...
+t11=coluna-280
+t12=Descrição:,descricao=Sim,sn,3,30,{rcl*},
+t13=linha-25
+t14=coluna+100
+t15=,tmDescricao,i,4,40,,
+t16=linha-25
+t17=coluna+100
+t18=,corDescricao=@$FFFFFF,color,3,40,,
+t19=linha-25
+t20=coluna+80
+t21=,corDescricaoFont=@$00000000,color,10,40,,
+
+t22=coluna-280
+t23=Quantidade:,qtde=Sim,sn,3,30,{rcl*},
+t24=linha-25
+t25=coluna+100
+t26=,tmQtde,i,4,40,,
+t27=linha-25
+t28=coluna+100
+t29=,corQtde=@$FFFFFF,color,3,40,,
+t30=linha-25
+t31=coluna+80
+t32=,corQtdeFont=@$00000000,color,10,40,,
+
+t33=coluna-280
+t34=Unidade:,unidade=Sim,sn,3,30,{rcl*},
+t35=linha-25
+t36=coluna+100
+t37=,tmUnidade,i,4,40,,
+t38=linha-25
+t39=coluna+100
+t40=,corUnidade=@$FFFFFF,color,3,40,,
+t41=linha-25
+t42=coluna+80
+t43=,corUnidadeFont=@$00000000,color,10,40,,
+
+t44=coluna-280
+t45=Tamanho:,tamanho,sn,3,30,{rcl*},
+t46=linha-25
+t47=coluna+100
+t48=,tmTamanho,i,4,40,,
+t49=linha-25
+t50=coluna+100
+t51=,corTamanho=@$FFFFFF,color,3,40,,
+t52=linha-25
+t53=coluna+80
+t54=,corTamanhoFont=@$00000000,color,10,40,,
+
+t55=coluna-280
+t56=Cor:,cor,sn,3,30,{rcl*},
+t57=linha-25
+t58=coluna+100
+t59=,tmCor,i,4,40,,
+t60=linha-25
+t61=coluna+100
+t62=,corCor=@$FFFFFF,color,3,40,,
+t63=linha-25
+t64=coluna+80
+t65=,corCorFont=@$00000000,color,10,40,,
+
+t66=coluna-280
+t67=Metragem:,metragem,sn,3,30,{rcl*},
+t68=linha-25
+t69=coluna+100
+t70=,tmMetragem,i,4,40,,
+t71=linha-25
+t72=coluna+100
+t73=,corMetragem=@$FFFFFF,color,3,40,,
+t74=linha-25
+t75=coluna+80
+t76=,corMetragemFont=@$00000000,color,10,40,,
+
+t77=coluna-280
+t78=Desconto:,desconto,sn,3,30,{rcl*},
+t79=linha-25
+t80=coluna+100
+t81=,tmDesconto,i,4,40,,
+t82=linha-25
+t83=coluna+100
+t84=,corDesconto=@$FFFFFF,color,3,40,,
+t85=linha-25
+t86=coluna+80
+t87=,corDescontoFont=@$00000000,color,10,40,,
+
+t88=coluna-280
+t89=Preço:,preco,sn,3,30,{rcl*},
+t90=linha-25
+t91=coluna+100
+t92=,tmPreco,i,4,40,,
+t93=linha-25
+t94=coluna+100
+t95=,corPreco=@$FFFFFF,color,3,40,,
+t96=linha-25
+t97=coluna+80
+t98=,corPrecoFont=@$00000000,color,10,40,,
+
+t99=coluna-280
+t100=Total:,total,sn,3,30,{rcl*},
+t101=linha-25
+t102=coluna+100
+t103=,tmTotal,i,4,40,,
+t104=linha-25
+t105=coluna+100
+t106=,corTotal=@$FFFFFF,color,3,40,,
+t107=linha-25
+t108=coluna+80
+t109=,corTotalFont=@$00000000,color,10,40,,
+
+t110=coluna-280
+t111=CST:,cst,sn,3,30,,
+t112=linha-25
+t113=coluna+100
+t114=,tmCST,i,4,40,,
+t115=linha-25
+t116=coluna+100
+t117=,corCST=@$FFFFFF,color,3,40,,
+t118=linha-25
+t119=coluna+80
+t120=,corCSTFont=@$00000000,color,10,40,,
+
+t121=coluna-280
+t122=CFOP:,cfop,sn,3,30,,
+t123=linha-25
+t124=coluna+100
+t125=,tmCfop,i,4,40,,
+t126=linha-25
+t127=coluna+100
+t128=,corCfop=@$FFFFFF,color,3,40,,
+t129=linha-25
+t130=coluna+80
+t131=,corCfopFont=@$00000000,color,10,40,,
+
+t132=coluna-280
+t133=B.ICMS:,bIcms,sn,3,30,,
+t134=linha-25
+t135=coluna+100
+t136=,tmbIcms,i,4,40,,
+t137=linha-25
+t138=coluna+100
+t139=,corbIcms=@$FFFFFF,color,3,40,,
+t140=linha-25
+t141=coluna+80
+t142=,corbIcmsFont=@$00000000,color,10,40,,
+
+t143=coluna-280
+t144=Aliq:,picms,sn,3,30,,
+t145=linha-25
+t146=coluna+100
+t147=,tmpIcms,i,4,40,,
+t148=linha-25
+t149=coluna+100
+t150=,corpIcms=@$FFFFFF,color,3,40,,
+t151=linha-25
+t152=coluna+80
+t153=,corpIcmsFont=@$00000000,color,10,40,,
+
+t154=coluna-280
+t155=ICMS:,icms,sn,3,30,,
+t156=linha-25
+t157=coluna+100
+t158=,tmIcms,i,4,40,,
+t159=linha-25
+t160=coluna+100
+t161=,corIcms=@$FFFFFF,color,3,40,,
+t162=linha-25
+t163=coluna+80
+t164=,corIcmsFont=@$00000000,color,10,40,,
+
+
+t165=coluna-280
+t166=B.ICMS ST:,bIcmsSt,sn,3,30,,
+t167=linha-25
+t168=coluna+100
+t169=,tmbIcmsSt,i,4,40,,
+t170=linha-25
+t171=coluna+100
+t172=,corbIcmsSt=@$FFFFFF,color,3,40,,
+t173=linha-25
+t174=coluna+80
+t175=,corbIcmsStFont=@$00000000,color,10,40,,
+
+t176=coluna-280
+t177=Aliq:,picmsst,sn,3,30,,
+t178=linha-25
+t179=coluna+100
+t180=,tmpIcmsSt,i,4,40,,
+t181=linha-25
+t182=coluna+100
+t183=,corpIcmsSt=@$FFFFFF,color,3,40,,
+t184=linha-25
+t185=coluna+80
+t186=,corpIcmsStFont=@$00000000,color,10,40,,
+
+t187=coluna-280
+t188=ICMS ST:,icmsSt,sn,3,30,,
+t189=linha-25
+t190=coluna+100
+t191=,tmIcmsSt,i,4,40,,
+t192=linha-25
+t193=coluna+100
+t194=,corIcmsSt=@$FFFFFF,color,3,40,,
+t195=linha-25
+t196=coluna+80
+t197=,corIcmsStFont=@$00000000,color,10,40,,
+
+t198=coluna-280
+t199=Aliq:,pipi,sn,3,30,,
+t200=linha-25
+t201=coluna+100
+t202=,tmpIpi,i,4,40,,
+t203=linha-25
+t204=coluna+100
+t205=,corpIpi=@$FFFFFF,color,3,40,,
+t206=linha-25
+t207=coluna+80
+t208=,corpIpiFont=@$00000000,color,10,40,,
+
+t209=coluna-280
+t210=IPI:,ipi,sn,3,30,,
+t211=linha-25
+t212=coluna+100
+t213=,tmIpi,i,4,40,,
+t214=linha-25
+t215=coluna+100
+t216=,corIpi=@$FFFFFF,color,3,40,,
+t217=linha-25
+t218=coluna+80
+t219=,corIpiFont=@$00000000,color,10,40,,
+
+t220=coluna-280
+t221=V.Isentas:,isentas,sn,3,30,,
+t222=linha-25
+t223=coluna+100
+t224=,tmIsentas,i,4,40,,
+t225=linha-25
+t226=coluna+100
+t227=,corIsentas=@$FFFFFF,color,3,40,,
+t228=linha-25
+t229=coluna+80
+t230=,corIsentasFont=@$00000000,color,10,40,,
+
+t231=coluna-280
+t232=V.Outras:,outras,sn,3,30,,
+t233=linha-25
+t234=coluna+100
+t235=,tmOutras,i,4,40,,
+t236=linha-25
+t237=coluna+100
+t238=,corOutras=@$FFFFFF,color,3,40,,
+t239=linha-25
+t240=coluna+80
+t241=,corOutrasFont=@$00000000,color,10,40,,
+
+t242=coluna-280
+t243=Seleção#007E7E7E\color_swatch_1.png,,,,410, ,
+t244=forcarleftmask=120
+t245=Barra de seleção:,corSelecao=@clBlue,color,10,40,,
+t246=linha-25
+t247=coluna+80
+t248=Fonte,corSelecaoFont=@$00FFFFFF,color,10,40,,
+t249=coluna-80
+t250=Barra de edição:,corEdicao=@$00000000,color,10,40,,
+t251=linha-25
+t252=coluna+80
+t253=,corEdicaoFont=@$00FFFFFF,color,10,40,,
+t254=coluna-80
+t255=Foco:,corFoco=@$0000FFFF,color,10,40,,
+t256=linha-25
+t257=coluna+80
+t258=,corFocoFont=@$00000000,color,10,40,,
+t259=coluna-80
+
+
+[geralCompra]
+tab=CONFIGURAÇÃO GERAL - PEDIDO DE COMPRA
+comentario=
+db=cfgvenda
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+autoIncluir=1
+where=id=5
+forcarleftmask=140
+c0=Codigo,id,c,8,60,,
+c1=Decimal,decimal,c,100,200,,
+altura=450
+largura=450
+foco=decimais
+nobrowse=1
+t0=Valores#007E7E7E\calculator.png,,,,410, ,
+t1=Editar qtde:,editarQtde,sn,3,30,,
+t2=Editar Desconto,editarDesc,sn,3,30,,
+t3=Desc. Porcentagem:,descPercent,sn,3,30,,
+t4=Desc. Neutro:,descNeutro,sn,3,30,,
+t5=Editar preço:,editarPreco,sn,3,30,,
+t6=Casas decimais:,decimais,i,1,30,,
+validacao=limiteInt(decimais;[1-4])
+
+[camposCompra]
+tab=CAMPOS
+comentario=
+db=cfgvenda
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+autoIncluir=1
+where=id=5
+forcarleftmask=100
+c0=Codigo,id,c,8,60,,
+c1=Decimal,decimal,c,100,200,,
+altura=450
+largura=450
+foco=cpCfop
+nobrowse=1
+t0=Pedido#007E7E7E\bricks.png,,,,410, ,
+t1=*Painel:,pnPedido,sn,3,30,,
+t2=CFOP:,cpCfop,sn,3,30,,
+t3=Cliente#007E7E7E\bricks.png,,,,410, ,
+t4=*Painel:,pnCliente,sn,3,30,,
+t5=Tipo:,cpTipo,sn,3,30,,
+t6=Limite:,cpLimite,sn,3,30,,
+t7=Vendedor#007E7E7E\bricks.png,,,,410, ,
+t8=*Painel:,pnVendedor,sn,3,30,,
+t9=Pedido:,cpPedVend,sn,3,30,,
+t10=Comissão:,cpComissao,sn,3,30,,
+t11=Produtos#007E7E7E\bricks.png,,,,410, ,
+t12=Botão Avulso:,btAvulso,sn,3,30,,
+
+[layoutCompra]
+tab=LAYOUT DA TELA
+comentario=
+db=cfgvenda
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+autoIncluir=1
+forcarleftmask=90
+where=id=5
+c0=Codigo,id,c,8,60,,
+c1=Decimal,decimal,c,100,200,,
+altura=450
+largura=450
+foco=tmCodigo
+nobrowse=1
+t0=espacoh=24 
+//Campos#007E7E7E\zone.png,,,,410,,
+t1=Código:,codigo=Sim,sn,3,30,{rcl*},
+t2=linha-25 
+t3=coluna+100
+t4=Tamanho,tmCodigo,i,4,40,,
+t5=linha-25
+t6=coluna+100
+t7=Fundo,corCodigo=@$00FFFFFF,color,10,40,,
+t8=linha-25
+t9=coluna+80
+t10=Fonte,corCodigoFont=@$00000000,color,10,40,,
+...
+t11=coluna-280
+t12=Descrição:,descricao=Sim,sn,3,30,{rcl*},
+t13=linha-25
+t14=coluna+100
+t15=,tmDescricao,i,4,40,,
+t16=linha-25
+t17=coluna+100
+t18=,corDescricao=@$FFFFFF,color,3,40,,
+t19=linha-25
+t20=coluna+80
+t21=,corDescricaoFont=@$00000000,color,10,40,,
+
+t22=coluna-280
+t23=Quantidade:,qtde=Sim,sn,3,30,{rcl*},
+t24=linha-25
+t25=coluna+100
+t26=,tmQtde,i,4,40,,
+t27=linha-25
+t28=coluna+100
+t29=,corQtde=@$FFFFFF,color,3,40,,
+t30=linha-25
+t31=coluna+80
+t32=,corQtdeFont=@$00000000,color,10,40,,
+
+t33=coluna-280
+t34=Unidade:,unidade=Sim,sn,3,30,{rcl*},
+t35=linha-25
+t36=coluna+100
+t37=,tmUnidade,i,4,40,,
+t38=linha-25
+t39=coluna+100
+t40=,corUnidade=@$FFFFFF,color,3,40,,
+t41=linha-25
+t42=coluna+80
+t43=,corUnidadeFont=@$00000000,color,10,40,,
+
+t44=coluna-280
+t45=Tamanho:,tamanho,sn,3,30,{rcl*},
+t46=linha-25
+t47=coluna+100
+t48=,tmTamanho,i,4,40,,
+t49=linha-25
+t50=coluna+100
+t51=,corTamanho=@$FFFFFF,color,3,40,,
+t52=linha-25
+t53=coluna+80
+t54=,corTamanhoFont=@$00000000,color,10,40,,
+
+t55=coluna-280
+t56=Cor:,cor,sn,3,30,{rcl*},
+t57=linha-25
+t58=coluna+100
+t59=,tmCor,i,4,40,,
+t60=linha-25
+t61=coluna+100
+t62=,corCor=@$FFFFFF,color,3,40,,
+t63=linha-25
+t64=coluna+80
+t65=,corCorFont=@$00000000,color,10,40,,
+
+t66=coluna-280
+t67=Metragem:,metragem,sn,3,30,{rcl*},
+t68=linha-25
+t69=coluna+100
+t70=,tmMetragem,i,4,40,,
+t71=linha-25
+t72=coluna+100
+t73=,corMetragem=@$FFFFFF,color,3,40,,
+t74=linha-25
+t75=coluna+80
+t76=,corMetragemFont=@$00000000,color,10,40,,
+
+t77=coluna-280
+t78=Desconto:,desconto,sn,3,30,{rcl*},
+t79=linha-25
+t80=coluna+100
+t81=,tmDesconto,i,4,40,,
+t82=linha-25
+t83=coluna+100
+t84=,corDesconto=@$FFFFFF,color,3,40,,
+t85=linha-25
+t86=coluna+80
+t87=,corDescontoFont=@$00000000,color,10,40,,
+
+t88=coluna-280
+t89=Preço:,preco,sn,3,30,{rcl*},
+t90=linha-25
+t91=coluna+100
+t92=,tmPreco,i,4,40,,
+t93=linha-25
+t94=coluna+100
+t95=,corPreco=@$FFFFFF,color,3,40,,
+t96=linha-25
+t97=coluna+80
+t98=,corPrecoFont=@$00000000,color,10,40,,
+
+t99=coluna-280
+t100=Total:,total,sn,3,30,{rcl*},
+t101=linha-25
+t102=coluna+100
+t103=,tmTotal,i,4,40,,
+t104=linha-25
+t105=coluna+100
+t106=,corTotal=@$FFFFFF,color,3,40,,
+t107=linha-25
+t108=coluna+80
+t109=,corTotalFont=@$00000000,color,10,40,,
+
+t110=coluna-280
+t111=CST:,cst,sn,3,30,,
+t112=linha-25
+t113=coluna+100
+t114=,tmCST,i,4,40,,
+t115=linha-25
+t116=coluna+100
+t117=,corCST=@$FFFFFF,color,3,40,,
+t118=linha-25
+t119=coluna+80
+t120=,corCSTFont=@$00000000,color,10,40,,
+
+t121=coluna-280
+t122=CFOP:,cfop,sn,3,30,,
+t123=linha-25
+t124=coluna+100
+t125=,tmCfop,i,4,40,,
+t126=linha-25
+t127=coluna+100
+t128=,corCfop=@$FFFFFF,color,3,40,,
+t129=linha-25
+t130=coluna+80
+t131=,corCfopFont=@$00000000,color,10,40,,
+
+t132=coluna-280
+t133=B.ICMS:,bIcms,sn,3,30,,
+t134=linha-25
+t135=coluna+100
+t136=,tmbIcms,i,4,40,,
+t137=linha-25
+t138=coluna+100
+t139=,corbIcms=@$FFFFFF,color,3,40,,
+t140=linha-25
+t141=coluna+80
+t142=,corbIcmsFont=@$00000000,color,10,40,,
+
+t143=coluna-280
+t144=Aliq:,picms,sn,3,30,,
+t145=linha-25
+t146=coluna+100
+t147=,tmpIcms,i,4,40,,
+t148=linha-25
+t149=coluna+100
+t150=,corpIcms=@$FFFFFF,color,3,40,,
+t151=linha-25
+t152=coluna+80
+t153=,corpIcmsFont=@$00000000,color,10,40,,
+
+t154=coluna-280
+t155=ICMS:,icms,sn,3,30,,
+t156=linha-25
+t157=coluna+100
+t158=,tmIcms,i,4,40,,
+t159=linha-25
+t160=coluna+100
+t161=,corIcms=@$FFFFFF,color,3,40,,
+t162=linha-25
+t163=coluna+80
+t164=,corIcmsFont=@$00000000,color,10,40,,
+
+
+t165=coluna-280
+t166=B.ICMS ST:,bIcmsSt,sn,3,30,,
+t167=linha-25
+t168=coluna+100
+t169=,tmbIcmsSt,i,4,40,,
+t170=linha-25
+t171=coluna+100
+t172=,corbIcmsSt=@$FFFFFF,color,3,40,,
+t173=linha-25
+t174=coluna+80
+t175=,corbIcmsStFont=@$00000000,color,10,40,,
+
+t176=coluna-280
+t177=Aliq:,picmsst,sn,3,30,,
+t178=linha-25
+t179=coluna+100
+t180=,tmpIcmsSt,i,4,40,,
+t181=linha-25
+t182=coluna+100
+t183=,corpIcmsSt=@$FFFFFF,color,3,40,,
+t184=linha-25
+t185=coluna+80
+t186=,corpIcmsStFont=@$00000000,color,10,40,,
+
+t187=coluna-280
+t188=ICMS ST:,icmsSt,sn,3,30,,
+t189=linha-25
+t190=coluna+100
+t191=,tmIcmsSt,i,4,40,,
+t192=linha-25
+t193=coluna+100
+t194=,corIcmsSt=@$FFFFFF,color,3,40,,
+t195=linha-25
+t196=coluna+80
+t197=,corIcmsStFont=@$00000000,color,10,40,,
+
+t198=coluna-280
+t199=Aliq:,pipi,sn,3,30,,
+t200=linha-25
+t201=coluna+100
+t202=,tmpIpi,i,4,40,,
+t203=linha-25
+t204=coluna+100
+t205=,corpIpi=@$FFFFFF,color,3,40,,
+t206=linha-25
+t207=coluna+80
+t208=,corpIpiFont=@$00000000,color,10,40,,
+
+t209=coluna-280
+t210=IPI:,ipi,sn,3,30,,
+t211=linha-25
+t212=coluna+100
+t213=,tmIpi,i,4,40,,
+t214=linha-25
+t215=coluna+100
+t216=,corIpi=@$FFFFFF,color,3,40,,
+t217=linha-25
+t218=coluna+80
+t219=,corIpiFont=@$00000000,color,10,40,,
+
+t220=coluna-280
+t221=V.Isentas:,isentas,sn,3,30,,
+t222=linha-25
+t223=coluna+100
+t224=,tmIsentas,i,4,40,,
+t225=linha-25
+t226=coluna+100
+t227=,corIsentas=@$FFFFFF,color,3,40,,
+t228=linha-25
+t229=coluna+80
+t230=,corIsentasFont=@$00000000,color,10,40,,
+
+t231=coluna-280
+t232=V.Outras:,outras,sn,3,30,,
+t233=linha-25
+t234=coluna+100
+t235=,tmOutras,i,4,40,,
+t236=linha-25
+t237=coluna+100
+t238=,corOutras=@$FFFFFF,color,3,40,,
+t239=linha-25
+t240=coluna+80
+t241=,corOutrasFont=@$00000000,color,10,40,,
+
+t242=coluna-280
+t243=Seleção#007E7E7E\color_swatch_1.png,,,,410, ,
+t244=forcarleftmask=120
+t245=Barra de seleção:,corSelecao=@clBlue,color,10,40,,
+t246=linha-25
+t247=coluna+80
+t248=Fonte,corSelecaoFont=@$00FFFFFF,color,10,40,,
+t249=coluna-80
+t250=Barra de edição:,corEdicao=@$00000000,color,10,40,,
+t251=linha-25
+t252=coluna+80
+t253=,corEdicaoFont=@$00FFFFFF,color,10,40,,
+t254=coluna-80
+t255=Foco:,corFoco=@$0000FFFF,color,10,40,,
+t256=linha-25
+t257=coluna+80
+t258=,corFocoFont=@$00000000,color,10,40,,
+t259=coluna-80
+t260=Preço de Venda:,pVendas,sn,3,30,,
+
+
+[geralDev]
+tab=CONFIGURAÇÃO GERAL - PEDIDO DE DEVOLUÇÃO DE PRODUTOS
+comentario=
+db=cfgvenda
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+autoIncluir=1
+where=id=4
+forcarleftmask=140
+c0=Codigo,id,c,8,60,,
+c1=Decimal,decimal,c,100,200,,
+altura=450
+largura=450
+foco=decimais
+nobrowse=1
+t0=Valores#007E7E7E\calculator.png,,,,410, ,
+t1=Editar qtde:,editarQtde,sn,3,30,,
+t2=Editar Desconto,editarDesc,sn,3,30,,
+t3=Desc. Porcentagem:,descPercent,sn,3,30,,
+t4=Desc. Neutro:,descNeutro,sn,3,30,,
+t5=Editar preço:,editarPreco,sn,3,30,,
+t6=Casas decimais:,decimais,i,1,30,,
+validacao=limiteInt(decimais;[1-4])
+
+[camposDev]
+tab=CAMPOS
+comentario=
+db=cfgvenda
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+autoIncluir=1
+where=id=4
+forcarleftmask=100
+c0=Codigo,id,c,8,60,,
+c1=Decimal,decimal,c,100,200,,
+altura=450
+largura=450
+foco=cpCfop
+nobrowse=1
+t0=Pedido#007E7E7E\bricks.png,,,,410, ,
+t1=*Painel:,pnPedido,sn,3,30,,
+t2=CFOP:,cpCfop,sn,3,30,,
+t3=Cliente#007E7E7E\bricks.png,,,,410, ,
+t4=*Painel:,pnCliente,sn,3,30,,
+t5=Tipo:,cpTipo,sn,3,30,,
+t6=Limite:,cpLimite,sn,3,30,,
+t7=Vendedor#007E7E7E\bricks.png,,,,410, ,
+t8=*Painel:,pnVendedor,sn,3,30,,
+t9=Pedido:,cpPedVend,sn,3,30,,
+t10=Comissão:,cpComissao,sn,3,30,,
+t11=Produtos#007E7E7E\bricks.png,,,,410, ,
+t12=Botão Avulso:,btAvulso,sn,3,30,,
+
+[layoutDev]
+tab=LAYOUT DA TELA
+comentario=
+db=cfgvenda
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+autoIncluir=1
+forcarleftmask=90
+where=id=4
+c0=Codigo,id,c,8,60,,
+c1=Decimal,decimal,c,100,200,,
+altura=450
+largura=450
+foco=tmCodigo
+nobrowse=1
+t0=espacoh=24 
+//Campos#007E7E7E\zone.png,,,,410,,
+t1=Código:,codigo=Sim,sn,3,30,{rcl*},
+t2=linha-25 
+t3=coluna+100
+t4=Tamanho,tmCodigo,i,4,40,,
+t5=linha-25
+t6=coluna+100
+t7=Fundo,corCodigo=@$00FFFFFF,color,10,40,,
+t8=linha-25
+t9=coluna+80
+t10=Fonte,corCodigoFont=@$00000000,color,10,40,,
+...
+t11=coluna-280
+t12=Descrição:,descricao=Sim,sn,3,30,{rcl*},
+t13=linha-25
+t14=coluna+100
+t15=,tmDescricao,i,4,40,,
+t16=linha-25
+t17=coluna+100
+t18=,corDescricao=@$FFFFFF,color,3,40,,
+t19=linha-25
+t20=coluna+80
+t21=,corDescricaoFont=@$00000000,color,10,40,,
+
+t22=coluna-280
+t23=Quantidade:,qtde=Sim,sn,3,30,{rcl*},
+t24=linha-25
+t25=coluna+100
+t26=,tmQtde,i,4,40,,
+t27=linha-25
+t28=coluna+100
+t29=,corQtde=@$FFFFFF,color,3,40,,
+t30=linha-25
+t31=coluna+80
+t32=,corQtdeFont=@$00000000,color,10,40,,
+
+t33=coluna-280
+t34=Unidade:,unidade=Sim,sn,3,30,{rcl*},
+t35=linha-25
+t36=coluna+100
+t37=,tmUnidade,i,4,40,,
+t38=linha-25
+t39=coluna+100
+t40=,corUnidade=@$FFFFFF,color,3,40,,
+t41=linha-25
+t42=coluna+80
+t43=,corUnidadeFont=@$00000000,color,10,40,,
+
+t44=coluna-280
+t45=Tamanho:,tamanho,sn,3,30,{rcl*},
+t46=linha-25
+t47=coluna+100
+t48=,tmTamanho,i,4,40,,
+t49=linha-25
+t50=coluna+100
+t51=,corTamanho=@$FFFFFF,color,3,40,,
+t52=linha-25
+t53=coluna+80
+t54=,corTamanhoFont=@$00000000,color,10,40,,
+
+t55=coluna-280
+t56=Cor:,cor,sn,3,30,{rcl*},
+t57=linha-25
+t58=coluna+100
+t59=,tmCor,i,4,40,,
+t60=linha-25
+t61=coluna+100
+t62=,corCor=@$FFFFFF,color,3,40,,
+t63=linha-25
+t64=coluna+80
+t65=,corCorFont=@$00000000,color,10,40,,
+
+t66=coluna-280
+t67=Metragem:,metragem,sn,3,30,{rcl*},
+t68=linha-25
+t69=coluna+100
+t70=,tmMetragem,i,4,40,,
+t71=linha-25
+t72=coluna+100
+t73=,corMetragem=@$FFFFFF,color,3,40,,
+t74=linha-25
+t75=coluna+80
+t76=,corMetragemFont=@$00000000,color,10,40,,
+
+t77=coluna-280
+t78=Desconto:,desconto,sn,3,30,{rcl*},
+t79=linha-25
+t80=coluna+100
+t81=,tmDesconto,i,4,40,,
+t82=linha-25
+t83=coluna+100
+t84=,corDesconto=@$FFFFFF,color,3,40,,
+t85=linha-25
+t86=coluna+80
+t87=,corDescontoFont=@$00000000,color,10,40,,
+
+t88=coluna-280
+t89=Preço:,preco,sn,3,30,{rcl*},
+t90=linha-25
+t91=coluna+100
+t92=,tmPreco,i,4,40,,
+t93=linha-25
+t94=coluna+100
+t95=,corPreco=@$FFFFFF,color,3,40,,
+t96=linha-25
+t97=coluna+80
+t98=,corPrecoFont=@$00000000,color,10,40,,
+
+t99=coluna-280
+t100=Total:,total,sn,3,30,{rcl*},
+t101=linha-25
+t102=coluna+100
+t103=,tmTotal,i,4,40,,
+t104=linha-25
+t105=coluna+100
+t106=,corTotal=@$FFFFFF,color,3,40,,
+t107=linha-25
+t108=coluna+80
+t109=,corTotalFont=@$00000000,color,10,40,,
+
+t110=coluna-280
+t111=CST:,cst,sn,3,30,,
+t112=linha-25
+t113=coluna+100
+t114=,tmCST,i,4,40,,
+t115=linha-25
+t116=coluna+100
+t117=,corCST=@$FFFFFF,color,3,40,,
+t118=linha-25
+t119=coluna+80
+t120=,corCSTFont=@$00000000,color,10,40,,
+
+t121=coluna-280
+t122=CFOP:,cfop,sn,3,30,,
+t123=linha-25
+t124=coluna+100
+t125=,tmCfop,i,4,40,,
+t126=linha-25
+t127=coluna+100
+t128=,corCfop=@$FFFFFF,color,3,40,,
+t129=linha-25
+t130=coluna+80
+t131=,corCfopFont=@$00000000,color,10,40,,
+
+t132=coluna-280
+t133=B.ICMS:,bIcms,sn,3,30,,
+t134=linha-25
+t135=coluna+100
+t136=,tmbIcms,i,4,40,,
+t137=linha-25
+t138=coluna+100
+t139=,corbIcms=@$FFFFFF,color,3,40,,
+t140=linha-25
+t141=coluna+80
+t142=,corbIcmsFont=@$00000000,color,10,40,,
+
+t143=coluna-280
+t144=Aliq:,picms,sn,3,30,,
+t145=linha-25
+t146=coluna+100
+t147=,tmpIcms,i,4,40,,
+t148=linha-25
+t149=coluna+100
+t150=,corpIcms=@$FFFFFF,color,3,40,,
+t151=linha-25
+t152=coluna+80
+t153=,corpIcmsFont=@$00000000,color,10,40,,
+
+t154=coluna-280
+t155=ICMS:,icms,sn,3,30,,
+t156=linha-25
+t157=coluna+100
+t158=,tmIcms,i,4,40,,
+t159=linha-25
+t160=coluna+100
+t161=,corIcms=@$FFFFFF,color,3,40,,
+t162=linha-25
+t163=coluna+80
+t164=,corIcmsFont=@$00000000,color,10,40,,
+
+
+t165=coluna-280
+t166=B.ICMS ST:,bIcmsSt,sn,3,30,,
+t167=linha-25
+t168=coluna+100
+t169=,tmbIcmsSt,i,4,40,,
+t170=linha-25
+t171=coluna+100
+t172=,corbIcmsSt=@$FFFFFF,color,3,40,,
+t173=linha-25
+t174=coluna+80
+t175=,corbIcmsStFont=@$00000000,color,10,40,,
+
+t176=coluna-280
+t177=Aliq:,picmsst,sn,3,30,,
+t178=linha-25
+t179=coluna+100
+t180=,tmpIcmsSt,i,4,40,,
+t181=linha-25
+t182=coluna+100
+t183=,corpIcmsSt=@$FFFFFF,color,3,40,,
+t184=linha-25
+t185=coluna+80
+t186=,corpIcmsStFont=@$00000000,color,10,40,,
+
+t187=coluna-280
+t188=ICMS ST:,icmsSt,sn,3,30,,
+t189=linha-25
+t190=coluna+100
+t191=,tmIcmsSt,i,4,40,,
+t192=linha-25
+t193=coluna+100
+t194=,corIcmsSt=@$FFFFFF,color,3,40,,
+t195=linha-25
+t196=coluna+80
+t197=,corIcmsStFont=@$00000000,color,10,40,,
+
+t198=coluna-280
+t199=Aliq:,pipi,sn,3,30,,
+t200=linha-25
+t201=coluna+100
+t202=,tmpIpi,i,4,40,,
+t203=linha-25
+t204=coluna+100
+t205=,corpIpi=@$FFFFFF,color,3,40,,
+t206=linha-25
+t207=coluna+80
+t208=,corpIpiFont=@$00000000,color,10,40,,
+
+t209=coluna-280
+t210=IPI:,ipi,sn,3,30,,
+t211=linha-25
+t212=coluna+100
+t213=,tmIpi,i,4,40,,
+t214=linha-25
+t215=coluna+100
+t216=,corIpi=@$FFFFFF,color,3,40,,
+t217=linha-25
+t218=coluna+80
+t219=,corIpiFont=@$00000000,color,10,40,,
+
+t220=coluna-280
+t221=V.Isentas:,isentas,sn,3,30,,
+t222=linha-25
+t223=coluna+100
+t224=,tmIsentas,i,4,40,,
+t225=linha-25
+t226=coluna+100
+t227=,corIsentas=@$FFFFFF,color,3,40,,
+t228=linha-25
+t229=coluna+80
+t230=,corIsentasFont=@$00000000,color,10,40,,
+
+t231=coluna-280
+t232=V.Outras:,outras,sn,3,30,,
+t233=linha-25
+t234=coluna+100
+t235=,tmOutras,i,4,40,,
+t236=linha-25
+t237=coluna+100
+t238=,corOutras=@$FFFFFF,color,3,40,,
+t239=linha-25
+t240=coluna+80
+t241=,corOutrasFont=@$00000000,color,10,40,,
+
+t242=coluna-280
+t243=Seleção#007E7E7E\color_swatch_1.png,,,,410, ,
+t244=forcarleftmask=120
+t245=Barra de seleção:,corSelecao=@clBlue,color,10,40,,
+t246=linha-25
+t247=coluna+80
+t248=Fonte,corSelecaoFont=@$00FFFFFF,color,10,40,,
+t249=coluna-80
+t250=Barra de edição:,corEdicao=@$00000000,color,10,40,,
+t251=linha-25
+t252=coluna+80
+t253=,corEdicaoFont=@$00FFFFFF,color,10,40,,
+t254=coluna-80
+t255=Foco:,corFoco=@$0000FFFF,color,10,40,,
+t256=linha-25
+t257=coluna+80
+t258=,corFocoFont=@$00000000,color,10,40,,
+t259=coluna-80
+
+
+[pedCompras]
+tab=AJUSTES PEDIDO DE COMPRAS
+comentario=
+db=compras
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Pedido,id,+,5,60,,
+c1=Data,data,d,10,80,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=1
+where=id=$IDORIGEM
+validacao=
+Rlt=*
+altura=170
+largura=460
+foco=idvendedor
+forcarleftmask=110
+t0=Conta Caixa:,wcaixa,i,9,100,,contacc.rcl,
+
+
+
+
+

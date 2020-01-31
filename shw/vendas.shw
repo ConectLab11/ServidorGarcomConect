@@ -1,0 +1,995 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 28/01/2010
+#
+#
+# a todos
+
+[arquivo]
+modulo=VENDAS
+nivelprincipal=0
+nivelauxiliar=0
+pdx=
+
+[Opcoes]
+o0=pedidos, 0123456789, 1, 0, extmq
+
+[pedidos]
+o0=Preferências, Forma de Pagtos, tabvenda, 0123, 1, 13:21,x
+o1=Preferências, Bandeiras Cartão, bandcard, 0123, 0, 23,x
+o2=Preferências, Vendedor/Atendente, vendedor, 0123, 1, 17,x
+o3=Preferências, Preço por Cliente, precoPorCliente, 0123, 1, 17,x
+o4=Preferências, Produtos do Dia, produtosAuto, 0123, 1, 17,x
+o5=Preferências, Histórico de Observação, preHisto, 0123, 1, 17,x
+o6=nil, Entrega, entrega, 0123456789, 0, 12,e
+o7=Turnos, Tipo, turnoTipo, 0123, 1, 17,t
+o8=Turnos, Contas à Receber, turnos, 0123, 1, 17,t
+o9=Turnos, Grupo de Clientes, grupoTurnos, 0123, 1,17,t
+o10=Turnos, Grupo de Resultados, turnoGrupoResultados, 0123, 1, 17,t
+o11=Turnos, Compara Totalizadores, turnoComparaTotais, 0123, 1, 17,t
+o12=Entregas, Local de Partida, googlePartida, 0123, 9, 15,x
+o13=Entregas, Entregadores, geralEntrega, 0123, 9,15,x
+o14=Entregas, Tabela de Taxas, tabfretevendas, 0123, 1, 12,x
+o15=Entregas, Tabela KM Simples, tabelaKm, 0123, 1, 12,x
+o16=Entregas, Tabela KM Avançada, tabelaDeliveryKm, 0123, 1, 12,x
+
+o17=Gerente,Geral,pedgeral, 0123, 9,15,m
+
+o18=Ajustes, Layout, layoutVenda, 0123, 9, 20:10,x
+o19=Ajustes, Cupom, vendacupom, 0123, 9, 9,x
+o20=insert(shw\printprn.shw)
+o21=Entrega, Transportadora, edtransp, 0123, 9, 9,q
+
+
+#
+# Parametros de tela
+#
+
+[entrega]
+tab=ENDEREÇO PARA ENTREGA
+comentario=
+db=pedidos
+ordem=id
+trus=1
+rcl=
+relacao=
+chave=id
+chaveprincipal=id
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=0
+forcarleftmask=110
+nobrowse=1
+c0=Pedido,id,c,10,60,,
+c1=Data,data,d,10,70,,
+altura=532
+largura=450
+foco=cep
+t0=linha=7
+t1=Outro Cadastro#clgray\vcard.png,,,,10*390*40*1*1, ,
+t2=coluna=0
+t3=Cadastro:,cadentrega,i,6,50,$extractdb(cadastro;codigo;cnpj=cpf;cep;rua=endereco;bairro;uf;cidade),?cadastro.rcl,
+t4=coluna=0
+t5=linha+10
+t6=Endereço#clgray\map.png,,,,10*390*177*1*1, ,
+t7=linha+7
+t8=CNPJ:,cnpj,c,18,120,$validarCnpj(),
+t9=CEP:,cep,c,9,70,@B$fcep(),cep(cep;rua;bairro;uf;cidade),
+t10=Endereço:,rua,c,50,300,,
+t11=Bairro:,bairro,c,30,300,,
+t12=UF:,uf,c,2,30,@BU,estado2.rcl,
+t13=Cidade:,cidade,c,30,285,@B,<#17>geral.rcl{ufsigla=uf/""},
+
+[vendedor]
+tab=VENDEDORES
+comentario=CADASTRO DE VENDEDOR
+db=vendedor
+ordem=
+rcl=vendedor.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Nome,nome,c,50,230,,
+c2=Comissão,comissao,p,11,70,,
+c3=Ativo,ativo,sn,3,30,,
+Rlt=cupons.vendedo_
+msg=VENDA(S)
+altura=250
+largura=470
+foco=nome
+t0=Código:,id,+,4,30,{rcl^},
+t1=Nome:,nome,c,50,300,,
+h1=Nome do vendedor
+t2=Cadastro:,cadastro,i,6,60,,cadastrx.rcl,
+h2=Cadastro relacionado a este vendedor<F2>
+t3=Comissão:,comissao,p,11,60,,
+h3=Porcentagem de comissão do vendedor
+t4=Ativo:,ativo=Sim,sn,3,30,,
+h4=Vendedor esta ativo ? Sim/Não
+validacao=campoPreenchido(nome)
+
+[vendacupom]
+tab=AJUSTES DA IMPRESSÃO DO CUPOM
+comentario=
+db=rclsoft
+ordem=empresa
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=Codigo,id,+,5,60,,
+c1=Empresa,empresa,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=410
+largura=460
+foco=consumidor
+t0=Cadastro Relacionado#007E7E7E\house.png,,,,410, ,
+t1=forcarleftmask=0
+t2=coluna-30
+t3=Consumidor:,consumidor,i,6,60,,cadastrx.rcl,
+h3=Cadastro Relacionado a Venda ao Consumidor||{,,,clnavy}(F2) Opções
+t4=Mesa,consumidor_mesa,i,6,60,,cadastrx.rcl,
+h4=Cadastro Relacionado a Venda por Mesa||{,,,clnavy}(F2) Opções
+
+#t4=linha-5
+t5=Cabeçalho do Cupom#007E7E7E\house.png,,,,410, ,
+t6=forcarleftmask=10
+t7=,cup_cabeca,t,0,400x70,,
+h7=Informações para Imprimir no Cabeçalho do Cupom|Exemplo: Nome da empresa/Endereço/Telefone||Variaveis|<FF> = Ignora linha|<B> = Ativar Negrito|<b> = Desativar Negrito|<G> = Ativar Fonte Grande|<N> = Ativar Fonte Normal|<c> = Ativar Fonte Pequena
+t8=linha-15
+t9=Rodapé do Cupom#007E7E7E\house.png,,,,410, ,
+t10=,cup_msg,t,0,400x70,,
+h10=Informações para imprimir no rodapé do Cupom@Variaveis@{,8,,clnavy}<FF> = Ignora linha@<B> = Ativar Negrito@<b> = Desativar Negrito@<G> = Ativar Fonte Grande@<N> = Ativar Fonte Normal@<c> = Ativar Fonte Pequena
+t11=linha-15
+t12=Outros#007E7E7E\house.png,,,,410, ,
+t13=forcarleftmask=100
+t14=Título:,cup_titulo,c,40,330,,
+h14=Texto para Imprimir no Cabeçalho do Cupom|Variaveis|{,9,n,clgreen}[AUTO_VENDA] = Imprime PEDIDO DE VENDA ou ORCAMENTO
+t15=Loja:,cup_loja,i,6,60,,
+h15=Código da Loja
+t16=linha-25
+t17=coluna+130
+t18=Colunas:,cup_coluna,i,3,40,,
+h18=Quantidade de Colunas a Impressora Suporta.
+t19=linha-25
+t20=coluna+110
+t21=forcarleftmask=150
+t22=Avanço do papel:,cup_avanco,i,3,40,,
+h22=Quantidade de linhas para Avançar o Papel.
+t23=coluna-200
+t24=Impressão Compactada,cup_compact,sn,3,30,,
+h24=Reduz a quantidade de linhas nas Informações do Cliente.
+t25=#Vendedor fixo:,vendFixo,i,6,50,,?cadastro.rcl,
+
+[tabvenda]
+tab=CONDIÇÕES DE PAGAMENTOS
+comentario=
+db=tabvenda
+ordem=
+rcl=tabvenda.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,c,5,60,,
+c1=Descrição,descricao,c,100,350,,
+altura=300
+largura=450
+foco=descricao
+//t0=Código:,id,+,4,30,!999;1; ,
+//h0=Código da Condições de Pagamento
+t0=Descrição:,descricao,c,200,300,,
+h0=Descrição Completa
+t1=Tipo de Pagto:,tipo,i,3,30,,tipo.rcl,
+h1=Tipo de Pagamento <F2>
+t2=Condições:,prazo,c,200,300,!999/999/999/999/999/999/999/999/999/999/999/999,
+h2=Prazos de Pagamento por quantidade de dias
+t3=Mesmo Dia:,diaigual,sn,3,30,,
+h3=Ajustar a data de vencimento para o mesmo dia do mês@@- Usar somente quando parcelamento de 30 em 30 dias.
+t4=Juros ao Mês:,juros,p,11,84,,
+h4=Juros ao Mês
+t5=Desconto:,desconto,p,11,84,,
+h5=Descontos ao Mês
+t6=Baixar:,baixa=Não,sn,3,30,,
+h6=Baixar Automaticamente
+t7=Ativo:,ativo=Sim,sn,3,30,,
+h7=Ativo (Sim/Não)
+
+[tabfretevendas]
+tab=TABELA DE TAXA DE ENTREGA/FRETES
+comentario=
+db=tabefret
+ordem=destino1,descr
+campos=id,if((destino1="") or isnull(destino1),descr,concat(destino1,if(faixa_1>0," de ",""),if(faixa_1>0,faixa_1,""),if(faixa_2>0," até ",""),if(faixa_2>0,faixa_2,""))) as descricao,descr,destino1,faixa_1,faixa_2,clientefinal,advalorem,outros,minimo
+rcl=
+relacao=
+chave=id
+chaveprincipal=id
+#c0=Código,id,c,10,60,,
+c0=Descrição,descricao,c,50,350,,
+c1=Taxas,outros,f,11,84,,
+altura=320
+largura=500
+foco=descr
+forcarleftmask=110
+t0=[!3]Descrição/Bairro:,descr,c,50,350,,
+h0=Descrição da tabela de frete
+t1=[3]Bairro:,descr,c,50,350,@U,
+h1=Descrição da tabela de frete
+t2=[!3]Frete Valor:,clientefinal,p,11,50,,
+h2=Porcentagem para cálculo do frete pelo valor da venda
+t3=[!3]ADvalorem:,advalorem,p,11,50,,
+h3=Porcentagem para cálculo do seguro
+t4=Taxa:,outros,f,11,84,,
+h4=Outras taxas
+t5=[!3]Frete mínimo:,minimo,f,11,84,,
+h5=Valor mínimo do frete
+t6=[3]Especificos#007E7E7E\house.png,,,,410, ,
+t7=[3]Endereço:,destino1,c,50,350,@U,
+h7=Endereço da entrega
+t8=[3]Número De:,faixa_1,i,5,60,,
+h8=Número inicial
+t9=[3]Número Até:,faixa_2,i,5,60,,
+h9=Número final
+
+
+[grupoTurnos]
+tab=Grupo de Cliente por Turno - Exemplo 1,2,3,4
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Código,id,+,3,60,,
+c1=Descrição,txt_1,c,255,240,,
+c2=Grupos,txt_2,c,255,100,,
+nobrowse=0
+relacaokey=nome,"grupo_turnos"
+autoIncluir=0
+where=nome='grupo_turnos'
+altura=280
+largura=500
+foco=txt_1
+forcarleftmask=130
+t0=Código:,id,+,10,60,,
+h0=Código do Grupo por Turno
+t1=Descrição:,txt_1,c,255,300,,
+h1=Descrição Completa
+t2=Grupos de Clientes:,txt_2,t,0,300x100,,
+h2=Grupo que os Clientes do Turno serão Vinculados||{,8,n,clred}Observação:|{,,,clnavy}Os Códigos devem ser separados por (,)|20,21,22,23
+
+[entregador]
+tab=Entregadores
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Código,id_1,i,3,60,,
+#c1=Nome,txt_1,c,255,240,,
+nobrowse=0
+relacaokey=nome,"pve_entregadores"
+autoIncluir=0
+where=nome='pve_entregadores'
+altura=280
+largura=440
+foco=id_1
+forcarleftmask=90
+t0=Grupo:,id_1,i,4,60,,categori.rcl,
+validacao=campoPreenchido(id_1)
+
+[geral]
+tab=Geral
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Código,id_1,i,3,60,,
+#c1=Nome,txt_1,c,255,240,,
+nobrowse=1
+autoIncluir=1
+relacaokey=nome,"pve_entregadores"
+autoIncluir=0
+where=nome='pve_entregadores'
+altura=280
+largura=440
+foco=id_1
+forcarleftmask=90
+t0=label|Grupo do Cadastro de Entregadores
+t1=<,id_1,i,4,50,,categori.rcl,
+h1=Código do Grupo que os Cadastros de Entregadores fazem parte.
+t2=linha+10
+t3=label|Tempo Limite de Entrega
+t4=<,txt_1,h,5,50,,
+h4=Tempo de Limite de Entrega
+validacao=campoPreenchido(id_1)
+
+[layoutVenda]
+tab=LAYOUT DA TELA - PEDIDO DE VENDA
+comentario=
+db=cfgvenda
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+autoIncluir=1
+forcarleftmask=90
+where=id=1
+c0=Codigo,id,c,8,60,,
+c1=Decimal,decimal,c,100,200,,
+altura=450
+largura=450
+foco=tmCodigo
+nobrowse=1
+t0=espacoh=24 
+//Campos#007E7E7E\zone.png,,,,410,,
+t1=Código:,codigo=Sim,sn,3,30,{rcl*},
+t2=linha-25 
+t3=coluna+100
+t4=Tamanho,tmCodigo,i,4,40,,
+t5=linha-25
+t6=coluna+100
+t7=Fundo,corCodigo=@$00FFFFFF,color,10,40,,
+t8=linha-25
+t9=coluna+80
+t10=Fonte,corCodigoFont=@$00000000,color,10,40,,
+...
+t11=coluna-280
+t12=Descrição:,descricao=Sim,sn,3,30,{rcl*},
+t13=linha-25
+t14=coluna+100
+t15=,tmDescricao,i,4,40,,
+t16=linha-25
+t17=coluna+100
+t18=,corDescricao=@$FFFFFF,color,3,40,,
+t19=linha-25
+t20=coluna+80
+t21=,corDescricaoFont=@$00000000,color,10,40,,
+
+t22=coluna-280
+t23=Quantidade:,qtde=Sim,sn,3,30,{rcl*},
+t24=linha-25
+t25=coluna+100
+t26=,tmQtde,i,4,40,,
+t27=linha-25
+t28=coluna+100
+t29=,corQtde=@$FFFFFF,color,3,40,,
+t30=linha-25
+t31=coluna+80
+t32=,corQtdeFont=@$00000000,color,10,40,,
+
+t33=coluna-280
+t34=Unidade:,unidade=Sim,sn,3,30,{rcl*},
+t35=linha-25
+t36=coluna+100
+t37=,tmUnidade,i,4,40,,
+t38=linha-25
+t39=coluna+100
+t40=,corUnidade=@$FFFFFF,color,3,40,,
+t41=linha-25
+t42=coluna+80
+t43=,corUnidadeFont=@$00000000,color,10,40,,
+
+t44=coluna-280
+t45=Opções:,opcoes,sn,3,30,{rcl*},
+t46=linha-25
+t47=coluna+100
+t48=,tmOpcoes,i,4,40,,
+t49=linha-25
+t50=coluna+100
+t51=,corOpcoes=@$FFFFFF,color,3,40,,
+t52=linha-25
+t53=coluna+80
+t54=,corOpcoesFont=@$00000000,color,10,40,,
+
+t55=coluna-280
+t56=Tamanho:,tamanho,sn,3,30,{rcl*},
+t57=linha-25
+t58=coluna+100
+t59=,tmTamanho,i,4,40,,
+t60=linha-25
+t61=coluna+100
+t62=,corTamanho=@$FFFFFF,color,3,40,,
+t63=linha-25
+t64=coluna+80
+t65=,corTamanhoFont=@$00000000,color,10,40,,
+
+t66=coluna-280
+t67=Cor:,cor,sn,3,30,{rcl*},
+t68=linha-25
+t69=coluna+100
+t70=,tmCor,i,4,40,,
+t71=linha-25
+t72=coluna+100
+t73=,corCor=@$FFFFFF,color,3,40,,
+t74=linha-25
+t75=coluna+80
+t76=,corCorFont=@$00000000,color,10,40,,
+
+t77=coluna-280
+t78=Metragem:,metragem,sn,3,30,{rcl*},
+t79=linha-25
+t80=coluna+100
+t81=,tmMetragem,i,4,40,,
+t82=linha-25
+t83=coluna+100
+t84=,corMetragem=@$FFFFFF,color,3,40,,
+t85=linha-25
+t86=coluna+80
+t87=,corMetragemFont=@$00000000,color,10,40,,
+
+t88=coluna-280
+t89=Desconto:,desconto,sn,3,30,{rcl*},
+t90=linha-25
+t91=coluna+100
+t92=,tmDesconto,i,4,40,,
+t93=linha-25
+t94=coluna+100
+t95=,corDesconto=@$FFFFFF,color,3,40,,
+t96=linha-25
+t97=coluna+80
+t98=,corDescontoFont=@$00000000,color,10,40,,
+
+t99=coluna-280
+t100=Preço:,preco,sn,3,30,{rcl*},
+t101=linha-25
+t102=coluna+100
+t103=,tmPreco,i,4,40,,
+t104=linha-25
+t105=coluna+100
+t106=,corPreco=@$FFFFFF,color,3,40,,
+t107=linha-25
+t108=coluna+80
+t109=,corPrecoFont=@$00000000,color,10,40,,
+
+t110=coluna-280
+t111=Total:,total,sn,3,30,{rcl*},
+t112=linha-25
+t113=coluna+100
+t114=,tmTotal,i,4,40,,
+t115=linha-25
+t116=coluna+100
+t117=,corTotal=@$FFFFFF,color,3,40,,
+t118=linha-25
+t119=coluna+80
+t120=,corTotalFont=@$00000000,color,10,40,,
+
+t121=coluna-280
+t122=IPI:,ipi,sn,3,30,{rcl*},
+t123=linha-25
+t124=coluna+100
+t125=,tmIpi,i,4,40,,
+t126=linha-25
+t127=coluna+100
+t128=,corIpi=@$FFFFFF,color,3,40,,
+t129=linha-25
+t130=coluna+80
+t131=,corIpiFont=@$00000000,color,10,40,,
+
+t132=coluna-280
+t133=Observação:,obs,sn,3,30,{rcl*},
+t134=linha-25
+t135=coluna+100
+t136=,tmObs,i,4,40,,
+t137=linha-25
+t138=coluna+100
+t139=,corObs=@$FFFFFF,color,3,40,,
+t140=linha-25
+t141=coluna+80
+t142=,corObsFont=@$00000000,color,10,40,,
+
+t143=coluna-280
+t144=Adicional:,adicional,sn,3,30,{rcl*},
+t145=linha-25
+t146=coluna+100
+t147=,tmAdicional,i,4,40,,
+t148=linha-25
+t149=coluna+100
+t150=,corAdicional=@$FFFFFF,color,3,40,,
+t151=linha-25
+t152=coluna+80
+t153=,corAdicionalFont=@$00000000,color,10,40,,
+
+t154=coluna-280
+t155=Seleção#007E7E7E\color_swatch_1.png,,,,410, ,
+t156=forcarleftmask=120
+t157=Barra de seleção:,corSelecao=@clBlue,color,10,40,,
+t158=linha-25
+t159=coluna+80
+t160=Fonte,corSelecaoFont=@$00FFFFFF,color,10,40,,
+t161=coluna-80
+t162=Barra de edição:,corEdicao=@$00000000,color,10,40,,
+t163=linha-25
+t164=coluna+80
+t165=,corEdicaoFont=@$00FFFFFF,color,10,40,,
+t166=coluna-80
+t167=Foco:,corFoco=@$0000FFFF,color,10,40,,
+t168=linha-25
+t169=coluna+80
+t170=,corFocoFont=@$00000000,color,10,40,,
+t171=coluna-80
+
+[preHisto]
+tab=HISTÓRICO DE OBSERVAÇÃO
+db=prehisto
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Descrição,texto,c,65,300,,
+altura=220
+largura=450
+foco=texto
+t0=Código:,id,+,4,30,,
+h0=Código do Histórico
+t1=Descrição:,texto,t,0,300x60,,
+h1=Descrição Completa
+
+[precoPorCliente]
+tab=Preço por Cliente
+db=set_mult
+ordem=cadastro,id_1
+chave=id
+chaveprincipal=id
+c0=Cliente,cadastro,+,3,60,,
+c1=Nome,&rclArq(cadastro|cadastro.rcl),c,255,240,,
+c2=Preço,aliquota,f,11,84,,
+c3=Produto,id_1,+,3,60,,
+c4=Descrição,&rclArq(id_1|estoque3.rcl),c,255,240,,
+nobrowse=0
+relacaokey=nome,"cliente_produto_preco"
+autoIncluir=0
+where=nome='cliente_produto_preco'
+altura=200
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Cliente:,cadastro,i,6,60,,cadastrx.rcl,
+h0=Código do Cliente
+t1=Produto:,id_1,i,6,60,,estoque3.rcl,
+h1=Código do Produto
+t2=Preço:,aliquota,f,11,84,,
+
+[printers]
+tab=IMPRESSORAS DE CONEXÃO DIRETA - LPT/COM/USB
+comentario=
+db=printers
+rcl=printers.rcl
+chave=id
+chavePrincipal=id
+c0=Descrição,descricao,c,30,250,,
+c1=Porta,porta,c,25,120,,
+//c2=Módulo,modulo,c,15,80,,
+altura=410
+largura=480
+foco=descricao
+forcarleftmask=120
+t0=Descrição:,descricao,c,200,315,,
+h0=Nome Completo da Impressora
+t1=#USB:,usb,sn,3,30,,
+h1=Porta tipo USB.
+t2=Porta:,porta,c,100,300,@BX,geral.rcl,
+h2=Porta de Comunicação da Impressora<F2>
+t3=IP/Terminal:,terminal,c,100,300,@B,<#10>geral.rcl,
+//GetNameTerminal(),
+h3=IP ou Nome do Computador Conectado na Impressora<F2>
+t4=Compartilhamento:,share,c,255,300,,
+h4=Nome do compartilhamento da impressora.
+t5=#Editar:,path,sn,3,30,,
+h5=#Porta de Comunicação pode ser alterada no momento da impressão
+t6=Módulo:,modulo,c,50,300,@BX,<#2>geral.rcl,
+h6=Vinculo da Impressora por Módulos do Sistema
+t7=Fonte:,idfonte,i,3,20,,modprint.rcl,
+h7=Comandos da Impressora
+t8=Ativo:,ativa=Sim,sn,3,30,,
+h8=Impressora Ativa
+t9=coluna+285
+t10=linha-25
+t11=Ignorar cópias:,nocopias,sn,3,30,,
+h11=Ignorar campo cópias
+t12=coluna-285
+t13=Informações:,comentario,t,0,315x90,,
+h13=Informações detalhada da Impressora
+
+[modprint]
+tab=Modelo de Impressoras ESP/P
+db=modprint
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,15,60,,
+c1=Descrição,descricao,c,50,300,,
+reservado=1,2,3
+Rlt=printers.idfonte
+msg=IMPRESSORA(s)
+altura=400
+largura=450
+foco=descricao
+t0=ID:,id,+,4,30,,
+t1=Descrição:,descricao,c,50,300,,
+t2=Reset:,reset,c,50,300,,
+t3=Reset font:,resetfont,c,50,300,,
+t4=Bold:,bold,c,50,300,,
+t5=Bold<-:,bold0,c,50,300,,
+t6=Italic:,italico,c,50,300,,
+t7=Italic<-:,italico0,c,50,300,,
+t8=Underline:,underline,c,50,300,,
+t9=Underline<-:,underline0,c,50,300,,
+t10=LPI6:,lpi6,c,50,300,,
+t11=LPI8:,lpi8,c,50,300,,
+t12=CPI5:,cpi5,c,50,300,,
+t13=CPI6:,cpi6,c,50,300,,
+t14=CPI8:,cpi8,c,50,300,,
+t15=CPI10:,cpi10,c,50,300,,
+t16=CPI12:,cpi12,c,50,300,,
+t17=CPI17:,cpi17,c,50,300,,
+t18=CPI20:,cpi20,c,50,300,,
+t19=Ejetar:,ejetar,c,50,300,,
+t20=Guilhotina:,guilhotina,c,50,300,,
+t21=Gaveta:,gaveta,c,50,300,,
+t22=Beep:,bipe,c,50,300,,
+t23=Colunas:,colunas,i,3,40,,
+t24=Col. Extras:,colCpl,i,3,40,,
+t25=Avançar:,avancar,i,3,40,,
+
+[pdv]
+i0=Padrão
+i1=Flat
+i2=Flag > pdv_custom
+i3=Flat > pdv_roupas
+i4=Flat > pdv_emporio
+i5=Básico 1024 x 768 > pdv1024x768.conf
+i6=HortiFruti 1366 x 768 > pdv_hfru_1366x768.conf
+i7=HortiFruti 1280 x 1024 > pdv_hfru_1280x1024.conf
+i8=HortiFruti 1024 x 768 > pdv_hfru_1024x768.conf
+i9=Padaria 1024 x 768 > pdv_pada_1024x768.conf
+i10=Mercado 1024 x 768 > pdv_merc_1024x768.conf
+i11=Tabacaria 1024 x 768 > pdv_taba_1024x768.conf
+i12=Tabacaria 1280 x 1024 > pdv_taba_1280x1024.conf
+i13=Restaurante 1024 x 768 > pdv_rest_1024x768.conf
+i14=Mercado 1366 x 768 > pdv_merc_1366x768.conf
+i15=Baudc > pdv_baudc.conf
+
+[turnos]
+tab=PARAMETROS DE TURNOS
+comentario=
+db=cfgvenda
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+autoIncluir=1
+forcarleftmask=120
+where=id=1
+c0=Codigo,id,c,8,60,,
+c1=Decimal,decimal,c,100,200,,
+altura=450
+largura=450
+foco=turnoCcusto
+nobrowse=1
+t0=Gerar Títulos:,turnoTitulo=@;0-Nunca;1-A Cada Venda;2-No Encerramento,l,50,130,,
+t1=Contas à Receber#clgray\vcard.png,,,,10*400*180*1*1, ,
+t2=Centro de Custo:,turnoCcusto,i,3,60,,centrocu.rcl,
+t3=Sub Origem:,turnoOrigem,i,8,60,,subconta.rcl,
+t4=Caixa:,turnoCaixa,i,15,60,,contacc.rcl,
+#t5=Contas à Pagar#clgray\vcard.png,,,,10*400*180*1*1, ,
+#t6=Sub Origem:,turnoPOrigem,i,8,60,,subconta.rcl,
+
+
+[bandcard]
+tab=BANDEIRAS DE PAGAMENTO COM CARTÃO
+db=set_mult
+ordem=id_1
+chave=id
+chaveprincipal=id
+c0=Ordem,id_1,i,3,50,,
+c1=Descrição,descricao,c,100,400,,
+nobrowse=0
+relacaokey=nome,"BANDEIRA_PAGTO_CARTAO"
+autoIncluir=0
+where=nome='BANDEIRA_PAGTO_CARTAO'
+altura=200
+largura=440
+foco=id_1
+forcarleftmask=90
+t0=Ordem:,id_1,i,3,40,,
+h0=Ordem da Lista
+t1=Descrição:,descricao,c,100,300,,
+h1=Descrição da Bandeira para pagamento com Cartão
+
+[googlePartida]
+tab=PONTO DE PARTIDA PARA CALCULO DE DISTANCIA
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Id,id,i,3,50,,
+c1=Descrição,descricao,c,100,400,,
+nobrowse=1
+relacaokey=nome,"GOOGLE_PONTO_DE_PARTIDA"
+autoIncluir=1
+where=nome='GOOGLE_PONTO_DE_PARTIDA'
+altura=200
+largura=440
+foco=codigo
+forcarleftmask=90
+t0=CEP:,codigo,c,9,70,@B$fcep(),cep(codigo;txt_5;txt_4;txt_2;txt_3),
+h0=Número do CEP
+t1=Endereço:,txt_5,c,50,300,,
+h1=Endereço Completo
+t2=Bairro:,txt_4,c,50,300,,
+h2=Nome do Bairro
+t3=UF:,txt_2,c,2,30,@BU,estado2.rcl,
+h3=Sigla do Estado
+t4=Cidade:,txt_3,c,50,300,@B,<#17>geral.rcl{ufsigla=txt_2/""},
+h4=Nome da Cidade
+t5=País:,txt_1,c,50,300,@BU,paises.rcl,
+h5=Nome do Paises
+t6=linha+30
+t7=label|Chave do Servidor Google de Geolocalização|,,clnavy
+t8=KEY:,descricao,c,50,300,,
+
+
+[tabelaPorKm]
+tab=TAXA POR KILOMETRAGEM
+comentario=
+db=rclsoft
+ordem=empresa
+chave=id
+chaveprincipal=id
+c0=Codigo,id,+,5,60,,
+c1=Empresa,empresa,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=410
+largura=460
+foco=taxaKm
+forcarleftmask=170
+t0=Tx de entrega p/ Km:,taxaKm,f,11,84,,
+h0=Taxa de entrega por Kilometro
+t1=Tx mínima p/ Km:,taxaMini,f,11,84,,
+h1=Taxa minima para entrega
+
+[turnoTipo]
+tab=Tipo de Turnos
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Código,codigo,i,3,50,,
+c1=Descrição,descricao,c,100,400,,
+nobrowse=0
+relacaokey=nome,"TURNO_TIPO_DESCRICAO"
+autoIncluir=0
+where=nome='TURNO_TIPO_DESCRICAO'
+altura=200
+largura=440
+foco=codigo
+forcarleftmask=120
+t0=Código:,codigo,i,2,30,,
+t1=Descrição:,descricao,c,50,300,,
+t2=Ignorar Taxas:,id_1,sn,3,30,,
+
+[tabelaDeliveryKm]
+tab=TABELA DELIVERY POR KILOMETRO
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Até (KM),aliquota,e,11,80,,
+c1=Taxa,valor,f,11,84,,
+nobrowse=0
+relacaokey=nome,"TABELA_DELIVERY_KILOMETRO"
+autoIncluir=0
+where=nome='TABELA_DELIVERY_KILOMETRO'
+altura=180
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Até (KM):,aliquota,e,11,84,,
+h0=Distancia em KM
+t1=Taxa:,valor,f,11,84,,
+h1=Taxa de entrega
+
+[turnoGrupoResultados]
+tab=GRUPO DE RESULTADOS
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Grupo,descricao,c,100,100,,
+c1=Seção,&rclArq(id_1|secao.rcl),c,255,150,,
+c2=Sub-seção,&rclArq(id_2|subsecao.rcl),c,255,110,,
+nobrowse=0
+relacaokey=nome,"TURNO_GRUPO_RESULTADOS"
+autoIncluir=0
+where=nome='TURNO_GRUPO_RESULTADOS'
+altura=280
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Grupo:,descricao,c,100,300,,
+t1=Seção:,id_1,i,3,40,,secao.rcl,
+t2=Sub-Seção:,id_2,i,3,40,,subsecao.rcl|pai=$id_1,
+
+[pedGeral]
+tab=TÍTULO DO CONTAS À RECEBER
+comentario=
+db=pedidos
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Pedido,id,+,5,60,,
+c1=Data,data,d,10,80,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=1
+where=id=$IDORIGEM
+validacao=
+Rlt=*
+altura=170
+largura=460
+foco=idvendedor
+forcarleftmask=110
+t0=Vendedor:,idvendedor,i,6,60,,cadastrx.rcl,
+h0=Cadastro relacionado a este vendedor<F2>
+t1=Turno:,turno,i,6,60,,
+
+
+[produtosAuto]
+tab=Produtos com inclusao automatica no pedido
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Dia,txt_2,c,10,55,,
+c1=Hora,&concate(txt_3|| |txt_4),c,11,70,,
+c2=Código,txt_1,c,10,50,,
+c3=Descrição,&rclArq(txt_1|estoque3.rcl),c,255,110,,
+c4=Qtde,valor,e,10,45,,
+c5=Preço,aliquota,f,10,50,,
+c6=Ativo,ativo,sn,3,30,,
+nobrowse=0
+relacaokey=nome,"GRUPO_PRODUTOS_AUTOMATICOS"
+autoIncluir=0
+where=nome='GRUPO_PRODUTOS_AUTOMATICOS'
+altura=530
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=linha=30
+t1=Dia:,txt_2=@;Todos;Segunda;Terca;Quarta;Quinta;Sexta;Sabado;Domingo,l,50,130,,
+t2=Inicio:,txt_3,c,5,50,@BU,<#10>geral3.rcl,
+t3=Final:,txt_4,c,5,50,@BU,<#10>geral3.rcl,
+t4=Ativo:,ativo=Sim,sn,3,30,,
+t5=linha+15
+t6=label|Configuração do Produto|,,clnavy
+t7=linha+5
+t8=frame|380|110
+t9=linha+20
+t10=Código:,txt_1,i,10,60,,?estoque3.rcl,
+t11=Qtde:,valor,e,9,84,,
+t12=Preço:,aliquota,f,11,84,,
+t13=linha+30
+t14=label|Preço Diferenciado|,,clgreen,B
+t15=label|Preço|,,,,325,310
+t16=linha-10
+t17=frame|380|110
+t18=linha+30
+t19=Opção 2:,txt_5,c,255,200,,
+t20=linha-25
+t21=coluna+220
+t22=,valor_1,f,11,80,,
+t23=coluna-220
+t24=Opção 3:,txt_6,c,255,200,,
+t25=linha-25
+t26=coluna+220
+t27=,valor_2,f,11,80,,
+t28=coluna-220
+
+
+
+[tabelaKm]
+tab=TABELA SIMPLES DE TAXAS POR KILOMETRAGEM
+comentario=
+db=rclsoft
+ordem=empresa
+chave=id
+chaveprincipal=id
+c0=Codigo,id,+,5,60,,
+c1=Empresa,empresa,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=410
+largura=460
+foco=taxaKm
+t0=linha=30
+forcarleftmask=150
+t1=Tx de entrega por Km:,taxaKm,f,11,84,,
+h1=Taxa de entrega por Kilometro
+t2=Tx mínima por Km:,taxaMini,f,11,84,,
+h2=Taxa minima para entrega
+
+[geralEntrega]
+tab=Geral
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Código,id_1,i,3,60,,
+#c1=Nome,txt_1,c,255,240,,
+nobrowse=1
+autoIncluir=1
+relacaokey=nome,"pve_entregadores"
+autoIncluir=0
+where=nome='pve_entregadores'
+altura=280
+largura=440
+foco=id_1
+forcarleftmask=90
+t0=label|Grupo do Cadastro de Entregadores
+t1=<,id_1,i,4,50,,categori.rcl,
+h1=Código do Grupo que os Cadastros de Entregadores fazem parte.
+t2=linha+10
+t3=label|Tempo Limite de Entrega
+t4=<,txt_1,h,5,50,,
+h4=Tempo de Limite de Entrega
+validacao=campoPreenchido(id_1)
+
+[edtransp]
+tab=DADOS DA TRANSPORTADORA
+comentario=
+db=pedidos
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=data,data,d,10,80,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+BotaoAlterar=Sim
+nobrowse=1
+reservado=1
+where=id=$IDORIGEM
+Rlt=*
+altura=170
+largura=460
+foco=idtransp
+forcarleftmask=110
+t0=Transportadora:,idtransp,i,6,60,,?cadastro.rcl,
+t1=Previsao:,entrega,d,10,80,,
+
+[turnoComparaTotais]
+tab=COMPARADOR DE TOTALIZADORES
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Código,id_1,c,10,55,,
+c1=Tipo de Pagto,&rclArq(id_1|tipo.rcl),c,255,110,,
+nobrowse=0
+relacaokey=nome,"TURNO_COMPARA_TOTALIZADORES"
+autoIncluir=0
+where=nome='TURNO_COMPARA_TOTALIZADORES'
+altura=200
+largura=440
+foco=id_1
+forcarleftmask=90
+t0=linha=30
+t1=Código:,id_1,i,5,50,@,tipo.rcl,
+t2=linha+10
+t3=Descrição:,txt_1,c,255,300,,
+validacao=campoPreenchido(id_1)
+

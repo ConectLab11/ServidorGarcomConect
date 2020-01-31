@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2016/09/07 15:54:28.000.746,=C:\Users\dv7\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2016/09/07 15:55:06.000.967,=C:\Users\dv7\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2016/10/03 18:41:37.000.829,=C:\Users\dv7\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2016/10/03 18:52:04.000.062,=C:\Users\dv7\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2016/10/16 10:52:00.000.425,=C:\Users\dv7\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2017/06/25 23:34:12.000.736,=C:\Users\dv7\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/02/26 15:15:51.000.319,=C:\Users\dv7\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/02/26 15:32:24.000.156,E:\Temp\t64\Unit1.dfm=C:\Users\dv7\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2019/02/26 15:32:24.000.156,E:\Temp\t64\Unit1.pas=C:\Users\dv7\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/02/26 15:32:26.000.426,E:\Temp\t64\Project1.dproj=C:\Users\dv7\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2019/05/28 12:11:44.000.111,E:\Temp\t64\Project1.dproj=E:\Temp\t64\clbmobile64.dproj</Transaction>
+    <Transaction>2019/12/18 20:33:17.000.648,=C:\rcsv\App\mobile64\clbmobile64_Icon.ico</Transaction>
+    <Transaction>2019/12/18 20:35:16.000.926,C:\rcsv\App\mobile64\clbmobile64_Icon.ico=</Transaction>
+    <Transaction>2019/12/19 17:01:31.000.606,=C:\rcsv\App\mobile64\Unit2.pas</Transaction>
+    <Transaction>2019/12/19 17:02:10.000.005,C:\rcsv\libs\rcs\rcs_appconf.pas=C:\rcsv\App\mobile64\Unit2.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android="f4d6d88d"/>
+	</ActiveMobileDevice>
+	<BT_BuildType>Debug</BT_BuildType>
+</BorlandProject>

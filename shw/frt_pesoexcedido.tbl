@@ -1,0 +1,74 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 28/01/2010
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=0
+nivelauxiliar=0
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=nil, Peso excedido, tabelapesoexcedido, 0123456789, 9, 7,a
+
+#
+# Parametros de tela
+#
+
+[tabelapesoexcedido]
+tab=TABELA PESO EXCEDIDO
+comentario=Tabela Peso Excedido
+db=tabefret
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+forcarcoluna=130
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=KG Excedido,tonelada,f,16,100,,
+altura=480
+largura=360
+foco=descr
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=120
+forcarleftmask=130
+nobrowse=1
+t0=Descrição:,descr,c,50,200,,
+t1=KG Diferenciado:,{lb}tablepeso,e,11,84,,
+t2=até {lb|tablepeso|100} KG,ate_100,f,11,84,,
+t3=KG Excedido:,tonelada,f,11,84,,
+t4=ADvalorem:,advalorem,p,11,84,,
+t5=GRIS:,gris,p,11,84,,
+t6=Seg/Cat:,seccat,f,11,84,,
+t7=Despacho:,despacho,f,11,84,,
+t8=Pedágio:,pedagio,f,11,84,,
+t9=Outros:,outros,f,11,84,,
+t10=Frete mínimo:,minimo,f,11,84,,
+t11=Devolução:,devolucao,p,11,84,,
+t12=Reentrega:,reentrega,p,11,84,,
+t13=#ICMS faz parte do frete:,icmsx,sn,3,30,,
+t14=Compartilhada:,compartilhada,sn,3,30,,
+t15=Verificar Frete Mínimo do Total:,frt_minitotal,sn,3,30,,
+
+[correcao_de_valores]
+; Tipo p - Permite ajustar os campos abaixo apenas por porcentagems.
+; Tipo v - Permite ajustar os campos abaixo subtraindo e adicionando valores
+tipo=pv
+c0=ate_100 ,pv,até {lb|tablepeso|100} KG
+c1=tonelada,pv,KG Excedido
+c2=seccat  ,pv,Seg/Cat
+c3=despacho,pv,Despacho
+c4=pedagio ,pv,Pedágio
+c5=outros  ,pv,Outros
+c6=minimo  ,pv,Frete mínimo

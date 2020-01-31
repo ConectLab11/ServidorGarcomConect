@@ -1,0 +1,1112 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# Data: 12/12/2003
+#
+#
+# a todos
+# d nota de despesas
+# g agenda
+# m movimento de caixa
+# n cadastro de bancos
+# o plano de contas
+# p pagar
+# q gerenciador de ocorrencias
+# r receber
+# s script inicial
+# t conta caixa
+
+[arquivo]
+modulo=OPÇÕES DE PRODUTOS
+nivelprincipal=1
+nivelauxiliar=1
+
+[Opcoes]
+o0=Produtos, 0123456789, 9, 0,asn
+o1=insert(shw\tabtribu.shw)
+
+[Produtos]
+o0=nil, Grupo, grupo, 012345678, 4, 13,a
+o1=nil, Seção, secao, 012345678, 4, 13,a
+o2=nil,+Sub-Seção, subsecao, 012345678, 4, 10,a
+o3=nil, Regra de Códigos, regraCodigos, 012345678, 4, 13,a,
+o4=nil, Guarnições, guarnicoes, 012345678, 4, 10,a,3
+o5=nil, Marca/Modelo, modelo, 0123456789, 4, 13,a,7
+o6=nil, Cores, lstcores, 0123456789, 4, 13,a,7
+o7=nil, Familia, familia, 012345678, 4, 13,a,!3|!2|!8
+o8=nil, Unidades, unidades, 012345678, 4, 13,a
+o9=nil, Grades, grade, 012345678, 4, 37,a,5
+o10=nil, Catalagos/Preços, tabeprec, 012345678, 4, 7,a,!8|!20
+o11=nil, Preços, precos, 012345678, 4, 21,a,!8|!20
+o12=Grade, Tamanho, gradeTmh, 012345678, 4, 37,a,6
+o13=Grade, Cores, gradeCores, 012345678, 4, 37,a,6
+o14=Produto, Controles, ctrProd, 012345678, 4, 10,a,2|13|3
+o15=Produto, Adicional e Opcionais, adpizza, 012345678, 4, 10,a,2|3
+o16=Vinhos, Tipo, vinhoTipo, 012345678, 4, 13,a,17
+o17=Vinhos, Uvas, vinhoUvas, 012345678, 4, 13,a,17
+o18=Vinhos, Região, vinhoRegiao, 012345678, 4, 13,a,17
+
+o18=#nil, Promoção, promocao, 012345678, 4, 21,p
+o19=#Tabelas de Tributação, Artigos do ICMS, articms, 0123456789, 1, 8,a
+o20=#Tabelas de Tributação, CFOP, cfopnota, 0123456789, 1, 8,a
+o21=#Tabelas de Tributação, CST, classtri, 012345678, 4, 8,a
+o22=#Tabelas de Tributação, NCM, classfis, 012345678, 4, 8,a
+o23=#E-COMMERCE, Geral, geral, 0123, 1, 8,a
+o24=#E-COMMERCE, MySql, mysql, 0123, 1, 8,a
+o25=#E-COMMERCE, FTP, ftp, 0123, 1, 8,a
+o26=#E-COMMERCE, Descrição, descricao, 0123, 1, 8,a
+o27=#E-COMMERCE, Sistema do Fornecedor, fornsql, 0123, 1, 8,a
+o28=Estoque,Servidor Gerenciador,estGerencial, 0123456789, 1,8,a
+o29=Controlados, Itens , produtoscontrolados, 0123, 4, 10, n, 4
+o30=#Controlados, Aluguel Narguilé, produtoscontroladossecao, 0123, 4, 10, n, 4
+
+
+#
+# Parametros de tela
+#
+[promocao]
+tab=PRODUTOS EM PROMOÇÃO
+db=pacotes
+db2=estoque
+#ignoreforcedb=Sim
+net_oper=Sim
+ordem=id
+chave=id
+chaveprincipal=id
+campos=pacotes.id,pacotes.idsubprod,pacotes.pcqtde,pacotes.pcpreco,estoque.descricao,estoque.undv,estoque.preco
+c0=Código,idsubprod,i,15,70,,
+c1=Descrição,descricao,c,60,190,,
+c2=Qtde,pcqtde,e,9,60,,
+c3=Und,undv,c,3,40,,
+c4=Preço,preco,f,11,70,,
+c5=Promoção,pcpreco,f,11,70,,
+BotaoIncluir=Sim
+BotaoExcluir=Sim
+BotaoAlterar=Sim
+where=(pacotes.idproduto=$IDORIGEM2) and (pacotes.idsubprod=estoque.codigo)
+relacaokey=idproduto,$IDORIGEM2
+altura=400
+largura=520
+foco=idsubprod
+forcarleftmask=90
+t0=Produto:,idsubprod,i,6,60,,cadastro.rcl,
+t1=Qtde:,pcqtde,e,11,84,,
+t2=Preço:,pcpreco,f,11,84,,
+
+[geral]
+tab=ECOMMERCE PARAMETROS GERAIS
+comentario=
+db=nfecfg
+ordem=id
+net_oper=Sim
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=170
+largura=460
+foco=webprazo
+forcarleftmask=200
+where=id="3"
+relacaokey=id,"3"
+t0=Entrega dos Produtos#007E7E7E\ok2.bmp,,,,385, ,
+t1=Dias de prazo de entrega:,webprazo,i,3,70,,
+
+[mysql]
+tab=ECOMMERCE servidor mysql
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=170
+largura=460
+foco=sql_ip
+forcarleftmask=100
+where=id="3"
+relacaokey=id,"3"
+t0=Host/IP:,sql_ip,c,255,300,,
+t1=Usuário:,sql_usuario,c,50,150,,
+t2=Senha:,sql_senha,c,255,150,,
+t3=Database:,sql_database,c,255,150,,
+
+[ftp]
+tab=ECOMMERCE servidor ftp
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=170
+largura=460
+foco=web_ftp
+forcarleftmask=100
+where=id="3"
+relacaokey=id,"3"
+t0=FTP:,web_ftp,c,255,300,,
+t1=Usuário:,web_usuario,c,50,150,,
+t2=Senha:,web_senha,c,255,150,,
+t3=Path Primário:,web_ftpprimaria,c,50,300,,
+t4=Path Fotos:,web_fotos,c,255,300,,
+t5=Path Mini Fotos:,web_fotospqn,c,255,300,,
+
+[descricao]
+tab=DESCRIÇÃO DETALHADA DOS PRODUTOS
+comentario=
+db=nfecfg
+net_oper=Sim
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=170
+largura=460
+foco=descricao1
+forcarleftmask=100
+where=id="3"
+relacaokey=id,"3"
+t0=Descrição 1:,descricao1,c,30,300,,
+t1=Descrição 2:,descricao2,c,30,300,,
+t2=Descrição 3:,descricao3,c,30,300,,
+
+[fornsql]
+tab=ECOMMERCE Sistema do fornecedor
+comentario=
+db=nfecfg
+net_oper=Sim
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=170
+largura=460
+foco=forn_ip
+forcarleftmask=100
+where=id="3"
+relacaokey=id,"3"
+t0=Host/IP:,forn_ip,c,255,300,,
+t1=Usuário:,forn_usuario,c,50,150,,
+t2=Senha:,forn_senha,c,255,150,,
+t3=Database:,forn_database,c,255,150,,
+
+[secao]
+tab=SEÇÃO DOS PRODUTOS
+comentario=
+db=secao
+net_oper=Sim
+ordem=ativo desc,id
+rcl=secao.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Descrição,nsecao,c,50,240,,
+c2=NCM,ncm,c,10,90,,
+c3=Ativo,ativo,sn,3,40,,
+Rlt=estoque.idsecao
+msg=SEÇÃO DE PRODUTO(S)
+BotaoExcluir=RCL
+altura=460
+largura=450
+foco=nsecao
+forcarleftmask=120
+t0=Código:,id,+,4,30,,
+h0=Código da Seção
+t1=Descrição:,nsecao,c,50,280,,
+h1=Descrição completa da Seção (Nome)
+t2=[2,3,6]Particularidades#007E7E7E\calculator.png,,,,400, ,
+t3=[2]Fracionar Pizza:,fracao,sn,3,30,,
+t4=[2,3]Adicional:,adicional,sn,3,30,,
+t5=[3]Meia Porção:,meiaPorcao,sn,3,30,,
+t6=[3]Opcionais:,guarnicao,sn,3,30,,
+t7=[2]oaForce:,oaForce,sn,3,30,,
+t8=[2,3]S/ Custo Definido:,cusDef,sn,3,30,,
+h8=Produto sem custo definido
+t9=#[6]Grade:,estGrade,sn,3,30,,
+h9=#Produtos por Grade
+t10=[17]Vinhos:,vinhos,sn,3,30,,
+t11=Preço 2,preco2,sn,3,30,,
+t12=Und de rendimento:,rendim,sn,3,30,,
+h12=Unidade de rendimentos do produto
+t13=Tributação#007E7E7E\calculator.png,,,,400, ,
+t14=Tabela NCM:,ncm,c,10,84,@BU,?classfis.rcl,
+h14=Código da Tabela NCM <F2> 
+t15=CFOP:,cfop,ci,5,40,,cfopnota.rcl,
+h15=Código Fiscal de Operação de Entrada e saída de mercadorias  <F2>
+t16=#ICMS#007E7E7E\calculator.png,,,,400, ,
+t17=Origem:,origem,ci,1,30,,prodorig.rcl,
+h17=Origem do Produto adquirido <F2>
+t18=CST ICMS:,st,ci,3,30,,classtri.rcl, 
+h18=Código da Situação Tributária do ICMS <F2>
+t19=ICMS:,icms,p,11,84,,
+h19=Alíquota do ICMS@- Preencher somente se não utilizar a Tabela de ICMS por Estados.
+t20=#IPI#007E7E7E\calculator.png,,,,400, ,
+t21=#CST IPI:,ipicst,ci,3,30,,cstipi.rcl,
+h21=#Código da Situação Tributária do IPI <F2>
+t22=#CST PIS:,cstPis,ci,3,30,,cstpis.rcl, 
+h22=#Código de Situação Tributária do PIS
+t23=#CST COFINS:,cstCofins,ci,3,30,,cstpis.rcl, 
+h23=#Código de Situação Tributária do PIS
+t24=Destaque Touch#007E7E7E\color_swatch_2.png,,,,400, ,
+t25=Cor:,color=@clnavy,color,3,40,,
+h25=Cor para destacar a Opção do Grupo
+t26=linha+5
+t27=Fonte:,colorfont=@clwhite,color,3,40,,
+h27=Cor da Fonte
+t28=[4]Outros#007E7E7E\color_swatch_2.png,,,,400, ,
+t29=[4]Produto:,prodSO,ci,6,70,,?<#8>estoque.rcl,,
+h29=Produto que representa esta seção <F2>
+t30=[19]Desativar Mobile:,noMobile,sn,3,30,,
+t31=[19]Turno:,tipoTurno,i,3,40,,<#29>geral2.rcl,
+t32=Ativo:,ativo=Sim,sn,3,30,,
+
+#t27=Ordem Cardápio:,ordem,i,3,40,,
+validacao=campoPreenchido(nsecao)
+
+[grupo]
+tab=Grupo de Produtos
+db=grupo
+net_oper=Sim
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Descrição,descricao,c,50,250,,
+c2=Inicio,codigoInicio,i,5,60,,
+c3=Final,codigoFinal,i,5,60,,
+Rlt=estoque.grupo
+msg=PRODUTO(S)
+altura=270
+largura=450
+foco=descricao
+t0=Código:,id,+,4,30,!999;1; ,
+t1=Descrição:,descricao,c,50,300,,
+t2=[2,3]Codificação#007E7E7E\color_swatch_2.png,,,,400, ,
+t3=[2,3]Inicial:,codigoInicio,i,5,70,,
+t4=[2,3]Final:,codigoFinal,i,5,70,,
+
+#t2=Destaque Touch#007E7E7E\color_swatch_2.png,,,,400, ,
+#t3=Cor:,color=@clnavy,color,3,40,,
+#h3=Cor para destacar a Opção do Grupo
+#t4=linha+5
+#t5=Fonte:,colorfont=@clwhite,color,3,40,,
+3h5=Cor da Fonte
+
+[familia]
+tab=FAMILIA DE PRODUTOS
+comentario=Familia de Produtos
+db=familia
+net_oper=Sim
+ordem=codigo
+rcl=familia.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,4,70,,
+c1=Familia,codigo,c,15,80,,
+c2=Descrição,descricao,c,50,380,,
+Rlt=estoque.familia
+msg=PRODUTO(S)
+altura=200
+largura=470
+foco=codigo
+t0=Código:,id,+,6,60,,
+t1=Familia:,codigo,c,15,60,,
+t2=Descrição:,descricao,c,50,300,,
+
+[unidades]
+tab=Unidades
+comentario=Campo utilizado no cadastro de produtos, para definir as quantidade na compra ou venda. Exemplo:( 1 Dz Lanranja ) ( 1 Cx Sapato )... 
+db=unidades
+ordem=nunidade
+net_oper=Sim
+rcl=unidades.rcl
+chave=nunidade
+chavePrincipal=id
+c0=Unidade,nunidade,c,8,60,,
+c1=Descrição,udescricao,c,50,250,,
+Rlt=estoque.undv/nunidade
+msg=PRODUTO(S)
+altura=180
+largura=450
+foco=nunidade
+//t0=Código:,id,+,4,30,,
+t0=Unidade:,nunidade,c,3,60,@U,
+t1=Descrição:,udescricao,c,50,300,,
+
+[classfis]
+tab=TABELA DE CÓDIGOS NCM
+comentario=Tabela NCM
+db=classfis
+net_oper=Sim
+ordem=aordem,codigo
+rcl=classfis.rcl
+chave=id
+chavePrincipal=id
+c0=Código,codigo,c,9,80,,
+c1=Descrição,descricao,c,45,300,,
+Rlt=estoque.cf
+msg=PRODUTO(S)
+altura=490
+largura=450
+foco=codigo
+t0=Código:,codigo,c,10,100,@U!9999.99.99;1; !,
+h0=Código da tabela NCM
+t1=Descrição:,descricao,c,60,300,,
+h1=Descrição do código NCM
+t2=IPI (Alíquotas)#007E7E7E\attach_2.png,,,,385, ,
+t3=Na entrada:,ipientrada,p,11,70,,
+h3=Aliquota de IPI para NF-e de entrada.
+t4=coluna+120
+t5=linha-25
+t6=CST:,ipicst_e,ci,2,30,,<#2>cstipi.rcl,
+h6=Código de Classificação Fiscal do IPI na NF-e de entrada <F2>
+t7=coluna-120
+t8=Na saída:,ipisaida,p,11,70,,
+h8=Aliquota de IPI para NF-e de saída.
+t9=coluna+120
+t10=linha-25
+t11=CST:,ipicst_s,ci,2,30,,<#3>cstipi.rcl,
+h11=Código de Classificação Fiscal do IPI na NF-e de saída <F2>
+t12=coluna-120
+t13=PIS (Alíquotas)#007E7E7E\attach_2.png,,,,385, ,
+t14=Na entrada:,pisentrada,p,11,70,,
+h14=Aliquota de PIS para NF-e de entrada.
+t15=coluna+120
+t16=linha-25
+t17=CST:,piscst_e,ci,2,30,,cstpis.rcl,
+h17=Código de Classificação Fiscal do PIS na NF-e de entrada <F2>
+t18=coluna-120
+t19=Na saída:,pissaida,p,11,70,,
+h19=Aliquota de PIS para NF-e de saída
+t20=coluna+120
+t21=linha-25
+t22=CST:,piscst_s,ci,2,30,,cstpis.rcl,
+h22=Código de Classificação Fiscal do PIS na NF-e de saída <F2>
+t23=coluna-120
+t24=COFINS (Alíquotas)#007E7E7E\attach_2.png,,,,385, ,
+t25=Na entrada:,cofinsentrada,p,11,70,,
+h25=Alíquota de COFINS para NF-e de entrada.
+t26=coluna+120
+t27=linha-25
+t28=CST:,cofinscst_e,ci,2,30,,cstcofins.rcl,
+h28=Código de Classificação Fiscal do COFINS na NF-e de entrada <F2>
+t29=coluna-120
+t30=Na saída:,cofinssaida,p,11,70,,
+h30=Aliquota de COFINS para NF-e de saída.
+t31=coluna+120
+t32=linha-25
+t33=CST:,cofinscst_s,ci,2,30,,cstcofins.rcl,
+h33=Código de Classificação Fiscal do COFINS na NF-e de saída <F2>
+t34=coluna-120
+t35=II - Imposto de importação#007E7E7E\attach_2.png,,,,385, ,
+t36=Alíquota:,ii,p,11,84,,
+validacao=validarNCM(codigo)
+
+[classtri]
+tab=CÓDIGO DA SITUAÇÃO TRIBUTÁRIA
+comentario=
+db=classtri
+net_oper=Sim
+ordem=codigo
+rcl=classtri.rcl
+chave=id
+chaveprincipal=id
+c0=Código,codigo,+,8,60,,
+c1=Descrição,descricao,c,70,400,,
+Rlt=estoque.st/codigo
+msg=PRODUTO(S)
+altura=180
+largura=450
+foco=codigo
+t0=Código:,codigo,c,5,40,,
+h0=Código Fiscal
+t1=Descrição:,descricao,c,50,300,,
+h1=Descrição completa do Código Fiscal
+BotaoExcluir=Não
+BotaoAlterar=RCL
+validacao=campoPreenchido(codigo)
+
+[tabeprec]
+tab=CATALAGOS e Tabelas de Preços
+comentario=
+db=tabeprec
+ordem=id
+net_oper=Sim
+rcl=tabeprec.rcl
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Descrição,descricao,c,255,250,,
+c2=Tipo,layout,c,20,100,,
+altura=200
+largura=450
+foco=descricao
+t0=#Código:,id,+,5,40,,
+t1=Descrição:,descricao,c,255,300,,
+t2=Tipo:,layout,c,50,280,@B,tipotabe.rcl,
+t3=Ativo:,ativo,sn,3,30,,
+validacao=campoPreenchido(layout), campoPreenchido(descricao)
+
+[precos]
+tab=PARAMETROS PARA COMPOSIÇÃO DO PREÇO
+comentario=
+db=rclsoft
+net_oper=Sim
+ordem=empresa
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=Codigo,id,+,5,60,,
+c1=Empresa,empresa,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=180
+largura=460
+forcarleftmask=90
+foco=descmax
+t0=linha-5
+t1=Descontos/Acréscimos#007E7E7E\bricks.png,,,,385, ,
+t2=Descontos:,descmax,p,11,84,,
+h2=Descontos Máximo por Produto
+t3=Acréscimos:,dpnc,p,11,84,,
+h3=Custo Adicional por Produto
+t4=Margem de Lucro#007E7E7E\bricks.png,,,,385, ,
+t5=Venda:,plucroVenda,p,11,84,,
+h5=Margem de Lucro para o Preço de Venda
+t6=Revenda:,plucroRevenda,p,11,84,,
+h6=Margem de Lucro para o Preço de Revenda
+t7=Venda à Prazo direta no Produto#007E7E7E\bricks.png,,,,385, ,
+t8=Juros:,pjurosPrazo,p,11,84,,
+t9=Venda à Prazo DD#007E7E7E\bricks.png,,,,385, ,
+t10=Dias:,sPrazo1,c,30,170,!999/999/999/999/999/999/999,
+t11=linha-25
+t12=coluna+220
+t13=Juros:,pjurosPrazo1,p,11,80,,
+t14=coluna-220
+t15=Dias:,sPrazo2,c,30,170,!999/999/999/999/999/999/999,
+t16=linha-25
+t17=coluna+220
+t18=Juros:,pjurosPrazo2,p,11,80,,
+t19=coluna-220
+t20=Dias:,sPrazo3,c,30,170,!999/999/999/999/999/999/999,
+t21=linha-25
+t22=coluna+220
+t23=Juros:,pjurosPrazo3,p,11,80,,
+t24=coluna-220
+
+[cfopnota]
+tab=CFOP
+comentario=CFOP
+db=cfopnota
+net_oper=Sim
+ordem=codigo
+rcl=cfopnota.rcl
+chave=codigo
+chaveprincipal=id
+c0=Código,codigo,c,8,60,,
+c1=Descrição,ncfop,c,50,300,,
+CampoForcado=codigo
+Rlt=notafisc.cfop,conhecim.operacao,minuta.operacao,conheci1.operacao,minconhe.cfop
+msg=
+altura=280
+largura=450
+foco=codigo
+forcarleftmask=
+t0=Código:,codigo,c,5,60,!9.999;1; ,
+h0=Código do CFOP.
+t1=Descrição:,ncfop,c,50,300,,
+h1=Descrição do CFOP.
+t2=Não Faturar:,nocobranca,sn,3,30,,
+h2=Não faturar NF-e ou CT-e
+t3=Tributação#007E7E7E\attach_2.png,,,,385, ,
+t4=CST/CSO:,cst,ci,3,40,,classtri.rcl,
+h4=Código da Situação Tributária/ Código de Situação da Operação - Simples Nacional
+t5=Sem ICMS:,noicms,sn,3,30,,
+h5=Sem tributação - não destacar ICMS na NF-e ou CT-e
+validacao=duplicidades(codigo;[codigo-cfopnota])
+
+[articms]
+tab=ARTIGOS DO ICMS
+comentario=ARTIGOS DO ICMS
+db=articms
+ordem=artigo
+net_oper=Sim
+rcl=articms.rcl
+chave=artigo
+chaveprincipal=id
+c0=Artigos,artigo,c,10,90,,
+c1=Descrição,descricao,c,65,300,,
+campoforcado=artigo
+Rlt=conhecim.articms,minuta.articms,conheci1.articms,minconhe.articms
+msg=CTRC(s)
+altura=240
+largura=500
+foco=artigo
+t0=Artigo:,artigo,c,15,80,,
+t1=Descrição:,descricao,t,0,350,,
+
+[subsecao]
+tab=SUB-SEÇÃO DE PRODUTOS
+comentario=
+db=subsecao
+net_oper=Sim
+ordem=filho
+rcl=subsecao.rcl
+modcampoorigem=Código da Seção:/120/40/!9999.99.99;1; /NE/162/10/secao.rcl/
+campoorigem=Código da Seção:/120/40//NE/162/200/secao.rcl/
+chave=id
+chaveprincipal=id
+where=pai="$IDORIGEM"
+relacaokey=pai,"$IDORIGEM"
+ENUMERAR=filho/where pai="$IDORIGEM"
+c0=Código,subid,c,6,60,,
+c1=Descrição,nsecao,c,50,300,,
+c2=NCM,ncm,c,10,90,,
+altura=400
+largura=450
+foco=nsecao
+forcarleftmask=100
+CampoForcado=subid
+Rlt=estoque.idsubsecao
+msg=SUBSEÇÃO DE PRODUTO(s)
+t0=Descrição:,nsecao,c,50,280,,
+h0=Descrição completa da Sub-seção (Nome)
+t1=Tributação#007E7E7E\calculator.png,,,,400, ,
+t2=Tabela NCM:,ncm,c,10,84,@BU,classfis.rcl,
+h2=Código da Tabela NCM <F2> 
+t3=CFOP:,cfop,ci,5,40,,cfopnota.rcl,
+h3=Código Fiscal de Operação de Entrada e saída de mercadorias  <F2>
+t4=#ICMS#007E7E7E\calculator.png,,,,400, ,
+t5=Origem:,origem,ci,1,30,,prodorig.rcl,
+h5=Origem do Produto adquirido <F2>
+t6=CST ICMS:,st,ci,3,30,,classtri.rcl, 
+h6=Código da Situação Tributária do ICMS <F2>
+t7=ICMS:,icms,p,11,84,,
+h7=Alíquota do ICMS@- Preencher somente se não utilizar a Tabela de ICMS por Estados.
+t8=Destaque Touch#007E7E7E\color_swatch_2.png,,,,400, ,
+t9=Cor:,color=@clgreen,color,3,40,,
+h9=Cor para destacar a Opção do Grupo
+t10=linha+5
+t11=Fonte:,colorfont=@clwhite,color,3,40,,
+h11=Cor da Fonte
+t12=Qtde por caixa:,caixa,e,9,70,,
+validacao=campoPreenchido(nsecao)
+
+[modelo]
+tab=MARCA/MODELO
+comentario=
+db=modelo
+net_oper=Sim
+ordem=descricao
+rcl=
+modcampoorigem=Marca Fabricante:/120/40/!9999.99.99;1; /NE/162/10/<#2>?cadastro.rcl/
+campoorigem=Marca\Fabricante:/120/60//NE/182/230/?cadastro.rcl/
+chave=id
+chaveprincipal=id
+where=marca="$IDORIGEM"
+relacaokey=marca,"$IDORIGEM"
+//ENUMERAR=filho/where pai="$IDORIGEM"
+//c0=Código,id,c,6,60,,
+c0=Descrição,descricao,c,50,300,,
+altura=200
+largura=450
+foco=descricao
+forcarleftmask=100
+CampoForcado=descricao
+Rlt=
+msg=MARCA/MODELO
+t0=Descrição:,descricao,c,50,280,@U,
+h0=Descrição completa do Modelo
+validacao=campoPreenchido(descricao)
+
+[grade]
+tab=GRADE DE PRODUTOS
+comentario=
+db=grade
+net_oper=Sim
+ordem=descricao
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,5,60,,
+c1=Descrição,descricao,c,60,300,,
+altura=540
+largura=425
+foco=descricao
+forcarleftmask=100
+t0=Descrição:,descricao,c,60,265,,
+t1=1. Tamanho:,tamanho1,e,11,84,,
+t2=linha-25
+t3=coluna+150
+t4=Cor:,cor1,c,20,100,@BT,cores.rcl,
+t5=coluna-150
+t6=2. Tamanho:,tamanho2,e,11,84,,
+t7=linha-25
+t8=coluna+150
+t9=Cor:,cor2,c,20,100,@BT,cores.rcl,
+t10=coluna-150
+t11=3. Tamanho:,tamanho3,e,11,84,,
+t12=linha-25
+t13=coluna+150
+t14=Cor:,cor3,c,20,100,@BT,cores.rcl,
+t15=coluna-150
+t16=4. Tamanho:,tamanho4,e,11,84,,
+t17=linha-25
+t18=coluna+150
+t19=Cor:,cor4,c,20,100,@BT,cores.rcl,
+t20=coluna-150
+t21=5. Tamanho:,tamanho5,e,11,84,,
+t22=linha-25
+t23=coluna+150
+t24=Cor:,cor5,c,20,100,@BT,cores.rcl,
+t25=coluna-150
+t26=6. Tamanho:,tamanho6,e,11,84,,
+t27=linha-25
+t28=coluna+150
+t29=Cor:,cor6,c,20,100,@BT,cores.rcl,
+t30=coluna-150
+t31=7. Tamanho:,tamanho7,e,11,84,,
+t32=linha-25
+t33=coluna+150
+t34=Cor:,cor7,c,20,100,@BT,cores.rcl,
+t35=coluna-150
+t36=8. Tamanho:,tamanho8,e,11,84,,
+t37=linha-25
+t38=coluna+150
+t39=Cor:,cor8,c,20,100,@BT,cores.rcl,
+t40=coluna-150
+t41=9. Tamanho:,tamanho9,e,11,84,,
+t42=linha-25
+t43=coluna+150
+t44=Cor:,cor9,c,20,100,@BT,cores.rcl,
+t45=coluna-150
+t46=10. Tamanho:,tamanho10,e,11,84,,
+t47=linha-25
+t48=coluna+150
+t49=Cor:,cor10,c,20,100,@BT,cores.rcl,
+t50=coluna-150
+t51=11. Tamanho:,tamanho11,e,11,84,,
+t52=linha-25
+t53=coluna+150
+t54=Cor:,cor11,c,20,100,@BT,cores.rcl,
+t55=coluna-150
+t56=12. Tamanho:,tamanho12,e,11,84,,
+t57=linha-25
+t58=coluna+150
+t59=Cor:,cor12,c,20,100,@BT,cores.rcl,
+t60=coluna-150
+t61=13. Tamanho:,tamanho13,e,11,84,,
+t62=linha-25
+t63=coluna+150
+t64=Cor:,cor13,c,20,100,@BT,cores.rcl,
+t65=coluna-150
+t66=14. Tamanho:,tamanho14,e,11,84,,
+t67=linha-25
+t68=coluna+150
+t69=Cor:,cor14,c,20,100,@BT,cores.rcl,
+t70=coluna-150
+t71=15. Tamanho:,tamanho15,e,11,84,,
+t72=linha-25
+t73=coluna+150
+t74=Cor:,cor15,c,20,100,@BT,cores.rcl,
+t75=coluna-150
+t76=16. Tamanho:,tamanho16,e,11,84,,
+t77=linha-25
+t78=coluna+150
+t79=Cor:,cor16,c,20,100,@BT,cores.rcl,
+t80=coluna-150
+
+[guarnicoes]
+tab=GUARNIÇÕES
+db=set_mult
+net_oper=Sim
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Descrição,descricao,c,255,350,,
+c1=Preço,valor,f,11,84,,
+nobrowse=0
+relacaokey=nome,"escolha_guarnicoes"
+autoIncluir=0
+where=nome='escolha_guarnicoes'
+altura=180
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Descrição:,descricao,c,255,300,,
+h0=Descrição Completa
+t1=Valor:,valor,f,11,84,,
+h1=Valor 
+
+[adPizza]
+tab=ADICIONAL ADICIONAIS E OPCIONAIS
+db=set_mult
+net_oper=Sim
+ordem=txt_1
+chave=id
+chaveprincipal=id
+c0=Tipo,txt_1,c,50,80,,
+c1=Descrição,descricao,c,255,280,,
+c2=Preço,valor,f,11,84,,
+nobrowse=0
+relacaokey=nome,"adicional_pizza"
+autoIncluir=0
+where=nome='adicional_pizza'
+altura=180
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Tipo:,txt_1=@;Adicional;Opcional,l,50,300,,
+t1=Descrição:,descricao,c,255,300,,
+h1=Descrição Completa
+t2=Valor:,valor,f,11,84,,
+h3=Valor 
+
+[ctrProd]
+tab=CONTROLES DO PRODUTO
+db=estoque
+net_oper=Sim
+ordem=codigo
+chave=codigo
+chaveprincipal=codigo
+c0=Código,codigo,i,15,70,,
+c1=Descrição,descricao,c,60,190,,
+nobrowse=1
+BotaoIncluir=Nao
+BotaoExcluir=Nao
+BotaoAlterar=Sim
+where=(codigo=$IDORIGEM2)
+altura=400
+largura=520
+foco=fracpizza
+forcarleftmask=280
+t0=Este produto abre a tela de fracionamento de Pizza:,fracpizza,sn,3,30,,
+h0=Este produto abre a tela de fracionamento de Pizza
+t1=Este produto pode alterar o preço:,edtPreco,sn,3,30,,
+h1=Este produto pode alterar o preço no momento da venda
+
+[gradeTamanho]
+tab=TAMANHOS PARA GRADES
+db=set_mult
+net_oper=Sim
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Sigla,codigo,c,15,80,,
+c1=Descrição,descricao,c,255,350,,
+nobrowse=0
+relacaokey=nome,"produtos_grades_tamanhos"
+autoIncluir=0
+where=nome='produtos_grades_tamanhos'
+altura=180
+largura=440
+foco=codigo
+forcarleftmask=90
+t0=Sigla:,codigo,c,15,80,@U,
+h0=Sigla de indicação do Tamanho
+t1=Descrição:,descricao,c,15,300,,
+h1=Descrição do Tamanho
+
+[gradeCores]
+tab=LISTA DE CORES
+db=cores
+ordem=id
+chave=id
+net_oper=Sim
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Descrição,descricao,c,50,300,,
+altura=190
+largura=450
+foco=descricao
+forcarleftmask=120
+t0=Código:,id,+,4,30,,
+h0=Código da Cor
+t1=Descrição:,descricao,c,50,280,,
+h1=Descrição da cor
+
+[gradeTmh]
+tab=GRADE DE TAMANHOS
+comentario=
+db=grade
+ordem=id
+net_oper=Sim
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,5,60,,
+c1=Descrição,descricao,c,60,300,,
+altura=400
+largura=425
+foco=descricao
+forcarleftmask=100
+t0=Descrição:,descricao,c,60,265,,
+t1=1. ,size1,c,30,100,,
+t2=2. ,size2,c,30,100,,
+t3=3. ,size3,c,30,100,,
+t4=4. ,size4,c,30,100,,
+t5=5. ,size5,c,30,100,,
+t6=6. ,size6,c,30,100,,
+t7=7. ,size7,c,30,100,,
+t8=8. ,size8,c,30,100,,
+t9=9. ,size9,c,30,100,,
+t10=10. ,size10,c,30,100,,
+t11=11. ,size11,c,30,100,,
+
+[estGerencial]
+tab=SERVIDOR GERENCIAL DE ESTOQUE
+comentario=
+db=rclsoft
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,10,60,,
+c1=IP,estoqueSrv,c,50,150,,
+c2=Porta,estoquePort,i,6,60,,
+nobrowse=1
+#BotaoIncluir=RCL
+#BotaoAlterar=RCL
+#BotaoExcluir=Não
+altura=200
+largura=450
+foco=estoqueSrv
+t0=Ativo:,estoqueAtivo=Não,sn,3,30,,
+t1=IP do Servidor:,estoqueSrv,c,50,300,,
+t2=Porta:,estoquePort,i,6,60,0,
+
+[regraCodigos]
+tab=REGRAS DE CÓDIGOS
+db=set_mult
+net_oper=Sim
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Descrição,descricao,c,255,150,,
+c1=Prefixo,id_1,i,5,70,,
+c2=Tm Código,id_2,i,5,70,,
+c3=Tm Peso,id_3,i,5,70,,
+c4=Decimal,id_4,i,5,70,,
+nobrowse=0
+relacaokey=nome,"PRODUTOS_REGRAS_DE_CODIGOS"
+autoIncluir=0
+where=nome='PRODUTOS_REGRAS_DE_CODIGOS'
+altura=350
+largura=500
+foco=descricao
+forcarleftmask=250
+t0=Descrição:,descricao,c,255,200,,
+h0=Descrição Completa
+t1=Prefixo:,id_1,i,5,60,,
+h1=Prefixo do Código
+t2=Tamanho do Código:,id_2,i,5,60,,
+t3=Tamanho do Peso:,id_3,i,5,60,,
+t4=Decimais:,id_4,i,5,60,,
+t5=Limite de casas decimais:,valor_2,i,3,30,,
+t6=Buscar só no campo Código de Barras:,id_5=Sim,sn,3,30,,
+t7=Peso substituido pelo preço:,txt_1,sn,3,30,,
+t8=Incluir zeros a esquerda no codigo do produto:,valor_1,sn,3,30,,
+
+
+#t5=Código de barras é a referencia:,txt_2,sn,3,30,,
+
+[vinhoTipo]
+tab=TIPO DE VINHO
+db=set_mult
+net_oper=Sim
+ordem=txt_1
+chave=id
+chaveprincipal=id
+c0=Código,id_1,+,10,50,,
+c1=Tipo,txt_1,c,255,300,,
+nobrowse=0
+SET_MULT=LISTA_VINHOS_TIPO
+relacaokey=nome,"LISTA_VINHOS_TIPO"
+autoIncluir=0
+where=nome='LISTA_VINHOS_TIPO'
+altura=180
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Código:,id_1,+,10,50,,
+t1=Tipo:,txt_1,c,50,300,,
+
+[vinhoUvas]
+tab=TIPO DE UVA
+db=set_mult
+net_oper=Sim
+ordem=txt_1
+chave=id
+chaveprincipal=id
+c0=Código,id_1,+,6,50,,
+c1=Uvas,txt_1,c,255,300,,
+nobrowse=0
+SET_MULT=LISTA_VINHOS_UVAS
+relacaokey=nome,"LISTA_VINHOS_UVAS"
+autoIncluir=0
+where=nome='LISTA_VINHOS_UVAS'
+altura=180
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Código:,id_1,+,6,50,,
+t1=Uva:,txt_1,c,50,300,,
+
+[vinhoRegiao]
+tab=REGIÃO DA PRODUÇÃO
+db=set_mult
+net_oper=Sim
+ordem=txt_1
+chave=id
+chaveprincipal=id
+c0=Região,txt_1,c,255,250,,
+c1=País,txt_2,c,50,50,,
+nobrowse=0
+relacaokey=nome,"LISTA_VINHOS_REGIAO"
+autoIncluir=0
+where=nome='LISTA_VINHOS_REGIAO'
+altura=180
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Região:,txt_1,c,50,300,,
+t1=País:,txt_2,c,50,300,@BU,paises.rcl,
+
+[produtoscontrolados]
+tab=ITENS DE PRODUTOS CONTROLADOS
+db=set_mult
+net_oper=Sim
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Código,id_2,c,9,70,,
+c1=Produto,&rclArq(id_2|<#8>estoque.rcl),c,255,140,,
+c2=Sub-seção,&rclArq(id_4|subsecao.rcl),c,255,100,,
+c3=Rend,valor_2,e,11,60,,
+c4=Qtde,valor_1,e,11,60,,
+nobrowse=0
+relacaokey=nome,"SESSAO_PRODUTOS_CONTROLADOS"
+relacaokey2=id_1,$IDORIGEM2
+autoIncluir=0
+where=(nome='SESSAO_PRODUTOS_CONTROLADOS') and (id_1=$IDORIGEM2)
+altura=400
+largura=600
+foco=id_2
+forcarleftmask=110
+t0=Por Seção da lista de controle#007E7E7E\color_swatch_2.png,,,,570, ,
+t1=linha+10
+t2=Seção:,id_3,i,3,40,$limparsubsecao(),secao.rcl,,
+t3=Sub-seção:,id_4,i,3,40,,<#3>subsecao.rcl|pai=$id_3,
+t4=linha+10
+t5=Por produto da lista de controle#007E7E7E\color_swatch_2.png,,,,570, ,
+t6=linha+10
+t7=Produto:,id_2,i,6,70,$prodRendim(),?<#8>estoque.rcl,,
+t8=Valores#007E7E7E\color_swatch_2.png,,,,570, ,
+t9=Unidade:,txt_1,c,3,50,@B,<#27>geral.rcl,,
+t10=Rendimento:,valor_2,e,11,84,,
+t11=Qtde de Saida:,valor_1,e,11,84,,
+validacao=campoPreenchido(txt_1),nozero(valor_2),nozero(valor_1)
+
+
+[produtoscontroladosdetail]
+tab=ALUGUEL DE NARGUILE
+db=set_mult
+net_oper=Sim
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Código,id_2,c,9,70,,
+c1=Fração,valor_1,e,11,60,,
+c2=Porção,valor_2,e,11,60,,
+nobrowse=0
+relacaokey=nome,"SESSAO_PRODUTOS_NARGUILE_DETAIL"
+relacaokey2=id_1,$IDORIGEM2
+autoIncluir=0
+where=(nome='SESSAO_PRODUTOS_NARGUILE_DETAIL') and (id_1=$IDORIGEM2)
+altura=230
+largura=600
+foco=valor_1
+forcarleftmask=130
+t0=Descontos no refil:,valor_1,f,11,84,,
+
+
+[produtoscontroladossecao]
+tab=ITENS DE PRODUTOS CONTROLADOS POR SECAO
+db=set_mult
+net_oper=Sim
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Código,id_2,c,9,70,,
+c1=Produto,&rclArq(id_2|<#8>estoque.rcl),c,255,240,,
+c2=Fração,valor_1,e,11,60,,
+c3=Porção,valor_2,e,11,60,,
+nobrowse=0
+relacaokey=nome,"SESSAO_PRODUTOS_CONTROLADOS_SECAO"
+relacaokey2=id_1,$IDORIGEM2
+autoIncluir=0
+where=(nome='SESSAO_PRODUTOS_CONTROLADOS_SECAO') and (id_1=$IDORIGEM2)
+altura=230
+largura=600
+foco=txt_1
+forcarleftmask=130
+t0=Produto:,id_2,i,6,70,,?<#8>estoque.rcl,,
+t1=Porção:,valor_2,e,11,84,,
+t2=Fração:,valor_1,e,11,84,,
+
+[lstcores]
+tab=CORES
+comentario=
+db=cores
+net_oper=Sim
+ordem=descricao
+rcl=
+chave=id
+chaveprincipal=id
+c0=Descrição,descricao,c,50,300,,
+c1=HEX,hex,c,15,60,,
+altura=200
+largura=420
+foco=descricao
+t0=linha+15
+t1=Descrição:,descricao,c,50,250,@U,
+t2=Cor:,hex=@clnavy,color,3,40,,
+

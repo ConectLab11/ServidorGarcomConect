@@ -1,0 +1,443 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 01/08/2011
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=tabvalor.pdx
+disableMenu=0
+telalargura=830
+telaaltura=0
+Posicionar=1
+whereexterno=mygroup='tabelacargasaereas'
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,+Carga Aerea/Rodoviária, tabelacargasaereas, 0123456789, 9, 25,a
+o2=nil,+Tarifas, if(tabefret.tipotab=1/id=$IDORIGEM;tarifasA;tarifasB) , 0123456789, 9, 23,a
+
+#
+# Parametros de tela
+#
+ 
+[tabelacargasaereas]
+tab=TABELA CARGAS AEREAS/RODOVIARIA
+comentario=Tabela para calculo de fretes, ultilizado pelas companhias aereas.
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=90
+forcarleftmask=90
+nobrowse=1
+altura=200
+largura=400
+foco=descr
+t0=Descrição:,descr,c,50,410,,
+h0=Descrição completa
+t1=Validade:,validade,d,10,80,,
+h1=Prazo de validade
+t2=linha-25
+t3=coluna+320
+t4=forcarleftmask=150
+t5=Transporte Rodoviário:,tipotab,sn,3,30,,
+t6=forcarleftmask=100
+t7=coluna-320
+t8=Taxas#007E7E7E\text_align_justify.png,,,,500, ,
+t9=Coleta:,coleta,f,11,84,,
+t10=linha-25
+t11=coluna+160
+t12=até (kg):,actn20,e,6,60,,
+t13=linha-25
+t14=coluna+160
+t15=Excedente:,actn40,f,11,84,,
+t16=coluna-320
+
+t17=Redespacho:,redespacho,f,11,84,,
+t18=linha-25
+t19=coluna+160
+t20=até (kg):,bctn20,e,6,60,,
+t21=linha-25
+t22=coluna+160
+t23=Excedente:,bctn40,f,11,84,,
+t24=coluna-320
+
+t25=Entrega:,entrega,f,11,84,,
+t26=linha-25
+t27=coluna+160
+t28=até (kg):,cctn20,e,6,60,,
+t29=linha-25
+t30=coluna+160
+t31=Excedente:,cctn40,f,11,84,,
+t32=coluna-320
+
+t33=TDE:,tde,p,11,84,,
+t34=linha-25
+t35=coluna+160
+t36=Mínimo:,tdeminimo,f,11,84,,
+t37=linha-25
+t38=coluna+160
+t39=Máximo:,frt_val1,f,11,84,,
+t40=coluna-320
+
+t41=Despacho:,despacho,f,11,84,,
+t42=linha-25
+t43=coluna+160
+t44=SEFAZ:,adicional,f,11,84,,
+t45=coluna-160
+
+t46=Outros#007E7E7E\text_align_justify.png,,,,500, ,
+t47=forcarleftmask=150
+t48=GRIS:,gris,p,11,84,,
+t49=#linha-25
+t50=#coluna+160
+t51=#ADValorem:,advalorem,p,11,84,,
+t52=#coluna-160
+t52=#Pedágio#007E7E7E\text_align_justify.png,,,,500, ,
+t53=forcarleftmask=150
+t54=Pedágio à cada{lb|kgpedagio|120} kg:,pedagio,f,11,84,,
+h54=Taxa de pedágio a cobrar para cada fração de peso.
+t55=linha-25
+t56=coluna+160
+t57=Fração(kg):,{lb}kgpedagio=120,e,11,50,,
+t58=coluna-160
+t59=#Generalidades#007E7E7E\tag.png,,,,530, ,
+t60=Devolução:,devolucao,p,11,60,,
+h60=Porcentagem do frete quando for devolução
+t61=linha-25
+t62=coluna+160
+t63=Reentrega:,reentrega,p,11,60,,
+h63=Porcentagem do frete quando for reentrega
+t64=coluna-160
+t65=Compartilhada:,compartilhada,sn,3,30,,
+h65=Compartilhar esta tabela com os clientes sem tabela.
+t66=#linha-25
+t67=coluna+160
+t68=#ICMS embutido:,icmsx,sn,3,30,,
+h68=O Valor do ICMS faz parte do frete.
+t69=forcarleftmask=250
+t70=coluna-100
+t71=Cobrar Kilos excedente acima de (Kg):,cargaex,e,11,84,,
+
+[tarifas]
+tab=TARIFAS PARA CALCULO AEREO/RODOVIARIO
+comentario=
+db=tabaereo
+ordem=cidade
+rcl=tabaereo.rcl
+chave=tabela
+chavePrincipal=id
+relacaokey=tabela,$IDORIGEM
+tituloWidth=35
+where=tabela="$IDORIGEM"
+c0=Sigla,siglas,c,3,40,,
+c1=UF,uf,c,2,30,,
+c2=Cidade,cidade,c,50,100,,
+c3=Mínimo,minima,f,11,70,,
+c4=Peso/nMínimo,qtde,f,11,70,,
+c5=até/n25.500 kg,ate25500,f,11,70,,
+c6=até/n50.500 kg,ate50500,f,11,70,,
+c7=até/n300.500 kg,ate300500,f,11,80,,
+c8=até/n500.500 kg,ate500500,f,11,80,,
+c9=até/n1.000.500 kg,ate1000500,f,11,80,,
+c10=Acima,acima,f,11,80,,
+Rlt=
+msg=
+altura=450
+largura=600
+forcarleftmask=80
+foco=siglas
+t0=Sigla:,siglas,c,3,40,@U,
+t1=coluna+80
+t2=linha-25
+t3=UF:,uf,c,2,30,@BU,estado2.rcl,
+t4=coluna+110
+t5=linha-25
+t6=Cidade:,cidade,c,50,250,@B,<#17>geral.rcl{ufsigla=uf},
+t7=coluna-190
+t8=Generalidades#007E7E7E\color_swatch_2.png,,,,550, ,
+t9=forcarleftmask=100
+t10=Taxa mínima:,minima,f,11,84,,
+t11=linha-25
+t12=coluna+180
+t13=forcarleftmask=120
+t14=Peso mínimo(Kg):,qtde,e,11,60,,
+t15=linha-25
+t16=coluna+150
+t17=ADvalorem:,advalorem,p,11,84,,
+t18=forcarleftmask=100
+t19=coluna=20
+t20=Tarifário Aéreo por (Kg)#007E7E7E\color_swatch_2.png,,,,550, ,
+t21=até 25.500:,ate25500,f,11,84,,
+t22=linha-25
+t23=coluna+180
+t24=até 50.500:,ate50500,f,11,84,,
+t25=linha-25
+t26=coluna+180
+t27=até 300.500:,ate300500,f,11,84,,
+t28=coluna=20
+t29=até 500.500:,ate500500,f,11,84,,
+t30=linha-25
+t31=coluna+180
+t32=até 1.000.500:,ate1000500,f,11,84,,
+t33=linha-25
+t34=coluna+180
+t35=Acima:,acima,f,11,84,,
+t36=coluna=20
+t37=Tarifário Rodoviário por (Kg)#007E7E7E\color_swatch_2.png,,,,550, ,
+t38=até 10:,ate10,f,11,84,,
+t39=linha-25
+t40=coluna+180
+t41=até 20:,ate20,f,11,84,,
+t42=linha-25
+t43=coluna+180
+t44=até 35:,ate35,f,11,84,,
+t45=coluna=20
+t46=até 50:,ate50,f,11,84,,
+t47=linha-25
+t48=coluna+180
+t49=até 70:,ate70,f,11,84,,
+t50=linha-25
+t51=coluna+180
+t52=até 100:,ate100,f,11,84,,
+t53=coluna=20
+t54=até 150:,ate150,f,11,84,,
+t55=linha-25
+t56=coluna+180
+t57=até 200:,ate200,f,11,84,,
+t58=linha-25
+t59=coluna+180
+t60=até 300:,ate300,f,11,84,,
+t61=coluna=20
+t62=até 500:,ate500,f,11,84,,
+t63=linha-25
+t64=coluna+180
+t65=Acima:,acima_rod,f,11,84,,
+t66=coluna=20
+
+[tarifasA]
+tab=TARIFAS PARA CALCULO RODOVIARIO
+comentario=
+db=tabaereo
+ordem=siglas,uf,cidade
+rcl=tabaereo.rcl
+chave=tabela
+chavePrincipal=id
+relacaokey=tabela,$IDORIGEM
+tituloWidth=35
+where=tabela="$IDORIGEM"
+c0=Sigla,siglas,c,3,40,,
+c1=UF,uf,c,2,30,,
+c2=Cidade,cidade,c,50,150,,
+c3=Mínimo,minima,f,11,70,,
+c4=Peso/nMínimo,qtde,f,11,70,,
+c5=até/n10kg,ate10,f,11,70,,
+c6=até/n20kg,ate20,f,11,70,,
+c7=até/n30kg,ate30,f,11,80,,
+c8=até/n35kg,ate35,f,11,80,,
+c9=até/n50kg,ate50,f,11,80,,
+c10=até/n70kg,ate70,f,11,80,,
+c11=até/n100kg,ate100,f,11,80,,
+c12=até/n150kg,ate150,f,11,80,,
+c13=até/n200kg,ate200,f,11,80,,
+c14=até/n300kg,ate300,f,11,80,,
+c15=até/n500kg,ate500,f,11,80,,
+c16=Acima,acima_rod,f,11,80,,
+c17=Excedente,excedente,f,11,80,,
+c18=ADValorem,advalorem,p,11,80,,
+Rlt=
+msg=
+altura=350
+largura=600
+forcarleftmask=80
+foco=siglas
+t0=Sigla:,siglas,c,3,40,@U,
+t1=coluna+80
+t2=linha-25
+t3=UF:,uf,c,2,30,@BU,estado2.rcl,
+t4=coluna+110
+t5=linha-25
+t6=Cidade:,cidade,c,50,250,@B,<#17>geral.rcl{ufsigla=uf/"Interior"},
+t7=coluna-190
+t8=Generalidades#007E7E7E\color_swatch_2.png,,,,550, ,
+t9=forcarleftmask=100
+t10=Taxa mínima:,minima,f,11,84,,
+t11=linha-25
+t12=coluna+180
+t13=forcarleftmask=120
+t14=Peso mínimo(Kg):,qtde,e,11,60,,
+t15=linha-25
+t16=coluna+150
+t17=ADvalorem:,advalorem,p,11,84,,
+t18=forcarleftmask=100
+t19=coluna=20
+t20=#Tarifário Aéreo por (Kg)#007E7E7E\color_swatch_2.png,,,,550, ,
+t21=#até 25.500:,ate25500,f,11,84,,
+t22=#linha-25
+t23=#coluna+180
+t24=#até 50.500:,ate50500,f,11,84,,
+t25=#linha-25
+t26=#coluna+180
+t27=#até 300.500:,ate300500,f,11,84,,
+t28=#coluna=20
+t29=#até 500.500:,ate500500,f,11,84,,
+t30=#linha-25
+t31=#coluna+180
+t32=#até 1.000.500:,ate1000500,f,11,84,,
+t33=#linha-25
+t34=#coluna+180
+t35=#Acima:,acima,f,11,84,,
+t36=coluna=20
+t37=Tarifário Rodoviário por (Kg)#007E7E7E\color_swatch_2.png,,,,550, ,
+t38=até 10:,ate10,f,11,84,,
+t39=linha-25
+t40=coluna+180
+t41=até 20:,ate20,f,11,84,,
+t42=linha-25
+t43=coluna+180
+t44=até 30:,ate30,f,11,84,,
+t45=coluna=20
+t46=até 35:,ate35,f,11,84,,
+t47=linha-25
+t48=coluna+180
+t49=até 50:,ate50,f,11,84,,
+t50=linha-25
+t51=coluna+180
+t52=até 70:,ate70,f,11,84,,
+t53=coluna=20
+t54=até 100:,ate100,f,11,84,,
+t55=linha-25
+t56=coluna+180
+t57=até 150:,ate150,f,11,84,,
+t58=linha-25
+t59=coluna+180
+t60=até 200:,ate200,f,11,84,,
+t61=coluna=20
+t62=até 300:,ate300,f,11,84,,
+t63=linha-25
+t64=coluna+180
+t65=até 500:,ate500,f,11,84,,
+t66=linha-25
+t67=coluna+180
+t68=Acima:,acima_rod,f,11,84,,
+t69=Excedente:,excedente,e,11,84,,
+h69=Taxa por Kilo excedente
+validacao=campoPreenchido(uf),campoPreenchido(cidade)
+
+[tarifasB]
+tab=TARIFAS PARA CALCULO AEREO
+comentario=
+db=tabaereo
+ordem=siglas,uf,cidade
+rcl=tabaereo.rcl
+chave=tabela
+chavePrincipal=id
+relacaokey=tabela,$IDORIGEM
+tituloWidth=35
+where=tabela="$IDORIGEM"
+c0=Sigla,siglas,c,3,40,,
+c1=UF,uf,c,2,30,,
+c2=Cidade,cidade,c,50,150,,
+c3=Mínimo,minima,f,11,70,,
+c4=Peso/nMínimo,qtde,f,11,70,,
+c5=até/n25.500kg,ate25500,f,11,70,,
+c6=até/n50.500kg,ate50500,f,11,70,,
+c7=até/n300.500kg,ate300500,f,11,80,,
+c8=até/n500.500kg,ate500500,f,11,80,,
+c9=até/n1.000.500kg,ate1000500,f,11,80,,
+c10=Acima,acima,f,11,80,,
+c11=ADValorem,advalorem,p,11,80,,
+Rlt=
+msg=
+altura=350
+largura=600
+forcarleftmask=80
+foco=siglas
+t0=Sigla:,siglas,c,3,40,@U,
+t1=coluna+80
+t2=linha-25
+t3=UF:,uf,c,2,30,@BU,estado2.rcl,
+t4=coluna+110
+t5=linha-25
+t6=Cidade:,cidade,c,50,250,@B,<#17>geral.rcl{ufsigla=uf/"Interior"},
+t7=coluna-190
+t8=Generalidades#007E7E7E\color_swatch_2.png,,,,550, ,
+t9=forcarleftmask=100
+t10=Taxa mínima:,minima,f,11,84,,
+t11=linha-25
+t12=coluna+180
+t13=forcarleftmask=120
+t14=Peso mínimo(Kg):,qtde,e,11,60,,
+t15=linha-25
+t16=coluna+150
+t17=ADvalorem:,advalorem,p,11,84,,
+t18=forcarleftmask=100
+t19=coluna=20
+t20=Tarifário Aéreo por (Kg)#007E7E7E\color_swatch_2.png,,,,550, ,
+t21=até 25.500:,ate25500,f,11,84,,
+t22=linha-25
+t23=coluna+180
+t24=até 50.500:,ate50500,f,11,84,,
+t25=linha-25
+t26=coluna+180
+t27=até 300.500:,ate300500,f,11,84,,
+t28=coluna=20
+t29=até 500.500:,ate500500,f,11,84,,
+t30=linha-25
+t31=coluna+180
+t32=até 1.000.500:,ate1000500,f,11,84,,
+t33=linha-25
+t34=coluna+180
+t35=Acima:,acima,f,11,84,,
+t36=coluna=20
+t37=#Tarifário Rodoviário por (Kg)#007E7E7E\color_swatch_2.png,,,,550, ,
+t38=#até 10:,ate10,f,11,84,,
+t39=#linha-25
+t40=#coluna+180
+t41=#até 20:,ate20,f,11,84,,
+t42=#linha-25
+t43=#coluna+180
+t44=#até 35:,ate35,f,11,84,,
+t45=#coluna=20
+t46=#até 50:,ate50,f,11,84,,
+t47=#linha-25
+t48=#coluna+180
+t49=#até 70:,ate70,f,11,84,,
+t50=#linha-25
+t51=#coluna+180
+t52=#até 100:,ate100,f,11,84,,
+t53=#coluna=20
+t54=#até 150:,ate150,f,11,84,,
+t55=#linha-25
+t56=#coluna+180
+t57=#até 200:,ate200,f,11,84,,
+t58=#linha-25
+t59=#coluna+180
+t60=#até 300:,ate300,f,11,84,,
+t61=#coluna=20
+t62=#até 500:,ate500,f,11,84,,
+t63=#linha-25
+t64=#coluna+180
+t65=#Acima:,acima_rod,f,11,84,,
+t66=#coluna=20
+t67=Excedente:,excedente,e,11,84,,
+h67=Taxa por Kilo excedente
+validacao=campoPreenchido(uf),campoPreenchido(cidade)

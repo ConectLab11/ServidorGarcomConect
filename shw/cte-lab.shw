@@ -1,0 +1,17 @@
+fretepeso ,f,jfretepeso ,Frete Peso  :
+valorfrete,f,jfretevalor,Frete Valor :
+seguro    ,f,jseguro    ,Seguro      :
+despacho  ,f,jdespacho  ,Despacho    :
+pedagio   ,f,jpedagio   ,Pedágio     :
+gris      ,f,jgris      ,GRIS        :
+itr       ,f,jitr       ,TDE/ITR     :
+outros    ,f,joutros    ,Outros      :
+ajudante  ,f,jajudante  ,Ajudante    :
+desconto  ,f,jdesconto  ,Descontos   :
+percurso  ,f,jpercurso  ,Percurso    :
+dta       ,f,jdta       ,DTA         :
+aliquota  ,p,jaliquota  ,Alíq ICMS   :
+valoricms ,f,jvaloricms ,Valor ICMS  :
+iss       ,p,jiss       ,Alíq ISS    :
+valoriss  ,f,jvaloriss  ,Valor ISS   :
+total     ,f,jtotal     ,Total Fretes:

@@ -1,0 +1,9 @@
+[Opcoes]
+o0=zerarPagar
+
+[zerarPagar]
+Opcao=Limpar todo o Contas a Pagar
+s0=delete from pagar
+s1=alter table pagar auto_increment=1
+s2=delete from rateio
+s3=alter table rateio auto_increment=1

@@ -1,0 +1,257 @@
+16/06 22:57:31 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9344","usuario":"1","terminal":"56"}
+16/06 22:57:31 - Lista das impressoras
+16/06 22:57:31 - Id da impressora 7 => TCP:192.168.88.200
+16/06 22:57:31 - CIS Status: Create
+16/06 22:57:31 - CIS Status: Connect
+16/06 22:57:31 - Status: Write cmd #16#4 (1..4)
+16/06 22:57:31 - Status: ok
+16/06 22:57:31 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 22:57:31 - CIS Status: Close
+16/06 22:57:31 - ABRIR BANCO DE DADOS
+16/06 22:57:31 - OK BANCO DE DADOS
+16/06 22:57:31 - SET IMPRESSORA 7
+16/06 22:57:31 - ENVIANDO IMPRESSAO
+16/06 22:57:31 - Processado com Sucesso
+16/06 22:57:31 - GRAVANDO REGISTRO PRE
+16/06 22:57:31 - CONCLUIDO
+16/06 22:57:31 0 - POST / HTTP/1.1
+Content-Length: 64
+
+{"operacao":"PRE","pedido":"9344","usuario":"1","terminal":"56"}
+
+ t:0,454 => OK
+16/06 23:02:25 - ***  SERVIÇO PARADO
+16/06 23:02:28 - Iniciando Suporte Mobile 64bit Versao: 1.13
+16/06 23:02:28 - Variaveis
+16/06 23:02:28 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+16/06 23:02:28 - TCP Servidor
+16/06 23:02:28 - TCP Cliente
+16/06 23:02:28 - Iniciado na porta => 4406
+16/06 23:02:28 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+16/06 23:02:28 - Formato Data   : 16/06/2019 23:02:28
+16/06 23:02:28 - Flags debug 1 sem log 0
+16/06 23:02:28 - BANCO DE DADOS ONLINE > 192.168.88.28:comodoro
+16/06 23:02:28 - PRECO => 30 /            30,00/30/30
+16/06 23:02:28 - iniciar_identificacao_computador
+16/06 23:02:28 - sistema_pegar_perfil
+16/06 23:02:28 - empresa_carregar_segmentos
+16/06 23:02:28 - rcs_iniciar_variaveis_globais
+16/06 23:02:28 - terminal_id
+16/06 23:02:28 - mesas_comandas
+16/06 23:02:28 - LPRINT
+16/06 23:02:28 - Status: Config => 192.168.88.200:9100
+16/06 23:02:28 - Status: Config => 192.168.88.200:9100
+16/06 23:02:28 - Status: Config => c:9100
+16/06 23:02:28 - Status: Config => 192.168.88.200:9100
+16/06 23:02:28 - LISTA DE IMPRESSORAS CARREGADA 4
+16/06 23:02:28 - carregarImp
+16/06 23:02:28 - objetos
+16/06 23:02:28 - produtos_gerenciamento_de_estoque
+16/06 23:02:28 - # status 100%
+16/06 23:02:51 - PEDIDOS SOLICITADO {"sessao":"1606201923080315323877914353636090131404MOBILEADM","operacao":"PIT","pedido":"9372","usuario":"1","terminal":"53","conf":"3|1","items":[{"i0":"348|1"},{"i1":"4|1"},{"i2":"5|1"}]}
+16/06 23:02:51 - sessao: 1606201923080315323877914353636090131404MOBILEADM
+16/06 23:02:51 - id: 9372
+16/06 23:02:51 - usuario: 1
+16/06 23:02:51 - terminal: 53
+16/06 23:02:51 - conf: 3|1
+16/06 23:02:51 0 - 348|1
+16/06 23:02:51 1 - 4|1
+16/06 23:02:51 2 - 5|1
+16/06 23:02:51 - dados
+16/06 23:02:51 - VALORES? 11,90/11,9/11,9/,/"11.9"
+16/06 23:02:51 - VALORES? 15,00/15/15/,/"15"
+16/06 23:02:51 - VALORES? 12,90/12,9/12,9/,/"12.9"
+16/06 23:02:51 - PRODUCAO => id:9372 user:1term:53 hora: sessao:1606201923080315323877914353636090131404MOBILEADM
+16/06 23:02:51 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=9372 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="1606201923080315323877914353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+16/06 23:02:51 - GRUPOS:<2,125561><2,125562><2,125563>
+16/06 23:02:51 - CIS Status: Create
+16/06 23:02:51 - CIS Status: Connect
+16/06 23:02:51 - Status: Write cmd #16#4 (1..4)
+16/06 23:02:51 - Status: ok
+16/06 23:02:51 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 23:02:51 - CIS Status: Close
+16/06 23:02:51 - PERFIL 7
+16/06 23:02:51 - cupom_impressao_producao(9372,True,"",[],125561
+125562
+125563
+,1);
+16/06 23:02:51 - IOK 1 STAGE => 28
+16/06 23:02:51 0 - {"sessao":"1606201923080315323877914353636090131404MOBILEADM","operacao":"PIT","pedido":"9372","usuario":"1","terminal":"53","conf":"3|1","items":[{"i0":"348|1"},{"i1":"4|1"},{"i2":"5|1"}]}
+16/06 23:02:51 2 -  0,391t OK
+16/06 23:04:08 - JSON INVALIDO: {"operacao":"PRE","pedido":"9343","usuario":1","terminal":"56"}
+16/06 23:05:06 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9344","usuario":"1","terminal":"56"}
+16/06 23:05:06 - Lista das impressoras
+16/06 23:05:06 - Id da impressora 7 => TCP:192.168.88.200
+16/06 23:05:06 - CIS Status: Create
+16/06 23:05:06 - CIS Status: Connect
+16/06 23:05:06 - Status: Write cmd #16#4 (1..4)
+16/06 23:05:07 - Status: ok
+16/06 23:05:07 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 23:05:07 - CIS Status: Close
+16/06 23:05:07 - ABRIR BANCO DE DADOS
+16/06 23:05:07 - OK BANCO DE DADOS
+16/06 23:05:07 - SET IMPRESSORA 7
+16/06 23:05:07 - ENVIANDO IMPRESSAO
+16/06 23:05:07 - Processado com Sucesso
+16/06 23:05:07 - GRAVANDO REGISTRO PRE
+16/06 23:05:07 - CONCLUIDO
+16/06 23:05:07 0 - POST / HTTP/1.1
+Content-Length: 64
+
+{"operacao":"PRE","pedido":"9344","usuario":"1","terminal":"56"}
+
+ t:0,469 => OK
+16/06 23:05:35 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9346","usuario":"1","terminal":"56"}
+16/06 23:05:35 - Lista das impressoras
+16/06 23:05:35 - Id da impressora 7 => TCP:192.168.88.200
+16/06 23:05:35 - CIS Status: Create
+16/06 23:05:35 - CIS Status: Connect
+16/06 23:05:35 - Status: Write cmd #16#4 (1..4)
+16/06 23:05:35 - Status: ok
+16/06 23:05:35 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 23:05:35 - CIS Status: Close
+16/06 23:05:35 - ABRIR BANCO DE DADOS
+16/06 23:05:35 - OK BANCO DE DADOS
+16/06 23:05:35 - SET IMPRESSORA 7
+16/06 23:05:35 - ENVIANDO IMPRESSAO
+16/06 23:05:35 - Processado com Sucesso
+16/06 23:05:35 - GRAVANDO REGISTRO PRE
+16/06 23:05:35 - CONCLUIDO
+16/06 23:05:35 0 - POST / HTTP/1.1
+Content-Length: 64
+
+{"operacao":"PRE","pedido":"9346","usuario":"1","terminal":"56"}
+
+ t:0,453 => OK
+16/06 23:05:56 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9348","usuario":"1","terminal":"56"}
+16/06 23:05:57 - Lista das impressoras
+16/06 23:05:57 - Id da impressora 7 => TCP:192.168.88.200
+16/06 23:05:57 - CIS Status: Create
+16/06 23:05:57 - CIS Status: Connect
+16/06 23:05:57 - Status: Write cmd #16#4 (1..4)
+16/06 23:05:57 - Status: ok
+16/06 23:05:57 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 23:05:57 - CIS Status: Close
+16/06 23:05:57 - ABRIR BANCO DE DADOS
+16/06 23:05:57 - OK BANCO DE DADOS
+16/06 23:05:57 - SET IMPRESSORA 7
+16/06 23:05:57 - ENVIANDO IMPRESSAO
+16/06 23:05:57 - Processado com Sucesso
+16/06 23:05:57 - GRAVANDO REGISTRO PRE
+16/06 23:05:57 - CONCLUIDO
+16/06 23:05:57 0 - POST / HTTP/1.1
+Content-Length: 64
+
+{"operacao":"PRE","pedido":"9348","usuario":"1","terminal":"56"}
+
+ t:0,453 => OK
+16/06 23:06:19 - PEDIDOS SOLICITADO {"sessao":"160620192311311538568483353636090131404MOBILEADM","operacao":"PIT","pedido":"9372","usuario":"1","terminal":"53","conf":"3|1","items":[{"i0":"348|1"},{"i1":"4|1"},{"i2":"5|1"}]}
+16/06 23:06:19 - sessao: 160620192311311538568483353636090131404MOBILEADM
+16/06 23:06:19 - id: 9372
+16/06 23:06:19 - usuario: 1
+16/06 23:06:19 - terminal: 53
+16/06 23:06:19 - conf: 3|1
+16/06 23:06:19 0 - 348|1
+16/06 23:06:19 1 - 4|1
+16/06 23:06:19 2 - 5|1
+16/06 23:06:19 - dados
+16/06 23:06:19 - VALORES? 11,90/11,9/11,9/,/"11.9"
+16/06 23:06:19 - VALORES? 15,00/15/15/,/"15"
+16/06 23:06:19 - VALORES? 12,90/12,9/12,9/,/"12.9"
+16/06 23:06:19 - PRODUCAO => id:9372 user:1term:53 hora: sessao:160620192311311538568483353636090131404MOBILEADM
+16/06 23:06:19 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=9372 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="160620192311311538568483353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+16/06 23:06:19 - GRUPOS:<2,125564><2,125565><2,125566>
+16/06 23:06:19 - CIS Status: Create
+16/06 23:06:20 - CIS Status: Connect
+16/06 23:06:20 - Status: Write cmd #16#4 (1..4)
+16/06 23:06:20 - Status: ok
+16/06 23:06:20 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 23:06:20 - CIS Status: Close
+16/06 23:06:20 - PERFIL 7
+16/06 23:06:20 - cupom_impressao_producao(9372,True,"",[],125564
+125565
+125566
+,1);
+16/06 23:06:20 - IOK 1 STAGE => 28
+16/06 23:06:20 0 - {"sessao":"160620192311311538568483353636090131404MOBILEADM","operacao":"PIT","pedido":"9372","usuario":"1","terminal":"53","conf":"3|1","items":[{"i0":"348|1"},{"i1":"4|1"},{"i2":"5|1"}]}
+16/06 23:06:20 2 -  0,39t OK
+16/06 23:06:27 - PEDIDOS SOLICITADO {"sessao":"1606201923114015358315737353636090131404MOBILEADM","operacao":"PIT","pedido":"9358","usuario":"1","terminal":"53","conf":"3|1","items":[{"i0":"348|1"},{"i1":"4|1"},{"i2":"5|1"}]}
+16/06 23:06:27 - sessao: 1606201923114015358315737353636090131404MOBILEADM
+16/06 23:06:27 - id: 9358
+16/06 23:06:27 - usuario: 1
+16/06 23:06:27 - terminal: 53
+16/06 23:06:27 - conf: 3|1
+16/06 23:06:27 0 - 348|1
+16/06 23:06:27 1 - 4|1
+16/06 23:06:27 2 - 5|1
+16/06 23:06:27 - dados
+16/06 23:06:27 - VALORES? 11,90/11,9/11,9/,/"11.9"
+16/06 23:06:27 - VALORES? 15,00/15/15/,/"15"
+16/06 23:06:27 - VALORES? 12,90/12,9/12,9/,/"12.9"
+16/06 23:06:27 - PRODUCAO => id:9358 user:1term:53 hora: sessao:1606201923114015358315737353636090131404MOBILEADM
+16/06 23:06:27 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=9358 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="1606201923114015358315737353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+16/06 23:06:27 - GRUPOS:<2,125567><2,125568><2,125569>
+16/06 23:06:27 - CIS Status: Create
+16/06 23:06:27 - CIS Status: Connect
+16/06 23:06:27 - Status: Write cmd #16#4 (1..4)
+16/06 23:06:27 - Status: ok
+16/06 23:06:27 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 23:06:27 - CIS Status: Close
+16/06 23:06:27 - PERFIL 7
+16/06 23:06:27 - cupom_impressao_producao(9358,True,"",[],125567
+125568
+125569
+,1);
+16/06 23:06:27 - IOK 1 STAGE => 28
+16/06 23:06:27 0 - {"sessao":"1606201923114015358315737353636090131404MOBILEADM","operacao":"PIT","pedido":"9358","usuario":"1","terminal":"53","conf":"3|1","items":[{"i0":"348|1"},{"i1":"4|1"},{"i2":"5|1"}]}
+16/06 23:06:27 2 -  0,328t OK
+16/06 23:09:58 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9344","usuario":"1","terminal":"56"}
+16/06 23:09:58 - Lista das impressoras
+16/06 23:09:58 - Id da impressora 7 => TCP:192.168.88.200
+16/06 23:09:58 - CIS Status: Create
+16/06 23:09:58 - CIS Status: Connect
+16/06 23:09:58 - Status: Write cmd #16#4 (1..4)
+16/06 23:09:58 - Status: ok
+16/06 23:09:58 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 23:09:58 - CIS Status: Close
+16/06 23:09:58 - ABRIR BANCO DE DADOS
+16/06 23:09:58 - OK BANCO DE DADOS
+16/06 23:09:58 - SET IMPRESSORA 7
+16/06 23:09:58 - ENVIANDO IMPRESSAO
+16/06 23:09:58 - Processado com Sucesso
+16/06 23:09:58 - GRAVANDO REGISTRO PRE
+16/06 23:09:58 - CONCLUIDO
+16/06 23:09:58 0 - POST / HTTP/1.1
+Content-Length: 64
+
+{"operacao":"PRE","pedido":"9344","usuario":"1","terminal":"56"}
+
+ t:0,484 => OK
+16/06 23:21:57 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9344","usuario":"1","terminal":"56"}
+16/06 23:21:57 - Lista das impressoras
+16/06 23:21:57 - Id da impressora 7 => TCP:192.168.88.200
+16/06 23:21:57 - CIS Status: Create
+16/06 23:21:57 - CIS Status: Connect
+16/06 23:21:57 - Status: Write cmd #16#4 (1..4)
+16/06 23:21:57 - Status: ok
+16/06 23:21:57 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 23:21:57 - CIS Status: Close
+16/06 23:21:57 - ABRIR BANCO DE DADOS
+16/06 23:21:57 - OK BANCO DE DADOS
+16/06 23:21:57 - SET IMPRESSORA 7
+16/06 23:21:57 - ENVIANDO IMPRESSAO
+16/06 23:21:57 - Processado com Sucesso
+16/06 23:21:57 - GRAVANDO REGISTRO PRE
+16/06 23:21:57 - CONCLUIDO
+16/06 23:21:57 0 - POST / HTTP/1.1
+Content-Length: 64
+
+{"operacao":"PRE","pedido":"9344","usuario":"1","terminal":"56"}
+
+ t:0,454 => OK
+16/06 23:37:15 - PEDIDOS SOLICITADO {"sessao":"160620192336551563963903MOBILEADM","operacao":"PIT","pedido":"9343","usuario":"1","terminal":"56","conf":"2|1","items":[{"i0":"286|1"},{"i1":"164|1||2D2D2D|0"}]}
+16/06 23:37:15 - sessao: 160620192336551563963903MOBILEADM
+16/06 23:37:15 - id: 9343
+16/06 23:37:15 - usuario: 1
+16/06 23:37:15 - terminal: 56
+16/06 23:37:15 - conf: 2|1

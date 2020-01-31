@@ -1,0 +1,248 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 07/08/2011
+#
+#
+
+[mascaraDeCampos]
+c0=jFretePeso
+c1=jFreteValor
+c2=jSeguro
+c3=jDespacho
+c4=jPedagio
+c5=jGris
+c6=jItr
+c7=jOutros
+c8=jAjudante
+c9=jDesconto
+c10=jPercurso
+c11=jDta
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=0
+nivelauxiliar=0
+
+[arquivos]
+a0=tabeladiaria      ->frt_diaria.tbl
+a1=tabelavalores     ->frt_valores.tbl
+a2=tabelatonelada    ->frt_tonelada.tbl
+a3=tabelahora        ->frt_hora.tbl
+a4=tabelafracionada  ->frt_fracionada.tbl
+a5=tabelafracionada  ->frt_fracionada.tbl
+a6=tabelafracionadoII->frt_fracionadoII.tbl
+a7=tabelatonelada2   ->frt_tonelada2.tbl
+a8=tabelapesocubagem ->frt_pesocubagem.tbl
+a9=tabelapesoexcedido->frt_pesoexcedido.tbl
+a10=tabelavalores2    ->frt_valores2.tbl
+a11=tabelavb25       ->frt_vb25.tbl
+a12=tabelacargasaereas->frt_cargasaereas.tbl
+a13=tabelamultiregioes->frt_multiregioes.shw
+a14=tabelapesoexcedidoII->frt_pesoexcedidoII.tbl
+a15=tabelapesoexcedidoIII->frt_pesoexcedidoIII.tbl
+a16=tabelatipodeprodutos100->frt_tipodeprodutos100.tbl
+a17=tabelatipodeprodutos200->frt_tipodeprodutos200.tbl
+a18=tabelasimples200->frt_simples200.tbl
+a19=tabelaviagemfechada->frt_viagemfechada.tbl
+a20=tabelaviagemfechadam3->frt_viagemfechadam3.tbl
+a21=tabelapesoexcedidoiv->frt_pesoexcedidoiv.tbl
+a22=tabelafatorpeso->frt_fatorpeso.tbl
+a23=tabelavolumes->frt_volumes.tbl
+a24=tabelalotacao->frt_lotacao.tbl
+a25=tabelapesodestino->frt_pesodestino.tbl
+a26=tabelatarifacidade->frt_tarifacidade.tbl
+a27=tabela100kg->frt_100kg.tbl
+a28=tabela200kg->frt_200kg.tbl
+a29=tabelabion->frt_bion.tbl
+a30=tabelamedical2->frt_medical2.tbl
+a31=tabelamedical3->frt_medical3.tbl
+a32=tabelapesolivre->frt_pesolivre.tbl
+a33=tabela10kg->frt_10kg.tbl
+a34=tabelaunika->frt_unika.tbl
+a35=tabelapesoexcedidoIII_v1->frt_pesoexcedidoIII_v1.tbl
+a36=tabelapesocontainer->frt_pesocontainer.tbl
+a37=tabelacargasaereas2->frt_cargasaereas2.tbl
+a38=tabelamedical4->frt_medical4.tbl
+a39=tabelamedical5->frt_medical5.tbl
+a40=tabelacargasaereas3->frt_cargasaereas3.tbl
+a41=tabelacargasaereascfl->frt_cargasaereascfl.tbl
+a42=tabelaunkne->frt_unkne.tbl
+a43=tabelaunkco->frt_unkco.tbl
+a44=tabelaunkape->frt_unkape.tbl 
+a45=tabelaunkapv->frt_unkapv.tbl
+a46=tabelaunkdsp->frt_unkdsp.tbl
+a47=tabelasimpress->frt_simpress.tbl
+a48=tabelaunkfab->frt_unkfab.tbl
+a49=tabelaconciliacao->frt_conciliacao.tbl
+a50=tabelachegoufarma->frt_chegoufarma.tbl
+a51=tabelachegoufarma2->frt_chegoufarma2.tbl
+a52=tabelacargafracionada->frt_cargafracionada.tbl
+a53=tabelavf_phl_1->frt_vf_phl_1.tbl
+a54=tabelavf_phl_2->frt_vf_phl_2.tbl
+
+[Opcoes]
+o0=Tabelas, 0123456789, 9, 0,v
+o1=Tabela, 0123456789, 9, 0,u
+
+[tabelas]
+o0=#nil, Personalizar impressão, tabfreteeditA, 0123456789, 9, 0,v
+o1=nil, Tabelas Origens, tabfrete, 0123456789, 9, 33,v
+o2=nil,Cubagem, cubagem, 0123456789, 9, 36,v
+o3=nil,Nome dos campos,maskvalores, 0123456789, 9, 17,v
+
+[tabela]
+o0=nil, Personalizar impressão, tabfreteeditB, 0123456789, 9, 7,u
+
+[tabfrete]
+tab=TABELAS DE FRETES
+comentario=
+db=tabfrete
+ordem=id
+rcl=
+relacao=
+mygroup=
+chave=id
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Descrição,descricao,c,50,300,,
+c2=Ativa,ativo,sn,30,60,,
+altura=500
+largura=680
+foco=descricao
+BotaoIncluir=RCL
+BotaoAlterar=Sim
+BotaoExcluir=Nao
+forcarleftMask=90
+t0=#Código:,id,+,4,30,,
+t1=Descrição:,descricao,c,50,300,,
+t2=Referência:,mygroup,c,50,300,{rcl*},
+t3=Cálculo:,formula,c,100,300,{rcl*},,
+t4=Script de cálculos - Formula#007E7E7E\page_white_star.png,,,,410, ,
+t5=Script:,scriptCalc,sn,3,30,,
+t6=#forcarleftMask=2
+t7=#coluna-220
+t8=Formula:,scriptExpert,t,0,550x140,,
+t9=linha+50
+t10=Ativa:,ativo,sn,3,30,,
+t11=Configuração de cálculos#007E7E7E\page_white_star.png,,,,410, ,
+t12=forcarleftmask=180
+t13=Taxa DTA no campo outros:,dtaoutros,sn,3,30,,
+h13=Colocar taxa DTA no campo Outros
+
+[tabelacubagem]
+tab=Tabela cubagem
+comentario=Tabela cubagem.
+db=tabefret
+ordem=id
+rcl=
+relacao=
+grupo=tabelacubagem
+chave=cliente
+chaveprincipal=id
+forcarcoluna=150
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Cubagem,vcubagem,e,16,100,,
+altura=410
+largura=400
+foco=descr
+t0=Descrição:,descr,c,50,200,,
+t1=Frete mínimo:,minimo,f,11,84,,
+t2=Cubagem:,vcubagem,e,11,84,,
+t3=Advalorem:,advalorem,p,11,84,,
+t4=GRIS:,gris,p,11,84,,
+t5=Preço M3 p/ 100kg:,precom3,e,11,84,,
+t6=SEC/CAT:,seccat,f,11,84,,
+t7=Despacho:,despacho,f,11,84,,
+t8=Pedágio:,pedagio,f,11,84,,
+t9=Outros:,outros,f,11,84,,
+t10=Devolução:,devolucao,p,11,84,,
+t11=Reentrega:,reentrega,p,11,84,,
+t12=ICMS faz parte do frete:,icmsx,sn,3,30,,
+t13=Tabela compartilhada:,compartilhada,sn,3,30,,
+t14=Verificar Frete Mínimo do Total:,frt_minitotal,sn,3,30,,
+
+[tabelavaloresreg]
+tab=Tabela valores por regiao
+comentario=Tabela valores.
+db=tabefret
+ordem=id
+rcl=
+relacao=
+chave=tabela
+chaveprincipal=id
+c0=ID,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descricao,descr,c,50,200,,
+altura=350
+largura=430
+foco=id
+t0=ID:,id,+,4,60,,
+t1=Tabela:,tabela,i,3,30,,tabfrete.rcl,
+t2=Descricao:,descr,c,50,300,,
+t3=Cliente:,cliente,i,6,60,,cadastrx.rcl,
+t4=Regiao 1:,destino1,c,50,300,,
+t5=Taxa 1:,frt_val1,e,11,84,,
+t6=Regiao 2:,destino2,c,50,300,,
+t7=Taxa 1:,frt_val2,e,11,84,,
+t8=Regiao 3:,destino3,c,50,300,,
+t9=Taxa 1:,frt_val3,e,11,84,,
+t10=Regiao 4:,destino4,c,50,300,,
+t11=Taxa 1:,frt_val4,e,11,84,,
+t12=Taxa minima:,minimo,f,11,100,,
+t13=Devolucao:,devolucao,e,11,100,,
+t14=Reentrega:,reentrega,e,11,100,,
+t15=Formula:,formula,c,50,300,,
+
+[cubagem]
+tab=PARAMETROS PARA CÁLCULO DE CUBAGEM
+comentario=
+db=nfecfg
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+where=id=2
+Rlt=*
+altura=170
+largura=460
+foco=cuba_aereo
+forcarleftmask=100
+t0=Fator para Cálculo de Cubagem#007E7E7E\page_white_star.png,,,,410, ,
+t1=Aereo:,cuba_aereo,e,11,84,,
+h1=Fator para cálculo de cubagem para transportes Aereo
+t2=Rodoviário:,cuba_rodoviario,e,11,84,,
+h2=Fator para cálculo de cubagem para transportes Rodoviário
+t3=Outros:,cuba_outros,e,11,84,,
+h3=Fator para cálculo de cubagem para Outros transportes
+
+[maskvalores]
+tab=RENOMEAR CAMPOS
+comentario=
+db=nfecfg
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=maskvalores,maskvalores,c,200,200,,
+where=id=2
+nobrowse=1
+reservado=1
+Rlt=*
+altura=220
+largura=450
+foco=maskvalores
+forcarleftmask=20
+forcarrightlabel=1
+t0=Variaveis para Renomear Campos#007E7E7E\attach_2.png,,,,410, ,
+t1=,maskvalores,t,0,370x350,,
+h1=jFretePeso@jFreteValor@jSeguro@jDespacho@jPedagio@jGris@jItr@jOutros@jAjudante@jDesconto@jPercurso
+

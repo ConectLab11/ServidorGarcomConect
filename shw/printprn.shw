@@ -1,0 +1,203 @@
+#
+#   Parametros do menu de Configuração impressoras Local
+#   Desenvolvido por Ronaldo C Silva
+#   ConectLab Informatica
+#   Data: 10/08/2016
+#
+
+[arquivo]
+modulo=Cadastros de Impressora Local
+nivelprincipal=1
+nivelauxiliar=1
+
+[Opcoes]
+o0=Impressoras, 0123456789, 9, 0,ax
+
+[Impressoras]
+o0=nil, Local, printers, 0123456789, 1, 7,ax
+o1=nil,+Modelos ESC/P, modprint, 0123456789, 1, 18,ax
+o2=nil, Configurações, optprint, 0123, 1, 18,ax
+o3=nil,+Direcionada, direcionada, 0123, 1, 50,ax
+o4=nil,+Gaveta, gaveta, 0123, 1, 50,ax
+o5=nil,+Usuário, usuariosprn, 0123, 1, 50,ax 
+
+[printers]
+tab=IMPRESSORAS DE CONEXÃO DIRETA - LPT/COM/USB
+comentario=
+db=printers
+rcl=printers.rcl
+chave=id
+chavePrincipal=id
+c0=Descrição,descricao,c,30,250,,
+c1=Porta,porta,c,25,120,,
+//c2=Módulo,modulo,c,15,80,,
+altura=350
+largura=480
+foco=descricao
+forcarleftmask=120
+t0=Descrição:,descricao,c,200,315,,
+h0=Nome Completo da Impressora
+t1=#USB:,usb,sn,3,30,,
+h1=Porta tipo USB.
+t2=Porta:,porta,c,100,300,@BX,geral.rcl,
+h2=Porta de Comunicação da Impressora<F2>
+t3=#IP/Terminal:,terminal,c,100,300,@B,<#10>geral.rcl,
+h3=IP ou Nome do Computador Conectado na Impressora<F2>
+t4=#Compartilhamento:,share,c,255,300,,
+h4=Nome do compartilhamento da impressora.
+t5=Módulo:,modulo,c,50,300,@BX,<#2>geral.rcl,
+h5=Vinculo da Impressora por Módulos do Sistema
+t6=Fonte:,idfonte,i,3,20,,modprint.rcl,
+h6=Comandos da Impressora
+t7=Ativo:,ativa=Sim,sn,3,30,,
+h7=Impressora Ativa
+t8=coluna+285
+t9=linha-25
+t10=Ignorar cópias:,nocopias,sn,3,30,,
+h10=Ignorar campo cópias
+t11=coluna-285
+t12=Informações:,comentario,t,0,315x90,,
+h12=Informações detalhada da Impressora
+
+
+[modprint]
+tab=Modelo de Impressoras ESP/P
+db=modprint
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,15,60,,
+c1=Descrição,descricao,c,50,300,,
+reservado=1,2,3
+Rlt=printers.idfonte
+msg=IMPRESSORA(s)
+altura=400
+largura=450
+foco=descricao
+t0=ID:,id,+,4,30,,
+t1=Descrição:,descricao,c,50,300,,
+t2=Reset:,reset,c,50,300,,
+t3=Reset font:,resetfont,c,50,300,,
+t4=Bold:,bold,c,50,300,,
+t5=Bold<-:,bold0,c,50,300,,
+t6=Italic:,italico,c,50,300,,
+t7=Italic<-:,italico0,c,50,300,,
+t8=Underline:,underline,c,50,300,,
+t9=Underline<-:,underline0,c,50,300,,
+t10=LPI6:,lpi6,c,50,300,,
+t11=LPI8:,lpi8,c,50,300,,
+t12=CPI5:,cpi5,c,50,300,,
+t13=CPI6:,cpi6,c,50,300,,
+t14=CPI8:,cpi8,c,50,300,,
+t15=CPI10:,cpi10,c,50,300,,
+t16=CPI12:,cpi12,c,50,300,,
+t17=CPI17:,cpi17,c,50,300,,
+t18=CPI20:,cpi20,c,50,300,,
+t19=Ejetar:,ejetar,c,50,300,,
+t20=Guilhotina:,guilhotina,c,50,300,,
+t21=Gaveta:,gaveta,c,50,300,,
+t22=Beep:,bipe,c,50,300,,
+t23=Colunas:,colunas,i,3,40,,
+t24=Col. Extras:,colCpl,i,3,40,,
+t25=Avançar:,avancar,i,3,40,,
+
+[optprint]
+tab=CONFIGURAÇÕES DAS IMPRESSORAS
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=id_1,id_1,c,255,150,,
+c1=id_2,id_2,c,255,240,,
+nobrowse=1
+relacaokey=nome,"IMPRESSORA_OPCOES_AVANCADA"
+autoIncluir=1
+where=nome='IMPRESSORA_OPCOES_AVANCADA'
+altura=180
+largura=440
+foco=id_1
+forcarleftmask=170
+t0=Impressão direcionada ativa:,id_1,sn,3,30,,,
+t1=Produção -> Pedido completo:,id_2,sn,3,30,,,
+h1=O pedido de produção deve ser o pedido completo
+t2=Timeout TCP/IP:,id_3,i,9,80,,,
+
+[direcionada]
+tab=IMPRESSORAS DIRECIONADAS
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Grupo,&rclArq(id_1|grupos.rcl),c,255,150,,
+c1=Impressora,&rclArq(id_2|printers.rcl),c,255,240,,
+nobrowse=0
+relacaokey=nome,"IMPRESSORA_DIRECIONADA"
+autoIncluir=0
+where=nome='IMPRESSORA_DIRECIONADA'
+altura=180
+largura=440
+foco=id_1
+forcarleftmask=90
+t0=Grupo:,id_1,i,3,50,,grupos.rcl,
+t1=Impressora:,id_2,i,3,50,,printers.rcl,
+
+[direcionada]
+tab=IMPRESSORAS DIRECIONADAS
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Grupo,&rclArq(id_1|grupos.rcl),c,255,150,,
+c1=Impressora,&rclArq(id_2|printers.rcl),c,255,240,,
+nobrowse=0
+relacaokey=nome,"IMPRESSORA_DIRECIONADA"
+autoIncluir=0
+where=nome='IMPRESSORA_DIRECIONADA'
+altura=180
+largura=440
+foco=id_1
+forcarleftmask=90
+t0=Grupo:,id_1,i,3,50,,grupos.rcl,
+t1=Impressora:,id_2,i,3,50,,printers.rcl,
+
+[usuariosprn]
+tab=IMPRESSORAS POR USUARIO
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Usuário,&rclArq(id_1|<#2>grupos.rcl),c,255,200,,
+c1=Impressora,&rclArq(id_2|printers.rcl),c,255,240,,
+nobrowse=0
+relacaokey=nome,"IMPRESSORAS_POR_USUARIOS"
+autoIncluir=0
+where=nome='IMPRESSORAS_POR_USUARIOS'
+altura=180
+largura=440
+foco=id_1
+forcarleftmask=90
+t0=Usuário:,id_1,i,3,50,,<#2>grupos.rcl,
+t1=Impressora:,id_2,i,3,50,,printers.rcl,
+
+[gaveta]
+tab=GAVETAS
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Terminal,id_1,c,255,80,,
+c1=Impressora,&rclArq(id_2|printers.rcl),c,255,260,,
+c2=Pagamento,&rclArq(id_3|<#38>geral.rcl),c,255,80,,
+nobrowse=0
+relacaokey=nome,"IMPRESSORA_GAVETA"
+autoIncluir=0
+where=nome='IMPRESSORA_GAVETA'
+altura=210
+largura=440
+foco=id_1
+forcarleftmask=90
+t0=Terminal:,id_1,i,3,50,,<#37>geral.rcl,
+t1=Impressora:,id_2,i,3,50,,printers.rcl,
+t2=Pagamento:,id_3,i,1,50,,<#38>geral.rcl,
+

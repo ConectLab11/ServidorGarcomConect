@@ -1,0 +1,866 @@
+_Banco Santander S/A_______________________________________
+
+[Ocorrencia33Retorno]
+c01=Título não existe
+c02=Entrada tít. confirmada
+c03=Entrada tít. rejeitada
+c06=Liquidação|$
+c07=Liquidação por conta
+c08=Liquidação por saldo
+c09=Baixa automática
+c10=tít. baix. conf. instrução ou por título protestado
+c11=em ser
+c12=abatimento concedido
+c13=abatimento cancelado
+c14=prorrogação de vencimento
+c15=Enviado para Cartório
+c16=tít. já baixado/liquidado
+c17=liquidado em cartório
+c21=Entrada em Cartório
+c22=Retirado de cartório
+c24=Custas de Cartório
+c25=Protestar Título
+c26=Sustar Protesto
+
+___________________________________________________________
+_Caixa Economica Federal___________________________________
+
+[Ocorrencia104Retorno]
+c01=Entrada Confirmada
+c02=Baixa Manual Confirmada
+c03=Abatimento Concedido
+c04=Abatimento Cancelado
+c05=Vencimento Alterado
+c06=Uso da Empresa Alterado
+c07=Prazo de Protesto Alterado
+c08=Prazo de Devolução Alterado
+c09=Alteração Confirmada
+c10=Alteração com reemissão de Bloqueto Confirmada
+c11=Alteração da opção de Protesto para Devolução Confirmada
+c12=Alteração da opção de Devolução para Protesto Confirmada
+c20=Em Ser
+c21=Liquidação|$
+c22=Liquidação em Cartório
+c23=Baixa por Devolução
+c25=Baixa por Protesto
+c26=Título enviado para Cartório
+c27=Sustação de Protesto
+c28=Estorno de Protesto
+c29=Estorno de Sustação de Protesto
+c30=Alteração de Título
+c31=Tarifa sobre Título Vencido
+c32=Outras Tarifas de Alteração
+c33=Estorno de Baixa / Liquidação
+c34=Tarifas Diversas
+c99=Rejeição do Título – Código rejeição informado nas pos 80 a 82
+
+[Rejeicao341]
+c03=AG. COBRADORA - CEP SEM ATENDIMENTO DE PROTESTO NO MOMENTO
+c04=ESTADO  SIGLA DO ESTADO INVÁLIDA
+c05=DATA VENCIMENTO  PRAZO DA OPERAÇÃO MENOR QUE PRAZO MÍNIMO OU MAIOR QUE O MÁXIMO
+c07=VALOR DO TÍTULO  VALOR DO TÍTULO MAIOR QUE 10.000.000,00
+c08=NOME DO PAGADOR NÃO INFORMADO OU DESLOCADO
+c09=AGENCIA/CONTA AGÊNCIA ENCERRADA
+c10=LOGRADOURO NÃO INFORMADO OU DESLOCADO
+c11=CEP  CEP NÃO NUMÉRICO OU CEP INVÁLIDO
+c12=SACADOR / AVALISTA NOME NÃO INFORMADO OU DESLOCADO (BANCOS CORRESPONDENTES)
+c13=ESTADO/CEP CEP INCOMPATÍVEL COM A SIGLA DO ESTADO
+c14=NOSSO NÚMERO  NOSSO NÚMERO JÁ REGISTRADO NO CADASTRO DO BANCO OU FORA DA FAIXA
+c15=NOSSO NÚMERO  NOSSO NÚMERO EM DUPLICIDADE NO MESMO MOVIMENTO
+c18=DATA DE ENTRADA  DATA DE ENTRADA INVÁLIDA PARA OPERAR COM ESTA CARTEIRA
+c19=OCORRÊNCIA  OCORRÊNCIA INVÁLIDA
+c21=AG. COBRADORA CARTEIRA NÃO ACEITA DEPOSITÁRIA CORRESPONDENTE ESTADO DA AGÊNCIA DIFERENTE DO ESTADO DO PAGADOR AG. COBRADORA NÃO CONSTA NO CADASTRO OU ENCERRANDO
+c22=CARTEIRA CARTEIRA NÃO PERMITIDA (NECESSÁRIO CADASTRAR FAIXA LIVRE)
+c26=AGÊNCIA/CONTA  AGÊNCIA/CONTA NÃO LIBERADA PARA OPERAR COM COBRANÇA
+c27=CNPJ INAPTO  CNPJ DO BENEFICIÁRIO INAPTO DEVOLUÇÃO DE TÍTULO EM GARANTIA
+c29=CÓDIGO EMPRESA  CATEGORIA DA CONTA INVÁLIDA
+c30=ENTRADA BLOQUEADA  ENTRADAS BLOQUEADAS, CONTA SUSPENSA EM COBRANÇA
+c31=AGÊNCIA/CONTA  CONTA NÃO TEM PERMISSÃO PARA PROTESTAR (CONTATE SEU GERENTE)
+c35=VALOR DO IOF  IOF MAIOR QUE 5%
+c36=QTDADE DE MOEDA  QUANTIDADE DE MOEDA INCOMPATÍVEL COM VALOR DO TÍTULO
+c37=CNPJ/CPF DO PAGADOR  NÃO NUMÉRICO OU IGUAL A ZEROS
+c42=NOSSO NÚMERO  NOSSO NÚMERO FORA DE FAIXA
+c52=AG. COBRADORA  EMPRESA NÃO ACEITA BANCO CORRESPONDENTE
+c53=AG. COBRADORA  EMPRESA NÃO ACEITA BANCO CORRESPONDENTE - COBRANÇA MENSAGEM
+c54=DATA DE VENCTO  BANCO CORRESPONDENTE - TÍTULO COM VENCIMENTO INFERIOR A 15 DIAS
+c55=DEP/BCO CORRESP  CEP NÃO PERTENCE À DEPOSITÁRIA INFORMADA JANEIRO 2017  Cobrança CNAB 400 27
+c56=DT VENCTO/BCO CORRESP  VENCTO SUPERIOR A 180 DIAS DA DATA DE ENTRADA
+c57=DATA DE VENCTO CEP SÓ DEPOSITÁRIA BCO DO BRASIL COM VENCTO INFERIOR A 8 DIAS
+c60=ABATIMENTO  VALOR DO ABATIMENTO INVÁLIDO
+c61=JUROS DE MORA  JUROS DE MORA MAIOR QUE O PERMITIDO
+c62=DESCONTO  VALOR DO DESCONTO MAIOR QUE VALOR DO TÍTULO
+c63=DESCONTO DE ANTECIPAÇÃO  VALOR DA IMPORTÂNCIA POR DIA DE DESCONTO (IDD) NÃO PERMITIDO
+c64=DATA DE EMISSÃO  DATA DE EMISSÃO DO TÍTULO INVÁLIDA
+c65=TAXA FINANCTO  TAXA INVÁLIDA (VENDOR)
+c66=DATA DE VENCTO  INVALIDA/FORA DE PRAZO DE OPERAÇÃO (MÍNIMO OU MÁXIMO)
+c67=VALOR/QTIDADE  VALOR DO TÍTULO/QUANTIDADE DE MOEDA INVÁLIDO
+c68=CARTEIRA CARTEIRA INVÁLIDA OU NÃO CADASTRADA NO INTERCÂMBIO DA COBRANÇA
+c69=CARTEIRA  CARTEIRA INVÁLIDA PARA TÍTULOS COM RATEIO DE CRÉDITO
+c70=AGÊNCIA/CONTA  BENEFICIÁRIO NÃO CADASTRADO PARA FAZER RATEIO DE CRÉDITO
+c78=AGÊNCIA/CONTA  DUPLICIDADE DE AGÊNCIA/CONTA BENEFICIÁRIA DO RATEIO DE CRÉDITO
+c80=AGÊNCIA/CONTA  QUANTIDADE DE CONTAS BENEFICIÁRIAS DO RATEIO MAIOR DO QUE O PERMITIDO (MÁXIMO DE 30 CONTAS POR TÍTULO)
+c81=AGÊNCIA/CONTA  CONTA PARA RATEIO DE CRÉDITO INVÁLIDA / NÃO PERTENCE AO ITAÚ
+c82=DESCONTO/ABATI-MENTO  DESCONTO/ABATIMENTO NÃO PERMITIDO PARA TÍTULOS COM RATEIO DE CRÉDITO
+c83=VALOR DO TÍTULO  VALOR DO TÍTULO MENOR QUE A SOMA DOS VALORES ESTIPULADOS PARA RATEIO
+c84=AGÊNCIA/CONTA  AGÊNCIA/CONTA BENEFICIÁRIA DO RATEIO É A CENTRALIZADORA DE CRÉDITO DO BENEFICIÁRIO
+c85=AGÊNCIA/CONTA  AGÊNCIA/CONTA DO BENEFICIÁRIO É CONTRATUAL / RATEIO DE CRÉDITO NÃO PERMITIDO
+c86=TIPO DE VALOR  CÓDIGO DO TIPO DE VALOR INVÁLIDO / NÃO PREVISTO PARA TÍTULOS COM RATEIO DE CRÉDITO
+c87=AGÊNCIA/CONTA  REGISTRO TIPO 4 SEM INFORMAÇÃO DE AGÊNCIAS/CONTAS BENEFICIÁRIAS DO RATEIO
+c90=NRO DA LINHA  COBRANÇA MENSAGEM - NÚMERO DA LINHA DA MENSAGEM INVÁLIDO OU QUANTIDADE DE LINHAS EXCEDIDAS
+c97=SEM MENSAGEM  COBRANÇA MENSAGEM SEM MENSAGEM (SÓ DE CAMPOS FIXOS), PORÉM COM REGISTRO DO TIPO 7 OU 8
+c98=FLASH INVÁLIDO  REGISTRO MENSAGEM SEM FLASH CADASTRADO OU FLASH INFORMADO DIFERENTE DO CADASTRADO
+c99=FLASH INVÁLIDO  CONTA DE COBRANÇA COM FLASH CADASTRADO E SEM REGISTRO DE MENSAGEM CORRESPONDENTE
+
+[Rejeicao104]
+c01=Código do banco inválido
+c02=Código de registro inválido
+c03=Código do segmento inválido
+c05=Código de movimento inválido
+c06=Tipo/número de inscrição do cedente inválidos
+c07=Agência/Conta/DV inválido
+c08=Nosso número inválido
+c09=Nosso número duplicado
+c10=Carteira inválida
+c11=Forma de cadastramento de título inválido
+c12=Tipo de documento inválido
+c13=Identificação da emissão do bloqueto inválida
+c14=Identificação da distribuição do bloqueto inválida
+c15=Caracteristicas da cobrança incompativeis
+c16=Data de vencimento inválida
+c20=Valor do título inválido
+c21=Espécie do título inválida
+c23=Aceite inválido
+c24=Data de emissão inválida
+c26=Código de juros de mora inválido
+c27=Valor/Taxa de juros de mora inválido
+c28=Código do desconto inválido
+c29=Valor do desconto maior ou igual ao valor do título
+c30=Desconto a conceder não confere
+c32=Valor do IOF inválido
+c33=Valor do abatimento inválido
+c37=Código para protesto inválido
+c38=Prazo para protesto inválido
+c40=Título com ordem de protesto emitida
+c42=Código para baixa/devolução inválido
+c43=Prazo para baixa/devolução inválido
+c44=Código da moeda inválido
+c45=Nome do sacado não informado
+c46=Tipo/número de inscrição do sacado inválidos
+c47=Endereçõ do Sacado não informado
+c48=CEP inválido
+c49=CEP sem praça de cobrança (não localizado)
+c52=Unidade de federeção inválida
+c53=Tipo/número de inscrição do sacado/avalista inválidos
+c57=Código da multa inválido
+c58=Data da multa inválida
+c59=Valor/Percentual da multa inválido
+c60=Movimento para título não cadastrado
+c61=Agência cobradora inválida
+c62=Tipo de impressão inválido
+c63=Entrada para título já cadastrado
+c68=Movimentação inválida para o título
+c69=Alteração de dados inválida
+c70=Apelido do cliente não cadastrado
+c71=Erro na composição do arquivo
+c72=Lote de serviço inválido
+c73=Código do cedente inválido
+c74=Cedente não pertence a cobrança eletrônica/apelido não confere com cedente
+c75=Nome da empresa inválido
+c76=Nome do banco inválido
+c77=Código da remessa inválido
+c78=Data/Hora de geração do arquivo inválida
+c79=Número sequencial do arquivo inválida
+c80=Número da versão do Layout do arquivo/lote inválido
+c81=Literal "REMESSA-TESTE" válida somente para fase de testes
+c82=Literal "REMESSA-TESTE" obrigatório para fase de testes
+c83=Tipo/número de inscrição da empresa inválidos
+c84=Tipo de operação inválido
+c85=Tipo de serviço inválido
+c86=Forma de lançamento inválido
+c87=Número de remessa inválido
+c88=Número de remessa menor/igual que da remessa anterior
+c89=Lote de serviço divergente
+c90=Número sequencial do registro inválido
+c91=Erro na sequencia de segmento do registro detalhe
+c92=Código de movimento divergente entre grupo de segmentos
+c93=Quantidade de registros no lote inválido
+c94=Quantidade de registros no lote divergente
+c95=Quantidade de lotes do arquivo inválido
+c96=Quantidade de lotes no arquivo divergente
+c97=Quantidade de registros no arquivo inválido
+c98=Quantidade de registros no arquivo divergente
+
+[Rejeicao104-06]
+c02=Lotéricas
+c03=No próprio banco
+c04=Compensação eletrônica
+c05=Compensação convencional
+c06=Outros canais
+c07=Correspondente Bancário
+c08=Em cartório
+c09=Comandada banco
+c10=Comandada cliente arquivo
+
+[Rejeicao104-09]
+igual=Rejeicao104-6
+
+[Rejeicao104-17]
+igual=Rejeicao104-6
+
+___________________________________________________________
+_Banco Itau S/A________________________________________
+
+[Ocorrencia341Retorno]
+c00=OUTROS
+c02=ENTRADA CONFIRMADA
+c03=ENTRADA REJEITADA (NOTA 20 - TABELA 1)
+c04=ALTERAÇÃO DE DADOS - NOVA ENTRADA
+c05=ALTERAÇÃO DE DADOS – BAIXA
+c06=LIQUIDAÇÃO NORMAL|$
+c07=LIQUIDAÇÃO PARCIAL – COBRANÇA INTELIGENTE (B2B)
+c08=LIQUIDAÇÃO EM CARTÓRIO
+c09=BAIXA SIMPLES
+c10=BAIXA POR TER SIDO LIQUIDADO
+c11=EM SER (SÓ NO RETORNO MENSAL)
+c12=ABATIMENTO CONCEDIDO 
+c13=ABATIMENTO CANCELADO
+c14=VENCIMENTO ALTERADO 
+c15=BAIXAS REJEITADAS (NOTA 20 - TABELA 4)
+c16=INSTRUÇÕES REJEITADAS (NOTA 20 - TABELA 3)
+c17=ALTERAÇÃO DE DADOS REJEITADOS (NOTA 20 - TABELA 2)
+c18=COBRANÇA CONTRATUAL - ABATIMENTO E BAIXA BLOQUEADOS (NOTA 20 - TABELA 5)
+c19=CONFIRMA RECEBIMENTO DE INSTRUÇÃO DE PROTESTO 
+c20=CONFIRMA RECEBIMENTO DE INSTRUÇÃO DE SUSTAÇÃO DE PROTESTO /TARIFA
+c21=CONFIRMA RECEBIMENTO DE INSTRUÇÃO DE NÃO PROTESTAR
+c23=TÍTULO ENVIADO A CARTÓRIO/TARIFA
+c24=INSTRUÇÃO DE PROTESTO REJEITADA / SUSTADA / PENDENTE (NOTA 20 - TABELA 7)
+c25=ALEGAÇÕES DO SACADO (NOTA 20 - TABELA 6)
+c26=TARIFA DE AVISO DE COBRANÇA
+c27=TARIFA DE EXTRATO POSIÇÃO (B40X)
+c28=TARIFA DE RELAÇÃO DAS LIQUIDAÇÕES
+c29=TARIFA DE MANUTENÇÃO DE TÍTULOS VENCIDOS
+c30=DÉBITO MENSAL DE TARIFAS (PARA ENTRADAS E BAIXAS)
+c32=BAIXA POR TER SIDO PROTESTADO
+c33=CUSTAS DE PROTESTO
+c34=CUSTAS DE SUSTAÇÃO
+c35=CUSTAS DE CARTÓRIO DISTRIBUIDOR
+c36=CUSTAS DE EDITAL
+c37=TARIFA DE EMISSÃO DE BLOQUETO/TARIFA DE ENVIO DE DUPLICATA
+c38=TARIFA DE INSTRUÇÃO
+c39=TARIFA DE OCORRÊNCIAS
+c40=TARIFA MENSAL DE EMISSÃO DE BLOQUETO/TARIFA MENSAL DE ENVIO DE DUPLICATA
+c41=DÉBITO MENSAL DE TARIFAS – EXTRATO DE POSIÇÃO (B4EP/B4OX)
+c42=DÉBITO MENSAL DE TARIFAS – OUTRAS INSTRUÇÕES
+c43=DÉBITO MENSAL DE TARIFAS – MANUTENÇÃO DE TÍTULOS VENCIDOS
+c44=DÉBITO MENSAL DE TARIFAS – OUTRAS OCORRÊNCIAS
+c45=DÉBITO MENSAL DE TARIFAS – PROTESTO
+c46=DÉBITO MENSAL DE TARIFAS – SUSTAÇÃO DE PROTESTO
+c47=BAIXA COM TRANSFERÊNCIA PARA DESCONTO
+c48=CUSTAS DE SUSTAÇÃO JUDICIAL
+c51=TARIFA MENSAL REF A ENTRADAS BANCOS CORRESPONDENTES NA CARTEIRA
+c52=TARIFA MENSAL BAIXAS NA CARTEIRA
+c53=TARIFA MENSAL BAIXAS EM BANCOS CORRESPONDENTES NA CARTEIRA
+c54=TARIFA MENSAL DE LIQUIDAÇÕES NA CARTEIRA
+c55=TARIFA MENSAL DE LIQUIDAÇÕES EM BANCOS CORRESPONDENTES NA CARTEIRA
+c56=CUSTAS DE IRREGULARIDADE
+c57=INSTRUÇÃO CANCELADA (NOTA 20 – TABELA 8)
+c59=BAIXA POR CRÉDITO EM C/C ATRAVÉS DO SISPAG
+c60=ENTRADA REJEITADA CARNÊ (NOTA 20 – TABELA 1)
+c61=TARIFA EMISSÃO AVISO DE MOVIMENTAÇÃO DE TÍTULOS (2154)
+c62=DÉBITO MENSAL DE TARIFA - AVISO DE MOVIMENTAÇÃO DE TÍTULOS (2154)
+c63=TÍTULO SUSTADO JUDICIALMENTE
+c64=ENTRADA CONFIRMADA COM RATEIO DE CRÉDITO
+c69=CHEQUE DEVOLVIDO
+c71=ENTRADA REGISTRADA, AGUARDANDO AVALIAÇÃO
+c72=BAIXA POR CRÉDITO EM C/C ATRAVÉS DO SISPAG SEM  TÍTULO CORRESPONDENTE
+c73=CONFIRMAÇÃO DE ENTRADA NA COBRANÇA SIMPLES – ENTRADA NÃO ACEITA NA COBRANÇA CONTRATUAL
+
+___________________________________________________________
+_Banco Bradesco S/A________________________________________
+
+[Ocorrencia237Retorno]
+c02=Entrada Confirmada
+c03=Entrada Rejeitada
+c06=Liquidação normal - Pagamento Efetuado|$
+c09=Baixado Automaticamente via Arquivo
+c10=Baixado conforme instruções da Agência
+c11=Em Ser - Arquivo de Títulos pendentes
+c12=Abatimento Concedido
+c13=Abatimento Cancelado
+c14=Vencimento Alterado
+c15=Liquidação em Cartório
+c17=Liquidação após baixa ou Título não registrado|$
+c18=Acerto de Depositária
+c19=Confirmação Recebimento Instrução de Protesto
+c20=Confirmação Recebimento Instrução Sustação de Protesto
+c21=Acerto do Controle do Participante
+c23=Entrada de título em Cartório
+c24=Entrada rejeitada por CEP irregular
+c27=Baixa Rejeitada
+c28=Débito de tarifas/custas
+c30=Alteração de Outros Dados Rejeitados
+c32=Instrução Rejeitada
+c33=Confirmação Pedido Alteração Outros Dados
+c34=Retirado de Cartório e Manutenção Carteira
+c35=Desagendamento do débito automático
+c68=Acerto dos dados do rateio de Crédito
+c69=Cancelamento dos dados do rateio
+
+[Rejeicao237-02]
+c00=Ocorrência aceita
+c17=Data de vencimento anterior a data de emissão
+c21=Espécie do Título inválido
+c24=Data da emissão inválida
+c38=Prazo para protesto inválido
+c39=Pedido para protesto não permitido para título
+c43=Prazo para baixa e devolução inválido
+c45=Nome do Sacado inválido
+c46=Tipo/num. de incrição do Sacado inválidos
+c47=Endereço do Sacado não informado
+c48=CEP irregular
+c50=CEP referente a Banco correspondente
+c53=No. de inscrição do Sacado/avalista inválidos (CPF/CNPJ)
+c54=Sacado/Avalista não informado
+c67=Débito automático agendado
+c68=Débito não agendado - erro nos dados de remessa
+c69=Débito não agendado - Sacado não consta no cadastro de autorizante
+c70=Débito não agendado - Cedente não autorizado pelo Sacado
+c71=Débito não agendado - Cedente não participa da modalidade de débito automático
+c72=Débito não agendado - Código de moeda diferente R$
+c73=Débito não agendado - Data de vencimento inválida
+c75=Débito não agendado - Tipo do número de inscrição do sacado debitado inválido
+c86=Seu número do documento inválido
+
+[Rejeicao237-03]
+c02=Código de registro detalhe inválido
+c03=Código da ocorrência inválida
+c04=Código de ocorrência não permitida para a carteira
+c05=Código de ocorrência não numérico
+c07=Agência/Conta/Digito - Inválido
+c08=Nosso número inválido
+c09=Nosso número duplicado
+c10=Carteira inválida
+c16=Data de Vencimento inválida
+c18=Vencimento fora do prazo de operação
+c20=Valor do título inválido
+c21=Espécie do título inválida
+c22=Espécie não permitida para a carteira
+c24=Data de emissão inválida
+c38=Prazo para protesto inválido
+c15=44-Agência Cedente não prevista
+c50=CEP irregular - Banco Correspondente
+c63=Entrada para Título já cadastrado
+c68=Débito não agendado - erro nos dados de remessa
+c69=Débito não agendado - Sacado não consta no cadastro de autorizante
+c70=Débito não agendado - Cedente não autorizado pelo Sacado
+c71=Débito não agendado - Cedente não participa da modalidade de débito automático
+c72=Débito não agendado - Código de moeda diferente R$
+c73=Débito não agendado - Data de vencimento inválida
+c74=Débito não agendado - Conforme seu pedido, Título não registrado
+c75=Débito não agendado - Tipo de número de inscrição do debitado inválido
+
+[Rejeicao237-09]
+c10=Baixa comandada pelo cliente
+
+[Rejeicao237-10]
+c00=Baixa Comandada
+c14=Título Protestado
+c15=Título excluído
+
+[Rejeicao237-24]
+c48=CEP inválido
+
+[Rejeicao237-27]
+c04=Código de ocorrência não permitido para a carteira
+c07=Agência/Conta/dígito inválidos
+c08=Nosso número inválido
+c10=Carteira inválida
+c15=Carteira/Agência/Conta/nosso número inválidos
+c40=Título com ordem de protesto emitido
+c42=Código para baixa/devolução via Telebradesco inválido
+c60=Movimento para Título não cadastrado
+c77=Transferência para desconto não permitido para a carteira
+c85=Título com pagamento vinculado
+
+[Rejeicao237-28]
+c03=Tarifa de sustação
+c04=Tarifa de protesto
+c08=Custas de protesto
+
+[Rejeicao237-30]
+c01=Código do Banco inválido
+c04=Código de ocorrência não permitido para a carteira
+c05=Código da ocorrência não numérico
+c08=Nosso número inválido
+c15=Caracteristica da cobrança incompátivel
+c16=Data de vencimento inválida
+c17=Data de vencimento anterior a data de emissão
+c18=Vencimento fora do prazo de operação
+c24=Data de emissão inválida
+c29=Valor do desconto maior/igual ao valor do título
+c30=Desconto a conceder não confere
+c31=Concessão de desconto já existente (Desconto anterior)
+c33=Valor do abatimento inválido
+c34=Valor do abatimento maior/igual ao valor do título
+c14=38-Prazo para o protesto inválido
+c39=Pedido de protesto não permitido para o título
+c40=Título com ordem de protesto emitido
+c42=Código para baixa/devolução inválido
+c60=Movimento para título não cadastrado
+c85=Título com Pagamento Vinculado
+
+[Rejeicao237-32]
+c01=Código do Banco inválido
+c02=Código do registro detalhe inválido
+c04=Código de ocorrência não permitido para a carteira
+c05=Código de ocorrência não númerico
+c07=Agência/Conta/dígito inválidos
+c08=Nosso número inválido
+c10=Carteira inválida
+c15=Caracteristicas da cobrança incompátiveis
+c16=Data de vencimento inválida
+c17=Data de vencimento anterior a data de emissão
+c18=Vencimento fora do prazo de operação
+c20=Valor do título inválido
+c21=Espécie de título inválida
+c22=Espécie não permitida para a carteira
+c24=Data de emissão inválida
+c28=Código de desconto via Telebradesco inválido
+c29=Valor do desconto maior/igual ao valor do título
+c30=Desconto a conceder não confere
+c31=Concessão de desconto - Já existe abatimento anterior
+c33=Valor do abatimento inválido
+c34=Valor do abatimento maior/igual ao valor do título
+c36=Concessão de desconto - Já existe desconto anterior
+c38=Prazo para protesto inválido
+c39=Pedido de protesto nçao permitido para o título
+c40=Título com ordem de protesto emitido
+c41=Pedido cancelamento/sustação para título sem instruçãp de protesto
+c42=Código para baixa/devolução inválido
+c45=Nome do Sacado não informado
+c46=Tipo/número de inscrição do Sacado inválido
+c47=Endereço do Sacado não informado
+c48=CEP Inválido
+c50=CEP referente a um Banco correspondente
+c53=Tipo de inscrição do Sacador avalista inválidos
+c60=Movimento para Título não cadastrado
+c85=Título com pagamento vinculado
+c86=Seu número inválido
+
+[Rejeicao237-35]
+c81=Tentativas esgotadas, baixado
+c82=Tentativas esgotadas, pendente
+
+___________________________________________________________
+_Banco Real S/A____________________________________________
+
+[Ocorrencia275Retorno]
+c02=Confirmação de Entrega
+c03=Registro Recusado
+c06=Liquidação Normal - Pagamento Efetuado|$
+c07=Liquidação por conta
+c08=Baixado protesto
+c09=Baixado
+c10=Baixado Conf. Instruções
+c12=Abatimento Concedido
+c13=Abatimento Cancelado
+c14=Vencimento Alterado
+c17=Pago em Cartório
+c18=Confirmação Recebimento - Instr. Sustar protesto e Baixar o título
+c19=Confirmação de Recebimento, Instr. Protestar
+c20=Confirmação Instr. Sustar protesto e conservar em carteira
+c22=Número do Cedente alterado
+c23=Campo especial alterado
+c24=Confirmação recebimento Instr. Não protestar
+c25=Enviado a Cartório
+c26=Protesto Sustado
+c27=Protesto não sustado
+c28=Protesto devolvido pelo cartório
+c29=Débito custas cartoriais
+c30=Multa Alterada
+c31=Multa Cancelada
+c32=Desconto Concedido
+c34=Protesto Automático Cancelado
+
+[Ocorrencia356Retorno]
+c02=Confirmação de Entrega
+c03=Registro Recusado
+c06=Liquidação Normal - Pagamento Efetuado|$
+c07=Liquidação por conta
+c08=Baixado protesto
+c09=Baixado
+c10=Baixado Conf. Instruções
+c12=Abatimento Concedido
+c13=Abatimento Cancelado
+c14=Vencimento Alterado
+c17=Pago em Cartório
+c18=Confirmação Recebimento - Instr. Sustar protesto e Baixar o título
+c19=Confirmação de Recebimento, Instr. Protestar
+c20=Confirmação Instr. Sustar protesto e conservar em carteira
+c22=Número do Cedente alterado
+c23=Campo especial alterado
+c24=Confirmação recebimento Instr. Não protestar
+c25=Enviado a Cartório
+c26=Protesto Sustado
+c27=Protesto não sustado
+c28=Protesto devolvido pelo cartório
+c29=Débito custas cartoriais
+c30=Multa Alterada
+c31=Multa Cancelada
+c32=Desconto Concedido
+c34=Protesto Automático Cancelado
+
+___________________________________________________________
+___________________________________________________________
+_Banco Unibanco____________________________________________
+
+[Carteira409]
+c0= -Nenhuma
+c1=4-Direta
+c2=5-Escritural
+c3=6-Caução
+c4=7-Desconto
+c5=8-Novo Desconto
+c6=12-Vendor
+
+[Especie409]
+c0=01-DM-DM
+c1=02-NP-NP
+c2=05-LC-LC
+c3=06-Recibo-Recibo
+c4=99-Outros-Outros
+
+[Rejeicao409]
+c05=Tipo de transação / código do movimento inválido
+c07=Agência / conta e dígito inválido
+c08=Nosso número inválido
+c09=Nosso número duplicado
+c10=Carteira inválida
+c11=Forma de cadastramento do título inválida (Cliente não é troca de fitas)
+c12=Tipo de documento inválido
+c13=Identificação de emissão de bloqueto inválido
+c15=Características cobrança incompatível
+c16=Data de vencimento inválida
+c18=Vencimento fora do prazo de operação
+c20=Valor do título inválido
+c21=Espécie do título inválida
+c23=Aceite Inválido
+c24=Data da emissão inválida 
+c26=Código de juros de mora inválido
+c27=Valor/taxa juros de mora inválido
+c30=Desconto a conceder não confere
+c32=Valor do IOF inválido
+c33=Valor do abatimento inválido
+c34=Valor do abatimento maior ou igual ao valor do título
+c35=Abatimento a conceder não confere
+c36=Abatimento já concedido
+c37=Código para protesto inválido
+c38=Prazo para protesto inválido
+c39=Pedido de protesto não permitido para o título
+c41=Pedido de cancelamento/sustação de protesto para títulos sem instrução de protesto
+c42=Código para baixa/devolução inválida
+c43=Prazo para baixa/devolução inválida
+c44=Código da moeda inválida
+c46=Tipo/Número de inscrição inválido
+c48=CEP inválido
+c53=Tipo/Número de inscrição do sacador/avalista inválidos
+c57=Código da Multa inválido
+c58=Data da multa inválida
+c60=Movimento pata título não cadastrado
+c61=Agência encarregada da cobrança inválida / Banco depositário é banco correspondente
+c99=Outros 
+
+[Ocorrencia409Retorno]
+c02=Entrada confirmada
+c03=Entrada rejeitada
+c06=Liquidação normal|$
+c07=Liquidação por conta (Pagamento parcial - Parte do valor do título)
+c08=Liquidação por saldo (Pagamento saldo - O restante do valor que não foi pago por conta)
+c09=Baixado automaticamente
+c10=Baixado conforme instrução (Título baixado por solicitação do cedente)
+c12=Abatimento concedido (Abatimento concedido por solicitação do cedente)
+c14=Vencimento alterado (Vencimento alterado por solicitação do cedente)
+c17=Liquidação normal - Titulo pago (Código Informativo - não ocorre crédito na conta corrente)
+c16=Seu número alterado
+c18=Despesa de protesto efetivado - Com ou sem custas - Na data de efetivação do protesto
+c19=Despesa de sustação de título - Com custas - Retirada do título de cartório sem protesto
+c20=Despesa com entrada em cartório - Custas de cartório - P/ praças em que  são cobradas na entrada 
+c21=Solicitação de sustação confirmada - Confirma o recebimento da  sustação/retirada do cartório
+c22=Entrada por transferência - Transferência de carteira ou conta
+c23=Emissão de carta de protesto - Data de emissão da carta de protesto para agência depositária
+c30=Baixa por transferência - Transferência de carteira ou conta inclusive para carteira VENDOR.
+c31=Sustação efetivada - Sustação efetivada sem custas
+c33=Pedido de protesto confirmado - Confirma o recebimento do pedido de protesto
+c34=Início do processo de protesto - Inicia verificação de inconsistências
+c35=Tarifa de sustação de protesto  - Tarifa de sustação de protesto
+c36=Tarifa de protesto - Tarifa de protesto
+c37=Tarifa de permanência em carteira - Tarifa de permanência em carteira
+c38=Tarifa de reapresentação - Tarifa de reapresentação
+c39=Tarifa de garantia de crédito - Tarifa de garantia de crédito
+c41=Entrada em cartório confirmada - Data de entrada do título em cartório
+c45=Débito de tarifa acumulado - De acordo com a periodicidade cadastrada no sistema Unibanco.
+c77=Instrução rejeitada - Instrução não acatada pelo Unibanco
+c86=Pagamento informativo - Acusa  recebimento - Crédito segue conforme o prazo (float) negociado
+c87=Pagamento parcial informativo - Acusa  recebimento de Valor parcial - Crédito segue  conforme o prazo (float)  negociado
+c88=Pagamento após baixa informativo - Acusa  recebimento de título baixado - Crédito segue  conforme o prazo (float)  negociado
+c89=Título pago em cartório informativo - Acusa  recebimento de tít. pago/cartório - Crédito segue conforme o prazo (float)  negociado
+c98=Pagamento após baixa - Recebimento de título já baixado
+c99=Pagamento em cartório - Recebimento de título pago em cartório
+
+___________________________________________________________
+_Banco Banco do Brasil S/A________________________________________
+
+[Ocorrencia1Retorno]
+c02=Entrada confirmada
+c03=Entrada rejeitada
+c04=Transferencia de carteira/entrada
+c05=Transferencia de carteira/baixa
+c06=Liquidacao|$
+c09=Baixa
+c11=Titulos em carteira /em ser/
+c12=Confirmacao recebimento instrucao de abatimento
+c13=Confirmacao recebimento instrucao de cancelamento abatimento
+c14=Confirmacao recebimento instrucao alteracao de vencimento
+c15=Franco de pagamento
+c17=Liquidacao apos baixa ou liquidacao titulo nao registrado
+c19=Confirmacao recebimento instrucao de protesto
+c20=Confirmacao recebimento instrucao de sustacao/cancelamento de protesto
+c23=Remessa a cartorio /aponte em cartorio/
+c24=Retirada de cartorio e manutencao em carteira
+c25=Protestado e baixado /baixa por ter sido protestado/
+c26=Instrucao rejeitada
+c27=Confirmacao do pedido de alteracao de outros dados
+c28=Debito de tarifas/custas
+c29=Ocorrencias do sacado
+c30=Alteracao de dados rejeitada
+
+[Rejeicao1]
+c00=Credito ou Debito Efetuado
+c01=Insuficiencia de Fundos - Debito Nao Efetuado
+c02=Credito ou Debito Cancelado pelo Pagador/Credor
+
+c03=Debito Autorizado pela Agencia - Efetuado
+cHA=Lote Nao Aceito
+cHB=Inscricao da Empresa Invalida para o Contrato
+cHC=Convenio com a Empresa Inexistente/Invalido para o Contrato
+cHD=Agencia/Conta da Empresa Inexistente/Invalida para o Contrato
+cHE=Tipo de Servico Invalido para o Contrato
+cHF=Conta Corrente da Empresa com Saldo Insuficiente
+cHG=Lote de servico fora de sequencia
+cHH=Lote de servico invalido
+cAA=Controle Invalido
+cAB=Tipo de Operacao Invalido
+cAC=Tipo de Servico Invalido
+cAD=Forma de Lancamento Invalida
+cAE=Tipo/Numero de Inscricao Invalido
+cAF=Codigo de Convenio Invalido
+cAG=Agencia/Conta Corrente/DV Invalido
+cAH=N  Sequencial do Registro no Lote Invalido
+cAI=Codigo de Segmento de Detalhe Invalido   
+cAJ=Tipo de Movimento Invalido
+cAK=Codigo da Camara de Compensacao do Banco do Favorecido Depositario Invalido
+cAL=Codigo do Banco do Favorecido ou Depositario Invalido
+cAM=Agencia Mantenedora da Conta C/C do Favorecido Invalida
+cAN=Conta Corrente/DV do Favorecido Invalido
+cAO=Nome do Favorecido nao Informado
+cAP=Data Lancamento Invalida
+cAQ=Tipo/Quantidade da Moeda Invalido
+cAR=Valor do Lancamento Invalido
+cAS=Aviso ao Favorecido - Identificacao Invalida
+cAT=Tipo/NUmero de Inscricao do Favorecido Invalido
+cAU=Logradouro do Favorecido nao Informado
+cAV=N  do Local do Favorecido nao Informado
+cAW=Cidade do Favorecido nao Informada
+cAX=CEP/Complemento do Favorecido Invalido
+cAY=Sigla do Estado do Favorecido Invalida
+cAZ=Codigo/Nome do Banco Depositario Invalido
+cBA=Codigo/Nome da Agencia Depositaria nao Informado
+cBB=Seu Numero Invalido
+cBC=Nosso NUmero Invalido
+cBD=Confirmacao de Pagamento Agendado
+cBE=CPF/CGC do creditado nao correspnde a agencia/conta informadas
+cCA=Codigo de barras - codigo do banco invalido
+cCB=Codigo de barras - codigo da moeda invalido
+cCC=Codigo de barras - digito verificador geral invalido
+cCD=Codigo de barras - valor do titulo invalido
+cCE=Codigo de barras - campo livre invalido
+cCF=Valor do documento invalido
+cCG=Valor do abatimento invalido
+cCH=Valor do desconto invalido
+cCI=Valor de mora invalido
+cCJ=Valor da multa invalido
+cCK=Valor do IR invalido
+cCL=Valor do ISS invalido
+cCM=Valor do IOF invalido
+cCN=Valor de outras deducoes invalido
+cCO=Valor de outros acrescimos invalido
+cTA=Lote nao Aceito - Totais do Lote com Diferenca
+
+[Rejeicao1-42A]
+c01=Codigo do banco invalido
+c02=Codigo do registro detalhe invalido
+c03=Codigo do segmento invalido
+c04=Codigo do movimento nao permitido para carteira
+c05=Codigo de movimento invalido
+c06=Tipo/numero de inscricao do cedente Invalidos
+c07=Agencia/Conta/DV invalido
+c08=Nosso nUmero invalido
+c09=Nosso nUmero duplicado
+c10=Carteira invalida
+c11=Forma de cadastramento do titulo invalido
+c12=Tipo de documento invalido
+c13=Identificacao da emissao do bloqueto invalida
+c14=Identificacao da distribuicao do bloqueto invalida
+c15=Caracteristicas da cobranca incompativeis
+c16=Data de vencimento invalida
+c17=Data de vencimento anterior a data de emissao
+c18=Vencimento fora do prazo de operacao
+c19=Titulo a cargo de Bancos Correspondentes com vencimento inferior   XX dias
+c20=Valor do titulo invalido
+c21=Especie do titulo invalida
+c22=Especie nao permitida para a carteira
+c23=Aceite invalido
+c24=Data da emissao invalida
+c25=Data da emissao posterior a data
+c25=26-Codigo de juros de mora invalido
+c27=Valor/Taxa de juros de mora invalido
+c28=Codigo do desconto invalido
+c29=Valor do desconto maior ou igual ao valor do titulo
+c30=Desconto a conceder nao confere
+c31=Concessao de desconto - ja existe desconto anterior
+c32=Valor do IOF invalido
+c33=Valor do abatimento invalido
+c34=Valor do abatimento maior ou igual ao valor do titulo
+c35=Abatimento a conceder nao confere
+c36=Concessao de abatimento - ja existe abatimento anterior
+c37=Codigo para protesto invalido
+c38=Prazo para protesto invalido
+c39=Pedido de protesto nao permitido para o titulo
+c40=Titulo com ordem de protesto emitida
+c41=Pedido de cancelamento/sustacao para titulos sem instrucao de protesto
+c42=Codigo para baixa/devolucao invalido
+c43=Prazo para baixa/devolucao invalido
+c44=Codigo da moeda invalido
+c45=Nome do sacado nao informado
+c46=Tipo/nUmero de inscricao do sacado invalidos
+c47=Endereco do sacado nao informado
+c48=CEP invalido
+c49=CEP sem praca de cobranca /nao localizado
+c50=CEP referente a um Banco Correspondente
+c51=CEP incompativel com a unidade da federaCcao
+c52=Unidade da federacao invalida
+c53=Tipo/nUmero de inscricao do sacador/avalista invalidos
+c54=Sacador/Avalista nao informado
+c55=Nosso nUmero no Banco Correspondente nao informado
+c56=Codigo do Banco Correspondente nao informado
+c57=Codigo da multa invalido
+c58=Data da multa invalida
+c59=Valor/Percentual da multa invalido
+c60=Movimento para titulo nao cadastrado
+c61=Alteracao da agencia cobradora/dv invalida
+c62=Tipo de impressao invalido
+c63=Entrada para titulo ja cadastrado
+c64=Numero da linha invalido
+c65=Codigo do banco para debito invalido
+c66=Agencia/conta/DV para debito invalido
+c67=Dados para debito incompativel com a identificacao da emissao do bloqueto
+c88=Arquivo em duplicidade
+c99=Contrato inexistente
+
+[Rejeicao-email]
+46 - Documento de identificação do sacado inválido - bloqueto será impresso.            !   
+47 - Endereço e-mail do sacado inválido - Bloqueto será impresso.                      !   
+14 - Sacado optante por Cobrança Eletrônica - Bloqueto será eletrônico                  !   
+15 - Tipo de convênio não permite envio de e-mail - Bloqueto será impresso           !   
+15 - Modalidade de cobrança inválida para envio de e-mail - bloqueto será impresso.   !   
+13 - Cedente não autorizado a enviar e-mail - Bloqueto será impresso                    !   
+
+[Rejeicao-42B]
+#
+# 42-B - Codigos de tarifas/custas de 01 a 11    !   
+# associados ao codigo de movimento 28. /nota 40/!   
+#
+c01=Tarifa de extrato de posicao
+c02=Tarifa de manutencao de titulo vencido
+c03=Tarifa de sustacao
+c04=Tarifa de protesto
+c05=Tarifa de outras instrucoes
+c06=Tarifa de outras ocorrencias
+c07=Tarifa de envio de duplicata ao sacado
+c08=Custas de protesto
+c09=Custas de sustacao de protesto
+c10=Custas do cartorio distribuidor
+c11=Custas de edital
+
+[Rejeicao-42C]
+#
+# 42-C - Codigos de liquidacao/baixa de 01 a 13  !   
+# associados ao codigo de  movimento 06, 09 e 17 
+# nota 40/Liquidacao:                                   !   
+#
+c01=Por saldo
+c02=Por conta
+c03=No proprio banco
+c04=Compensacao eletronica
+c05=Compensacao convencional
+c06=Por meio eletronico
+c07=Apos feriado local
+c08=Em cartorio
+--- Baixa ---
+c09=Comandada banco
+c10=Comandada cliente arquivo
+c11=Comandada cliente on-line
+c12=Decurso prazo - cliente
+c13=Decurso prazo - banco
+
+
+[OcorrenciaSemPapel1]
+#
+# Ocorrencias especificas para o servico cobranca !   
+# sem papel.                                      !   
+#
+c0=HA-Lote Nao Aceito
+c1=AA-Controle Invalido
+c2=AB-Tipo de Operacao Invalido
+c3=AC-Tipo de Servico Invalido
+c4=AE-Tipo/NUmero de Inscricao do Cedente Invalido
+c5=AG-Agencia/Conta Corrente/DV do Sacado Invalido
+c6=AH-N  Sequencial do Registro no Lote Invalido
+c7=AI-Codigo de Segmento de Detalhe Invalido
+c8=AL-Codigo do Banco do Sacado Invalido
+c9=AO-Nome do Cedente nao Informado
+c10=AP-Data para o debito Invalida
+c11=AR-Valor do Lancamento para Debito Invalido
+c12=AT-Tipo/NUmero de Inscricao do Sacado Invalido
+c13=BF-Codigo de Barras Invalido
+c14=BG-Codigo do Banco Remetente Invalido
+c15=BH-Remessa de debito para agendamento em duplicidade /codigo de barras/data de vencimento existentes/
+c16=BI-Retirada de debito para agendamento inexistente/codigo de barras inexistente/
+c17=BJ-Recusa do debito pelo banco sacado
+c18=BK-Contra ordem do debito pelo sacado
+c19=BL-Conta corrente para debito encerrada
+c20=BM-Conta corrente para debito bloqueada
+c21=TA-Lote nao Aceito - Totais do Lote com Diferenca
+
+[nfe_cSit]
+r0=0-Não habilitado
+r1=1-Habilitado
+
+[nfe_indCredNFe]
+r0=0-Não credenciado para emissão de NF-e.
+r1=1-Credenciado.
+r2=2-Credenciado com obrigatoriedade para todas operações.
+r3=3-Credenciado com obrigatoriedade parcial.
+r4=4-a SEFAZ não fornece a informação.
+
+[nfe_indCredCTe]
+r0=0-Não credenciado para emissão da CT-e
+r1=1-Credenciado.
+r2=2-Credenciado com obrigatoriedade para todas operações.
+r3=3-Credenciado com obrigatoriedade parcial.
+r4=4-a SEFAZ não fornece a informação.
+
+[nfe_tpAmb]
+r1=1-Produção
+r2=2-Homologação
+

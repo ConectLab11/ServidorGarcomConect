@@ -1,0 +1,11 @@
+PastaXmlEnvio   xmlienvio       \envio\
+PastaXmlEmLote  xmllenvio       \lote\   
+PastaXmlRetorno xmlretorno      \retorno\
+PastaXmlEnviado xmlenviado      \enviado\ 
+PastaXmlErro    xmlerro         \erros\
+PastaBackup     xmlbackup       \backup\  
+PastaValidar    xmlvalido       \validos\ 
+                xmlrex          \notas\ 
+https://www.nfp.fazenda.sp.gov.br/areapublica/consultanfe.aspx
+http://homologacao.nfe.fazenda.sp.gov.br/ConsultaNFe/consulta/publica/ConsultarNFe.aspx
+

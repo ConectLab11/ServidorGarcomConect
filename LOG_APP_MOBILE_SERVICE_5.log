@@ -1,0 +1,260 @@
+16/06 17:44:37 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9331"}
+16/06 17:44:37 - LISTA DE IMPRESSORAS
+16/06 17:44:37 - IMPRESSORA CAIXA 7 => TCP:192.168.88.200
+16/06 17:44:37 - impressora test 192.168.88.200
+16/06 17:44:37 - impressora test 9100
+16/06 17:44:37 - impressora test 2 => st 1
+16/06 17:44:37 - impressora test 4 ck
+16/06 17:44:37 - impressora test 5 ck  ok
+16/06 17:44:37 - impressora test 6 final
+16/06 17:44:37 - ABRIR BANCO DE DADOS
+16/06 17:44:37 - OK BANCO DE DADOS
+16/06 17:44:37 - SET IMPRESSORA 7
+16/06 17:44:37 - ENVIANDO IMPRESSAO
+16/06 17:44:38 - ERRO: FALHA NA IMPRESSORA
+16/06 17:44:38 - FALHA NA IMPRESSORA
+16/06 17:44:38 - ERRO NO PROCESSAMENTO DO PEDIDO 9331
+16/06 17:44:38 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9331"}
+
+ t:0,953 => ERRO NO PROCESSAMENTO DO PEDIDO 9331 -> 3
+16/06 17:47:15 - ***  SERVIÇO PARADO
+16/06 17:47:46 - Iniciando Suporte Mobile 64bit Versao: 1.13
+16/06 17:47:46 - Variaveis
+16/06 17:47:46 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+16/06 17:47:46 - TCP Servidor
+16/06 17:47:46 - TCP Cliente
+16/06 17:47:46 - Iniciado na porta => 4406
+16/06 17:47:46 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+16/06 17:47:46 - Formato Data   : 16/06/2019 17:47:46
+16/06 17:47:46 - Flags debug 1 sem log 0
+16/06 17:47:46 - BANCO DE DADOS ONLINE > 192.168.88.28:comodoro
+16/06 17:47:46 - PRECO => 30 /            30,00/30/30
+16/06 17:47:46 - iniciar_identificacao_computador
+16/06 17:47:46 - sistema_pegar_perfil
+16/06 17:47:46 - empresa_carregar_segmentos
+16/06 17:47:46 - rcs_iniciar_variaveis_globais
+16/06 17:47:46 - terminal_id
+16/06 17:47:46 - mesas_comandas
+16/06 17:47:46 - LPRINT
+16/06 17:47:46 - LISTA DE IMPRESSORAS CARREGADA 4
+16/06 17:47:46 - carregarImp
+16/06 17:47:46 - objetos
+16/06 17:47:46 - produtos_gerenciamento_de_estoque
+16/06 17:47:46 - # status 100%
+16/06 17:47:50 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9332"}
+16/06 17:47:50 - LISTA DE IMPRESSORAS
+16/06 17:47:50 - IMPRESSORA CAIXA 7 => TCP:192.168.88.200
+16/06 17:47:50 - impressora test 192.168.88.200
+16/06 17:47:50 - impressora test 9100
+16/06 17:47:50 - impressora test 2 => st 1
+16/06 17:47:50 - impressora test 4 ck
+16/06 17:47:50 - impressora test 5 ck  ok
+16/06 17:47:50 - impressora test 6 final
+16/06 17:47:50 - ABRIR BANCO DE DADOS
+16/06 17:47:50 - OK BANCO DE DADOS
+16/06 17:47:50 - SET IMPRESSORA 7
+16/06 17:47:50 - ENVIANDO IMPRESSAO
+16/06 17:47:51 - ERRO: FALHA NA IMPRESSORA
+16/06 17:47:51 - FALHA NA IMPRESSORA
+16/06 17:47:51 - ERRO NO PROCESSAMENTO DO PEDIDO 9332
+16/06 17:47:51 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9332"}
+
+ t:1,343 => ERRO NO PROCESSAMENTO DO PEDIDO 9332 -> 3
+16/06 17:49:11 - ***  SERVIÇO PARADO
+16/06 17:49:20 - Iniciando Suporte Mobile 64bit Versao: 1.13
+16/06 17:49:20 - Variaveis
+16/06 17:49:20 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+16/06 17:49:20 - TCP Servidor
+16/06 17:49:20 - TCP Cliente
+16/06 17:49:20 - Iniciado na porta => 4406
+16/06 17:49:20 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+16/06 17:49:20 - Formato Data   : 16/06/2019 17:49:20
+16/06 17:49:20 - Flags debug 1 sem log 0
+16/06 17:49:20 - BANCO DE DADOS ONLINE > 192.168.88.28:comodoro
+16/06 17:49:20 - PRECO => 30 /            30,00/30/30
+16/06 17:49:20 - iniciar_identificacao_computador
+16/06 17:49:20 - sistema_pegar_perfil
+16/06 17:49:20 - empresa_carregar_segmentos
+16/06 17:49:20 - rcs_iniciar_variaveis_globais
+16/06 17:49:20 - terminal_id
+16/06 17:49:20 - mesas_comandas
+16/06 17:49:20 - LPRINT
+16/06 17:49:20 - LISTA DE IMPRESSORAS CARREGADA 4
+16/06 17:49:20 - carregarImp
+16/06 17:49:20 - objetos
+16/06 17:49:20 - produtos_gerenciamento_de_estoque
+16/06 17:49:20 - # status 100%
+16/06 17:49:26 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9332"}
+16/06 17:49:26 - LISTA DE IMPRESSORAS
+16/06 17:49:26 - IMPRESSORA CAIXA 7 => TCP:192.168.88.200
+16/06 17:49:26 - impressora test 192.168.88.200
+16/06 17:49:26 - impressora test 9100
+16/06 17:49:26 - impressora test 2 => st 1
+16/06 17:49:26 - impressora test 4 ck
+16/06 17:49:26 - impressora test 5 ck  ok
+16/06 17:49:26 - impressora test 6 final
+16/06 17:49:26 - ABRIR BANCO DE DADOS
+16/06 17:49:26 - OK BANCO DE DADOS
+16/06 17:49:26 - SET IMPRESSORA 7
+16/06 17:49:26 - ENVIANDO IMPRESSAO
+16/06 17:49:27 - ERRO: FALHA NA IMPRESSORA
+16/06 17:49:27 - FALHA NA IMPRESSORA
+16/06 17:49:27 - ERRO NO PROCESSAMENTO DO PEDIDO 9332
+16/06 17:49:27 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9332"}
+
+ t:1,031 => ERRO NO PROCESSAMENTO DO PEDIDO 9332 -> 3
+16/06 17:51:28 - ***  SERVIÇO PARADO
+16/06 17:51:35 - Iniciando Suporte Mobile 64bit Versao: 1.13
+16/06 17:51:35 - Variaveis
+16/06 17:51:35 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+16/06 17:51:35 - TCP Servidor
+16/06 17:51:35 - TCP Cliente
+16/06 17:51:35 - Iniciado na porta => 4406
+16/06 17:51:35 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+16/06 17:51:35 - Formato Data   : 16/06/2019 17:51:35
+16/06 17:51:35 - Flags debug 1 sem log 0
+16/06 17:51:35 - BANCO DE DADOS ONLINE > 192.168.88.28:comodoro
+16/06 17:51:35 - PRECO => 30 /            30,00/30/30
+16/06 17:51:35 - iniciar_identificacao_computador
+16/06 17:51:35 - sistema_pegar_perfil
+16/06 17:51:35 - empresa_carregar_segmentos
+16/06 17:51:35 - rcs_iniciar_variaveis_globais
+16/06 17:51:35 - terminal_id
+16/06 17:51:35 - mesas_comandas
+16/06 17:51:35 - LPRINT
+16/06 17:51:35 - LISTA DE IMPRESSORAS CARREGADA 4
+16/06 17:51:35 - carregarImp
+16/06 17:51:35 - objetos
+16/06 17:51:35 - produtos_gerenciamento_de_estoque
+16/06 17:51:35 - # status 100%
+16/06 17:51:42 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9332"}
+16/06 17:51:42 - LISTA DE IMPRESSORAS
+16/06 17:51:42 - IMPRESSORA CAIXA 7 => TCP:192.168.88.200
+16/06 17:51:42 - impressora test 192.168.88.200
+16/06 17:51:42 - impressora test 9100
+16/06 17:51:43 - impressora test 2 => st 1
+16/06 17:51:43 - impressora test 4 ck
+16/06 17:51:43 - impressora test 5 ck  ok
+16/06 17:51:43 - impressora test 6 final
+16/06 17:51:43 - ABRIR BANCO DE DADOS
+16/06 17:51:43 - OK BANCO DE DADOS
+16/06 17:51:43 - SET IMPRESSORA 7
+16/06 17:51:43 - ENVIANDO IMPRESSAO
+16/06 17:51:43 - IMPRESSORA OK
+16/06 17:51:43 - ERRO: FALHA NA IMPRESSORA
+16/06 17:51:43 - FALHA NA IMPRESSORA
+16/06 17:51:43 - ERRO NO PROCESSAMENTO DO PEDIDO 9332
+16/06 17:51:43 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9332"}
+
+ t:1,047 => ERRO NO PROCESSAMENTO DO PEDIDO 9332 -> 3
+16/06 17:53:20 - ***  SERVIÇO PARADO
+16/06 17:53:23 - Iniciando Suporte Mobile 64bit Versao: 1.13
+16/06 17:53:23 - Variaveis
+16/06 17:53:23 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+16/06 17:53:23 - TCP Servidor
+16/06 17:53:23 - TCP Cliente
+16/06 17:53:23 - Iniciado na porta => 4406
+16/06 17:53:23 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+16/06 17:53:23 - Formato Data   : 16/06/2019 17:53:23
+16/06 17:53:23 - Flags debug 1 sem log 0
+16/06 17:53:23 - BANCO DE DADOS ONLINE > 192.168.88.28:comodoro
+16/06 17:53:23 - PRECO => 30 /            30,00/30/30
+16/06 17:53:23 - iniciar_identificacao_computador
+16/06 17:53:23 - sistema_pegar_perfil
+16/06 17:53:23 - empresa_carregar_segmentos
+16/06 17:53:23 - rcs_iniciar_variaveis_globais
+16/06 17:53:23 - terminal_id
+16/06 17:53:23 - mesas_comandas
+16/06 17:53:23 - LPRINT
+16/06 17:53:23 - LISTA DE IMPRESSORAS CARREGADA 4
+16/06 17:53:23 - carregarImp
+16/06 17:53:23 - objetos
+16/06 17:53:23 - produtos_gerenciamento_de_estoque
+16/06 17:53:23 - # status 100%
+16/06 17:53:32 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9332"}
+16/06 17:53:32 - LISTA DE IMPRESSORAS
+16/06 17:53:32 - IMPRESSORA CAIXA 7 => TCP:192.168.88.200
+16/06 17:53:32 - impressora test 192.168.88.200
+16/06 17:53:32 - impressora test 9100
+16/06 17:53:32 - impressora test 2 => st 1
+16/06 17:53:32 - impressora test 4 ck
+16/06 17:53:32 - impressora test 5 ck  ok
+16/06 17:53:32 - impressora test 6 final
+16/06 17:53:32 - ABRIR BANCO DE DADOS
+16/06 17:53:32 - OK BANCO DE DADOS
+16/06 17:53:32 - SET IMPRESSORA 7
+16/06 17:53:32 - ENVIANDO IMPRESSAO
+16/06 17:53:32 - IMPRESSORA OK
+16/06 17:53:34 - ERRO: FALHA NA IMPRESSORA
+16/06 17:53:34 - FALHA NA IMPRESSORA
+16/06 17:53:34 - ERRO NO PROCESSAMENTO DO PEDIDO 9332
+16/06 17:53:34 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9332"}
+
+ t:2,047 => ERRO NO PROCESSAMENTO DO PEDIDO 9332 -> 3
+16/06 17:59:06 - ***  SERVIÇO PARADO
+16/06 17:59:09 - Iniciando Suporte Mobile 64bit Versao: 1.13
+16/06 17:59:09 - Variaveis
+16/06 17:59:09 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+16/06 17:59:09 - TCP Servidor
+16/06 17:59:09 - TCP Cliente
+16/06 17:59:09 - Iniciado na porta => 4406
+16/06 17:59:09 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+16/06 17:59:09 - Formato Data   : 16/06/2019 17:59:09
+16/06 17:59:09 - Flags debug 1 sem log 0
+16/06 17:59:09 - BANCO DE DADOS ONLINE > 192.168.88.28:comodoro
+16/06 17:59:09 - PRECO => 30 /            30,00/30/30
+16/06 17:59:09 - iniciar_identificacao_computador
+16/06 17:59:09 - sistema_pegar_perfil
+16/06 17:59:09 - empresa_carregar_segmentos
+16/06 17:59:09 - rcs_iniciar_variaveis_globais
+16/06 17:59:09 - terminal_id
+16/06 17:59:09 - mesas_comandas
+16/06 17:59:09 - LPRINT
+16/06 17:59:09 - LISTA DE IMPRESSORAS CARREGADA 4
+16/06 17:59:09 - carregarImp
+16/06 17:59:09 - objetos
+16/06 17:59:09 - produtos_gerenciamento_de_estoque
+16/06 17:59:09 - # status 100%
+16/06 17:59:17 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9332"}
+16/06 17:59:17 - LISTA DE IMPRESSORAS
+16/06 17:59:17 - IMPRESSORA CAIXA 7 => TCP:192.168.88.200
+16/06 17:59:17 - impressora test 192.168.88.200
+16/06 17:59:17 - impressora test 9100
+16/06 17:59:18 - impressora test 2 => st 1
+16/06 17:59:18 - impressora test 4 ck
+16/06 17:59:18 - impressora test 5 ck  ok
+16/06 17:59:18 - impressora test 6 final
+16/06 17:59:18 - ABRIR BANCO DE DADOS
+16/06 17:59:18 - OK BANCO DE DADOS
+16/06 17:59:18 - SET IMPRESSORA 7
+16/06 17:59:18 - ENVIANDO IMPRESSAO
+16/06 17:59:18 - prn => PRN_IP_TEST.cfg(192.168.88.200,9100)
+16/06 17:59:18 - cfg ok
+16/06 17:59:18 - prn => PRN_IP_TEST.Open()
+16/06 17:59:18 - prn => PRN_IP_TEST.check()
+16/06 17:59:18 - chk ok
+16/06 17:59:18 - IMPRESSORA OK
+16/06 17:59:19 - ERRO: FALHA NA IMPRESSORA
+16/06 17:59:19 - FALHA NA IMPRESSORA
+16/06 17:59:19 - ERRO NO PROCESSAMENTO DO PEDIDO 9332
+16/06 17:59:19 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9332"}
+
+ t:2,047 => ERRO NO PROCESSAMENTO DO PEDIDO 9332 -> 3

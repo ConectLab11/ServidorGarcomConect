@@ -1,0 +1,254 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 01/08/2011
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=tabvalor.pdx
+disableMenu=0
+telalargura=830
+telaaltura=0
+Posicionar=1
+whereexterno=mygroup='tabelaunkape'
+solicitante=cf log
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,+Aereo Pequenas Encomendas, geral, 0123456789, 9, 25,a
+o2=nil,+Tarifas, tarifas , 0123456789, 9, 23,a
+
+#
+# Parametros de tela
+#
+ 
+[geral]
+tab=Aereo Pequenas Encomendas
+comentario=Tabela para calculo de fretes
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=90
+forcarleftmask=90
+nobrowse=1
+altura=200
+largura=400
+foco=descr
+t0=Descrição:,descr,c,50,410,,
+h0=Descrição completa
+t1=Validade:,validade,d,10,80,,
+h1=Prazo de validade
+t2=linha-25
+t3=coluna+320
+t4=forcarleftmask=150
+t5=linha+25
+#Transporte Rodoviário:,tipotab,sn,3,30,,
+t6=forcarleftmask=150
+t7=coluna-320
+t8=Taxas#007E7E7E\text_align_justify.png,,,,550, ,
+t9=Coleta Capital:,coleta,f,11,84,,
+t10=linha-25
+t11=coluna+160
+t12=até (kg):,actn20,e,6,60,,
+t13=linha-25
+t14=coluna+160
+t15=Excedente:,actn40,f,11,84,,
+t16=coluna-320
+
+t17=Coleta Interior:,faixa_1,f,11,84,,
+t18=linha-25
+t19=coluna+160
+t20=até (kg):,bctn20,e,6,60,,
+t21=linha-25
+t22=coluna+160
+t23=Excedente:,bctn40,f,11,84,,
+t24=coluna-320
+
+t25=Entrega Capital:,entrega,f,11,84,,
+t26=linha-25
+t27=coluna+160
+t28=até (kg):,cctn20,e,6,60,,
+t29=linha-25
+t30=coluna+160
+t31=Excedente:,cctn40,f,11,84,,
+t32=coluna-320
+
+t33=Entrega Interior:,faixa_2,f,11,84,,
+t34=linha-25
+t35=coluna+160
+t36=até (kg):,dctn20,e,6,60,,
+t37=linha-25
+t38=coluna+160
+t39=Excedente:,dctn40,f,11,84,,
+t40=coluna-320
+
+t41=Entrega Emergencial:,redespacho,f,11,84,,
+t42=linha-25
+t43=coluna+160
+t44=até (kg):,bate_50,e,6,60,,
+t45=linha-25
+t46=coluna+160
+t47=Excedente:,bate_100,f,11,84,,
+t48=coluna-320
+t49=linha-15
+t50=Geral#007E7E7E\text_align_justify.png,,,,550, ,
+t51=ADValorem:,advalorem,p,11,84,,
+t52=GRIS:,gris,p,11,84,,
+t53=TDE:,tde,p,11,84,,
+t54=Taxas:,despacho,f,11,84,,
+t55=linha-15
+t56=Outros#007E7E7E\tag.png,,,,530, ,
+t57=forcarleftmask=100
+t58=Devolução:,devolucao,p,11,60,,
+h58=Porcentagem do frete quando for devolução
+t59=linha-25
+t60=coluna+160
+t61=Reentrega:,reentrega,p,11,60,,
+h61=Porcentagem do frete quando for reentrega
+t62=coluna+160
+t63=linha-25
+t64=Compartilhada:,compartilhada,sn,3,30,,
+h64=Compartilhar esta tabela com os clientes sem tabela.
+
+[tarifas]
+tab=TARIFAS PARA CALCULO
+comentario=
+db=tabaereo
+ordem=id
+chave=tabela
+chavePrincipal=id
+relacaokey=tabela,$IDORIGEM
+tituloWidth=35
+where=tabela="$IDORIGEM"
+c0=Região,produto,c,100,250,,
+Rlt=
+msg=
+altura=540
+largura=600
+forcarleftmask=80
+foco=faixa_1
+t0=Região:,produto=@MG-PR-RJ-SC;DF-ES-GO-MS-RS;BA-MT-TO;AL-CE-PB-PE-RN-SE;AC-AM-AP-MA-PA-PI-RO-RR;[TAXAS]São Jose Dos Campos-São Jose do Rio Preto-Sorocaba-Ribeirão Preto;[TAXAS]Demais Cidades,l,50,300,,
+t1=#coluna+110
+t2=#linha-25
+t3=#Cidade:,cidade,c,50,250,@B,<#17>geral.rcl{ufsigla=uf/"Interior"},
+t4=#coluna-110
+t5=#Utilizar Tarifas de:#007E7E7E\color_swatch_2.png,,,,550, ,
+t6=#UF:,siglas,c,2,30,@BU,estado2.rcl,
+t7=#coluna+110
+t8=#linha-25
+t9=#Cidade:,produto,c,50,250,@B,<#17>geral.rcl{ufsigla=siglas/"Interior"},
+t10=#coluna-110
+t11=Pesos#007E7E7E\color_swatch_2.png,,,,550, ,
+t12=1Kg:,faixa_1,f,11,84,,
+t13=2Kg:,faixa_2,f,11,84,,
+t14=3Kg:,faixa_3,f,11,84,,
+t15=4Kg:,faixa_4,f,11,84,,
+t16=5Kg:,faixa_5,f,11,84,,
+t17=6Kg:,faixa_6,f,11,84,,
+t18=7Kg:,faixa_7,f,11,84,,
+t19=8Kg:,faixa_8,f,11,84,,
+t20=9Kg:,faixa_9,f,11,84,,
+t21=10Kg:,faixa_10,f,11,84,,
+t22=11Kg:,faixa_11,f,11,84,,
+t23=12Kg:,faixa_12,f,11,84,,
+t24=linha-300
+t25=coluna+160
+t26=13Kg:,faixa_13,f,11,84,,
+t27=14Kg:,faixa_14,f,11,84,,
+t28=15Kg:,faixa_15,f,11,84,,
+t29=16Kg:,faixa_16,f,11,84,,
+t30=17Kg:,faixa_17,f,11,84,,
+t31=18Kg:,faixa_18,f,11,84,,
+t32=19Kg:,faixa_19,f,11,84,,
+t33=20Kg:,faixa_20,f,11,84,,
+t34=21Kg:,faixa_21,f,11,84,,
+t35=22Kg:,faixa_22,f,11,84,,
+t36=23Kg:,faixa_23,f,11,84,,
+t37=24Kg:,faixa_24,f,11,84,,
+
+t38=linha-300
+t39=coluna+160
+t40=25Kg:,faixa_25,f,11,84,,
+t41=26Kg:,faixa_26,f,11,84,,
+t42=27Kg:,faixa_27,f,11,84,,
+t43=28Kg:,faixa_28,f,11,84,,
+t44=29Kg:,faixa_29,f,11,84,,
+t45=30Kg:,faixa_30,f,11,84,,
+t46=31Kg:,faixa_31,f,11,84,,
+t47=32Kg:,faixa_32,f,11,84,,
+t48=33Kg:,faixa_33,f,11,84,,
+t49=34Kg:,faixa_34,f,11,84,,
+t50=35Kg:,faixa_35,f,11,84,,
+validacao=campoPreenchido(produto)
+
+[calculo]
+versao=6
+x0=precalc:coleta{Tem Coleta:,ck,0,,0}
+x1=precalc:redespacho{Tem Redespacho:,ck,0,,0}
+x2=precalc:entrega{Tem Entrega:,ck,0,,0}
+x3=fretepeso:pesoCidade[TAXAS_FIND,$faixas:frt_unkape.tbl]
+x4=itr:porcentNfeValor[tde]
+x5=outros:0
+x6=outros:taxaComPesoExcedente[coleta,coleta,actn20,actn40]
+x7=outros:taxaComPesoExcedente[redespacho,redespacho,bctn20,bctn40]
+x8=outros:taxaComPesoExcedente[entrega,entrega,cctn20,cctn40]
+x9=despacho:tabelaValor[despacho]
+x10=gris:porcentNfeValor[gris]
+x11=pedagio:tabelaValor[pedagio]
+x12=seguro:porcentNfeValor[advalorem]
+
+[faixas]
+f0=faixa_1{0:1}
+f1=faixa_2{1.001:2}
+f2=faixa_3{2.001:3}
+f3=faixa_4{3.001:4}
+f4=faixa_5{4.001:5}
+f5=faixa_6{5.001:6}
+f6=faixa_7{6.001:7}
+f7=faixa_8{7.001:8}
+f8=faixa_9{8.001:9}
+f9=faixa_10{9.001:10}
+f10=faixa_11{10.001:11}
+f11=faixa_12{11.001:12}
+f12=faixa_13{12.001:13}
+f13=faixa_14{13.001:14}
+f14=faixa_15{14.001:15}
+f15=faixa_16{15.001:16}
+f16=faixa_17{16.001:17}
+f17=faixa_18{17.001:18}
+f18=faixa_19{18.001:19}
+f19=faixa_20{19.001:20}
+f20=faixa_21{20.001:21}
+f21=faixa_22{21.001:22}
+f22=faixa_23{22.001:23}
+f23=faixa_24{23.001:24}
+f24=faixa_25{24.001:25}
+f25=faixa_26{25.001:26}
+f26=faixa_27{26.001:27}
+f27=faixa_28{27.001:28}
+f28=faixa_29{28.001:29}
+f29=faixa_30{29.001:30}
+f30=faixa_31{30.001:31}
+f31=faixa_32{31.001:32}
+f32=faixa_33{32.001:33}
+f33=faixa_34{33.001:34}
+f34=faixa_35{34.001:35}
+f35=faixa_35{35}

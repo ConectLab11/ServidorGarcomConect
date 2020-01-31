@@ -1,0 +1,158 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 20/02/2014
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=tabvalor.pdx
+disableMenu=0
+telalargura=830
+telaaltura=0
+Posicionar=1
+whereexterno=mygroup='tabelamedical2'
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,+Medical 2, tabelamedical2, 0123456789, 9, 25,a
+o2=nil,+Tarifas, tarifas , 0123456789, 9, 23,a
+
+#
+# Parametros de tela
+#
+ 
+[tabelamedical2]
+tab=TABELA MEDICAL 2
+comentario=Tabela para calculo de fretes, ultilizado pelas companhias aereas.
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=90
+forcarleftmask=90
+nobrowse=1
+altura=200
+largura=400
+foco=descr
+t0=Descrição:,descr,c,50,410,,
+h0=Descrição completa
+t1=Validade:,validade,d,10,80,,
+h1=Prazo de validade
+t2=#
+t3=Generalidades#007E7E7E\text_align_justify.png,,,,500, ,
+t4=#Entrega Cap.:,entrega,f,11,84,,
+t5=#linha-25
+t6=#coluna+160
+t7=#até (kg):,faixa_1,e,6,60,,
+t8=#linha-25
+t9=#coluna+160
+t10=#Excedente:,faixa_2,f,11,84,,
+t11=#coluna-320
+t12=#Redespacho:,redespacho,f,11,84,,
+t13=#linha-25
+t14=#coluna+160
+t15=#até (kg):,faixa_3,e,6,60,,
+t16=#linha-25
+t17=#coluna+160
+t18=#Excedente:,faixa_4,f,11,84,,
+t19=#coluna-320
+t20=#Coleta:,coleta,f,11,84,,
+t21=Ad.Valorem:,advalorem,p,11,84,,
+t22=GRIS:,gris,p,11,84,,
+t23=#linha-25
+t24=#coluna+180
+t25=#Taxa por Km rodado:,adicional,f,11,84,,
+t26=#forcarleftmask=90
+t27=#coluna-180
+t28=Outros#007E7E7E\text_align_justify.png,,,,500, ,
+t29=Devolução:,devolucao,p,11,60,,
+h29=Porcentagem do frete quando for devolução
+t30=linha-25
+t31=coluna+160
+t32=Reentrega:,reentrega,p,11,60,,
+h32=Porcentagem do frete quando for reentrega
+t33=linha-25
+t34=coluna+160
+t35=forcarleftmask=120
+t36=Compartilhada:,compartilhada,sn,3,30,,
+h36=Compartilhar esta tabela com os clientes sem tabela.
+
+[tarifas]
+tab=TARIFAS PARA CALCULO
+comentario=
+db=tabaereo
+ordem=siglas,uf,cidade
+rcl=tabaereo.rcl
+chave=tabela
+chavePrincipal=id
+relacaokey=tabela,$IDORIGEM
+tituloWidth=35
+where=tabela="$IDORIGEM"
+c0=Sigla,siglas,c,3,40,,
+c1=UF,uf,c,2,30,,
+c2=Cidade,cidade,c,50,150,,
+c3=Tarifa/nMínima,minima,f,11,70,,
+c4=Até 25Kg,faixa_1,f,11,100,,
+c5=Até 50Kg,faixa_2,f,11,100,,
+c6=Até 300Kg,faixa_3,f,11,100,,
+c7=Até 500Kg,faixa_4,f,11,100,,
+c8=Até 1000Kg,faixa_5,f,11,100,,
+c9=Acima,acima,f,11,100,,
+Rlt=
+msg=
+altura=450
+largura=600
+forcarleftmask=120
+foco=siglas
+t0=Sigla:,siglas,c,3,40,@U,
+t1=coluna+80
+t2=linha-25
+t3=UF:,uf,c,2,30,@BU,estado2.rcl,
+t4=coluna+110
+t5=linha-25
+t6=Cidade:,cidade,c,50,220,@B,<#17>geral.rcl{ufsigla=uf/"Interior"},
+t7=coluna-190
+t8=Generalidades#007E7E7E\color_swatch_2.png,,,,550, ,
+t9=forcarleftmask=100
+t10=Tarifa mínima:,minima,f,11,84,,
+t11=#linha-25
+t12=#coluna+180
+t13=#forcarleftmask=120
+t14=#Peso mínimo(Kg):,qtde,e,11,60,,
+t15=#coluna-180
+t16=Tarifas por (Kg)#007E7E7E\color_swatch_2.png,,,,550, ,
+t17=Até 25Kg:,faixa_1,f,11,84,,
+t18=Até 50Kg:,faixa_2,f,11,84,,
+t19=Até 300Kg:,faixa_3,f,11,84,,
+t20=Até 500Kg:,faixa_4,f,11,84,,
+t21=Até 1000Kg:,faixa_5,f,11,84,,
+t22=Acima:,acima,f,11,84,,
+t23=#Outros#007E7E7E\color_swatch_2.png,,,,550, ,
+t24=#Prazo:,prazo,i,3,40,,
+validacao=campoPreenchido(uf),campoPreenchido(cidade)
+
+[calculo]
+versao=6
+x0=fretepeso:pesoCidade[KG,faixa_1{0:25},faixa_2{25.01:50},faixa_3{50.01:300},faixa_4{300.1:500},faixa_5{500.1:1000},acima{1000}]
+x1=seguro:porcentNfeValor[advalorem]
+x2=gris:porcentNfeValor[gris]
+
+
+

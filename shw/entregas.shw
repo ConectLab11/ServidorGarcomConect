@@ -1,0 +1,55 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# ConectLab Informatica Ltda
+# Data: 23/08/2018
+#
+#
+# a todos
+
+[arquivo]
+modulo=ENTREGAS
+nivelprincipal=0
+nivelauxiliar=0
+pdx=
+
+[Opcoes]
+o0=entregas, 0123456789, 1, 0, a
+
+[entregas]
+o0=nil, Entregadores, entregadores, 0123, 1, 13:21,a
+
+
+#
+# Parametros de tela
+#
+
+[entregadores]
+tab=LISTA DE ENTREGADORES
+comentario=
+db=cadflags
+db2=cadastro
+ordem=cadastro.nome
+campos=cadflags.id,cadflags.valor1,cadflags.valor2,cadastro.codigo,cadastro.nome
+relacao=
+chave=id
+chaveprincipal=id
+relacaokey=idfiltro,$IDORIGEM
+where=cadflags.idfiltro="$IDORIGEM" and cadastro.codigo=cadflags.idcliente
+forcarcoluna=0
+forcarleftmask=110
+nobrowse=0
+c0=Código,codigo,c,10,60,,
+c1=Nome,nome,c,30,250,,
+c2=Diária,valor1,f,13,70,,
+c3=Porção,valor2,p,13,70,,
+altura=300
+largura=450
+foco=idcliente
+t0=linha=30
+t1=Cadastro:,idcliente,i,6,50,,?cadastro.rcl,
+t2=Diária:,valor1,f,11,90,,
+t3=linha+20
+t4=label|Porção da taxa de entrega
+t5=linha+10
+t6=Porção:,valor2,p,13,90,,

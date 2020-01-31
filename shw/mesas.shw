@@ -1,0 +1,558 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# ConectLab Informatica Ltda
+# Data: 28/01/2010
+#
+#
+# a todos
+
+[arquivo]
+modulo=MESAS
+nivelprincipal=0
+nivelauxiliar=0
+pdx=
+
+[Opcoes]
+o0=Mesas, 0123456789, 1, 0, exb
+
+[Mesas]
+o0=nil, Geral, geral, 0123, 9,15,x
+o1=nil, Atendentes, atendente, 0123, 0, 11,x 
+o2=nil, Produtos do Dia, produtosAuto, 0123, 1, 17,x
+o3=nil, Serviços (CF-e SAT), produtosServ, 0123, 1, 17,x
+o4=Delivery, Local de Partida, googlePartida, 0123, 9, 15,x
+o5=Delivery, Entregadores, geralEntrega, 0123, 9,15,x
+o6=Delivery,Tabela de Taxas, tabfretevendas, 0123, 1, 12,x
+o7=Delivery,Tabela KM Simples, tabelaKm, 0123, 1, 12,x
+o8=Delivery,Tabela KM Avançada, tabelaDeliveryKm, 0123, 1, 12,x
+o9=insert(shw\printprn.shw)
+o10=Ajustes, Cupom, vendacupom, 0123, 9, 9,x
+o11=Ajustes, Mensagens, vendamensagens, 0123, 9, 9,x
+o12=Ajustes, Mesas e Comandas, ConfigMesa, 0123, 9, 9,x
+o13=Ajustes, Bandeiras/ Cartão, bandcard, 0123, 0, 23,x
+o14=nil, Comandas, comandasBloqueadas, 0123, 0, 23, b
+o15=Mobile, Geral, gmobile, 0123, 9, 9,x
+o16=Mobile, Aparelhos, lmobile, 0123, 9, 9,x
+#
+# Parametros de tela
+#
+
+[geral]
+tab=GERALb
+comentario=
+db=rclsoft
+ordem=empresa
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=Codigo,id,+,5,60,,
+c1=Empresa,empresa,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=410
+largura=460
+foco=consumidor_mesa
+t0=#Cadastro Relacionado#007E7E7E\house.png,,,,410, ,
+t1=forcarleftmask=170
+t2=coluna-30
+t3=Cadastro:,consumidor_mesa,i,6,60,,cadastrx.rcl,
+h3=Cadastro Relacionado a Venda por Mesa||{,,,clnavy}(F2) Opções
+t4=Atendente:,atendente,i,3,30,,vendedo_.rcl,
+h4=Atendente / Garçom
+
+t5=Tx de Serviço:,taxaServ,p,11,84,,
+h5=Taxa do Atendente
+t6=#Tx de entrega p/ Km:,taxaKm,f,11,84,,
+h6=#Taxa de entrega por Kilometro
+t7=#Tx mínima p/ Km:,taxaMini,f,11,84,,
+h7=#Taxa minima para entrega
+
+#t6=Núm. Máximo de Mesas:,maxMesa,i,15,150,,
+
+[atendente]
+tab=ATENDENTES
+db=vendedor
+ordem=
+chave=id
+chaveprincipal=id
+c0=Código,id,+,8,60,,
+c1=Nome,nome,c,50,300,,
+#c2=Comissão,comissao,p,11,70,,
+c2=Ativo,ativo,sn,3,30,,
+Rlt=cupons.vendedo_
+msg=VENDA(S)
+altura=400
+largura=470
+foco=nome
+t0=Código:,id,+,4,30,{rcl^},
+t1=Nome:,nome,c,50,300,,
+h1=Nome do vendedor
+t2=Cadastro:,cadastro,i,6,60,,cadastrx.rcl,
+h2=Cadastro relacionado a este vendedor<F2>
+t3=Comissão:,comissao,p,11,60,,
+h3=Porcentagem de comissão do vendedor
+t4=Ativo:,ativo=Sim,sn,3,30,,
+h4=Vendedor esta ativo ? Sim/Não
+t5=Code:,code,c,10,100,,
+t6=Cores#007E7E7E\color_swatch_2.png,,,,400, ,
+t7=Cor:,cor1=@$D9D9D9D9,color,3,40,,
+h7=Cor para destacar a Opção do Grupo
+t8=linha+5
+t9=Fonte:,cor2=@$D9D9D9D9,color,3,40,,
+h9=Cor da Fonte
+
+
+
+validacao=campoPreenchido(nome)
+
+[bandcard]
+tab=BANDEIRAS DE PAGAMENTO COM CARTÃO
+db=set_mult
+ordem=id_1
+chave=id
+chaveprincipal=id
+c0=Ordem,id_1,i,3,50,,
+c1=Descrição,descricao,c,100,400,,
+nobrowse=0
+relacaokey=nome,"BANDEIRA_PAGTO_CARTAO"
+autoIncluir=0
+where=nome='BANDEIRA_PAGTO_CARTAO'
+altura=200
+largura=440
+foco=id_1
+forcarleftmask=90
+t0=Ordem:,id_1,i,3,40,,
+h0=Ordem da Lista
+t1=Descrição:,descricao,c,100,300,,
+h1=Descrição da Bandeira para pagamento com Cartão
+
+[googlePartida]
+tab=PONTO DE PARTIDA PARA CALCULO DE DISTANCIA
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Id,id,i,3,50,,
+c1=Descrição,descricao,c,100,400,,
+nobrowse=1
+relacaokey=nome,"GOOGLE_PONTO_DE_PARTIDA"
+autoIncluir=1
+where=nome='GOOGLE_PONTO_DE_PARTIDA'
+altura=200
+largura=440
+foco=codigo
+forcarleftmask=90
+t0=CEP:,codigo,c,9,70,@B$fcep(),cep(codigo;txt_5;txt_4;txt_2;txt_3),
+h0=Número do CEP
+t1=Endereço:,txt_5,c,50,300,,
+h1=Endereço Completo
+t2=Bairro:,txt_4,c,50,300,,
+h2=Nome do Bairro
+t3=UF:,txt_2,c,2,30,@BU,estado2.rcl,
+h3=Sigla do Estado
+t4=Cidade:,txt_3,c,50,300,@B,<#17>geral.rcl{ufsigla=txt_2/""},
+h4=Nome da Cidade
+t5=País:,txt_1,c,50,300,@BU,paises.rcl,
+h5=Nome do Paises
+t6=linha+30
+t7=label|Chave do Servidor Google de Geolocalização|,,clnavy
+t8=KEY:,descricao,c,50,300,,
+
+
+
+[tabfretevendas]
+tab=TABELA DE TAXA DE ENTREGA POR REGIÃO
+comentario=
+db=tabefret
+ordem=destino1,descr
+campos=id,if((destino1="") or isnull(destino1),descr,concat(destino1,if(faixa_1>0," de ",""),if(faixa_1>0,faixa_1,""),if(faixa_2>0," até ",""),if(faixa_2>0,faixa_2,""))) as descricao,descr,destino1,faixa_1,faixa_2,clientefinal,advalorem,outros,minimo
+rcl=
+relacao=
+chave=id
+chaveprincipal=id
+#c0=Código,id,c,10,60,,
+c0=Descrição,descricao,c,50,350,,
+c1=Taxas,outros,f,11,84,,
+altura=320
+largura=500
+foco=descr
+forcarleftmask=110
+t0=[!3]Descrição/Bairro:,descr,c,50,350,,
+h0=Descrição da tabela de frete
+t1=[3]Bairro:,descr,c,50,350,@U,
+h1=Descrição da tabela de frete
+t2=[!3]Frete Valor:,clientefinal,p,11,50,,
+h2=Porcentagem para cálculo do frete pelo valor da venda
+t3=[!3]ADvalorem:,advalorem,p,11,50,,
+h3=Porcentagem para cálculo do seguro
+t4=Taxa:,outros,f,11,84,,
+h4=Outras taxas
+t5=[!3]Frete mínimo:,minimo,f,11,84,,
+h5=Valor mínimo do frete
+t6=[3]Especificos#007E7E7E\house.png,,,,410, ,
+t7=[3]Endereço:,destino1,c,50,350,@U,
+h7=Endereço da entrega
+t8=[3]Número De:,faixa_1,i,5,60,,
+h8=Número inicial
+t9=[3]Número Até:,faixa_2,i,5,60,,
+h9=Número final
+
+[vendacupom]
+tab=AJUSTES DA IMPRESSÃO DO CUPOM
+comentario=
+db=rclsoft
+ordem=empresa
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=Codigo,id,+,5,60,,
+c1=Empresa,empresa,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=410
+largura=460
+foco=consumidor
+t0=Cadastro Relacionado#007E7E7E\house.png,,,,410, ,
+t1=forcarleftmask=0
+t2=coluna-30
+t3=Consumidor:,consumidor,i,6,60,,cadastrx.rcl,
+h3=Cadastro Relacionado a Venda ao Consumidor||{,,,clnavy}(F2) Opções
+t4=Mesa,consumidor_mesa,i,6,60,,cadastrx.rcl,
+h4=Cadastro Relacionado a Venda por Mesa||{,,,clnavy}(F2) Opções
+
+#t4=linha-5
+t5=Cabeçalho do Cupom#007E7E7E\house.png,,,,410, ,
+t6=forcarleftmask=10
+t7=,cup_cabeca,t,0,400x70,,
+h7=Informações para Imprimir no Cabeçalho do Cupom|Exemplo: Nome da empresa/Endereço/Telefone||Variaveis|<FF> = Ignora linha|<B> = Ativar Negrito|<b> = Desativar Negrito|<G> = Ativar Fonte Grande|<N> = Ativar Fonte Normal|<c> = Ativar Fonte Pequena
+t8=linha-15
+t9=Rodapé do Cupom#007E7E7E\house.png,,,,410, ,
+t10=,cup_msg,t,0,400x70,,
+h10=Informações para imprimir no rodapé do Cupom@Variaveis@{,8,,clnavy}<FF> = Ignora linha@<B> = Ativar Negrito@<b> = Desativar Negrito@<G> = Ativar Fonte Grande@<N> = Ativar Fonte Normal@<c> = Ativar Fonte Pequena
+t11=linha-15
+t12=Outros#007E7E7E\house.png,,,,410, ,
+t13=forcarleftmask=100
+t14=Título:,cup_titulo,c,40,330,,
+h14=Texto para Imprimir no Cabeçalho do Cupom|Variaveis|{,9,n,clgreen}[AUTO_VENDA] = Imprime PEDIDO DE VENDA ou ORCAMENTO
+t15=Loja:,cup_loja,i,6,60,,
+h15=Código da Loja
+t16=linha-25
+t17=coluna+130
+t18=Colunas:,cup_coluna,i,3,40,,
+h18=Quantidade de Colunas a Impressora Suporta.
+t19=linha-25
+t20=coluna+110
+t21=forcarleftmask=150
+t22=Avanço do papel:,cup_avanco,i,3,40,,
+h22=Quantidade de linhas para Avançar o Papel.
+t23=coluna-200
+t24=Impressão Compactada,cup_compact,sn,3,30,,
+h24=Reduz a quantidade de linhas nas Informações do Cliente.
+t25=#Vendedor fixo:,vendFixo,i,6,50,,?cadastro.rcl,
+
+[ConfigMesa]
+tab=CONTROLES
+db=set_mult
+ordem=id_1
+chave=id
+chaveprincipal=id
+c0=Ordem,id_1,i,3,50,,
+c1=Descrição,descricao,c,100,400,,
+nobrowse=1
+relacaokey=nome,"CONTROLE_INTERNO_DE_COMANDAS"
+autoIncluir=1
+where=nome='CONTROLE_INTERNO_DE_COMANDAS'
+altura=200
+largura=440
+foco=id_1
+forcarleftmask=190
+t0=Mapa de Mesas#007E7E7E\layout_select.png,,,,410, ,
+t1=Ativo:,ativo,sn,3,30,,
+t2=Mesas:,id_1,i,4,50,,
+t3=linha-25
+t4=coluna+80
+t5=até,id_2,i,4,50,,
+t6=linha+5
+t7=coluna-80
+t8=Mesas por Linhas:,txt_2,i,2,40,,
+t9=Mesas por Colunas:,txt_3,i,2,40,,
+t10=Tamanho do Botão:,id_5,i,3,40,,
+t11=Comandas#007E7E7E\layout_select.png,,,,410, ,
+t12=Comandas:,id_3,i,9,70,,
+t13=linha-25
+t14=coluna+100
+t15=até,id_4,i,9,70,,
+t16=coluna-100
+t17=Altura:,txt_a,i,3,40,,
+t18=Largura:,txt_b,i,3,40,,
+t19=Tamanho Fonte:,valor_2,i,2,40,,
+t20=Outros#007E7E7E\layout_select.png,,,,410, ,
+t21=Tempo de espera:,txt_1,h,5,50,,
+t22=Mostrar todas mesas no celular:,valor_1,sn,3,30,,
+
+[produtosAuto]
+tab=Produtos com inclusao automatica no pedido
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Dia,txt_2,c,10,55,,
+c1=Hora,&concate(txt_3|| |txt_4),c,11,70,,
+c2=Código,txt_1,c,10,50,,
+c3=Descrição,&rclArq(txt_1|estoque3.rcl),c,255,110,,
+c4=Qtde,valor,e,10,45,,
+c5=Preço,aliquota,f,10,50,,
+c6=Ativo,ativo,sn,3,30,,
+nobrowse=0
+relacaokey=nome,"GRUPO_PRODUTOS_AUTOMATICOS"
+autoIncluir=0
+where=nome='GRUPO_PRODUTOS_AUTOMATICOS'
+altura=530
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=linha=30
+t1=Dia:,txt_2=@;Todos;Segunda;Terca;Quarta;Quinta;Sexta;Sabado;Domingo,l,50,130,,
+t2=Inicio:,txt_3,c,5,50,@BU,<#10>geral3.rcl,
+t3=Final:,txt_4,c,5,50,@BU,<#10>geral3.rcl,
+t4=Ativo:,ativo=Sim,sn,3,30,,
+t5=linha+15
+t6=label|Configuração do Produto|,,clnavy
+t7=linha+5
+t8=frame|380|110
+t9=linha+20
+t10=Código:,txt_1,i,10,60,,?estoque3.rcl,
+t11=Qtde:,valor,e,9,84,,
+t12=Preço:,aliquota,f,11,84,,
+
+t13=linha+30
+t14=label|Preço Diferenciado|,,clgreen,B
+t15=label|Preço|,,,,325,310
+t16=linha-10
+t17=frame|380|110
+t18=linha+30
+t19=Opção 2:,txt_5,c,255,200,,
+t20=linha-25
+t21=coluna+220
+t22=,valor_1,f,11,80,,
+t23=coluna-220
+t24=Opção 3:,txt_6,c,255,200,,
+t25=linha-25
+t26=coluna+220
+t27=,valor_2,f,11,80,,
+t28=coluna-220
+
+
+[entregador]
+tab=Entregadores
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Código,id_1,i,3,60,,
+#c1=Nome,txt_1,c,255,240,,
+nobrowse=0
+relacaokey=nome,"pve_entregadores"
+autoIncluir=0
+where=nome='pve_entregadores'
+altura=280
+largura=440
+foco=id_1
+forcarleftmask=90
+t0=Grupo:,id_1,i,4,60,,categori.rcl,
+validacao=campoPreenchido(id_1)
+
+[geralEntrega]
+tab=Geral
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Código,id_1,i,3,60,,
+#c1=Nome,txt_1,c,255,240,,
+nobrowse=1
+autoIncluir=1
+relacaokey=nome,"pve_entregadores"
+autoIncluir=0
+where=nome='pve_entregadores'
+altura=280
+largura=440
+foco=id_1
+forcarleftmask=90
+t0=label|Grupo do Cadastro de Entregadores
+t1=<,id_1,i,4,50,,categori.rcl,
+h1=Código do Grupo que os Cadastros de Entregadores fazem parte.
+t2=linha+10
+t3=label|Tempo Limite de Entrega
+t4=<,txt_1,h,5,50,,
+h4=Tempo de Limite de Entrega
+validacao=campoPreenchido(id_1)
+
+[tabelaKm]
+tab=TABELA SIMPLES DE TAXAS POR KILOMETRAGEM
+comentario=
+db=rclsoft
+ordem=empresa
+chave=id
+chaveprincipal=id
+c0=Codigo,id,+,5,60,,
+c1=Empresa,empresa,c,50,300,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=410
+largura=460
+foco=taxaKm
+t0=linha=30
+forcarleftmask=150
+t1=Tx de entrega por Km:,taxaKm,f,11,84,,
+h1=Taxa de entrega por Kilometro
+t2=Tx mínima por Km:,taxaMini,f,11,84,,
+h2=Taxa minima para entrega
+
+[tabelaDeliveryKm]
+tab=TABELA AVANÇADA DE TAXAS POR KILOMETRAGEM
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Até (KM),aliquota,e,11,80,,
+c1=Taxa,valor,f,11,84,,
+nobrowse=0
+relacaokey=nome,"TABELA_DELIVERY_KILOMETRO"
+autoIncluir=0
+where=nome='TABELA_DELIVERY_KILOMETRO'
+altura=180
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Até (KM):,aliquota,e,11,84,,
+h0=Distancia em KM
+t1=Taxa:,valor,f,11,84,,
+h1=Taxa de entrega
+
+[produtosServ]
+tab=PRODUTOS TIPO SERVIÇOS PARA SAT DIFERENCIAR
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Código,txt_1,c,10,80,,
+c1=Produto,&rclArq(txt_1|estoque3.rcl),c,255,250,,
+nobrowse=0
+relacaokey=nome,"SAT_PRODUTOS_TIPO_SERVICOS"
+autoIncluir=0
+where=nome='SAT_PRODUTOS_TIPO_SERVICOS'
+altura=180
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=linha=30
+t1=Código:,txt_1,i,10,60,,?estoque3.rcl,
+
+[comandasBloqueadas]
+tab=LISTA DE COMANDAS BLOQUEADAS
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Comanda,id_1,i,9,150,,
+c1=Motivo,txt_1,c,255,250,,
+nobrowse=0
+relacaokey=nome,"LISTA_DE_COMANDAS_BLOQUEADAS"
+autoIncluir=0
+where=nome='LISTA_DE_COMANDAS_BLOQUEADAS'
+largura=600
+altura=200
+foco=id_1
+forcarleftmask=90
+t0=linha=30
+t1=Comanda:,id_1,i,9,160,,
+t2=Motivo:,txt_1,c,255,400,,
+
+[gmobile]
+tab=AJUSTES MOBILE
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Comanda,id_1,i,9,150,,
+c1=Motivo,txt_1,c,255,250,,
+nobrowse=1
+relacaokey=nome,"MOBILE_GERAL_AJUSTES"
+autoIncluir=1
+where=nome='MOBILE_GERAL_AJUSTES'
+largura=600
+altura=200
+foco=txt_1
+forcarleftmask=180
+t0=linha=30
+t1=Nome da Rede Wifi:,txt_1,c,255,250,,
+t2=Suporte de Impressão:,id_2,sn,3,30,,
+t3=Desativar Pedido Rápido:,id_3,sn,3,30,,
+t4=Envio p/ Produção automático:,id_4,sn,3,30,,
+t5=TCP/IP Total:,id_5,sn,3,30,,
+
+[vendamensagens]
+tab=MENSAGENS DO CUPOM
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Comanda,id_1,i,9,150,,
+c1=Motivo,txt_1,c,255,250,,
+nobrowse=1
+relacaokey=nome,"CUPOM_OUTRAS_MENSAGENS"
+autoIncluir=1
+where=nome='CUPOM_OUTRAS_MENSAGENS'
+altura=200
+largura=440
+foco=txt_1
+forcarleftmask=20
+t0=label|Ticket de Espera|,,clnavy
+t1=linha+10
+t2=,txt_1,t,0,410x90,@,,
+t3=linha+15
+t4=label|Ticket de Saída|,,clnavy
+t5=linha+10
+t6=,txt_2,t,0,410x90,@,,
+
+[lmobile]
+tab=LISTA DE MOBILE
+comentario=
+db=regtermi
+rcl=
+chave=id
+chaveprincipal=id
+ordem=id
+where=irq='1011'
+c0=Terminal,id,c,20,60,,
+c1=Versão,versao,c,15,60,,
+c2=Nome,descricao,c,50,120,,
+c3=OS,os,c,50,100,,
+c4=Bloqueado,bloqueado,sn,3,80,,
+c5=ID,local,c,20,150,,
+altura=380
+largura=480
+BotaoExcluir=RCL
+BotaoAlterar=
+BotaoIncluir=
+foco=descricao
+t0=Terminal:,id,+,4,30,,
+t1=Descrição:,descricao,c,50,300,,
+t2=Modelo:,modelo,c,50,300,,
+t3=OS:,os,c,100,300,,
+t4=#MACADRESS:,local,c,50,300,,
+t5=#ID_CPU:,modelocpu,c,50,300,,
+t6=Bloqueado:,bloqueado,sn,30,40,,
+
+

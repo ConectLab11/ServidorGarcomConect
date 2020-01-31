@@ -1,0 +1,86 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# ConectLab Informatica Ltda
+# Data: 10/04/2018
+#
+#
+# a todos
+
+[arquivo]
+modulo=IFOOD
+nivelprincipal=0
+nivelauxiliar=0
+pdx=
+
+[Opcoes]
+o0=IFOOD, 0123456789, 1, 0, exb
+
+[IFOOD]
+o0=nil, Geral, geral, 0123, 9,15,x
+o1=nil, API, api, 0123, 9,15,x
+
+[geral]
+tab=GERAL
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Id,id,i,3,50,,
+c1=Descrição,descricao,c,100,400,,
+nobrowse=1
+relacaokey=nome,"PREFERENCIAS_IFOOD_GERAL"
+autoIncluir=1
+where=nome='PREFERENCIAS_IFOOD_GERAL'
+altura=200
+largura=440
+foco=id_2
+forcarleftmask=130
+t0=Vendedor:,id_2,i,3,60,,?cadastro.rcl,
+t1=linha+15
+t2=Tipo de Pagto:,id_3,i,3,40,,tipo.rcl,
+t3=linha+15
+t4=Impressora:,id_1,i,3,40,,printers.rcl,
+t5=linha+15
+t6=Imprimir ao chegar:,id_4,sn,3,30,,
+
+
+[api]
+tab=CONFIGURAÇÃO DA API
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Id,id,i,3,50,,
+c1=Descrição,descricao,c,100,400,,
+nobrowse=1
+relacaokey=nome,"PREFERENCIAS_IFOOD_API"
+autoIncluir=1
+where=nome='PREFERENCIAS_IFOOD_API'
+altura=200
+largura=440
+foco=txt_1
+forcarleftmask=140
+t0=label|Software House|,,clnavy
+t1=linha+10
+t2=Client_id:,txt_1,c,50,280,,
+t3=Client_secret:,txt_2,c,50,280,@##,
+t4=linha+20
+t5=label|Restaurante|,,clnavy
+t6=linha+10
+t7=Merchant_id:,txt_3,c,50,280,,
+t8=Username:,txt_4,c,50,280,,
+t9=Password:,txt_5,c,50,280,@##,
+t10=linha+20
+t11=label|Outros|,,clnavy
+t12=linha+10
+t13=IP do servidor:,txt_6,c,50,280,,
+t14=Delay do polling:,id_1,i,3,60,,
+t15=Sensibilidade:,id_2,i,3,60,,
+t16=Integração:,id_3,sn,3,30,,
+t17=Ativo:,id_4,sn,3,30,,
+
+
+
+
+

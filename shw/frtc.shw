@@ -1,0 +1,64 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 12/12/2003
+#
+#
+# a todos
+# d nota de despesas
+# g agenda
+# m movimento de caixa
+# n cadastro de bancos
+# o plano de contas
+# p pagar
+# q gerenciador de ocorrencias
+# r receber
+# s script inicial
+# t conta caixa
+
+[arquivo]
+modulo=OPÇÕES DE CUSTOS DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+
+[Opcoes]
+o0=Fretes, 0123456789, 9, 0,as
+
+[Fretes]
+o0=Geral, Impostos, impostos, 0123456789, 1, 8,a
+#
+# Parametros de tela
+#
+
+[impostos]
+tab=ALIQUOTA DE IMPOSTOS
+comentario=
+db=nfecfg
+ordem=id
+rcl=empresa.rcl
+chave=id
+chaveprincipal=id
+c0=id,id,+,5,60,,
+c1=xmlienvio,xmlienvio,c,2,2,,
+BotaoIncluir=Não
+BotaoExcluir=Não
+nobrowse=1
+reservado=1
+Rlt=*
+altura=170
+largura=460
+foco=vpis
+forcarleftmask=150
+where=id="1"
+relacaokey=id,"1"
+t0=PIS:,vpis,p,10,84,,
+t1=COFINS:,vcofins,p,10,84,,
+t2=IRPJ:,virpj,p,10,84,,
+t3=CSSL:,vcssl,p,10,84,,
+t4=ISS:,viss,p,10,84,,
+t5=ICMS:,vicms,p,10,84,,
+t6=COM:,vcom,p,10,84,,
+t7=Ad valorem:,vadv,p,10,84,,
+t8=Ad valorem seguradora:,vadv2,p,10,84,,
+t9=Ad valorem cliente:,vadv3,p,10,84,,

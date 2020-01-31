@@ -1,0 +1,257 @@
+17/06 21:20:18 - PEDIDOS SOLICITADO {"sessao":"1706201921253315353615607353636090131404MOBILEADM","operacao":"PIT","pedido":"9422","usuario":"1","terminal":"53","conf":"1|1","items":[{"i0":"82|1"}]}
+17/06 21:20:18 - sessao: 1706201921253315353615607353636090131404MOBILEADM
+17/06 21:20:18 - id: 9422
+17/06 21:20:18 - usuario: 1
+17/06 21:20:18 - terminal: 53
+17/06 21:20:18 - conf: 1|1
+17/06 21:20:18 0 - 82|1
+17/06 21:20:18 - dados
+17/06 21:20:18 - VALORES? 6,00/6/6/,/"6"
+17/06 21:20:18 - PRODUCAO => id:9422 user:1term:53 hora: sessao:1706201921253315353615607353636090131404MOBILEADM
+17/06 21:20:18 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=9422 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="1706201921253315353615607353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+17/06 21:20:18 - GRUPOS:<1,125895>
+17/06 21:20:18 - CIS Status: Create
+17/06 21:20:19 - CIS Status: Exception = > Falha da impressora => 192.168.88.200
+17/06 21:20:20 - CIS Status: Create
+17/06 21:20:20 0 - {"sessao":"1706201921253315353615607353636090131404MOBILEADM","operacao":"PIT","pedido":"9422","usuario":"1","terminal":"53","conf":"1|1","items":[{"i0":"82|1"}]}
+17/06 21:20:20 2 -  2,047t OK
+17/06 21:24:22 - ***  SERVIÇO PARADO
+17/06 21:24:25 - Iniciando Suporte Mobile 64bit Versao: 1.13
+17/06 21:24:25 - Variaveis
+17/06 21:24:25 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+17/06 21:24:25 - TCP Servidor
+17/06 21:24:25 - TCP Cliente
+17/06 21:24:25 - Iniciado na porta => 4406
+17/06 21:24:25 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+17/06 21:24:25 - Formato Data   : 17/06/2019 21:24:25
+17/06 21:24:25 - Flags debug 1 sem log 0
+17/06 21:24:25 - BANCO DE DADOS ONLINE > 192.168.88.28:comodoro
+17/06 21:24:25 - PRECO => 30 /            30,00/30/30
+17/06 21:24:25 - iniciar_identificacao_computador
+17/06 21:24:25 - sistema_pegar_perfil
+17/06 21:24:25 - empresa_carregar_segmentos
+17/06 21:24:25 - rcs_iniciar_variaveis_globais
+17/06 21:24:25 - terminal_id
+17/06 21:24:25 - mesas_comandas
+17/06 21:24:25 - LPRINT
+17/06 21:24:25 - Status: Config => 192.168.88.200:9100
+17/06 21:24:25 - Status: Config => 192.168.88.200:9100
+17/06 21:24:25 - Status: Config => c:9100
+17/06 21:24:25 - Status: Config => 192.168.88.200:9100
+17/06 21:24:25 - LISTA DE IMPRESSORAS CARREGADA 4
+17/06 21:24:25 - carregarImp
+17/06 21:24:25 - objetos
+17/06 21:24:25 - produtos_gerenciamento_de_estoque
+17/06 21:24:25 - # status 100%
+17/06 21:24:35 - PEDIDOS SOLICITADO {"sessao":"1706201921294715315585968353636090131404MOBILEADM","operacao":"PIT","pedido":"9422","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"82|1"},{"i1":"38|1"}]}
+17/06 21:24:35 - sessao: 1706201921294715315585968353636090131404MOBILEADM
+17/06 21:24:35 - id: 9422
+17/06 21:24:35 - usuario: 1
+17/06 21:24:35 - terminal: 53
+17/06 21:24:35 - conf: 2|1
+17/06 21:24:35 0 - 82|1
+17/06 21:24:35 1 - 38|1
+17/06 21:24:35 - dados
+17/06 21:24:35 - VALORES? 6,00/6/6/,/"6"
+17/06 21:24:35 - VALORES? 5,90/5,9/5,9/,/"5.9"
+17/06 21:24:35 - PRODUCAO => id:9422 user:1term:53 hora: sessao:1706201921294715315585968353636090131404MOBILEADM
+17/06 21:24:35 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=9422 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="1706201921294715315585968353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+17/06 21:24:35 - GRUPOS:<1,125896><1,125897>
+17/06 21:24:35 - Status: Config => 192.168.88.200:9100
+17/06 21:24:35 - CIS Status: Create
+17/06 21:24:36 - CIS Status: Exception = > Falha da impressora => 192.168.88.200
+17/06 21:24:37 - Status: Config => 192.168.88.200:9100
+17/06 21:24:37 - CIS Status: Create
+17/06 21:24:38 - CIS Status: Exception = > Falha da impressora => 192.168.88.200
+17/06 21:24:39 - PERFIL 7
+17/06 21:24:39 - ERRO 50
+17/06 21:24:39 - SPOOLER
+17/06 21:24:39 0 - {"sessao":"1706201921294715315585968353636090131404MOBILEADM","operacao":"PIT","pedido":"9422","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"82|1"},{"i1":"38|1"}]}
+17/06 21:24:39 2 -  4,094t OK
+17/06 21:28:11 - ***  SERVIÇO PARADO
+17/06 21:28:13 - Iniciando Suporte Mobile 64bit Versao: 1.13
+17/06 21:28:13 - Variaveis
+17/06 21:28:13 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+17/06 21:28:13 - TCP Servidor
+17/06 21:28:13 - TCP Cliente
+17/06 21:28:13 - Iniciado na porta => 4406
+17/06 21:28:13 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+17/06 21:28:13 - Formato Data   : 17/06/2019 21:28:13
+17/06 21:28:13 - Flags debug 1 sem log 0
+17/06 21:28:13 - BANCO DE DADOS ONLINE > 192.168.88.28:comodoro
+17/06 21:28:13 - PRECO => 30 /            30,00/30/30
+17/06 21:28:13 - iniciar_identificacao_computador
+17/06 21:28:13 - sistema_pegar_perfil
+17/06 21:28:13 - empresa_carregar_segmentos
+17/06 21:28:13 - rcs_iniciar_variaveis_globais
+17/06 21:28:13 - terminal_id
+17/06 21:28:13 - mesas_comandas
+17/06 21:28:13 - LPRINT
+17/06 21:28:14 - Status: Config => 192.168.88.200:9100
+17/06 21:28:14 - Status: Config => 192.168.88.200:9100
+17/06 21:28:14 - Status: Config => c:9100
+17/06 21:28:14 - Status: Config => 192.168.88.200:9100
+17/06 21:28:14 - LISTA DE IMPRESSORAS CARREGADA 4
+17/06 21:28:14 - carregarImp
+17/06 21:28:14 - objetos
+17/06 21:28:14 - produtos_gerenciamento_de_estoque
+17/06 21:28:14 - # status 100%
+17/06 21:28:18 - PEDIDOS SOLICITADO {"sessao":"17062019213332153955582353636090131404MOBILEADM","operacao":"PIT","pedido":"9422","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"64|1"},{"i1":"82|1"}]}
+17/06 21:28:18 - sessao: 17062019213332153955582353636090131404MOBILEADM
+17/06 21:28:18 - id: 9422
+17/06 21:28:18 - usuario: 1
+17/06 21:28:18 - terminal: 53
+17/06 21:28:18 - conf: 2|1
+17/06 21:28:18 0 - 64|1
+17/06 21:28:18 1 - 82|1
+17/06 21:28:18 - dados
+17/06 21:28:18 - VALORES? 9,90/9,9/9,9/,/"9.9"
+17/06 21:28:18 - VALORES? 6,00/6/6/,/"6"
+17/06 21:28:18 - PRODUCAO => id:9422 user:1term:53 hora: sessao:17062019213332153955582353636090131404MOBILEADM
+17/06 21:28:18 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=9422 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="17062019213332153955582353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+17/06 21:28:18 - GRUPOS:<1,125898><1,125899>
+17/06 21:28:18 - Status: Config => 192.168.88.200:9100
+17/06 21:28:18 - CIS Status: Create
+17/06 21:28:20 - CIS Status: Exception = > Falha da impressora => 192.168.88.200
+17/06 21:28:20 - Status: Config => 192.168.88.200:9100
+17/06 21:28:20 - CIS Status: Create
+17/06 21:28:22 - CIS Status: Exception = > Falha da impressora => 192.168.88.200
+17/06 21:28:22 - PERFIL 7
+17/06 21:28:22 - ERRO 50
+17/06 21:28:22 - SPOOLER Generic / Text Only - CIS
+17/06 21:28:22 - tenda spool cupom_impressao_producao(9422,True,"",[],125898
+125899
+,1);
+17/06 21:28:22 - IOK 1 STAGE => 28
+17/06 21:28:22 0 - {"sessao":"17062019213332153955582353636090131404MOBILEADM","operacao":"PIT","pedido":"9422","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"64|1"},{"i1":"82|1"}]}
+17/06 21:28:22 2 -  4,156t OK
+17/06 21:28:42 - PEDIDOS SOLICITADO {"sessao":"1706201921335615358182429353636090131404MOBILEADM","operacao":"PIT","pedido":"9422","usuario":"1","terminal":"53","conf":"3|1","items":[{"i0":"82|1"},{"i1":"32|1"},{"i2":"38|1"}]}
+17/06 21:28:42 - sessao: 1706201921335615358182429353636090131404MOBILEADM
+17/06 21:28:42 - id: 9422
+17/06 21:28:42 - usuario: 1
+17/06 21:28:42 - terminal: 53
+17/06 21:28:42 - conf: 3|1
+17/06 21:28:42 0 - 82|1
+17/06 21:28:42 1 - 32|1
+17/06 21:28:42 2 - 38|1
+17/06 21:28:42 - dados
+17/06 21:28:42 - VALORES? 6,00/6/6/,/"6"
+17/06 21:28:42 - VALORES? 5,90/5,9/5,9/,/"5.9"
+17/06 21:28:42 - VALORES? 5,90/5,9/5,9/,/"5.9"
+17/06 21:28:42 - PRODUCAO => id:9422 user:1term:53 hora: sessao:1706201921335615358182429353636090131404MOBILEADM
+17/06 21:28:42 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=9422 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="1706201921335615358182429353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+17/06 21:28:42 - GRUPOS:<1,125900><1,125901><1,125902>
+17/06 21:28:42 - Status: Config => 192.168.88.200:9100
+17/06 21:28:42 - CIS Status: Create
+17/06 21:28:44 - CIS Status: Exception = > Falha da impressora => 192.168.88.200
+17/06 21:28:44 - Status: Config => 192.168.88.200:9100
+17/06 21:28:44 - CIS Status: Create
+17/06 21:28:46 - CIS Status: Exception = > Falha da impressora => 192.168.88.200
+17/06 21:28:46 - PERFIL 7
+17/06 21:28:46 - ERRO 50
+17/06 21:28:46 - SPOOLER Generic / Text Only - CIS
+17/06 21:28:46 - tenda spool cupom_impressao_producao(9422,True,"",[],125900
+125901
+125902
+,1);
+17/06 21:28:46 - IOK 1 STAGE => 28
+17/06 21:28:46 0 - {"sessao":"1706201921335615358182429353636090131404MOBILEADM","operacao":"PIT","pedido":"9422","usuario":"1","terminal":"53","conf":"3|1","items":[{"i0":"82|1"},{"i1":"32|1"},{"i2":"38|1"}]}
+17/06 21:28:46 2 -  4,172t OK
+17/06 21:38:27 - PEDIDOS SOLICITADO {"sessao":"17062019214342153144865060353636090131404MOBILEADM","operacao":"PIT","pedido":"9412","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"82|1"},{"i1":"32|1"}]}
+17/06 21:38:27 - sessao: 17062019214342153144865060353636090131404MOBILEADM
+17/06 21:38:27 - id: 9412
+17/06 21:38:27 - usuario: 1
+17/06 21:38:27 - terminal: 53
+17/06 21:38:27 - conf: 2|1
+17/06 21:38:27 0 - 82|1
+17/06 21:38:27 1 - 32|1
+17/06 21:38:27 - dados
+17/06 21:38:27 - VALORES? 6,00/6/6/,/"6"
+17/06 21:38:27 - VALORES? 5,90/5,9/5,9/,/"5.9"
+17/06 21:38:27 - PRODUCAO => id:9412 user:1term:53 hora: sessao:17062019214342153144865060353636090131404MOBILEADM
+17/06 21:38:27 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=9412 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="17062019214342153144865060353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+17/06 21:38:27 - GRUPOS:<1,125903><1,125904>
+17/06 21:38:27 - Status: Config => 192.168.88.200:9100
+17/06 21:38:27 - CIS Status: Create
+17/06 21:38:29 - CIS Status: Exception = > Falha da impressora => 192.168.88.200
+17/06 21:38:29 - Status: Config => 192.168.88.200:9100
+17/06 21:38:29 - CIS Status: Create
+17/06 21:38:31 - CIS Status: Exception = > Falha da impressora => 192.168.88.200
+17/06 21:38:31 - PERFIL 7
+17/06 21:38:31 - ERRO 50
+17/06 21:38:31 - SPOOLER Generic / Text Only - CIS
+17/06 21:38:31 - tenda spool cupom_impressao_producao(9412,True,"",[],125903
+125904
+,1);
+17/06 21:38:31 - IOK 1 STAGE => 28
+17/06 21:38:31 0 - {"sessao":"17062019214342153144865060353636090131404MOBILEADM","operacao":"PIT","pedido":"9412","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"82|1"},{"i1":"32|1"}]}
+17/06 21:38:31 2 -  4,157t OK
+17/06 21:40:34 - PEDIDOS SOLICITADO {"sessao":"17062019214548153703760353636090131404MOBILEADM","operacao":"PIT","pedido":"9422","usuario":"1","terminal":"53","conf":"3|1","items":[{"i0":"82|1"},{"i1":"32|1"},{"i2":"33|1"}]}
+17/06 21:40:34 - sessao: 17062019214548153703760353636090131404MOBILEADM
+17/06 21:40:34 - id: 9422
+17/06 21:40:34 - usuario: 1
+17/06 21:40:34 - terminal: 53
+17/06 21:40:34 - conf: 3|1
+17/06 21:40:34 0 - 82|1
+17/06 21:40:34 1 - 32|1
+17/06 21:40:34 2 - 33|1
+17/06 21:40:34 - dados
+17/06 21:40:34 - VALORES? 6,00/6/6/,/"6"
+17/06 21:40:34 - VALORES? 5,90/5,9/5,9/,/"5.9"
+17/06 21:40:34 - VALORES? 7,90/7,9/7,9/,/"7.9"
+17/06 21:40:34 - PRODUCAO => id:9422 user:1term:53 hora: sessao:17062019214548153703760353636090131404MOBILEADM
+17/06 21:40:34 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=9422 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="17062019214548153703760353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+17/06 21:40:34 - GRUPOS:<1,125905><1,125906><1,125907>
+17/06 21:40:34 - Status: Config => 192.168.88.200:9100
+17/06 21:40:34 - CIS Status: Create
+17/06 21:40:34 - CIS Status: Connect
+17/06 21:40:34 - Status: Write cmd #16#4 (1..4)
+17/06 21:40:34 - Status: ok
+17/06 21:40:34 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+17/06 21:40:34 - CIS Status: Close
+17/06 21:40:34 - PERFIL 7
+17/06 21:40:34 - cupom_impressao_producao(9422,True,"",[],125905
+125906
+125907
+,1);
+17/06 21:40:34 - IOK 1 STAGE => 28
+17/06 21:40:34 0 - {"sessao":"17062019214548153703760353636090131404MOBILEADM","operacao":"PIT","pedido":"9422","usuario":"1","terminal":"53","conf":"3|1","items":[{"i0":"82|1"},{"i1":"32|1"},{"i2":"33|1"}]}
+17/06 21:40:34 2 -  0,469t OK
+17/06 22:02:37 - ***  SERVIÇO PARADO
+17/06 22:02:40 - Iniciando Suporte Mobile 64bit Versao: 1.13
+17/06 22:02:40 - Variaveis
+17/06 22:02:40 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+17/06 22:02:40 - TCP Servidor
+17/06 22:02:40 - TCP Cliente
+17/06 22:02:40 - Iniciado na porta => 4406
+17/06 22:02:40 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+17/06 22:02:40 - Formato Data   : 17/06/2019 22:02:40
+17/06 22:02:40 - Flags debug 1 sem log 0
+17/06 22:02:40 - BANCO DE DADOS ONLINE > 192.168.88.28:comodoro
+17/06 22:02:40 - PRECO => 30 /            30,00/30/30
+17/06 22:02:40 - iniciar_identificacao_computador
+17/06 22:02:40 - sistema_pegar_perfil
+17/06 22:02:40 - empresa_carregar_segmentos
+17/06 22:02:40 - rcs_iniciar_variaveis_globais
+17/06 22:02:40 - terminal_id
+17/06 22:02:40 - mesas_comandas
+17/06 22:02:40 - LPRINT
+17/06 22:02:40 - Status: Config => 192.168.88.200:9100
+17/06 22:02:40 - Status: Config => 192.168.88.200:9100
+17/06 22:02:40 - Status: Config => c:9100
+17/06 22:02:40 - Status: Config => 192.168.88.200:9100
+17/06 22:02:40 - LISTA DE IMPRESSORAS CARREGADA 4
+17/06 22:02:40 - carregarImp
+17/06 22:02:40 - objetos
+17/06 22:02:40 - produtos_gerenciamento_de_estoque
+17/06 22:02:40 - # status 100%
+17/06 22:02:55 - PEDIDOS SOLICITADO {"sessao":"1706201922080315335454554353636090131404MOBILEADM","operacao":"PIT","pedido":"9412","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"33|1"},{"i1":"35|1"}]}
+17/06 22:02:55 - sessao: 1706201922080315335454554353636090131404MOBILEADM
+17/06 22:02:55 - id: 9412
+17/06 22:02:55 - usuario: 1
+17/06 22:02:55 - terminal: 53
+17/06 22:02:55 - conf: 2|1
+17/06 22:02:55 0 - 33|1
+17/06 22:02:55 1 - 35|1
+17/06 22:02:55 - dados
+17/06 22:02:55 - VALORES? 7,90/7,9/7,9/,/"7.9"

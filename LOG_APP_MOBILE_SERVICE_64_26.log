@@ -1,0 +1,257 @@
+17/06 01:00:00 - usuario: 1
+17/06 01:00:00 - salvando log -> C:\rcsv\App\mobile64\LOG_APP_MOBILE_SERVICE_64_25.log
+17/06 01:00:00 - terminal: 53
+17/06 01:00:00 - conf: 2|1
+17/06 01:00:00 0 - 272|1
+17/06 01:00:00 1 - 188|1
+17/06 01:00:00 - dados
+17/06 01:00:00 0 - {"sessao":"170620190104461531055114353636090131404MOBILEADM","operacao":"PIT","pedido":"9377","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"272|1"},{"i1":"188|1"}]}
+17/06 01:00:00 2 -  0,016t ERRO
+17/06 01:00:01 - PEDIDOS SOLICITADO {"sessao":"170620190104461531055114353636090131404MOBILEADM","operacao":"PIT","pedido":"9377","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"272|1"},{"i1":"188|1"}]}
+17/06 01:00:01 - sessao: 170620190104461531055114353636090131404MOBILEADM
+17/06 01:00:01 - id: 9377
+17/06 01:00:01 - usuario: 1
+17/06 01:00:01 - terminal: 53
+17/06 01:00:01 - conf: 2|1
+17/06 01:00:01 0 - 272|1
+17/06 01:00:01 1 - 188|1
+17/06 01:00:01 - dados
+17/06 01:00:01 0 - {"sessao":"170620190104461531055114353636090131404MOBILEADM","operacao":"PIT","pedido":"9377","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"272|1"},{"i1":"188|1"}]}
+17/06 01:00:01 2 -  0t ERRO
+17/06 01:00:02 - PEDIDOS SOLICITADO {"sessao":"170620190104461531055114353636090131404MOBILEADM","operacao":"PIT","pedido":"9377","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"272|1"},{"i1":"188|1"}]}
+17/06 01:00:02 - sessao: 170620190104461531055114353636090131404MOBILEADM
+17/06 01:00:02 - id: 9377
+17/06 01:00:02 - usuario: 1
+17/06 01:00:02 - terminal: 53
+17/06 01:00:02 - conf: 2|1
+17/06 01:00:02 0 - 272|1
+17/06 01:00:02 1 - 188|1
+17/06 01:00:02 - dados
+17/06 01:00:02 0 - {"sessao":"170620190104461531055114353636090131404MOBILEADM","operacao":"PIT","pedido":"9377","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"272|1"},{"i1":"188|1"}]}
+17/06 01:00:02 2 -  0t ERRO
+17/06 01:00:03 - PEDIDOS SOLICITADO {"sessao":"170620190104461531055114353636090131404MOBILEADM","operacao":"PIT","pedido":"9377","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"272|1"},{"i1":"188|1"}]}
+17/06 01:00:03 - sessao: 170620190104461531055114353636090131404MOBILEADM
+17/06 01:00:03 - id: 9377
+17/06 01:00:03 - usuario: 1
+17/06 01:00:03 - terminal: 53
+17/06 01:00:03 - conf: 2|1
+17/06 01:00:03 0 - 272|1
+17/06 01:00:03 1 - 188|1
+17/06 01:00:03 - dados
+17/06 01:00:03 0 - {"sessao":"170620190104461531055114353636090131404MOBILEADM","operacao":"PIT","pedido":"9377","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"272|1"},{"i1":"188|1"}]}
+17/06 01:00:03 2 -  0,016t ERRO
+17/06 01:00:05 - PEDIDOS SOLICITADO {"sessao":"170620190104461531055114353636090131404MOBILEADM","operacao":"PIT","pedido":"9377","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"272|1"},{"i1":"188|1"}]}
+17/06 01:00:05 - sessao: 170620190104461531055114353636090131404MOBILEADM
+17/06 01:00:05 - id: 9377
+17/06 01:00:05 - usuario: 1
+17/06 01:00:05 - terminal: 53
+17/06 01:00:05 - conf: 2|1
+17/06 01:00:05 0 - 272|1
+17/06 01:00:05 1 - 188|1
+17/06 01:00:05 - dados
+17/06 01:00:05 0 - {"sessao":"170620190104461531055114353636090131404MOBILEADM","operacao":"PIT","pedido":"9377","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"272|1"},{"i1":"188|1"}]}
+17/06 01:00:05 2 -  0,016t ERRO
+17/06 01:00:06 - PEDIDOS SOLICITADO {"sessao":"170620190104461531055114353636090131404MOBILEADM","operacao":"PIT","pedido":"9377","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"272|1"},{"i1":"188|1"}]}
+17/06 01:00:06 - sessao: 170620190104461531055114353636090131404MOBILEADM
+17/06 01:00:06 - id: 9377
+17/06 01:00:06 - usuario: 1
+17/06 01:00:06 - terminal: 53
+17/06 01:00:06 - conf: 2|1
+17/06 01:00:06 0 - 272|1
+17/06 01:00:06 1 - 188|1
+17/06 01:00:06 - dados
+17/06 01:00:06 0 - {"sessao":"170620190104461531055114353636090131404MOBILEADM","operacao":"PIT","pedido":"9377","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"272|1"},{"i1":"188|1"}]}
+17/06 01:00:06 2 -  0t ERRO
+17/06 01:00:14 - PEDIDOS SOLICITADO {"sessao":"170620190104461531055114353636090131404MOBILEADM","operacao":"PIT","pedido":"9377","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"272|1"},{"i1":"188|1"}]}
+17/06 01:00:14 - sessao: 170620190104461531055114353636090131404MOBILEADM
+17/06 01:00:14 - id: 9377
+17/06 01:00:14 - usuario: 1
+17/06 01:00:14 - terminal: 53
+17/06 01:00:14 - conf: 2|1
+17/06 01:00:14 0 - 272|1
+17/06 01:00:14 1 - 188|1
+17/06 01:00:14 - dados
+17/06 01:00:14 0 - {"sessao":"170620190104461531055114353636090131404MOBILEADM","operacao":"PIT","pedido":"9377","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"272|1"},{"i1":"188|1"}]}
+17/06 01:00:14 2 -  0,016t ERRO
+17/06 01:00:30 - PEDIDOS SOLICITADO {"sessao":"170620190105391536390085353636090131404MOBILEADM","operacao":"PIT","pedido":"9377","usuario":"1","terminal":"53","conf":"3|1","items":[{"i0":"335|1"},{"i1":"277|1"},{"i2":"279|1"}]}
+17/06 01:00:30 - sessao: 170620190105391536390085353636090131404MOBILEADM
+17/06 01:00:30 - id: 9377
+17/06 01:00:30 - usuario: 1
+17/06 01:00:30 - terminal: 53
+17/06 01:00:30 - conf: 3|1
+17/06 01:00:30 0 - 335|1
+17/06 01:00:30 1 - 277|1
+17/06 01:00:30 2 - 279|1
+17/06 01:00:30 - dados
+17/06 01:00:30 0 - {"sessao":"170620190105391536390085353636090131404MOBILEADM","operacao":"PIT","pedido":"9377","usuario":"1","terminal":"53","conf":"3|1","items":[{"i0":"335|1"},{"i1":"277|1"},{"i2":"279|1"}]}
+17/06 01:00:30 2 -  0t ERRO
+17/06 01:00:50 - PEDIDOS SOLICITADO {"sessao":"170620190105391536390085353636090131404MOBILEADM","operacao":"PIT","pedido":"9377","usuario":"1","terminal":"53","conf":"3|1","items":[{"i0":"335|1"},{"i1":"277|1"},{"i2":"279|1"}]}
+17/06 01:00:50 - sessao: 170620190105391536390085353636090131404MOBILEADM
+17/06 01:00:50 - id: 9377
+17/06 01:00:50 - usuario: 1
+17/06 01:00:50 - terminal: 53
+17/06 01:00:50 - conf: 3|1
+17/06 01:00:50 0 - 335|1
+17/06 01:00:50 1 - 277|1
+17/06 01:00:50 2 - 279|1
+17/06 01:00:50 - dados
+17/06 01:00:50 0 - {"sessao":"170620190105391536390085353636090131404MOBILEADM","operacao":"PIT","pedido":"9377","usuario":"1","terminal":"53","conf":"3|1","items":[{"i0":"335|1"},{"i1":"277|1"},{"i2":"279|1"}]}
+17/06 01:00:50 2 -  0t ERRO
+17/06 01:01:19 - PEDIDOS SOLICITADO {"sessao":"170620190105391536390085353636090131404MOBILEADM","operacao":"PIT","pedido":"9377","usuario":"1","terminal":"53","conf":"3|1","items":[{"i0":"335|1"},{"i1":"277|1"},{"i2":"279|1"}]}
+17/06 01:01:19 - sessao: 170620190105391536390085353636090131404MOBILEADM
+17/06 01:01:19 - id: 9377
+17/06 01:01:19 - usuario: 1
+17/06 01:01:19 - terminal: 53
+17/06 01:01:19 - conf: 3|1
+17/06 01:01:19 0 - 335|1
+17/06 01:01:19 1 - 277|1
+17/06 01:01:19 2 - 279|1
+17/06 01:01:19 - dados
+17/06 01:01:19 0 - {"sessao":"170620190105391536390085353636090131404MOBILEADM","operacao":"PIT","pedido":"9377","usuario":"1","terminal":"53","conf":"3|1","items":[{"i0":"335|1"},{"i1":"277|1"},{"i2":"279|1"}]}
+17/06 01:01:19 2 -  0t ERRO
+17/06 01:02:25 - PEDIDOS SOLICITADO {"sessao":"1706201901073515344994743353636090131404MOBILEADM","operacao":"PIT","pedido":"9412","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"177|1"},{"i1":"325|1"}]}
+17/06 01:02:25 - sessao: 1706201901073515344994743353636090131404MOBILEADM
+17/06 01:02:25 - id: 9412
+17/06 01:02:25 - usuario: 1
+17/06 01:02:25 - terminal: 53
+17/06 01:02:25 - conf: 2|1
+17/06 01:02:25 0 - 177|1
+17/06 01:02:25 1 - 325|1
+17/06 01:02:25 - dados
+17/06 01:02:25 - VALORES? 15,00/15/15/,/"15"
+17/06 01:02:25 - VALORES? 11,90/11,9/11,9/,/"11.9"
+17/06 01:02:25 - PRODUCAO => id:9412 user:1term:53 hora: sessao:1706201901073515344994743353636090131404MOBILEADM
+17/06 01:02:25 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=9412 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="1706201901073515344994743353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+17/06 01:02:25 - GRUPOS:<2,125840><2,125841>
+17/06 01:02:25 - CIS Status: Create
+17/06 01:02:25 - CIS Status: Connect
+17/06 01:02:25 - Status: Write cmd #16#4 (1..4)
+17/06 01:02:25 - Status: ok
+17/06 01:02:25 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+17/06 01:02:25 - CIS Status: Close
+17/06 01:02:25 - PERFIL 7
+17/06 01:02:25 - cupom_impressao_producao(9412,True,"",[],125840
+125841
+,1);
+17/06 01:02:25 - IOK 1 STAGE => 28
+17/06 01:02:25 0 - {"sessao":"1706201901073515344994743353636090131404MOBILEADM","operacao":"PIT","pedido":"9412","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"177|1"},{"i1":"325|1"}]}
+17/06 01:02:25 2 -  0,344t OK
+17/06 01:02:40 - PEDIDOS SOLICITADO {"sessao":"1706201901075315371922017353636090131404MOBILEADM","operacao":"PIT","pedido":"9377","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"177|1"},{"i1":"325|1"}]}
+17/06 01:02:40 - sessao: 1706201901075315371922017353636090131404MOBILEADM
+17/06 01:02:40 - id: 9377
+17/06 01:02:40 - usuario: 1
+17/06 01:02:40 - terminal: 53
+17/06 01:02:40 - conf: 2|1
+17/06 01:02:40 0 - 177|1
+17/06 01:02:40 1 - 325|1
+17/06 01:02:40 - dados
+17/06 01:02:40 0 - {"sessao":"1706201901075315371922017353636090131404MOBILEADM","operacao":"PIT","pedido":"9377","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"177|1"},{"i1":"325|1"}]}
+17/06 01:02:40 2 -  0,016t ERRO
+17/06 01:04:03 - PEDIDOS SOLICITADO {"sessao":"1706201901091315348849027353636090131404MOBILEADM","operacao":"PIT","pedido":"9402","usuario":"1","terminal":"53","conf":"4|1","items":[{"i0":"177|1"},{"i1":"354|1"},{"i2":"3|1"},{"i3":"325|1"}]}
+17/06 01:04:03 - sessao: 1706201901091315348849027353636090131404MOBILEADM
+17/06 01:04:03 - id: 9402
+17/06 01:04:03 - usuario: 1
+17/06 01:04:03 - terminal: 53
+17/06 01:04:03 - conf: 4|1
+17/06 01:04:03 0 - 177|1
+17/06 01:04:03 1 - 354|1
+17/06 01:04:03 2 - 3|1
+17/06 01:04:03 3 - 325|1
+17/06 01:04:03 - dados
+17/06 01:04:03 - VALORES? 15,00/15/15/,/"15"
+17/06 01:04:03 - VALORES? 21,90/21,9/21,9/,/"21.9"
+17/06 01:04:03 - VALORES? 20,00/20/20/,/"20"
+17/06 01:04:03 - VALORES? 11,90/11,9/11,9/,/"11.9"
+17/06 01:04:03 - PRODUCAO => id:9402 user:1term:53 hora: sessao:1706201901091315348849027353636090131404MOBILEADM
+17/06 01:04:03 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=9402 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="1706201901091315348849027353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+17/06 01:04:03 - GRUPOS:<2,125842><2,125843><2,125844><2,125845>
+17/06 01:04:03 - CIS Status: Create
+17/06 01:04:03 - CIS Status: Connect
+17/06 01:04:03 - Status: Write cmd #16#4 (1..4)
+17/06 01:04:03 - Status: ok
+17/06 01:04:03 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+17/06 01:04:03 - CIS Status: Close
+17/06 01:04:03 - PERFIL 7
+17/06 01:04:03 - cupom_impressao_producao(9402,True,"",[],125842
+125843
+125844
+125845
+,1);
+17/06 01:04:03 - IOK 1 STAGE => 28
+17/06 01:04:03 0 - {"sessao":"1706201901091315348849027353636090131404MOBILEADM","operacao":"PIT","pedido":"9402","usuario":"1","terminal":"53","conf":"4|1","items":[{"i0":"177|1"},{"i1":"354|1"},{"i2":"3|1"},{"i3":"325|1"}]}
+17/06 01:04:03 2 -  0,406t OK
+17/06 01:04:14 - PEDIDOS SOLICITADO {"sessao":"1706201901092615342500034353636090131404MOBILEADM","operacao":"PIT","pedido":"9355","usuario":"1","terminal":"53","conf":"3|1","items":[{"i0":"348|1"},{"i1":"4|1"},{"i2":"5|1"}]}
+17/06 01:04:14 - sessao: 1706201901092615342500034353636090131404MOBILEADM
+17/06 01:04:14 - id: 9355
+17/06 01:04:14 - usuario: 1
+17/06 01:04:14 - terminal: 53
+17/06 01:04:14 - conf: 3|1
+17/06 01:04:14 0 - 348|1
+17/06 01:04:14 1 - 4|1
+17/06 01:04:14 2 - 5|1
+17/06 01:04:14 - dados
+17/06 01:04:14 - VALORES? 11,90/11,9/11,9/,/"11.9"
+17/06 01:04:14 - VALORES? 15,00/15/15/,/"15"
+17/06 01:04:14 - VALORES? 12,90/12,9/12,9/,/"12.9"
+17/06 01:04:14 - PRODUCAO => id:9355 user:1term:53 hora: sessao:1706201901092615342500034353636090131404MOBILEADM
+17/06 01:04:14 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=9355 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="1706201901092615342500034353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+17/06 01:04:14 - GRUPOS:<2,125846><2,125847><2,125848>
+17/06 01:04:14 - CIS Status: Create
+17/06 01:04:14 - CIS Status: Connect
+17/06 01:04:14 - Status: Write cmd #16#4 (1..4)
+17/06 01:04:14 - Status: ok
+17/06 01:04:14 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+17/06 01:04:14 - CIS Status: Close
+17/06 01:04:14 - PERFIL 7
+17/06 01:04:14 - cupom_impressao_producao(9355,True,"",[],125846
+125847
+125848
+,1);
+17/06 01:04:14 - IOK 1 STAGE => 28
+17/06 01:04:14 0 - {"sessao":"1706201901092615342500034353636090131404MOBILEADM","operacao":"PIT","pedido":"9355","usuario":"1","terminal":"53","conf":"3|1","items":[{"i0":"348|1"},{"i1":"4|1"},{"i2":"5|1"}]}
+17/06 01:04:14 2 -  0,36t OK
+17/06 01:04:26 - PEDIDOS SOLICITADO {"sessao":"1706201901093915321836050353636090131404MOBILEADM","operacao":"PIT","pedido":"9412","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"4|1"},{"i1":"5|1"}]}
+17/06 01:04:26 - sessao: 1706201901093915321836050353636090131404MOBILEADM
+17/06 01:04:26 - id: 9412
+17/06 01:04:26 - usuario: 1
+17/06 01:04:26 - terminal: 53
+17/06 01:04:26 - conf: 2|1
+17/06 01:04:26 0 - 4|1
+17/06 01:04:26 1 - 5|1
+17/06 01:04:26 - dados
+17/06 01:04:26 - VALORES? 15,00/15/15/,/"15"
+17/06 01:04:26 - VALORES? 12,90/12,9/12,9/,/"12.9"
+17/06 01:04:26 - PRODUCAO => id:9412 user:1term:53 hora: sessao:1706201901093915321836050353636090131404MOBILEADM
+17/06 01:04:26 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=9412 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="1706201901093915321836050353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+17/06 01:04:26 - GRUPOS:<2,125849><2,125850>
+17/06 01:04:26 - CIS Status: Create
+17/06 01:04:26 - CIS Status: Connect
+17/06 01:04:26 - Status: Write cmd #16#4 (1..4)
+17/06 01:04:26 - Status: ok
+17/06 01:04:26 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+17/06 01:04:26 - CIS Status: Close
+17/06 01:04:26 - PERFIL 7
+17/06 01:04:26 - cupom_impressao_producao(9412,True,"",[],125849
+125850
+,1);
+17/06 01:04:26 - IOK 1 STAGE => 28
+17/06 01:04:26 0 - {"sessao":"1706201901093915321836050353636090131404MOBILEADM","operacao":"PIT","pedido":"9412","usuario":"1","terminal":"53","conf":"2|1","items":[{"i0":"4|1"},{"i1":"5|1"}]}
+17/06 01:04:26 2 -  0,343t OK
+17/06 01:04:47 - PEDIDOS SOLICITADO {"sessao":"17062019010959153147755966353636090131404MOBILEADM","operacao":"PIT","pedido":"9374","usuario":"1","terminal":"53","conf":"3|1","items":[{"i0":"177|1"},{"i1":"354|1"},{"i2":"325|1"}]}
+17/06 01:04:47 - sessao: 17062019010959153147755966353636090131404MOBILEADM
+17/06 01:04:47 - id: 9374
+17/06 01:04:47 - usuario: 1
+17/06 01:04:47 - terminal: 53
+17/06 01:04:47 - conf: 3|1
+17/06 01:04:47 0 - 177|1
+17/06 01:04:47 1 - 354|1
+17/06 01:04:47 2 - 325|1
+17/06 01:04:47 - dados
+17/06 01:04:47 - VALORES? 15,00/15/15/,/"15"
+17/06 01:04:47 - VALORES? 21,90/21,9/21,9/,/"21.9"
+17/06 01:04:47 - VALORES? 11,90/11,9/11,9/,/"11.9"
+17/06 01:04:47 - PRODUCAO => id:9374 user:1term:53 hora: sessao:17062019010959153147755966353636090131404MOBILEADM
+17/06 01:04:47 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=9374 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="17062019010959153147755966353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+17/06 01:04:47 - GRUPOS:<2,125851><2,125852><2,125853>
+17/06 01:04:47 - CIS Status: Create
+17/06 01:04:48 - CIS Status: Connect

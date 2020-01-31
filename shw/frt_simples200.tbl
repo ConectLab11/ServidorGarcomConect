@@ -1,0 +1,188 @@
+#
+#  Parametros do menu de manutenção do Sistema
+#  Desenvolvido por Ronaldo C Silva
+#  RCLSoft Comércio e Serviços LTDA. ME.
+#
+#  Criação    : 07/12/2011
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=tabvalor.pdx
+disableMenu=0
+telalargura=830
+telaaltura=0
+Posicionar=1
+whereexterno=mygroup='tabelasimples200'
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,+Tabela, tabelasimples200, 0123456789, 9, 25,a
+o2=nil,Observação, tabelasimples200observacao, 0123456789, 9, 25,a
+o3=nil,Customizar, tabelasimples200customizar, 0123456789, 9, 35,a
+
+#
+# Parametros de tela
+#
+ 
+[tabelasimples200]
+tab=CALCULO DO FRETE SIMPLES ATE 200 KG
+comentario=
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Cliente,clientefinal,f,16,100,,
+c4=Redespacho,redespacho,f,16,100,,
+botaoExtra=imprimir
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=100
+forcarleftmask=110
+nobrowse=1
+altura=532
+largura=400
+foco=descr
+t0=#coluna-30
+t1=Descrição:,descr,c,50,280,,
+h1=Nome completo
+t2=linha-25
+t3=coluna+355
+t4=Validade:,validade,d,10,70,,
+h4=Prazo de validade
+t5=coluna-355
+t6=Frete Mínimo#007E7E7E\peso.png,,,,545, ,	
+t7=até 50kg,ate_50,f,11,84,,
+h7=Peso até 50 Kilos
+t8=linha-25
+t9=coluna+340
+t10=51 à 100kg,ate_100,f,11,84,,
+h10=Peso de 51 à 100 Kilos
+t11=coluna-340
+t12=101 à 200kg,ate_150,f,11,84,,
+t13=Acima de 200kg#007E7E7E\peso.png,,,,545, ,
+t14=Tipo 1.,acoldta=@~Carga lastro,c,50,150,,
+t15=linha-25
+t16=coluna+200
+t17=Taxa:,ate_1000,f,11,84,,
+t18=coluna-200
+t19=Tipo 2.,bcoldta=@~Volumosa,c,50,150,,
+t20=linha-25
+t21=coluna+200
+t22=Taxa:,ate_1050,f,11,84,,
+t23=coluna-200
+t24=Tipo 3.,ccoldta=@~Leve,c,50,150,,
+t25=linha-25
+t26=coluna+200
+t27=Taxa:,ate_1100,f,11,84,,
+t28=coluna-200
+t29=Tipo 2.,dcoldta=@~Outros,c,50,150,,
+t30=linha-25
+t31=coluna+200
+t32=Taxa:,ate_1150,f,11,84,,
+t33=coluna-200
+t34=Generalidades#007E7E7E\tag.png,,,,530, ,
+t35=ADValorem:,advalorem,p,11,84,,
+h35=Porcentagem de ADValorem sobre o valor da Nota Fiscal.
+t36=Pedágio:,pedagio,f,11,84,,
+h36=Pedágio por CTRC
+t37=linha-25
+t38=coluna+150
+t39=Coleta SP:,adicional,f,11,84,,
+h39=Taxa de coleta para São Paulo
+t40=linha-25
+t41=coluna+190
+t42=Coleta grande SP:,despacho,f,11,84,,
+h42=Taxa de coleta para Grande São Paulo
+t43=coluna-340
+t44=Devolução:,devolucao,p,11,60,,
+h44=Porcentagem do frete quando for devolução
+t45=linha-25
+t46=coluna+150
+t47=Reentrega:,reentrega,p,11,60,,
+h47=Porcentagem do frete quando for reentrega
+
+[tabelasimples200observacao]
+tab=CALCULO DO FRETE SIMPLES ATE 200 KG
+comentario=
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Cliente,clientefinal,f,16,100,,
+c4=Redespacho,redespacho,f,16,100,,
+botaoExtra=imprimir
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=100
+forcarleftmask=110
+nobrowse=1
+altura=532
+largura=400
+foco=observacao
+t0=Observação#007E7E7E\text_align_justify.png,,,,530, ,
+t1=linha+5
+t2=coluna=0
+t3=forcarleftmask=15
+t4= ,observacao,tw,0,480x330,B|10|fretes|Copiar observações da tabela original,	
+
+[tabelasimples200customizar]
+tab=CALCULO DO FRETE SIMPLES ATE 200 KG
+comentario=
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Cliente,clientefinal,f,16,100,,
+c4=Redespacho,redespacho,f,16,100,,
+botaoExtra=imprimir
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=100
+forcarleftmask=150
+nobrowse=1
+altura=532
+largura=400
+foco=adv_outros
+t0=#Calculo do Frete#007E7E7E\tag.png,,,,530, ,
+t1=#ADValorem:,adv_outros,sn,3,30,,
+h1=#ADValorem no campo Outros@Sim - A taxa de ADValorem sera somado no campo Outros@Não - A taxa de ADValorem será somado no campo Frete Valor.
+t2=#Frete Peso:,frt_valorpeso,sn,3,30,,
+h2=#Colocar todos os valores no campo Frete Peso
+t3=#Frete mínimo:,frt_minitotal,sn,3,30,,
+h3=#Verificar o frete mínimo pelo campo Total do Frete.
+t4=#ICMS embutido:,icmsx,sn,3,30,,
+h4=#ICMS faz parte do frete
+t5=Diversos#007E7E7E\tag.png,,,,530, ,
+t6=Compartilhada:,compartilhada,sn,3,30,,
+h6=Permitir compartilhar esta tabela com os cliente sem tabela
+t7=linha-25
+t8=coluna+250
+t9=forcarleftmask=250
+t10=Ignorar dados do cliente na impressão:,semcliente,sn,3,30,,
+h10=Ignorar dados do cliente na impressão da tabela
+

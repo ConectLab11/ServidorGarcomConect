@@ -1,0 +1,257 @@
+18/12 19:44:23 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 19:44:23 - salvando log -> C:\rcsv\App\mobile64\log\logs\LOG_APP_MOBILE_SERVICE_64_12.log
+18/12 19:44:23 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} t:0,015 => OK
+18/12 19:44:24 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 19:44:24 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} t:0,016 => OK
+18/12 19:44:41 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 19:44:41 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} t:0,016 => OK
+18/12 19:44:52 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 19:44:52 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} t:0,015 => OK
+18/12 19:44:52 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 19:44:52 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} => OK
+18/12 19:44:52 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 19:44:52 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} t:0,016 => OK
+18/12 19:44:53 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 19:44:53 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} t:0,016 => OK
+18/12 19:44:53 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 19:44:53 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} t:0,016 => OK
+18/12 19:45:48 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 19:45:48 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} t:0,016 => OK
+18/12 20:01:05 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 20:01:05 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} => OK
+18/12 20:01:05 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 20:01:05 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} t:0,015 => OK
+18/12 20:01:05 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 20:01:05 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} t:0,015 => OK
+18/12 20:01:05 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 20:01:05 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} => OK
+18/12 20:01:06 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 20:01:06 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} t:0,016 => OK
+18/12 20:01:06 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 20:01:06 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} => OK
+18/12 20:01:06 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 20:01:06 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} t:0,016 => OK
+18/12 20:01:06 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 20:01:06 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} t:0,016 => OK
+18/12 20:01:06 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 20:01:06 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} => OK
+18/12 20:01:06 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 20:01:06 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} t:0,016 => OK
+18/12 20:01:07 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 20:01:07 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} t:0,016 => OK
+18/12 20:01:07 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 20:01:07 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} t:0,031 => OK
+18/12 20:01:07 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 20:01:07 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} t:0,016 => OK
+18/12 20:01:07 - STATUS DO SERVIDOR {"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"}
+18/12 20:01:07 0 - POST / HTTP/1.1
+HOST: 192.168.88.44:4409
+content-type: application/json
+content-length: 59
+
+{"operacao":"status",
+ "token":"c009a001",
+"id":"TERMIX"} t:0,016 => OK
+18/12 20:03:12 - ***  SERVIÇO PARADO
+18/12 20:03:15 - Iniciando Suporte Mobile 64 bit Versao: 1.15.17/12/2019 20:06
+18/12 20:03:15 - Variaveis

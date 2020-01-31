@@ -1,0 +1,94 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 12/12/2003
+#
+#
+# a todos
+# p Programação de entregas data e hora
+# n Baixa por Notas Fiscais
+# e Ocorrênciaas de viagem
+# g Configuração de seguro
+
+[arquivo]
+modulo=CONFIGURAÇÃO DINÂMICA PARA $IDTITULO
+tituloG=CONFIGURAÇÕES PARA O SEGURO
+tituloE=OCORRÊNCIAS DE VIAGEM
+tituloP=PROGRAMAÇÃO DE ENTREGA
+tituloN=BAIXA POR NOTA FISCAL
+tituloK=MENSAGEM DE CONTAINER
+tituloM=CARTA DE CORREÇÃO
+nivelprincipal=1
+nivelauxiliar=0
+posicionar=0
+
+[Opcoes]
+o0=MDF-e, 0123456789, 9, 29,ic
+
+
+[MDF-e]
+o0=nil,MDFE, xmdfe, 0123456789, 9, 20:21, i
+o1=nil,OFTP2, xOFTP2, 0123456789, 9, 20:21, i
+o2=Averbação,XML,averbacao, 0123456789, 9, 20:21,c
+
+[xGeral]
+tab=MDFE
+comentario=
+db=nil
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=DOC,id,+,8,60,,
+c1=Tipo,tipo,c,3,60,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=440
+largura=460
+BotaoAlterar=
+foco=chave
+forcarleftmask=100
+t0=Chave:,chave,c,44,300,,
+t1=Prot.Encer.:,nProtEnc,c,15,300,,
+
+[xOFTP2]
+tab=OFTP2
+comentario=
+db=nil
+ordem=id
+rcl=
+chave=id
+chaveprincipal=id
+c0=DOC,id,+,8,60,,
+c1=Tipo,tipo,c,3,60,,
+nobrowse=1
+relacaokey=
+where=(id=$IDORIGEM)
+altura=440
+largura=460
+BotaoAlterar=
+foco=oftp2
+forcarleftmask=100
+t0=OFTP2,oftp2,sn,3,30,,
+
+[averbacao]
+tab=AVERBACAO AUTOMATICA
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Pasta,txt_1,c,255,240,,
+c1=Seguradora,txt_2,c,255,100,,
+nobrowse=0
+relacaokey=nome,"MDFE_AVERBACAO_AUTOMATICA"
+autoIncluir=0
+where=nome='MDFE_AVERBACAO_AUTOMATICA'
+altura=210
+largura=640
+foco=txt_1
+forcarleftmask=210
+t0=Pasta para envio do XML do CT-e:,txt_3,c,255,330,,
+t1=Pasta para ler XML da Averbação:,txt_1,c,255,330,,
+t2=Seguradora:,txt_2=@;ATM,l,50,130,,

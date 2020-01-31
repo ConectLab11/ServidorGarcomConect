@@ -1,0 +1,70 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# ConectLab Informatica Ltda
+# Data: 10/04/2018
+#
+#
+# a todos
+
+[arquivo]
+modulo=Narguile
+nivelprincipal=0
+nivelauxiliar=0
+pdx=
+
+[Opcoes]
+o0=Narguile, 0123456789, 1, 0, exb
+
+[Narguile]
+o0=nil, Geral, geral, 0123, 9,15,x
+o1=nil, Narguiles, equipamentos, 0123, 0, 15,x 
+
+[geral]
+tab=GERAL
+db=set_mult
+ordem=id
+chave=id
+chaveprincipal=id
+c0=Id,id,i,3,50,,
+c1=Descrição,descricao,c,100,400,,
+nobrowse=1
+relacaokey=nome,"PREFERENCIAS_NARGUILE_GERAL"
+autoIncluir=1
+where=nome='PREFERENCIAS_NARGUILE_GERAL'
+altura=200
+largura=440
+foco=txt_1
+forcarleftmask=140
+t0=Duração do aluguel:,txt_1,i,3,50,,
+t1=linha-14
+t2=label|minutos|,,clnavy,,17,200
+t3=Altura dos Botões:,id_1,i,5,50,,
+t4=Largura dos Botões:,id_2,i,5,50,,
+t5=Delay do timer,id_3,i,3,50,,
+t6=label|segundos|,,clnavy,,95,200
+
+
+
+[equipamentos]
+tab=LISTA DE NARGUILE
+db=set_mult
+ordem=id_1
+chave=id
+chaveprincipal=id
+c0=Código,id_1,+,6,60,,
+c1=Descrição,txt_1,c,255,300,,
+Rlt=auxorcam.idoperacao
+msg=REGISTROS DE ALUGUEL
+nobrowse=0
+SET_MULT=PREFERENCIAS_NARGUILE_NARGUILE
+relacaokey=nome,"PREFERENCIAS_NARGUILE_NARGUILE"
+autoIncluir=0
+where=nome='PREFERENCIAS_NARGUILE_NARGUILE'
+altura=280
+largura=440
+foco=txt_1
+forcarleftmask=90
+t0=Código:,id_1,+,6,50,,
+t1=Descrição:,txt_1,c,50,300,,
+t2=Ativo:,ativo=Sim,sn,3,30,,

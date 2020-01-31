@@ -1,0 +1,257 @@
+16/06 21:17:52 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9336"}
+16/06 21:17:52 - Lista das impressoras
+16/06 21:17:52 - Id da impressora 7 => TCP:192.168.88.200
+16/06 21:17:52 - CIS Status: Create
+16/06 21:17:53 - CIS Status: Connect
+16/06 21:17:53 - Status: Write cmd #16#4 (1..4)
+16/06 21:17:53 - Status: ok
+16/06 21:17:53 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 21:17:53 - CIS Status: Close
+16/06 21:17:53 - ABRIR BANCO DE DADOS
+16/06 21:17:53 - FALHA NA ABERTURA DO BANCO DE DADOS
+16/06 21:17:53 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9336"}
+
+ t:0,218 => BANCO DE DADOS OFF-LINE -> 152
+16/06 21:20:04 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9336"}
+16/06 21:20:04 - Lista das impressoras
+16/06 21:20:04 - Id da impressora 7 => TCP:192.168.88.200
+16/06 21:20:04 - CIS Status: Create
+16/06 21:20:04 - CIS Status: Connect
+16/06 21:20:04 - Status: Write cmd #16#4 (1..4)
+16/06 21:20:04 - Status: ok
+16/06 21:20:04 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 21:20:04 - CIS Status: Close
+16/06 21:20:04 - ABRIR BANCO DE DADOS
+16/06 21:20:04 - FALHA NA ABERTURA DO BANCO DE DADOS
+16/06 21:20:04 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9336"}
+
+ t:0,219 => BANCO DE DADOS OFF-LINE -> 152
+16/06 21:23:17 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9336"}
+16/06 21:23:17 - Lista das impressoras
+16/06 21:23:17 - Id da impressora 7 => TCP:192.168.88.200
+16/06 21:23:17 - CIS Status: Create
+16/06 21:23:18 - CIS Status: Connect
+16/06 21:23:18 - Status: Write cmd #16#4 (1..4)
+16/06 21:23:18 - Status: ok
+16/06 21:23:18 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 21:23:18 - CIS Status: Close
+16/06 21:23:18 - ABRIR BANCO DE DADOS
+16/06 21:23:18 - FALHA NA ABERTURA DO BANCO DE DADOS
+16/06 21:23:18 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9336"}
+
+ t:0,234 => BANCO DE DADOS OFF-LINE -> 152
+16/06 21:23:20 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9336"}
+16/06 21:23:20 - Lista das impressoras
+16/06 21:23:20 - Id da impressora 7 => TCP:192.168.88.200
+16/06 21:23:20 - CIS Status: Create
+16/06 21:23:20 - CIS Status: Connect
+16/06 21:23:20 - Status: Write cmd #16#4 (1..4)
+16/06 21:23:21 - Status: ok
+16/06 21:23:21 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 21:23:21 - CIS Status: Close
+16/06 21:23:21 - ABRIR BANCO DE DADOS
+16/06 21:23:21 - FALHA NA ABERTURA DO BANCO DE DADOS
+16/06 21:23:21 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9336"}
+
+ t:0,234 => BANCO DE DADOS OFF-LINE -> 152
+16/06 21:23:29 - ***  SERVIÇO PARADO
+16/06 21:23:31 - Iniciando Suporte Mobile 64bit Versao: 1.13
+16/06 21:23:31 - Variaveis
+16/06 21:23:31 - CurrencyString="R$", CurrencyFormat="#2", NegCurrFormat="#9", ThousandSeparator=".", DecimalSeparator=",", CurrencyDecimals="2", DateSeparator="/", ShortDateFormat="dd/MM/yyyy", LongDateFormat="dddd, d' de 'MMMM' de 'yyyy", TimeSeparator=":", TimeAMString="", TimePMString="", ShortTimeFormat="hh:mm", LongTimeFormat="hh:mm:ss", TwoDigitYearCenturyWindow="50", ListSeparator=";"
+16/06 21:23:31 - TCP Servidor
+16/06 21:23:31 - TCP Cliente
+16/06 21:23:31 - Iniciado na porta => 4406
+16/06 21:23:31 - Formato Valores:        -1.254,87 | -1254,87|        1.254,87 | 1254,87
+16/06 21:23:31 - Formato Data   : 16/06/2019 21:23:31
+16/06 21:23:31 - Flags debug 1 sem log 0
+16/06 21:23:32 - BANCO DE DADOS ONLINE > 192.168.88.28:comodoro
+16/06 21:23:32 - PRECO => 30 /            30,00/30/30
+16/06 21:23:32 - iniciar_identificacao_computador
+16/06 21:23:32 - sistema_pegar_perfil
+16/06 21:23:32 - empresa_carregar_segmentos
+16/06 21:23:32 - rcs_iniciar_variaveis_globais
+16/06 21:23:32 - terminal_id
+16/06 21:23:32 - mesas_comandas
+16/06 21:23:32 - LPRINT
+16/06 21:23:32 - Status: Config => 192.168.88.200:9100
+16/06 21:23:32 - Status: Config => 192.168.88.200:9100
+16/06 21:23:32 - Status: Config => c:9100
+16/06 21:23:32 - Status: Config => 192.168.88.200:9100
+16/06 21:23:32 - LISTA DE IMPRESSORAS CARREGADA 4
+16/06 21:23:32 - carregarImp
+16/06 21:23:32 - objetos
+16/06 21:23:32 - produtos_gerenciamento_de_estoque
+16/06 21:23:32 - # status 100%
+16/06 21:23:36 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9336"}
+16/06 21:23:36 - Lista das impressoras
+16/06 21:23:36 - Id da impressora 7 => TCP:192.168.88.200
+16/06 21:23:36 - CIS Status: Create
+16/06 21:23:36 - CIS Status: Connect
+16/06 21:23:36 - Status: Write cmd #16#4 (1..4)
+16/06 21:23:36 - Status: ok
+16/06 21:23:36 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 21:23:36 - CIS Status: Close
+16/06 21:23:36 - ABRIR BANCO DE DADOS
+16/06 21:23:36 - OK BANCO DE DADOS
+16/06 21:23:36 - SET IMPRESSORA 7
+16/06 21:23:36 - ENVIANDO IMPRESSAO
+16/06 21:23:36 - Processado com Sucesso
+16/06 21:23:36 - GRAVANDO REGISTRO PRE
+16/06 21:23:36 - CONCLUIDO
+16/06 21:23:36 0 - POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9336"}
+
+ t:0,454 => OK
+16/06 21:23:47 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9336"}
+16/06 21:23:54 - ERRO AO CONECTAR NO BANCO DE DADOS: 192.168.88.28:comodoro
+16/06 21:23:54 - Cannot connect to server on host '192.168.88.28':
+Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+Socket Error Code: 10061($274D)
+16/06 21:23:54 0 - ERRO => POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9336"}
+
+ t:7,031 => ERRO DE CONEXAO O BANCO DE DADOS -> 5
+16/06 21:24:02 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9336"}
+16/06 21:24:02 - BANCO DE DADOS ONLINE > 192.168.88.28:comodoro
+16/06 21:24:02 - PRECO => 30 /            30,00/30/30
+16/06 21:24:02 - Lista das impressoras
+16/06 21:24:02 - Id da impressora 7 => TCP:192.168.88.200
+16/06 21:24:02 - CIS Status: Create
+16/06 21:24:02 - CIS Status: Connect
+16/06 21:24:02 - Status: Write cmd #16#4 (1..4)
+16/06 21:24:02 - Status: ok
+16/06 21:24:02 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 21:24:02 - CIS Status: Close
+16/06 21:24:02 - ABRIR BANCO DE DADOS
+16/06 21:24:02 - OK BANCO DE DADOS
+16/06 21:24:02 - SET IMPRESSORA 7
+16/06 21:24:02 - ENVIANDO IMPRESSAO
+16/06 21:24:02 - Processado com Sucesso
+16/06 21:24:02 - GRAVANDO REGISTRO PRE
+16/06 21:24:02 - CONCLUIDO
+16/06 21:24:02 0 - POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9336"}
+
+ t:0,531 => OK
+16/06 21:24:36 - PEDIDOS SOLICITADO {"sessao":"16062019212946153322062353636090131404MOBILEADM","operacao":"PIT","pedido":"9368","usuario":"1","terminal":"53","conf":"1|1","items":[{"i0":"39|1"}]}
+16/06 21:24:36 - sessao: 16062019212946153322062353636090131404MOBILEADM
+16/06 21:24:36 - id: 9368
+16/06 21:24:36 - usuario: 1
+16/06 21:24:36 - terminal: 53
+16/06 21:24:36 - conf: 1|1
+16/06 21:24:36 0 - 39|1
+16/06 21:24:36 - dados
+16/06 21:24:36 - VALORES? 7,90/7,9/7,9/,/"7.9"
+16/06 21:24:36 - PRODUCAO => id:9368 user:1term:53 hora: sessao:16062019212946153322062353636090131404MOBILEADM
+16/06 21:24:36 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=9368 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="16062019212946153322062353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+16/06 21:24:36 - GRUPOS:<1,125385>
+16/06 21:24:36 - CIS Status: Create
+16/06 21:24:36 - CIS Status: Connect
+16/06 21:24:36 - Status: Write cmd #16#4 (1..4)
+16/06 21:24:36 - Status: ok
+16/06 21:24:36 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 21:24:36 - CIS Status: Close
+16/06 21:24:36 - PERFIL 7
+16/06 21:24:36 - cupom_impressao_producao(9368,True,"",[],125385
+,1);
+16/06 21:24:36 - IOK 1 STAGE => 28
+16/06 21:25:02 - PEDIDOS SOLICITADO {"sessao":"16062019213013153200063772353636090131404MOBILEADM","operacao":"PIT","pedido":"9355","usuario":"1","terminal":"53","conf":"1|1","items":[{"i0":"5|1"}]}
+16/06 21:25:02 - sessao: 16062019213013153200063772353636090131404MOBILEADM
+16/06 21:25:02 - id: 9355
+16/06 21:25:02 - usuario: 1
+16/06 21:25:02 - terminal: 53
+16/06 21:25:02 - conf: 1|1
+16/06 21:25:02 0 - 5|1
+16/06 21:25:02 - dados
+16/06 21:25:02 - VALORES? 12,90/12,9/12,9/,/"12.9"
+16/06 21:25:02 - PRODUCAO => id:9355 user:1term:53 hora: sessao:16062019213013153200063772353636090131404MOBILEADM
+16/06 21:25:02 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=9355 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="16062019213013153200063772353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+16/06 21:25:02 - GRUPOS:<2,125386>
+16/06 21:25:02 - CIS Status: Create
+16/06 21:25:02 - CIS Status: Connect
+16/06 21:25:02 - Status: Write cmd #16#4 (1..4)
+16/06 21:25:02 - Status: ok
+16/06 21:25:02 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 21:25:02 - CIS Status: Close
+16/06 21:25:02 - PERFIL 7
+16/06 21:25:02 - cupom_impressao_producao(9355,True,"",[],125386
+,1);
+16/06 21:25:02 - IOK 1 STAGE => 28
+16/06 21:25:48 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9344"}
+16/06 21:25:49 - Lista das impressoras
+16/06 21:25:49 - Id da impressora 7 => TCP:192.168.88.200
+16/06 21:25:49 - CIS Status: Create
+16/06 21:25:49 - CIS Status: Connect
+16/06 21:25:49 - Status: Write cmd #16#4 (1..4)
+16/06 21:25:49 - Status: ok
+16/06 21:25:49 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 21:25:49 - CIS Status: Close
+16/06 21:25:49 - ABRIR BANCO DE DADOS
+16/06 21:25:49 - OK BANCO DE DADOS
+16/06 21:25:49 - SET IMPRESSORA 7
+16/06 21:25:49 - ENVIANDO IMPRESSAO
+16/06 21:25:49 - Processado com Sucesso
+16/06 21:25:49 - GRAVANDO REGISTRO PRE
+16/06 21:25:49 - CONCLUIDO
+16/06 21:25:49 0 - POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9344"}
+
+ t:0,5 => OK
+16/06 21:26:07 - PRE-CONTA SOLICITADA {"operacao":"PRE","pedido":"9344"}
+16/06 21:26:07 - Lista das impressoras
+16/06 21:26:07 - Id da impressora 7 => TCP:192.168.88.200
+16/06 21:26:07 - CIS Status: Create
+16/06 21:26:07 - CIS Status: Connect
+16/06 21:26:07 - Status: Write cmd #16#4 (1..4)
+16/06 21:26:07 - Status: ok
+16/06 21:26:07 - Status: Tampa aberta 0, Sem Papel 0, Off-line 0, Erro1 0, Erro2 0, Erro3 0, Erro4 0
+16/06 21:26:07 - CIS Status: Close
+16/06 21:26:07 - ABRIR BANCO DE DADOS
+16/06 21:26:07 - OK BANCO DE DADOS
+16/06 21:26:07 - SET IMPRESSORA 7
+16/06 21:26:07 - ENVIANDO IMPRESSAO
+16/06 21:26:07 - Processado com Sucesso
+16/06 21:26:08 - GRAVANDO REGISTRO PRE
+16/06 21:26:08 - CONCLUIDO
+16/06 21:26:08 0 - POST / HTTP/1.1
+Content-Length: 34
+
+{"operacao":"PRE","pedido":"9344"}
+
+ t:0,485 => OK
+16/06 21:26:18 - PEDIDOS SOLICITADO {"sessao":"1606201921313115325570369353636090131404MOBILEADM","operacao":"PIT","pedido":"9347","usuario":"1","terminal":"53","conf":"1|1","items":[{"i0":"4|1"}]}
+16/06 21:26:18 - sessao: 1606201921313115325570369353636090131404MOBILEADM
+16/06 21:26:18 - id: 9347
+16/06 21:26:18 - usuario: 1
+16/06 21:26:18 - terminal: 53
+16/06 21:26:18 - conf: 1|1
+16/06 21:26:18 0 - 4|1
+16/06 21:26:18 - dados
+16/06 21:26:18 - VALORES? 15,00/15/15/,/"15"
+16/06 21:26:18 - PRODUCAO => id:9347 user:1term:53 hora: sessao:1606201921313115325570369353636090131404MOBILEADM
+16/06 21:26:18 - select estoque.grupo,auxiliar.id from auxiliar,estoque where auxiliar.idpedido=9347 and auxiliar.producao=0 and estoque.codigo=auxiliar.original and auxiliar.idtimer="1606201921313115325570369353636090131404MOBILEADM" order by estoque.grupo,auxiliar.id
+16/06 21:26:18 - GRUPOS:<2,125387>
+16/06 21:26:18 - CIS Status: Create
+16/06 21:26:18 - CIS Status: Connect
+16/06 21:26:18 - Status: Write cmd #16#4 (1..4)
+16/06 21:26:18 - Status: ok

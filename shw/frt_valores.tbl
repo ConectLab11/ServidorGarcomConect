@@ -1,0 +1,205 @@
+#
+#  Parametros do menu de manutenção do Sistema
+#  Desenvolvido por Ronaldo C Silva
+#  RCLSoft Comércio e Serviços LTDA. ME.
+#
+#  Criação    : 28/01/2010
+#  Atualização: 10/06/2011 - Ajustes no layout para compatibilidade com 
+#                            personalização de layout por cliente.   
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=tabvalor.pdx
+disableMenu=0
+telalargura=830
+telaaltura=0
+Posicionar=1
+whereexterno=mygroup='tabelavalores'
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,+Tabela, tabelavalores, 0123456789, 9, 25,a
+o2=nil,Observação, tabelavaloresobservacao, 0123456789, 9, 25,a
+o3=nil,Customizar, tabelavalorescustomizar, 0123456789, 9, 35,a
+
+#
+# Parametros de tela
+#
+ 
+[tabelavalores]
+tab=CALCULO DO FRETE PELO VALOR DA MERCADORIA
+comentario=
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Cliente,clientefinal,f,16,100,,
+c4=Redespacho,redespacho,f,16,100,,
+botaoExtra=imprimir
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=100
+forcarleftmask=110
+nobrowse=1
+altura=532
+largura=400
+foco=descr
+t0=#coluna-30
+t1=Descrição:,descr,c,50,250,,
+h1=Nome completo
+t2=linha-25
+t3=coluna+320
+t4=Validade:,validade,d,10,70,,
+h4=Prazo de validade
+t5=coluna-320
+t6=Porcentagem de entrega#007E7E7E\calculator.png,,,,530, ,
+t7=Cliente:,clientefinal,p,11,84,,
+h7=Porcentagem para entrega direto no cliente.
+t8=linha-25
+t9=coluna+305
+t10=Frete mínimo:,minimo,f,11,84,,
+h10=Valor mínimo para entrega ate o cliente.
+t11=coluna=20
+t12=Redespacho:,redespacho,p,11,84,,
+h12=Porcentagem para entrega até o redespacho.
+t13=linha-25
+t14=coluna+305
+t15=Frete mínimo:,minimored,f,11,84,,
+h15=Valor mínimo para entrega no redespacho.
+t16=coluna=20
+t17=#-----Controles ADValorem#007E7E7E\calculator.png,,,,530, ,
+t18=ADValorem:,advalorem,p,11,84,,
+h18=Porcentagem ADValorem sobre o valor da mercadoria.
+t19=#linha-25
+t20=#coluna+250
+t21=#labelwidth=200
+t22=#Ultilizar campo outros:,adv_outros,sn,3,30,,
+h22=#ADValorem no campo Outros@Sim - A taxa de ADValorem sera somado no campo Outros@Não - A taxa de ADValorem será somado no campo Frete Valor.
+t23=coluna=20
+t24=labelwidth=0
+t25=CNPJ/UF:,complemento2,c,255,385,,
+h25=Complementos para diferenciar CNPJ ou UF no calculo do ADValorem@Exemplo: cnpj04.455.092=0,02/RJ=0,03
+t26=Peso/Cubagem#007E7E7E\package.png,,,,530, ,
+t27=Fator peso(kg):,{lb}tablepeso=100,e,11,84,,
+h27=Peso para cálculo de cubagem
+t28=linha-25
+t29=coluna+305
+t30=M3 por{lb|tablepeso|100} kg:,precom3,e,11,84,,
+h30=Taxa de cubagem por Kilos.
+t31=coluna-305
+t32=Taxas complementares#007E7E7E\delivery.png,,,,530, ,
+t33=GRIS:,gris,p,11,84,,
+h33=Porcentagem para taxa de Gerenciamento de Riscos
+t34=linha-25
+t35=coluna+150
+t36=Sec/Cat:,seccat,f,11,84,,
+h36=Taxa Sec/Cat
+t37=linha-25
+t38=coluna+155
+t39=Despacho:,despacho,f,11,84,,
+h39=Taxa de Despacho
+t40=coluna-305
+t41=Pedágio:,pedagio,f,11,84,,
+h41=Taxa de pedágio
+t42=linha-25
+t43=coluna+150
+t44=Outros:,outros,f,11,84,,
+h44=Outras taxas
+t45=coluna-150
+t46=Generalidades#007E7E7E\tag.png,,,,530, ,
+t47=Devolução:,devolucao,p,11,60,,
+h47=Porcentagem do frete quando for devolução
+t48=linha-25
+t49=coluna+150
+t50=Reentrega:,reentrega,p,11,60,,
+h50=Porcentagem do frete quando for reentrega
+
+[tabelavaloresobservacao]
+tab=CALCULO DO FRETE PELO VALOR DA MERCADORIA
+comentario=
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Cliente,clientefinal,f,16,100,,
+c4=Redespacho,redespacho,f,16,100,,
+botaoExtra=imprimir
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=100
+forcarleftmask=110
+nobrowse=1
+altura=532
+largura=400
+foco=observacao
+t0=Observação#007E7E7E\text_align_justify.png,,,,530, ,
+t1=linha+5
+t2=coluna=0
+t3=forcarleftmask=15
+t4= ,observacao,tw,0,480x330,B|10|fretes|Copiar observações da tabela original,	
+
+[tabelavalorescustomizar]
+tab=CALCULO DO FRETE PELO VALOR DA MERCADORIA
+comentario=
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+c3=Cliente,clientefinal,f,16,100,,
+c4=Redespacho,redespacho,f,16,100,,
+botaoExtra=imprimir
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=100
+forcarleftmask=150
+nobrowse=1
+altura=532
+largura=400
+foco=adv_outros
+t0=Customização#007E7E7E\tag.png,,,,530, ,
+t1=Aplicar na BC:,basecalculo,p,11,84,,
+h1=Porcentagem para aplicar na base de calculo do frete
+t2=CNPJ/UF:,complemento,c,255,390,,
+h2=Complementos para diferenciar CNPJ ou UF@Exemplo: cnpj04.455.092=0,02/RJ=0,03
+t3=Calculo do Frete#007E7E7E\tag.png,,,,530, ,
+t4=ADValorem:,adv_outros,sn,3,30,,
+h4=ADValorem no campo Outros@Sim - A taxa de ADValorem sera somado no campo Outros@Não - A taxa de ADValorem será somado no campo Frete Valor.
+t5=Frete Peso:,frt_valorpeso,sn,3,30,,
+h5=Colocar todos os valores no campo Frete Peso
+t6=Frete mínimo:,frt_minitotal,sn,3,30,,
+h6=Verificar o frete mínimo pelo campo Total do Frete.
+t7=#ICMS embutido:,icmsx,sn,3,30,,
+h7=ICMS faz parte do frete
+t8=Diversos#007E7E7E\tag.png,,,,530, ,
+t9=Compartilhada:,compartilhada,sn,3,30,,
+h9=Permitir compartilhar esta tabela com os cliente sem tabela
+t10=linha-25
+t11=coluna+250
+t12=forcarleftmask=250
+t13=Ignorar dados do cliente na impressão:,semcliente,sn,3,30,,
+h13=Ignorar dados do cliente na impressão da tabela

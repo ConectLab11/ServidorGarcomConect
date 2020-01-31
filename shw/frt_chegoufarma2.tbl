@@ -1,0 +1,148 @@
+#
+# Parametros do menu de manutenção do Sistema
+# Desenvolvido por Ronaldo C Silva
+# RCLSoft Comércio e Serviços LTDA. ME.
+# Data: 01/08/2011
+#
+#
+# a todos
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=tabvalor.pdx
+disableMenu=0
+telalargura=830
+telaaltura=600
+Posicionar=1
+whereexterno=mygroup='tabelachegoufarma2'
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,+ChegouFarma2, generalidades, 0123456789, 9, 25,a
+o2=nil,+Tarifas, tarifas , 0123456789, 9, 23,a
+
+#
+# Parametros de tela
+#
+ 
+[generalidades]
+tab=Tabela ChegouFarma2
+comentario=
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=90
+forcarleftmask=90
+nobrowse=1
+altura=200
+largura=400
+foco=descr
+t0=Descrição:,descr,c,50,310,,
+h0=Descrição completa
+t1=linha-25
+t2=coluna+380
+t3=Validade:,validade,d,10,80,,
+h3=Prazo de validade
+t4=coluna-380
+
+t5=Origem#007E7E7E\map.png,,,,545, ,	
+t6=UF:,uf,c,2,30,@BU,estado2.rcl,
+h6=Sigla da UF (Estado) <F2>
+t7=linha-25
+t8=coluna+110
+t9=Cidade:,cidade,c,30,185,@B,<#17>geral.rcl{ufsigla=uf/""},
+h9=Nome da Cidade
+t10=coluna-110
+t11=forcarleftmask=240
+t12=Generalidades#007E7E7E\text_align_justify.png,,,,500, ,
+t13=Seguro Ad-Valorem:,advalorem,p,11,84,,
+t14=GRIS:,gris,p,11,84,,
+
+t15=Taxa de Entrega (Capitais - Exceto SP/RJ/AM):,faixa_1,f,11,84,,
+t16=linha-25
+t17=coluna+200
+t18=Excedente 10kg:,frt_val1,e,6,60,,
+t19=coluna-200
+
+t20=Taxa de Entrega (SP/RJ/AM):,faixa_2,f,11,84,,
+t21=linha-25
+t22=coluna+200
+t23=Excedente 10kg:,frt_val2,e,6,60,,
+t24=coluna-200
+
+t25=Taxa de entrega EMERGENCIAL:,faixa_3,f,11,84,,
+t26=linha-25
+t27=coluna+200
+t28=Excedente 10kg:,frt_val3,e,6,60,,
+t29=coluna-200
+
+t30=Taxa de Redespacho (Interior):,faixa_4,f,11,84,,
+t31=linha-25
+t32=coluna+200
+t33=Excedente 10kg:,frt_val4,e,6,60,,
+t34=coluna-200
+
+t35=TDE P/ Hora:,outros,f,11,84,,
+
+t36=Devolução:,devolucao,p,11,60,,
+t37=Reentrega:,reentrega,p,11,60,,
+t38=Compartilhada:,compartilhada,sn,3,30,,
+
+[tarifas]
+tab=TARIFAS PARA CALCULO
+comentario=
+db=tabaereo
+ordem=unidade,uf,cidade
+rcl=
+chave=tabela
+chavePrincipal=id
+relacaokey=tabela,$IDORIGEM
+tituloWidth=35
+where=tabela="$IDORIGEM"
+c0=UF,uf,c,2,30,,
+c1=Até 1Kg,faixa_1,f,11,80,,
+c2=1.1 à 2Kg,faixa_2,f,11,80,,
+c3=2.1 à 3Kg,faixa_3,f,11,80,,
+c4=3.1 à 4Kg,faixa_4,f,11,80,,
+c5=4.1 à 5Kg,faixa_5,f,11,80,,
+c6=Kg excedente,excedente,f,11,80,,
+Rlt=
+msg=
+altura=350
+largura=500
+forcarleftmask=120
+foco=unidade
+t0=UF:,uf,c,2,30,@BU,estado2.rcl,
+t1=Até 1Kg,faixa_1,f,11,84,,
+t2=1.1 à 2Kg,faixa_2,f,11,84,,
+t3=2.1 à 3Kg,faixa_3,f,11,84,,
+t4=3.1 à 4Kg,faixa_4,f,11,84,,
+t5=4.1 à 5Kg,faixa_5,f,11,84,,
+t6=Kg excedente,excedente,f,11,84,, 
+
+//x1=fretepeso:pesoMinimo[faixa_1,1kg,2]
+
+[calculo]
+versao=13
+x0=precalc:taxas_coleta{Taxas:,l,350,[|1. Entrega (Capitais Exceto SP/RJ e AM)|2. Entrega (SAO/ RIO e MAO)|3. Entrega EMERGENCIAL|4. Redespacho (Interior)],0}
+x1=precalc:outros{Taxa de Dificuldade de Entrega = Horas:,v,100,[0],0}
+x2=fretepeso:pesoCidade[EXCEDENTE_SIMPLES,*faixa_1{0:1},faixa_2{1.1:2},faixa_3{2.1:3},faixa_4{3.1:4},faixa_5{4.1:5},acima{5.1}]
+x3=seguro:porcentNfeValor[advalorem]
+x4=gris:porcentNfeValor[gris]
+x5=outros:0
+x6=outros:taxasColetaEntrega[10kg,taxas_coleta,taxas_km,outros]
+

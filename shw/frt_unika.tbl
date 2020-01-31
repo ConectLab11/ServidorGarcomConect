@@ -1,0 +1,172 @@
+#
+# 	Pacote de Instalaçao de Tabelas
+# 	Desenvolvido por Ronaldo C Silva
+# 	email: ronaldocalhau@gmail.com
+# 	Data: 20/02/2014
+#
+[instalacao]
+# Identificação
+grupo=tabelaunika
+# Registra Tabela
+tabfrete=Rodoviaria Expressa|unika|tabelaunika|1|
+# Inclui na lista de tabelas
+arquivoLayout=tbunika.shw
+
+[arquivo]
+modulo=TABELA PARA CÁLCULO DE FRETES
+nivelprincipal=1
+nivelauxiliar=1
+pdx=
+disableMenu=0
+telalargura=830
+telaaltura=0
+Posicionar=1
+whereexterno=mygroup='tabelaunika'
+
+[Opcoes]
+o0=Tabela, 0123456789, 9, 0,a
+
+[tabela]
+o0=insert(shw\tborigem.shw)
+o1=nil,+Rodoviaria Expressa, generalidades, 0123456789, 9, 25,a
+o2=nil,+Tarifas, tarifas , 0123456789, 9, 23,a
+
+[generalidades]
+tab=Tabela Rodoviaria Expressa
+comentario=
+db=tabefret
+nobrowse=1
+ordem=id
+rcl=
+relacao=
+chave=cliente
+chaveprincipal=id
+c0=Código,id,c,10,60,,
+c1=Cliente,cliente,c,6,60,,
+c2=Descrição,descr,c,50,200,,
+relacaokey=id,$IDORIGEM
+where=id="$IDORIGEM"
+forcarcoluna=90
+forcarleftmask=90
+nobrowse=1
+altura=200
+largura=400
+foco=descr
+t0=Descrição:,descr,c,50,310,,
+h0=Descrição completa
+t1=linha-25
+t2=coluna+380
+t3=Validade:,validade,d,10,80,,
+h3=Prazo de validade
+t4=coluna-380
+t5=Taxas de Coleta#007E7E7E\text_align_justify.png,,,,500, ,
+t6=Capital:,faixa_1,f,11,84,,
+t7=linha-25
+t8=coluna+180
+t9=forcarleftmask=120
+t10=Excedente 10kg:,faixa_2,e,6,60,,
+t11=forcarleftmask=90
+t12=coluna-180
+t13=Interior:,faixa_3,f,11,84,,
+t14=linha-25
+t15=coluna+180
+t16=forcarleftmask=120
+t17=Excedente 10kg:,faixa_4,e,6,60,,
+t18=forcarleftmask=90
+t19=coluna-180
+t20=Taxas de Entrega#007E7E7E\text_align_justify.png,,,,500, ,
+t21=Capital:,faixa_5,f,11,84,,
+t22=linha-25
+t23=coluna+180
+t24=forcarleftmask=120
+t25=Excedente 10kg:,faixa_6,e,6,60,,
+t26=forcarleftmask=90
+t27=coluna-180
+t28=Interior:,faixa_7,f,11,84,,
+t29=linha-25
+t30=coluna+180
+t31=forcarleftmask=120
+t32=Excedente 10kg:,faixa_8,e,6,60,,
+t33=forcarleftmask=90
+t34=coluna-180
+t35=Generalidades#007E7E7E\text_align_justify.png,,,,500, ,
+t36=Redespacho:,faixa_9,f,11,84,,
+t37=linha-25
+t38=coluna+180
+t39=forcarleftmask=120
+t40=Excedente 10kg:,faixa_10,e,6,60,,
+t41=forcarleftmask=90
+t42=coluna-180
+t43=TDE:,tde,f,11,84,,
+t44=Ad.Valorem:,advalorem,p,11,84,,
+t45=GRIS:,gris,p,11,84,,
+t46=Outros#007E7E7E\text_align_justify.png,,,,500, ,
+t47=Devolução:,devolucao,p,11,60,,
+h47=Porcentagem do frete quando for devolução
+t48=linha-25
+t49=coluna+160
+t50=Reentrega:,reentrega,p,11,60,,
+h50=Porcentagem do frete quando for reentrega
+t51=linha-25
+t52=coluna+160
+t53=forcarleftmask=120
+t54=Compartilhada:,compartilhada,sn,3,30,,
+h54=Compartilhar esta tabela com os clientes sem tabela.
+
+[tarifas]
+tab=TARIFAS PARA CALCULO
+comentario=
+db=tabaereo
+ordem=uf,cidade
+rcl=
+chave=tabela
+chavePrincipal=id
+relacaokey=tabela,$IDORIGEM
+tituloWidth=35
+where=tabela="$IDORIGEM"
+c0=UF,uf,c,2,30,,
+c1=Cidade,cidade,c,50,150,,
+c2=ate 10kg,faixa_1,f,11,100,,
+c3=De/n11 à 20,faixa_2,f,11,100,,
+c4=De/n20 à 35,faixa_3,f,11,100,,
+c5=De/n35 à 50,faixa_4,f,11,100,,
+c6=De/n50 à 70,faixa_5,f,11,100,,
+c7=De/n70 à 100,faixa_6,f,11,100,,
+c8=De/n100 à 300,faixa_7,f,11,100,,
+c9=De/n300 à 500,faixa_8,f,11,100,,
+c10=Excedente,acima,f,11,100,,
+c11=Prazo(dias),prazo,i,11,80,,
+Rlt=
+msg=
+altura=450
+largura=600
+forcarleftmask=80
+foco=uf
+t0=UF:,uf,c,2,30,@BU,estado2.rcl,
+t1=coluna+110
+t2=linha-25
+t3=Cidade:,cidade,c,50,320,@B,<#17>geral.rcl{ufsigla=uf/"Interior"},
+t4=coluna-110
+t5=forcarleftmask=120
+t6=Tarifas por (Kg)#007E7E7E\color_swatch_2.png,,,,550, ,
+t7=Até 10:,faixa_1,f,11,84,,
+t8=de  11 até  20:,faixa_2,f,11,84,,
+t9=de  20 até  35:,faixa_3,f,11,84,,
+t10=de  35 até  50:,faixa_4,f,11,84,,
+t11=de  50 até  70:,faixa_5,f,11,84,,
+t12=de  70 até 100:,faixa_6,f,11,84,,
+t13=de 100 até 300:,faixa_7,f,11,84,,
+t14=de 300 até 500:,faixa_8,f,11,84,,
+t15=Excedente:,acima,f,11,84,,
+t16=Outros#007E7E7E\color_swatch_2.png,,,,550, ,
+t17=Prazo(dias):,prazo,i,3,40,,
+validacao=campoPreenchido(uf),campoPreenchido(cidade)
+
+[calculo]
+versao=18
+x0=fretepeso:pesoCidade[EXCEDENTE,*faixa_1{0:10},faixa_2{10.01:20},faixa_3{20.01:35},faixa_4{35.01:50},faixa_5{50.01:70},faixa_6{70.01:100},faixa_7{100.01:300},faixa_8{300.01:500},acima{500.01}]
+x1=fretepeso:pesoMinimo[faixa_1,10kg,2]
+x2=seguro:porcentNfeValor[advalorem]
+x3=gris:porcentNfeValor[gris]
+
+
